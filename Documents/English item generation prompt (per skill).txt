@@ -1,0 +1,41 @@
+You are generating a practice item bank for:
+
+- Subject: English
+- Year level: 3
+- State tracks to support: VIC, NSW
+- Topic: [TOPIC_NAME, e.g. "Inferential comprehension – making inferences about characters"]
+- Skill description: [SKILL_DESCRIPTION, e.g. "Make simple inferences using text evidence and prior knowledge; answer why/how questions."]
+- Curriculum codes to cover:
+  - Australian Curriculum (AC): [AC_CODES, e.g. "AC9E3LY01, AC9E3LY02"]
+  - VIC: [VIC_PHRASING_AND_CODES_IF_KNOWN]
+  - NSW: [NSW_SUBAREA_AND_OUTCOMES, e.g. "Reading comprehension – inferential (EN2-RECOM-01)"]
+
+Requirements:
+
+1. Produce 20 distinct practice items for this topic and year level.
+2. Each item should be based on a short passage (2–5 sentences) or a sentence stem that you provide.
+3. For each item, provide:
+   - item_id: unique identifier (e.g. AC9E3LY01_Y3_Infer_Char_001)
+   - curriculum_codes: { AC: [...], VIC: [...], NSW: [...] }
+   - skill_description: one-sentence description of the skill
+   - difficulty: "easy" | "medium" | "hard"
+   - passage: 2–5 sentences of age-appropriate text (narrative or informative)
+   - question_text: an inferential question about the passage (why/how/what does this suggest)
+   - question_type: "multiple_choice" | "short_answer"
+   - answer_key: correct answer(s) in a machine-readable format
+   - step_by_step_solution: 3–5 clear, child-friendly steps showing how to use evidence + prior knowledge to infer
+   - common_misconceptions: 2–3 typical errors (e.g. answering with literal detail only)
+   - hints: 2 scaffolded hints (from general to specific)
+   - tags: e.g. ["inferential", "character_feelings", "narrative"]
+
+4. Ensure:
+   - Language suits Year 3 students.
+   - No negative labels; focus on growth and practice.
+   - Variety in text types (narrative, informative, everyday scenarios).
+   - Questions require inference, not just copying text.
+
+5. Output format:
+   - Return a single JSON array, where each element is one item with the fields above.
+   - Do not include any commentary outside the JSON.
+
+Now generate the full exercise bank as specified.

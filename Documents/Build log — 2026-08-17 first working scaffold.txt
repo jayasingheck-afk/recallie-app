@@ -1,0 +1,65 @@
+# Build log — 2026-08-17: first working scaffold
+
+Built the first runnable slice of Recallie end-to-end in a Claude session (cloud sandbox),
+following the tech-stack and pedagogy docs already in this project. Source delivered to
+Chandana as `recallie-app-src.tar.gz`. Summary below so a future session has context.
+
+## What exists now
+
+- Next.js 16 (App Router, TS, Tailwind v4) app named `recallie-app`.
+- PostgreSQL schema (9 tables) matching the project's documented Prisma schema exactly —
+  User, ParentChildLink, Skill, CurriculumSequenceEntry, ChildSkillState, ReviewEvent,
+  Item, Session, Subscription — but implemented with **Drizzle ORM, not Prisma**.
+- Full Year 3 Term 1 curriculum seeded: 25 Maths skills + 30 English skills, with AC/VIC/NSW
+  mappings and the 10-week sequence, taken directly from the project's curriculum docs.
+- Spaced-repetition engine (`src/lib/spacedRepetition.ts`) ported from the project's
+  TypeScript pseudocode doc.
+- Session builder (`src/lib/sessionBuilder.ts`) implementing the ~40/35/25 review/new/mixed
+  allocation and same-skill interleave cap from the session-builder doc.
+- API routes: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`.
+- Minimal UI: `/child` (one-item-at-a-time practice) and `/parent/dashboard`.
+- 8 hand-written sample items (Week 1 skills only) + one demo parent/child, so the whole
+  loop is testable without a real item bank yet.
+
+## Key decision: Prisma → Drizzle
+
+The sandbox environment could not reach `binaries.prisma.sh` (network allowlist covers npm
+registry only), so `prisma init`/`migrate` failed outright. Swapped to Drizzle ORM — same
+schema, same Postgres, no functional loss, and Drizzle was already named as an acceptable
+alternative in the project's own docs. If a future environment *can* reach Prisma's
+binaries and the team prefers Prisma, `src/db/schema.ts` is a straightforward translation
+back (it mirrors the documented Prisma models field-for-field).
+
+## Verified working (smoke-tested via curl + tsc + a standalone SRS trace)
+
+- `npx tsc --noEmit` clean across the whole app.
+- `/`, `/child`, `/parent/dashboard` all return 200.
+- `GET /api/session/today` correctly builds an all-"new" session for a brand-new child
+  (no reviews due yet), pulling from the seeded Week 1 items.
+- `POST /api/reviews` grades short_answer/multiple_choice items, updates
+  ChildSkillState via the SRS engine, logs a ReviewEvent, and marks the session item
+  completed.
+- `GET /api/dashboard` reflects the updated skill statuses correctly.
+
+## Known issue to resolve with Chandana
+
+The "needs_attention" ("Area to give more attention") status triggers whenever
+`stability <= 7 days`, which — per the documented thresholds — is true for essentially
+every skill during its first 1–2 weeks, even after several correct answers in a row (traced
+manually: 6 straight correct fast answers only reached stability ≈5.6). So new skills default
+to looking like they "need attention" until they mature past a week. This is a faithful port
+of the documented algorithm, not a bug introduced during the build — but it may read as
+discouraging to parents/children if shipped as-is. Options to discuss: raise thresholds,
+add a distinct "still building" status for skills younger than N days/reviews, or accept it.
+
+## Explicit next steps (not yet built)
+
+- Auth (Clerk) — pages currently hard-code the demo child ID, no login flow.
+- Real item banks — only 8 sample items exist. Use the Maths/English item-generation
+  prompts already in this project, generate + human-review, then import into `Item`.
+- Stripe subscriptions / free trial gating.
+- Derive the child's current curriculum week from a real enrolment date (currently
+  hard-coded to term 1 / week 1 in the session API).
+- Gamification beyond points/streak (badges, progress map).
+- Monthly parent report generation/email.
+- Terms 2–4 and Years 1/2/4/5/6 curriculum sequences (only Year 3 Term 1 exists).

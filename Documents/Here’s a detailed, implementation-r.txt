@@ -1,0 +1,314 @@
+Here’s a detailed, implementation-ready design for your spaced-repetition scheduling logic, tailored to a Years 1–6 Maths/English app with separate VIC/NSW tracks and strong child-psychology alignment.
+
+## Core design goals
+
+- **Adaptive:** Intervals adjust per child and per skill based on performance and response time. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC6028005/)
+- **Child-friendly:** Avoid “fail” language; use “needs more practice” and gentle re-prompts. [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/38592972/)
+- **Interleaved by default:** Mix topics and skills within sessions to boost long-term retention. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S1041608025001803)
+- **Simple to explain to parents:** “We review each skill at the best time so it sticks.” [edresearch.edu](https://www.edresearch.edu.au/guides-resources/practice-guides/spacing-and-retrieval-practice-guide-full-publication)
+
+## High-level architecture
+
+You’ll maintain, per child–skill (or child–item) record:
+
+- `stability` (S): how long the memory is expected to last (in days).
+- `difficulty` (D): how hard this skill/item is for this child (0–1 or 1–5 scale).
+- `retrievability` (R): current probability of recall (0–1), derived from S and time since last review.
+- `lapses`: how many times the child struggled significantly on this skill.
+- `last_reviewed_at`, `next_review_at`, `review_count`, `avg_response_time`, `recent_accuracy`.
+
+This mirrors modern adaptive schedulers (e.g., FSRS-like models) that outperform classic SM-2 by explicitly modelling forgetting curves. [pinnacle-prep](https://pinnacle-prep.org/)
+
+## Scheduling algorithm overview
+
+Use a **hybrid approach**:
+
+1. **Base scheduler:** FSRS-inspired adaptive spacing using stability & difficulty. [pinnacle-prep](https://pinnacle-prep.org/)
+2. **Performance signal:** Accuracy + response time to adjust difficulty and stability each review. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC6028005/)
+3. **Interleaving layer:** Choose which skills to present today based on:
+   - Due skills (next_review_at ≤ now),
+   - Priority skills (“area to give more attention”),
+   - A mix of topics to ensure interleaving. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S1041608025001803)
+
+### 1. Initialisation (first exposure)
+
+When a child first encounters a skill/item:
+
+- `stability` S = 1 day (initial memory strength).
+- `difficulty` D = 0.5 (neutral; will adapt quickly).
+- `lapses` = 0.
+- `review_count` = 0.
+- `next_review_at` = now + 1 day (or end of next session for micro-spacing within session).
+
+For brand-new skills, you can also do **within-session micro-spacing**: show the item 2–3 times in the first session, separated by 2–5 other items, to create an initial trace. [jamkham](https://jamkham.com/science/)
+
+### 2. After each review: update signals
+
+Each review produces:
+
+- `correct`: boolean (or 0/1).
+- `response_time` (RT) in seconds.
+- Optional: `hint_used`, `attempts`.
+
+Derive a **quality score** `q` in 0–1 (or 0–5 if you prefer SM-2–style):
+
+Example (0–1 scale):
+
+- Base from accuracy:
+  - `q_acc = 1.0` if correct on first attempt, else `0.5` if correct after hint, else `0.0`.
+- Adjust for speed (optional, bounded):
+  - Define an expected RT range per year/item type (e.g., 5–20 seconds).
+  - If RT is extremely fast (likely guessing) or extremely slow (struggling), slightly reduce `q`.
+- Combine:
+  - `q = clamp(0, 1, q_acc + speed_adjustment)`.
+
+Then update:
+
+#### Difficulty (D)
+
+Use a simple adaptive rule:
+
+- If `correct` and RT reasonable: `D = max(0, D - α)` (slightly easier).
+- If incorrect or very slow: `D = min(1, D + β)` (slightly harder).
+
+Where `α, β` are small (e.g., 0.05–0.15), tuned per year level.
+
+This matches research showing adaptive systems should track item/learner difficulty from performance. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC6028005/)
+
+#### Stability (S)
+
+Use an FSRS-like update conceptually:
+
+- If `q` is high (strong retrieval):
+  - Increase stability more: `S_new = S * (1 + k_easy * (1 - D))`.
+- If `q` is medium:
+  - Modest increase: `S_new = S * (1 + k_medium)`.
+- If `q` is low (struggle/lapse):
+  - Reduce stability: `S_new = S * k_hard` (e.g., 0.5–0.8), and increment `lapses`.
+
+Constants (`k_easy`, `k_medium`, `k_hard`) are tuned so that:
+
+- Easy items get longer intervals faster.
+- Hard items get shorter intervals and more frequent reviews. [pinnacle-prep](https://pinnacle-prep.org/)
+
+You don’t need to implement full FSRS mathematically at first; a simplified version that still uses S and D will already outperform fixed schedules. [studocu](https://www.studocu.vn/vn/document/hoc-vien-cong-nghe-buu-chinh-vien-thong/phuong-phap-luan-nghien-cuu-khoa-hoc/retrieval-scheduling-vocabulary-retention-a-study-of-spaced-repetition/158583731)
+
+#### Next review interval (I)
+
+Compute the next interval in days:
+
+- `I = S * f(D)` where `f(D)` reduces interval as difficulty rises.
+  - Example: `f(D) = 1 - 0.5*D` (so difficulty 0 → factor 1; difficulty 1 → factor 0.5).
+- Enforce bounds:
+  - Minimum interval: 0.5 days (same-day re-practice for very weak skills).
+  - Maximum interval: e.g., 60–90 days for very well-mastered skills.
+
+Set:
+
+- `next_review_at = last_reviewed_at + I days`.
+
+If `q` is very low (e.g., multiple mistakes, long RT, hints used), you can schedule a **same-day or next-day booster**:
+
+- Override `next_review_at` to `now + 0.5–1 day` regardless of S.
+
+This aligns with findings that struggling items benefit from shorter, more frequent spacing early on. [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/38592972/)
+
+### 3. Mastery and “area to give more attention”
+
+Define thresholds in terms of `S`, `review_count`, and recent accuracy:
+
+- **Mastered:**
+  - `S ≥ 30 days` AND `review_count ≥ 5` AND `last 3 reviews correct` AND average RT reasonable.
+  - UI: “Skill mastered” with green indicator; move to long-term maintenance (e.g., review every 30–60 days).
+- **Area to give more attention:**
+  - `S ≤ 7 days` OR `lapses ≥ 2` OR `recent accuracy < 0.7`.
+  - UI: highlight as priority; ensure these appear frequently in interleaved sessions.
+
+Parents see these labels instead of “weaknesses”. [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/38592972/)
+
+## Interleaving logic across skills
+
+Within each session, you don’t just serve “all due skills” in a row; you interleave:
+
+1. **Build candidate pool:**
+   - All skills with `next_review_at ≤ now`.
+   - Plus a subset of near-due skills (e.g., due within next 2 days) to smooth workload.
+2. **Prioritise:**
+   - Priority = function of:
+     - “Area to give more attention” flag (high weight),
+     - Low `R` (retrievability) / low `S`,
+     - Upcoming curriculum goals (e.g., current class topic).
+3. **Interleave by topic/strand:**
+   - Ensure each session mixes:
+     - Different strands (e.g., Number, Measurement, Geometry for Maths; Reading, Writing, Vocabulary for English).
+     - Different difficulty levels (some easier, some challenging).
+   - Avoid more than 2 consecutive items from the same skill/topic. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S1041608025001803)
+
+A simple algorithm:
+
+- Sort candidates by priority.
+- Bucket by topic/strand.
+- Round-robin pick one from each bucket until session target (e.g., 15–20 items) is reached.
+- Insert new-learning items (if any) at spaced positions, not all at the start. [jamkham](https://jamkham.com/science/)
+
+Research shows adaptive interleaving improves long-term retention compared to blocked practice, even if it feels harder in the moment. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S1041608025001803)
+
+## Within-session micro-spacing (optional but powerful)
+
+For new or very weak skills, within a single session:
+
+- Present the same skill 2–3 times, separated by 2–5 other items.
+- Each presentation uses a slightly different item from the same skill bank.
+- This creates multiple retrieval events in one session, improving initial encoding. [jamkham](https://jamkham.com/science/)
+
+Track these as “micro-reviews” that feed into the main S/D updates at the end of the session.
+
+## Handling different year levels and subjects
+
+Tune parameters by year level:
+
+- **Years 1–2:**
+  - Shorter sessions (10–15 items).
+  - Smaller intervals initially (S grows more slowly).
+  - More gamified feedback, more visual items.
+- **Years 3–6:**
+  - Longer sessions (15–25 items).
+  - Faster growth of S for well-mastered skills.
+  - More multi-step problems and word problems.
+
+Maths vs English:
+
+- Maths items often have clearer right/wrong and RT signals; you can rely more on RT-based adaptation. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC6028005/)
+- English (e.g., reading comprehension) may need more nuanced scoring (partial credit, rubric-based), so lean more on accuracy and hint usage than raw RT.
+
+## Data model sketch (for your backend)
+
+Per child–skill record:
+
+```json
+{
+  "child_id": "...",
+  "skill_id": "...", // tied to curriculum codes AC/VIC/NSW
+  "stability_days": 3.2,
+  "difficulty": 0.45,
+  "lapses": 1,
+  "review_count": 4,
+  "last_reviewed_at": "2026-08-15T09:30:00+10:00",
+  "next_review_at": "2026-08-18T09:30:00+10:00",
+  "recent_accuracy_3": 0.67,
+  "avg_response_time_sec": 12.4,
+  "status": "needs_attention" // or "on_track", "mastered"
+}
+```
+
+Per review event:
+
+```json
+{
+  "child_id": "...",
+  "skill_id": "...",
+  "item_id": "...",
+  "correct": true,
+  "attempts": 1,
+  "hint_used": false,
+  "response_time_sec": 9,
+  "timestamp": "2026-08-17T22:15:00+10:00"
+}
+```
+
+## Pseudocode for the core update
+
+Simplified version you can adapt:
+
+```python
+def update_skill_after_review(skill_state, review):
+    # skill_state: {S, D, lapses, review_count, ...}
+    # review: {correct, attempts, hint_used, response_time_sec}
+
+    # 1. Compute quality q (0–1)
+    if review["correct"] and review["attempts"] == 1 and not review["hint_used"]:
+        q_acc = 1.0
+    elif review["correct"]:
+        q_acc = 0.5
+    else:
+        q_acc = 0.0
+
+    # optional speed adjustment (simplified)
+    expected_rt_min, expected_rt_max = 5, 20  # tune per year/item
+    rt = review["response_time_sec"]
+    speed_adj = 0.0
+    if rt < expected_rt_min:
+        speed_adj = -0.1  # possible guessing
+    elif rt > expected_rt_max:
+        speed_adj = -0.1  # struggling
+
+    q = max(0.0, min(1.0, q_acc + speed_adj))
+
+    # 2. Update difficulty D
+    alpha, beta = 0.1, 0.15
+    if review["correct"] and rt <= expected_rt_max:
+        D_new = max(0.0, skill_state["D"] - alpha)
+    else:
+        D_new = min(1.0, skill_state["D"] + beta)
+
+    # 3. Update stability S
+    k_easy, k_medium, k_hard = 0.4, 0.15, 0.6
+    if q >= 0.8:
+        S_new = skill_state["S"] * (1 + k_easy * (1 - D_new))
+    elif q >= 0.5:
+        S_new = skill_state["S"] * (1 + k_medium)
+    else:
+        S_new = skill_state["S"] * k_hard
+        lapses_new = skill_state["lapses"] + 1
+    lapses_new = skill_state["lapses"] if q >= 0.5 else lapses_new
+
+    # 4. Compute next interval I
+    f_D = 1 - 0.5 * D_new
+    I = S_new * f_D
+    I = max(0.5, min(I, 90))  # 0.5 to 90 days
+
+    # 5. If very poor performance, force near-term review
+    if q < 0.3:
+        I = min(I, 1.0)  # at most 1 day
+
+    # 6. Update review_count and recent accuracy (rolling last 3)
+    review_count_new = skill_state["review_count"] + 1
+    recent_acc = update_rolling_accuracy(
+        skill_state["recent_accuracy_3"],
+        1.0 if review["correct"] else 0.0
+    )
+
+    # 7. Determine status
+    if S_new >= 30 and review_count_new >= 5 and recent_acc >= 0.9:
+        status = "mastered"
+    elif S_new <= 7 or lapses_new >= 2 or recent_acc < 0.7:
+        status = "needs_attention"
+    else:
+        status = "on_track"
+
+    return {
+        "S": S_new,
+        "D": D_new,
+        "lapses": lapses_new,
+        "review_count": review_count_new,
+        "recent_accuracy_3": recent_acc,
+        "next_review_interval_days": I,
+        "status": status,
+    }
+```
+
+You’d then set `next_review_at = last_reviewed_at + I days`.
+
+## Parent-facing explanation (for your docs/UI)
+
+You can summarise this to parents as:
+
+- “Each skill has a ‘memory strength’ that grows when your child practices successfully.”
+- “The app schedules reviews just before your child is likely to forget, so learning sticks.”
+- “Skills that need more practice appear more often, but always mixed with other topics to keep it engaging.” [edresearch.edu](https://www.edresearch.edu.au/guides-resources/practice-guides/spacing-and-retrieval-practice-guide-full-publication)
+
+If you’d like, next we can:
+
+- Define the exact parameter values per year level (1–6) for Maths and English.
+- Design the daily session builder (how many items, how much time, how to balance new vs review).
+- Map this logic to your data model and API endpoints (e.g., `POST /reviews`, `GET /session/today`).

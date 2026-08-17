@@ -1,0 +1,206 @@
+Below is a **sample 10-week sequence table for Year 3 English**, aligned to both **VIC (Level 3)** and **NSW (Stage 2)**, with example skill descriptions and placeholder curriculum codes.
+
+This mirrors the Maths table structure and is designed so you can mark **1 Reading**, **1 Writing**, and **1 Language** focus as “new” each week, with Literature integrated throughout. [curriculum.nsw.edu](https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/overview)
+
+***
+
+## Year 3 English – 10-week sequence (VIC & NSW)
+
+**Assumptions:**
+
+- 10-week term, ~3–4 English lessons per week.  
+- Each week has:
+  - 1 **Reading comprehension** focus (Literacy strand).  
+  - 1 **Writing** focus (text type + structural/language features).  
+  - 1 **Language** focus (grammar, vocabulary, spelling, punctuation).  
+- **Literature** is woven into reading/writing tasks (stories, poems, literary texts) rather than treated as a separate weekly skill. [curriculum.nsw.edu](https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/overview)
+- VIC uses **AC9 codes (Level 3)**; NSW maps to **Stage 2 outcomes** (EN2-RECOM-01, EN2-8B, etc.) and focus areas (reading fluency, reading comprehension, creating written texts, spelling, understanding literature). [curriculum.nsw.edu](https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/overview)
+
+***
+
+### Week 1 – Orientation: text types, purpose and audience; paragraph basics
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Identify purpose and audience of imaginative, informative and persuasive texts; use text features (headings, diagrams, speech bubbles) to support understanding.<br>**AC codes:** AC9E3LY03, AC9E3LA09<br>**VIC phrasing:** “Identify the purpose and audience of different text types and explain how language and images support meaning.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Reading comprehension.<br>**NSW focus:** Identify purpose of predictable informative, imaginative and persuasive texts; identify language and visual features that signal purpose.<br>**NSW outcome (placeholder):** EN2-RECOM-01, EN2-8B (UnT6–UnT7)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) |
+| **Writing focus** | Plan and write simple paragraphs grouping related ideas; begin a short narrative or recount with clear beginning–middle–end.<br>**AC codes:** AC9E3LA04, AC9E3LY06<br>**VIC phrasing:** “Use paragraphs to organise ideas in written texts; create imaginative or recount texts with clear structure.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts.<br>**NSW focus:** Write texts with ideas grouped in simple paragraphs; use appropriate form for narratives/recounts.<br>**NSW outcome (placeholder):** EN2-11D (creating texts) |
+| **Language focus** | Review high-frequency words; revise basic punctuation (capital letters, full stops, question marks); introduce compound sentences with “and”, “but”, “or”.<br>**AC codes:** AC9E3LY09, AC9E3LA06<br>**VIC phrasing:** “Spell high-frequency and phonetically regular words; use compound sentences and correct basic punctuation.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Spelling / Grammar.<br>**NSW focus:** Spell high-frequency and phonetically regular words; use simple and compound sentences with correct punctuation.<br>**NSW outcome (placeholder):** EN2-6B (spelling), EN2-4A (grammar) |
+
+**Example “new skills” to mark in app:**
+
+- VIC: “Identify purpose and audience of text types” (AC9E3LY03).  
+- NSW: “Reading comprehension – identify purpose of text types” (EN2-RECOM-01, EN2-8B).  
+- VIC/NSW shared: “Use paragraphs to group related ideas” (AC9E3LA04).  
+- VIC/NSW shared: “Spell high-frequency words; use compound sentences” (AC9E3LY09, AC9E3LA06).
+
+***
+
+### Week 2 – Literal comprehension: retrieving explicit information
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Retrieve explicit information from short informative and narrative texts; answer who/what/where/when questions.<br>**AC codes:** AC9E3LY01, AC9E3LY02<br>**VIC phrasing:** “Locate and record explicit information from texts using skimming and scanning.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-literal-comprehension) | **Focus area:** Reading comprehension – literal.<br>**NSW focus:** Use skimming and scanning to locate specific information; answer literal questions about texts.<br>**NSW outcome (placeholder):** EN2-RECOM-01 (UnT6–UnT7)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-literal-comprehension) |
+| **Writing focus** | Write a short informative text (e.g., fact file) with a clear topic sentence and supporting details in paragraphs.<br>**AC codes:** AC9E3LY06, AC9E3LA04<br>**VIC phrasing:** “Create informative texts with topic sentences and supporting details grouped in paragraphs.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts – informative.<br>**NSW focus:** Write informative texts with clear topic sentences and supporting details; use paragraphs.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Nouns and verbs: identify in sentences; introduce subject–verb agreement in simple sentences.<br>**AC codes:** AC9E3LA06, AC9E3LA01<br>**VIC phrasing:** “Identify nouns and verbs; ensure subject and verb agree in simple sentences.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Grammar.<br>**NSW focus:** Identify nouns and verbs; use subject–verb agreement in sentences.<br>**NSW outcome (placeholder):** EN2-4A |
+
+**Example “new skills”:**
+
+- VIC: “Retrieve explicit information from texts” (AC9E3LY01, AC9E3LY02).  
+- NSW: “Literal comprehension – retrieve explicit information” (EN2-RECOM-01).  
+- VIC/NSW: “Write informative texts with paragraphs” (AC9E3LY06, AC9E3LA04).  
+- VIC/NSW: “Identify nouns and verbs; subject–verb agreement” (AC9E3LA06).
+
+***
+
+### Week 3 – Inferential comprehension: reading between the lines
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Make simple inferences using text evidence and prior knowledge; answer why/how questions.<br>**AC codes:** AC9E3LY01, AC9E3LY02<br>**VIC phrasing:** “Make inferences about characters’ feelings and motives using clues from the text.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-literal-comprehension) | **Focus area:** Reading comprehension – inferential.<br>**NSW focus:** Make simple inferences about characters and events; use textual evidence to support ideas.<br>**NSW outcome (placeholder):** EN2-RECOM-01 (UnT8)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) |
+| **Writing focus** | Write a short narrative with a clear problem and solution; include characters’ feelings and simple dialogue.<br>**AC codes:** AC9E3LY06, AC9E3LE02<br>**VIC phrasing:** “Create narratives with a clear problem and solution; use dialogue and description to show characters’ feelings.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Creating written texts – narrative.<br>**NSW focus:** Write narratives with a clear problem and solution; include dialogue and description.<br>**NSW outcome (placeholder):** EN2-11D, EN2-UARL-01 |
+| **Language focus** | Adjectives and adverbs: identify and use to add detail; introduce commas in simple lists.<br>**AC codes:** AC9E3LA02, AC9E3LA11<br>**VIC phrasing:** “Use adjectives and adverbs to add detail; use commas in lists.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Grammar / Punctuation.<br>**NSW focus:** Use adjectives and adverbs to add detail; use commas in lists.<br>**NSW outcome (placeholder):** EN2-4A |
+
+**Example “new skills”:**
+
+- VIC: “Make simple inferences using text evidence” (AC9E3LY01, AC9E3LY02).  
+- NSW: “Inferential comprehension – make inferences about characters/events” (EN2-RECOM-01).  
+- VIC/NSW: “Write narratives with problem, solution and dialogue” (AC9E3LY06, AC9E3LE02).  
+- VIC/NSW: “Use adjectives, adverbs and commas in lists” (AC9E3LA02, AC9E3LA11).
+
+***
+
+### Week 4 – Text structure: beginnings, middles, endings; informative texts
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Identify how texts are organised (beginning–middle–end; introduction–body–conclusion); recognise signposting (headings, subheadings).<br>**AC codes:** AC9E3LA04, AC9E3LY03<br>**VIC phrasing:** “Describe how texts are organised and how headings and subheadings help readers.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/sequencing-events-in-informative-texts) | **Focus area:** Reading comprehension – text structure.<br>**NSW focus:** Identify text structures in imaginative, informative and persuasive texts; use headings and subheadings to navigate.<br>**NSW outcome (placeholder):** EN2-RECOM-01 (UnT7–UnT8)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) |
+| **Writing focus** | Plan and write an information report with introduction, body paragraphs (grouped by subtopics), and simple conclusion.<br>**AC codes:** AC9E3LY06, AC9E3LA04<br>**VIC phrasing:** “Create information reports with clear introduction, body paragraphs and conclusion.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts – informative (report).<br>**NSW focus:** Write information reports with clear structure and paragraphs; use topic-specific vocabulary.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Verb tenses (past, present, future); maintain consistent tense within a text.<br>**AC codes:** AC9E3LA08, AC9E3LA07<br>**VIC phrasing:** “Use past, present and future tense; keep tense consistent in writing.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Grammar.<br>**NSW focus:** Use verb tenses appropriately; maintain consistent tense in texts.<br>**NSW outcome (placeholder):** EN2-4A |
+
+**Example “new skills”:**
+
+- VIC: “Identify text structure and signposting features” (AC9E3LA04, AC9E3LY03).  
+- NSW: “Text structure – identify organisation of texts” (EN2-RECOM-01).  
+- VIC/NSW: “Write information reports with paragraphs” (AC9E3LY06, AC9E3LA04).  
+- VIC/NSW: “Use and maintain consistent verb tense” (AC9E3LA08).
+
+***
+
+### Week 5 – Persuasive texts: opinion, reasons, examples
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Identify the author’s opinion and reasons in simple persuasive texts (advertisements, letters, opinion pieces).<br>**AC codes:** AC9E3LY03, AC9E3LA03<br>**VIC phrasing:** “Identify the author’s point of view and supporting reasons in persuasive texts.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) | **Focus area:** Reading comprehension – persuasive.<br>**NSW focus:** Identify language features used to present opinions or points of view; explain how authors use evidence and supporting detail.<br>**NSW outcome (placeholder):** EN2-RECOM-01 (UnT8)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) |
+| **Writing focus** | Plan and write a short persuasive text (e.g., letter, poster) stating an opinion with 2–3 reasons and examples.<br>**AC codes:** AC9E3LY06, AC9E3LA03<br>**VIC phrasing:** “Create persuasive texts that state an opinion and give reasons and examples.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts – persuasive.<br>**NSW focus:** Write persuasive texts with a clear opinion, reasons and examples.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Modal verbs (can, could, should, must) to express opinion and possibility; introduce apostrophes for contraction.<br>**AC codes:** AC9E3LA03, AC9E3LA11<br>**VIC phrasing:** “Use modal verbs to express opinion; use apostrophes for contractions.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Grammar / Punctuation.<br>**NSW focus:** Use modal verbs to express opinion and possibility; use apostrophes for contractions.<br>**NSW outcome (placeholder):** EN2-4A |
+
+**Example “new skills”:**
+
+- VIC: “Identify opinion and reasons in persuasive texts” (AC9E3LY03, AC9E3LA03).  
+- NSW: “Persuasive comprehension – identify opinion and reasons” (EN2-RECOM-01).  
+- VIC/NSW: “Write persuasive texts with opinion, reasons, examples” (AC9E3LY06, AC9E3LA03).  
+- VIC/NSW: “Use modal verbs and apostrophes for contractions” (AC9E3LA03, AC9E3LA11).
+
+***
+
+### Week 6 – Vocabulary: topic-specific and technical words; explaining processes
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Use context clues and glossaries to understand topic-specific and technical vocabulary in informative texts.<br>**AC codes:** AC9E3LA10, AC9E3LY01<br>**VIC phrasing:** “Use context and reference tools to understand new and technical words in texts.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Vocabulary / Reading comprehension.<br>**NSW focus:** Use context and reference tools to understand topic-specific and technical vocabulary.<br>**NSW outcome (placeholder):** EN2-4B (vocabulary), EN2-RECOM-01 |
+| **Writing focus** | Write a short explanation text (how/why something happens) using clear sequence words (first, next, then, finally) and topic-specific vocabulary.<br>**AC codes:** AC9E3LY06, AC9E3LA05<br>**VIC phrasing:** “Create explanation texts with clear sequence and topic-specific vocabulary.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts – explanation.<br>**NSW focus:** Write explanation texts with clear sequence and appropriate vocabulary.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Prefixes and suffixes; use base words + affixes to build and spell multisyllabic words.<br>**AC codes:** AC9E3LY10, AC9E3LY09<br>**VIC phrasing:** “Use knowledge of prefixes and suffixes to read and spell multisyllabic words.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Spelling.<br>**NSW focus:** Use knowledge of base words, prefixes and suffixes to spell multisyllabic words.<br>**NSW outcome (placeholder):** EN2-6B |
+
+**Example “new skills”:**
+
+- VIC: “Use context clues to understand technical vocabulary” (AC9E3LA10, AC9E3LY01).  
+- NSW: “Vocabulary – understand topic-specific and technical words” (EN2-4B).  
+- VIC/NSW: “Write explanation texts with sequence words” (AC9E3LY06, AC9E3LA05).  
+- VIC/NSW: “Use prefixes and suffixes to spell multisyllabic words” (AC9E3LY10, AC9E3LY09).
+
+***
+
+### Week 7 – Evaluative comprehension: judging texts and author’s choices
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Evaluate simple texts: say what worked well, what was clear/unclear, and how language/images helped meaning.<br>**AC codes:** AC9E3LY01, AC9E3LA09<br>**VIC phrasing:** “Evaluate how language and images help the reader understand a text.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) | **Focus area:** Reading comprehension – evaluative.<br>**NSW focus:** Evaluate text features for relevance to purpose and audience; analyse language and visual features using metalanguage.<br>**NSW outcome (placeholder):** EN2-RECOM-01 (UnT9)  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-text-structure-and-features) |
+| **Writing focus** | Write a short response to a literary or informative text: state opinion, give reasons and examples from the text.<br>**AC codes:** AC9E3LY06, AC9E3LE04<br>**VIC phrasing:** “Create written responses to texts, stating opinions with reasons and evidence.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Creating written texts – response.<br>**NSW focus:** Write responses to texts, stating opinions with reasons and evidence.<br>**NSW outcome (placeholder):** EN2-11D, EN2-UARL-01 |
+| **Language focus** | Cohesive devices: pronouns, synonyms, connectives (however, because, therefore) to link ideas across sentences.<br>**AC codes:** AC9E3LA05, AC9E3LA07<br>**VIC phrasing:** “Use cohesive devices to link ideas and make texts clear.”  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/sequencing-events-in-informative-texts) | **Focus area:** Grammar.<br>**NSW focus:** Use cohesive devices (pronouns, connectives) to link ideas across sentences.<br>**NSW outcome (placeholder):** EN2-4A |
+
+**Example “new skills”:**
+
+- VIC: “Evaluate how language and images support meaning” (AC9E3LY01, AC9E3LA09).  
+- NSW: “Evaluative comprehension – evaluate text features” (EN2-RECOM-01, UnT9).  
+- VIC/NSW: “Write responses to texts with opinion and evidence” (AC9E3LY06, AC9E3LE04).  
+- VIC/NSW: “Use cohesive devices to link ideas” (AC9E3LA05, AC9E3LA07).
+
+***
+
+### Week 8 – Literature focus: characters, themes and literary devices
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Describe characters, settings and simple themes in literary texts; identify literary devices (simile, imagery, repetition).<br>**AC codes:** AC9E3LE01, AC9E3LE02, AC9E3LE03<br>**VIC phrasing:** “Discuss characters, themes and literary devices in stories and poems.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Understanding and responding to literature.<br>**NSW focus:** Identify and describe how ideas are represented in literature; discuss characters, themes and literary features.<br>**NSW outcome (placeholder):** EN2-UARL-01, EN2-8B  [education.nsw.gov](https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/teaching-and-learning-resources/literacy/teaching-strategies/stage-2/reading/stage-2-literal-comprehension) |
+| **Writing focus** | Write an imaginative text (story or poem) that develops a character and includes at least one literary device (e.g., simile).<br>**AC codes:** AC9E3LY06, AC9E3LE02, AC9E3LE05<br>**VIC phrasing:** “Create imaginative texts that develop characters and use literary devices.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Creating written texts – imaginative.<br>**NSW focus:** Write imaginative texts that develop characters and use literary devices.<br>**NSW outcome (placeholder):** EN2-11D, EN2-UARL-01 |
+| **Language focus** | Figurative language: similes, metaphors (simple); discuss effect on reader.<br>**AC codes:** AC9E3LA03, AC9E3LE03<br>**VIC phrasing:** “Identify and use simple figurative language such as similes.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Language forms and features.<br>**NSW focus:** Identify and use figurative language (similes, metaphors) in texts.<br>**NSW outcome (placeholder):** EN2-4B, EN2-8B |
+
+**Example “new skills”:**
+
+- VIC: “Describe characters, themes and literary devices” (AC9E3LE01–03).  
+- NSW: “Literature – discuss characters, themes, literary features” (EN2-UARL-01, EN2-8B).  
+- VIC/NSW: “Write imaginative texts with character and literary devices” (AC9E3LY06, AC9E3LE02, AC9E3LE05).  
+- VIC/NSW: “Identify and use similes and simple metaphors” (AC9E3LA03, AC9E3LE03).
+
+***
+
+### Week 9 – Reading fluency and decoding multisyllabic words; editing writing
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Read aloud with appropriate phrasing and expression; decode multisyllabic words using phonic and morphemic knowledge.<br>**AC codes:** AC9E3LY09, AC9E3LY01<br>**VIC phrasing:** “Read fluently, decoding multisyllabic words using sound–letter patterns and word parts.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Reading fluency / Decoding.<br>**NSW focus:** Read fluently, using phonic, morphemic and grammatical knowledge to decode multisyllabic words.<br>**NSW outcome (placeholder):** EN2-5B (fluency), EN2-6B (spelling/decoding) |
+| **Writing focus** | Edit and improve own writing: check paragraphs, tense, punctuation, spelling; add or remove details for clarity.<br>**AC codes:** AC9E3LY06, AC9E3LY07<br>**VIC phrasing:** “Edit writing to improve structure, grammar, punctuation and spelling.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/english/assessment/ac9_english_se_yr3.pdf) | **Focus area:** Creating written texts – editing.<br>**NSW focus:** Edit and proofread own writing for structure, grammar, punctuation and spelling.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Spelling patterns: less common letter patterns, vowel clusters, homophones; apply rules when adding suffixes.<br>**AC codes:** AC9E3LY11, AC9E3LY10<br>**VIC phrasing:** “Use less common letter patterns and spelling rules to spell multisyllabic words and homophones.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Spelling.<br>**NSW focus:** Use less common letter patterns and spelling rules for multisyllabic words and homophones.<br>**NSW outcome (placeholder):** EN2-6B |
+
+**Example “new skills”:**
+
+- VIC: “Read fluently, decoding multisyllabic words” (AC9E3LY09, AC9E3LY01).  
+- NSW: “Reading fluency – decode multisyllabic words” (EN2-5B, EN2-6B).  
+- VIC/NSW: “Edit writing for structure, grammar, punctuation, spelling” (AC9E3LY06, AC9E3LY07).  
+- VIC/NSW: “Spell words with less common patterns and homophones” (AC9E3LY11, AC9E3LY10).
+
+***
+
+### Week 10 – Review and consolidation; multimodal texts
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Reading focus** | Interpret multimodal texts (e.g., websites, posters, digital stories): how images, layout and words work together.<br>**AC codes:** AC9E3LA09, AC9E3LY03<br>**VIC phrasing:** “Explain how images and layout contribute to meaning in multimodal texts.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Reading comprehension – multimodal.<br>**NSW focus:** Identify how language and visual features work together in multimodal texts.<br>**NSW outcome (placeholder):** EN2-RECOM-01, EN2-8B |
+| **Writing focus** | Plan, create and publish a short multimodal text (e.g., digital poster, slide, simple webpage) for a specific purpose and audience.<br>**AC codes:** AC9E3LY06, AC9E3LY08<br>**VIC phrasing:** “Create and publish multimodal texts with appropriate form, layout and visual features.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Creating written texts – multimodal.<br>**NSW focus:** Create and publish multimodal texts for specific purposes and audiences.<br>**NSW outcome (placeholder):** EN2-11D |
+| **Language focus** | Consolidation: review key grammar, punctuation and spelling patterns from the term; apply in final writing task.<br>**AC codes:** AC9E3LA06, AC9E3LA11, AC9E3LY09–12<br>**VIC phrasing:** “Apply knowledge of grammar, punctuation and spelling in final writing tasks.”  [teacherspayteachers](https://www.teacherspayteachers.com/Product/Australian-Curriculum-90-Year-3-Writing-Unit-Information-Report-9496825) | **Focus area:** Grammar / Spelling – review.<br>**NSW focus:** Apply grammar, punctuation and spelling knowledge in final writing tasks.<br>**NSW outcome (placeholder):** EN2-4A, EN2-6B |
+
+**Example “new skills”:**
+
+- VIC: “Interpret how images and layout contribute to meaning” (AC9E3LA09, AC9E3LY03).  
+- NSW: “Multimodal comprehension – language and visual features” (EN2-RECOM-01, EN2-8B).  
+- VIC/NSW: “Create and publish multimodal texts” (AC9E3LY06, AC9E3LY08).  
+- VIC/NSW: “Apply grammar, punctuation and spelling knowledge” (AC9E3LA06, AC9E3LY09–12).
+
+***
+
+## How to use this in your app
+
+- Treat each week’s **Reading**, **Writing**, and **Language** rows as the “new skills” to introduce for Year 3 English.
+- Store:
+  - Canonical skill definitions with **AC9E3** codes.
+  - State-specific mappings:
+    - VIC: Level 3 phrasing + any local codes.
+    - NSW: Stage 2 outcomes (EN2-RECOM-01, EN2-8B, EN2-11D, EN2-UARL-01, EN2-4A, EN2-6B, etc.). [curriculum.nsw.edu](https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/overview)
+- Your **weekly new skill selector** then:
+  - Marks these skills as “new” for Year 3, Week N.
+  - Feeds them into the spaced-repetition engine for ongoing review.
+
+If you’d like, I can next:
+
+- Turn this English table (and the Maths one) into a **JSON schema** you can load directly into your curriculum configuration, or  
+- Draft the **parent/teacher-facing descriptions** of these skills in child-friendly language.

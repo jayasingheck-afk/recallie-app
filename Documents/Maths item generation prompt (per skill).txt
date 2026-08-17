@@ -1,0 +1,77 @@
+You are generating a practice item bank for:
+
+- Subject: Maths
+- Year level: 3
+- State tracks to support: VIC, NSW
+- Topic: [TOPIC_NAME, e.g. "Addition and subtraction within 1,000 (with regrouping)"]
+- Skill description: [SKILL_DESCRIPTION, e.g. "Add and subtract 2- and 3-digit numbers within 1,000 with regrouping; use written and mental strategies."]
+- Curriculum codes to cover:
+  - Australian Curriculum (AC): [AC_CODES, e.g. "AC9M3N04, AC9M3N05"]
+  - VIC: [VIC_PHRASING_AND_CODES_IF_KNOWN]
+  - NSW: [NSW_SUBAREA_AND_OUTCOMES, e.g. "Additive relations – MA2-ADD-03"]
+
+Requirements:
+
+1. Produce 25 distinct practice items for this topic and year level.
+2. For each item, provide:
+   - item_id: unique identifier (e.g. AC9M3N04_Y3_AddSubReg_001)
+   - curriculum_codes: { AC: [...], VIC: [...], NSW: [...] } (use placeholders if exact codes unknown)
+   - skill_description: one-sentence description of the skill
+   - difficulty: "easy" | "medium" | "hard"
+   - question_text: the actual question/task as shown to a Year 3 student (age-appropriate language)
+   - question_type: "multiple_choice" | "short_answer" | "multi_part"
+   - answer_key: correct answer(s) in a machine-readable format
+   - step_by_step_solution: 3–6 clear, child-friendly steps explaining how to get the answer
+   - common_misconceptions: 2–3 typical errors and how to address them (short bullet points)
+   - hints: 2 scaffolded hints (from general to specific)
+   - tags: e.g. ["word_problem", "place_value", "regrouping"]
+
+3. Ensure:
+   - Language suits Year 3 students (simple sentences, concrete contexts).
+   - No negative labels; focus on growth and practice.
+   - Variety in contexts (school, home, play, community) and representation.
+   - Include a mix of:
+     - Pure number sentences
+     - Word problems
+     - Visual/place-value representations where relevant.
+
+4. Output format:
+   - Return a single JSON array, where each element is one item with the fields above.
+   - Do not include any commentary outside the JSON.
+
+Example item structure (for your guidance, do not output this example):
+
+[
+  {
+    "item_id": "AC9M3N04_Y3_AddSubReg_001",
+    "curriculum_codes": {
+      "AC": ["AC9M3N04", "AC9M3N05"],
+      "VIC": [],
+      "NSW": ["MA2-ADD-03"]
+    },
+    "skill_description": "Add and subtract 2- and 3-digit numbers within 1,000 with regrouping.",
+    "difficulty": "medium",
+    "question_text": "There are 427 apples in a basket. 158 apples are taken out. How many apples are left?",
+    "question_type": "short_answer",
+    "answer_key": "269",
+    "step_by_step_solution": [
+      "Start with 427 apples.",
+      "Take away 158 apples.",
+      "Subtract the ones: 7 − 8 → borrow 1 ten → 17 − 8 = 9.",
+      "Subtract the tens: 1 (after borrowing) − 5 → borrow 1 hundred → 11 − 5 = 6.",
+      "Subtract the hundreds: 3 − 1 = 2.",
+      "So 427 − 158 = 269."
+    ],
+    "common_misconceptions": [
+      "Forgetting to borrow when the ones digit is smaller.",
+      "Subtracting each column separately without regrouping."
+    ],
+    "hints": [
+      "Break 158 into 100 + 50 + 8 and subtract step by step.",
+      "Use column subtraction and remember to borrow when needed."
+    ],
+    "tags": ["word_problem", "regrouping", "place_value"]
+  }
+]
+
+Now generate the full exercise bank as specified.

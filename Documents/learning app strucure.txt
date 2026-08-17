@@ -1,0 +1,236 @@
+For your specific situation—a solo founder building an evidence-based, curriculum-aligned learning app for Australian primary students—my strong recommendation is:
+
+## Build a **web-based application first**, not a native mobile app
+
+### Why web-first is the right choice for you
+
+**1. Faster iteration and lower complexity**
+
+- You can ship updates instantly without app store review delays. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- One codebase serves all devices (desktop, tablet, mobile) instead of maintaining separate iOS/Android apps. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- As a solo founder, this dramatically reduces your maintenance burden. [alphonsolabs](https://www.alphonsolabs.com/best-web-app-tech-stacks-2026/)
+
+**2. Better for schools and classroom use**
+
+- Schools often block app downloads or have strict device policies; web apps work on any browser. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- Teachers can easily share URLs, embed in LMS (Google Classroom, Seesaw), and manage access via school accounts. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- Easier to offer school licenses and bulk provisioning. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+**3. Children actually learn well on web apps**
+
+- Research shows high-quality learning apps (web or mobile) used for just 5–15 minutes daily can improve maths and literacy outcomes. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC11868692/)
+- The key is **quality design and evidence-based pedagogy**, not the platform itself. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC8916741/)
+- Web apps can be fully responsive and touch-optimized for tablets (which many schools use). [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+**4. Cost and compliance advantages**
+
+- Hosting in Australian regions (AWS/GCP/Azure Sydney) is straightforward for web apps. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- Easier to implement child privacy compliance (data minimisation, parental dashboards, audit logs). [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- Lower infrastructure costs initially; you can start at $0–$50/month and scale. [startupbricks](https://www.startupbricks.in/blog/solo-founder-tech-stack-2025/)
+
+***
+
+## Recommended tech stack for your EdTech web app (2026)
+
+Given your preferences (React/Next.js + Node/Python, cloud hosting, solo founder), here's the optimal stack:
+
+### **Frontend: Next.js 15 (React) + TypeScript + Tailwind CSS**
+
+- **Why:** Best-in-class for SaaS/EdTech in 2026; excellent SEO, fast performance, huge ecosystem. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **UI components:** Use `shadcn/ui` or similar—copy-paste components you own, no vendor lock-in. [wfnext](https://wfnext.com/blog/best-tech-stack-saas-mvp-2026/)
+- **Responsive by default:** Works perfectly on tablets (critical for Years 1–6). [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+### **Backend: Next.js API routes (Node.js) initially, then NestJS if needed**
+
+- **Why:** One language (TypeScript/JavaScript) across full stack; fastest iteration for solo founders. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Start simple:** Next.js API routes are enough for MVP. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Scale later:** Migrate complex logic to NestJS (Node.js framework) as you grow. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+**Alternative:** If you plan to do heavy AI processing (e.g., real-time Claude API orchestration, custom ML models), consider **Python FastAPI** for the backend while keeping Next.js frontend. [wfnext](https://wfnext.com/blog/best-tech-stack-saas-mvp-2026/)
+
+### **Database: PostgreSQL (managed)**
+
+- **Options:** Supabase, Neon, or AWS RDS/Aurora. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Why:** Relational data (users, classes, skills, attempts) fits PostgreSQL perfectly; strong typing with Prisma/Drizzle ORM. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Compliance:** Choose a provider with Australian regions (e.g., AWS Sydney `ap-southeast-2`). [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+
+### **Authentication: Clerk or Auth0**
+
+- **Why:** Managed auth saves you weeks of work; handles parent/teacher/student roles, SSO, parental consent flows. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Child safety:** Built-in support for age-gating, parental consent, and session management. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+### **Payments: Stripe**
+
+- **Why:** Industry standard; supports subscriptions (monthly/annual), family plans, school invoices. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Australia:** Full support for AUD, local payment methods. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+### **Hosting: Vercel (frontend) + AWS/GCP Sydney (backend/database)**
+
+- **Frontend:** Vercel is optimal for Next.js—zero config, edge functions, automatic scaling. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Backend/Database:** Host in **AWS `ap-southeast-2` (Sydney)** or **GCP Australia** to comply with Australian Privacy Principles and data residency requirements. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **Why this split:** Vercel for speed/SEO; Australian cloud for compliance and data control. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+
+### **AI integration: Claude API (Anthropic) + your own orchestration layer**
+
+- **Your workflow:** Use Claude to generate exercise banks (as we designed), store in your database, then serve via your API. [wearebrain](https://wearebrain.com/blog/best-tech-stack-edtech-2026/)
+- **Why not real-time AI:** For child safety and compliance, pre-generate and human-review all content; don't let children interact directly with AI. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC8916741/)
+
+### **Analytics: PostHog (self-hosted or cloud)**
+
+- **Why:** Open-source, privacy-focused; tracks user behavior without violating child privacy. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Avoid:** Google Analytics for children's data (compliance risk). [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+***
+
+## Architecture diagram (simplified)
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    Parent/Teacher/Student            │
+│                    (Browser: Chrome, Safari, Edge)   │
+└─────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────┐
+│              Frontend: Next.js 15 (Vercel)          │
+│              - React + TypeScript + Tailwind        │
+│              - shadcn/ui components                 │
+│              - Responsive (desktop/tablet/mobile)   │
+└─────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────┐
+│         Backend: Next.js API Routes / NestJS        │
+│         (AWS Sydney ap-southeast-2 or GCP AU)       │
+│         - Node.js (TypeScript) or Python FastAPI    │
+│         - Curriculum logic, spaced-repetition engine│
+│         - Claude API orchestration (content gen)    │
+└─────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────┐
+│         Database: PostgreSQL (Supabase/Neon/RDS)    │
+│         - User accounts, classes, skills, attempts  │
+│         - Hosted in Sydney region (compliance)      │
+└─────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────┐
+│         External Services                           │
+│         - Stripe (payments, subscriptions)          │
+│         - Clerk/Auth0 (authentication)              │
+│         - PostHog (analytics, privacy-safe)         │
+│         - Resend/SendGrid (email reports)           │
+│         - Twilio (SMS alerts, optional)             │
+└─────────────────────────────────────────────────────┘
+```
+
+***
+
+## Mobile app? Do this instead
+
+**Don't build native iOS/Android apps at launch.** Instead:
+
+1. **Make your web app a Progressive Web App (PWA):**
+   - Works offline (caches recent sessions).
+   - Can be "installed" to home screen (looks like an app).
+   - No app store approval needed. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+
+2. **Optimize for tablets:**
+   - Years 1–6 students often use school tablets (iPad, Chromebook).
+   - Ensure touch-friendly UI, large buttons, minimal typing. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+
+3. **Add native apps later (if needed):**
+   - Once you have traction and revenue, use React Native or Flutter to build mobile apps from your existing logic.
+   - By then, you'll have validated demand and can afford the complexity. [alphonsolabs](https://www.alphonsolabs.com/best-web-app-tech-stacks-2026/)
+
+***
+
+## Compliance and child safety (critical for Australia)
+
+Your web app must comply with:
+
+- **Australian Privacy Principles (APPs)** and **Children's Online Privacy Code** (OAIC). [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **Data residency:** Host all data in **`ap-southeast-2` (Sydney/Melbourne)** regions. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **Data minimisation:** Collect only what's necessary; avoid behavioural advertising. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **Parental consent:** Implement age-gating and parental consent flows for under-13s. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Security:** Encryption at rest and in transit; audit logs; regular security reviews. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+
+**Practical steps:**
+
+- Use managed services (Clerk, Supabase, Vercel) that handle much of the security burden. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- Conduct a **Privacy Impact Assessment (PIA)** before launch. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- Document your data flows and CSP (cloud service provider) contracts. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+
+***
+
+## Development roadmap (solo founder, 3–6 months to MVP)
+
+**Month 1–2: Core platform**
+
+- Set up Next.js + PostgreSQL + Clerk + Stripe. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- Build user accounts (parent, teacher, student roles).
+- Implement curriculum config loader (the JSON we designed).
+- Build basic spaced-repetition engine (the logic we defined).
+
+**Month 3–4: Content and sessions**
+
+- Use Claude to generate Year 3 Maths/English exercise banks (with human review).
+- Build daily session builder (the algorithm we designed).
+- Implement progress dashboard for parents/teachers.
+
+**Month 5–6: Polish and compliance**
+
+- Add gamification (points, badges, streaks).
+- Implement email/SMS reports (parent choice).
+- Conduct PIA and security audit; ensure APP compliance. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- Beta test with 5–10 families/schools.
+
+**Launch:**
+
+- Free trial period (e.g., 30 days).
+- Pricing: AUD $10–20/month per child, family plans, school licenses.
+
+***
+
+## My opinion: This is the right approach for you
+
+**Web-first is the smartest choice** because:
+
+- **You're solo:** Web apps are faster to build, iterate, and maintain. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Your users are schools and families:** Web apps work everywhere without app store friction. [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Your differentiator is pedagogy, not platform:** Spaced repetition, interleaving, curriculum alignment—these work equally well on web. [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC11868692/)
+- **Compliance is easier:** Australian data residency, child privacy, audit logs—all simpler on web. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+
+**Only consider native mobile apps later** if:
+
+- You have strong demand from parents who want offline-only access.
+- You have revenue to fund a separate mobile team or agency.
+- You've validated that web adoption is maxed out.
+
+***
+
+## Final recommendation
+
+**Start with this stack:**
+
+- **Frontend:** Next.js 15 + TypeScript + Tailwind + shadcn/ui (hosted on Vercel) [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Backend:** Next.js API routes (Node.js/TypeScript) or Python FastAPI if AI-heavy [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Database:** PostgreSQL (Supabase/Neon/AWS RDS in Sydney `ap-southeast-2`) [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Auth:** Clerk (for parent/teacher/student roles, parental consent) [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Payments:** Stripe (subscriptions, family plans, school licenses) [startupik](https://startupik.com/startup-stack-for-edtech-startups/)
+- **Hosting:** Vercel (frontend) + AWS Sydney (backend/database for compliance) [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **AI:** Claude API for content generation (pre-reviewed, not real-time with children) [pmc.ncbi.nlm.nih](https://pmc.ncbi.nlm.nih.gov/articles/PMC8916741/)
+
+This stack is:
+
+- **Fast to ship:** You can have an MVP in 3–4 months. [solodevstack](https://solodevstack.com/blog/best-tech-stack-course-platform-solo-developer)
+- **Scalable:** Handles growth to thousands of users. [alphonsolabs](https://www.alphonsolabs.com/best-web-app-tech-stacks-2026/)
+- **Compliant:** Meets Australian child privacy and data residency rules. [techtweekinfotech](https://techtweekinfotech.com/privacy-act-app-compliance-cloud-management-australia/)
+- **Cost-effective:** Starts at $0–$50/month, scales to ~$150–$300/month at meaningful traction. [startupbricks](https://www.startupbricks.in/blog/solo-founder-tech-stack-2025/)
+
+If you'd like, I can next:
+
+- Draft a **detailed technical spec** for your spaced-repetition engine API endpoints.
+- Create a **database schema** (Prisma/Drizzle) for users, skills, attempts, sessions.
+- Outline a **Claude prompt library** for generating exercise banks across all Year 1–6 topics.

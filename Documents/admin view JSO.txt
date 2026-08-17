@@ -1,0 +1,1059 @@
+Below is a compact **“admin view” JSON** that maps each Year 3 Maths and English skill to human‑readable labels suitable for your dashboard UI (e.g., curriculum manager, weekly planner, teacher view).
+
+It’s designed to be:
+
+- Easy to scan in a UI table or dropdown.  
+- State‑aware (shows VIC/NSW phrasing and codes).  
+- Linked back to the canonical `skill.id` from your main curriculum config.
+
+***
+
+## Admin view JSON schema (conceptual)
+
+Each entry:
+
+```json
+{
+  "skill_id": "string (matches main config)",
+  "subject": "maths | english",
+  "year_level": 3,
+  "strand": "string",
+  "labels": {
+    "canonical": "string (short, teacher-friendly)",
+    "VIC": {
+      "label": "string (VIC phrasing, shortened)",
+      "codes": "string (comma-separated)"
+    },
+    "NSW": {
+      "label": "string (NSW subarea + outcome)",
+      "codes": "string (comma-separated)"
+    }
+  },
+  "typical_weeks": ["1","2", "..."] // optional: which weeks this skill is “new” in Term 1
+}
+```
+
+***
+
+## Sample admin view JSON: Year 3 Maths & English (Term 1)
+
+```json
+{
+  "version": "1.0",
+  "description": "Admin view: human-readable labels for Year 3 Maths and English skills (Term 1).",
+  "skills": [
+    {
+      "skill_id": "M3N01_represent_numbers_10k",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Represent and order numbers to 10,000 (place value)",
+        "VIC": {
+          "label": "Represent and order numbers beyond 10,000 using place value",
+          "codes": "AC9M3N01, AC9M3N02"
+        },
+        "NSW": {
+          "label": "Representing numbers – place value to 10,000",
+          "codes": "MA2-MRNS-01, MA2-MRNS-02"
+        }
+      },
+      "typical_weeks": ["1"]
+    },
+    {
+      "skill_id": "M3M01_metric_units_intro",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Identify metric units for length, mass, capacity; estimate",
+        "VIC": {
+          "label": "Identify appropriate metric units and estimate using known references",
+          "codes": "AC9M3M01"
+        },
+        "NSW": {
+          "label": "Geometric/Non-spatial measure – choose metric units",
+          "codes": "MA2-GM-MEAS-01"
+        }
+      },
+      "typical_weeks": ["1"]
+    },
+    {
+      "skill_id": "M3N03_compare_order_10k",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Compare and order numbers to 10,000; use number lines",
+        "VIC": {
+          "label": "Order numbers beyond 10,000 and locate on number lines",
+          "codes": "AC9M3N01, AC9M3N03"
+        },
+        "NSW": {
+          "label": "Representing numbers / Additive relations – compare and order",
+          "codes": "MA2-MRNS-03, MA2-ADD-01"
+        }
+      },
+      "typical_weeks": ["2"]
+    },
+    {
+      "skill_id": "M3M02_measure_length",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Measure and compare lengths using m and cm",
+        "VIC": {
+          "label": "Measure and compare lengths using metres and centimetres",
+          "codes": "AC9M3M02"
+        },
+        "NSW": {
+          "label": "Geometric measure – length (m, cm)",
+          "codes": "MA2-GM-LEN-01"
+        }
+      },
+      "typical_weeks": ["2"]
+    },
+    {
+      "skill_id": "M3N04_add_sub_1000_no_regroup",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Add and subtract within 1,000 (no regrouping)",
+        "VIC": {
+          "label": "Add and subtract within 1,000 using place value and mental strategies",
+          "codes": "AC9M3N04, AC9M3A01"
+        },
+        "NSW": {
+          "label": "Additive relations – add/subtract within 1,000 (no regrouping)",
+          "codes": "MA2-ADD-02"
+        }
+      },
+      "typical_weeks": ["3"]
+    },
+    {
+      "skill_id": "M3M02_measure_mass",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Measure and compare mass using g and kg",
+        "VIC": {
+          "label": "Measure and compare mass using grams and kilograms",
+          "codes": "AC9M3M02"
+        },
+        "NSW": {
+          "label": "Non-spatial measure – mass (g, kg)",
+          "codes": "MA2-GM-MASS-01"
+        }
+      },
+      "typical_weeks": ["3"]
+    },
+    {
+      "skill_id": "M3N04_add_sub_1000_regroup",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Add and subtract within 1,000 (with regrouping)",
+        "VIC": {
+          "label": "Add and subtract within 1,000 with regrouping",
+          "codes": "AC9M3N04, AC9M3N05"
+        },
+        "NSW": {
+          "label": "Additive relations – add/subtract within 1,000 (with regrouping)",
+          "codes": "MA2-ADD-03"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "M3M02_measure_capacity",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Measure and compare capacity using mL and L",
+        "VIC": {
+          "label": "Measure and compare capacity using millilitres and litres",
+          "codes": "AC9M3M02"
+        },
+        "NSW": {
+          "label": "Non-spatial measure – capacity (mL, L)",
+          "codes": "MA2-GM-CAP-01"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "M3ST01_categorical_data",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Statistics",
+      "labels": {
+        "canonical": "Collect categorical data; create frequency tables",
+        "VIC": {
+          "label": "Acquire and record categorical data using frequency tables",
+          "codes": "AC9M3ST01"
+        },
+        "NSW": {
+          "label": "Data – collect and record categorical data",
+          "codes": "MA2-DATA-01"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "M3N06_multiplication_equal_groups",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Multiplication as equal groups and arrays (2, 3, 5, 10)",
+        "VIC": {
+          "label": "Model multiplication as equal groups and arrays; facts for 2, 3, 5, 10",
+          "codes": "AC9M3N06, AC9M3A02"
+        },
+        "NSW": {
+          "label": "Multiplicative relations – equal groups and arrays (2, 3, 5, 10)",
+          "codes": "MA2-MULT-01"
+        }
+      },
+      "typical_weeks": ["5"]
+    },
+    {
+      "skill_id": "M3M04_time_to_minute",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Tell and write time to the minute",
+        "VIC": {
+          "label": "Tell and write time to the minute using analog and digital clocks",
+          "codes": "AC9M3M04"
+        },
+        "NSW": {
+          "label": "Non-spatial measure – time to the minute",
+          "codes": "MA2-GM-TIME-01"
+        }
+      },
+      "typical_weeks": ["5"]
+    },
+    {
+      "skill_id": "M3N06_division_sharing_grouping",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Division as sharing and grouping (link to multiplication)",
+        "VIC": {
+          "label": "Model division as sharing and grouping; link to multiplication facts",
+          "codes": "AC9M3N06, AC9M3A03"
+        },
+        "NSW": {
+          "label": "Multiplicative relations – division as sharing/grouping",
+          "codes": "MA2-MULT-02"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "M3M05_angles_as_turns",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Identify angles as turns (quarter, half, full)",
+        "VIC": {
+          "label": "Describe angles as turns and relate to everyday contexts",
+          "codes": "AC9M3M05"
+        },
+        "NSW": {
+          "label": "Geometric measure – angles as turns",
+          "codes": "MA2-GM-ANG-01"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "M3ST02_column_graphs",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Statistics",
+      "labels": {
+        "canonical": "Create and interpret simple column graphs",
+        "VIC": {
+          "label": "Create and interpret simple column graphs for categorical data",
+          "codes": "AC9M3ST02"
+        },
+        "NSW": {
+          "label": "Data – create and interpret column graphs",
+          "codes": "MA2-DATA-02"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "M3N06_mult_2digit_by_1digit",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Multiply 2-digit by 1-digit numbers using strategies",
+        "VIC": {
+          "label": "Solve multiplication problems: 2-digit × 1-digit using strategies",
+          "codes": "AC9M3N06, AC9M3A02"
+        },
+        "NSW": {
+          "label": "Multiplicative relations – 2-digit × 1-digit",
+          "codes": "MA2-MULT-03"
+        }
+      },
+      "typical_weeks": ["7"]
+    },
+    {
+      "skill_id": "M3SP01_classify_2d_shapes",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Space",
+      "labels": {
+        "canonical": "Classify 2D shapes by features (sides, vertices, symmetry)",
+        "VIC": {
+          "label": "Classify 2D shapes by their features and explain reasoning",
+          "codes": "AC9M3SP01"
+        },
+        "NSW": {
+          "label": "Two-dimensional spatial structure – classify 2D shapes",
+          "codes": "MA2-2D-SP-01"
+        }
+      },
+      "typical_weeks": ["7"]
+    },
+    {
+      "skill_id": "M3N07_unit_fractions",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Recognise and represent unit fractions; locate on number lines",
+        "VIC": {
+          "label": "Recognise and represent unit fractions and locate on number lines",
+          "codes": "AC9M3N07, AC9M3A01"
+        },
+        "NSW": {
+          "label": "Partitioned fractions – unit fractions",
+          "codes": "MA2-FRAC-01"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "M3SP02_2d_maps_plans",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Space",
+      "labels": {
+        "canonical": "Interpret and create simple 2D maps and plans",
+        "VIC": {
+          "label": "Interpret and create 2D representations of familiar places and routes",
+          "codes": "AC9M3SP02"
+        },
+        "NSW": {
+          "label": "Two-dimensional spatial structure – maps and plans",
+          "codes": "MA2-2D-SP-02"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "M3P01_chance_language",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Probability",
+      "labels": {
+        "canonical": "Describe chance events using likelihood language",
+        "VIC": {
+          "label": "Describe chance events using 'likely', 'unlikely', 'certain', 'impossible'",
+          "codes": "AC9M3P01"
+        },
+        "NSW": {
+          "label": "Chance – describe events using likelihood language",
+          "codes": "MA2-CHAN-01"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "M3N04_06_word_problems",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Solve one- and two-step word problems (+, −, ×)",
+        "VIC": {
+          "label": "Solve multi-step problems using addition, subtraction and multiplication",
+          "codes": "AC9M3N04, AC9M3N06, AC9M3A01"
+        },
+        "NSW": {
+          "label": "Additive/Multiplicative relations – multi-step word problems",
+          "codes": "MA2-ADD-04, MA2-MULT-04"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "M3M02_measurement_problems",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Solve simple measurement problems (length, mass, capacity)",
+        "VIC": {
+          "label": "Solve simple problems involving metric measurements of length, mass and capacity",
+          "codes": "AC9M3M02, AC9M3N04"
+        },
+        "NSW": {
+          "label": "Geometric/Non-spatial measure – measurement problems",
+          "codes": "MA2-GM-PROB-01"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "M3P02_chance_experiments",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Probability",
+      "labels": {
+        "canonical": "Conduct simple chance experiments; record outcomes",
+        "VIC": {
+          "label": "Conduct repeated chance experiments and record outcomes",
+          "codes": "AC9M3P02"
+        },
+        "NSW": {
+          "label": "Chance – conduct simple experiments and record outcomes",
+          "codes": "MA2-CHAN-02"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "M3N05_06_financial_contexts",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Number",
+      "labels": {
+        "canonical": "Solve simple financial problems (money, change, estimation)",
+        "VIC": {
+          "label": "Solve simple financial problems involving money, change and estimation",
+          "codes": "AC9M3N05, AC9M3N06"
+        },
+        "NSW": {
+          "label": "Additive/Multiplicative relations – financial problems",
+          "codes": "MA2-ADD-05, MA2-MULT-05"
+        }
+      },
+      "typical_weeks": ["10"]
+    },
+    {
+      "skill_id": "M3M01_04_measurement_consolidation",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Measurement",
+      "labels": {
+        "canonical": "Mixed measurement problems (time, length, mass, capacity)",
+        "VIC": {
+          "label": "Solve mixed measurement problems involving time, length, mass and capacity",
+          "codes": "AC9M3M01, AC9M3M02, AC9M3M04"
+        },
+        "NSW": {
+          "label": "Geometric/Non-spatial measure – mixed measurement problems",
+          "codes": "MA2-GM-PROB-02"
+        }
+      },
+      "typical_weeks": ["10"]
+    },
+    {
+      "skill_id": "M3ST02_03_data_interpretation",
+      "subject": "maths",
+      "year_level": 3,
+      "strand": "Statistics",
+      "labels": {
+        "canonical": "Interpret data displays (tables, column graphs) and answer questions",
+        "VIC": {
+          "label": "Interpret data displays and answer questions about the context",
+          "codes": "AC9M3ST02, AC9M3ST03"
+        },
+        "NSW": {
+          "label": "Data – interpret displays and answer questions",
+          "codes": "MA2-DATA-03"
+        }
+      },
+      "typical_weeks": ["10"]
+    },
+
+    // English skills
+
+    {
+      "skill_id": "E3LY03_purpose_audience_text_types",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Identify purpose and audience of text types",
+        "VIC": {
+          "label": "Identify purpose and audience of different text types and how language/images support meaning",
+          "codes": "AC9E3LY03, AC9E3LA09"
+        },
+        "NSW": {
+          "label": "Reading comprehension – identify purpose of text types",
+          "codes": "EN2-RECOM-01, EN2-8B"
+        }
+      },
+      "typical_weeks": ["1"]
+    },
+    {
+      "skill_id": "E3LA04_paragraphs_narrative_recount",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Use paragraphs; write simple narratives/recounts",
+        "VIC": {
+          "label": "Use paragraphs to organise ideas; create imaginative or recount texts with clear structure",
+          "codes": "AC9E3LA04, AC9E3LY06"
+        },
+        "NSW": {
+          "label": "Creating written texts – paragraphs, narratives, recounts",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["1"]
+    },
+    {
+      "skill_id": "E3LY09_high_freq_compound_sentences",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "High-frequency words; basic punctuation; compound sentences",
+        "VIC": {
+          "label": "Spell high-frequency words; use compound sentences and correct basic punctuation",
+          "codes": "AC9E3LY09, AC9E3LA06"
+        },
+        "NSW": {
+          "label": "Spelling / Grammar – high-frequency words, compound sentences",
+          "codes": "EN2-6B, EN2-4A"
+        }
+      },
+      "typical_weeks": ["1"]
+    },
+    {
+      "skill_id": "E3LY01_02_literal_comprehension",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Retrieve explicit information (who/what/where/when)",
+        "VIC": {
+          "label": "Locate and record explicit information using skimming and scanning",
+          "codes": "AC9E3LY01, AC9E3LY02"
+        },
+        "NSW": {
+          "label": "Literal comprehension – retrieve explicit information",
+          "codes": "EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["2"]
+    },
+    {
+      "skill_id": "E3LY06_informative_paragraphs",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write informative texts with topic sentences and paragraphs",
+        "VIC": {
+          "label": "Create informative texts with topic sentences and supporting details in paragraphs",
+          "codes": "AC9E3LY06, AC9E3LA04"
+        },
+        "NSW": {
+          "label": "Creating written texts – informative (fact files)",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["2"]
+    },
+    {
+      "skill_id": "E3LA06_nouns_verbs_agreement",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Identify nouns and verbs; subject–verb agreement",
+        "VIC": {
+          "label": "Identify nouns and verbs; ensure subject and verb agree in simple sentences",
+          "codes": "AC9E3LA06, AC9E3LA01"
+        },
+        "NSW": {
+          "label": "Grammar – nouns, verbs, subject–verb agreement",
+          "codes": "EN2-4A"
+        }
+      },
+      "typical_weeks": ["2"]
+    },
+    {
+      "skill_id": "E3LY01_02_inferential_comprehension",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Make simple inferences using text evidence",
+        "VIC": {
+          "label": "Make inferences about characters' feelings and motives using clues from the text",
+          "codes": "AC9E3LY01, AC9E3LY02"
+        },
+        "NSW": {
+          "label": "Inferential comprehension – make inferences about characters/events",
+          "codes": "EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["3"]
+    },
+    {
+      "skill_id": "E3LY06_3LE02_narrative_problem_solution",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write narratives with problem, solution and dialogue",
+        "VIC": {
+          "label": "Create narratives with a clear problem and solution; use dialogue and description",
+          "codes": "AC9E3LY06, AC9E3LE02"
+        },
+        "NSW": {
+          "label": "Creating written texts – narrative (problem/solution)",
+          "codes": "EN2-11D, EN2-UARL-01"
+        }
+      },
+      "typical_weeks": ["3"]
+    },
+    {
+      "skill_id": "E3LA02_03_adjectives_adverbs_commas",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Use adjectives, adverbs and commas in lists",
+        "VIC": {
+          "label": "Use adjectives and adverbs to add detail; use commas in lists",
+          "codes": "AC9E3LA02, AC9E3LA11"
+        },
+        "NSW": {
+          "label": "Grammar / Punctuation – adjectives, adverbs, commas in lists",
+          "codes": "EN2-4A"
+        }
+      },
+      "typical_weeks": ["3"]
+    },
+    {
+      "skill_id": "E3LA04_LY03_text_structure",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Identify text structure and signposting (headings, subheadings)",
+        "VIC": {
+          "label": "Describe how texts are organised and how headings/subheadings help readers",
+          "codes": "AC9E3LA04, AC9E3LY03"
+        },
+        "NSW": {
+          "label": "Text structure – identify organisation of texts",
+          "codes": "EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "E3LY06_LA04_information_report",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write information reports with introduction, body, conclusion",
+        "VIC": {
+          "label": "Create information reports with clear introduction, body paragraphs and conclusion",
+          "codes": "AC9E3LY06, AC9E3LA04"
+        },
+        "NSW": {
+          "label": "Creating written texts – information reports",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "E3LA08_tense_consistency",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Use and maintain consistent verb tense",
+        "VIC": {
+          "label": "Use past, present and future tense; keep tense consistent in writing",
+          "codes": "AC9E3LA08, AC9E3LA07"
+        },
+        "NSW": {
+          "label": "Grammar – verb tenses and consistency",
+          "codes": "EN2-4A"
+        }
+      },
+      "typical_weeks": ["4"]
+    },
+    {
+      "skill_id": "E3LY03_LA03_persuasive_opinion",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Identify opinion and reasons in persuasive texts",
+        "VIC": {
+          "label": "Identify the author's point of view and supporting reasons in persuasive texts",
+          "codes": "AC9E3LY03, AC9E3LA03"
+        },
+        "NSW": {
+          "label": "Persuasive comprehension – identify opinion and reasons",
+          "codes": "EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["5"]
+    },
+    {
+      "skill_id": "E3LY06_LA03_write_persuasive",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write persuasive texts with opinion, reasons, examples",
+        "VIC": {
+          "label": "Create persuasive texts that state an opinion and give reasons and examples",
+          "codes": "AC9E3LY06, AC9E3LA03"
+        },
+        "NSW": {
+          "label": "Creating written texts – persuasive (opinion + reasons)",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["5"]
+    },
+    {
+      "skill_id": "E3LA03_11_modal_verbs_apostrophes",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Use modal verbs and apostrophes for contractions",
+        "VIC": {
+          "label": "Use modal verbs to express opinion; use apostrophes for contractions",
+          "codes": "AC9E3LA03, AC9E3LA11"
+        },
+        "NSW": {
+          "label": "Grammar / Punctuation – modal verbs, apostrophes for contractions",
+          "codes": "EN2-4A"
+        }
+      },
+      "typical_weeks": ["5"]
+    },
+    {
+      "skill_id": "E3LA10_LY01_technical_vocabulary",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Understand topic-specific and technical vocabulary",
+        "VIC": {
+          "label": "Use context and reference tools to understand new and technical words in texts",
+          "codes": "AC9E3LA10, AC9E3LY01"
+        },
+        "NSW": {
+          "label": "Vocabulary – topic-specific and technical words",
+          "codes": "EN2-4B, EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "E3LY06_LA05_explanation_texts",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write explanation texts with sequence words",
+        "VIC": {
+          "label": "Create explanation texts with clear sequence and topic-specific vocabulary",
+          "codes": "AC9E3LY06, AC9E3LA05"
+        },
+        "NSW": {
+          "label": "Creating written texts – explanation (how/why)",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "E3LY10_09_affixes_multisyllabic",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Use prefixes and suffixes to spell multisyllabic words",
+        "VIC": {
+          "label": "Use knowledge of prefixes and suffixes to read and spell multisyllabic words",
+          "codes": "AC9E3LY10, AC9E3LY09"
+        },
+        "NSW": {
+          "label": "Spelling – prefixes, suffixes, multisyllabic words",
+          "codes": "EN2-6B"
+        }
+      },
+      "typical_weeks": ["6"]
+    },
+    {
+      "skill_id": "E3LY01_LA09_evaluative_comprehension",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Evaluate how language and images support meaning",
+        "VIC": {
+          "label": "Evaluate how language and images help the reader understand a text",
+          "codes": "AC9E3LY01, AC9E3LA09"
+        },
+        "NSW": {
+          "label": "Evaluative comprehension – evaluate text features",
+          "codes": "EN2-RECOM-01"
+        }
+      },
+      "typical_weeks": ["7"]
+    },
+    {
+      "skill_id": "E3LY06_3LE04_text_response",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write responses to texts with opinion and evidence",
+        "VIC": {
+          "label": "Create written responses to texts, stating opinions with reasons and evidence",
+          "codes": "AC9E3LY06, AC9E3LE04"
+        },
+        "NSW": {
+          "label": "Creating written texts – response to texts",
+          "codes": "EN2-11D, EN2-UARL-01"
+        }
+      },
+      "typical_weeks": ["7"]
+    },
+    {
+      "skill_id": "E3LA05_07_cohesive_devices",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Use cohesive devices (pronouns, connectives) to link ideas",
+        "VIC": {
+          "label": "Use cohesive devices to link ideas and make texts clear",
+          "codes": "AC9E3LA05, AC9E3LA07"
+        },
+        "NSW": {
+          "label": "Grammar – cohesive devices (pronouns, connectives)",
+          "codes": "EN2-4A"
+        }
+      },
+      "typical_weeks": ["7"]
+    },
+    {
+      "skill_id": "E3LE01_02_03_literature_characters_themes",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Discuss characters, themes and literary devices",
+        "VIC": {
+          "label": "Discuss characters, themes and literary devices in stories and poems",
+          "codes": "AC9E3LE01, AC9E3LE02, AC9E3LE03"
+        },
+        "NSW": {
+          "label": "Literature – discuss characters, themes, literary features",
+          "codes": "EN2-UARL-01, EN2-8B"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "E3LY06_3LE02_05_write_imaginative",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Write imaginative texts with character and literary devices",
+        "VIC": {
+          "label": "Create imaginative texts that develop characters and use literary devices",
+          "codes": "AC9E3LY06, AC9E3LE02, AC9E3LE05"
+        },
+        "NSW": {
+          "label": "Creating written texts – imaginative (stories, poems)",
+          "codes": "EN2-11D, EN2-UARL-01"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "E3LA03_LE03_figurative_language",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Identify and use similes and simple metaphors",
+        "VIC": {
+          "label": "Identify and use simple figurative language such as similes",
+          "codes": "AC9E3LA03, AC9E3LE03"
+        },
+        "NSW": {
+          "label": "Language forms and features – similes, metaphors",
+          "codes": "EN2-4B, EN2-8B"
+        }
+      },
+      "typical_weeks": ["8"]
+    },
+    {
+      "skill_id": "E3LY09_01_fluency_decoding",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Read fluently; decode multisyllabic words",
+        "VIC": {
+          "label": "Read fluently, decoding multisyllabic words using sound–letter patterns and word parts",
+          "codes": "AC9E3LY09, AC9E3LY01"
+        },
+        "NSW": {
+          "label": "Reading fluency – decode multisyllabic words",
+          "codes": "EN2-5B, EN2-6B"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "E3LY06_07_editing_writing",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Edit writing for structure, grammar, punctuation, spelling",
+        "VIC": {
+          "label": "Edit writing to improve structure, grammar, punctuation and spelling",
+          "codes": "AC9E3LY06, AC9E3LY07"
+        },
+        "NSW": {
+          "label": "Creating written texts – editing and proofreading",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "E3LY11_10_spelling_patterns",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Spell words with less common patterns and homophones",
+        "VIC": {
+          "label": "Use less common letter patterns and spelling rules to spell multisyllabic words and homophones",
+          "codes": "AC9E3LY11, AC9E3LY10"
+        },
+        "NSW": {
+          "label": "Spelling – less common patterns, homophones",
+          "codes": "EN2-6B"
+        }
+      },
+      "typical_weeks": ["9"]
+    },
+    {
+      "skill_id": "E3LA09_LY03_multimodal_reading",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Reading",
+      "labels": {
+        "canonical": "Interpret how images and layout contribute to meaning",
+        "VIC": {
+          "label": "Explain how images and layout contribute to meaning in multimodal texts",
+          "codes": "AC9E3LA09, AC9E3LY03"
+        },
+        "NSW": {
+          "label": "Multimodal comprehension – language and visual features",
+          "codes": "EN2-RECOM-01, EN2-8B"
+        }
+      },
+      "typical_weeks": ["10"]
+    },
+    {
+      "skill_id": "E3LY06_08_multimodal_writing",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Writing",
+      "labels": {
+        "canonical": "Create and publish multimodal texts",
+        "VIC": {
+          "label": "Create and publish multimodal texts with appropriate form, layout and visual features",
+          "codes": "AC9E3LY06, AC9E3LY08"
+        },
+        "NSW": {
+          "label": "Creating written texts – multimodal (posters, slides, digital)",
+          "codes": "EN2-11D"
+        }
+      },
+      "typical_weeks": ["10"]
+    },
+    {
+      "skill_id": "E3LA06_LY09_12_language_consolidation",
+      "subject": "english",
+      "year_level": 3,
+      "strand": "Language",
+      "labels": {
+        "canonical": "Apply grammar, punctuation and spelling knowledge in final tasks",
+        "VIC": {
+          "label": "Apply knowledge of grammar, punctuation and spelling in final writing tasks",
+          "codes": "AC9E3LA06, AC9E3LA11, AC9E3LY09–12"
+        },
+        "NSW": {
+          "label": "Grammar / Spelling – review and apply in final tasks",
+          "codes": "EN2-4A, EN2-6B"
+        }
+      },
+      "typical_weeks": ["10"]
+    }
+  ]
+}
+```
+
+***
+
+## How to use this in your admin dashboard
+
+- Load this JSON into your admin UI as the “curriculum map” for Year 3.  
+- Display in tables like:
+
+  - Columns: `Subject | Strand | Canonical label | VIC label + codes | NSW label + codes | Typical weeks`
+  - Filters: by `subject`, `strand`, `week`, `state`.
+
+- When an admin or teacher views “Week N”:
+  - Filter skills where `typical_weeks` includes `N`.
+  - Show state-specific labels/codes depending on selected state.
+
+If you’d like, I can next:
+
+- Add a “weekly view” JSON that groups skills by week for direct use in a planner screen, or  
+- Extend this schema to include Year 1, 2, 4, 5, 6 placeholders.

@@ -1,0 +1,196 @@
+Based on your requirements, here’s a structured blueprint for your Australia-focused, AI-assisted learning app, aligned with evidence-based learning science and local compliance.
+
+## Product scope and launch plan
+
+- **Students:** Mainstream only (Years 1–6 at launch). [education.gov](https://www.education.gov.au/australian-curriculum)
+- **Curriculum alignment:** Fully separate tracks per state; **VIC and NSW only at launch**, then expand nationally. [education.gov](https://www.education.gov.au/australian-curriculum)
+- **Subjects:** Maths and English only at launch. [education.gov](https://www.education.gov.au/australian-curriculum)
+- **Pedagogy:** Spaced repetition, interleaving, retrieval practice, plus gamification to sustain engagement. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+
+## Learning design: evidence-based features
+
+Research shows that spacing, interleaving, and retrieval practice improve long-term learning but can feel harder in the short term; good UX and gameful design help overcome this. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+
+- **Spaced repetition:** Schedule reviews of each skill/topic across days/weeks using an adaptive algorithm (e.g., SM-2–style or half-life regression) tuned per child. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+- **Interleaving:** Mix problem types within sessions (e.g., number facts + word problems + geometry) to strengthen discrimination and transfer. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+- **Retrieval practice:** Low-stakes, frequent quizzes with immediate feedback; require active recall before showing solutions. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+- **Gamification:** Points, streaks, level-ups, badges, and progress maps; ensure rewards reinforce effort and mastery, not just speed. [dl.acm](https://dl.acm.org/doi/10.1145/3291279.3339411)
+
+## Age-specific tone and child psychology
+
+- Use **simple, encouraging language** for younger learners (Years 1–2), slightly more mature but still supportive tone for Years 3–6.
+- Avoid negative labels: display **“Area to give more attention”** instead of “weaknesses”.
+- Build in **growth-mindset messaging** (“You’re getting better with practice”), short sessions to match attention spans, and optional “brain break” prompts.
+
+## Pricing and access model
+
+- **Free trial:** Admin-decided period (e.g., 14–30 days) for families/schools.
+- **Monetisation options:**
+  - Free for teachers/schools (classroom use), paid for parents at home.
+  - **Target price:** AUD $10–20/month per child, with family plans (e.g., 2–4 children discount) and school licenses (per-student or per-school pricing).
+- Consider **annual discounts** and **concession pricing** for equity.
+
+## Progress reporting for parents
+
+- **Metrics to show:**
+  - Skills mastered (with curriculum codes).
+  - Areas to give more attention (priority skills).
+  - Time on task, streaks, recent activity.
+- **Alerts & reports:**
+  - **Monthly summary** by default.
+  - **On-demand full progress** anytime.
+- **Delivery:** In-app dashboard + parent choice of email/SMS.
+- Use child-friendly phrasing in child views; more detailed analytics for parents/teachers.
+
+## Compliance: Australian child privacy (COPPA-like)
+
+Your app will likely be “likely to be accessed by children”, so you must comply with the **Australian Privacy Principles (APPs)** and the **Children’s Online Privacy Code** (OAIC). [oaic.gov](https://www.oaic.gov.au/privacy/privacy-registers/privacy-codes/childrens-online-privacy-code)
+
+Key obligations to design for:
+
+- **Data minimisation:** Collect only what’s strictly necessary to run the service. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+- **Age-appropriate privacy notice:** A version of your privacy policy written for children (clear, concise, age-appropriate). [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+- **Parental controls & consent:** Mechanisms for parental consent/controls for under-13s, aligned with COPPA-like expectations and Australian practice. [au.reset](https://au.reset.tech/uploads/app-childrens-rights-briefing-paper.pdf)
+- **Security:** Active measures to protect children’s data from unauthorised access, loss, or misuse (encryption, access controls, logging). [au.reset](https://au.reset.tech/uploads/app-childrens-rights-briefing-paper.pdf)
+- **Privacy impact assessment:** Conduct and maintain a PIA for new services/changes affecting children’s data. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+- **Transparency & rights:** Clear processes for complaints, access, and correction of personal information. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/read-the-australian-privacy-principles)
+
+Practical steps:
+
+- Default to **minimal profiling**; avoid behavioural advertising.
+- Make **parental dashboards** the place for detailed data; keep child views simple.
+- Document your data flows and run a formal PIA before launch. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+
+## Tech stack and hosting (solo-founder friendly)
+
+Given your preferences:
+
+- **Frontend:** React/Next.js (SSR/SSG for performance, good SEO if you add marketing site later).
+- **Backend:** Node.js (NestJS/Express) or Python (FastAPI/Django) depending on your comfort; Node aligns well with Next.js.
+- **Database:** PostgreSQL (with Row-Level Security for multi-tenant school/class data) or a managed DB (e.g., Supabase, RDS).
+- **Hosting:** Cloud (AWS, Azure, or GCP). For simplicity:
+  - **Vercel** for Next.js frontend.
+  - **AWS (ECS/Fargate or Lambda + API Gateway)** or **GCP Cloud Run** for backend.
+  - Managed Postgres (RDS/Cloud SQL) + object storage (S3/GCS) for assets.
+- **Compliance posture:**
+  - Host data in **Australian regions** (e.g., AWS ap-southeast-2 Sydney) where possible.
+  - Enforce TLS, encryption at rest, strict IAM, audit logs. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-11-app-11-security-of-personal-information)
+
+## AI-assisted content generation workflow
+
+You want Claude to generate large exercise banks, then humans review.
+
+**Workflow:**
+
+1. Define a **structured spec** per topic/grade:
+   - Curriculum codes (AC, VIC, NSW).
+   - Skill description, difficulty levels, question types.
+2. Use Claude to:
+   - Generate **full exercise banks** per topic/grade.
+   - Include **answer keys** and **step-by-step solutions**.
+   - Tag each item to curriculum codes.
+3. Human review:
+   - Check alignment, difficulty, wording, and cultural appropriateness.
+   - Fix any errors, then import into your question bank database.
+
+## Claude prompt template for exercise generation
+
+Use and adapt this prompt for each topic/grade. Replace the bracketed placeholders.
+
+***
+
+**System role (set in your app or as a pre-prompt):**
+
+You are an expert Australian primary curriculum content writer and assessment designer. Your task is to create high-quality, curriculum-aligned practice items for Maths or English for Years 1–6. You must align every item to the Australian Curriculum (Version 9.0) and relevant state variations (VIC, NSW). All content must be age-appropriate, clear, and free of bias.
+
+**User prompt template:**
+
+You are generating a full exercise bank for:
+
+- Subject: [Maths | English]
+- Year level: [F | 1 | 2 | 3 | 4 | 5 | 6]
+- State tracks to support: [VIC, NSW]
+- Topic: [e.g., “Addition and subtraction within 100” | “Fractions – unit fractions” | “Reading comprehension – retrieving explicit information”]
+- Curriculum codes to cover:
+  - Australian Curriculum (AC): [list codes, e.g., AC9M2N03, AC9M2N04]
+  - VIC: [list or “derive from AC with VIC phrasing”]
+  - NSW: [list or “derive from AC with NSW stage mapping”]
+
+Requirements:
+
+1. Produce **[N]** distinct practice items (e.g., 40–60) for this topic and year level.
+2. For each item, provide:
+   - `item_id`: unique identifier (e.g., AC9M2N03_Y2_AddSub_001)
+   - `curriculum_codes`: list of AC, VIC, NSW codes this item addresses
+   - `skill_description`: one-sentence description of the skill
+   - `difficulty`: [easy | medium | hard]
+   - `question_text`: the actual question/task as shown to the student (age-appropriate language for Year [X])
+   - `question_type`: [multiple_choice | short_answer | drag_drop | matching | multi_part]
+   - `answer_key`: correct answer(s) in a machine-readable format
+   - `step_by_step_solution`: a clear, child-friendly explanation of how to get the answer, in 3–6 steps
+   - `common_misconceptions`: 2–3 typical errors and how to address them
+   - `hints`: 2 scaffolded hints (from general to specific)
+   - `tags`: additional tags (e.g., “word_problem”, “visual”, “real_world_context”)
+3. Ensure:
+   - Language suits Year [X] students (simple sentences, concrete contexts).
+   - No negative labels; focus on growth and practice.
+   - Variety in contexts (school, home, play, community) and representation.
+   - Interleaving potential: some items should combine this topic with previously learned skills where appropriate.
+4. Output format:
+   - Return a **single JSON array**, where each element is one item with the fields above.
+   - Do not include any commentary outside the JSON.
+
+Example item structure (for your guidance, do not output this example):
+
+```json
+{
+  "item_id": "AC9M2N03_Y2_AddSub_001",
+  "curriculum_codes": {
+    "AC": ["AC9M2N03"],
+    "VIC": ["VCMNA103"],
+    "NSW": ["MA2-5NA"]
+  },
+  "skill_description": "Add and subtract two-digit numbers using place value strategies.",
+  "difficulty": "medium",
+  "question_text": "Sam has 47 stickers. He gives 19 stickers to his friend. How many stickers does Sam have now?",
+  "question_type": "short_answer",
+  "answer_key": "28",
+  "step_by_step_solution": [
+    "Start with 47 stickers.",
+    "Take away 19 stickers.",
+    "Break 19 into 10 and 9 to make it easier.",
+    "47 − 10 = 37, then 37 − 9 = 28.",
+    "So Sam has 28 stickers left."
+  ],
+  "common_misconceptions": [
+    "Subtracting the tens and ones separately without regrouping (e.g., 40−10=30, 7−9=−2).",
+    "Forgetting to borrow when the ones digit is smaller."
+  ],
+  "hints": [
+    "Try breaking 19 into 10 and 9.",
+    "First subtract 10 from 47, then subtract 9 from the result."
+  ],
+  "tags": ["word_problem", "real_world_context", "place_value"]
+}
+```
+
+Now generate the full exercise bank as specified.
+
+***
+
+You can create variants of this prompt per strand (Number, Algebra, Measurement, Geometry, Statistics; or Reading, Writing, Vocabulary, Grammar) and per year.
+
+## State alignment notes (VIC & NSW)
+
+- Use **Australian Curriculum Version 9.0** as the base; map to state-specific codes and phrasing. [education.gov](https://www.education.gov.au/australian-curriculum)
+- For **VIC**, align to VCAA/Victorian Curriculum descriptors (often derived from AC but with local codes/wording). [www2.education.vic.gov](https://www2.education.vic.gov.au/pal/curriculum-programs/print-all)
+- For **NSW**, map AC content descriptors to NSW **Stages** (e.g., Stage 1 ≈ AC Levels 1–2, etc.) and relevant syllabus codes. [help.mathspathway](https://help.mathspathway.com/hc/en-us/articles/226293848-Alignment-with-State-Curriculums)
+- Store both AC and state codes per item so you can run **separate state tracks** while reusing most content.
+
+## Next steps
+
+If you’d like, I can:
+
+- Draft a concrete **data model** (tables for users, classes, items, attempts, mastery).
+- Design the **spaced-repetition scheduling logic** in more detail.
+- Generate a **sample exercise bank** (e.g., Year 2 Addition/Subtraction) using the prompt above, ready for your review.

@@ -1,0 +1,195 @@
+Below is a **sample 10-week sequence table for Year 3 Maths**, aligned to both **VIC (Level 3)** and **NSW (Stage 2)**, with example skill descriptions and placeholder curriculum codes.
+
+You can use this as a template for other year levels. Codes are indicative (based on AC Version 9 and NSW Stage 2 structure); you’ll finalise them against official documents when building your item bank. [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/curriculum/ac9_maths_yr3_as_cd_alignment.pdf)
+
+***
+
+## Year 3 Maths – 10-week sequence (VIC & NSW)
+
+**Assumptions:**
+
+- 10-week term, ~3–4 Maths lessons per week.  
+- Each week has:
+  - 1 **Number/Algebra** focus (main thread).  
+  - 1 **Measurement/Space** focus.  
+  - **Statistics/Probability** every 2–3 weeks.  
+- VIC uses **AC9 codes + VIC phrasing**; NSW maps the same skills to **Stage 2 subareas** (Representing numbers, Additive relations, Multiplicative relations, Partitioned fractions, Geometric measure, 2D/3D spatial structure, Non-spatial measure, Data, Chance). [sproutlessons](https://www.sproutlessons.com/blog/year-3-maths-ac9-codes)
+
+***
+
+### Week 1 – Place value and number representation to 10,000
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Represent and order numbers to 10,000; use place value (thousands, hundreds, tens, ones).<br>**AC codes:** AC9M3N01, AC9M3N02<br>**VIC phrasing:** “Recognise, model, represent and order natural numbers beyond 10,000 using place value.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Representing numbers using place value.<br>**NSW focus:** Represent and order numbers to 10,000; name and write numerals; use place value to partition numbers.<br>**NSW codes (placeholder):** MA2-MRNS-01, MA2-MRNS-02 |
+| **Measurement/Space** | Identify which metric units are used for length, mass, capacity; make estimates using familiar items.<br>**AC codes:** AC9M3M01<br>**VIC phrasing:** “Identify appropriate metric units for everyday measurements and estimate using known references.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Geometric measure / Non-spatial measure.<br>**NSW focus:** Choose appropriate metric units for length, mass, capacity; estimate using familiar references.<br>**NSW codes (placeholder):** MA2-GM-MEAS-01 |
+| **Statistics/Probability** | – (not a focus this week) | – |
+
+**Example “new skills” to mark in app:**
+
+- VIC: “Represent numbers to 10,000 using place value” (AC9M3N01, AC9M3N02).  
+- NSW: “Representing numbers – place value to 10,000” (MA2-MRNS-01).  
+- VIC/NSW shared: “Choose metric units for length, mass, capacity” (AC9M3M01 / MA2-GM-MEAS-01).
+
+***
+
+### Week 2 – Comparing and ordering numbers; introduction to addition strategies
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Compare and order numbers to 10,000; use number lines and place value to reason about size.<br>**AC codes:** AC9M3N01, AC9M3N03<br>**VIC phrasing:** “Order natural numbers beyond 10,000 and locate on number lines.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Representing numbers / Additive relations.<br>**NSW focus:** Compare and order numbers to 10,000; use number lines; begin additive strategies for 2- and 3-digit numbers.<br>**NSW codes (placeholder):** MA2-MRNS-03, MA2-ADD-01 |
+| **Measurement/Space** | Measure and compare lengths using formal metric units (m, cm); read instruments with labelled markings.<br>**AC codes:** AC9M3M02<br>**VIC phrasing:** “Measure and compare lengths using metres and centimetres and instruments with labelled scales.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Geometric measure.<br>**NSW focus:** Measure and compare lengths using m and cm; read scaled instruments.<br>**NSW codes (placeholder):** MA2-GM-LEN-01 |
+| **Statistics/Probability** | – | – |
+
+**Example “new skills”:**
+
+- VIC: “Compare and order numbers to 10,000” (AC9M3N01, AC9M3N03).  
+- NSW: “Representing numbers – compare and order to 10,000” (MA2-MRNS-03).  
+- VIC/NSW: “Measure and compare lengths using m and cm” (AC9M3M02 / MA2-GM-LEN-01).
+
+***
+
+### Week 3 – Addition and subtraction within 1,000 (no regrouping)
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Add and subtract 2- and 3-digit numbers within 1,000 without regrouping; use place value strategies.<br>**AC codes:** AC9M3N04, AC9M3A01<br>**VIC phrasing:** “Solve addition and subtraction problems within 1,000 using place value and mental strategies.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Additive relations.<br>**NSW focus:** Add and subtract 2- and 3-digit numbers within 1,000 without regrouping; use place value and mental strategies.<br>**NSW codes (placeholder):** MA2-ADD-02 |
+| **Measurement/Space** | Measure and compare mass using g and kg; read scales on simple instruments.<br>**AC codes:** AC9M3M02<br>**VIC phrasing:** “Measure and compare mass using grams and kilograms and instruments with labelled scales.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Non-spatial measure.<br>**NSW focus:** Measure and compare mass using g and kg; read simple scales.<br>**NSW codes (placeholder):** MA2-GM-MASS-01 |
+| **Statistics/Probability** | – | – |
+
+**Example “new skills”:**
+
+- VIC: “Add and subtract within 1,000 without regrouping” (AC9M3N04, AC9M3A01).  
+- NSW: “Additive relations – add/subtract within 1,000 (no regrouping)” (MA2-ADD-02).  
+- VIC/NSW: “Measure and compare mass using g and kg” (AC9M3M02 / MA2-GM-MASS-01).
+
+***
+
+### Week 4 – Addition and subtraction within 1,000 (with regrouping)
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Add and subtract 2- and 3-digit numbers within 1,000 with regrouping; use written and mental strategies.<br>**AC codes:** AC9M3N04, AC9M3N05<br>**VIC phrasing:** “Solve addition and subtraction problems within 1,000 with regrouping using efficient strategies.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Additive relations.<br>**NSW focus:** Add and subtract 2- and 3-digit numbers within 1,000 with regrouping; use efficient mental and written strategies.<br>**NSW codes (placeholder):** MA2-ADD-03 |
+| **Measurement/Space** | Measure and compare capacity using mL and L; read containers with labelled markings.<br>**AC codes:** AC9M3M02<br>**VIC phrasing:** “Measure and compare capacity using millilitres and litres and instruments with labelled scales.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Non-spatial measure.<br>**NSW focus:** Measure and compare capacity using mL and L; read labelled containers.<br>**NSW codes (placeholder):** MA2-GM-CAP-01 |
+| **Statistics/Probability** | Collect categorical data; create simple frequency tables.<br>**AC codes:** AC9M3ST01<br>**VIC phrasing:** “Acquire and record categorical data using frequency tables.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Data.<br>**NSW focus:** Collect and record categorical data; use simple frequency tables.<br>**NSW codes (placeholder):** MA2-DATA-01 |
+
+**Example “new skills”:**
+
+- VIC: “Add and subtract within 1,000 with regrouping” (AC9M3N04, AC9M3N05).  
+- NSW: “Additive relations – add/subtract within 1,000 (with regrouping)” (MA2-ADD-03).  
+- VIC/NSW: “Collect and record categorical data” (AC9M3ST01 / MA2-DATA-01).
+
+***
+
+### Week 5 – Multiplication as equal groups and arrays (facts for 2, 3, 5, 10)
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Represent multiplication as equal groups and arrays; develop facts for 2, 3, 5, 10.<br>**AC codes:** AC9M3N06, AC9M3A02<br>**VIC phrasing:** “Model multiplication as equal groups and arrays; recall multiplication facts for 2, 3, 5 and 10.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Multiplicative relations.<br>**NSW focus:** Model multiplication as equal groups and arrays; develop facts for 2, 3, 5, 10.<br>**NSW codes (placeholder):** MA2-MULT-01 |
+| **Measurement/Space** | Tell and write time to the minute; use analog and digital clocks.<br>**AC codes:** AC9M3M04<br>**VIC phrasing:** “Tell and write time to the minute using analog and digital clocks.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Non-spatial measure.<br>**NSW focus:** Tell and write time to the minute; use analog and digital clocks.<br>**NSW codes (placeholder):** MA2-GM-TIME-01 |
+| **Statistics/Probability** | – | – |
+
+**Example “new skills”:**
+
+- VIC: “Multiplication as equal groups and arrays (2, 3, 5, 10)” (AC9M3N06, AC9M3A02).  
+- NSW: “Multiplicative relations – equal groups and arrays (2, 3, 5, 10)” (MA2-MULT-01).  
+- VIC/NSW: “Tell and write time to the minute” (AC9M3M04 / MA2-GM-TIME-01).
+
+***
+
+### Week 6 – Division as sharing and grouping; link to multiplication
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Represent division as sharing and grouping; link to multiplication facts for 2, 3, 5, 10.<br>**AC codes:** AC9M3N06, AC9M3A03<br>**VIC phrasing:** “Model division as sharing and grouping; use multiplication facts to solve division problems.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Multiplicative relations.<br>**NSW focus:** Model division as sharing and grouping; link to multiplication facts for 2, 3, 5, 10.<br>**NSW codes (placeholder):** MA2-MULT-02 |
+| **Measurement/Space** | Identify angles as turns (quarter, half, three-quarter, full); relate to everyday situations.<br>**AC codes:** AC9M3M05<br>**VIC phrasing:** “Describe angles as turns and relate to everyday contexts.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Geometric measure.<br>**NSW focus:** Describe angles as turns (quarter, half, full); relate to real-world contexts.<br>**NSW codes (placeholder):** MA2-GM-ANG-01 |
+| **Statistics/Probability** | Create simple column graphs from categorical data; interpret information.<br>**AC codes:** AC9M3ST02<br>**VIC phrasing:** “Create and interpret simple column graphs for categorical data.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Data.<br>**NSW focus:** Create and interpret simple column graphs from categorical data.<br>**NSW codes (placeholder):** MA2-DATA-02 |
+
+**Example “new skills”:**
+
+- VIC: “Division as sharing and grouping (link to multiplication)” (AC9M3N06, AC9M3A03).  
+- NSW: “Multiplicative relations – division as sharing/grouping” (MA2-MULT-02).  
+- VIC/NSW: “Create and interpret simple column graphs” (AC9M3ST02 / MA2-DATA-02).
+
+***
+
+### Week 7 – Multiplication of 2-digit by 1-digit numbers (no formal algorithm yet)
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Multiply 2-digit by 1-digit numbers using place value, arrays, and mental strategies.<br>**AC codes:** AC9M3N06, AC9M3A02<br>**VIC phrasing:** “Solve multiplication problems involving 2-digit by 1-digit numbers using strategies.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Multiplicative relations.<br>**NSW focus:** Multiply 2-digit by 1-digit numbers using place value and arrays; develop mental strategies.<br>**NSW codes (placeholder):** MA2-MULT-03 |
+| **Measurement/Space** | Make, compare and classify 2D shapes; describe features (sides, vertices, symmetry).<br>**AC codes:** AC9M3SP01<br>**VIC phrasing:** “Classify 2D shapes by their features and explain reasoning.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Two-dimensional spatial structure.<br>**NSW focus:** Compare and classify 2D shapes; describe features and symmetry.<br>**NSW codes (placeholder):** MA2-2D-SP-01 |
+| **Statistics/Probability** | – | – |
+
+**Example “new skills”:**
+
+- VIC: “Multiply 2-digit by 1-digit numbers using strategies” (AC9M3N06, AC9M3A02).  
+- NSW: “Multiplicative relations – 2-digit × 1-digit” (MA2-MULT-03).  
+- VIC/NSW: “Classify 2D shapes by features” (AC9M3SP01 / MA2-2D-SP-01).
+
+***
+
+### Week 8 – Unit fractions and representing fractions on number lines
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Recognise and represent unit fractions (1/2, 1/3, 1/4, 1/5, 1/8, 1/10); locate on number lines.<br>**AC codes:** AC9M3N07, AC9M3A01<br>**VIC phrasing:** “Recognise and represent unit fractions and locate on number lines.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Partitioned fractions.<br>**NSW focus:** Recognise and represent unit fractions; use models and number lines.<br>**NSW codes (placeholder):** MA2-FRAC-01 |
+| **Measurement/Space** | Interpret and create simple 2D representations of familiar environments (maps, plans).<br>**AC codes:** AC9M3SP02<br>**VIC phrasing:** “Interpret and create 2D representations of familiar places and routes.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Two-dimensional spatial structure.<br>**NSW focus:** Interpret and create 2D representations of familiar environments.<br>**NSW codes (placeholder):** MA2-2D-SP-02 |
+| **Statistics/Probability** | Identify everyday events involving chance; describe as “likely”, “unlikely”, “certain”, “impossible”.<br>**AC codes:** AC9M3P01<br>**VIC phrasing:** “Describe chance events using likelihood language.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Chance.<br>**NSW focus:** Describe chance events using “likely”, “unlikely”, “certain”, “impossible”.<br>**NSW codes (placeholder):** MA2-CHAN-01 |
+
+**Example “new skills”:**
+
+- VIC: “Recognise and represent unit fractions” (AC9M3N07, AC9M3A01).  
+- NSW: “Partitioned fractions – unit fractions” (MA2-FRAC-01).  
+- VIC/NSW: “Describe chance events using likelihood language” (AC9M3P01 / MA2-CHAN-01).
+
+***
+
+### Week 9 – Solving word problems combining addition, subtraction, multiplication
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Solve one- and two-step word problems involving addition, subtraction, and multiplication; choose operations.<br>**AC codes:** AC9M3N04, AC9M3N06, AC9M3A01<br>**VIC phrasing:** “Solve multi-step problems using addition, subtraction and multiplication.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Additive relations / Multiplicative relations.<br>**NSW focus:** Solve one- and two-step problems combining addition, subtraction, and multiplication.<br>**NSW codes (placeholder):** MA2-ADD-04, MA2-MULT-04 |
+| **Measurement/Space** | Solve simple measurement problems involving length, mass, or capacity (e.g., total length, difference in mass).<br>**AC codes:** AC9M3M02, AC9M3N04<br>**VIC phrasing:** “Solve simple problems involving metric measurements of length, mass and capacity.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Geometric measure / Non-spatial measure.<br>**NSW focus:** Solve simple problems involving length, mass, capacity.<br>**NSW codes (placeholder):** MA2-GM-PROB-01 |
+| **Statistics/Probability** | Conduct simple chance experiments (e.g., coin toss, dice roll); record outcomes.<br>**AC codes:** AC9M3P02<br>**VIC phrasing:** “Conduct repeated chance experiments and record outcomes.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Chance.<br>**NSW focus:** Conduct simple chance experiments; record and describe outcomes.<br>**NSW codes (placeholder):** MA2-CHAN-02 |
+
+**Example “new skills”:**
+
+- VIC: “Solve multi-step problems with +, −, ×” (AC9M3N04, AC9M3N06, AC9M3A01).  
+- NSW: “Additive/Multiplicative relations – multi-step problems” (MA2-ADD-04, MA2-MULT-04).  
+- VIC/NSW: “Conduct simple chance experiments” (AC9M3P02 / MA2-CHAN-02).
+
+***
+
+### Week 10 – Review and consolidation; simple financial contexts
+
+| Dimension | VIC (Level 3) | NSW (Stage 2) |
+|----------|----------------|---------------|
+| **Number focus** | Apply number skills to simple financial contexts (prices, change, simple budgets); estimate and check reasonableness.<br>**AC codes:** AC9M3N05, AC9M3N06<br>**VIC phrasing:** “Solve simple financial problems involving money, change and estimation.”  [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/assessment/ac9_maths_se_yr3.pdf) | **Subarea:** Additive relations / Multiplicative relations.<br>**NSW focus:** Solve simple financial problems involving money, change, and estimation.<br>**NSW codes (placeholder):** MA2-ADD-05, MA2-MULT-05 |
+| **Measurement/Space** | Consolidate time, length, mass, capacity through mixed problems; choose appropriate units and strategies.<br>**AC codes:** AC9M3M01, AC9M3M02, AC9M3M04<br>**VIC phrasing:** “Solve mixed measurement problems involving time, length, mass and capacity.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Geometric measure / Non-spatial measure.<br>**NSW focus:** Solve mixed measurement problems involving time, length, mass, capacity.<br>**NSW codes (placeholder):** MA2-GM-PROB-02 |
+| **Statistics/Probability** | Interpret simple data displays (tables, column graphs) in context; answer questions.<br>**AC codes:** AC9M3ST02, AC9M3ST03<br>**VIC phrasing:** “Interpret data displays and answer questions about the context.”  [au.ixl](https://au.ixl.com/standards/maths/year-3) | **Subarea:** Data.<br>**NSW focus:** Interpret data displays and answer questions.<br>**NSW codes (placeholder):** MA2-DATA-03 |
+
+**Example “new skills”:**
+
+- VIC: “Solve simple financial problems with money and change” (AC9M3N05, AC9M3N06).  
+- NSW: “Additive/Multiplicative relations – financial problems” (MA2-ADD-05, MA2-MULT-05).  
+- VIC/NSW: “Interpret data displays and answer questions” (AC9M3ST02, AC9M3ST03 / MA2-DATA-03).
+
+***
+
+## How to use this in your app
+
+- Store each row as a **weekly focus set** for Year 3 Maths.
+- For each focus skill:
+  - Create a **canonical skill record** with AC9 codes.
+  - Add **state-specific mappings**:
+    - VIC: Level 3 phrasing + any local codes.
+    - NSW: Stage 2 subarea + placeholder codes (to be finalised against the NSW syllabus). [qcaa.qld.edu](https://www.qcaa.qld.edu.au/downloads/aciqv9/mathematics/curriculum/ac9_maths_yr3_as_cd_alignment.pdf)
+- In your **weekly new skill selector**, for Year 3, Week N:
+  - Mark the listed Number, Measurement/Space, and (where applicable) Statistics/Probability skills as “new” for that week.
+  - Your spaced-repetition engine then schedules reviews in subsequent weeks according to the logic we defined earlier.
+
+If you’d like, I can next:
+
+- Produce a similar 10-week table for **Year 3 English**, or  
+- Turn this table into a **JSON schema** you can drop directly into your curriculum configuration.

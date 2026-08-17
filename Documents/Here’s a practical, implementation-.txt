@@ -1,0 +1,518 @@
+Here’s a practical, implementation-ready set of **curriculum sequencing rules** for VIC and NSW, focused on Years 1–6 Maths and English, that you can use to decide **which skills to mark as “new” each week** in your app.
+
+I’ll structure this as:
+
+1. How years map to stages/levels in each state  
+2. Maths sequencing rules (strands, typical weekly progression, VIC vs NSW differences)  
+3. English sequencing rules (strands, typical weekly progression, VIC vs NSW differences)  
+4. A rule-based “weekly new skill selector” you can implement directly
+
+***
+
+## 1. Year → stage/level mapping
+
+### Victoria (VIC)
+
+Uses **Levels F–10**; for primary:
+
+- Foundation ≈ Prep  
+- Level 1 ≈ Year 1  
+- Level 2 ≈ Year 2  
+- Level 3 ≈ Year 3  
+- Level 4 ≈ Year 4  
+- Level 5 ≈ Year 5  
+- Level 6 ≈ Year 6  
+
+Maths strands (Version 2.0): **Number, Algebra, Measurement, Space, Statistics, Probability** (Probability from Level 3). [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+English strands: typical AC structure (Language, Literature, Literacy) with content descriptions by level. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+### New South Wales (NSW)
+
+Uses **Stages** across K–6:
+
+- Early Stage 1: Kindergarten  
+- Stage 1: Years 1–2  
+- Stage 2: Years 3–4  
+- Stage 3: Years 5–6  
+
+Maths areas: **Number and algebra, Measurement and space, Statistics and probability**, with subareas like “Representing numbers”, “Additive relations”, “Multiplicative relations”, “Partitioned fractions”, etc. [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+English follows the Australian Curriculum structure, mapped into NSW syllabus outcomes by stage. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+In your app, store a mapping table:
+
+```text
+Year 1 → VIC Level 1, NSW Stage 1 (Part 1)
+Year 2 → VIC Level 2, NSW Stage 1 (Part 2)
+Year 3 → VIC Level 3, NSW Stage 2 (Part 1)
+Year 4 → VIC Level 4, NSW Stage 2 (Part 2)
+Year 5 → VIC Level 5, NSW Stage 3 (Part 1)
+Year 6 → VIC Level 6, NSW Stage 3 (Part 2)
+```
+
+You’ll use this to select the correct content descriptors for each state track.
+
+***
+
+## 2. Maths sequencing rules
+
+### High-level design principles
+
+- Follow **strand-based progression** within each year/stage:
+  - VIC: Number → Algebra (often taught together), then Measurement & Space, then Statistics & Probability. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+  - NSW: Number and algebra, Measurement and space, Statistics and probability, with explicit subareas (e.g., additive/multiplicative relations). [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+- Within each strand, move from:
+  - Concrete → representational → abstract  
+  - Simple → complex (e.g., within 20 → within 100 → within 1000)  
+  - Single-step → multi-step problems  
+- Use **weekly “focus skills”** (1–2 per strand) so that over a term you cover the key content descriptors for that year.
+
+Assume a **10-week term** model; you can adjust to local school calendars.
+
+***
+
+### VIC Maths: weekly “new skill” logic
+
+For each year level (Level 1–6), maintain a **sequence of focus skills per strand**. Below is a representative pattern; you’ll map each to specific AC/VIC content codes in your database.
+
+#### Years 1–2 (Level 1–2)
+
+**Number (dominant strand)** – typical weekly focus:
+
+- Week 1–2: Counting sequences, number names, ordering to 20/100; subitising small collections. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 3–4: Place value to 20/100 (tens and ones), representing numbers in different ways. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 5–6: Addition and subtraction within 20 (facts, strategies, word problems). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 7–8: Addition and subtraction within 100 (two-digit + one-digit, two-digit + two-digit without/with regrouping). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 9–10: Introduction to multiplication as equal groups/repeated addition; simple patterns. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Algebra (light, integrated with Number):**
+
+- Weeks 3–4, 7–8: Simple repeating and increasing/decreasing patterns; continue and create patterns. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and Geometry (Space):**
+
+- Weeks 2–3: Length (compare, order, informal units). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 4–5: Mass (compare, informal units).
+- Weeks 6–7: Time (hour/half-hour on analog/digital clocks).
+- Weeks 8–9: 2D shapes and 3D objects (features, sorting, spatial language). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Statistics and Probability:**
+
+- Probability often minimal in Years 1–2; focus on simple chance language (“likely”, “unlikely”).
+- Statistics: simple data collection and interpretation (picture graphs, simple tables) in Weeks 5–6 or 9–10.
+
+**Weekly “new skill” rule (VIC Years 1–2):**
+
+Each week, mark as “new”:
+
+- 1 Number focus skill (main thread for the week).
+- 0–1 Algebra/pattern skill (if aligned with Number).
+- 1 Measurement/Space skill (rotating sub-strand).
+- 0–1 Statistics/Probability skill (every 2–3 weeks, not every week).
+
+Example: Year 2, Week 5
+
+- New Number skill: “Add and subtract within 20 using mental strategies” (AC9M2N0x / VIC equivalent).
+- New Measurement skill: “Tell time to the hour and half-hour”.
+- Optional new Statistics skill: “Interpret simple picture graphs”.
+
+***
+
+#### Years 3–4 (Level 3–4)
+
+**Number and Algebra:**
+
+- Week 1–2: Place value to 1000; represent and order 3-digit numbers. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 3–4: Addition and subtraction within 1000 (with/without regrouping), including word problems. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 5–6: Multiplication concepts (equal groups, arrays), facts for 2, 3, 5, 10; link to division as sharing/grouping. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 7–8: Multiplication facts up to 10×10; simple division facts; multi-step problems. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 9–10: Fractions (unit fractions, equivalence basics), decimals introduction (Year 4). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and Space:**
+
+- Weeks 2–3: Length (formal units: m, cm), perimeter basics.
+- Weeks 4–5: Area (informal → formal units, rectangles).
+- Weeks 6–7: Mass and capacity (g, kg, mL, L).
+- Weeks 8–9: Time (minutes, timetables), 2D/3D shape properties, symmetry, transformations. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Statistics and Probability:**
+
+- Probability: simple experiments, language of chance, list outcomes. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+- Statistics: column graphs, interpreting data, simple surveys. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+
+**Weekly “new skill” rule (VIC Years 3–4):**
+
+Each week, mark as “new”:
+
+- 1 Number/Algebra focus skill (main thread).
+- 1 Measurement/Space skill.
+- 1 Statistics/Probability skill every 2–3 weeks.
+- Additional Algebra (patterns, simple rules) integrated into Number weeks.
+
+Example: Year 4, Week 6
+
+- New Number skill: “Multiply two-digit by one-digit numbers using strategies”.
+- New Measurement skill: “Measure and compare capacity using mL and L”.
+- New Statistics skill: “Construct and interpret simple column graphs”.
+
+***
+
+#### Years 5–6 (Level 5–6)
+
+**Number and Algebra:**
+
+- Week 1–2: Large whole numbers (up to 10,000/100,000), place value, rounding. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 3–4: Addition/subtraction with larger numbers; mental and written strategies. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 5–6: Multiplication (multi-digit), division with/without remainders. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 7–8: Fractions (equivalence, operations with like/unlike denominators), decimals (place value, operations). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Week 9–10: Percentages (basic), links to fractions/decimals; simple algebraic expressions (Year 6). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and Space:**
+
+- Weeks 2–3: Perimeter and area of rectangles/triangles; units conversion.
+- Weeks 4–5: Volume and capacity (prisms, informal → formal).
+- Weeks 6–7: Angles, 2D shape properties, transformations, coordinates.
+- Weeks 8–9: Time (24-hour time, time zones), more complex measurement problems.
+
+**Statistics and Probability:**
+
+- Probability: simple fractions for likelihood, experimental vs theoretical. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+- Statistics: data collection, displays (column, line, pie), mean/mode basics. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+
+**Weekly “new skill” rule (VIC Years 5–6):**
+
+Each week:
+
+- 1 Number/Algebra focus skill (main thread).
+- 1 Measurement/Space skill.
+- 1 Statistics/Probability skill every 2–3 weeks.
+- Integrate Algebra (expressions, simple equations) into Number weeks, especially Year 6.
+
+***
+
+### NSW Maths: weekly “new skill” logic
+
+NSW uses **Stage 1 (Years 1–2), Stage 2 (Years 3–4), Stage 3 (Years 5–6)** with subareas like:
+
+- **Representing numbers** (place value, ordering)  
+- **Additive relations** (add/sub)  
+- **Multiplicative relations** (mult/div)  
+- **Partitioned fractions** (Stage 2)  
+- **Representing quantity fractions** (Stage 3)  
+- **Geometric measure, 2D/3D spatial structure, Non-spatial measure**  
+- **Data and Chance** [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+
+Use the same 10-week term model; each week, choose 1–2 focus subareas.
+
+#### Stage 1 (Years 1–2)
+
+**Number and algebra:**
+
+- Weeks 1–2: Representing whole numbers to 20/100; counting sequences, ordinal numbers. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 3–4: Place value (tens/ones), representing numbers in different ways. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 5–6: Additive relations within 20 (facts, strategies). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 7–8: Additive relations within 100 (two-digit + one-digit, two-digit + two-digit). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 9–10: Early multiplicative ideas (equal groups, repeated addition), simple patterns. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and space:**
+
+- Weeks 2–3: Length (informal units, compare, order). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 4–5: Mass (informal units).
+- Weeks 6–7: Time (hour/half-hour).
+- Weeks 8–9: 2D/3D spatial structure (features, sorting, spatial language). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Statistics and probability:**
+
+- Data: simple picture graphs, interpret data.
+- Chance: everyday language of chance.
+
+**Weekly “new skill” rule (NSW Stage 1):**
+
+Each week:
+
+- 1 Number subarea (Representing numbers or Additive relations).
+- 1 Measurement and space subarea.
+- Data/Chance every 2–3 weeks.
+
+Example: Year 2, Week 5
+
+- New Number skill: “Additive relations within 20” (NSW Stage 1).
+- New Measurement skill: “Time – hour and half-hour”.
+- Optional new Data skill: “Interpret picture graphs”.
+
+***
+
+#### Stage 2 (Years 3–4)
+
+**Number and algebra:**
+
+- Weeks 1–2: Representing numbers using place value to 1000. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 3–4: Additive relations within 1000. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 5–6: Multiplicative relations (facts, arrays, basic division). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 7–8: Multiplicative relations extended; multi-step problems. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 9–10: Partitioned fractions (unit fractions, simple equivalence). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and space:**
+
+- Weeks 2–3: Geometric measure – length, perimeter.
+- Weeks 4–5: Area (informal → formal).
+- Weeks 6–7: Mass, capacity.
+- Weeks 8–9: 2D/3D spatial structure, symmetry, transformations.
+
+**Statistics and probability:**
+
+- Data: column graphs, surveys.
+- Chance: list outcomes, simple experiments. [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+
+**Weekly “new skill” rule (NSW Stage 2):**
+
+Each week:
+
+- 1 Number subarea (Representing numbers, Additive, Multiplicative, or Partitioned fractions).
+- 1 Measurement and space subarea.
+- Data/Chance every 2–3 weeks.
+
+Example: Year 4, Week 6
+
+- New Number skill: “Multiplicative relations – multiply two-digit by one-digit”.
+- New Measurement skill: “Capacity – measure and compare using mL/L”.
+- New Data skill: “Construct and interpret column graphs”.
+
+***
+
+#### Stage 3 (Years 5–6)
+
+**Number and algebra:**
+
+- Weeks 1–2: Representing numbers (large whole numbers, decimals introduction). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 3–4: Additive relations with larger numbers and decimals. [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 5–6: Multiplicative relations (multi-digit multiplication/division). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 7–8: Representing quantity fractions (operations with fractions, links to decimals). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+- Weeks 9–10: Decimals and percentages, simple algebraic expressions (Year 6). [oaic.gov](https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines)
+
+**Measurement and space:**
+
+- Weeks 2–3: Geometric measure – perimeter, area (triangles, parallelograms).
+- Weeks 4–5: Volume and capacity (prisms).
+- Weeks 6–7: Angles, 2D/3D properties, coordinates.
+- Weeks 8–9: Complex measurement problems, time (24-hour, time zones).
+
+**Statistics and probability:**
+
+- Probability: simple fractions for likelihood, experimental vs theoretical. [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+- Statistics: data displays, mean/mode basics. [v8.australiancurriculum.edu](https://v8.australiancurriculum.edu.au/media/7103/english_scope_and_sequence_f-6.pdf)
+
+**Weekly “new skill” rule (NSW Stage 3):**
+
+Each week:
+
+- 1 Number subarea (Representing numbers, Additive, Multiplicative, Fractions/Decimals/Percentages).
+- 1 Measurement and space subarea.
+- Data/Chance every 2–3 weeks.
+
+***
+
+## 3. English sequencing rules (VIC & NSW)
+
+Both states follow the **Australian Curriculum** structure for English, with three strands:
+
+- **Language** (grammar, vocabulary, spelling, punctuation)  
+- **Literature** (texts, themes, characters, literary devices)  
+- **Literacy** (reading, viewing, writing, speaking, listening) [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+Content is sequenced by year level (F–6) with increasing complexity in:
+
+- Text types: narrative, informative, persuasive, poetic, multimodal. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+- Reading: decoding → fluency → comprehension (literal → inferential → evaluative). [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+- Writing: sentence → paragraph → multi-paragraph texts; planning, drafting, editing. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+- Language: phonics/phonemic awareness (early years) → morphology, syntax, metalanguage. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+
+You can use a **common sequence for VIC and NSW**, tagging each skill with AC codes and optionally state-specific phrasing.
+
+### Years 1–2
+
+**Reading (Literacy):**
+
+- Weeks 1–3: Phonics revision, high-frequency words, decoding simple texts.  
+- Weeks 4–6: Fluency practice, literal comprehension (who/what/where/when).  
+- Weeks 7–10: Simple inferential questions, retelling stories, identifying main idea. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Writing (Literacy):**
+
+- Weeks 1–3: Sentence structure, capital letters, full stops, simple narratives.  
+- Weeks 4–6: Writing short informative texts (labels, captions, simple paragraphs).  
+- Weeks 7–10: Simple persuasive texts (opinion + reason), basic editing. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Language (grammar/vocabulary):**
+
+- Nouns, verbs, adjectives; simple tense; high-frequency spelling patterns. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+
+**Literature:**
+
+- Focus on familiar text types, characters, settings, simple themes. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Weekly “new skill” rule (English Years 1–2):**
+
+Each week:
+
+- 1 Reading focus (e.g., “literal comprehension – retrieving explicit information”).
+- 1 Writing focus (e.g., “write a simple narrative with beginning–middle–end”).
+- 1 Language focus (e.g., “identify nouns and verbs in a sentence”).
+- Literature integrated into reading/writing tasks rather than as a separate “skill”.
+
+***
+
+### Years 3–4
+
+**Reading:**
+
+- Weeks 1–3: Fluency with longer texts, literal + simple inferential comprehension.  
+- Weeks 4–6: Inferential and some evaluative questions, identifying text structure.  
+- Weeks 7–10: Comparing texts, identifying author’s purpose, simple analysis. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Writing:**
+
+- Weeks 1–3: Paragraph structure, topic sentences.  
+- Weeks 4–6: Informative texts with clear structure.  
+- Weeks 7–10: Persuasive texts with reasons and examples; planning and editing. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Language:**
+
+- More complex sentences, conjunctions, noun groups, verb tenses, morphological patterns. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+
+**Literature:**
+
+- Themes, character development, simple literary devices (simile, imagery). [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Weekly “new skill” rule (English Years 3–4):**
+
+Each week:
+
+- 1 Reading comprehension focus (literal/inferential/evaluative, text structure).
+- 1 Writing focus (text type + structural element).
+- 1 Language focus (grammar/vocabulary/spelling pattern).
+
+***
+
+### Years 5–6
+
+**Reading:**
+
+- Weeks 1–3: Complex texts, inferential and evaluative comprehension, multiple perspectives.  
+- Weeks 4–6: Analysing text structure and language features.  
+- Weeks 7–10: Critical reading, comparing texts, identifying bias and purpose. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Writing:**
+
+- Weeks 1–3: Multi-paragraph narratives with developed plot/characters.  
+- Weeks 4–6: Informative/explanatory texts with clear organisation.  
+- Weeks 7–10: Persuasive texts with arguments, evidence, counter-arguments; editing for coherence. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Language:**
+
+- Complex sentences, subordinate clauses, nominalisation, advanced punctuation, academic vocabulary. [oaic.gov](https://www.oaic.gov.au/__data/assets/pdf_file/0020/262631/Exposure-Draft-Childrens-Online-Privacy-Code.pdf)
+
+**Literature:**
+
+- Themes, perspectives, literary devices, connections between texts. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics-version-2-0/introduction/structure)
+
+**Weekly “new skill” rule (English Years 5–6):**
+
+Each week:
+
+- 1 Reading focus (higher-order comprehension, text analysis).
+- 1 Writing focus (text type + advanced structural/rhetorical feature).
+- 1 Language focus (complex grammar/vocabulary/spelling).
+
+***
+
+## 4. Rule-based “weekly new skill selector” you can implement
+
+You can encode this as a set of rules in your backend:
+
+**Inputs:**
+
+- `state` ∈ {VIC, NSW}
+- `year` ∈ {1..6}
+- `subject` ∈ {Maths, English}
+- `week_index` ∈ {1..10} (per term)
+- `term_index` ∈ {1..4} (optional, for multi-year planning)
+
+**Outputs:**
+
+- List of “new skills” for this week (with curriculum codes).
+
+### Pseudocode skeleton
+
+```python
+def get_weekly_new_skills(state, year, subject, week_index, term_index=1):
+    if state == "VIC":
+        level = year  # Level 1–6
+        if subject == "Maths":
+            return get_vic_maths_weekly_skills(level, week_index, term_index)
+        else:
+            return get_vic_english_weekly_skills(level, week_index, term_index)
+    elif state == "NSW":
+        stage = map_nsw_stage(year)  # Stage 1/2/3
+        if subject == "Maths":
+            return get_nsw_maths_weekly_skills(stage, year, week_index, term_index)
+        else:
+            return get_nsw_english_weekly_skills(stage, year, week_index, term_index)
+```
+
+Inside each `get_*_weekly_skills`:
+
+- Use the **week patterns** described above to select:
+  - 1 main focus skill (Number/Reading/Writing).
+  - 1 secondary skill (Measurement/Space or Language).
+  - Optional third skill (Statistics/Probability or Data/Chance) every 2–3 weeks.
+- Map each focus to:
+  - AC code(s)
+  - VIC code(s) or NSW code(s)
+  - A `skill_id` in your database.
+
+Example (conceptual):
+
+```python
+def get_vic_maths_weekly_skills(level, week_index, term_index):
+    # Example for Level 2 (Year 2)
+    if level == 2:
+        if week_index in [1, 2]:
+            return [
+                {"strand": "Number", "focus": "Counting and ordering to 100", "codes": {...}},
+                {"strand": "Measurement", "focus": "Compare lengths using informal units", "codes": {...}}
+            ]
+        elif week_index in [3, 4]:
+            return [
+                {"strand": "Number", "focus": "Place value to 100 (tens and ones)", "codes": {...}},
+                {"strand": "Measurement", "focus": "Tell time to hour and half-hour", "codes": {...}}
+            ]
+        elif week_index in [5, 6]:
+            return [
+                {"strand": "Number", "focus": "Addition and subtraction within 20", "codes": {...}},
+                {"strand": "Measurement", "focus": "Mass – compare using informal units", "codes": {...}},
+                # every 2–3 weeks add Stats
+                {"strand": "Statistics", "focus": "Interpret simple picture graphs", "codes": {...}}
+                if week_index % 3 == 0 else None
+            ]
+        # etc.
+```
+
+You’d flesh this out for each year/strand, using official curriculum documents to fill in exact content descriptors and codes. [victoriancurriculum.vcaa.vic.edu](https://victoriancurriculum.vcaa.vic.edu.au/mathematics/mathematics/introduction/structure)
+
+***
+
+## Practical implementation notes
+
+- Store **canonical skill definitions** once (with AC codes), then map to VIC/NSW codes.
+- For each state track, maintain a **10-week sequence per year/subject** as configuration data (JSON/DB), not hard-coded logic.
+- Allow schools to:
+  - Shift weeks (e.g., start term at Week 3 of your sequence).
+  - Skip or reorder topics while keeping the overall progression.
+- In the UI, label these as:
+  - “This week’s focus skills” (for teachers/parents).
+  - “New learning” in the child’s session.
+
+If you’d like, next I can:
+
+- Draft a sample **10-week sequence table** for one year level (e.g., Year 3 Maths) for both VIC and NSW, with example skill descriptions and placeholder codes.
+- Or design the data model for storing these sequences and linking them to your spaced-repetition engine.

@@ -1,0 +1,210 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -------------------------
+// Users & relationships
+// -------------------------
+
+model User {
+  id              String   @id @default(cuid())
+  clerkUserId     String   @unique
+  email           String
+  role            String   // "parent" | "child"
+  state           String?  // "VIC" | "NSW" (null for parents)
+  yearLevel       Int?     // 1–6 (null for parents)
+  displayName     String?  // child display name
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  parentChildLinks ParentChildLink[] @relation("ParentLinks")
+  childLinks       ParentChildLink[] @relation("ChildLinks")
+  skillStates      ChildSkillState[]
+  reviewEvents     ReviewEvent[]
+  sessions         Session[]
+  subscription     Subscription?
+
+  @@index([clerkUserId])
+}
+
+model ParentChildLink {
+  id          String   @id @default(cuid())
+  parentId    String
+  childId     String
+  relationship String  // "parent" | "guardian" etc.
+  createdAt   DateTime @default(now())
+
+  parent User @relation("ParentLinks", fields: [parentId], references: [id], onDelete: Cascade)
+  child  User @relation("ChildLinks",  fields: [childId],  references: [id], onDelete: Cascade)
+
+  @@unique([parentId, childId])
+  @@index([parentId])
+  @@index([childId])
+}
+
+// -------------------------
+// Curriculum & skills
+// -------------------------
+
+model Skill {
+  id                   String   @id @default(cuid())
+  subject              String   // "maths" | "english"
+  yearLevel            Int      // 1–6
+  strand               String   // "Number", "Reading", "Writing", "Language", ...
+  canonicalDescription String
+  acCodes              String[] // e.g. ["AC9M3N01", "AC9M3N02"]
+  vicMapping           Json?    // { level, phrasing, local_codes }
+  nswMapping           Json?    // { stage, subarea, outcomes }
+  metadata             Json?    // { difficulty_band, typical_weeks_to_mastery }
+
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  // Relations
+  childSkillStates ChildSkillState[]
+  items            Item[]
+  sequenceEntries  CurriculumSequenceEntry[]
+
+  @@index([subject, yearLevel, strand])
+}
+
+model CurriculumSequenceEntry {
+  id          String   @id @default(cuid())
+  subject     String   // "maths" | "english"
+  yearLevel   Int
+  term        Int      // 1–4
+  week        Int      // 1–10
+  state       String   // "VIC" | "NSW" (or "COMMON" if shared)
+  skillIds    String[] // [skill_id, ...]
+  focusNotes  String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  skills Skill[] @relation(fields: [skillIds], references: [id])
+
+  @@index([subject, yearLevel, term, week, state])
+}
+
+// -------------------------
+// Spaced repetition state
+// -------------------------
+
+model ChildSkillState {
+  id              String   @id @default(cuid())
+  childId         String
+  skillId         String
+  stabilityDays   Float    @default(1.0)
+  difficulty      Float    @default(0.5)
+  lapses          Int      @default(0)
+  reviewCount     Int      @default(0)
+  lastReviewedAt  DateTime?
+  nextReviewAt    DateTime @default(now())
+  status          String   @default("on_track") // "on_track" | "needs_attention" | "mastered"
+  recentAccuracy3 Float?   // rolling accuracy over last 3 reviews
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  child  User  @relation(fields: [childId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([childId, skillId])
+  @@index([childId, nextReviewAt])
+  @@index([childId, status])
+}
+
+model ReviewEvent {
+  id             String   @id @default(cuid())
+  childId        String
+  skillId        String
+  itemId         String
+  correct        Boolean
+  attempts       Int
+  hintUsed       Boolean
+  responseTimeSec Float
+  isReview       Boolean? // true = review, false = new, null = mixed
+  isMixed        Boolean?
+  timestamp      DateTime @default(now())
+
+  child  User  @relation(fields: [childId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  // item relation optional; you can add if you create an Item model field
+
+  @@index([childId, timestamp])
+  @@index([childId, skillId, timestamp])
+}
+
+// -------------------------
+// Item bank (questions)
+// -------------------------
+
+model Item {
+  id                 String   @id @default(cuid())
+  skillId            String
+  questionText       String
+  questionType       String   // "multiple_choice" | "short_answer" | "drag_drop" | "matching" | "multi_part"
+  answerKey          Json     // structure depends on type
+  stepByStepSolution String[] // or Json if you prefer
+  difficulty         String   @default("medium") // "easy" | "medium" | "hard"
+  tags               String[]
+  curriculumCodes    String[] // AC/VIC/NSW codes for this item
+  metadata           Json?
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@index([skillId, difficulty])
+  @@index([skillId])
+}
+
+// -------------------------
+// Sessions (daily practice)
+// -------------------------
+
+model Session {
+  id             String   @id @default(cuid())
+  childId        String
+  date           DateTime // normalized to start of day in user timezone
+  subject        String   // "maths" | "english"
+  plannedItemIds String[]
+  completedItemIds String[]
+  timeSpentSec   Int      @default(0)
+  status         String   @default("in_progress") // "in_progress" | "completed"
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  child User @relation(fields: [childId], references: [id], onDelete: Cascade)
+
+  @@unique([childId, date, subject])
+  @@index([childId, date])
+}
+
+// -------------------------
+// Subscriptions & billing
+// -------------------------
+
+model Subscription {
+  id                     String   @id @default(cuid())
+  parentId               String   @unique
+  stripeSubscriptionId   String   @unique
+  status                 String   // "active" | "trialing" | "canceled" | "past_due"
+  planType               String   // "individual" | "family"
+  currentPeriodEnd       DateTime
+  trialEnd               DateTime?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  parent User @relation(fields: [parentId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+}

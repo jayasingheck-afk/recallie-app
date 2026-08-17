@@ -1,0 +1,550 @@
+I’ll give you three concrete, copy‑pasteable building blocks you can drop into your project:
+
+1. Prisma schema for your core data model  
+2. Core spaced‑repetition functions (TypeScript)  
+3. A Claude prompt pack for Year 3 Maths & English item generation  
+
+You can adapt names/paths to your repo structure.
+
+***
+
+## 1. Prisma schema (`prisma/schema.prisma`)
+
+This covers users, skills, curriculum sequences, spaced‑repetition state, items, sessions, and subscriptions.
+
+```prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -------------------------
+// Users & relationships
+// -------------------------
+
+model User {
+  id              String   @id @default(cuid())
+  clerkUserId     String   @unique
+  email           String
+  role            String   // "parent" | "child"
+  state           String?  // "VIC" | "NSW" (null for parents)
+  yearLevel       Int?     // 1–6 (null for parents)
+  displayName     String?  // child display name
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  parentChildLinks ParentChildLink[] @relation("ParentLinks")
+  childLinks       ParentChildLink[] @relation("ChildLinks")
+  skillStates      ChildSkillState[]
+  reviewEvents     ReviewEvent[]
+  sessions         Session[]
+  subscription     Subscription?
+
+  @@index([clerkUserId])
+}
+
+model ParentChildLink {
+  id          String   @id @default(cuid())
+  parentId    String
+  childId     String
+  relationship String  // "parent" | "guardian" etc.
+  createdAt   DateTime @default(now())
+
+  parent User @relation("ParentLinks", fields: [parentId], references: [id], onDelete: Cascade)
+  child  User @relation("ChildLinks",  fields: [childId],  references: [id], onDelete: Cascade)
+
+  @@unique([parentId, childId])
+  @@index([parentId])
+  @@index([childId])
+}
+
+// -------------------------
+// Curriculum & skills
+// -------------------------
+
+model Skill {
+  id                   String   @id @default(cuid())
+  subject              String   // "maths" | "english"
+  yearLevel            Int      // 1–6
+  strand               String   // "Number", "Reading", "Writing", "Language", ...
+  canonicalDescription String
+  acCodes              String[] // e.g. ["AC9M3N01", "AC9M3N02"]
+  vicMapping           Json?    // { level, phrasing, local_codes }
+  nswMapping           Json?    // { stage, subarea, outcomes }
+  metadata             Json?    // { difficulty_band, typical_weeks_to_mastery }
+
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  // Relations
+  childSkillStates ChildSkillState[]
+  items            Item[]
+  sequenceEntries  CurriculumSequenceEntry[]
+
+  @@index([subject, yearLevel, strand])
+}
+
+model CurriculumSequenceEntry {
+  id          String   @id @default(cuid())
+  subject     String   // "maths" | "english"
+  yearLevel   Int
+  term        Int      // 1–4
+  week        Int      // 1–10
+  state       String   // "VIC" | "NSW" (or "COMMON" if shared)
+  skillIds    String[] // [skill_id, ...]
+  focusNotes  String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  skills Skill[] @relation(fields: [skillIds], references: [id])
+
+  @@index([subject, yearLevel, term, week, state])
+}
+
+// -------------------------
+// Spaced repetition state
+// -------------------------
+
+model ChildSkillState {
+  id              String   @id @default(cuid())
+  childId         String
+  skillId         String
+  stabilityDays   Float    @default(1.0)
+  difficulty      Float    @default(0.5)
+  lapses          Int      @default(0)
+  reviewCount     Int      @default(0)
+  lastReviewedAt  DateTime?
+  nextReviewAt    DateTime @default(now())
+  status          String   @default("on_track") // "on_track" | "needs_attention" | "mastered"
+  recentAccuracy3 Float?   // rolling accuracy over last 3 reviews
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  child  User  @relation(fields: [childId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([childId, skillId])
+  @@index([childId, nextReviewAt])
+  @@index([childId, status])
+}
+
+model ReviewEvent {
+  id             String   @id @default(cuid())
+  childId        String
+  skillId        String
+  itemId         String
+  correct        Boolean
+  attempts       Int
+  hintUsed       Boolean
+  responseTimeSec Float
+  isReview       Boolean? // true = review, false = new, null = mixed
+  isMixed        Boolean?
+  timestamp      DateTime @default(now())
+
+  child  User  @relation(fields: [childId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  // item relation optional; you can add if you create an Item model field
+
+  @@index([childId, timestamp])
+  @@index([childId, skillId, timestamp])
+}
+
+// -------------------------
+// Item bank (questions)
+// -------------------------
+
+model Item {
+  id                 String   @id @default(cuid())
+  skillId            String
+  questionText       String
+  questionType       String   // "multiple_choice" | "short_answer" | "drag_drop" | "matching" | "multi_part"
+  answerKey          Json     // structure depends on type
+  stepByStepSolution String[] // or Json if you prefer
+  difficulty         String   @default("medium") // "easy" | "medium" | "hard"
+  tags               String[]
+  curriculumCodes    String[] // AC/VIC/NSW codes for this item
+  metadata           Json?
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@index([skillId, difficulty])
+  @@index([skillId])
+}
+
+// -------------------------
+// Sessions (daily practice)
+// -------------------------
+
+model Session {
+  id             String   @id @default(cuid())
+  childId        String
+  date           DateTime // normalized to start of day in user timezone
+  subject        String   // "maths" | "english"
+  plannedItemIds String[]
+  completedItemIds String[]
+  timeSpentSec   Int      @default(0)
+  status         String   @default("in_progress") // "in_progress" | "completed"
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  child User @relation(fields: [childId], references: [id], onDelete: Cascade)
+
+  @@unique([childId, date, subject])
+  @@index([childId, date])
+}
+
+// -------------------------
+// Subscriptions & billing
+// -------------------------
+
+model Subscription {
+  id                     String   @id @default(cuid())
+  parentId               String   @unique
+  stripeSubscriptionId   String   @unique
+  status                 String   // "active" | "trialing" | "canceled" | "past_due"
+  planType               String   // "individual" | "family"
+  currentPeriodEnd       DateTime
+  trialEnd               DateTime?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  parent User @relation(fields: [parentId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+}
+```
+
+***
+
+## 2. Core spaced‑repetition functions (TypeScript)
+
+Place these in e.g. `lib/spacedRepetition.ts`. This is a simplified but usable version of the logic we designed.
+
+```ts
+// lib/spacedRepetition.ts
+
+export type SkillState = {
+  stabilityDays: number;
+  difficulty: number;
+  lapses: number;
+  reviewCount: number;
+  recentAccuracy3: number | null;
+  status: "on_track" | "needs_attention" | "mastered";
+};
+
+export type ReviewResult = {
+  correct: boolean;
+  attempts: number;
+  hintUsed: boolean;
+  responseTimeSec: number;
+};
+
+export type UpdatedSkillState = SkillState & {
+  nextReviewIntervalDays: number;
+};
+
+function clamp(min: number, max: number, value: number) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function updateRollingAccuracy(
+  prevAvg: number | null,
+  newCorrect: 0 | 1,
+  window = 3
+): number {
+  // Simple approximation: treat prevAvg as avg over up to `window` reviews.
+  // For a more precise rolling window, store last N results in DB.
+  if (prevAvg === null) {
+    return newCorrect;
+  }
+  // Assume prevAvg is over k <= window reviews; approximate by blending.
+  const k = window; // approximate as if full window
+  const sumPrev = prevAvg * k;
+  const newSum = sumPrev + newCorrect - prevAvg; // replace oldest with new
+  return newSum / k;
+}
+
+export function updateSkillAfterReview(
+  state: SkillState,
+  review: ReviewResult
+): UpdatedSkillState {
+  const { stabilityDays, difficulty, lapses, reviewCount, recentAccuracy3 } = state;
+  const { correct, attempts, hintUsed, responseTimeSec } = review;
+
+  // 1. Compute quality q (0–1)
+  let qAcc = 0;
+  if (correct && attempts === 1 && !hintUsed) {
+    qAcc = 1.0;
+  } else if (correct) {
+    qAcc = 0.5;
+  } else {
+    qAcc = 0.0;
+  }
+
+  // Speed adjustment (simple heuristic)
+  const expectedRtMin = 5;
+  const expectedRtMax = 20;
+  let speedAdj = 0;
+  if (responseTimeSec < expectedRtMin) {
+    speedAdj = -0.1; // possible guessing
+  } else if (responseTimeSec > expectedRtMax) {
+    speedAdj = -0.1; // struggling
+  }
+
+  const q = clamp(0, 1, qAcc + speedAdj);
+
+  // 2. Update difficulty D
+  const alpha = 0.1;
+  const beta = 0.15;
+  let newDifficulty = difficulty;
+  if (correct && responseTimeSec <= expectedRtMax) {
+    newDifficulty = Math.max(0, difficulty - alpha);
+  } else {
+    newDifficulty = Math.min(1, difficulty + beta);
+  }
+
+  // 3. Update stability S
+  const kEasy = 0.4;
+  const kMedium = 0.15;
+  const kHard = 0.6;
+
+  let newStability = stabilityDays;
+  let newLapses = lapses;
+
+  if (q >= 0.8) {
+    newStability = stabilityDays * (1 + kEasy * (1 - newDifficulty));
+  } else if (q >= 0.5) {
+    newStability = stabilityDays * (1 + kMedium);
+  } else {
+    newStability = stabilityDays * kHard;
+    newLapses = lapses + 1;
+  }
+
+  // 4. Compute next interval I
+  const fD = 1 - 0.5 * newDifficulty;
+  let intervalDays = newStability * fD;
+  intervalDays = clamp(0.5, 90, intervalDays);
+
+  // Force near-term review if very poor performance
+  if (q < 0.3) {
+    intervalDays = Math.min(intervalDays, 1.0);
+  }
+
+  // 5. Update review count and recent accuracy
+  const newReviewCount = reviewCount + 1;
+  const newCorrectFlag: 0 | 1 = correct ? 1 : 0;
+  const newRecentAccuracy3 = updateRollingAccuracy(recentAccuracy3, newCorrectFlag, 3);
+
+  // 6. Determine status
+  let newStatus: SkillState["status"] = "on_track";
+  if (
+    newStability >= 30 &&
+    newReviewCount >= 5 &&
+    newRecentAccuracy3 !== null &&
+    newRecentAccuracy3 >= 0.9
+  ) {
+    newStatus = "mastered";
+  } else if (
+    newStability <= 7 ||
+    newLapses >= 2 ||
+    (newRecentAccuracy3 !== null && newRecentAccuracy3 < 0.7)
+  ) {
+    newStatus = "needs_attention";
+  }
+
+  return {
+    stabilityDays: newStability,
+    difficulty: newDifficulty,
+    lapses: newLapses,
+    reviewCount: newReviewCount,
+    recentAccuracy3: newRecentAccuracy3,
+    status: newStatus,
+    nextReviewIntervalDays: intervalDays,
+  };
+}
+
+export function initializeSkillState(): SkillState {
+  return {
+    stabilityDays: 1,
+    difficulty: 0.5,
+    lapses: 0,
+    reviewCount: 0,
+    recentAccuracy3: null,
+    status: "on_track",
+  };
+}
+```
+
+You can wire this into your API like:
+
+- On each item submission, call `updateSkillAfterReview` with the current `ChildSkillState` and the review result.
+- Save the updated fields and set `nextReviewAt = lastReviewedAt + intervalDays`.
+
+***
+
+## 3. Claude prompt pack for Year 3 item generation
+
+Save these as templates and fill in the placeholders per skill.
+
+### 3.1 System role (set once per session)
+
+```text
+You are an expert Australian primary curriculum content writer and assessment designer. Your task is to create high-quality, curriculum-aligned practice items for Maths or English for Year 3. You must align every item to the Australian Curriculum (Version 9.0) and relevant state variations (VIC, NSW). All content must be age-appropriate, clear, and free of bias. Use child-friendly language and avoid negative labels. Focus on growth and practice.
+```
+
+### 3.2 Maths item generation prompt (per skill)
+
+```text
+You are generating a practice item bank for:
+
+- Subject: Maths
+- Year level: 3
+- State tracks to support: VIC, NSW
+- Topic: [TOPIC_NAME, e.g. "Addition and subtraction within 1,000 (with regrouping)"]
+- Skill description: [SKILL_DESCRIPTION, e.g. "Add and subtract 2- and 3-digit numbers within 1,000 with regrouping; use written and mental strategies."]
+- Curriculum codes to cover:
+  - Australian Curriculum (AC): [AC_CODES, e.g. "AC9M3N04, AC9M3N05"]
+  - VIC: [VIC_PHRASING_AND_CODES_IF_KNOWN]
+  - NSW: [NSW_SUBAREA_AND_OUTCOMES, e.g. "Additive relations – MA2-ADD-03"]
+
+Requirements:
+
+1. Produce 25 distinct practice items for this topic and year level.
+2. For each item, provide:
+   - item_id: unique identifier (e.g. AC9M3N04_Y3_AddSubReg_001)
+   - curriculum_codes: { AC: [...], VIC: [...], NSW: [...] } (use placeholders if exact codes unknown)
+   - skill_description: one-sentence description of the skill
+   - difficulty: "easy" | "medium" | "hard"
+   - question_text: the actual question/task as shown to a Year 3 student (age-appropriate language)
+   - question_type: "multiple_choice" | "short_answer" | "multi_part"
+   - answer_key: correct answer(s) in a machine-readable format
+   - step_by_step_solution: 3–6 clear, child-friendly steps explaining how to get the answer
+   - common_misconceptions: 2–3 typical errors and how to address them (short bullet points)
+   - hints: 2 scaffolded hints (from general to specific)
+   - tags: e.g. ["word_problem", "place_value", "regrouping"]
+
+3. Ensure:
+   - Language suits Year 3 students (simple sentences, concrete contexts).
+   - No negative labels; focus on growth and practice.
+   - Variety in contexts (school, home, play, community) and representation.
+   - Include a mix of:
+     - Pure number sentences
+     - Word problems
+     - Visual/place-value representations where relevant.
+
+4. Output format:
+   - Return a single JSON array, where each element is one item with the fields above.
+   - Do not include any commentary outside the JSON.
+
+Example item structure (for your guidance, do not output this example):
+
+[
+  {
+    "item_id": "AC9M3N04_Y3_AddSubReg_001",
+    "curriculum_codes": {
+      "AC": ["AC9M3N04", "AC9M3N05"],
+      "VIC": [],
+      "NSW": ["MA2-ADD-03"]
+    },
+    "skill_description": "Add and subtract 2- and 3-digit numbers within 1,000 with regrouping.",
+    "difficulty": "medium",
+    "question_text": "There are 427 apples in a basket. 158 apples are taken out. How many apples are left?",
+    "question_type": "short_answer",
+    "answer_key": "269",
+    "step_by_step_solution": [
+      "Start with 427 apples.",
+      "Take away 158 apples.",
+      "Subtract the ones: 7 − 8 → borrow 1 ten → 17 − 8 = 9.",
+      "Subtract the tens: 1 (after borrowing) − 5 → borrow 1 hundred → 11 − 5 = 6.",
+      "Subtract the hundreds: 3 − 1 = 2.",
+      "So 427 − 158 = 269."
+    ],
+    "common_misconceptions": [
+      "Forgetting to borrow when the ones digit is smaller.",
+      "Subtracting each column separately without regrouping."
+    ],
+    "hints": [
+      "Break 158 into 100 + 50 + 8 and subtract step by step.",
+      "Use column subtraction and remember to borrow when needed."
+    ],
+    "tags": ["word_problem", "regrouping", "place_value"]
+  }
+]
+
+Now generate the full exercise bank as specified.
+```
+
+### 3.3 English item generation prompt (per skill)
+
+```text
+You are generating a practice item bank for:
+
+- Subject: English
+- Year level: 3
+- State tracks to support: VIC, NSW
+- Topic: [TOPIC_NAME, e.g. "Inferential comprehension – making inferences about characters"]
+- Skill description: [SKILL_DESCRIPTION, e.g. "Make simple inferences using text evidence and prior knowledge; answer why/how questions."]
+- Curriculum codes to cover:
+  - Australian Curriculum (AC): [AC_CODES, e.g. "AC9E3LY01, AC9E3LY02"]
+  - VIC: [VIC_PHRASING_AND_CODES_IF_KNOWN]
+  - NSW: [NSW_SUBAREA_AND_OUTCOMES, e.g. "Reading comprehension – inferential (EN2-RECOM-01)"]
+
+Requirements:
+
+1. Produce 20 distinct practice items for this topic and year level.
+2. Each item should be based on a short passage (2–5 sentences) or a sentence stem that you provide.
+3. For each item, provide:
+   - item_id: unique identifier (e.g. AC9E3LY01_Y3_Infer_Char_001)
+   - curriculum_codes: { AC: [...], VIC: [...], NSW: [...] }
+   - skill_description: one-sentence description of the skill
+   - difficulty: "easy" | "medium" | "hard"
+   - passage: 2–5 sentences of age-appropriate text (narrative or informative)
+   - question_text: an inferential question about the passage (why/how/what does this suggest)
+   - question_type: "multiple_choice" | "short_answer"
+   - answer_key: correct answer(s) in a machine-readable format
+   - step_by_step_solution: 3–5 clear, child-friendly steps showing how to use evidence + prior knowledge to infer
+   - common_misconceptions: 2–3 typical errors (e.g. answering with literal detail only)
+   - hints: 2 scaffolded hints (from general to specific)
+   - tags: e.g. ["inferential", "character_feelings", "narrative"]
+
+4. Ensure:
+   - Language suits Year 3 students.
+   - No negative labels; focus on growth and practice.
+   - Variety in text types (narrative, informative, everyday scenarios).
+   - Questions require inference, not just copying text.
+
+5. Output format:
+   - Return a single JSON array, where each element is one item with the fields above.
+   - Do not include any commentary outside the JSON.
+
+Now generate the full exercise bank as specified.
+```
+
+***
+
+## How to use these next
+
+1. **Create your repo** and add the Prisma schema. Run `npx prisma migrate dev` to create your tables.  
+2. **Seed `Skill` and `CurriculumSequenceEntry`** using the Year 3 JSON we designed earlier.  
+3. **Implement an API route** (e.g. `/api/reviews`) that:
+   - Loads `ChildSkillState` for a given child+skill.  
+   - Calls `updateSkillAfterReview`.  
+   - Saves the updated state and creates a `ReviewEvent`.  
+4. **Run the Claude prompts** for 4–6 Year 3 skills (Maths + English) and import the resulting items into your `Item` table.  
+5. **Build a simple session UI** that:
+   - Calls your “build session” logic.  
+   - Shows one item at a time.  
+   - Posts results to `/api/reviews`.
+
+If you tell me your preferred ORM (Prisma vs Drizzle) and whether you want the session-builder logic in TypeScript or Python next, I can write that specifically.

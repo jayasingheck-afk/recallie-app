@@ -1,0 +1,1940 @@
+From 7d7278d7fc54fe43bd458cbc00bd617adacd73f5 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 17 Aug 2026 17:35:47 +0000
+Subject: [PATCH] Add parent onboarding (multi-child) and derive curriculum
+ week from enrolment
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Parents can now add/manage multiple children via /parent/children instead of
+every page hard-coding the single demo child (GET/POST /api/children). The
+child and parent-dashboard pages accept ?childId= to switch between them.
+
+Also replaces the hard-coded term=1/week=1 in the session API with
+computeCurrentTermWeek(), derived from a new User.enrolledAt column. Clamped
+to term 1 / week 1 for now since that's the only week with real curriculum
+sequence + item content — verified a long-enrolled child still gets a
+non-empty session instead of landing on an empty future week.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0165eXNKUVcmbijWeTYPurQ8
+---
+ README.md                          |   27 +-
+ drizzle/0001_add_enrolled_at.sql   |    1 +
+ drizzle/meta/0001_snapshot.json    | 1215 ++++++++++++++++++++++++++++
+ drizzle/meta/_journal.json         |    7 +
+ src/app/api/children/route.ts      |  104 +++
+ src/app/api/session/today/route.ts |    7 +-
+ src/app/child/page.tsx             |   32 +-
+ src/app/page.tsx                   |   11 +-
+ src/app/parent/children/page.tsx   |  172 ++++
+ src/app/parent/dashboard/page.tsx  |   34 +-
+ src/db/schema.ts                   |    1 +
+ src/db/seed/seed-demo.ts           |   10 +
+ src/lib/curriculumWeek.ts          |   39 +
+ 13 files changed, 1632 insertions(+), 28 deletions(-)
+ create mode 100644 drizzle/0001_add_enrolled_at.sql
+ create mode 100644 drizzle/meta/0001_snapshot.json
+ create mode 100644 src/app/api/children/route.ts
+ create mode 100644 src/app/parent/children/page.tsx
+ create mode 100644 src/lib/curriculumWeek.ts
+
+diff --git a/README.md b/README.md
+index a6f1b50..0b9350f 100644
+--- a/README.md
++++ b/README.md
+@@ -6,7 +6,8 @@ Early build-out of the Recallie app, per the project's tech-stack and pedagogy d
+ 
+ - **Next.js 16** (App Router, TypeScript, Tailwind v4)
+ - **PostgreSQL** + **Drizzle ORM** (see note below on why Drizzle instead of Prisma)
+-- No auth/payments yet — everything runs against one seeded demo parent/child
++- No real login yet — every parent-facing page runs as one seeded demo parent account, but
++  that parent can now add/manage multiple children (see "Parent onboarding" below)
+ 
+ ## Why Drizzle instead of Prisma
+ 
+@@ -39,9 +40,12 @@ npm run db:seed:demo
+ npm run dev
+ ```
+ 
+-Visit `/child` for the child practice flow and `/parent/dashboard` for the parent view.
+-Both currently hard-code the seeded demo child (`demo_child_1` — "Alex", Year 3, NSW);
+-there's no login yet.
++Visit `/parent/children` to add a child (name, year level, state) and jump into their
++practice session or dashboard. `/child` and `/parent/dashboard` both accept a `?childId=`
++query param (e.g. `/child?childId=abc123`, linked to automatically from `/parent/children`);
++without one they fall back to the seeded demo child (`demo_child_1` — "Alex", Year 3, NSW).
++There's still no login — every add-child call runs as one hard-coded demo parent
++(`demo_parent_1`) until Clerk auth is wired up.
+ 
+ ## What's implemented
+ 
+@@ -53,9 +57,15 @@ there's no login yet.
+   ~25% mixed, interleaved so no more than 2 consecutive items share a skill.
+ - **`src/lib/grading.ts`** — simple string-match grading for `short_answer` /
+   `multiple_choice` items (MVP only — see comments for what's missing).
+-- **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`.
++- **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
++  `GET`/`POST /api/children` (parent onboarding — list/add children).
+ - **UI**: `/child` (one-item-at-a-time practice with hints + feedback), `/parent/dashboard`
+-  (skills mastered / areas to give more attention / recent sessions).
++  (skills mastered / areas to give more attention / recent sessions), `/parent/children`
++  (add a child, switch between them).
++- **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
++  their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
++  clamped to term 1 / week 1 because that's the only week with real curriculum-sequence +
++  item bank content — see "Explicit next steps".
+ - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings)
+   from the project docs; a Week 1 item bank (62 items across the 5 Week 1 skills — 8 original
+   hand-written samples + 54 generated per the project's item-generation prompt templates,
+@@ -86,7 +96,8 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
+ - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
+   teacher-review) item types — currently excluded from live sessions entirely.
+ - Stripe subscriptions, free trial gating.
+-- Deriving the child's current curriculum week from an actual enrolment date
+-  (currently hard-coded to term 1 / week 1 in the session API).
++- Curriculum weeks 2-10 (Term 1) and beyond — `curriculumWeek.ts` is wired up and ready to
++  roll a child forward automatically once more weeks of sequence + item content exist; it's
++  clamped to week 1 only until then (see that file's comments for the constants to raise).
+ - Gamification beyond points/streak (badges, progress map).
+ - Monthly parent report generation/email.
+diff --git a/drizzle/0001_add_enrolled_at.sql b/drizzle/0001_add_enrolled_at.sql
+new file mode 100644
+index 0000000..3aae601
+--- /dev/null
++++ b/drizzle/0001_add_enrolled_at.sql
+@@ -0,0 +1 @@
++ALTER TABLE "User" ADD COLUMN "enrolledAt" timestamp;
+\ No newline at end of file
+diff --git a/drizzle/meta/0001_snapshot.json b/drizzle/meta/0001_snapshot.json
+new file mode 100644
+index 0000000..b360624
+--- /dev/null
++++ b/drizzle/meta/0001_snapshot.json
+@@ -0,0 +1,1215 @@
++{
++  "id": "8946f56a-98be-471c-ac50-f05adb4fdfcb",
++  "prevId": "9bf0d2e0-380e-4263-8dda-38995e3d8a5f",
++  "version": "7",
++  "dialect": "postgresql",
++  "tables": {
++    "public.ChildSkillState": {
++      "name": "ChildSkillState",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "childId": {
++          "name": "childId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "skillId": {
++          "name": "skillId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "stabilityDays": {
++          "name": "stabilityDays",
++          "type": "real",
++          "primaryKey": false,
++          "notNull": true,
++          "default": 1
++        },
++        "difficulty": {
++          "name": "difficulty",
++          "type": "real",
++          "primaryKey": false,
++          "notNull": true,
++          "default": 0.5
++        },
++        "lapses": {
++          "name": "lapses",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true,
++          "default": 0
++        },
++        "reviewCount": {
++          "name": "reviewCount",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true,
++          "default": 0
++        },
++        "lastReviewedAt": {
++          "name": "lastReviewedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "nextReviewAt": {
++          "name": "nextReviewAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "status": {
++          "name": "status",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'on_track'"
++        },
++        "recentAccuracy3": {
++          "name": "recentAccuracy3",
++          "type": "real",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "child_skill_unique": {
++          "name": "child_skill_unique",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "skillId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": true,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "child_skill_next_review_idx": {
++          "name": "child_skill_next_review_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "nextReviewAt",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "child_skill_status_idx": {
++          "name": "child_skill_status_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "status",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "ChildSkillState_childId_User_id_fk": {
++          "name": "ChildSkillState_childId_User_id_fk",
++          "tableFrom": "ChildSkillState",
++          "tableTo": "User",
++          "columnsFrom": [
++            "childId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        },
++        "ChildSkillState_skillId_Skill_id_fk": {
++          "name": "ChildSkillState_skillId_Skill_id_fk",
++          "tableFrom": "ChildSkillState",
++          "tableTo": "Skill",
++          "columnsFrom": [
++            "skillId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.CurriculumSequenceEntry": {
++      "name": "CurriculumSequenceEntry",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "subject": {
++          "name": "subject",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "yearLevel": {
++          "name": "yearLevel",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "term": {
++          "name": "term",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "week": {
++          "name": "week",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "state": {
++          "name": "state",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "skillIds": {
++          "name": "skillIds",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "focusNotes": {
++          "name": "focusNotes",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "seq_subject_year_term_week_state_idx": {
++          "name": "seq_subject_year_term_week_state_idx",
++          "columns": [
++            {
++              "expression": "subject",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "yearLevel",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "term",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "week",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "state",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {},
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.Item": {
++      "name": "Item",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "skillId": {
++          "name": "skillId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "questionText": {
++          "name": "questionText",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "passage": {
++          "name": "passage",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "questionType": {
++          "name": "questionType",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "answerKey": {
++          "name": "answerKey",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "stepByStepSolution": {
++          "name": "stepByStepSolution",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "commonMisconceptions": {
++          "name": "commonMisconceptions",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "hints": {
++          "name": "hints",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "difficulty": {
++          "name": "difficulty",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'medium'"
++        },
++        "tags": {
++          "name": "tags",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "curriculumCodes": {
++          "name": "curriculumCodes",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "metadata": {
++          "name": "metadata",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "item_skill_difficulty_idx": {
++          "name": "item_skill_difficulty_idx",
++          "columns": [
++            {
++              "expression": "skillId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "difficulty",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "Item_skillId_Skill_id_fk": {
++          "name": "Item_skillId_Skill_id_fk",
++          "tableFrom": "Item",
++          "tableTo": "Skill",
++          "columnsFrom": [
++            "skillId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.ParentChildLink": {
++      "name": "ParentChildLink",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "parentId": {
++          "name": "parentId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "childId": {
++          "name": "childId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "relationship": {
++          "name": "relationship",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "parent_child_unique": {
++          "name": "parent_child_unique",
++          "columns": [
++            {
++              "expression": "parentId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": true,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "parent_idx": {
++          "name": "parent_idx",
++          "columns": [
++            {
++              "expression": "parentId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "child_idx": {
++          "name": "child_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "ParentChildLink_parentId_User_id_fk": {
++          "name": "ParentChildLink_parentId_User_id_fk",
++          "tableFrom": "ParentChildLink",
++          "tableTo": "User",
++          "columnsFrom": [
++            "parentId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        },
++        "ParentChildLink_childId_User_id_fk": {
++          "name": "ParentChildLink_childId_User_id_fk",
++          "tableFrom": "ParentChildLink",
++          "tableTo": "User",
++          "columnsFrom": [
++            "childId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.ReviewEvent": {
++      "name": "ReviewEvent",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "childId": {
++          "name": "childId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "skillId": {
++          "name": "skillId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "itemId": {
++          "name": "itemId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "correct": {
++          "name": "correct",
++          "type": "boolean",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "attempts": {
++          "name": "attempts",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "hintUsed": {
++          "name": "hintUsed",
++          "type": "boolean",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "responseTimeSec": {
++          "name": "responseTimeSec",
++          "type": "real",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "isReview": {
++          "name": "isReview",
++          "type": "boolean",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "isMixed": {
++          "name": "isMixed",
++          "type": "boolean",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "timestamp": {
++          "name": "timestamp",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "review_child_timestamp_idx": {
++          "name": "review_child_timestamp_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "timestamp",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "review_child_skill_timestamp_idx": {
++          "name": "review_child_skill_timestamp_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "skillId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "timestamp",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "ReviewEvent_childId_User_id_fk": {
++          "name": "ReviewEvent_childId_User_id_fk",
++          "tableFrom": "ReviewEvent",
++          "tableTo": "User",
++          "columnsFrom": [
++            "childId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        },
++        "ReviewEvent_skillId_Skill_id_fk": {
++          "name": "ReviewEvent_skillId_Skill_id_fk",
++          "tableFrom": "ReviewEvent",
++          "tableTo": "Skill",
++          "columnsFrom": [
++            "skillId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.Session": {
++      "name": "Session",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "childId": {
++          "name": "childId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "date": {
++          "name": "date",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "subject": {
++          "name": "subject",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "plannedItemIds": {
++          "name": "plannedItemIds",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "completedItemIds": {
++          "name": "completedItemIds",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "timeSpentSec": {
++          "name": "timeSpentSec",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true,
++          "default": 0
++        },
++        "status": {
++          "name": "status",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'in_progress'"
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "session_child_date_subject_unique": {
++          "name": "session_child_date_subject_unique",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "date",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "subject",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": true,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        },
++        "session_child_date_idx": {
++          "name": "session_child_date_idx",
++          "columns": [
++            {
++              "expression": "childId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "date",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "Session_childId_User_id_fk": {
++          "name": "Session_childId_User_id_fk",
++          "tableFrom": "Session",
++          "tableTo": "User",
++          "columnsFrom": [
++            "childId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.Skill": {
++      "name": "Skill",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "subject": {
++          "name": "subject",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "yearLevel": {
++          "name": "yearLevel",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "strand": {
++          "name": "strand",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "canonicalDescription": {
++          "name": "canonicalDescription",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "acCodes": {
++          "name": "acCodes",
++          "type": "text[]",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "'{}'"
++        },
++        "vicMapping": {
++          "name": "vicMapping",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "nswMapping": {
++          "name": "nswMapping",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "metadata": {
++          "name": "metadata",
++          "type": "jsonb",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "skill_subject_year_strand_idx": {
++          "name": "skill_subject_year_strand_idx",
++          "columns": [
++            {
++              "expression": "subject",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "yearLevel",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            },
++            {
++              "expression": "strand",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {},
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {},
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.Subscription": {
++      "name": "Subscription",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "parentId": {
++          "name": "parentId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "stripeSubscriptionId": {
++          "name": "stripeSubscriptionId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "status": {
++          "name": "status",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "planType": {
++          "name": "planType",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "currentPeriodEnd": {
++          "name": "currentPeriodEnd",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "trialEnd": {
++          "name": "trialEnd",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "subscription_status_idx": {
++          "name": "subscription_status_idx",
++          "columns": [
++            {
++              "expression": "status",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {
++        "Subscription_parentId_User_id_fk": {
++          "name": "Subscription_parentId_User_id_fk",
++          "tableFrom": "Subscription",
++          "tableTo": "User",
++          "columnsFrom": [
++            "parentId"
++          ],
++          "columnsTo": [
++            "id"
++          ],
++          "onDelete": "cascade",
++          "onUpdate": "no action"
++        }
++      },
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {
++        "Subscription_parentId_unique": {
++          "name": "Subscription_parentId_unique",
++          "nullsNotDistinct": false,
++          "columns": [
++            "parentId"
++          ]
++        },
++        "Subscription_stripeSubscriptionId_unique": {
++          "name": "Subscription_stripeSubscriptionId_unique",
++          "nullsNotDistinct": false,
++          "columns": [
++            "stripeSubscriptionId"
++          ]
++        }
++      },
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    },
++    "public.User": {
++      "name": "User",
++      "schema": "",
++      "columns": {
++        "id": {
++          "name": "id",
++          "type": "text",
++          "primaryKey": true,
++          "notNull": true
++        },
++        "clerkUserId": {
++          "name": "clerkUserId",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "email": {
++          "name": "email",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "role": {
++          "name": "role",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": true
++        },
++        "state": {
++          "name": "state",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "yearLevel": {
++          "name": "yearLevel",
++          "type": "integer",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "displayName": {
++          "name": "displayName",
++          "type": "text",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "enrolledAt": {
++          "name": "enrolledAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": false
++        },
++        "createdAt": {
++          "name": "createdAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        },
++        "updatedAt": {
++          "name": "updatedAt",
++          "type": "timestamp",
++          "primaryKey": false,
++          "notNull": true,
++          "default": "now()"
++        }
++      },
++      "indexes": {
++        "user_clerk_idx": {
++          "name": "user_clerk_idx",
++          "columns": [
++            {
++              "expression": "clerkUserId",
++              "isExpression": false,
++              "asc": true,
++              "nulls": "last"
++            }
++          ],
++          "isUnique": false,
++          "concurrently": false,
++          "method": "btree",
++          "with": {}
++        }
++      },
++      "foreignKeys": {},
++      "compositePrimaryKeys": {},
++      "uniqueConstraints": {
++        "User_clerkUserId_unique": {
++          "name": "User_clerkUserId_unique",
++          "nullsNotDistinct": false,
++          "columns": [
++            "clerkUserId"
++          ]
++        }
++      },
++      "policies": {},
++      "checkConstraints": {},
++      "isRLSEnabled": false
++    }
++  },
++  "enums": {},
++  "schemas": {},
++  "sequences": {},
++  "roles": {},
++  "policies": {},
++  "views": {},
++  "_meta": {
++    "columns": {},
++    "schemas": {},
++    "tables": {}
++  }
++}
+\ No newline at end of file
+diff --git a/drizzle/meta/_journal.json b/drizzle/meta/_journal.json
+index 55a018a..b400d2c 100644
+--- a/drizzle/meta/_journal.json
++++ b/drizzle/meta/_journal.json
+@@ -8,6 +8,13 @@
+       "when": 1786980416048,
+       "tag": "0000_faulty_sphinx",
+       "breakpoints": true
++    },
++    {
++      "idx": 1,
++      "version": "7",
++      "when": 1786987958398,
++      "tag": "0001_add_enrolled_at",
++      "breakpoints": true
+     }
+   ]
+ }
+\ No newline at end of file
+diff --git a/src/app/api/children/route.ts b/src/app/api/children/route.ts
+new file mode 100644
+index 0000000..eede0bb
+--- /dev/null
++++ b/src/app/api/children/route.ts
+@@ -0,0 +1,104 @@
++import { NextRequest, NextResponse } from "next/server";
++import { eq } from "drizzle-orm";
++import { db } from "@/db/client";
++import { users, parentChildLinks } from "@/db/schema";
++
++/**
++ * Parent onboarding: add-a-child + list-children.
++ *
++ * There's no real auth yet (see README "Explicit next steps" — Clerk is
++ * planned but not wired up), so parentId is passed explicitly rather than
++ * derived from a session. Once auth lands, swap the parentId source for the
++ * authenticated user's id and these handlers stay the same otherwise.
++ */
++
++const VALID_STATES = ["VIC", "NSW"] as const;
++const CONTENT_YEAR_LEVELS = [3]; // only Year 3 has real curriculum content so far
++
++// GET /api/children?parentId=...
++export async function GET(req: NextRequest) {
++  const parentId = req.nextUrl.searchParams.get("parentId");
++  if (!parentId) {
++    return NextResponse.json({ error: "parentId query param is required" }, { status: 400 });
++  }
++
++  const rows = await db
++    .select({ child: users, link: parentChildLinks })
++    .from(parentChildLinks)
++    .innerJoin(users, eq(parentChildLinks.childId, users.id))
++    .where(eq(parentChildLinks.parentId, parentId));
++
++  return NextResponse.json({
++    children: rows.map((r) => ({
++      id: r.child.id,
++      displayName: r.child.displayName,
++      yearLevel: r.child.yearLevel,
++      state: r.child.state,
++      enrolledAt: r.child.enrolledAt,
++    })),
++  });
++}
++
++// POST /api/children  { parentId, displayName, yearLevel, state }
++export async function POST(req: NextRequest) {
++  const body = await req.json().catch(() => null);
++  if (!body) {
++    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
++  }
++
++  const { parentId, displayName, yearLevel, state } = body as {
++    parentId?: string;
++    displayName?: string;
++    yearLevel?: number;
++    state?: string;
++  };
++
++  if (!parentId || !displayName || !yearLevel || !state) {
++    return NextResponse.json(
++      { error: "parentId, displayName, yearLevel, and state are all required" },
++      { status: 400 }
++    );
++  }
++  if (!VALID_STATES.includes(state as any)) {
++    return NextResponse.json({ error: `state must be one of ${VALID_STATES.join(", ")}` }, { status: 400 });
++  }
++  if (!Number.isInteger(yearLevel) || yearLevel < 1 || yearLevel > 6) {
++    return NextResponse.json({ error: "yearLevel must be an integer from 1 to 6" }, { status: 400 });
++  }
++
++  const parent = await db.select().from(users).where(eq(users.id, parentId)).limit(1);
++  if (!parent[0]) {
++    return NextResponse.json({ error: `No parent found with id ${parentId}` }, { status: 404 });
++  }
++
++  const now = new Date();
++  const [child] = await db
++    .insert(users)
++    .values({
++      clerkUserId: `pending_${parentId}_${now.getTime()}`, // placeholder until real auth is wired up
++      email: parent[0].email,
++      role: "child",
++      state,
++      yearLevel,
++      displayName,
++      enrolledAt: now,
++    })
++    .returning();
++
++  await db.insert(parentChildLinks).values({
++    parentId,
++    childId: child.id,
++    relationship: "parent",
++  });
++
++  return NextResponse.json({
++    child: {
++      id: child.id,
++      displayName: child.displayName,
++      yearLevel: child.yearLevel,
++      state: child.state,
++      enrolledAt: child.enrolledAt,
++    },
++    hasContent: CONTENT_YEAR_LEVELS.includes(yearLevel),
++  });
++}
+diff --git a/src/app/api/session/today/route.ts b/src/app/api/session/today/route.ts
+index 93b0dcc..5e17606 100644
+--- a/src/app/api/session/today/route.ts
++++ b/src/app/api/session/today/route.ts
+@@ -3,6 +3,7 @@ import { and, eq } from "drizzle-orm";
+ import { db } from "@/db/client";
+ import { sessions, users } from "@/db/schema";
+ import { buildTodaySession } from "@/lib/sessionBuilder";
++import { computeCurrentTermWeek } from "@/lib/curriculumWeek";
+ 
+ function startOfDay(d: Date) {
+   const copy = new Date(d);
+@@ -56,12 +57,14 @@ export async function GET(req: NextRequest) {
+     });
+   }
+ 
++  const { term, week } = computeCurrentTermWeek(child[0].enrolledAt);
++
+   const built = await buildTodaySession({
+     childId,
+     subject,
+     yearLevel: child[0].yearLevel,
+-    term: 1,
+-    week: 1, // TODO: derive from child's enrolment start date once that's tracked
++    term,
++    week,
+   });
+ 
+   const [session] = existing[0]
+diff --git a/src/app/child/page.tsx b/src/app/child/page.tsx
+index eb5f992..e86333a 100644
+--- a/src/app/child/page.tsx
++++ b/src/app/child/page.tsx
+@@ -1,7 +1,10 @@
+ "use client";
+ 
+-import { useEffect, useState } from "react";
++import { Suspense, useEffect, useState } from "react";
++import { useSearchParams } from "next/navigation";
++import Link from "next/link";
+ 
++// Fallback when no ?childId= is given (e.g. someone bookmarked /child directly).
+ const DEMO_CHILD_ID = "demo_child_1";
+ 
+ type SessionItem = {
+@@ -30,7 +33,9 @@ const SLOT_LABEL: Record<SessionItem["slotType"], string> = {
+   mixed: "Mix it up",
+ };
+ 
+-export default function ChildSessionPage() {
++function ChildSessionInner() {
++  const searchParams = useSearchParams();
++  const childId = searchParams.get("childId") || DEMO_CHILD_ID;
+   const [subject, setSubject] = useState<"maths" | "english">("maths");
+   const [loading, setLoading] = useState(true);
+   const [error, setError] = useState<string | null>(null);
+@@ -53,7 +58,7 @@ export default function ChildSessionPage() {
+     setAnswer("");
+     setHintsShown(0);
+ 
+-    fetch(`/api/session/today?childId=${DEMO_CHILD_ID}&subject=${subject}`)
++    fetch(`/api/session/today?childId=${childId}&subject=${subject}`)
+       .then(async (res) => {
+         if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load session");
+         return res.json();
+@@ -69,7 +74,7 @@ export default function ChildSessionPage() {
+     return () => {
+       cancelled = true;
+     };
+-  }, [subject]);
++  }, [subject, childId]);
+ 
+   const current = sessionItems[index];
+   const isDone = !loading && sessionItems.length > 0 && index >= sessionItems.length;
+@@ -83,7 +88,7 @@ export default function ChildSessionPage() {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({
+-          childId: DEMO_CHILD_ID,
++          childId,
+           itemId: current.itemId,
+           submittedAnswer: answer,
+           attempts: 1,
+@@ -119,7 +124,12 @@ export default function ChildSessionPage() {
+   return (
+     <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-4 py-8">
+       <div className="mb-6 flex items-center justify-between">
+-        <h1 className="text-2xl font-bold text-slate-900">Hi Alex! 👋</h1>
++        <div>
++          <h1 className="text-2xl font-bold text-slate-900">Hi there! 👋</h1>
++          <Link href="/parent/children" className="text-xs text-slate-400 hover:underline">
++            Switch child
++          </Link>
++        </div>
+         <div className="flex gap-2">
+           {(["maths", "english"] as const).map((s) => (
+             <button
+@@ -251,10 +261,18 @@ export default function ChildSessionPage() {
+           <h2 className="mb-1 text-xl font-bold text-emerald-900">Mission complete!</h2>
+           <p className="text-emerald-800">
+             You earned {points} points today and got {streak > 0 ? `a ${streak}-answer streak` : "great practice in"}.
+-            Keep it up, Alex!
++            Keep it up!
+           </p>
+         </div>
+       )}
+     </div>
+   );
+ }
++
++export default function ChildSessionPage() {
++  return (
++    <Suspense fallback={<p className="p-8 text-slate-500">Loading…</p>}>
++      <ChildSessionInner />
++    </Suspense>
++  );
++}
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index 2dd920b..baa0eab 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -38,10 +38,13 @@ export default function Home() {
+           </Link>
+         </div>
+ 
+-        <p className="text-xs text-slate-400">
+-          This is an early scaffold — no sign-in yet, so it always uses the seeded demo family
+-          (parent/child) from the database. Auth (Clerk), payments (Stripe), and the full item
+-          bank come next.
++        <Link href="/parent/children" className="text-sm font-medium text-sky-700 hover:underline">
++          Manage children — add a child or switch between them →
++        </Link>
++
++        <p className="mt-6 text-xs text-slate-400">
++          This is an early scaffold — no sign-in yet, so every parent-facing page uses one demo
++          parent account. Auth (Clerk), payments (Stripe), and the full item bank come next.
+         </p>
+       </div>
+     </div>
+diff --git a/src/app/parent/children/page.tsx b/src/app/parent/children/page.tsx
+new file mode 100644
+index 0000000..3389333
+--- /dev/null
++++ b/src/app/parent/children/page.tsx
+@@ -0,0 +1,172 @@
++"use client";
++
++import { useEffect, useState } from "react";
++import Link from "next/link";
++
++// No auth yet (see README) — every parent-facing page uses this one demo
++// parent account. Once Clerk is wired up, this becomes the authenticated
++// user's id instead.
++const DEMO_PARENT_ID = "demo_parent_1";
++
++const YEAR_LEVELS = [1, 2, 3, 4, 5, 6] as const;
++const STATES = ["VIC", "NSW"] as const;
++const CONTENT_YEAR_LEVELS = new Set([3]); // only Year 3 has real curriculum content so far
++
++type Child = {
++  id: string;
++  displayName: string;
++  yearLevel: number;
++  state: string;
++  enrolledAt: string | null;
++};
++
++export default function ParentChildrenPage() {
++  const [children, setChildren] = useState<Child[]>([]);
++  const [loading, setLoading] = useState(true);
++  const [error, setError] = useState<string | null>(null);
++
++  const [displayName, setDisplayName] = useState("");
++  const [yearLevel, setYearLevel] = useState<number>(3);
++  const [state, setState] = useState<(typeof STATES)[number]>("NSW");
++  const [submitting, setSubmitting] = useState(false);
++  const [notice, setNotice] = useState<string | null>(null);
++
++  function loadChildren() {
++    setLoading(true);
++    fetch(`/api/children?parentId=${DEMO_PARENT_ID}`)
++      .then(async (res) => {
++        if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load children");
++        return res.json();
++      })
++      .then((data) => setChildren(data.children ?? []))
++      .catch((err) => setError(err.message))
++      .finally(() => setLoading(false));
++  }
++
++  useEffect(loadChildren, []);
++
++  async function addChild(e: React.FormEvent) {
++    e.preventDefault();
++    if (!displayName.trim()) return;
++    setSubmitting(true);
++    setError(null);
++    setNotice(null);
++    try {
++      const res = await fetch("/api/children", {
++        method: "POST",
++        headers: { "Content-Type": "application/json" },
++        body: JSON.stringify({ parentId: DEMO_PARENT_ID, displayName: displayName.trim(), yearLevel, state }),
++      });
++      const data = await res.json();
++      if (!res.ok) throw new Error(data.error ?? "Could not add child");
++      setDisplayName("");
++      if (!data.hasContent) {
++        setNotice(
++          `${data.child.displayName} was added, but Year ${data.child.yearLevel} doesn't have practice content yet — only Year 3 is live right now.`
++        );
++      } else {
++        setNotice(`${data.child.displayName} was added — ready to start practising!`);
++      }
++      loadChildren();
++    } catch (err: any) {
++      setError(err.message);
++    } finally {
++      setSubmitting(false);
++    }
++  }
++
++  return (
++    <div className="mx-auto w-full max-w-2xl px-4 py-8">
++      <h1 className="mb-1 text-2xl font-bold text-slate-900">Your children</h1>
++      <p className="mb-8 text-sm text-slate-500">
++        Add a child to start their daily Maths and English practice.
++      </p>
++
++      {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
++      {notice && <p className="mb-4 text-sm text-emerald-700">{notice}</p>}
++
++      <section className="mb-10">
++        {loading ? (
++          <p className="text-sm text-slate-500">Loading…</p>
++        ) : children.length === 0 ? (
++          <p className="text-sm text-slate-500">No children added yet — add your first one below.</p>
++        ) : (
++          <div className="grid gap-3 sm:grid-cols-2">
++            {children.map((c) => (
++              <div key={c.id} className="rounded-xl border border-slate-200 bg-white p-4">
++                <p className="font-semibold text-slate-900">{c.displayName}</p>
++                <p className="mb-3 text-sm text-slate-500">
++                  Year {c.yearLevel} · {c.state}
++                </p>
++                <div className="flex gap-3 text-sm">
++                  <Link href={`/child?childId=${c.id}`} className="font-medium text-sky-600 hover:underline">
++                    Start practice
++                  </Link>
++                  <Link
++                    href={`/parent/dashboard?childId=${c.id}`}
++                    className="font-medium text-slate-600 hover:underline"
++                  >
++                    View progress
++                  </Link>
++                </div>
++              </div>
++            ))}
++          </div>
++        )}
++      </section>
++
++      <section className="rounded-2xl border border-slate-200 bg-white p-6">
++        <h2 className="mb-4 text-lg font-semibold text-slate-900">Add a child</h2>
++        <form onSubmit={addChild} className="space-y-4">
++          <div>
++            <label className="mb-1 block text-sm font-medium text-slate-700">Child&apos;s name</label>
++            <input
++              value={displayName}
++              onChange={(e) => setDisplayName(e.target.value)}
++              placeholder="e.g. Alex"
++              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
++            />
++          </div>
++          <div className="grid grid-cols-2 gap-4">
++            <div>
++              <label className="mb-1 block text-sm font-medium text-slate-700">Year level</label>
++              <select
++                value={yearLevel}
++                onChange={(e) => setYearLevel(Number(e.target.value))}
++                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
++              >
++                {YEAR_LEVELS.map((y) => (
++                  <option key={y} value={y}>
++                    Year {y}
++                    {!CONTENT_YEAR_LEVELS.has(y) ? " (coming soon)" : ""}
++                  </option>
++                ))}
++              </select>
++            </div>
++            <div>
++              <label className="mb-1 block text-sm font-medium text-slate-700">State</label>
++              <select
++                value={state}
++                onChange={(e) => setState(e.target.value as (typeof STATES)[number])}
++                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
++              >
++                {STATES.map((s) => (
++                  <option key={s} value={s}>
++                    {s}
++                  </option>
++                ))}
++              </select>
++            </div>
++          </div>
++          <button
++            type="submit"
++            disabled={!displayName.trim() || submitting}
++            className="w-full rounded-lg bg-sky-600 py-2 font-semibold text-white disabled:opacity-40"
++          >
++            {submitting ? "Adding…" : "Add child"}
++          </button>
++        </form>
++      </section>
++    </div>
++  );
++}
+diff --git a/src/app/parent/dashboard/page.tsx b/src/app/parent/dashboard/page.tsx
+index 7faa8d4..6713dd5 100644
+--- a/src/app/parent/dashboard/page.tsx
++++ b/src/app/parent/dashboard/page.tsx
+@@ -1,7 +1,10 @@
+ "use client";
+ 
+-import { useEffect, useState } from "react";
++import { Suspense, useEffect, useState } from "react";
++import { useSearchParams } from "next/navigation";
++import Link from "next/link";
+ 
++// Fallback when no ?childId= is given (e.g. someone bookmarked the dashboard directly).
+ const DEMO_CHILD_ID = "demo_child_1";
+ 
+ type SkillSummary = {
+@@ -44,28 +47,37 @@ function SkillCard({ s }: { s: SkillSummary }) {
+   );
+ }
+ 
+-export default function ParentDashboardPage() {
++function ParentDashboardInner() {
++  const searchParams = useSearchParams();
++  const childId = searchParams.get("childId") || DEMO_CHILD_ID;
+   const [data, setData] = useState<DashboardData | null>(null);
+   const [error, setError] = useState<string | null>(null);
+ 
+   useEffect(() => {
+-    fetch(`/api/dashboard?childId=${DEMO_CHILD_ID}`)
++    setData(null);
++    setError(null);
++    fetch(`/api/dashboard?childId=${childId}`)
+       .then(async (res) => {
+         if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load dashboard");
+         return res.json();
+       })
+       .then(setData)
+       .catch((err) => setError(err.message));
+-  }, []);
++  }, [childId]);
+ 
+   if (error) return <p className="p-8 text-red-600">{error}</p>;
+   if (!data) return <p className="p-8 text-slate-500">Loading…</p>;
+ 
+   return (
+     <div className="mx-auto w-full max-w-3xl px-4 py-8">
+-      <h1 className="mb-1 text-2xl font-bold text-slate-900">
+-        {data.child.displayName}&apos;s progress
+-      </h1>
++      <div className="mb-1 flex items-center justify-between">
++        <h1 className="text-2xl font-bold text-slate-900">
++          {data.child.displayName}&apos;s progress
++        </h1>
++        <Link href="/parent/children" className="text-sm text-sky-600 hover:underline">
++          Manage children
++        </Link>
++      </div>
+       <p className="mb-8 text-sm text-slate-500">
+         Year {data.child.yearLevel} · {data.child.state}
+       </p>
+@@ -149,3 +161,11 @@ export default function ParentDashboardPage() {
+     </div>
+   );
+ }
++
++export default function ParentDashboardPage() {
++  return (
++    <Suspense fallback={<p className="p-8 text-slate-500">Loading…</p>}>
++      <ParentDashboardInner />
++    </Suspense>
++  );
++}
+diff --git a/src/db/schema.ts b/src/db/schema.ts
+index 6ec1dcc..47471cc 100644
+--- a/src/db/schema.ts
++++ b/src/db/schema.ts
+@@ -27,6 +27,7 @@ export const users = pgTable(
+     state: text("state"), // "VIC" | "NSW" (null for parents)
+     yearLevel: integer("yearLevel"), // 1-6 (null for parents)
+     displayName: text("displayName"),
++    enrolledAt: timestamp("enrolledAt"), // children only: when they started, used to derive curriculum term/week
+     createdAt: timestamp("createdAt").notNull().defaultNow(),
+     updatedAt: timestamp("updatedAt").notNull().defaultNow(),
+   },
+diff --git a/src/db/seed/seed-demo.ts b/src/db/seed/seed-demo.ts
+index 3699b75..934a9d6 100644
+--- a/src/db/seed/seed-demo.ts
++++ b/src/db/seed/seed-demo.ts
+@@ -6,6 +6,7 @@
+  * Run with: npm run db:seed:demo  (after npm run db:seed)
+  */
+ import "dotenv/config";
++import { isNull, and, eq } from "drizzle-orm";
+ import { db } from "../client";
+ import { users, parentChildLinks, items } from "../schema";
+ import sampleItems from "./sample-items.json";
+@@ -35,9 +36,18 @@ async function seedDemoUsers() {
+       state: "NSW",
+       yearLevel: 3,
+       displayName: "Alex",
++      enrolledAt: new Date(),
+     })
+     .onConflictDoNothing({ target: users.id });
+ 
++  // Backfill enrolledAt for any pre-existing child rows from before this column
++  // existed, so curriculum-week derivation (computeCurrentTermWeek) has a value
++  // to work with. Only touches rows where it's still null — safe to re-run.
++  await db
++    .update(users)
++    .set({ enrolledAt: new Date() })
++    .where(and(eq(users.role, "child"), isNull(users.enrolledAt)));
++
+   await db
+     .insert(parentChildLinks)
+     .values({
+diff --git a/src/lib/curriculumWeek.ts b/src/lib/curriculumWeek.ts
+new file mode 100644
+index 0000000..dd4715c
+--- /dev/null
++++ b/src/lib/curriculumWeek.ts
+@@ -0,0 +1,39 @@
++/**
++ * Derives a child's current curriculum term/week from their enrolment date,
++ * per the project's 10-week-term structure, instead of hard-coding
++ * term 1 / week 1 for everyone.
++ *
++ * MVP content only covers Year 3 Term 1 so far (see src/db/seed/year3-curriculum.json),
++ * so this clamps to term 1 and week 1-10 for now. Once more terms/weeks of
++ * curriculum sequence + item bank content exist, remove the clamp and let it
++ * roll forward naturally (term increments every 10 weeks).
++ */
++
++const WEEKS_PER_TERM = 10;
++const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
++
++// Raise these as more of the curriculum sequence + matching item bank content
++// is generated (see src/db/seed/seed.ts — currently only Term 1 Week 1 has
++// curriculumSequenceEntries rows for Year 3 Maths/English). Until then, clamp
++// here rather than letting a long-enrolled child's computed week run ahead
++// into a week with no "new skill" entries and no items — that would leave
++// them with an empty (or review-only, once they have prior state) session.
++const MAX_AVAILABLE_TERM = 1;
++const MAX_AVAILABLE_WEEK = 1;
++
++export type TermWeek = { term: number; week: number };
++
++export function computeCurrentTermWeek(enrolledAt: Date | null | undefined, now: Date = new Date()): TermWeek {
++  if (!enrolledAt) return { term: 1, week: 1 };
++
++  const msSince = now.getTime() - enrolledAt.getTime();
++  const weeksSince = Math.max(0, Math.floor(msSince / MS_PER_WEEK));
++
++  const term = Math.floor(weeksSince / WEEKS_PER_TERM) + 1;
++  const week = (weeksSince % WEEKS_PER_TERM) + 1;
++
++  if (term > MAX_AVAILABLE_TERM) {
++    return { term: MAX_AVAILABLE_TERM, week: MAX_AVAILABLE_WEEK };
++  }
++  return { term, week: Math.min(week, MAX_AVAILABLE_WEEK) };
++}
+-- 
+2.43.0
+
