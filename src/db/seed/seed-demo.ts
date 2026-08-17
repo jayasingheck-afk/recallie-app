@@ -9,6 +9,7 @@ import "dotenv/config";
 import { db } from "../client";
 import { users, parentChildLinks, items } from "../schema";
 import sampleItems from "./sample-items.json";
+import week1ItemBank from "./week1-item-bank.json";
 
 const DEMO_PARENT_ID = "demo_parent_1";
 const DEMO_CHILD_ID = "demo_child_1";
@@ -49,8 +50,21 @@ async function seedDemoUsers() {
   console.log(`Seeded demo parent (${DEMO_PARENT_ID}) and child (${DEMO_CHILD_ID}, NSW, Year 3).`);
 }
 
-async function seedSampleItems() {
-  for (const item of sampleItems.items) {
+type SeedItem = {
+  id: string;
+  skillId: string;
+  questionText: string;
+  questionType: string;
+  answerKey: unknown;
+  stepByStepSolution: string[];
+  commonMisconceptions: string[];
+  hints: string[];
+  difficulty: string;
+  tags: string[];
+};
+
+async function seedItemBank(bankName: string, bankItems: SeedItem[]) {
+  for (const item of bankItems) {
     await db
       .insert(items)
       .values({
@@ -69,20 +83,24 @@ async function seedSampleItems() {
         target: items.id,
         set: {
           questionText: item.questionText,
+          questionType: item.questionType,
           answerKey: item.answerKey,
           stepByStepSolution: item.stepByStepSolution,
           commonMisconceptions: item.commonMisconceptions,
           hints: item.hints,
+          difficulty: item.difficulty,
+          tags: item.tags,
           updatedAt: new Date(),
         },
       });
   }
-  console.log(`Seeded ${sampleItems.items.length} sample items across Week 1 skills.`);
+  console.log(`Seeded ${bankItems.length} items from ${bankName}.`);
 }
 
 async function main() {
   await seedDemoUsers();
-  await seedSampleItems();
+  await seedItemBank("sample-items.json", sampleItems.items as SeedItem[]);
+  await seedItemBank("week1-item-bank.json", week1ItemBank.items as SeedItem[]);
   console.log("Demo seed complete.");
   process.exit(0);
 }

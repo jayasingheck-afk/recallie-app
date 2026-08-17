@@ -10,11 +10,13 @@
  *  4. Order items so no more than 2 consecutive items share a skill.
  *
  * This is an MVP implementation: it works against whatever Items exist in
- * the bank (currently a small hand-written sample set for Week 1 skills —
- * see src/db/seed/sample-items.json). As the real item banks are generated
- * and imported, pool sizes will grow and sessions will fill out naturally.
+ * the bank (currently Week 1 skills only — see src/db/seed/sample-items.json
+ * and src/db/seed/week1-item-bank.json). As more weeks are generated and
+ * imported, pool sizes will grow and sessions will fill out naturally.
+ * Item pool queries exclude "multi_part" question types and items tagged
+ * "open_response" — the MVP grader (src/lib/grading.ts) can't auto-mark them.
  */
-import { and, eq, inArray, sql } from "drizzle-orm";
+import { and, eq, inArray, ne, sql } from "drizzle-orm";
 import { db } from "@/db/client";
 import { childSkillStates, curriculumSequenceEntries, items, skills } from "@/db/schema";
 
@@ -62,7 +64,18 @@ async function pickItemsForSkills(
     const rows = await db
       .select()
       .from(items)
-      .where(eq(items.skillId, skillId))
+      .where(
+        and(
+          eq(items.skillId, skillId),
+          // MVP grader only reliably auto-marks single-value short_answer /
+          // multiple_choice items. Exclude question types and tags it can't
+          // grade yet (multi_part has object-valued answer keys; open_response
+          // items have no single correct answer). See week1-item-bank.json's
+          // _note for the source of this rule.
+          ne(items.questionType, "multi_part"),
+          sql`NOT (${items.tags} @> ARRAY['open_response']::text[])`
+        )
+      )
       .orderBy(sql`RANDOM()`)
       .limit(perSkill + excludeItemIds.size); // over-fetch a little in case of exclusions
     result[skillId] = rows.filter((r) => !excludeItemIds.has(r.id)).slice(0, perSkill);

@@ -57,8 +57,12 @@ there's no login yet.
 - **UI**: `/child` (one-item-at-a-time practice with hints + feedback), `/parent/dashboard`
   (skills mastered / areas to give more attention / recent sessions).
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings)
-  from the project docs; a small hand-written sample item bank (8 items, Week 1 skills only)
-  for exercising the app — **not** a real item bank (see next steps).
+  from the project docs; a Week 1 item bank (62 items across the 5 Week 1 skills — 8 original
+  hand-written samples + 54 generated per the project's item-generation prompt templates,
+  pending human review). `multi_part` items (object-valued answer keys) and items tagged
+  `open_response` are stored but intentionally excluded from live sessions by
+  `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
+  single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s `_note`.
 
 ## Known nuance to review
 
@@ -76,8 +80,11 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 ## Explicit next steps (not yet built)
 
 - Auth (Clerk) — every page currently hard-codes the demo child ID.
-- Real item banks — only 8 sample items exist (Week 1 only). Use the Maths/English
-  item-generation prompts in the project docs, generate + human-review, then import.
+- Real item banks — Week 1 only (62 items) so far, and the 54 generated items still need
+  human review per the project's QA process before they're "production" content. Weeks
+  2-10 (Term 1) and other year levels/terms still need generating.
+- Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
+  teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.
 - Deriving the child's current curriculum week from an actual enrolment date
   (currently hard-coded to term 1 / week 1 in the session API).
