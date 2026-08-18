@@ -1,0 +1,557 @@
+From ee4a1d6f30ba5016bbf077661c83199c0b4589d0 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 17 Aug 2026 17:13:38 +0000
+Subject: [PATCH] Add Week 1 item bank (54 items) and exclude ungraded item
+ types from sessions
+
+Generates real Maths/English practice items for the Week 1 skills per the
+project's item-generation prompt templates (answer keys, step-by-step
+solutions, misconceptions, hints), replacing reliance on the 8-item sample
+set. Session builder now excludes multi_part and open_response items from
+live sessions since the MVP grader can't auto-mark them yet.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0165eXNKUVcmbijWeTYPurQ8
+---
+ README.md                        |  15 +-
+ src/db/seed/seed-demo.ts         |  26 ++-
+ src/db/seed/week1-item-bank.json | 388 +++++++++++++++++++++++++++++++
+ src/lib/sessionBuilder.ts        |  23 +-
+ 4 files changed, 439 insertions(+), 13 deletions(-)
+ create mode 100644 src/db/seed/week1-item-bank.json
+
+diff --git a/README.md b/README.md
+index ed8581b..a6f1b50 100644
+--- a/README.md
++++ b/README.md
+@@ -57,8 +57,12 @@ there's no login yet.
+ - **UI**: `/child` (one-item-at-a-time practice with hints + feedback), `/parent/dashboard`
+   (skills mastered / areas to give more attention / recent sessions).
+ - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings)
+-  from the project docs; a small hand-written sample item bank (8 items, Week 1 skills only)
+-  for exercising the app — **not** a real item bank (see next steps).
++  from the project docs; a Week 1 item bank (62 items across the 5 Week 1 skills — 8 original
++  hand-written samples + 54 generated per the project's item-generation prompt templates,
++  pending human review). `multi_part` items (object-valued answer keys) and items tagged
++  `open_response` are stored but intentionally excluded from live sessions by
++  `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
++  single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s `_note`.
+ 
+ ## Known nuance to review
+ 
+@@ -76,8 +80,11 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
+ ## Explicit next steps (not yet built)
+ 
+ - Auth (Clerk) — every page currently hard-codes the demo child ID.
+-- Real item banks — only 8 sample items exist (Week 1 only). Use the Maths/English
+-  item-generation prompts in the project docs, generate + human-review, then import.
++- Real item banks — Week 1 only (62 items) so far, and the 54 generated items still need
++  human review per the project's QA process before they're "production" content. Weeks
++  2-10 (Term 1) and other year levels/terms still need generating.
++- Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
++  teacher-review) item types — currently excluded from live sessions entirely.
+ - Stripe subscriptions, free trial gating.
+ - Deriving the child's current curriculum week from an actual enrolment date
+   (currently hard-coded to term 1 / week 1 in the session API).
+diff --git a/src/db/seed/seed-demo.ts b/src/db/seed/seed-demo.ts
+index 757155b..3699b75 100644
+--- a/src/db/seed/seed-demo.ts
++++ b/src/db/seed/seed-demo.ts
+@@ -9,6 +9,7 @@ import "dotenv/config";
+ import { db } from "../client";
+ import { users, parentChildLinks, items } from "../schema";
+ import sampleItems from "./sample-items.json";
++import week1ItemBank from "./week1-item-bank.json";
+ 
+ const DEMO_PARENT_ID = "demo_parent_1";
+ const DEMO_CHILD_ID = "demo_child_1";
+@@ -49,8 +50,21 @@ async function seedDemoUsers() {
+   console.log(`Seeded demo parent (${DEMO_PARENT_ID}) and child (${DEMO_CHILD_ID}, NSW, Year 3).`);
+ }
+ 
+-async function seedSampleItems() {
+-  for (const item of sampleItems.items) {
++type SeedItem = {
++  id: string;
++  skillId: string;
++  questionText: string;
++  questionType: string;
++  answerKey: unknown;
++  stepByStepSolution: string[];
++  commonMisconceptions: string[];
++  hints: string[];
++  difficulty: string;
++  tags: string[];
++};
++
++async function seedItemBank(bankName: string, bankItems: SeedItem[]) {
++  for (const item of bankItems) {
+     await db
+       .insert(items)
+       .values({
+@@ -69,20 +83,24 @@ async function seedSampleItems() {
+         target: items.id,
+         set: {
+           questionText: item.questionText,
++          questionType: item.questionType,
+           answerKey: item.answerKey,
+           stepByStepSolution: item.stepByStepSolution,
+           commonMisconceptions: item.commonMisconceptions,
+           hints: item.hints,
++          difficulty: item.difficulty,
++          tags: item.tags,
+           updatedAt: new Date(),
+         },
+       });
+   }
+-  console.log(`Seeded ${sampleItems.items.length} sample items across Week 1 skills.`);
++  console.log(`Seeded ${bankItems.length} items from ${bankName}.`);
+ }
+ 
+ async function main() {
+   await seedDemoUsers();
+-  await seedSampleItems();
++  await seedItemBank("sample-items.json", sampleItems.items as SeedItem[]);
++  await seedItemBank("week1-item-bank.json", week1ItemBank.items as SeedItem[]);
+   console.log("Demo seed complete.");
+   process.exit(0);
+ }
+diff --git a/src/db/seed/week1-item-bank.json b/src/db/seed/week1-item-bank.json
+new file mode 100644
+index 0000000..08d0d93
+--- /dev/null
++++ b/src/db/seed/week1-item-bank.json
+@@ -0,0 +1,388 @@
++{
++  "_note": "Week 1 item bank for Year 3 Maths & English, generated following the project's Maths/English item-generation prompt templates (curriculum_codes, skill_description, difficulty, question_text, question_type, answer_key, step_by_step_solution, common_misconceptions, hints, tags). This is AI-generated content pending the human review step described in the project instructions — do not treat as final/published without a curriculum-qualified reviewer checking wording, difficulty, and Australian English throughout. multi_part items and items tagged 'open_response' are intentionally excluded from the live session builder for now (see sessionBuilder.ts) because the MVP grader only reliably auto-marks short_answer/multiple_choice items with a small set of accepted answers.",
++  "items": [
++    { "id": "M3N01_Y3_004", "skillId": "M3N01_represent_numbers_10k", "difficulty": "easy",
++      "questionText": "Write the number two thousand, seven hundred and eighty using digits.",
++      "questionType": "short_answer", "answerKey": "2780",
++      "stepByStepSolution": ["Two thousand is 2000.", "Seven hundred is 700.", "Eighty is 80.", "Put them together: 2000 + 700 + 80 = 2780."],
++      "commonMisconceptions": ["Writing 2078 by mixing up the order of the digits.", "Forgetting the tens digit and writing 2708."],
++      "hints": ["How many thousands? How many hundreds? How many tens?", "Line up the columns: Th H T O, using 0 for any empty column."],
++      "tags": ["place_value"] },
++    { "id": "M3N01_Y3_005", "skillId": "M3N01_represent_numbers_10k", "difficulty": "easy",
++      "questionText": "What is the value of the digit 4 in the number 4,918?",
++      "questionType": "short_answer", "answerKey": "4000",
++      "stepByStepSolution": ["Look at where the 4 is in 4,918.", "It is in the thousands column.", "So its value is 4 x 1000 = 4000."],
++      "commonMisconceptions": ["Saying the value is just 4 instead of 4000.", "Confusing the thousands column with the hundreds column."],
++      "hints": ["Which column is the 4 sitting in?", "Multiply the digit by the value of its column."],
++      "tags": ["place_value"] },
++    { "id": "M3N01_Y3_006", "skillId": "M3N01_represent_numbers_10k", "difficulty": "easy",
++      "questionText": "What is the value of the digit 8 in the number 3,482?",
++      "questionType": "short_answer", "answerKey": "80",
++      "stepByStepSolution": ["Count the columns from the right: ones, tens, hundreds, thousands.", "The 8 is in the tens column.", "So its value is 8 x 10 = 80."],
++      "commonMisconceptions": ["Saying the value is just 8.", "Confusing the tens column with the ones column."],
++      "hints": ["Count from the right: ones, tens, hundreds, thousands. Which column has the 8?", "Multiply the digit by the value of its column."],
++      "tags": ["place_value"] },
++    { "id": "M3N01_Y3_007", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "Which number shows 5 thousands, 3 hundreds, 0 tens and 9 ones? A) 5309  B) 5390  C) 5039  D) 539",
++      "questionType": "multiple_choice", "answerKey": "5309",
++      "stepByStepSolution": ["Add the value of each part: 5000 + 300 + 0 + 9.", "That gives 5309.", "Check each option matches this — only 5309 does."],
++      "commonMisconceptions": ["Forgetting the 0 placeholder for tens and writing 539.", "Mixing up hundreds and tens and choosing 5390."],
++      "hints": ["Add the value of each part: 5000 + 300 + 0 + 9.", "Remember to use a 0 as a placeholder if a column has nothing in it."],
++      "tags": ["place_value", "expanded_form"] },
++    { "id": "M3N01_Y3_008", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "Order these numbers from smallest to largest: 6,204   6,240   2,604   6,024",
++      "questionType": "short_answer", "answerKey": "2604, 6024, 6204, 6240",
++      "stepByStepSolution": ["Compare the thousands digit first: 2,604 has fewer thousands than the rest, so it's smallest.", "For the remaining three (all 6 thousand), compare the hundreds column: 6,024 has 0 hundreds.", "Compare 6,204 and 6,240 by their tens digit: 0 tens vs 4 tens, so 6,204 is smaller.", "Order: 2604, 6024, 6204, 6240."],
++      "commonMisconceptions": ["Ordering by first glance instead of comparing column by column.", "Not comparing the hundreds/tens columns once the thousands digits match."],
++      "hints": ["Start by comparing the thousands digit of each number.", "For numbers with the same thousands digit, compare the hundreds column next, then tens."],
++      "tags": ["place_value", "ordering"] },
++    { "id": "M3N01_Y3_009", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "Order these numbers from largest to smallest: 7,105   7,510   7,015   7,051",
++      "questionType": "short_answer", "answerKey": "7510, 7105, 7051, 7015",
++      "stepByStepSolution": ["All four numbers start with 7 thousand, so look at the hundreds column next.", "7,510 has 5 hundreds — the most — so it's largest.", "7,105 has 1 hundred, while 7,015 and 7,051 both have 0 hundreds.", "Compare 7,015 and 7,051 by their tens digit: 5 tens vs 1 ten, so 7,051 is bigger than 7,015.", "Order: 7510, 7105, 7051, 7015."],
++      "commonMisconceptions": ["Guessing instead of comparing columns since the numbers look similar.", "Misreading 7,051 and 7,015 as the same number."],
++      "hints": ["All four numbers start with 7 thousand — look at the hundreds column next.", "For the two numbers that also share the same hundreds digit, compare the tens column."],
++      "tags": ["place_value", "ordering"] },
++    { "id": "M3N01_Y3_010", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "Write 6,509 in expanded form (thousands + hundreds + tens + ones).",
++      "questionType": "short_answer", "answerKey": ["6000 + 500 + 0 + 9", "6000 + 500 + 9"],
++      "stepByStepSolution": ["Look at each digit and the column it's in.", "6 thousands = 6000, 5 hundreds = 500, 0 tens = 0, 9 ones = 9.", "Write it as an addition sentence: 6000 + 500 + 0 + 9."],
++      "commonMisconceptions": ["Adding the digits themselves instead of their place values (6 + 5 + 0 + 9).", "Misreading '09' as ninety and writing 6000 + 500 + 90."],
++      "hints": ["Multiply each digit by its column's value: 6x1000, 5x100, 0x10, 9x1.", "Add those values together."],
++      "tags": ["place_value", "expanded_form"] },
++    { "id": "M3N01_Y3_011", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "A local library had 6,275 books. A donation added exactly 100 more books. How many books does the library have now?",
++      "questionType": "short_answer", "answerKey": "6375",
++      "stepByStepSolution": ["Adding 100 only changes the hundreds column.", "6,275 has 2 hundreds.", "One more hundred makes 3 hundreds.", "So 6,275 + 100 = 6,375."],
++      "commonMisconceptions": ["Adding 100 to the wrong column and getting 6,285.", "Recalculating from scratch instead of using place value reasoning."],
++      "hints": ["Adding 100 only changes the hundreds column.", "6,275 has 2 hundreds — what is one more hundred?"],
++      "tags": ["place_value", "word_problem", "real_world_context"] },
++    { "id": "M3N01_Y3_012", "skillId": "M3N01_represent_numbers_10k", "difficulty": "medium",
++      "questionText": "What number is halfway between 2,000 and 3,000?",
++      "questionType": "short_answer", "answerKey": "2500",
++      "stepByStepSolution": ["Find the distance between 2,000 and 3,000: that's 1,000.", "Halfway means half of that distance: half of 1,000 is 500.", "Add 500 to the smaller number: 2,000 + 500 = 2,500."],
++      "commonMisconceptions": ["Guessing a number like 2,050 or 2,100 without working out half the distance.", "Adding only 50 instead of 500."],
++      "hints": ["How far apart are 2,000 and 3,000?", "Halfway means half of that distance, added to the smaller number."],
++      "tags": ["place_value", "number_line"] },
++    { "id": "M3N01_Y3_013", "skillId": "M3N01_represent_numbers_10k", "difficulty": "hard",
++      "questionText": "Using the digits 2, 5, 8 and 0 (each digit exactly once), write the largest possible 4-digit number, then the smallest possible 4-digit number. Remember a number can't start with 0.",
++      "questionType": "multi_part", "answerKey": { "largest": "8520", "smallest": "2058" },
++      "stepByStepSolution": ["For the largest number, put your biggest digit in the thousands place: 8.", "Then place the rest in decreasing order: 5, 2, 0 — giving 8520.", "For the smallest number, remember 0 can't go in the thousands place.", "Use the next smallest digit (2) first, then arrange the rest in increasing order: 0, 5, 8 — giving 2058."],
++      "commonMisconceptions": ["Writing 0258 for the smallest number, which isn't a valid 4-digit number.", "Using the same digit order for both the largest and smallest number."],
++      "hints": ["For the largest number, put your biggest digit in the thousands place.", "For the smallest number, remember 0 can't go in the thousands place — what's the next smallest digit you could start with?"],
++      "tags": ["place_value", "problem_solving"] },
++    { "id": "M3N01_Y3_014", "skillId": "M3N01_represent_numbers_10k", "difficulty": "hard",
++      "questionText": "A community fun run had 8,354 people on Saturday and 8,435 people on Sunday. Which day had more people?",
++      "questionType": "short_answer", "answerKey": "Sunday",
++      "stepByStepSolution": ["Both numbers start with 8 thousands, so that column doesn't decide it.", "Look at the hundreds column: Saturday has 3 hundreds, Sunday has 4 hundreds.", "4 hundreds is more than 3 hundreds, so Sunday's number is bigger.", "Sunday had more people at the fun run."],
++      "commonMisconceptions": ["Comparing the ones digit first instead of starting from the highest place value.", "Assuming the number mentioned second is automatically bigger."],
++      "hints": ["Both numbers start with 8 thousands, so they're not the deciding column — look at the next column along.", "Compare the hundreds digit of each number: which is bigger, 3 or 4?"],
++      "tags": ["place_value", "comparing", "word_problem"] },
++
++    { "id": "M3M01_Y3_003", "skillId": "M3M01_metric_units_intro", "difficulty": "easy",
++      "questionText": "Which unit would you use to measure how much water is in a bathtub: millilitres or litres?",
++      "questionType": "multiple_choice", "answerKey": "litres",
++      "stepByStepSolution": ["A bathtub holds a lot of water.", "Millilitres are used for small amounts, like a spoonful.", "Litres are used for larger amounts, like a bath.", "So litres is the sensible choice."],
++      "commonMisconceptions": ["Choosing millilitres because it's a more familiar word.", "Not connecting the real-world size of a bathtub to the right unit."],
++      "hints": ["Is a bathtub full of just a little water, or a lot?", "Litres are used for bigger amounts of liquid."],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_004", "skillId": "M3M01_metric_units_intro", "difficulty": "easy",
++      "questionText": "Which unit would you use to measure the mass of an apple: grams or kilograms?",
++      "questionType": "multiple_choice", "answerKey": "grams",
++      "stepByStepSolution": ["An apple is a light, everyday-sized object.", "Grams are used for lighter things.", "Kilograms are used for heavier things, like a bag of potatoes.", "So grams is the sensible choice."],
++      "commonMisconceptions": ["Choosing kilograms because it sounds like a more 'proper' unit.", "Not comparing the apple to other everyday objects."],
++      "hints": ["Is an apple heavy like a bag of rice, or light?", "Grams are for lighter, everyday-sized objects."],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_005", "skillId": "M3M01_metric_units_intro", "difficulty": "easy",
++      "questionText": "Which unit would you use to measure the length of the school oval: metres or centimetres?",
++      "questionType": "multiple_choice", "answerKey": "metres",
++      "stepByStepSolution": ["A school oval is a long distance.", "Centimetres are too small a unit for something this size.", "Metres suit larger distances, like a sports field.", "So metres is the sensible choice."],
++      "commonMisconceptions": ["Choosing centimetres because it feels like the more familiar, smaller unit.", "Not picturing the real-world size of an oval."],
++      "hints": ["Is the oval about the size of your hand, or much bigger?", "Metres are used for longer distances like a sports field."],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_006", "skillId": "M3M01_metric_units_intro", "difficulty": "medium",
++      "questionText": "About how many grams do you think one egg weighs: 5 g, 50 g, or 500 g? Choose the most sensible estimate.",
++      "questionType": "multiple_choice", "answerKey": "50 g",
++      "stepByStepSolution": ["5 g is too light — lighter than a paperclip.", "500 g is too heavy — about half a kilogram, like a small bag of sugar.", "50 g is a sensible everyday estimate for one egg."],
++      "commonMisconceptions": ["Choosing 500 g by assuming a bigger number feels more accurate.", "Choosing 5 g without picturing the real object."],
++      "hints": ["Think about how an egg feels in your hand compared to other things you know.", "50 g is about a handful of small items — does that feel right for one egg?"],
++      "tags": ["measurement", "estimation"] },
++    { "id": "M3M01_Y3_007", "skillId": "M3M01_metric_units_intro", "difficulty": "medium",
++      "questionText": "A recipe says to add 250 of milk. Which unit is missing: millilitres or litres?",
++      "questionType": "multiple_choice", "answerKey": "millilitres",
++      "stepByStepSolution": ["250 millilitres is a reasonable amount for a recipe — about a cup.", "250 litres would be an enormous, unrealistic amount of milk.", "So millilitres is the missing unit."],
++      "commonMisconceptions": ["Choosing litres without checking whether the number makes sense for that unit.", "Assuming recipes always use the 'bigger' unit."],
++      "hints": ["Would 250 litres of milk fit in your kitchen?", "Millilitres are used for smaller amounts, like the milk in a recipe."],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_008", "skillId": "M3M01_metric_units_intro", "difficulty": "medium",
++      "questionText": "Would you use grams or kilograms to weigh a full shopping trolley?",
++      "questionType": "short_answer", "answerKey": "kilograms",
++      "stepByStepSolution": ["Think about how heavy all the shopping together would be, not just one item.", "A full trolley of groceries is quite heavy — many kilograms' worth.", "Grams would give an awkwardly large number for something this heavy.", "So kilograms is the more sensible unit."],
++      "commonMisconceptions": ["Choosing grams because individual items (like an apple) are measured in grams.", "Not linking unit choice to how large the resulting number would be."],
++      "hints": ["Think about how heavy all the shopping together would be, not just one item.", "Which unit avoids using a very large, awkward number?"],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_009", "skillId": "M3M01_metric_units_intro", "difficulty": "medium",
++      "questionText": "Which is the better estimate for the length of a school pencil case: 20 centimetres or 20 metres?",
++      "questionType": "multiple_choice", "answerKey": "20 centimetres",
++      "stepByStepSolution": ["A pencil case is small and hand-sized.", "20 metres would be as long as several classrooms.", "So 20 centimetres is the sensible estimate."],
++      "commonMisconceptions": ["Not noticing how dramatically the unit changes the real-world size.", "Assuming the number matters more than the unit."],
++      "hints": ["How does 20 metres compare to the length of your classroom?", "Centimetres suit small, hand-sized objects."],
++      "tags": ["measurement", "estimation"] },
++    { "id": "M3M01_Y3_010", "skillId": "M3M01_metric_units_intro", "difficulty": "medium",
++      "questionText": "List these three items from lightest to heaviest: a paperclip, an apple, a bag of potatoes. Then suggest grams (g) or kilograms (kg) as the best unit for each.",
++      "questionType": "short_answer", "answerKey": "paperclip, apple, bag of potatoes",
++      "stepByStepSolution": ["Picture holding each item — a paperclip is lightest, then an apple, then a full bag of potatoes.", "Grams suit light objects like a paperclip or an apple.", "Kilograms suit heavier objects like a full bag of potatoes."],
++      "commonMisconceptions": ["Ordering by name length or alphabetical order instead of real-world weight.", "Using kilograms for the apple because it 'feels like a proper food item'."],
++      "hints": ["Picture holding each item in your hand — which feels lightest?", "Grams suit light objects; kilograms suit heavier ones like a full bag of potatoes."],
++      "tags": ["measurement", "ordering", "estimation"] },
++    { "id": "M3M01_Y3_011", "skillId": "M3M01_metric_units_intro", "difficulty": "hard",
++      "questionText": "Which unit makes more sense for measuring the water in a drink bottle: 600 millilitres or 6 litres?",
++      "questionType": "multiple_choice", "answerKey": "600 millilitres",
++      "stepByStepSolution": ["6 litres is roughly the size of a large bucket of water.", "A normal drink bottle is nowhere near that big.", "600 millilitres matches a realistic drink bottle size."],
++      "commonMisconceptions": ["Assuming a bigger unit (litres) always sounds more correct.", "Not visualising the real container size."],
++      "hints": ["How big is 6 litres compared to a normal drink bottle?", "600 millilitres is close to the size of a standard water bottle."],
++      "tags": ["measurement", "real_world_context"] },
++    { "id": "M3M01_Y3_012", "skillId": "M3M01_metric_units_intro", "difficulty": "hard",
++      "questionText": "For each object, choose the more sensible unit: (a) the mass of a birthday cake — grams or kilograms? (b) the length of a soccer field — centimetres or metres? (c) the capacity of a teaspoon — millilitres or litres?",
++      "questionType": "multi_part", "answerKey": { "a": "kilograms", "b": "metres", "c": "millilitres" },
++      "stepByStepSolution": ["A birthday cake is fairly heavy, so kilograms suits it best.", "A soccer field is long, so metres suits it best.", "A teaspoon holds a tiny amount, so millilitres suits it best."],
++      "commonMisconceptions": ["Picking the same size of unit for every item out of habit.", "Not adjusting reasoning separately for each object."],
++      "hints": ["Think about the real size of each object separately — don't just pick the same unit each time.", "Match small objects/amounts to smaller units, and large ones to bigger units."],
++      "tags": ["measurement", "real_world_context"] },
++
++    { "id": "E3LY03_Y3_002", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "easy",
++      "questionText": "A recipe card lists ingredients and numbered steps to make pancakes. What is the main purpose of this text? A) To persuade  B) To entertain  C) To inform/instruct",
++      "questionType": "multiple_choice", "answerKey": "to inform/instruct",
++      "stepByStepSolution": ["A recipe gives factual steps to follow.", "There's no persuasive or story language.", "Its purpose is to inform/instruct the reader how to do something."],
++      "commonMisconceptions": ["Confusing informative texts with persuasive ones just because both give information.", "Not noticing the step-by-step, instructional structure."],
++      "hints": ["Does the text try to change your mind, tell a story, or explain how to do something?", "Numbered steps are a clue this text is giving instructions."],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_003", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "easy",
++      "questionText": "A story begins: 'Once upon a time, a brave little mouse lived in a cosy burrow...' Who is the audience most likely to be? A) Adults reading a news report  B) Young children  C) Scientists",
++      "questionType": "multiple_choice", "answerKey": "young children",
++      "stepByStepSolution": ["'Once upon a time' is a classic storybook opening.", "A 'brave little mouse' character is a typical children's story feature.", "These clues point to young children as the audience."],
++      "commonMisconceptions": ["Ignoring specific words/phrases that signal the audience.", "Assuming all stories are written for the same audience."],
++      "hints": ["What kind of book usually starts with 'Once upon a time'?", "Think about who enjoys stories about brave little animal characters."],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_004", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "A flyer says: 'Missing cat! Grey and white, answers to Whiskers. Please call if found.' What is the purpose of this text? A) To persuade someone to buy something  B) To ask for help finding a missing cat  C) To tell an entertaining story",
++      "questionType": "multiple_choice", "answerKey": "to ask for help finding a missing cat",
++      "stepByStepSolution": ["The flyer gives a description of the cat and a way to make contact.", "It's asking the reader to act if they see the cat.", "Its purpose is to get help finding a missing pet, not to sell anything or tell a story."],
++      "commonMisconceptions": ["Assuming any flyer must be persuasive advertising.", "Missing that it includes a call-to-action (call if found)."],
++      "hints": ["What does the flyer want someone who sees the cat to do?", "Notice it gives a description and contact details — why include those?"],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_005", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "An advertisement shows a bright, smiling child holding a new toy, with the words 'You need this toy — ask your parents today!' What is the purpose of this text? A) To inform  B) To persuade  C) To entertain",
++      "questionType": "multiple_choice", "answerKey": "to persuade",
++      "stepByStepSolution": ["The words 'You need this... ask...' are a direct instruction to the reader.", "The appealing image is designed to make the toy look exciting.", "Together, these features are trying to convince the reader to want the toy — that's persuasion."],
++      "commonMisconceptions": ["Confusing 'persuade' with simply giving information about a product.", "Not noticing command-style language as a persuasive clue."],
++      "hints": ["Is the text trying to make you want to do something?", "Words like 'You need this' are trying to convince you."],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_006", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "A weather report on the news says: 'Tomorrow will be sunny with a top of 24 degrees.' What is the purpose of this text? A) To persuade  B) To inform  C) To entertain",
++      "questionType": "multiple_choice", "answerKey": "to inform",
++      "stepByStepSolution": ["The report simply states a fact about tomorrow's weather.", "There's no persuasive or entertaining language.", "Its purpose is to inform people about the weather."],
++      "commonMisconceptions": ["Assuming purpose without checking that weather reports are purely factual.", "Confusing a factual report with a persuasive or entertaining text."],
++      "hints": ["Is this text trying to persuade you, entertain you, or just tell you a fact?", "Weather reports don't try to convince you of anything — they just state what's expected."],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_007", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "Instructions for a board game include headings like 'What you need', 'How to play', and 'How to win', with numbered steps under each. Why are these headings useful to the reader? A) They make the text longer  B) They help the reader find the information they need quickly  C) They are just decoration",
++      "questionType": "multiple_choice", "answerKey": "they help the reader find the information they need quickly",
++      "stepByStepSolution": ["Headings organise information into clear sections.", "A reader can jump straight to the section they need, like 'How to win'.", "This makes the text easier and faster to use."],
++      "commonMisconceptions": ["Thinking headings are only for decoration.", "Not connecting text features to how they actually help a reader."],
++      "hints": ["Imagine you already know how to play but forgot how to win — which heading would you look for?", "Headings act like signposts for the reader."],
++      "tags": ["purpose_audience", "text_features"] },
++    { "id": "E3LY03_Y3_008", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "hard",
++      "questionText": "A brochure for a local zoo uses colourful photos, exciting facts ('See our new baby elephant!'), and the words 'Visit this weekend!' What is the purpose of this brochure? A) To inform readers with only facts about zoo animals  B) To persuade people to visit the zoo  C) To entertain with a funny story",
++      "questionType": "multiple_choice", "answerKey": "to persuade people to visit the zoo",
++      "stepByStepSolution": ["The brochure uses exciting language and bright photos to appeal to the reader.", "The phrase 'Visit this weekend!' is a direct call to action.", "Together, these features are designed to persuade people to visit, not just inform them."],
++      "commonMisconceptions": ["Labelling it purely informative because it contains true facts about the zoo.", "Overlooking the direct call-to-action phrase."],
++      "hints": ["Look at the phrase 'Visit this weekend!' — what is it trying to get you to do?", "Exciting words and bright photos are often used to persuade, not just inform."],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_009", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "hard",
++      "questionText": "A book's back cover blurb says: 'A thrilling adventure full of danger and friendship. Can Mia find her way home before dark?' (a) What is the purpose of this text? (b) Who is the audience most likely to be?",
++      "questionType": "multi_part", "answerKey": { "purpose": "to persuade/entice the reader to want to read the book", "audience": "children/young readers who enjoy adventure stories" },
++      "stepByStepSolution": ["Exciting words like 'thrilling' and 'danger' are designed to make a reader want to read the book.", "The teaser question ('Can Mia find her way home?') is a classic persuasive blurb technique.", "The story content (a character on an adventure) suggests a young reader audience."],
++      "commonMisconceptions": ["Treating a blurb as purely informative because it describes the story.", "Not noticing the teaser question is a persuasive technique."],
++      "hints": ["Why might a book cover use exciting words like 'thrilling' and 'danger'?", "What kind of reader would enjoy an adventure story about a character called Mia?"],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_010", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "A note stuck on the fridge says: 'Please feed the dog before school. Thanks, Mum.' What is the purpose of this text? A) To entertain  B) To instruct/remind  C) To persuade a stranger",
++      "questionType": "multiple_choice", "answerKey": "to instruct/remind",
++      "stepByStepSolution": ["It's a short, direct request aimed at a family member.", "There's no persuasive or entertaining language.", "Its purpose is to instruct/remind someone to do a job."],
++      "commonMisconceptions": ["Confusing a simple instruction with persuasion just because it's a request.", "Assuming the audience is a stranger rather than a family member."],
++      "hints": ["Is this note trying to change someone's opinion, or just remind them to do a job?", "Who is most likely to read a note left on the family fridge?"],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_011", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "easy",
++      "questionText": "A poster in the school hallway says: 'Book Fair This Friday — Come and Explore Amazing Stories!' with bright pictures of books. What is this poster mostly trying to do? A) Inform students of a fact only  B) Persuade students to come to the book fair  C) Tell a made-up story",
++      "questionType": "multiple_choice", "answerKey": "persuade students to come to the book fair",
++      "stepByStepSolution": ["Exciting words like 'Amazing Stories' aim to build interest.", "Bright pictures are used to grab attention.", "Together these persuade students to attend, rather than just stating a fact."],
++      "commonMisconceptions": ["Treating any poster with an event date as purely informative.", "Missing the excited, inviting tone as a persuasive clue."],
++      "hints": ["Does the poster just state facts, or is it also trying to excite you about coming?", "Look at describing words like 'Amazing' — why are they there?"],
++      "tags": ["purpose_audience", "text_type"] },
++    { "id": "E3LY03_Y3_012", "skillId": "E3LY03_purpose_audience_text_types", "difficulty": "medium",
++      "questionText": "An information text about koalas includes headings such as 'Habitat', 'Diet', and 'Life Cycle', with a photo of a koala eating eucalyptus leaves. What is the purpose of this text? A) To persuade  B) To inform  C) To entertain",
++      "questionType": "multiple_choice", "answerKey": "to inform",
++      "stepByStepSolution": ["The headings organise facts about koalas into clear sections.", "There's no persuasive language trying to convince the reader of anything.", "Its purpose is to inform the reader with facts."],
++      "commonMisconceptions": ["Assuming any text with a photo must be persuasive.", "Confusing an organised factual text with a persuasive one."],
++      "hints": ["Are the headings giving facts, or trying to convince you of something?", "Look for persuasive words — are there any here?"],
++      "tags": ["purpose_audience", "text_features"] },
++
++    { "id": "E3LA04_Y3_002", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "easy",
++      "questionText": "Which sentence would make the best topic sentence to start a paragraph about a class excursion to the zoo? A) 'The lion was sleeping.'  B) 'Last Tuesday, our class went on an exciting excursion to the zoo.'  C) 'Zoos have many animals.'",
++      "questionType": "multiple_choice", "answerKey": "last tuesday, our class went on an exciting excursion to the zoo.",
++      "stepByStepSolution": ["A topic sentence should introduce what the whole paragraph is about.", "Option B introduces the event (the excursion) clearly.", "Options A and C are either too specific or too general to open the paragraph."],
++      "commonMisconceptions": ["Choosing a small detail sentence because it's interesting, rather than an introductory one.", "Choosing a general fact unrelated to 'our' excursion."],
++      "hints": ["A topic sentence should tell the reader what the whole paragraph is about.", "Look for the sentence that introduces the event, not just one small detail."],
++      "tags": ["text_structure", "paragraphs"] },
++    { "id": "E3LA04_Y3_003", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "One sentence doesn't belong in this paragraph about a birthday party. Which one? 'We played party games in the backyard. Mum baked a chocolate cake with candles. My favourite colour is blue. We sang happy birthday and blew out the candles.'",
++      "questionType": "short_answer", "answerKey": "My favourite colour is blue.",
++      "stepByStepSolution": ["Check each sentence against the paragraph's topic — the birthday party.", "'We played party games', 'Mum baked a cake', and 'We sang happy birthday' are all about the party.", "'My favourite colour is blue' doesn't tell us anything about the party — it doesn't belong."],
++      "commonMisconceptions": ["Picking a sentence just because it's shorter, rather than checking its topic.", "Not clearly checking each sentence against the paragraph's main idea."],
++      "hints": ["What is this whole paragraph about?", "Which sentence doesn't tell us anything about the party itself?"],
++      "tags": ["text_structure", "paragraphs"] },
++    { "id": "E3LA04_Y3_004", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "Put these three recount sentences in the correct time order: (A) After that, we set up our tents. (B) First, we drove to the campsite. (C) Finally, we cooked dinner over the fire.",
++      "questionType": "short_answer", "answerKey": "B, A, C",
++      "stepByStepSolution": ["Look for the sequencing words: 'First', 'After that', 'Finally'.", "'First' signals the earliest event — driving to the campsite (B).", "'After that' comes next — setting up tents (A).", "'Finally' comes last — cooking dinner (C)."],
++      "commonMisconceptions": ["Ordering by sentence length or position on the page instead of the sequencing words.", "Ignoring time-order words altogether."],
++      "hints": ["Look for words that show order, like 'First', 'After that', and 'Finally'.", "Which event would logically happen before the others?"],
++      "tags": ["text_structure", "recount", "sequencing"] },
++    { "id": "E3LA04_Y3_005", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "Fill in the missing time-order word: '___, we packed our bags. Then, we walked to the bus stop. Finally, we arrived at school.'",
++      "questionType": "short_answer", "answerKey": ["First", "First of all"],
++      "stepByStepSolution": ["The paragraph already uses 'Then' and 'Finally'.", "A beginning-order word is needed to start the sequence.", "'First' fits naturally before 'Then' and 'Finally'."],
++      "commonMisconceptions": ["Repeating 'Then' instead of using a distinct opening word.", "Choosing a word that doesn't signal the start of a sequence, like 'Suddenly'."],
++      "hints": ["This sentence comes before 'Then' and 'Finally' — what kind of word usually starts a sequence?", "Think of words like First, To begin with, or First of all."],
++      "tags": ["text_structure", "recount", "sequencing"] },
++    { "id": "E3LA04_Y3_006", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "Is this text a narrative or a recount? 'Yesterday, my family went to the beach. We built a sandcastle and swam in the waves. It was a fun day.'",
++      "questionType": "short_answer", "answerKey": "recount",
++      "stepByStepSolution": ["Check whether the events are real and personal, told in time order.", "This text describes something that really happened to the writer's family.", "There's no made-up problem or characters, so it's a recount, not a narrative."],
++      "commonMisconceptions": ["Assuming any text about 'a fun day' must be a story/narrative.", "Not checking for the key difference — real events versus a made-up plot."],
++      "hints": ["Does this text describe something that really happened, or a made-up story with a problem to solve?", "Recounts tell about real events in the order they happened."],
++      "tags": ["text_structure", "recount", "narrative"] },
++    { "id": "E3LA04_Y3_007", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "hard",
++      "questionText": "Read this narrative opening: 'Deep in the forest, a small fox named Ruby was searching for her lost brother.' Write the next sentence, showing what happens in the middle of the story (a problem or event).",
++      "questionType": "short_answer", "answerKey": "open response",
++      "stepByStepSolution": ["A 'middle' sentence should build on the beginning.", "It should introduce an event, obstacle, or complication related to Ruby's search.", "For example: 'Suddenly, she heard a strange growl coming from behind the trees.'"],
++      "commonMisconceptions": ["Writing a sentence unrelated to Ruby's search.", "Jumping straight to an ending/resolution instead of building the middle."],
++      "hints": ["What might happen next that creates excitement or a problem for Ruby?", "The middle of a story usually builds up a problem before it gets solved."],
++      "tags": ["text_structure", "narrative", "creative_writing", "open_response"] },
++    { "id": "E3LA04_Y3_008", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "hard",
++      "questionText": "This recount is written as one big block. Where should a new paragraph start? 'On Saturday, we went to Nan's farm. We fed the chickens and collected eggs. In the afternoon, we visited the local market. We bought fresh strawberries and a jar of honey.' (a) Which sentence should start the new paragraph? (b) Why?",
++      "questionType": "multi_part", "answerKey": { "sentence": "In the afternoon, we visited the local market.", "reason": "It shifts to a new time (the afternoon) and a new activity (the market)." },
++      "stepByStepSolution": ["Look for a change in time or place within the text.", "The text shifts from the morning at the farm to the afternoon at the market.", "A new paragraph should start where the main idea changes — at 'In the afternoon...'."],
++      "commonMisconceptions": ["Starting the new paragraph mid-idea, e.g. at 'We bought fresh strawberries'.", "Not noticing time-signal words like 'In the afternoon' as a paragraph-break clue."],
++      "hints": ["Look for a change in time or place within the text.", "A new paragraph usually starts where the main idea changes."],
++      "tags": ["text_structure", "paragraphs", "recount"] },
++    { "id": "E3LA04_Y3_009", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "easy",
++      "questionText": "Write a beginning sentence for a recount about a rainy day at home. Make sure it says when the event happened.",
++      "questionType": "short_answer", "answerKey": "open response",
++      "stepByStepSolution": ["A recount opening should establish when and what happened.", "This orients the reader before the events are described.", "For example: 'Last Saturday, it rained all day so we stayed home.'"],
++      "commonMisconceptions": ["Starting with an action detail instead of orienting information.", "Forgetting to include a time reference."],
++      "hints": ["Recount beginnings usually say when the event happened.", "Try starting with a time word like 'Last Saturday' or 'Yesterday'."],
++      "tags": ["text_structure", "recount", "creative_writing", "open_response"] },
++    { "id": "E3LA04_Y3_010", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "Group these sentences into two separate paragraphs by topic: (1) We planted tomato seeds in the garden. (2) The class read a story about pirates. (3) We watered the seeds every day. (4) The pirates found a hidden treasure map.",
++      "questionType": "short_answer", "answerKey": "1 and 3, 2 and 4",
++      "stepByStepSolution": ["Look for sentences that talk about the same thing, even if they're not next to each other.", "Sentences 1 and 3 are both about gardening.", "Sentences 2 and 4 are both about the pirate story."],
++      "commonMisconceptions": ["Grouping by sentence order instead of topic.", "Missing that sentences 1 and 3 belong together despite not being next to each other."],
++      "hints": ["Look for sentences that talk about the same thing, even if they're not next to each other.", "There are two separate topics hidden in this list — gardening and a story."],
++      "tags": ["text_structure", "paragraphs"] },
++    { "id": "E3LA04_Y3_011", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "easy",
++      "questionText": "Which of these is a strong ending sentence for a recount about a school sports day? A) 'We ran races and played tug of war.'  B) 'It was a fantastic day and I can't wait for next year's sports day.'  C) 'Sports day happens every year.'",
++      "questionType": "multiple_choice", "answerKey": "it was a fantastic day and i can't wait for next year's sports day.",
++      "stepByStepSolution": ["A strong recount ending often shares a personal feeling about the event.", "Option B reflects on the day and looks ahead.", "Options A and C are either a mid-event detail or an unrelated general fact."],
++      "commonMisconceptions": ["Choosing a middle-of-event detail sentence instead of a closing one.", "Choosing a general fact unrelated to this specific day."],
++      "hints": ["A good ending often shares how the writer felt about the event.", "Which sentence sounds like it's wrapping the recount up, rather than describing an action?"],
++      "tags": ["text_structure", "recount"] },
++    { "id": "E3LA04_Y3_012", "skillId": "E3LA04_paragraphs_narrative_recount", "difficulty": "medium",
++      "questionText": "Combine these two short sentences into one clearer sentence using 'and': 'We went to the museum.' 'We saw a dinosaur skeleton.'",
++      "questionType": "short_answer",
++      "answerKey": ["We went to the museum and saw a dinosaur skeleton.", "We went to the museum, and we saw a dinosaur skeleton."],
++      "stepByStepSolution": ["The two ideas are related and happened together.", "Join them with 'and' to make one clearer sentence.", "For example: 'We went to the museum and saw a dinosaur skeleton.'"],
++      "commonMisconceptions": ["Simply placing the sentences next to each other without a joining word.", "Using an illogical connective, like 'but', for two ideas that agree."],
++      "hints": ["Do these two ideas agree with each other, or contrast?", "Try joining them with 'and'."],
++      "tags": ["sentence_combining", "paragraphs"] },
++
++    { "id": "E3LY09_Y3_002", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "easy",
++      "questionText": "Join these two sentences with 'or': 'We could play outside.' 'We could read a book inside.'",
++      "questionType": "short_answer", "answerKey": "We could play outside, or we could read a book inside.",
++      "stepByStepSolution": ["The two ideas represent a choice.", "Join them with 'or', using a comma before it.", "Result: 'We could play outside, or we could read a book inside.'"],
++      "commonMisconceptions": ["Using 'and' instead of 'or' even though the sentence presents a choice.", "Forgetting the comma before 'or'."],
++      "hints": ["Do these two ideas show a choice, or do they just add together?", "Remember the comma before 'or'."],
++      "tags": ["compound_sentences"] },
++    { "id": "E3LY09_Y3_003", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "easy",
++      "questionText": "Join these two sentences with 'and': 'Sam packed his lunch.' 'He grabbed his hat.'",
++      "questionType": "short_answer", "answerKey": "Sam packed his lunch, and he grabbed his hat.",
++      "stepByStepSolution": ["The two ideas agree and add together.", "Join them with 'and', using a comma before it.", "Result: 'Sam packed his lunch, and he grabbed his hat.'"],
++      "commonMisconceptions": ["Forgetting the comma before 'and'.", "Using 'but' even though the ideas don't contrast."],
++      "hints": ["Do these two ideas agree, or contrast?", "Remember to put a comma just before 'and' when joining two full sentences."],
++      "tags": ["compound_sentences"] },
++    { "id": "E3LY09_Y3_004", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Choose the correct conjunction: 'I wanted to go to the park, ___ it was closed for repairs.' A) and  B) but  C) or",
++      "questionType": "multiple_choice", "answerKey": "but",
++      "stepByStepSolution": ["The two ideas contrast — wanting to go, but the park being closed.", "'But' is used to join ideas that contrast.", "So 'but' is correct."],
++      "commonMisconceptions": ["Choosing 'and' out of habit without checking whether the ideas agree or contrast.", "Choosing 'or' when there's no real choice being presented."],
++      "hints": ["Do these two ideas agree with each other, or is there a surprise/contrast?", "'But' is used when the second idea contrasts with the first."],
++      "tags": ["compound_sentences", "conjunctions"] },
++    { "id": "E3LY09_Y3_005", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Fix the punctuation in this sentence: 'the dog ran across the yard'",
++      "questionType": "short_answer", "answerKey": "The dog ran across the yard.",
++      "stepByStepSolution": ["Capitalise the first letter of the sentence.", "This sentence is a statement, so it needs a full stop at the end.", "Result: 'The dog ran across the yard.'"],
++      "commonMisconceptions": ["Adding a full stop but forgetting the capital letter, or vice versa.", "Adding a question mark instead of a full stop."],
++      "hints": ["Every sentence needs to start with a capital letter.", "This sentence is a statement, not a question — what punctuation mark does a statement end with?"],
++      "tags": ["punctuation"] },
++    { "id": "E3LY09_Y3_006", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Fix the punctuation in this sentence: 'are you coming to the party'",
++      "questionType": "short_answer", "answerKey": "Are you coming to the party?",
++      "stepByStepSolution": ["Capitalise the first letter of the sentence.", "This sentence is asking something, so it needs a question mark.", "Result: 'Are you coming to the party?'"],
++      "commonMisconceptions": ["Using a full stop instead of a question mark despite the sentence being a question.", "Missing the capital letter."],
++      "hints": ["This sentence is asking something — what punctuation mark do questions end with?", "Don't forget the capital letter at the start."],
++      "tags": ["punctuation"] },
++    { "id": "E3LY09_Y3_007", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Which sentence uses 'or' correctly? A) 'I like apples, or I like oranges too.'  B) 'Would you like juice or water?'  C) 'She ran fast, or she won the race.'",
++      "questionType": "multiple_choice", "answerKey": "would you like juice or water?",
++      "stepByStepSolution": ["'Or' should present a genuine choice between two options.", "Option B offers a real choice: juice or water.", "Options A and C use 'or' where the ideas actually agree or follow on, not a real choice."],
++      "commonMisconceptions": ["Using 'or' to join any two ideas without checking if they represent a real choice.", "Not testing each option by reading it aloud."],
++      "hints": ["'Or' should present a choice between two options.", "Try reading each sentence aloud — does it sound like a real choice is being offered?"],
++      "tags": ["compound_sentences", "conjunctions"] },
++    { "id": "E3LY09_Y3_008", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Join these two sentences with the most suitable conjunction (and/but/or): 'The sky grew dark.' 'It began to rain.'",
++      "questionType": "short_answer", "answerKey": "The sky grew dark, and it began to rain.",
++      "stepByStepSolution": ["Both events describe a storm coming — they agree with each other.", "'And' is the best conjunction to add these ideas together.", "Result: 'The sky grew dark, and it began to rain.'"],
++      "commonMisconceptions": ["Choosing 'but' when there's no contrast between the two ideas.", "Forgetting the comma."],
++      "hints": ["Do these two ideas agree with each other, or contrast?", "Since both things describe the storm coming, which conjunction adds ideas together?"],
++      "tags": ["compound_sentences", "conjunctions"] },
++    { "id": "E3LY09_Y3_009", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "hard",
++      "questionText": "This sentence runs on without a conjunction. Fix it by adding 'and', 'but', or 'or' in the right place, with a comma: 'I wanted pizza for dinner I ended up having pasta instead.'",
++      "questionType": "short_answer", "answerKey": "I wanted pizza for dinner, but I ended up having pasta instead.",
++      "stepByStepSolution": ["Notice the two ideas contrast — wanting pizza but ending up with pasta.", "Insert a comma and 'but' between the two ideas.", "Result: 'I wanted pizza for dinner, but I ended up having pasta instead.'"],
++      "commonMisconceptions": ["Joining with 'and' despite the clear contrast.", "Placing the comma in the wrong spot, not right before the conjunction."],
++      "hints": ["Do these two ideas agree, or is there a twist/contrast?", "Put the comma right before the conjunction you choose."],
++      "tags": ["compound_sentences", "conjunctions", "punctuation"] },
++    { "id": "E3LY09_Y3_010", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "easy",
++      "questionText": "Which word is spelled correctly? A) becuase  B) because  C) beacause",
++      "questionType": "multiple_choice", "answerKey": "because",
++      "stepByStepSolution": ["Say the word slowly, sound by sound: be-cause.", "The correct spelling is b-e-c-a-u-s-e.", "Option B matches this spelling."],
++      "commonMisconceptions": ["Swapping the order of the 'au' letters.", "Missing or misplacing a letter from memory of the sound."],
++      "hints": ["Say the word slowly, sound by sound: be-cause.", "Remember the tricky 'au' in the middle: b-e-c-a-u-s-e."],
++      "tags": ["spelling", "high_frequency_words"] },
++    { "id": "E3LY09_Y3_011", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "medium",
++      "questionText": "Combine these two sentences with 'but': 'Mia practised every day.' 'She still found the piano piece tricky.'",
++      "questionType": "short_answer", "answerKey": "Mia practised every day, but she still found the piano piece tricky.",
++      "stepByStepSolution": ["Even though both sentences are about the piano, the ideas contrast.", "Practising a lot but still finding it tricky is a contrast, so use 'but'.", "Result: 'Mia practised every day, but she still found the piano piece tricky.'"],
++      "commonMisconceptions": ["Using 'and' since both sentences are about the piano, without noticing the contrast in meaning.", "Missing the comma before 'but'."],
++      "hints": ["Even though both sentences are about the piano, do the ideas agree or contrast?", "Remember the comma before 'but'."],
++      "tags": ["compound_sentences", "conjunctions"] },
++    { "id": "E3LY09_Y3_012", "skillId": "E3LY09_high_freq_compound_sentences", "difficulty": "easy",
++      "questionText": "Fix the punctuation: 'my favourite subject is art'",
++      "questionType": "short_answer", "answerKey": "My favourite subject is art.",
++      "stepByStepSolution": ["Capitalise the first letter of the sentence.", "This sentence is a statement, so it needs a full stop.", "Result: 'My favourite subject is art.'"],
++      "commonMisconceptions": ["Forgetting the capital letter on 'my'.", "Adding no end punctuation at all."],
++      "hints": ["Every sentence starts with a capital letter.", "This is a statement — what mark ends a statement?"],
++      "tags": ["punctuation"] }
++  ]
++}
+diff --git a/src/lib/sessionBuilder.ts b/src/lib/sessionBuilder.ts
+index 7a93564..59c27af 100644
+--- a/src/lib/sessionBuilder.ts
++++ b/src/lib/sessionBuilder.ts
+@@ -10,11 +10,13 @@
+  *  4. Order items so no more than 2 consecutive items share a skill.
+  *
+  * This is an MVP implementation: it works against whatever Items exist in
+- * the bank (currently a small hand-written sample set for Week 1 skills —
+- * see src/db/seed/sample-items.json). As the real item banks are generated
+- * and imported, pool sizes will grow and sessions will fill out naturally.
++ * the bank (currently Week 1 skills only — see src/db/seed/sample-items.json
++ * and src/db/seed/week1-item-bank.json). As more weeks are generated and
++ * imported, pool sizes will grow and sessions will fill out naturally.
++ * Item pool queries exclude "multi_part" question types and items tagged
++ * "open_response" — the MVP grader (src/lib/grading.ts) can't auto-mark them.
+  */
+-import { and, eq, inArray, sql } from "drizzle-orm";
++import { and, eq, inArray, ne, sql } from "drizzle-orm";
+ import { db } from "@/db/client";
+ import { childSkillStates, curriculumSequenceEntries, items, skills } from "@/db/schema";
+ 
+@@ -62,7 +64,18 @@ async function pickItemsForSkills(
+     const rows = await db
+       .select()
+       .from(items)
+-      .where(eq(items.skillId, skillId))
++      .where(
++        and(
++          eq(items.skillId, skillId),
++          // MVP grader only reliably auto-marks single-value short_answer /
++          // multiple_choice items. Exclude question types and tags it can't
++          // grade yet (multi_part has object-valued answer keys; open_response
++          // items have no single correct answer). See week1-item-bank.json's
++          // _note for the source of this rule.
++          ne(items.questionType, "multi_part"),
++          sql`NOT (${items.tags} @> ARRAY['open_response']::text[])`
++        )
++      )
+       .orderBy(sql`RANDOM()`)
+       .limit(perSkill + excludeItemIds.size); // over-fetch a little in case of exclusions
+     result[skillId] = rows.filter((r) => !excludeItemIds.has(r.id)).slice(0, perSkill);
+-- 
+2.43.0
+

@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recallie — Daily Mission: Maths Practice Item Bank (100 Items)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #4fc3f7;
+    --sky-dark: #29a3e0;
+    --sun: #ffc93c;
+    --grass: #4ecb71;
+    --grass-dark: #33a856;
+    --coral: #ff6f6f;
+    --purple: #a78bfa;
+    --ink: #2c3550;
+    --card: #ffffff;
+    --bg1: #eaf7ff;
+    --bg2: #fff6e5;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Nunito', system-ui, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .heading {
+    font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+  }
+
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.35;
+    z-index: 0;
+    animation: float 9s ease-in-out infinite;
+  }
+  .blob1 { width: 160px; height: 160px; background: var(--sun); top: -40px; left: -50px; animation-delay: 0s; }
+  .blob2 { width: 120px; height: 120px; background: var(--grass); bottom: 10%; right: -40px; animation-delay: 2s; }
+  .blob3 { width: 90px; height: 90px; background: var(--purple); top: 30%; right: 6%; animation-delay: 4s; }
+  .blob4 { width: 70px; height: 70px; background: var(--coral); bottom: 4%; left: 8%; animation-delay: 1s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-18px) scale(1.06); }
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--sky-dark);
+  }
+  .brand .dot { color: var(--coral); }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+  }
+  .stats-row { display: flex; gap: 8px; }
+
+  #starCount, #streakCount { transition: transform 0.25s ease; display: inline-block; }
+  .pop { animation: pop 0.4s ease; }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+
+  .mascot-card {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .mascot {
+    font-size: 56px;
+    display: inline-block;
+    animation: bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+  .speech {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 10px 16px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+    margin-top: 4px;
+    max-width: 90%;
+  }
+
+  .progress-outer {
+    background: rgba(255,255,255,0.7);
+    border-radius: 999px;
+    height: 16px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+  }
+  .progress-inner {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--grass), var(--grass-dark));
+    width: 0%;
+    transition: width 0.5s cubic-bezier(.4,1.6,.6,1);
+    position: relative;
+  }
+  .progress-label {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7590;
+    margin-bottom: 14px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 22px 20px 20px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .subject-badge {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: white;
+  }
+  .subject-badge.maths { background: var(--sky-dark); }
+  .slot-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #fff3d6;
+    color: #a56a00;
+  }
+
+  .question-text {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 4px 0 18px;
+    color: var(--ink);
+  }
+
+  .text-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .text-input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 13px 16px;
+    border-radius: 14px;
+    border: 2.5px solid #e3e9f5;
+    outline: none;
+  }
+  .text-input:focus { border-color: var(--sky); }
+
+  .hint-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 14px;
+    color: #b7791f;
+    cursor: pointer;
+    padding: 6px 0;
+  }
+  .hint-box {
+    background: #fff8e6;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8a5a00;
+    margin-top: 6px;
+  }
+
+  .check-btn {
+    width: 100%;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(180deg, var(--sky), var(--sky-dark));
+    border: none;
+    border-radius: 16px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 var(--sky-dark);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  .check-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--sky-dark); }
+  .check-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
+
+  .feedback {
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: 4px;
+    animation: slideUp 0.35s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .feedback.good { background: #e4f9ea; }
+  .feedback.retry { background: #fff2e2; }
+  .feedback h3 { margin: 0 0 10px; font-size: 19px; }
+  .feedback.good h3 { color: #1c7a3c; }
+  .feedback.retry h3 { color: #b06a00; }
+  .feedback ol { margin: 0 0 12px; padding-left: 20px; font-size: 14px; font-weight: 700; line-height: 1.6; }
+  .next-btn {
+    width: 100%;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(180deg, #3d4568, var(--ink));
+    border: none;
+    border-radius: 14px;
+    padding: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #1b2038;
+  }
+  .next-btn:active { transform: translateY(3px); box-shadow: none; }
+
+  .complete {
+    display: none;
+    text-align: center;
+    background: var(--card);
+    border-radius: 24px;
+    padding: 40px 24px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
+  }
+  .complete .trophy {
+    font-size: 70px;
+    display: inline-block;
+    animation: trophybounce 1.1s ease infinite;
+  }
+  @keyframes trophybounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    30% { transform: translateY(-16px) rotate(-6deg); }
+    60% { transform: translateY(0) rotate(6deg); }
+  }
+  .complete h2 { font-size: 26px; margin: 10px 0 6px; color: var(--ink); }
+  .complete p { font-weight: 700; color: #5c6584; margin: 0 0 22px; }
+  .summary-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+  }
+  .summary-pill {
+    background: #f8fafd;
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-weight: 800;
+    min-width: 90px;
+  }
+  .summary-pill .big { display: block; font-size: 24px; margin-bottom: 2px; }
+  .stickers { font-size: 30px; letter-spacing: 8px; margin-bottom: 24px; }
+  .replay-btn {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--sky-dark);
+    background: #eaf7ff;
+    border: 2.5px solid var(--sky);
+    border-radius: 14px;
+    padding: 12px 22px;
+    cursor: pointer;
+  }
+
+  .footnote {
+    text-align: center;
+    font-size: 12px;
+    color: #9aa3bd;
+    margin-top: 22px;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<div class="blob blob4"></div>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">Recallie <span class="dot">●</span></div>
+    <div class="stats-row">
+      <div class="stat-pill">⭐ <span id="starCount">0</span></div>
+      <div class="stat-pill">🔥 <span id="streakCount">0</span></div>
+    </div>
+  </div>
+
+  <div class="mascot-card">
+    <div class="mascot" id="mascot">🦊</div>
+    <div class="speech" id="speech">Hi! Ready for today's addition & subtraction mission?</div>
+  </div>
+
+  <div class="progress-outer"><div class="progress-inner" id="progressBar"></div></div>
+  <div class="progress-label"><span id="progressLabel">0 / 100</span></div>
+
+  <div class="card" id="questionCard"></div>
+
+  <div class="complete" id="completeCard">
+    <div class="trophy">🏆</div>
+    <h2>Mission complete!</h2>
+    <p id="completeMsg">You smashed all 100 practice items — phenomenal work!</p>
+    <div class="summary-row">
+      <div class="summary-pill"><span class="big" id="finalStars">0</span>stars earned</div>
+      <div class="summary-pill"><span class="big" id="finalStreak">0</span>best streak</div>
+      <div class="summary-pill"><span class="big" id="finalCorrect">0/100</span>correct</div>
+    </div>
+    <div class="stickers" id="stickers"></div>
+    <button class="replay-btn" onclick="restart()">Play again 🔁</button>
+  </div>
+
+  <p class="footnote">A little practice every day builds big skills 🌱</p>
+</div>
+
+<script>
+const ITEMS = [
+  {
+    subject: "maths",
+    slot: "Item 1",
+    q: "Calculate 414 - 116 using written strategies with regrouping.",
+    type: "short",
+    answers: ["298"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 4 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 298.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 2",
+    q: "Calculate 431 + 251 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["682"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (1) = 2. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 200 = 600.', 'Combine all place values to get 682.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 3",
+    q: "Calculate 440 - 169 using written strategies with regrouping.",
+    type: "short",
+    answers: ["271"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 271.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 4",
+    q: "Calculate 182 + 140 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["322"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (0) = 2. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 100 + 100 = 200.', 'Combine all place values to get 322.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 5",
+    q: "Calculate 523 - 229 using written strategies with regrouping.",
+    type: "short",
+    answers: ["294"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 294.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 6",
+    q: "Calculate 667 + 428 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["1095"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (7) + (8) = 15. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 400 = 1000.', 'Combine all place values to get 1095.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 7",
+    q: "Calculate 321 - 259 using written strategies with regrouping.",
+    type: "short",
+    answers: ["62"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 62.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 8",
+    q: "Calculate 375 + 349 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["724"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (5) + (9) = 14. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 300 = 600.', 'Combine all place values to get 724.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 9",
+    q: "Calculate 580 - 527 using written strategies with regrouping.",
+    type: "short",
+    answers: ["53"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 53.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 10",
+    q: "Calculate 582 + 301 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["883"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (1) = 3. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 300 = 800.', 'Combine all place values to get 883.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 11",
+    q: "Calculate 452 - 226 using written strategies with regrouping.",
+    type: "short",
+    answers: ["226"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 226.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 12",
+    q: "Calculate 244 + 319 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["563"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (9) = 13. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 300 = 500.', 'Combine all place values to get 563.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 13",
+    q: "Calculate 662 - 548 using written strategies with regrouping.",
+    type: "short",
+    answers: ["114"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 114.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 14",
+    q: "Calculate 194 + 364 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["558"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (4) = 8. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 100 + 300 = 400.', 'Combine all place values to get 558.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 15",
+    q: "Calculate 420 - 308 using written strategies with regrouping.",
+    type: "short",
+    answers: ["112"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 112.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 16",
+    q: "Calculate 520 + 421 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["941"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (0) + (1) = 1. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 400 = 900.', 'Combine all place values to get 941.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 17",
+    q: "Calculate 371 - 128 using written strategies with regrouping.",
+    type: "short",
+    answers: ["243"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 243.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 18",
+    q: "Calculate 231 + 239 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["470"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (9) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 200 = 400.', 'Combine all place values to get 470.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 19",
+    q: "Calculate 403 - 207 using written strategies with regrouping.",
+    type: "short",
+    answers: ["196"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 196.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 20",
+    q: "Calculate 434 + 359 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["793"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (9) = 13. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 300 = 700.', 'Combine all place values to get 793.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 21",
+    q: "Calculate 466 - 299 using written strategies with regrouping.",
+    type: "short",
+    answers: ["167"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 6 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 167.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 22",
+    q: "Calculate 513 + 227 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["740"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (7) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 200 = 700.', 'Combine all place values to get 740.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 23",
+    q: "Calculate 573 - 469 using written strategies with regrouping.",
+    type: "short",
+    answers: ["104"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 104.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 24",
+    q: "Calculate 223 + 437 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["660"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (7) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 400 = 600.', 'Combine all place values to get 660.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 25",
+    q: "Calculate 841 - 369 using written strategies with regrouping.",
+    type: "short",
+    answers: ["472"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 472.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 26",
+    q: "Calculate 538 + 258 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["796"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (8) + (8) = 16. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 200 = 700.', 'Combine all place values to get 796.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 27",
+    q: "Calculate 870 - 334 using written strategies with regrouping.",
+    type: "short",
+    answers: ["536"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 4. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 536.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 28",
+    q: "Calculate 482 + 148 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["630"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (8) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 100 = 500.', 'Combine all place values to get 630.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 29",
+    q: "Calculate 534 - 126 using written strategies with regrouping.",
+    type: "short",
+    answers: ["408"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 4 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 408.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 30",
+    q: "Calculate 473 + 332 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["805"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (2) = 5. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 300 = 700.', 'Combine all place values to get 805.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 31",
+    q: "Calculate 362 - 167 using written strategies with regrouping.",
+    type: "short",
+    answers: ["195"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 195.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 32",
+    q: "Calculate 661 + 330 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["991"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (0) = 1. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 300 = 900.', 'Combine all place values to get 991.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 33",
+    q: "Calculate 441 - 247 using written strategies with regrouping.",
+    type: "short",
+    answers: ["194"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 194.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 34",
+    q: "Calculate 724 + 402 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["1126"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (2) = 6. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 700 + 400 = 1100.', 'Combine all place values to get 1126.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 35",
+    q: "Calculate 893 - 548 using written strategies with regrouping.",
+    type: "short",
+    answers: ["345"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 345.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 36",
+    q: "Calculate 374 + 199 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["573"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (9) = 13. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 100 = 400.', 'Combine all place values to get 573.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 37",
+    q: "Calculate 800 - 206 using written strategies with regrouping.",
+    type: "short",
+    answers: ["594"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 594.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 38",
+    q: "Calculate 306 + 447 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["753"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (6) + (7) = 13. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 400 = 700.', 'Combine all place values to get 753.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 39",
+    q: "Calculate 732 - 175 using written strategies with regrouping.",
+    type: "short",
+    answers: ["557"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 5. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 557.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 40",
+    q: "Calculate 544 + 324 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["868"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (4) = 8. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 300 = 800.', 'Combine all place values to get 868.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 41",
+    q: "Calculate 772 - 656 using written strategies with regrouping.",
+    type: "short",
+    answers: ["116"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 116.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 42",
+    q: "Calculate 267 + 394 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["661"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (7) + (4) = 11. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 300 = 500.', 'Combine all place values to get 661.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 43",
+    q: "Calculate 572 - 506 using written strategies with regrouping.",
+    type: "short",
+    answers: ["66"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 66.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 44",
+    q: "Calculate 450 + 348 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["798"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (0) + (8) = 8. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 300 = 700.', 'Combine all place values to get 798.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 45",
+    q: "Calculate 762 - 117 using written strategies with regrouping.",
+    type: "short",
+    answers: ["645"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 645.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 46",
+    q: "Calculate 669 + 174 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["843"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (9) + (4) = 13. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 100 = 700.', 'Combine all place values to get 843.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 47",
+    q: "Calculate 601 - 547 using written strategies with regrouping.",
+    type: "short",
+    answers: ["54"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 54.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 48",
+    q: "Calculate 532 + 211 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["743"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (1) = 3. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 200 = 700.', 'Combine all place values to get 743.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 49",
+    q: "Calculate 842 - 119 using written strategies with regrouping.",
+    type: "short",
+    answers: ["723"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 723.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 50",
+    q: "Calculate 169 + 177 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["346"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (9) + (7) = 16. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 100 + 100 = 200.', 'Combine all place values to get 346.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 51",
+    q: "Calculate 671 - 424 using written strategies with regrouping.",
+    type: "short",
+    answers: ["247"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 4. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 247.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 52",
+    q: "Calculate 395 + 149 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["544"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (5) + (9) = 14. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 100 = 400.', 'Combine all place values to get 544.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 53",
+    q: "Calculate 540 - 406 using written strategies with regrouping.",
+    type: "short",
+    answers: ["134"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 134.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 54",
+    q: "Calculate 647 + 155 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["802"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (7) + (5) = 12. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 100 = 700.', 'Combine all place values to get 802.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 55",
+    q: "Calculate 845 - 238 using written strategies with regrouping.",
+    type: "short",
+    answers: ["607"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 5 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 607.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 56",
+    q: "Calculate 281 + 372 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["653"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (2) = 3. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 300 = 500.', 'Combine all place values to get 653.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 57",
+    q: "Calculate 463 - 247 using written strategies with regrouping.",
+    type: "short",
+    answers: ["216"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 216.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 58",
+    q: "Calculate 702 + 229 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["931"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (9) = 11. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 700 + 200 = 900.', 'Combine all place values to get 931.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 59",
+    q: "Calculate 703 - 499 using written strategies with regrouping.",
+    type: "short",
+    answers: ["204"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 204.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 60",
+    q: "Calculate 273 + 252 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["525"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (2) = 5. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 200 = 400.', 'Combine all place values to get 525.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 61",
+    q: "Calculate 365 - 196 using written strategies with regrouping.",
+    type: "short",
+    answers: ["169"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 5 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 169.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 62",
+    q: "Calculate 171 + 430 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["601"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (0) = 1. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 100 + 400 = 500.', 'Combine all place values to get 601.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 63",
+    q: "Calculate 531 - 416 using written strategies with regrouping.",
+    type: "short",
+    answers: ["115"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 115.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 64",
+    q: "Calculate 222 + 448 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["670"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (8) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 400 = 600.', 'Combine all place values to get 670.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 65",
+    q: "Calculate 530 - 148 using written strategies with regrouping.",
+    type: "short",
+    answers: ["382"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 382.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 66",
+    q: "Calculate 222 + 389 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["611"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (9) = 11. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 300 = 500.', 'Combine all place values to get 611.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 67",
+    q: "Calculate 583 - 457 using written strategies with regrouping.",
+    type: "short",
+    answers: ["126"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 126.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 68",
+    q: "Calculate 702 + 196 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["898"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (2) + (6) = 8. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 700 + 100 = 800.', 'Combine all place values to get 898.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 69",
+    q: "Calculate 890 - 594 using written strategies with regrouping.",
+    type: "short",
+    answers: ["296"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 4. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 296.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 70",
+    q: "Calculate 398 + 362 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["760"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (8) + (2) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 300 = 600.', 'Combine all place values to get 760.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 71",
+    q: "Calculate 710 - 306 using written strategies with regrouping.",
+    type: "short",
+    answers: ["404"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 404.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 72",
+    q: "Calculate 591 + 309 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["900"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (9) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 300 = 800.', 'Combine all place values to get 900.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 73",
+    q: "Calculate 720 - 588 using written strategies with regrouping.",
+    type: "short",
+    answers: ["132"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 132.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 74",
+    q: "Calculate 205 + 455 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["660"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (5) + (5) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 400 = 600.', 'Combine all place values to get 660.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 75",
+    q: "Calculate 362 - 213 using written strategies with regrouping.",
+    type: "short",
+    answers: ["149"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 3. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 149.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 76",
+    q: "Calculate 497 + 175 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["672"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (7) + (5) = 12. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 400 + 100 = 500.', 'Combine all place values to get 672.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 77",
+    q: "Calculate 554 - 208 using written strategies with regrouping.",
+    type: "short",
+    answers: ["346"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 4 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 346.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 78",
+    q: "Calculate 344 + 402 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["746"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (4) + (2) = 6. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 400 = 700.', 'Combine all place values to get 746.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 79",
+    q: "Calculate 443 - 326 using written strategies with regrouping.",
+    type: "short",
+    answers: ["117"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 117.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 80",
+    q: "Calculate 337 + 270 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["607"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (7) + (0) = 7. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 300 + 200 = 500.', 'Combine all place values to get 607.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 81",
+    q: "Calculate 555 - 148 using written strategies with regrouping.",
+    type: "short",
+    answers: ["407"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 5 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 407.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 82",
+    q: "Calculate 603 + 406 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["1009"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (6) = 9. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 400 = 1000.', 'Combine all place values to get 1009.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 83",
+    q: "Calculate 351 - 276 using written strategies with regrouping.",
+    type: "short",
+    answers: ["75"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 75.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 84",
+    q: "Calculate 703 + 127 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["830"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (7) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 700 + 100 = 800.', 'Combine all place values to get 830.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 85",
+    q: "Calculate 391 - 307 using written strategies with regrouping.",
+    type: "short",
+    answers: ["84"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 7. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 84.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 86",
+    q: "Calculate 566 + 368 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["934"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (6) + (8) = 14. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 300 = 800.', 'Combine all place values to get 934.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 87",
+    q: "Calculate 792 - 328 using written strategies with regrouping.",
+    type: "short",
+    answers: ["464"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 464.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 88",
+    q: "Calculate 560 + 156 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["716"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (0) + (6) = 6. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 500 + 100 = 600.', 'Combine all place values to get 716.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 89",
+    q: "Calculate 683 - 118 using written strategies with regrouping.",
+    type: "short",
+    answers: ["565"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 8. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 565.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 90",
+    q: "Calculate 615 + 266 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["881"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (5) + (6) = 11. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 200 = 800.', 'Combine all place values to get 881.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 91",
+    q: "Calculate 733 - 679 using written strategies with regrouping.",
+    type: "short",
+    answers: ["54"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 3 minus 9. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 54.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 92",
+    q: "Calculate 648 + 199 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["847"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (8) + (9) = 17. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 100 = 700.', 'Combine all place values to get 847.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 93",
+    q: "Calculate 491 - 266 using written strategies with regrouping.",
+    type: "short",
+    answers: ["225"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 225.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 94",
+    q: "Calculate 743 + 397 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["1140"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (3) + (7) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 700 + 300 = 1000.', 'Combine all place values to get 1140.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 95",
+    q: "Calculate 362 - 306 using written strategies with regrouping.",
+    type: "short",
+    answers: ["56"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 2 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 56.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 96",
+    q: "Calculate 201 + 419 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["620"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (1) + (9) = 10. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 400 = 600.', 'Combine all place values to get 620.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 97",
+    q: "Calculate 781 - 626 using written strategies with regrouping.",
+    type: "short",
+    answers: ["155"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 1 minus 6. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 155.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 98",
+    q: "Calculate 670 + 167 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["837"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (0) + (7) = 7. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 600 + 100 = 700.', 'Combine all place values to get 837.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 99",
+    q: "Calculate 370 - 262 using written strategies with regrouping.",
+    type: "short",
+    answers: ["108"],
+    hint: "Check the ones column. If the top digit is smaller than the bottom digit, regroup 1 ten from the tens column!",
+    steps: ['Compare the ones digits: 0 minus 2. Since the top is smaller, regroup 1 ten.', 'Subtract the ones after regrouping.', 'Subtract the tens and hundreds columns carefully.', 'The final difference is 108.']
+  },
+  {
+    subject: "maths",
+    slot: "Item 100",
+    q: "Calculate 219 + 248 using mental or written strategies with regrouping.",
+    type: "short",
+    answers: ["467"],
+    hint: "Add the ones first. If the sum is 10 or more, regroup 10 ones into 1 ten!",
+    steps: ['Add the ones: (9) + (8) = 17. Regroup if needed.', 'Add the tens and include any regrouped ten.', 'Add the hundreds: 200 + 200 = 400.', 'Combine all place values to get 467.']
+  }
+];
+
+let idx = 0, stars = 0, streak = 0, bestStreak = 0, correctCount = 0, hintUsed = false;
+
+const speechLines = {
+  start: ["Hi! Ready for today's 100-item math mission?", "Let's warm up our brains! 🧠", "You've got this!"],
+  correctStreak: ["Whoa, on fire! 🔥", "You're on a roll!", "Nailed it again!"],
+  correct: ["Yes! Nice thinking!", "That's it!", "Great job!"],
+  retry: ["Good try — let's learn this one together.", "Almost! Here's how it works.", "No worries, mistakes help us grow 🌱"]
+};
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function setSpeech(text) { document.getElementById('speech').textContent = text; }
+function setMascot(e) { document.getElementById('mascot').textContent = e; }
+
+function normalize(s) {
+  return String(s).trim().toLowerCase().replace(/\s+/g, " ").replace(/[.,;:!?]+$/g, "");
+}
+
+function bump(id) {
+  const el = document.getElementById(id);
+  el.classList.remove('pop');
+  void el.offsetWidth;
+  el.classList.add('pop');
+}
+
+function updateProgress() {
+  const pct = (idx / ITEMS.length) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = Math.min(idx + 1, ITEMS.length) + ' / ' + ITEMS.length;
+}
+
+function renderQuestion() {
+  hintUsed = false;
+  const item = ITEMS[idx];
+  const card = document.getElementById('questionCard');
+  updateProgress();
+
+  card.innerHTML = `
+    <div class="badge-row">
+      <span class="subject-badge maths">🔢 Maths (Year 3 VIC & NSW)</span>
+      <span class="slot-badge">${item.slot}</span>
+    </div>
+    <p class="question-text">${item.q}</p>
+    <div class="text-input-row">
+      <input type="text" class="text-input" id="answerInput" placeholder="Type your answer…" autocomplete="off" onkeydown="if(event.key==='Enter') submitAnswer()">
+    </div>
+    <div id="hintArea">
+      <button class="hint-btn" onclick="showHint()">💡 Need a hint?</button>
+    </div>
+    <div style="height:14px"></div>
+    <button class="check-btn" id="checkBtn" onclick="submitAnswer()">Check my answer</button>
+  `;
+
+  setTimeout(() => document.getElementById('answerInput')?.focus(), 50);
+}
+
+function showHint() {
+  hintUsed = true;
+  const item = ITEMS[idx];
+  document.getElementById('hintArea').innerHTML =
+    `<div class="hint-box">💡 ${item.hint}</div>`;
+}
+
+function submitAnswer() {
+  const item = ITEMS[idx];
+  const given = document.getElementById('answerInput').value;
+  document.getElementById('answerInput').disabled = true;
+
+  const isCorrect = item.answers.map(normalize).includes(normalize(given || ''));
+  const card = document.getElementById('questionCard');
+  document.getElementById('checkBtn').remove();
+
+  if (isCorrect) {
+    correctCount++;
+    streak++;
+    bestStreak = Math.max(bestStreak, streak);
+    const gained = hintUsed ? 5 : 10;
+    stars += gained;
+    document.getElementById('starCount').textContent = stars;
+    document.getElementById('streakCount').textContent = streak;
+    bump('starCount'); bump('streakCount');
+    setMascot(streak >= 3 ? '🤩' : '🦊');
+    setSpeech(streak >= 3 ? pick(speechLines.correctStreak) : pick(speechLines.correct));
+
+    const fb = document.createElement('div');
+    fb.className = 'feedback good';
+    fb.innerHTML = `
+      <h3>Nice work — that's correct! 🎉  <span style="float:right">+${gained}⭐</span></h3>
+      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <button class="next-btn" onclick="nextItem()">Next question →</button>
+    `;
+    card.appendChild(fb);
+  } else {
+    streak = 0;
+    document.getElementById('streakCount').textContent = streak;
+    setMascot('🙂');
+    setSpeech(pick(speechLines.retry));
+
+    const fb = document.createElement('div');
+    fb.className = 'feedback retry';
+    fb.innerHTML = `
+      <h3>Good try — let's see how to get there 🌱 (Correct answer: ${item.answers[0]})</h3>
+      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <button class="next-btn" onclick="nextItem()">Next question →</button>
+    `;
+    card.appendChild(fb);
+  }
+}
+
+function nextItem() {
+  idx++;
+  if (idx >= ITEMS.length) {
+    showComplete();
+  } else {
+    renderQuestion();
+  }
+}
+
+function showComplete() {
+  updateProgress();
+  document.getElementById('questionCard').style.display = 'none';
+  document.getElementById('completeCard').style.display = 'block';
+  document.getElementById('finalStars').textContent = stars;
+  document.getElementById('finalStreak').textContent = bestStreak;
+  document.getElementById('finalCorrect').textContent = correctCount + '/' + ITEMS.length;
+
+  let msg = "You smashed all 100 items — phenomenal work!";
+  if (correctCount === ITEMS.length) msg = "Perfect score across all 100 items — extraordinary! 🌟";
+  document.getElementById('completeMsg').textContent = msg;
+
+  const stickerSets = ['🌟🦄🎈', '🚀🪐✨', '🐝🌼🍯', '🦕🌈🎉'];
+  document.getElementById('stickers').textContent = stickerSets[Math.floor(Math.random()*stickerSets.length)];
+
+  setMascot('🏆');
+  setSpeech("Mission complete — amazing dedication!");
+}
+
+function restart() {
+  idx = 0; stars = 0; streak = 0; bestStreak = 0; correctCount = 0;
+  document.getElementById('starCount').textContent = 0;
+  document.getElementById('streakCount').textContent = 0;
+  document.getElementById('completeCard').style.display = 'none';
+  document.getElementById('questionCard').style.display = 'block';
+  setMascot('🦊');
+  setSpeech(pick(speechLines.start));
+  renderQuestion();
+}
+
+setSpeech(pick(speechLines.start));
+renderQuestion();
+</script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recallie — Daily Mission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #4fc3f7;
+    --sky-dark: #29a3e0;
+    --sun: #ffc93c;
+    --grass: #4ecb71;
+    --grass-dark: #33a856;
+    --coral: #ff6f6f;
+    --purple: #a78bfa;
+    --ink: #2c3550;
+    --card: #ffffff;
+    --bg1: #eaf7ff;
+    --bg2: #fff6e5;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Nunito', system-ui, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .heading {
+    font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+  }
+
+  /* Floating background blobs for a playful feel */
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.35;
+    z-index: 0;
+    animation: float 9s ease-in-out infinite;
+  }
+  .blob1 { width: 160px; height: 160px; background: var(--sun); top: -40px; left: -50px; animation-delay: 0s; }
+  .blob2 { width: 120px; height: 120px; background: var(--grass); bottom: 10%; right: -40px; animation-delay: 2s; }
+  .blob3 { width: 90px; height: 90px; background: var(--purple); top: 30%; right: 6%; animation-delay: 4s; }
+  .blob4 { width: 70px; height: 70px; background: var(--coral); bottom: 4%; left: 8%; animation-delay: 1s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-18px) scale(1.06); }
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--sky-dark);
+  }
+  .brand .dot { color: var(--coral); }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+  }
+  .stats-row { display: flex; gap: 8px; }
+
+  #starCount, #streakCount { transition: transform 0.25s ease; display: inline-block; }
+  .pop { animation: pop 0.4s ease; }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+
+  /* ---------- Mascot + greeting ---------- */
+  .mascot-card {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .mascot {
+    font-size: 56px;
+    display: inline-block;
+    animation: bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+  .speech {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 10px 16px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+    margin-top: 4px;
+    max-width: 90%;
+  }
+
+  /* ---------- Progress ---------- */
+  .progress-outer {
+    background: rgba(255,255,255,0.7);
+    border-radius: 999px;
+    height: 16px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+  }
+  .progress-inner {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--grass), var(--grass-dark));
+    width: 0%;
+    transition: width 0.5s cubic-bezier(.4,1.6,.6,1);
+    position: relative;
+  }
+  .progress-label {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7590;
+    margin-bottom: 14px;
+  }
+
+  /* ---------- Question card ---------- */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 22px 20px 20px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .subject-badge {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: white;
+  }
+  .subject-badge.maths { background: var(--sky-dark); }
+  .subject-badge.english { background: var(--purple); }
+  .slot-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #fff3d6;
+    color: #a56a00;
+  }
+
+  .question-text {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 4px 0 18px;
+    color: var(--ink);
+  }
+
+  .options {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .opt-btn {
+    text-align: left;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 2.5px solid #e3e9f5;
+    background: #f8fafd;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .opt-btn:hover { border-color: var(--sky); background: #eef8ff; transform: translateY(-1px); }
+  .opt-btn.selected { border-color: var(--sky-dark); background: #e3f4ff; }
+  .opt-btn.correct { border-color: var(--grass-dark); background: #e4f9ea; }
+  .opt-btn.incorrect { border-color: var(--coral); background: #ffecec; }
+  .opt-btn:disabled { cursor: default; }
+
+  .text-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .text-input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 13px 16px;
+    border-radius: 14px;
+    border: 2.5px solid #e3e9f5;
+    outline: none;
+  }
+  .text-input:focus { border-color: var(--sky); }
+
+  .hint-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 14px;
+    color: #b7791f;
+    cursor: pointer;
+    padding: 6px 0;
+  }
+  .hint-box {
+    background: #fff8e6;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8a5a00;
+    margin-top: 6px;
+  }
+
+  .check-btn {
+    width: 100%;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(180deg, var(--sky), var(--sky-dark));
+    border: none;
+    border-radius: 16px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 var(--sky-dark);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  .check-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--sky-dark); }
+  .check-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
+
+  /* ---------- Feedback ---------- */
+  .feedback {
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: 4px;
+    animation: slideUp 0.35s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .feedback.good { background: #e4f9ea; }
+  .feedback.retry { background: #fff2e2; }
+  .feedback h3 { margin: 0 0 10px; font-size: 19px; }
+  .feedback.good h3 { color: #1c7a3c; }
+  .feedback.retry h3 { color: #b06a00; }
+  .feedback ol { margin: 0 0 12px; padding-left: 20px; font-size: 14px; font-weight: 700; line-height: 1.6; }
+  .feedback .note { font-size: 13px; font-style: italic; color: #6b5a3c; margin-bottom: 12px; }
+  .next-btn {
+    width: 100%;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(180deg, #3d4568, var(--ink));
+    border: none;
+    border-radius: 14px;
+    padding: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #1b2038;
+  }
+  .next-btn:active { transform: translateY(3px); box-shadow: none; }
+
+  .points-fly {
+    position: absolute;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--grass-dark);
+    pointer-events: none;
+    animation: fly 1s ease forwards;
+  }
+  @keyframes fly {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-50px) scale(1.3); }
+  }
+
+  /* ---------- Completion screen ---------- */
+  .complete {
+    display: none;
+    text-align: center;
+    background: var(--card);
+    border-radius: 24px;
+    padding: 40px 24px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
+  }
+  .complete .trophy {
+    font-size: 70px;
+    display: inline-block;
+    animation: trophybounce 1.1s ease infinite;
+  }
+  @keyframes trophybounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    30% { transform: translateY(-16px) rotate(-6deg); }
+    60% { transform: translateY(0) rotate(6deg); }
+  }
+  .complete h2 { font-size: 26px; margin: 10px 0 6px; color: var(--ink); }
+  .complete p { font-weight: 700; color: #5c6584; margin: 0 0 22px; }
+  .summary-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+  }
+  .summary-pill {
+    background: #f8fafd;
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-weight: 800;
+    min-width: 90px;
+  }
+  .summary-pill .big { display: block; font-size: 24px; margin-bottom: 2px; }
+  .stickers { font-size: 30px; letter-spacing: 8px; margin-bottom: 24px; }
+  .replay-btn {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--sky-dark);
+    background: #eaf7ff;
+    border: 2.5px solid var(--sky);
+    border-radius: 14px;
+    padding: 12px 22px;
+    cursor: pointer;
+  }
+
+  canvas#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .footnote {
+    text-align: center;
+    font-size: 12px;
+    color: #9aa3bd;
+    margin-top: 22px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 380px) {
+    .question-text { font-size: 18px; }
+    .mascot { font-size: 46px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<div class="blob blob4"></div>
+
+<canvas id="confetti"></canvas>
+
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">Recallie <span class="dot">●</span></div>
+    <div class="stats-row">
+      <div class="stat-pill">⭐ <span id="starCount">0</span></div>
+      <div class="stat-pill">🔥 <span id="streakCount">0</span></div>
+    </div>
+  </div>
+
+  <div class="mascot-card">
+    <div class="mascot" id="mascot">🦊</div>
+    <div class="speech" id="speech">Hi! Ready for today's mission?</div>
+  </div>
+
+  <div class="progress-outer"><div class="progress-inner" id="progressBar"></div></div>
+  <div class="progress-label"><span id="progressLabel">0 / 6</span></div>
+
+  <div class="card" id="questionCard"></div>
+
+  <div class="complete" id="completeCard">
+    <div class="trophy">🏆</div>
+    <h2>Mission complete!</h2>
+    <p id="completeMsg">You smashed today's practice — awesome work!</p>
+    <div class="summary-row">
+      <div class="summary-pill"><span class="big" id="finalStars">0</span>stars earned</div>
+      <div class="summary-pill"><span class="big" id="finalStreak">0</span>best streak</div>
+      <div class="summary-pill"><span class="big" id="finalCorrect">0/6</span>correct</div>
+    </div>
+    <div class="stickers" id="stickers"></div>
+    <button class="replay-btn" onclick="restart()">Play again 🔁</button>
+  </div>
+
+  <p class="footnote">A little practice every day builds big skills 🌱</p>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   Sample items — mirrors items from Recallie's real Year 3 Week 1
+   Maths + English bank, interleaved the way the real session builder
+   would order them. This is a static front-end demo, not wired to
+   the app's API or database.
+------------------------------------------------------------------- */
+const ITEMS = [
+  {
+    subject: "maths", slot: "New learning",
+    q: "Write 6,509 in expanded form (thousands + hundreds + tens + ones).",
+    type: "short",
+    answers: ["6000 + 500 + 0 + 9", "6000 + 500 + 9"],
+    hint: "Multiply each digit by its column's value: 6×1000, 5×100, 0×10, 9×1.",
+    steps: [
+      "Look at each digit and the column it's in.",
+      "6 thousands = 6000, 5 hundreds = 500, 0 tens = 0, 9 ones = 9.",
+      "Write it as an addition sentence: 6000 + 500 + 0 + 9."
+    ]
+  },
+  {
+    subject: "english", slot: "Mix it up",
+    q: "Which unit would you use to measure how much water is in a bathtub?",
+    type: "mc",
+    options: ["Millilitres", "Litres"],
+    answers: ["Litres"],
+    hint: "Is a bathtub full of just a little water, or a lot?",
+    steps: ["A bathtub holds a big amount of water.", "Litres are used for bigger amounts of liquid.", "So the answer is litres!"]
+  },
+  {
+    subject: "maths", slot: "Warm-up review",
+    q: "Order these numbers from smallest to largest: 3,102   1,999   3,120   999",
+    type: "short",
+    answers: ["999, 1999, 3102, 3120", "999, 1,999, 3,102, 3,120"],
+    hint: "Start by comparing how many digits each number has.",
+    steps: [
+      "999 has only 3 digits — it's the smallest.",
+      "1,999 has 4 digits but starts with a 1.",
+      "3,102 and 3,120 both start with 3 — compare the next column (0 vs 2).",
+      "Smallest to largest: 999, 1,999, 3,102, 3,120."
+    ]
+  },
+  {
+    subject: "english", slot: "New learning",
+    q: "A recipe, a story, and a weather report are all examples of what?",
+    type: "mc",
+    options: ["Text types", "Punctuation", "Handwriting styles"],
+    answers: ["Text types"],
+    hint: "Think about how each one is written for a different purpose.",
+    steps: ["Each one has its own purpose and audience.", "A recipe informs, a story entertains, a weather report reports facts.", "They're all different text types!"]
+  },
+  {
+    subject: "maths", slot: "Mix it up",
+    q: "Would you measure the length of your pencil in millimetres, centimetres, or metres?",
+    type: "mc",
+    options: ["Millimetres", "Centimetres", "Metres"],
+    answers: ["Centimetres"],
+    hint: "Is your pencil closer in size to your finger or to a door?",
+    steps: ["A pencil is a small, everyday object.", "Centimetres suit small hand-sized things.", "So centimetres is the best choice!"]
+  },
+  {
+    subject: "english", slot: "Warm-up review",
+    q: "In a recount, what usually comes first?",
+    type: "mc",
+    options: ["The ending", "An orientation (who, when, where)", "A list of ingredients"],
+    answers: ["An orientation (who, when, where)"],
+    hint: "Think about how you'd start telling a friend about your weekend.",
+    steps: ["A recount tells events in the order they happened.", "It starts by setting the scene: who, when, and where.", "That's called the orientation."]
+  }
+];
+
+let idx = 0, stars = 0, streak = 0, bestStreak = 0, correctCount = 0, hintUsed = false;
+
+const speechLines = {
+  start: ["Hi! Ready for today's mission?", "Let's warm up our brains! 🧠", "Six quick questions — you've got this!"],
+  correctStreak: ["Whoa, on fire! 🔥", "You're on a roll!", "Nailed it again!"],
+  correct: ["Yes! Nice thinking!", "That's it!", "Great job!"],
+  retry: ["Good try — let's learn this one together.", "Almost! Here's how it works.", "No worries, mistakes help us grow 🌱"]
+};
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function setSpeech(text) { document.getElementById('speech').textContent = text; }
+function setMascot(e) { document.getElementById('mascot').textContent = e; }
+
+function normalize(s) {
+  return String(s).trim().toLowerCase().replace(/\s+/g, " ").replace(/[.,;:!?]+$/g, "");
+}
+
+function bump(id) {
+  const el = document.getElementById(id);
+  el.classList.remove('pop');
+  void el.offsetWidth;
+  el.classList.add('pop');
+}
+
+function updateProgress() {
+  const pct = (idx / ITEMS.length) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = Math.min(idx + 1, ITEMS.length) + ' / ' + ITEMS.length;
+}
+
+function renderQuestion() {
+  hintUsed = false;
+  const item = ITEMS[idx];
+  const card = document.getElementById('questionCard');
+  updateProgress();
+
+  let optionsHtml = '';
+  if (item.type === 'mc') {
+    optionsHtml = '<div class="options">' + item.options.map((o, i) =>
+      `<button class="opt-btn" data-val="${o.replace(/"/g,'&quot;')}" onclick="selectOption(this)">${o}</button>`
+    ).join('') + '</div>';
+  } else {
+    optionsHtml = `<div class="text-input-row">
+      <input type="text" class="text-input" id="answerInput" placeholder="Type your answer…" autocomplete="off" onkeydown="if(event.key==='Enter') submitAnswer()">
+    </div>`;
+  }
+
+  card.innerHTML = `
+    <div class="badge-row">
+      <span class="subject-badge ${item.subject}">${item.subject === 'maths' ? '🔢 Maths' : '📖 English'}</span>
+      <span class="slot-badge">${item.slot}</span>
+    </div>
+    <p class="question-text">${item.q}</p>
+    ${optionsHtml}
+    <div id="hintArea">
+      <button class="hint-btn" onclick="showHint()">💡 Need a hint?</button>
+    </div>
+    <div style="height:14px"></div>
+    <button class="check-btn" id="checkBtn" onclick="submitAnswer()" ${item.type === 'mc' ? 'disabled' : ''}>Check my answer</button>
+  `;
+
+  if (item.type === 'short') {
+    setTimeout(() => document.getElementById('answerInput')?.focus(), 50);
+  }
+}
+
+let selectedOption = null;
+function selectOption(btn) {
+  document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selectedOption = btn.dataset.val;
+  document.getElementById('checkBtn').disabled = false;
+}
+
+function showHint() {
+  hintUsed = true;
+  const item = ITEMS[idx];
+  document.getElementById('hintArea').innerHTML =
+    `<div class="hint-box">💡 ${item.hint}</div>`;
+}
+
+function submitAnswer() {
+  const item = ITEMS[idx];
+  let given;
+  if (item.type === 'mc') {
+    given = selectedOption;
+    document.querySelectorAll('.opt-btn').forEach(b => {
+      b.disabled = true;
+      const val = normalize(b.dataset.val);
+      if (item.answers.map(normalize).includes(val)) b.classList.add('correct');
+      else if (b.classList.contains('selected')) b.classList.add('incorrect');
+    });
+  } else {
+    given = document.getElementById('answerInput').value;
+    document.getElementById('answerInput').disabled = true;
+  }
+
+  const isCorrect = item.answers.map(normalize).includes(normalize(given || ''));
+  const card = document.getElementById('questionCard');
+  document.getElementById('checkBtn').remove();
+
+  if (isCorrect) {
+    correctCount++;
+    streak++;
+    bestStreak = Math.max(bestStreak, streak);
+    const gained = hintUsed ? 5 : 10;
+    stars += gained;
+    document.getElementById('starCount').textContent = stars;
+    document.getElementById('streakCount').textContent = streak;
+    bump('starCount'); bump('streakCount');
+    setMascot(streak >= 3 ? '🤩' : '🦊');
+    setSpeech(streak >= 3 ? pick(speechLines.correctStreak) : pick(speechLines.correct));
+    launchConfettiBurst();
+
+    const fb = document.createElement('div');
+    fb.className = 'feedback good';
+    fb.innerHTML = `
+      <h3>Nice work — that's correct! 🎉  <span style="float:right">+${gained}⭐</span></h3>
+      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <button class="next-btn" onclick="nextItem()">Next question →</button>
+    `;
+    card.appendChild(fb);
+  } else {
+    streak = 0;
+    document.getElementById('streakCount').textContent = streak;
+    setMascot('🙂');
+    setSpeech(pick(speechLines.retry));
+
+    const fb = document.createElement('div');
+    fb.className = 'feedback retry';
+    fb.innerHTML = `
+      <h3>Good try — let's see how to get there 🌱</h3>
+      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <button class="next-btn" onclick="nextItem()">Next question →</button>
+    `;
+    card.appendChild(fb);
+  }
+}
+
+function nextItem() {
+  idx++;
+  selectedOption = null;
+  if (idx >= ITEMS.length) {
+    showComplete();
+  } else {
+    renderQuestion();
+  }
+}
+
+function showComplete() {
+  updateProgress();
+  document.getElementById('questionCard').style.display = 'none';
+  document.getElementById('completeCard').style.display = 'block';
+  document.getElementById('finalStars').textContent = stars;
+  document.getElementById('finalStreak').textContent = bestStreak;
+  document.getElementById('finalCorrect').textContent = correctCount + '/' + ITEMS.length;
+
+  let msg = "You smashed today's practice — awesome work!";
+  if (correctCount === ITEMS.length) msg = "Perfect mission! Every single question — incredible! 🌟";
+  else if (correctCount >= ITEMS.length - 1) msg = "So close to perfect — brilliant effort today!";
+  document.getElementById('completeMsg').textContent = msg;
+
+  const stickerSets = ['🌟🦄🎈', '🚀🪐✨', '🐝🌼🍯', '🦕🌈🎉'];
+  document.getElementById('stickers').textContent = pick(stickerSets);
+
+  setMascot('🏆');
+  setSpeech("Mission complete — see you tomorrow!");
+  launchConfettiBurst(true);
+}
+
+function restart() {
+  idx = 0; stars = 0; streak = 0; bestStreak = 0; correctCount = 0;
+  document.getElementById('starCount').textContent = 0;
+  document.getElementById('streakCount').textContent = 0;
+  document.getElementById('completeCard').style.display = 'none';
+  document.getElementById('questionCard').style.display = 'block';
+  setMascot('🦊');
+  setSpeech(pick(speechLines.start));
+  renderQuestion();
+}
+
+/* ---------------- Confetti (lightweight canvas, no libraries) ---------------- */
+const canvas = document.getElementById('confetti');
+const ctx = canvas.getContext('2d');
+function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+let particles = [];
+const colors = ['#ff6f6f', '#ffc93c', '#4ecb71', '#4fc3f7', '#a78bfa'];
+
+function launchConfettiBurst(big) {
+  const count = big ? 140 : 45;
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: canvas.width / 2 + (Math.random() - 0.5) * (big ? canvas.width * 0.6 : 200),
+      y: big ? canvas.height * 0.3 : 160,
+      vx: (Math.random() - 0.5) * 8,
+      vy: Math.random() * -8 - 2,
+      size: Math.random() * 7 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rot: Math.random() * 360,
+      vr: (Math.random() - 0.5) * 12,
+      life: 0
+    });
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.vy += 0.28;
+    p.x += p.vx;
+    p.y += p.vy;
+    p.rot += p.vr;
+    p.life++;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot * Math.PI / 180);
+    ctx.fillStyle = p.color;
+    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+    ctx.restore();
+  });
+  particles = particles.filter(p => p.y < canvas.height + 30 && p.life < 220);
+  requestAnimationFrame(animate);
+}
+animate();
+
+/* ---------------- Init ---------------- */
+setSpeech(pick(speechLines.start));
+renderQuestion();
+</script>
+</body>
+</html>

@@ -1,0 +1,1487 @@
+From c7f43e6b92240547a6789b7a0e350ad7c9a8a320 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 18 Aug 2026 07:39:20 +0000
+Subject: [PATCH] Add persisted gamification (points, streak, badges) and fix
+ two session bugs
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Points and daily practice streak are now derived server-side from
+ReviewEvent/Session rows (src/lib/gamification.ts) instead of only living as
+ephemeral client state that reset every reload. Added a 7-badge starter set
+and GET /api/gamification; wired into both the parent dashboard (stats +
+badge shelf) and the child page (lifetime totals + unlock celebration),
+alongside the existing session-local points/streak.
+
+Also fixes two bugs surfaced while testing the feature end-to-end:
+- GET /api/session/today's cached ("already built today") response never
+  returned question content, only item ids — reloading mid-day showed "no
+  items available" even with items left to do. Now hydrates the remaining
+  items on that path.
+- POST /api/reviews matched "today's session" by child+date only, so on a
+  day with both a Maths and English session an answer could mark the wrong
+  subject's session complete. Now matches on which session actually planned
+  that item.
+
+Also includes demo/recallie-kid-demo.html, a standalone no-build HTML mockup
+of the child practice flow used to preview the UX (points, streak, confetti,
+mascot) with real Week 1 sample questions.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0165eXNKUVcmbijWeTYPurQ8
+---
+ README.md                          |  38 +-
+ demo/recallie-kid-demo.html        | 747 +++++++++++++++++++++++++++++
+ src/app/api/dashboard/route.ts     |   6 +
+ src/app/api/gamification/route.ts  |  26 +
+ src/app/api/reviews/route.ts       |  14 +-
+ src/app/api/session/today/route.ts |  48 +-
+ src/app/child/page.tsx             | 110 ++++-
+ src/app/parent/dashboard/page.tsx  |  51 +-
+ src/lib/gamification.ts            | 175 +++++++
+ 9 files changed, 1191 insertions(+), 24 deletions(-)
+ create mode 100644 demo/recallie-kid-demo.html
+ create mode 100644 src/app/api/gamification/route.ts
+ create mode 100644 src/lib/gamification.ts
+
+diff --git a/README.md b/README.md
+index 0b9350f..04ef394 100644
+--- a/README.md
++++ b/README.md
+@@ -58,10 +58,18 @@ There's still no login — every add-child call runs as one hard-coded demo pare
+ - **`src/lib/grading.ts`** — simple string-match grading for `short_answer` /
+   `multiple_choice` items (MVP only — see comments for what's missing).
+ - **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
+-  `GET`/`POST /api/children` (parent onboarding — list/add children).
+-- **UI**: `/child` (one-item-at-a-time practice with hints + feedback), `/parent/dashboard`
+-  (skills mastered / areas to give more attention / recent sessions), `/parent/children`
+-  (add a child, switch between them).
++  `GET`/`POST /api/children` (parent onboarding — list/add children), `GET /api/gamification`
++  (points, streak, badges).
++- **UI**: `/child` (one-item-at-a-time practice with hints + feedback, real persisted points/
++  streak/badges), `/parent/dashboard` (skills mastered / areas to give more attention / recent
++  sessions / points, streak & badge shelf), `/parent/children` (add a child, switch between them).
++- **`src/lib/gamification.ts`** — points, daily practice streak, and a 7-badge starter set
++  (First Steps, Mission Complete, 3-/7-Day Streak, Number Ninja, Word Wizard, Century Club).
++  Fully derived from existing `ReviewEvent`/`Session` rows — no new mutable state, so nothing
++  can drift out of sync. See the file's own comments for how to add more badges.
++- **`demo/recallie-kid-demo.html`** — a standalone, no-build HTML mockup of the child practice
++  flow (real Week 1 sample questions, confetti, mascot) for previewing the UX quickly; not
++  wired to the API or database.
+ - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
+   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
+   clamped to term 1 / week 1 because that's the only week with real curriculum-sequence +
+@@ -74,6 +82,24 @@ There's still no login — every add-child call runs as one hard-coded demo pare
+   `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
+   single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s `_note`.
+ 
++## Bugs found and fixed while building gamification
++
++Two pre-existing correctness issues surfaced while testing the new points/streak/badges
++feature end-to-end, both fixed in the same change:
++
++- `GET /api/session/today`'s "already built today" path only ever returned
++  `plannedItemIds`/`completedItemIds`, never the actual question content. Any reload after
++  the first load of the day (or a second visit later that day) showed "no items available"
++  even though the session had unfinished items. Fixed by hydrating full item details for the
++  remaining (not-yet-completed) items on that path too.
++- `POST /api/reviews` looked up "today's session" by child + date only, with no subject
++  filter — on a day with both a Maths and an English session, an answer to one could get
++  marked complete on the *other* subject's session. Fixed by matching on which session
++  actually planned that item, not just which one was created first.
++
++Both were caught by testing the real multi-subject, multi-load flow (not just a single
++happy-path run) and verified fixed with a scripted repro before moving on.
++
+ ## Known nuance to review
+ 
+ The "needs_attention" status (shown to parents as "Area to give more attention") triggers
+@@ -99,5 +125,7 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
+ - Curriculum weeks 2-10 (Term 1) and beyond — `curriculumWeek.ts` is wired up and ready to
+   roll a child forward automatically once more weeks of sequence + item content exist; it's
+   clamped to week 1 only until then (see that file's comments for the constants to raise).
+-- Gamification beyond points/streak (badges, progress map).
++- Gamification: a visual "progress map" (spatial/adventure-style, beyond the badge shelf) is
++  still open; badges are only evaluated on demand (no push notification when one's earned
++  outside an active session).
+ - Monthly parent report generation/email.
+diff --git a/demo/recallie-kid-demo.html b/demo/recallie-kid-demo.html
+new file mode 100644
+index 0000000..71ab408
+--- /dev/null
++++ b/demo/recallie-kid-demo.html
+@@ -0,0 +1,747 @@
++<!DOCTYPE html>
++<html lang="en-AU">
++<head>
++<meta charset="UTF-8" />
++<meta name="viewport" content="width=device-width, initial-scale=1.0" />
++<title>Recallie — Daily Mission</title>
++<link rel="preconnect" href="https://fonts.googleapis.com">
++<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
++<style>
++  :root {
++    --sky: #4fc3f7;
++    --sky-dark: #29a3e0;
++    --sun: #ffc93c;
++    --grass: #4ecb71;
++    --grass-dark: #33a856;
++    --coral: #ff6f6f;
++    --purple: #a78bfa;
++    --ink: #2c3550;
++    --card: #ffffff;
++    --bg1: #eaf7ff;
++    --bg2: #fff6e5;
++  }
++
++  * { box-sizing: border-box; }
++
++  html, body {
++    margin: 0;
++    padding: 0;
++    min-height: 100%;
++    font-family: 'Nunito', system-ui, sans-serif;
++    color: var(--ink);
++    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
++    overflow-x: hidden;
++  }
++
++  h1, h2, h3, .heading {
++    font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
++  }
++
++  /* Floating background blobs for a playful feel */
++  .blob {
++    position: fixed;
++    border-radius: 50%;
++    filter: blur(2px);
++    opacity: 0.35;
++    z-index: 0;
++    animation: float 9s ease-in-out infinite;
++  }
++  .blob1 { width: 160px; height: 160px; background: var(--sun); top: -40px; left: -50px; animation-delay: 0s; }
++  .blob2 { width: 120px; height: 120px; background: var(--grass); bottom: 10%; right: -40px; animation-delay: 2s; }
++  .blob3 { width: 90px; height: 90px; background: var(--purple); top: 30%; right: 6%; animation-delay: 4s; }
++  .blob4 { width: 70px; height: 70px; background: var(--coral); bottom: 4%; left: 8%; animation-delay: 1s; }
++
++  @keyframes float {
++    0%, 100% { transform: translateY(0) scale(1); }
++    50% { transform: translateY(-18px) scale(1.06); }
++  }
++
++  .wrap {
++    position: relative;
++    z-index: 1;
++    max-width: 560px;
++    margin: 0 auto;
++    padding: 20px 16px 60px;
++  }
++
++  /* ---------- Top bar ---------- */
++  .topbar {
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    margin-bottom: 14px;
++  }
++  .brand {
++    display: flex;
++    align-items: center;
++    gap: 8px;
++    font-family: 'Baloo 2', sans-serif;
++    font-weight: 800;
++    font-size: 22px;
++    color: var(--sky-dark);
++  }
++  .brand .dot { color: var(--coral); }
++
++  .stat-pill {
++    display: flex;
++    align-items: center;
++    gap: 6px;
++    background: var(--card);
++    border-radius: 999px;
++    padding: 6px 12px;
++    font-weight: 800;
++    font-size: 14px;
++    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
++  }
++  .stats-row { display: flex; gap: 8px; }
++
++  #starCount, #streakCount { transition: transform 0.25s ease; display: inline-block; }
++  .pop { animation: pop 0.4s ease; }
++  @keyframes pop {
++    0% { transform: scale(1); }
++    40% { transform: scale(1.5); }
++    100% { transform: scale(1); }
++  }
++
++  /* ---------- Mascot + greeting ---------- */
++  .mascot-card {
++    text-align: center;
++    margin-bottom: 10px;
++  }
++  .mascot {
++    font-size: 56px;
++    display: inline-block;
++    animation: bob 2.4s ease-in-out infinite;
++  }
++  @keyframes bob {
++    0%, 100% { transform: translateY(0) rotate(-2deg); }
++    50% { transform: translateY(-8px) rotate(2deg); }
++  }
++  .speech {
++    background: var(--card);
++    border-radius: 16px;
++    padding: 10px 16px;
++    display: inline-block;
++    font-weight: 700;
++    font-size: 15px;
++    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
++    margin-top: 4px;
++    max-width: 90%;
++  }
++
++  /* ---------- Progress ---------- */
++  .progress-outer {
++    background: rgba(255,255,255,0.7);
++    border-radius: 999px;
++    height: 16px;
++    overflow: hidden;
++    margin: 18px 0 6px;
++    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
++  }
++  .progress-inner {
++    height: 100%;
++    border-radius: 999px;
++    background: linear-gradient(90deg, var(--grass), var(--grass-dark));
++    width: 0%;
++    transition: width 0.5s cubic-bezier(.4,1.6,.6,1);
++    position: relative;
++  }
++  .progress-label {
++    text-align: right;
++    font-size: 12px;
++    font-weight: 700;
++    color: #6b7590;
++    margin-bottom: 14px;
++  }
++
++  /* ---------- Question card ---------- */
++  .card {
++    background: var(--card);
++    border-radius: 24px;
++    padding: 22px 20px 20px;
++    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
++    position: relative;
++    overflow: hidden;
++  }
++
++  .badge-row {
++    display: flex;
++    align-items: center;
++    gap: 8px;
++    margin-bottom: 14px;
++    flex-wrap: wrap;
++  }
++  .subject-badge {
++    font-size: 12px;
++    font-weight: 800;
++    text-transform: uppercase;
++    letter-spacing: 0.03em;
++    padding: 5px 10px;
++    border-radius: 999px;
++    color: white;
++  }
++  .subject-badge.maths { background: var(--sky-dark); }
++  .subject-badge.english { background: var(--purple); }
++  .slot-badge {
++    font-size: 12px;
++    font-weight: 700;
++    padding: 5px 10px;
++    border-radius: 999px;
++    background: #fff3d6;
++    color: #a56a00;
++  }
++
++  .question-text {
++    font-family: 'Baloo 2', sans-serif;
++    font-size: 21px;
++    font-weight: 700;
++    line-height: 1.35;
++    margin: 4px 0 18px;
++    color: var(--ink);
++  }
++
++  .options {
++    display: grid;
++    gap: 10px;
++    margin-bottom: 14px;
++  }
++  .opt-btn {
++    text-align: left;
++    font-family: inherit;
++    font-size: 16px;
++    font-weight: 700;
++    padding: 14px 16px;
++    border-radius: 14px;
++    border: 2.5px solid #e3e9f5;
++    background: #f8fafd;
++    color: var(--ink);
++    cursor: pointer;
++    transition: all 0.15s ease;
++  }
++  .opt-btn:hover { border-color: var(--sky); background: #eef8ff; transform: translateY(-1px); }
++  .opt-btn.selected { border-color: var(--sky-dark); background: #e3f4ff; }
++  .opt-btn.correct { border-color: var(--grass-dark); background: #e4f9ea; }
++  .opt-btn.incorrect { border-color: var(--coral); background: #ffecec; }
++  .opt-btn:disabled { cursor: default; }
++
++  .text-input-row {
++    display: flex;
++    gap: 8px;
++    margin-bottom: 14px;
++  }
++  .text-input {
++    flex: 1;
++    font-family: inherit;
++    font-size: 16px;
++    font-weight: 700;
++    padding: 13px 16px;
++    border-radius: 14px;
++    border: 2.5px solid #e3e9f5;
++    outline: none;
++  }
++  .text-input:focus { border-color: var(--sky); }
++
++  .hint-btn {
++    background: none;
++    border: none;
++    font-family: inherit;
++    font-weight: 800;
++    font-size: 14px;
++    color: #b7791f;
++    cursor: pointer;
++    padding: 6px 0;
++  }
++  .hint-box {
++    background: #fff8e6;
++    border-radius: 12px;
++    padding: 10px 14px;
++    font-size: 14px;
++    font-weight: 700;
++    color: #8a5a00;
++    margin-top: 6px;
++  }
++
++  .check-btn {
++    width: 100%;
++    font-family: 'Baloo 2', sans-serif;
++    font-size: 18px;
++    font-weight: 800;
++    color: white;
++    background: linear-gradient(180deg, var(--sky), var(--sky-dark));
++    border: none;
++    border-radius: 16px;
++    padding: 15px;
++    cursor: pointer;
++    box-shadow: 0 5px 0 var(--sky-dark);
++    transition: transform 0.08s ease, box-shadow 0.08s ease;
++  }
++  .check-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--sky-dark); }
++  .check-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
++
++  /* ---------- Feedback ---------- */
++  .feedback {
++    border-radius: 18px;
++    padding: 18px;
++    margin-top: 4px;
++    animation: slideUp 0.35s ease;
++  }
++  @keyframes slideUp {
++    from { opacity: 0; transform: translateY(14px); }
++    to { opacity: 1; transform: translateY(0); }
++  }
++  .feedback.good { background: #e4f9ea; }
++  .feedback.retry { background: #fff2e2; }
++  .feedback h3 { margin: 0 0 10px; font-size: 19px; }
++  .feedback.good h3 { color: #1c7a3c; }
++  .feedback.retry h3 { color: #b06a00; }
++  .feedback ol { margin: 0 0 12px; padding-left: 20px; font-size: 14px; font-weight: 700; line-height: 1.6; }
++  .feedback .note { font-size: 13px; font-style: italic; color: #6b5a3c; margin-bottom: 12px; }
++  .next-btn {
++    width: 100%;
++    font-family: 'Baloo 2', sans-serif;
++    font-size: 17px;
++    font-weight: 800;
++    color: white;
++    background: linear-gradient(180deg, #3d4568, var(--ink));
++    border: none;
++    border-radius: 14px;
++    padding: 13px;
++    cursor: pointer;
++    box-shadow: 0 4px 0 #1b2038;
++  }
++  .next-btn:active { transform: translateY(3px); box-shadow: none; }
++
++  .points-fly {
++    position: absolute;
++    font-family: 'Baloo 2', sans-serif;
++    font-weight: 800;
++    font-size: 20px;
++    color: var(--grass-dark);
++    pointer-events: none;
++    animation: fly 1s ease forwards;
++  }
++  @keyframes fly {
++    0% { opacity: 1; transform: translateY(0) scale(1); }
++    100% { opacity: 0; transform: translateY(-50px) scale(1.3); }
++  }
++
++  /* ---------- Completion screen ---------- */
++  .complete {
++    display: none;
++    text-align: center;
++    background: var(--card);
++    border-radius: 24px;
++    padding: 40px 24px;
++    box-shadow: 0 10px 0 rgba(0,0,0,0.05), 0 14px 30px rgba(41,163,224,0.12);
++  }
++  .complete .trophy {
++    font-size: 70px;
++    display: inline-block;
++    animation: trophybounce 1.1s ease infinite;
++  }
++  @keyframes trophybounce {
++    0%, 100% { transform: translateY(0) rotate(0deg); }
++    30% { transform: translateY(-16px) rotate(-6deg); }
++    60% { transform: translateY(0) rotate(6deg); }
++  }
++  .complete h2 { font-size: 26px; margin: 10px 0 6px; color: var(--ink); }
++  .complete p { font-weight: 700; color: #5c6584; margin: 0 0 22px; }
++  .summary-row {
++    display: flex;
++    justify-content: center;
++    gap: 14px;
++    margin-bottom: 26px;
++    flex-wrap: wrap;
++  }
++  .summary-pill {
++    background: #f8fafd;
++    border-radius: 16px;
++    padding: 12px 18px;
++    font-weight: 800;
++    min-width: 90px;
++  }
++  .summary-pill .big { display: block; font-size: 24px; margin-bottom: 2px; }
++  .stickers { font-size: 30px; letter-spacing: 8px; margin-bottom: 24px; }
++  .replay-btn {
++    font-family: 'Baloo 2', sans-serif;
++    font-size: 16px;
++    font-weight: 800;
++    color: var(--sky-dark);
++    background: #eaf7ff;
++    border: 2.5px solid var(--sky);
++    border-radius: 14px;
++    padding: 12px 22px;
++    cursor: pointer;
++  }
++
++  canvas#confetti {
++    position: fixed;
++    inset: 0;
++    pointer-events: none;
++    z-index: 5;
++  }
++
++  .footnote {
++    text-align: center;
++    font-size: 12px;
++    color: #9aa3bd;
++    margin-top: 22px;
++    font-weight: 700;
++  }
++
++  @media (max-width: 380px) {
++    .question-text { font-size: 18px; }
++    .mascot { font-size: 46px; }
++  }
++</style>
++</head>
++<body>
++
++<div class="blob blob1"></div>
++<div class="blob blob2"></div>
++<div class="blob blob3"></div>
++<div class="blob blob4"></div>
++
++<canvas id="confetti"></canvas>
++
++<div class="wrap">
++
++  <div class="topbar">
++    <div class="brand">Recallie <span class="dot">●</span></div>
++    <div class="stats-row">
++      <div class="stat-pill">⭐ <span id="starCount">0</span></div>
++      <div class="stat-pill">🔥 <span id="streakCount">0</span></div>
++    </div>
++  </div>
++
++  <div class="mascot-card">
++    <div class="mascot" id="mascot">🦊</div>
++    <div class="speech" id="speech">Hi! Ready for today's mission?</div>
++  </div>
++
++  <div class="progress-outer"><div class="progress-inner" id="progressBar"></div></div>
++  <div class="progress-label"><span id="progressLabel">0 / 6</span></div>
++
++  <div class="card" id="questionCard"></div>
++
++  <div class="complete" id="completeCard">
++    <div class="trophy">🏆</div>
++    <h2>Mission complete!</h2>
++    <p id="completeMsg">You smashed today's practice — awesome work!</p>
++    <div class="summary-row">
++      <div class="summary-pill"><span class="big" id="finalStars">0</span>stars earned</div>
++      <div class="summary-pill"><span class="big" id="finalStreak">0</span>best streak</div>
++      <div class="summary-pill"><span class="big" id="finalCorrect">0/6</span>correct</div>
++    </div>
++    <div class="stickers" id="stickers"></div>
++    <button class="replay-btn" onclick="restart()">Play again 🔁</button>
++  </div>
++
++  <p class="footnote">A little practice every day builds big skills 🌱</p>
++</div>
++
++<script>
++/* ------------------------------------------------------------------
++   Sample items — mirrors items from Recallie's real Year 3 Week 1
++   Maths + English bank, interleaved the way the real session builder
++   would order them. This is a static front-end demo, not wired to
++   the app's API or database.
++------------------------------------------------------------------- */
++const ITEMS = [
++  {
++    subject: "maths", slot: "New learning",
++    q: "Write 6,509 in expanded form (thousands + hundreds + tens + ones).",
++    type: "short",
++    answers: ["6000 + 500 + 0 + 9", "6000 + 500 + 9"],
++    hint: "Multiply each digit by its column's value: 6×1000, 5×100, 0×10, 9×1.",
++    steps: [
++      "Look at each digit and the column it's in.",
++      "6 thousands = 6000, 5 hundreds = 500, 0 tens = 0, 9 ones = 9.",
++      "Write it as an addition sentence: 6000 + 500 + 0 + 9."
++    ]
++  },
++  {
++    subject: "english", slot: "Mix it up",
++    q: "Which unit would you use to measure how much water is in a bathtub?",
++    type: "mc",
++    options: ["Millilitres", "Litres"],
++    answers: ["Litres"],
++    hint: "Is a bathtub full of just a little water, or a lot?",
++    steps: ["A bathtub holds a big amount of water.", "Litres are used for bigger amounts of liquid.", "So the answer is litres!"]
++  },
++  {
++    subject: "maths", slot: "Warm-up review",
++    q: "Order these numbers from smallest to largest: 3,102   1,999   3,120   999",
++    type: "short",
++    answers: ["999, 1999, 3102, 3120", "999, 1,999, 3,102, 3,120"],
++    hint: "Start by comparing how many digits each number has.",
++    steps: [
++      "999 has only 3 digits — it's the smallest.",
++      "1,999 has 4 digits but starts with a 1.",
++      "3,102 and 3,120 both start with 3 — compare the next column (0 vs 2).",
++      "Smallest to largest: 999, 1,999, 3,102, 3,120."
++    ]
++  },
++  {
++    subject: "english", slot: "New learning",
++    q: "A recipe, a story, and a weather report are all examples of what?",
++    type: "mc",
++    options: ["Text types", "Punctuation", "Handwriting styles"],
++    answers: ["Text types"],
++    hint: "Think about how each one is written for a different purpose.",
++    steps: ["Each one has its own purpose and audience.", "A recipe informs, a story entertains, a weather report reports facts.", "They're all different text types!"]
++  },
++  {
++    subject: "maths", slot: "Mix it up",
++    q: "Would you measure the length of your pencil in millimetres, centimetres, or metres?",
++    type: "mc",
++    options: ["Millimetres", "Centimetres", "Metres"],
++    answers: ["Centimetres"],
++    hint: "Is your pencil closer in size to your finger or to a door?",
++    steps: ["A pencil is a small, everyday object.", "Centimetres suit small hand-sized things.", "So centimetres is the best choice!"]
++  },
++  {
++    subject: "english", slot: "Warm-up review",
++    q: "In a recount, what usually comes first?",
++    type: "mc",
++    options: ["The ending", "An orientation (who, when, where)", "A list of ingredients"],
++    answers: ["An orientation (who, when, where)"],
++    hint: "Think about how you'd start telling a friend about your weekend.",
++    steps: ["A recount tells events in the order they happened.", "It starts by setting the scene: who, when, and where.", "That's called the orientation."]
++  }
++];
++
++let idx = 0, stars = 0, streak = 0, bestStreak = 0, correctCount = 0, hintUsed = false;
++
++const speechLines = {
++  start: ["Hi! Ready for today's mission?", "Let's warm up our brains! 🧠", "Six quick questions — you've got this!"],
++  correctStreak: ["Whoa, on fire! 🔥", "You're on a roll!", "Nailed it again!"],
++  correct: ["Yes! Nice thinking!", "That's it!", "Great job!"],
++  retry: ["Good try — let's learn this one together.", "Almost! Here's how it works.", "No worries, mistakes help us grow 🌱"]
++};
++
++function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
++function setSpeech(text) { document.getElementById('speech').textContent = text; }
++function setMascot(e) { document.getElementById('mascot').textContent = e; }
++
++function normalize(s) {
++  return String(s).trim().toLowerCase().replace(/\s+/g, " ").replace(/[.,;:!?]+$/g, "");
++}
++
++function bump(id) {
++  const el = document.getElementById(id);
++  el.classList.remove('pop');
++  void el.offsetWidth;
++  el.classList.add('pop');
++}
++
++function updateProgress() {
++  const pct = (idx / ITEMS.length) * 100;
++  document.getElementById('progressBar').style.width = pct + '%';
++  document.getElementById('progressLabel').textContent = Math.min(idx + 1, ITEMS.length) + ' / ' + ITEMS.length;
++}
++
++function renderQuestion() {
++  hintUsed = false;
++  const item = ITEMS[idx];
++  const card = document.getElementById('questionCard');
++  updateProgress();
++
++  let optionsHtml = '';
++  if (item.type === 'mc') {
++    optionsHtml = '<div class="options">' + item.options.map((o, i) =>
++      `<button class="opt-btn" data-val="${o.replace(/"/g,'&quot;')}" onclick="selectOption(this)">${o}</button>`
++    ).join('') + '</div>';
++  } else {
++    optionsHtml = `<div class="text-input-row">
++      <input type="text" class="text-input" id="answerInput" placeholder="Type your answer…" autocomplete="off" onkeydown="if(event.key==='Enter') submitAnswer()">
++    </div>`;
++  }
++
++  card.innerHTML = `
++    <div class="badge-row">
++      <span class="subject-badge ${item.subject}">${item.subject === 'maths' ? '🔢 Maths' : '📖 English'}</span>
++      <span class="slot-badge">${item.slot}</span>
++    </div>
++    <p class="question-text">${item.q}</p>
++    ${optionsHtml}
++    <div id="hintArea">
++      <button class="hint-btn" onclick="showHint()">💡 Need a hint?</button>
++    </div>
++    <div style="height:14px"></div>
++    <button class="check-btn" id="checkBtn" onclick="submitAnswer()" ${item.type === 'mc' ? 'disabled' : ''}>Check my answer</button>
++  `;
++
++  if (item.type === 'short') {
++    setTimeout(() => document.getElementById('answerInput')?.focus(), 50);
++  }
++}
++
++let selectedOption = null;
++function selectOption(btn) {
++  document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
++  btn.classList.add('selected');
++  selectedOption = btn.dataset.val;
++  document.getElementById('checkBtn').disabled = false;
++}
++
++function showHint() {
++  hintUsed = true;
++  const item = ITEMS[idx];
++  document.getElementById('hintArea').innerHTML =
++    `<div class="hint-box">💡 ${item.hint}</div>`;
++}
++
++function submitAnswer() {
++  const item = ITEMS[idx];
++  let given;
++  if (item.type === 'mc') {
++    given = selectedOption;
++    document.querySelectorAll('.opt-btn').forEach(b => {
++      b.disabled = true;
++      const val = normalize(b.dataset.val);
++      if (item.answers.map(normalize).includes(val)) b.classList.add('correct');
++      else if (b.classList.contains('selected')) b.classList.add('incorrect');
++    });
++  } else {
++    given = document.getElementById('answerInput').value;
++    document.getElementById('answerInput').disabled = true;
++  }
++
++  const isCorrect = item.answers.map(normalize).includes(normalize(given || ''));
++  const card = document.getElementById('questionCard');
++  document.getElementById('checkBtn').remove();
++
++  if (isCorrect) {
++    correctCount++;
++    streak++;
++    bestStreak = Math.max(bestStreak, streak);
++    const gained = hintUsed ? 5 : 10;
++    stars += gained;
++    document.getElementById('starCount').textContent = stars;
++    document.getElementById('streakCount').textContent = streak;
++    bump('starCount'); bump('streakCount');
++    setMascot(streak >= 3 ? '🤩' : '🦊');
++    setSpeech(streak >= 3 ? pick(speechLines.correctStreak) : pick(speechLines.correct));
++    launchConfettiBurst();
++
++    const fb = document.createElement('div');
++    fb.className = 'feedback good';
++    fb.innerHTML = `
++      <h3>Nice work — that's correct! 🎉  <span style="float:right">+${gained}⭐</span></h3>
++      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
++      <button class="next-btn" onclick="nextItem()">Next question →</button>
++    `;
++    card.appendChild(fb);
++  } else {
++    streak = 0;
++    document.getElementById('streakCount').textContent = streak;
++    setMascot('🙂');
++    setSpeech(pick(speechLines.retry));
++
++    const fb = document.createElement('div');
++    fb.className = 'feedback retry';
++    fb.innerHTML = `
++      <h3>Good try — let's see how to get there 🌱</h3>
++      <ol>${item.steps.map(s => `<li>${s}</li>`).join('')}</ol>
++      <button class="next-btn" onclick="nextItem()">Next question →</button>
++    `;
++    card.appendChild(fb);
++  }
++}
++
++function nextItem() {
++  idx++;
++  selectedOption = null;
++  if (idx >= ITEMS.length) {
++    showComplete();
++  } else {
++    renderQuestion();
++  }
++}
++
++function showComplete() {
++  updateProgress();
++  document.getElementById('questionCard').style.display = 'none';
++  document.getElementById('completeCard').style.display = 'block';
++  document.getElementById('finalStars').textContent = stars;
++  document.getElementById('finalStreak').textContent = bestStreak;
++  document.getElementById('finalCorrect').textContent = correctCount + '/' + ITEMS.length;
++
++  let msg = "You smashed today's practice — awesome work!";
++  if (correctCount === ITEMS.length) msg = "Perfect mission! Every single question — incredible! 🌟";
++  else if (correctCount >= ITEMS.length - 1) msg = "So close to perfect — brilliant effort today!";
++  document.getElementById('completeMsg').textContent = msg;
++
++  const stickerSets = ['🌟🦄🎈', '🚀🪐✨', '🐝🌼🍯', '🦕🌈🎉'];
++  document.getElementById('stickers').textContent = pick(stickerSets);
++
++  setMascot('🏆');
++  setSpeech("Mission complete — see you tomorrow!");
++  launchConfettiBurst(true);
++}
++
++function restart() {
++  idx = 0; stars = 0; streak = 0; bestStreak = 0; correctCount = 0;
++  document.getElementById('starCount').textContent = 0;
++  document.getElementById('streakCount').textContent = 0;
++  document.getElementById('completeCard').style.display = 'none';
++  document.getElementById('questionCard').style.display = 'block';
++  setMascot('🦊');
++  setSpeech(pick(speechLines.start));
++  renderQuestion();
++}
++
++/* ---------------- Confetti (lightweight canvas, no libraries) ---------------- */
++const canvas = document.getElementById('confetti');
++const ctx = canvas.getContext('2d');
++function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
++resizeCanvas();
++window.addEventListener('resize', resizeCanvas);
++
++let particles = [];
++const colors = ['#ff6f6f', '#ffc93c', '#4ecb71', '#4fc3f7', '#a78bfa'];
++
++function launchConfettiBurst(big) {
++  const count = big ? 140 : 45;
++  for (let i = 0; i < count; i++) {
++    particles.push({
++      x: canvas.width / 2 + (Math.random() - 0.5) * (big ? canvas.width * 0.6 : 200),
++      y: big ? canvas.height * 0.3 : 160,
++      vx: (Math.random() - 0.5) * 8,
++      vy: Math.random() * -8 - 2,
++      size: Math.random() * 7 + 4,
++      color: colors[Math.floor(Math.random() * colors.length)],
++      rot: Math.random() * 360,
++      vr: (Math.random() - 0.5) * 12,
++      life: 0
++    });
++  }
++}
++
++function animate() {
++  ctx.clearRect(0, 0, canvas.width, canvas.height);
++  particles.forEach(p => {
++    p.vy += 0.28;
++    p.x += p.vx;
++    p.y += p.vy;
++    p.rot += p.vr;
++    p.life++;
++    ctx.save();
++    ctx.translate(p.x, p.y);
++    ctx.rotate(p.rot * Math.PI / 180);
++    ctx.fillStyle = p.color;
++    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
++    ctx.restore();
++  });
++  particles = particles.filter(p => p.y < canvas.height + 30 && p.life < 220);
++  requestAnimationFrame(animate);
++}
++animate();
++
++/* ---------------- Init ---------------- */
++setSpeech(pick(speechLines.start));
++renderQuestion();
++</script>
++</body>
++</html>
+diff --git a/src/app/api/dashboard/route.ts b/src/app/api/dashboard/route.ts
+index 4506f01..af73fa5 100644
+--- a/src/app/api/dashboard/route.ts
++++ b/src/app/api/dashboard/route.ts
+@@ -3,6 +3,7 @@ import { desc, eq } from "drizzle-orm";
+ import { db } from "@/db/client";
+ import { childSkillStates, sessions, skills, users } from "@/db/schema";
+ import { statusToParentLabel } from "@/lib/spacedRepetition";
++import { getGamificationSummary } from "@/lib/gamification";
+ 
+ /**
+  * GET /api/dashboard?childId=...
+@@ -36,6 +37,8 @@ export async function GET(req: NextRequest) {
+     .orderBy(desc(sessions.date))
+     .limit(10);
+ 
++  const { stats, badges } = await getGamificationSummary(childId);
++
+   const skillSummaries = states.map((r) => ({
+     skillId: r.skill.id,
+     subject: r.skill.subject,
+@@ -53,6 +56,9 @@ export async function GET(req: NextRequest) {
+     skillsMastered: skillSummaries.filter((s) => s.status === "mastered"),
+     areasToGiveMoreAttention: skillSummaries.filter((s) => s.status === "needs_attention"),
+     onTrack: skillSummaries.filter((s) => s.status === "on_track"),
++    points: stats.totalPoints,
++    currentStreakDays: stats.currentStreakDays,
++    badges,
+     recentSessions: recentSessions.map((s) => ({
+       id: s.id,
+       date: s.date,
+diff --git a/src/app/api/gamification/route.ts b/src/app/api/gamification/route.ts
+new file mode 100644
+index 0000000..bfc9e18
+--- /dev/null
++++ b/src/app/api/gamification/route.ts
+@@ -0,0 +1,26 @@
++import { NextRequest, NextResponse } from "next/server";
++import { getGamificationSummary } from "@/lib/gamification";
++
++/**
++ * GET /api/gamification?childId=...
++ *
++ * Lifetime points, current daily practice streak, and badge shelf (earned +
++ * locked, so the UI can tease "3 more correct to unlock"). Used by the child
++ * page (to show real, persisted totals instead of resetting every session)
++ * and the parent dashboard.
++ */
++export async function GET(req: NextRequest) {
++  const childId = req.nextUrl.searchParams.get("childId");
++  if (!childId) {
++    return NextResponse.json({ error: "childId query param is required" }, { status: 400 });
++  }
++
++  const { stats, badges } = await getGamificationSummary(childId);
++
++  return NextResponse.json({
++    totalPoints: stats.totalPoints,
++    currentStreakDays: stats.currentStreakDays,
++    totalSessionsCompleted: stats.totalSessionsCompleted,
++    badges,
++  });
++}
+diff --git a/src/app/api/reviews/route.ts b/src/app/api/reviews/route.ts
+index 1966fd2..3ef2cc3 100644
+--- a/src/app/api/reviews/route.ts
++++ b/src/app/api/reviews/route.ts
+@@ -5,6 +5,7 @@ import { childSkillStates, items, reviewEvents, sessions } from "@/db/schema";
+ import { ensureChildSkillState } from "@/lib/sessionBuilder";
+ import { updateSkillAfterReview, statusToParentLabel } from "@/lib/spacedRepetition";
+ import { checkAnswer } from "@/lib/grading";
++import { pointsForAnswer } from "@/lib/gamification";
+ 
+ type ReviewBody = {
+   childId: string;
+@@ -103,13 +104,17 @@ export async function POST(req: NextRequest) {
+     isMixed: body.slotType === "mixed",
+   });
+ 
+-  // Mark the item completed on today's session, if one exists.
++  // Mark the item completed on today's session, if one exists. A child can
++  // have both a Maths and an English session on the same day, so match by
++  // which session actually planned this item — not just "today" — otherwise
++  // a review from one subject could get attributed to the other's session.
+   const today = startOfDay(now);
+-  const [todaySession] = await db
++  const todaysSessions = await db
+     .select()
+     .from(sessions)
+-    .where(and(eq(sessions.childId, childId), eq(sessions.date, today)))
+-    .limit(1);
++    .where(and(eq(sessions.childId, childId), eq(sessions.date, today)));
++
++  const todaySession = todaysSessions.find((s) => s.plannedItemIds.includes(itemId));
+ 
+   if (todaySession && !todaySession.completedItemIds.includes(itemId)) {
+     const completedItemIds = [...todaySession.completedItemIds, itemId];
+@@ -131,5 +136,6 @@ export async function POST(req: NextRequest) {
+     skillStatus: updated.status,
+     skillStatusLabel: statusToParentLabel(updated.status),
+     nextReviewAt: nextReviewAt.toISOString(),
++    pointsEarned: pointsForAnswer(correct, hintUsed),
+   });
+ }
+diff --git a/src/app/api/session/today/route.ts b/src/app/api/session/today/route.ts
+index 5e17606..6adbf68 100644
+--- a/src/app/api/session/today/route.ts
++++ b/src/app/api/session/today/route.ts
+@@ -1,7 +1,7 @@
+ import { NextRequest, NextResponse } from "next/server";
+-import { and, eq } from "drizzle-orm";
++import { and, eq, inArray } from "drizzle-orm";
+ import { db } from "@/db/client";
+-import { sessions, users } from "@/db/schema";
++import { items, sessions, skills, users } from "@/db/schema";
+ import { buildTodaySession } from "@/lib/sessionBuilder";
+ import { computeCurrentTermWeek } from "@/lib/curriculumWeek";
+ 
+@@ -11,6 +11,45 @@ function startOfDay(d: Date) {
+   return copy;
+ }
+ 
++/**
++ * Re-fetches full item details for an already-built session (the "reused"
++ * path below only has plannedItemIds/completedItemIds on the Session row,
++ * not the full question content). Returns them in the original planned
++ * order, skipping anything already completed so a child reloading mid-day
++ * continues where they left off instead of redoing finished items.
++ *
++ * Note: the review/new/mixed slotType chosen when the session was first
++ * built isn't persisted per-item, so hydrated items default to "review" for
++ * that label — a cosmetic simplification, not a correctness issue.
++ */
++async function hydrateRemainingItems(plannedItemIds: string[], completedItemIds: string[]) {
++  const remainingIds = plannedItemIds.filter((id) => !completedItemIds.includes(id));
++  if (remainingIds.length === 0) return [];
++
++  const rows = await db
++    .select({ item: items, skill: skills })
++    .from(items)
++    .innerJoin(skills, eq(items.skillId, skills.id))
++    .where(inArray(items.id, remainingIds));
++
++  const byId = new Map(rows.map((r) => [r.item.id, r]));
++  return remainingIds
++    .map((id) => byId.get(id))
++    .filter((r): r is NonNullable<typeof r> => Boolean(r))
++    .map((r) => ({
++      itemId: r.item.id,
++      skillId: r.item.skillId,
++      skillDescription: r.skill.canonicalDescription,
++      questionText: r.item.questionText,
++      passage: r.item.passage ?? null,
++      questionType: r.item.questionType,
++      difficulty: r.item.difficulty,
++      hints: r.item.hints ?? [],
++      tags: r.item.tags ?? [],
++      slotType: "review" as const,
++    }));
++}
++
+ /**
+  * GET /api/session/today?childId=...&subject=maths|english
+  *
+@@ -48,9 +87,14 @@ export async function GET(req: NextRequest) {
+     .limit(1);
+ 
+   if (existing[0] && existing[0].plannedItemIds.length > 0) {
++    const remainingItems = await hydrateRemainingItems(
++      existing[0].plannedItemIds,
++      existing[0].completedItemIds
++    );
+     return NextResponse.json({
+       sessionId: existing[0].id,
+       status: existing[0].status,
++      items: remainingItems,
+       plannedItemIds: existing[0].plannedItemIds,
+       completedItemIds: existing[0].completedItemIds,
+       reused: true,
+diff --git a/src/app/child/page.tsx b/src/app/child/page.tsx
+index e86333a..891261e 100644
+--- a/src/app/child/page.tsx
++++ b/src/app/child/page.tsx
+@@ -25,6 +25,21 @@ type ReviewFeedback = {
+   stepByStepSolution: string[];
+   commonMisconceptions: string[];
+   skillStatusLabel: string;
++  pointsEarned: number;
++};
++
++type Badge = {
++  key: string;
++  emoji: string;
++  label: string;
++  description: string;
++  earned: boolean;
++};
++
++type GamificationSummary = {
++  totalPoints: number;
++  currentStreakDays: number;
++  badges: Badge[];
+ };
+ 
+ const SLOT_LABEL: Record<SessionItem["slotType"], string> = {
+@@ -46,8 +61,34 @@ function ChildSessionInner() {
+   const [feedback, setFeedback] = useState<ReviewFeedback | null>(null);
+   const [submitting, setSubmitting] = useState(false);
+   const [startedAt, setStartedAt] = useState<number>(Date.now());
+-  const [points, setPoints] = useState(0);
+-  const [streak, setStreak] = useState(0);
++  const [sessionPoints, setSessionPoints] = useState(0);
++  const [answerStreak, setAnswerStreak] = useState(0);
++  const [gamification, setGamification] = useState<GamificationSummary | null>(null);
++  const [newBadge, setNewBadge] = useState<Badge | null>(null);
++  const [alreadyCompletedToday, setAlreadyCompletedToday] = useState(false);
++
++  function refreshGamification() {
++    fetch(`/api/gamification?childId=${childId}`)
++      .then((res) => (res.ok ? res.json() : null))
++      .then((data: GamificationSummary | null) => {
++        if (!data) return;
++        setGamification((prev) => {
++          if (prev) {
++            const justEarned = data.badges.find(
++              (b) => b.earned && !prev.badges.find((pb) => pb.key === b.key)?.earned
++            );
++            if (justEarned) setNewBadge(justEarned);
++          }
++          return data;
++        });
++      })
++      .catch(() => {});
++  }
++
++  useEffect(() => {
++    refreshGamification();
++    // eslint-disable-next-line react-hooks/exhaustive-deps
++  }, [childId]);
+ 
+   useEffect(() => {
+     let cancelled = false;
+@@ -57,6 +98,7 @@ function ChildSessionInner() {
+     setFeedback(null);
+     setAnswer("");
+     setHintsShown(0);
++    setAlreadyCompletedToday(false);
+ 
+     fetch(`/api/session/today?childId=${childId}&subject=${subject}`)
+       .then(async (res) => {
+@@ -65,7 +107,14 @@ function ChildSessionInner() {
+       })
+       .then((data) => {
+         if (cancelled) return;
+-        setSessionItems(data.items ?? []);
++        const fetchedItems = data.items ?? [];
++        setSessionItems(fetchedItems);
++        // A reused session that's already fully completed today comes back
++        // with status "completed" and no remaining items — distinct from
++        // "no content exists yet for this subject" (plannedItemIds is empty).
++        setAlreadyCompletedToday(
++          data.status === "completed" && fetchedItems.length === 0 && (data.plannedItemIds?.length ?? 0) > 0
++        );
+         setStartedAt(Date.now());
+       })
+       .catch((err) => !cancelled && setError(err.message))
+@@ -101,11 +150,12 @@ function ChildSessionInner() {
+       const data: ReviewFeedback = await res.json();
+       setFeedback(data);
+       if (data.correct) {
+-        setPoints((p) => p + (hintsShown > 0 ? 5 : 10));
+-        setStreak((s) => s + 1);
++        setSessionPoints((p) => p + data.pointsEarned);
++        setAnswerStreak((s) => s + 1);
+       } else {
+-        setStreak(0);
++        setAnswerStreak(0);
+       }
++      refreshGamification();
+     } catch (err: any) {
+       setError(err.message);
+     } finally {
+@@ -145,9 +195,19 @@ function ChildSessionInner() {
+         </div>
+       </div>
+ 
+-      <div className="mb-4 flex items-center gap-4 text-sm text-slate-500">
+-        <span>⭐ {points} points</span>
+-        <span>🔥 {streak} in a row</span>
++      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
++        <span>⭐ {sessionPoints} today</span>
++        <span>🔥 {answerStreak} in a row</span>
++        {gamification && (
++          <>
++            <span className="text-slate-300">·</span>
++            <span>🌟 {gamification.totalPoints} total</span>
++            <span>
++              📅 {gamification.currentStreakDays}{" "}
++              {gamification.currentStreakDays === 1 ? "day" : "days"} streak
++            </span>
++          </>
++        )}
+         {sessionItems.length > 0 && (
+           <span className="ml-auto">
+             {Math.min(index + 1, sessionItems.length)} / {sessionItems.length}
+@@ -155,6 +215,15 @@ function ChildSessionInner() {
+         )}
+       </div>
+ 
++      {newBadge && (
++        <button
++          onClick={() => setNewBadge(null)}
++          className="mb-4 w-full rounded-xl border border-amber-300 bg-amber-50 p-3 text-left text-sm font-semibold text-amber-800 shadow-sm"
++        >
++          {newBadge.emoji} New badge unlocked: {newBadge.label}! <span className="font-normal">(tap to dismiss)</span>
++        </button>
++      )}
++
+       {sessionItems.length > 0 && (
+         <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-slate-100">
+           <div
+@@ -167,13 +236,24 @@ function ChildSessionInner() {
+       {loading && <p className="text-slate-500">Loading today&apos;s mission…</p>}
+       {error && <p className="text-red-600">{error}</p>}
+ 
+-      {!loading && !error && sessionItems.length === 0 && (
++      {!loading && !error && sessionItems.length === 0 && !alreadyCompletedToday && (
+         <p className="text-slate-500">
+           No items available yet for this subject — the item bank is still being built. Try Maths
+           (Week 1 has sample items seeded).
+         </p>
+       )}
+ 
++      {!loading && !error && alreadyCompletedToday && (
++        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
++          <div className="mb-2 text-4xl">✅</div>
++          <h2 className="mb-1 text-xl font-bold text-emerald-900">Already done for today!</h2>
++          <p className="text-emerald-800">
++            You finished today&apos;s {subject} mission. Come back tomorrow for a fresh one, or switch
++            subjects above.
++          </p>
++        </div>
++      )}
++
+       {!loading && current && !isDone && (
+         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+           <div className="mb-3 flex items-center gap-2">
+@@ -260,9 +340,15 @@ function ChildSessionInner() {
+           <div className="mb-2 text-4xl">🌟</div>
+           <h2 className="mb-1 text-xl font-bold text-emerald-900">Mission complete!</h2>
+           <p className="text-emerald-800">
+-            You earned {points} points today and got {streak > 0 ? `a ${streak}-answer streak` : "great practice in"}.
+-            Keep it up!
++            You earned {sessionPoints} points today and got{" "}
++            {answerStreak > 0 ? `a ${answerStreak}-answer streak` : "great practice in"}. Keep it up!
+           </p>
++          {gamification && (
++            <p className="mt-2 text-sm text-emerald-700">
++              🌟 {gamification.totalPoints} points overall · 📅 {gamification.currentStreakDays}{" "}
++              {gamification.currentStreakDays === 1 ? "day" : "days"} streak
++            </p>
++          )}
+         </div>
+       )}
+     </div>
+diff --git a/src/app/parent/dashboard/page.tsx b/src/app/parent/dashboard/page.tsx
+index 6713dd5..df0ed86 100644
+--- a/src/app/parent/dashboard/page.tsx
++++ b/src/app/parent/dashboard/page.tsx
+@@ -18,11 +18,22 @@ type SkillSummary = {
+   nextReviewAt: string;
+ };
+ 
++type Badge = {
++  key: string;
++  emoji: string;
++  label: string;
++  description: string;
++  earned: boolean;
++};
++
+ type DashboardData = {
+   child: { id: string; displayName: string; yearLevel: number; state: string };
+   skillsMastered: SkillSummary[];
+   areasToGiveMoreAttention: SkillSummary[];
+   onTrack: SkillSummary[];
++  points: number;
++  currentStreakDays: number;
++  badges: Badge[];
+   recentSessions: {
+     id: string;
+     date: string;
+@@ -78,10 +89,48 @@ function ParentDashboardInner() {
+           Manage children
+         </Link>
+       </div>
+-      <p className="mb-8 text-sm text-slate-500">
++      <p className="mb-4 text-sm text-slate-500">
+         Year {data.child.yearLevel} · {data.child.state}
+       </p>
+ 
++      <div className="mb-8 flex flex-wrap gap-3">
++        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
++          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Total points</p>
++          <p className="text-xl font-bold text-slate-900">⭐ {data.points}</p>
++        </div>
++        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
++          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Practice streak</p>
++          <p className="text-xl font-bold text-slate-900">
++            🔥 {data.currentStreakDays} {data.currentStreakDays === 1 ? "day" : "days"}
++          </p>
++        </div>
++        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
++          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Badges earned</p>
++          <p className="text-xl font-bold text-slate-900">
++            🏅 {data.badges.filter((b) => b.earned).length}/{data.badges.length}
++          </p>
++        </div>
++      </div>
++
++      <section className="mb-8">
++        <h2 className="mb-3 text-lg font-semibold text-slate-700">Badges</h2>
++        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
++          {data.badges.map((b) => (
++            <div
++              key={b.key}
++              className={`rounded-xl border p-3 text-center ${
++                b.earned ? "border-amber-200 bg-amber-50" : "border-slate-200 bg-slate-50 opacity-60"
++              }`}
++              title={b.description}
++            >
++              <div className="mb-1 text-2xl">{b.earned ? b.emoji : "🔒"}</div>
++              <p className="text-xs font-semibold text-slate-700">{b.label}</p>
++              <p className="mt-0.5 text-[11px] text-slate-500">{b.description}</p>
++            </div>
++          ))}
++        </div>
++      </section>
++
+       <section className="mb-8">
+         <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-emerald-700">
+           🏆 Skills mastered
+diff --git a/src/lib/gamification.ts b/src/lib/gamification.ts
+new file mode 100644
+index 0000000..6938951
+--- /dev/null
++++ b/src/lib/gamification.ts
+@@ -0,0 +1,175 @@
++/**
++ * Gamification: points, daily streak, and badges — per the project's MVP
++ * scope ("Points per correct item, daily streaks, simple badges... child-
++ * friendly language focused on effort and growth").
++ *
++ * Deliberately stateless: everything here is derived from existing
++ * ReviewEvent/Session rows rather than stored as separate mutable counters,
++ * so there's nothing to keep in sync and no migration needed. If this ever
++ * gets too slow at scale, the aggregates below are straightforward to
++ * materialize into a summary table later without changing the badge rules.
++ */
++import { eq, and } from "drizzle-orm";
++import { db } from "@/db/client";
++import { reviewEvents, sessions, skills } from "@/db/schema";
++
++export const POINTS_CORRECT_NO_HINT = 10;
++export const POINTS_CORRECT_WITH_HINT = 5;
++
++export function pointsForAnswer(correct: boolean, hintUsed: boolean): number {
++  if (!correct) return 0;
++  return hintUsed ? POINTS_CORRECT_WITH_HINT : POINTS_CORRECT_NO_HINT;
++}
++
++export type GamificationStats = {
++  totalPoints: number;
++  totalCorrect: number;
++  totalAnswered: number;
++  currentStreakDays: number;
++  totalSessionsCompleted: number;
++  correctBySubject: Record<string, number>;
++};
++
++export type Badge = {
++  key: string;
++  emoji: string;
++  label: string;
++  description: string;
++  earned: boolean;
++};
++
++type BadgeDef = Omit<Badge, "earned"> & { check: (s: GamificationStats) => boolean };
++
++const BADGE_CATALOG: BadgeDef[] = [
++  {
++    key: "first_steps",
++    emoji: "🐣",
++    label: "First Steps",
++    description: "Answer your very first question",
++    check: (s) => s.totalAnswered >= 1,
++  },
++  {
++    key: "mission_complete",
++    emoji: "🎯",
++    label: "Mission Complete",
++    description: "Finish a full practice session",
++    check: (s) => s.totalSessionsCompleted >= 1,
++  },
++  {
++    key: "streak_3",
++    emoji: "🔥",
++    label: "3-Day Streak",
++    description: "Practise 3 days in a row",
++    check: (s) => s.currentStreakDays >= 3,
++  },
++  {
++    key: "streak_7",
++    emoji: "🌟",
++    label: "7-Day Streak",
++    description: "Practise 7 days in a row",
++    check: (s) => s.currentStreakDays >= 7,
++  },
++  {
++    key: "number_ninja",
++    emoji: "🔢",
++    label: "Number Ninja",
++    description: "Get 25 Maths questions correct",
++    check: (s) => (s.correctBySubject["maths"] ?? 0) >= 25,
++  },
++  {
++    key: "word_wizard",
++    emoji: "📖",
++    label: "Word Wizard",
++    description: "Get 25 English questions correct",
++    check: (s) => (s.correctBySubject["english"] ?? 0) >= 25,
++  },
++  {
++    key: "century_club",
++    emoji: "💯",
++    label: "Century Club",
++    description: "Get 100 questions correct in total",
++    check: (s) => s.totalCorrect >= 100,
++  },
++];
++
++/** Consecutive calendar days (ending today or yesterday) with at least one review. */
++function computeStreak(reviewDates: Date[], now: Date): number {
++  if (reviewDates.length === 0) return 0;
++
++  const daySet = new Set(
++    reviewDates.map((d) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`)
++  );
++
++  const cursor = new Date(now);
++  cursor.setHours(0, 0, 0, 0);
++  const key = (d: Date) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
++
++  // If nothing today yet, a streak can still be "alive" through yesterday —
++  // don't zero it out just because the child hasn't practised *today* yet.
++  if (!daySet.has(key(cursor))) {
++    cursor.setDate(cursor.getDate() - 1);
++    if (!daySet.has(key(cursor))) return 0;
++  }
++
++  let streak = 0;
++  while (daySet.has(key(cursor))) {
++    streak++;
++    cursor.setDate(cursor.getDate() - 1);
++  }
++  return streak;
++}
++
++export async function computeGamificationStats(childId: string, now: Date = new Date()): Promise<GamificationStats> {
++  const reviews = await db
++    .select({ review: reviewEvents, subject: skills.subject })
++    .from(reviewEvents)
++    .innerJoin(skills, eq(reviewEvents.skillId, skills.id))
++    .where(eq(reviewEvents.childId, childId));
++
++  let totalPoints = 0;
++  let totalCorrect = 0;
++  const correctBySubject: Record<string, number> = {};
++
++  for (const { review, subject } of reviews) {
++    if (review.correct) {
++      totalCorrect++;
++      correctBySubject[subject] = (correctBySubject[subject] ?? 0) + 1;
++    }
++    totalPoints += pointsForAnswer(review.correct, review.hintUsed);
++  }
++
++  const completedSessions = await db
++    .select()
++    .from(sessions)
++    .where(and(eq(sessions.childId, childId), eq(sessions.status, "completed")));
++
++  const currentStreakDays = computeStreak(
++    reviews.map((r) => r.review.timestamp),
++    now
++  );
++
++  return {
++    totalPoints,
++    totalCorrect,
++    totalAnswered: reviews.length,
++    currentStreakDays,
++    totalSessionsCompleted: completedSessions.length,
++    correctBySubject,
++  };
++}
++
++export function computeBadges(stats: GamificationStats): Badge[] {
++  return BADGE_CATALOG.map((b) => ({
++    key: b.key,
++    emoji: b.emoji,
++    label: b.label,
++    description: b.description,
++    earned: b.check(stats),
++  }));
++}
++
++export async function getGamificationSummary(childId: string, now: Date = new Date()) {
++  const stats = await computeGamificationStats(childId, now);
++  const badges = computeBadges(stats);
++  return { stats, badges };
++}
+-- 
+2.43.0
+
