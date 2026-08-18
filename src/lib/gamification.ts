@@ -9,7 +9,7 @@
  * gets too slow at scale, the aggregates below are straightforward to
  * materialize into a summary table later without changing the badge rules.
  */
-import { eq, and } from "drizzle-orm";
+import { eq, and, lte } from "drizzle-orm";
 import { db } from "@/db/client";
 import { reviewEvents, sessions, skills } from "@/db/schema";
 
@@ -119,12 +119,18 @@ function computeStreak(reviewDates: Date[], now: Date): number {
   return streak;
 }
 
-export async function computeGamificationStats(childId: string, now: Date = new Date()): Promise<GamificationStats> {
+/**
+ * `asOf` lets callers compute a point-in-time snapshot (e.g. "stats as they
+ * stood at the end of last month") instead of always the live total — used
+ * by the monthly report to diff two snapshots and find badges newly earned
+ * within a period. Defaults to "right now", which is the original behaviour.
+ */
+export async function computeGamificationStats(childId: string, asOf: Date = new Date()): Promise<GamificationStats> {
   const reviews = await db
     .select({ review: reviewEvents, subject: skills.subject })
     .from(reviewEvents)
     .innerJoin(skills, eq(reviewEvents.skillId, skills.id))
-    .where(eq(reviewEvents.childId, childId));
+    .where(and(eq(reviewEvents.childId, childId), lte(reviewEvents.timestamp, asOf)));
 
   let totalPoints = 0;
   let totalCorrect = 0;
@@ -141,11 +147,11 @@ export async function computeGamificationStats(childId: string, now: Date = new 
   const completedSessions = await db
     .select()
     .from(sessions)
-    .where(and(eq(sessions.childId, childId), eq(sessions.status, "completed")));
+    .where(and(eq(sessions.childId, childId), eq(sessions.status, "completed"), lte(sessions.date, asOf)));
 
   const currentStreakDays = computeStreak(
     reviews.map((r) => r.review.timestamp),
-    now
+    asOf
   );
 
   return {

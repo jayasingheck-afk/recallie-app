@@ -85,9 +85,14 @@ function ParentDashboardInner() {
         <h1 className="text-2xl font-bold text-slate-900">
           {data.child.displayName}&apos;s progress
         </h1>
-        <Link href="/parent/children" className="text-sm text-sky-600 hover:underline">
-          Manage children
-        </Link>
+        <div className="flex gap-4">
+          <Link href={`/parent/reports?childId=${childId}`} className="text-sm text-sky-600 hover:underline">
+            Monthly report
+          </Link>
+          <Link href="/parent/children" className="text-sm text-sky-600 hover:underline">
+            Manage children
+          </Link>
+        </div>
       </div>
       <p className="mb-4 text-sm text-slate-500">
         Year {data.child.yearLevel} · {data.child.state}

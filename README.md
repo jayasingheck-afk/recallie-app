@@ -59,10 +59,12 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   `multiple_choice` items (MVP only — see comments for what's missing).
 - **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
   `GET`/`POST /api/children` (parent onboarding — list/add children), `GET /api/gamification`
-  (points, streak, badges).
+  (points, streak, badges), `GET /api/reports/monthly` (monthly progress report).
 - **UI**: `/child` (one-item-at-a-time practice with hints + feedback, real persisted points/
   streak/badges), `/parent/dashboard` (skills mastered / areas to give more attention / recent
-  sessions / points, streak & badge shelf), `/parent/children` (add a child, switch between them).
+  sessions / points, streak & badge shelf, links to reports), `/parent/children` (add a child,
+  switch between them), `/parent/reports` (monthly progress report with month navigation and
+  a print/Save-as-PDF button).
 - **`src/lib/gamification.ts`** — points, daily practice streak, and a 7-badge starter set
   (First Steps, Mission Complete, 3-/7-Day Streak, Number Ninja, Word Wizard, Century Club).
   Fully derived from existing `ReviewEvent`/`Session` rows — no new mutable state, so nothing
@@ -70,6 +72,13 @@ There's still no login — every add-child call runs as one hard-coded demo pare
 - **`demo/recallie-kid-demo.html`** — a standalone, no-build HTML mockup of the child practice
   flow (real Week 1 sample questions, confetti, mascot) for previewing the UX quickly; not
   wired to the API or database.
+- **`src/lib/monthlyReport.ts`** — monthly parent progress report: sessions/points/accuracy/
+  practice-days for the selected month, badges newly earned that month (by diffing gamification
+  snapshots at month-start vs. month-end — see `computeGamificationStats`'s `asOf` param), plus
+  a *current* skills-mastered / areas-to-give-more-attention snapshot (labelled "as of today"
+  even on a past month's report, since `ChildSkillState` has no history table to look back on —
+  see the file's header comment). Generation + an in-app printable view only; emailing it out
+  needs an email service and is still a next step.
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
   clamped to term 1 / week 1 because that's the only week with real curriculum-sequence +
@@ -81,6 +90,62 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   `open_response` are stored but intentionally excluded from live sessions by
   `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
   single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s `_note`.
+
+## Auth (Clerk) — optional, opt-in
+
+Parent sign-in uses [Clerk](https://clerk.com), but it's entirely opt-in: with no Clerk keys
+set, the app runs exactly as it always has, in demo mode — every parent page acts as a single
+seeded demo parent (`demo_parent_1`), no sign-in required. Setting two environment variables
+turns on real sign-in with zero code changes needed.
+
+**How it's wired:**
+
+- **`src/lib/currentParent.ts`** — the single place that resolves "who's the acting parent
+  right now". `isAuthConfigured()` checks whether `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` is set.
+  `getCurrentParentId()` returns the demo parent's id when it isn't, or looks up (creating on
+  first sign-in) the real `User` row for the signed-in Clerk user when it is.
+- **`src/middleware.ts`** — only builds and applies `clerkMiddleware()` (protecting
+  `/parent/*`) when Clerk is configured; otherwise it's a pure passthrough.
+- **`src/app/layout.tsx`** — only wraps the app in `<ClerkProvider>` and shows a sign-in
+  button / user menu when Clerk is configured.
+- **`src/app/sign-in/[[...sign-in]]/page.tsx`**, **`src/app/sign-up/[[...sign-up]]/page.tsx`**
+  — Clerk's catch-all route convention; each shows a plain "not set up yet" message in demo
+  mode instead of erroring.
+- Everything Clerk-related is loaded via dynamic `import("@clerk/nextjs")` behind the
+  `isAuthConfigured()`/`clerkConfigured` check, so the package is never touched at all unless
+  the keys are present.
+
+**Security fix bundled with this change:** `GET`/`POST /api/children` previously trusted a
+client-supplied `parentId` — anyone could list or add children under *any* parent id just by
+knowing or guessing it. Both routes now derive the acting parent server-side via
+`getCurrentParentId()` instead. `/parent/children` and its `fetch` calls were updated to match
+(no `parentId` sent or needed).
+
+**To turn on real sign-in:**
+
+1. Create a free account at [clerk.com](https://clerk.com) and a new Application.
+2. Pick the sign-in methods you want (email code, Google, etc.) in the Clerk dashboard.
+3. Copy the Publishable key and Secret key from the dashboard's API Keys page.
+4. Add them to `.env`:
+   ```
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="pk_test_..."
+   CLERK_SECRET_KEY="sk_test_..."
+   ```
+5. Restart `npm run dev`. `/parent/*` routes now require sign-in; a "Sign in" button appears
+   in the header.
+
+**Not yet verified:** the sandbox this was built in has no real Clerk account, so the actual
+live sign-in/sign-up flow (steps above) has not been tested end-to-end — only the demo-mode
+(no keys set) path has been verified, deliberately, to confirm this change is a safe no-op
+until you add your own keys. Please test the real flow once you've added yours and let me know
+if anything doesn't work as expected.
+
+**New gap surfaced by this change (not yet fixed):** child-scoped API routes
+(`/api/dashboard`, `/api/session/today`, `/api/reviews`, `/api/gamification`,
+`/api/reports/monthly`) still trust a `childId` query/body param with no check that the
+signed-in parent actually owns that child — so a signed-in parent could view or answer on
+behalf of a child that isn't theirs by guessing/passing a different id. `/api/children` no
+longer has this problem; these five routes still do. Worth closing as a dedicated follow-up.
 
 ## Bugs found and fixed while building gamification
 
@@ -115,7 +180,10 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Auth (Clerk) — every page currently hard-codes the demo child ID.
+- Authorization on child-scoped routes — `/api/dashboard`, `/api/session/today`,
+  `/api/reviews`, `/api/gamification`, `/api/reports/monthly` all trust a `childId` param
+  with no check that the acting parent (now resolvable via `getCurrentParentId()`) actually
+  owns that child. See "Auth (Clerk)" above.
 - Real item banks — Week 1 only (62 items) so far, and the 54 generated items still need
   human review per the project's QA process before they're "production" content. Weeks
   2-10 (Term 1) and other year levels/terms still need generating.
@@ -128,4 +196,6 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 - Gamification: a visual "progress map" (spatial/adventure-style, beyond the badge shelf) is
   still open; badges are only evaluated on demand (no push notification when one's earned
   outside an active session).
-- Monthly parent report generation/email.
+- Monthly report *emailing* — generation + an in-app printable view exist (`/parent/reports`);
+  actually sending it (scheduled, via email) needs an email service (e.g. Resend, SES) not yet
+  wired up.
