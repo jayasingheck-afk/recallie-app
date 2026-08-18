@@ -6,7 +6,8 @@ Early build-out of the Recallie app, per the project's tech-stack and pedagogy d
 
 - **Next.js 16** (App Router, TypeScript, Tailwind v4)
 - **PostgreSQL** + **Drizzle ORM** (see note below on why Drizzle instead of Prisma)
-- No auth/payments yet — everything runs against one seeded demo parent/child
+- No real login yet — every parent-facing page runs as one seeded demo parent account, but
+  that parent can now add/manage multiple children (see "Parent onboarding" below)
 
 ## Why Drizzle instead of Prisma
 
@@ -39,9 +40,12 @@ npm run db:seed:demo
 npm run dev
 ```
 
-Visit `/child` for the child practice flow and `/parent/dashboard` for the parent view.
-Both currently hard-code the seeded demo child (`demo_child_1` — "Alex", Year 3, NSW);
-there's no login yet.
+Visit `/parent/children` to add a child (name, year level, state) and jump into their
+practice session or dashboard. `/child` and `/parent/dashboard` both accept a `?childId=`
+query param (e.g. `/child?childId=abc123`, linked to automatically from `/parent/children`);
+without one they fall back to the seeded demo child (`demo_child_1` — "Alex", Year 3, NSW).
+There's still no login — every add-child call runs as one hard-coded demo parent
+(`demo_parent_1`) until Clerk auth is wired up.
 
 ## What's implemented
 
@@ -53,9 +57,23 @@ there's no login yet.
   ~25% mixed, interleaved so no more than 2 consecutive items share a skill.
 - **`src/lib/grading.ts`** — simple string-match grading for `short_answer` /
   `multiple_choice` items (MVP only — see comments for what's missing).
-- **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`.
-- **UI**: `/child` (one-item-at-a-time practice with hints + feedback), `/parent/dashboard`
-  (skills mastered / areas to give more attention / recent sessions).
+- **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
+  `GET`/`POST /api/children` (parent onboarding — list/add children), `GET /api/gamification`
+  (points, streak, badges).
+- **UI**: `/child` (one-item-at-a-time practice with hints + feedback, real persisted points/
+  streak/badges), `/parent/dashboard` (skills mastered / areas to give more attention / recent
+  sessions / points, streak & badge shelf), `/parent/children` (add a child, switch between them).
+- **`src/lib/gamification.ts`** — points, daily practice streak, and a 7-badge starter set
+  (First Steps, Mission Complete, 3-/7-Day Streak, Number Ninja, Word Wizard, Century Club).
+  Fully derived from existing `ReviewEvent`/`Session` rows — no new mutable state, so nothing
+  can drift out of sync. See the file's own comments for how to add more badges.
+- **`demo/recallie-kid-demo.html`** — a standalone, no-build HTML mockup of the child practice
+  flow (real Week 1 sample questions, confetti, mascot) for previewing the UX quickly; not
+  wired to the API or database.
+- **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
+  their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
+  clamped to term 1 / week 1 because that's the only week with real curriculum-sequence +
+  item bank content — see "Explicit next steps".
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings)
   from the project docs; a Week 1 item bank (62 items across the 5 Week 1 skills — 8 original
   hand-written samples + 54 generated per the project's item-generation prompt templates,
@@ -63,6 +81,24 @@ there's no login yet.
   `open_response` are stored but intentionally excluded from live sessions by
   `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
   single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s `_note`.
+
+## Bugs found and fixed while building gamification
+
+Two pre-existing correctness issues surfaced while testing the new points/streak/badges
+feature end-to-end, both fixed in the same change:
+
+- `GET /api/session/today`'s "already built today" path only ever returned
+  `plannedItemIds`/`completedItemIds`, never the actual question content. Any reload after
+  the first load of the day (or a second visit later that day) showed "no items available"
+  even though the session had unfinished items. Fixed by hydrating full item details for the
+  remaining (not-yet-completed) items on that path too.
+- `POST /api/reviews` looked up "today's session" by child + date only, with no subject
+  filter — on a day with both a Maths and an English session, an answer to one could get
+  marked complete on the *other* subject's session. Fixed by matching on which session
+  actually planned that item, not just which one was created first.
+
+Both were caught by testing the real multi-subject, multi-load flow (not just a single
+happy-path run) and verified fixed with a scripted repro before moving on.
 
 ## Known nuance to review
 
@@ -86,7 +122,10 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.
-- Deriving the child's current curriculum week from an actual enrolment date
-  (currently hard-coded to term 1 / week 1 in the session API).
-- Gamification beyond points/streak (badges, progress map).
+- Curriculum weeks 2-10 (Term 1) and beyond — `curriculumWeek.ts` is wired up and ready to
+  roll a child forward automatically once more weeks of sequence + item content exist; it's
+  clamped to week 1 only until then (see that file's comments for the constants to raise).
+- Gamification: a visual "progress map" (spatial/adventure-style, beyond the badge shelf) is
+  still open; badges are only evaluated on demand (no push notification when one's earned
+  outside an active session).
 - Monthly parent report generation/email.

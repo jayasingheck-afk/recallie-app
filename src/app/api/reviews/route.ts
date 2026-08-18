@@ -5,6 +5,7 @@ import { childSkillStates, items, reviewEvents, sessions } from "@/db/schema";
 import { ensureChildSkillState } from "@/lib/sessionBuilder";
 import { updateSkillAfterReview, statusToParentLabel } from "@/lib/spacedRepetition";
 import { checkAnswer } from "@/lib/grading";
+import { pointsForAnswer } from "@/lib/gamification";
 
 type ReviewBody = {
   childId: string;
@@ -103,13 +104,17 @@ export async function POST(req: NextRequest) {
     isMixed: body.slotType === "mixed",
   });
 
-  // Mark the item completed on today's session, if one exists.
+  // Mark the item completed on today's session, if one exists. A child can
+  // have both a Maths and an English session on the same day, so match by
+  // which session actually planned this item — not just "today" — otherwise
+  // a review from one subject could get attributed to the other's session.
   const today = startOfDay(now);
-  const [todaySession] = await db
+  const todaysSessions = await db
     .select()
     .from(sessions)
-    .where(and(eq(sessions.childId, childId), eq(sessions.date, today)))
-    .limit(1);
+    .where(and(eq(sessions.childId, childId), eq(sessions.date, today)));
+
+  const todaySession = todaysSessions.find((s) => s.plannedItemIds.includes(itemId));
 
   if (todaySession && !todaySession.completedItemIds.includes(itemId)) {
     const completedItemIds = [...todaySession.completedItemIds, itemId];
@@ -131,5 +136,6 @@ export async function POST(req: NextRequest) {
     skillStatus: updated.status,
     skillStatusLabel: statusToParentLabel(updated.status),
     nextReviewAt: nextReviewAt.toISOString(),
+    pointsEarned: pointsForAnswer(correct, hintUsed),
   });
 }

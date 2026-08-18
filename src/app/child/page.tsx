@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
+// Fallback when no ?childId= is given (e.g. someone bookmarked /child directly).
 const DEMO_CHILD_ID = "demo_child_1";
 
 type SessionItem = {
@@ -22,6 +25,21 @@ type ReviewFeedback = {
   stepByStepSolution: string[];
   commonMisconceptions: string[];
   skillStatusLabel: string;
+  pointsEarned: number;
+};
+
+type Badge = {
+  key: string;
+  emoji: string;
+  label: string;
+  description: string;
+  earned: boolean;
+};
+
+type GamificationSummary = {
+  totalPoints: number;
+  currentStreakDays: number;
+  badges: Badge[];
 };
 
 const SLOT_LABEL: Record<SessionItem["slotType"], string> = {
@@ -30,7 +48,9 @@ const SLOT_LABEL: Record<SessionItem["slotType"], string> = {
   mixed: "Mix it up",
 };
 
-export default function ChildSessionPage() {
+function ChildSessionInner() {
+  const searchParams = useSearchParams();
+  const childId = searchParams.get("childId") || DEMO_CHILD_ID;
   const [subject, setSubject] = useState<"maths" | "english">("maths");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -41,8 +61,34 @@ export default function ChildSessionPage() {
   const [feedback, setFeedback] = useState<ReviewFeedback | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [startedAt, setStartedAt] = useState<number>(Date.now());
-  const [points, setPoints] = useState(0);
-  const [streak, setStreak] = useState(0);
+  const [sessionPoints, setSessionPoints] = useState(0);
+  const [answerStreak, setAnswerStreak] = useState(0);
+  const [gamification, setGamification] = useState<GamificationSummary | null>(null);
+  const [newBadge, setNewBadge] = useState<Badge | null>(null);
+  const [alreadyCompletedToday, setAlreadyCompletedToday] = useState(false);
+
+  function refreshGamification() {
+    fetch(`/api/gamification?childId=${childId}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: GamificationSummary | null) => {
+        if (!data) return;
+        setGamification((prev) => {
+          if (prev) {
+            const justEarned = data.badges.find(
+              (b) => b.earned && !prev.badges.find((pb) => pb.key === b.key)?.earned
+            );
+            if (justEarned) setNewBadge(justEarned);
+          }
+          return data;
+        });
+      })
+      .catch(() => {});
+  }
+
+  useEffect(() => {
+    refreshGamification();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [childId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -52,15 +98,23 @@ export default function ChildSessionPage() {
     setFeedback(null);
     setAnswer("");
     setHintsShown(0);
+    setAlreadyCompletedToday(false);
 
-    fetch(`/api/session/today?childId=${DEMO_CHILD_ID}&subject=${subject}`)
+    fetch(`/api/session/today?childId=${childId}&subject=${subject}`)
       .then(async (res) => {
         if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load session");
         return res.json();
       })
       .then((data) => {
         if (cancelled) return;
-        setSessionItems(data.items ?? []);
+        const fetchedItems = data.items ?? [];
+        setSessionItems(fetchedItems);
+        // A reused session that's already fully completed today comes back
+        // with status "completed" and no remaining items — distinct from
+        // "no content exists yet for this subject" (plannedItemIds is empty).
+        setAlreadyCompletedToday(
+          data.status === "completed" && fetchedItems.length === 0 && (data.plannedItemIds?.length ?? 0) > 0
+        );
         setStartedAt(Date.now());
       })
       .catch((err) => !cancelled && setError(err.message))
@@ -69,7 +123,7 @@ export default function ChildSessionPage() {
     return () => {
       cancelled = true;
     };
-  }, [subject]);
+  }, [subject, childId]);
 
   const current = sessionItems[index];
   const isDone = !loading && sessionItems.length > 0 && index >= sessionItems.length;
@@ -83,7 +137,7 @@ export default function ChildSessionPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          childId: DEMO_CHILD_ID,
+          childId,
           itemId: current.itemId,
           submittedAnswer: answer,
           attempts: 1,
@@ -96,11 +150,12 @@ export default function ChildSessionPage() {
       const data: ReviewFeedback = await res.json();
       setFeedback(data);
       if (data.correct) {
-        setPoints((p) => p + (hintsShown > 0 ? 5 : 10));
-        setStreak((s) => s + 1);
+        setSessionPoints((p) => p + data.pointsEarned);
+        setAnswerStreak((s) => s + 1);
       } else {
-        setStreak(0);
+        setAnswerStreak(0);
       }
+      refreshGamification();
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -119,7 +174,12 @@ export default function ChildSessionPage() {
   return (
     <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-4 py-8">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-slate-900">Hi Alex! 👋</h1>
+        <div>
+          <h1 className="text-2xl font-bold text-slate-900">Hi there! 👋</h1>
+          <Link href="/parent/children" className="text-xs text-slate-400 hover:underline">
+            Switch child
+          </Link>
+        </div>
         <div className="flex gap-2">
           {(["maths", "english"] as const).map((s) => (
             <button
@@ -135,15 +195,34 @@ export default function ChildSessionPage() {
         </div>
       </div>
 
-      <div className="mb-4 flex items-center gap-4 text-sm text-slate-500">
-        <span>⭐ {points} points</span>
-        <span>🔥 {streak} in a row</span>
+      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
+        <span>⭐ {sessionPoints} today</span>
+        <span>🔥 {answerStreak} in a row</span>
+        {gamification && (
+          <>
+            <span className="text-slate-300">·</span>
+            <span>🌟 {gamification.totalPoints} total</span>
+            <span>
+              📅 {gamification.currentStreakDays}{" "}
+              {gamification.currentStreakDays === 1 ? "day" : "days"} streak
+            </span>
+          </>
+        )}
         {sessionItems.length > 0 && (
           <span className="ml-auto">
             {Math.min(index + 1, sessionItems.length)} / {sessionItems.length}
           </span>
         )}
       </div>
+
+      {newBadge && (
+        <button
+          onClick={() => setNewBadge(null)}
+          className="mb-4 w-full rounded-xl border border-amber-300 bg-amber-50 p-3 text-left text-sm font-semibold text-amber-800 shadow-sm"
+        >
+          {newBadge.emoji} New badge unlocked: {newBadge.label}! <span className="font-normal">(tap to dismiss)</span>
+        </button>
+      )}
 
       {sessionItems.length > 0 && (
         <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-slate-100">
@@ -157,11 +236,22 @@ export default function ChildSessionPage() {
       {loading && <p className="text-slate-500">Loading today&apos;s mission…</p>}
       {error && <p className="text-red-600">{error}</p>}
 
-      {!loading && !error && sessionItems.length === 0 && (
+      {!loading && !error && sessionItems.length === 0 && !alreadyCompletedToday && (
         <p className="text-slate-500">
           No items available yet for this subject — the item bank is still being built. Try Maths
           (Week 1 has sample items seeded).
         </p>
+      )}
+
+      {!loading && !error && alreadyCompletedToday && (
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+          <div className="mb-2 text-4xl">✅</div>
+          <h2 className="mb-1 text-xl font-bold text-emerald-900">Already done for today!</h2>
+          <p className="text-emerald-800">
+            You finished today&apos;s {subject} mission. Come back tomorrow for a fresh one, or switch
+            subjects above.
+          </p>
+        </div>
       )}
 
       {!loading && current && !isDone && (
@@ -250,11 +340,25 @@ export default function ChildSessionPage() {
           <div className="mb-2 text-4xl">🌟</div>
           <h2 className="mb-1 text-xl font-bold text-emerald-900">Mission complete!</h2>
           <p className="text-emerald-800">
-            You earned {points} points today and got {streak > 0 ? `a ${streak}-answer streak` : "great practice in"}.
-            Keep it up, Alex!
+            You earned {sessionPoints} points today and got{" "}
+            {answerStreak > 0 ? `a ${answerStreak}-answer streak` : "great practice in"}. Keep it up!
           </p>
+          {gamification && (
+            <p className="mt-2 text-sm text-emerald-700">
+              🌟 {gamification.totalPoints} points overall · 📅 {gamification.currentStreakDays}{" "}
+              {gamification.currentStreakDays === 1 ? "day" : "days"} streak
+            </p>
+          )}
         </div>
       )}
     </div>
+  );
+}
+
+export default function ChildSessionPage() {
+  return (
+    <Suspense fallback={<p className="p-8 text-slate-500">Loading…</p>}>
+      <ChildSessionInner />
+    </Suspense>
   );
 }

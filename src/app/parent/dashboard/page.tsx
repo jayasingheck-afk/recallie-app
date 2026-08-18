@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
+// Fallback when no ?childId= is given (e.g. someone bookmarked the dashboard directly).
 const DEMO_CHILD_ID = "demo_child_1";
 
 type SkillSummary = {
@@ -15,11 +18,22 @@ type SkillSummary = {
   nextReviewAt: string;
 };
 
+type Badge = {
+  key: string;
+  emoji: string;
+  label: string;
+  description: string;
+  earned: boolean;
+};
+
 type DashboardData = {
   child: { id: string; displayName: string; yearLevel: number; state: string };
   skillsMastered: SkillSummary[];
   areasToGiveMoreAttention: SkillSummary[];
   onTrack: SkillSummary[];
+  points: number;
+  currentStreakDays: number;
+  badges: Badge[];
   recentSessions: {
     id: string;
     date: string;
@@ -44,31 +58,78 @@ function SkillCard({ s }: { s: SkillSummary }) {
   );
 }
 
-export default function ParentDashboardPage() {
+function ParentDashboardInner() {
+  const searchParams = useSearchParams();
+  const childId = searchParams.get("childId") || DEMO_CHILD_ID;
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`/api/dashboard?childId=${DEMO_CHILD_ID}`)
+    setData(null);
+    setError(null);
+    fetch(`/api/dashboard?childId=${childId}`)
       .then(async (res) => {
         if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load dashboard");
         return res.json();
       })
       .then(setData)
       .catch((err) => setError(err.message));
-  }, []);
+  }, [childId]);
 
   if (error) return <p className="p-8 text-red-600">{error}</p>;
   if (!data) return <p className="p-8 text-slate-500">Loading…</p>;
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-8">
-      <h1 className="mb-1 text-2xl font-bold text-slate-900">
-        {data.child.displayName}&apos;s progress
-      </h1>
-      <p className="mb-8 text-sm text-slate-500">
+      <div className="mb-1 flex items-center justify-between">
+        <h1 className="text-2xl font-bold text-slate-900">
+          {data.child.displayName}&apos;s progress
+        </h1>
+        <Link href="/parent/children" className="text-sm text-sky-600 hover:underline">
+          Manage children
+        </Link>
+      </div>
+      <p className="mb-4 text-sm text-slate-500">
         Year {data.child.yearLevel} · {data.child.state}
       </p>
+
+      <div className="mb-8 flex flex-wrap gap-3">
+        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Total points</p>
+          <p className="text-xl font-bold text-slate-900">⭐ {data.points}</p>
+        </div>
+        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Practice streak</p>
+          <p className="text-xl font-bold text-slate-900">
+            🔥 {data.currentStreakDays} {data.currentStreakDays === 1 ? "day" : "days"}
+          </p>
+        </div>
+        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Badges earned</p>
+          <p className="text-xl font-bold text-slate-900">
+            🏅 {data.badges.filter((b) => b.earned).length}/{data.badges.length}
+          </p>
+        </div>
+      </div>
+
+      <section className="mb-8">
+        <h2 className="mb-3 text-lg font-semibold text-slate-700">Badges</h2>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {data.badges.map((b) => (
+            <div
+              key={b.key}
+              className={`rounded-xl border p-3 text-center ${
+                b.earned ? "border-amber-200 bg-amber-50" : "border-slate-200 bg-slate-50 opacity-60"
+              }`}
+              title={b.description}
+            >
+              <div className="mb-1 text-2xl">{b.earned ? b.emoji : "🔒"}</div>
+              <p className="text-xs font-semibold text-slate-700">{b.label}</p>
+              <p className="mt-0.5 text-[11px] text-slate-500">{b.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="mb-8">
         <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-emerald-700">
@@ -147,5 +208,13 @@ export default function ParentDashboardPage() {
         )}
       </section>
     </div>
+  );
+}
+
+export default function ParentDashboardPage() {
+  return (
+    <Suspense fallback={<p className="p-8 text-slate-500">Loading…</p>}>
+      <ParentDashboardInner />
+    </Suspense>
   );
 }

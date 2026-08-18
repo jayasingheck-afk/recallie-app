@@ -3,6 +3,7 @@ import { desc, eq } from "drizzle-orm";
 import { db } from "@/db/client";
 import { childSkillStates, sessions, skills, users } from "@/db/schema";
 import { statusToParentLabel } from "@/lib/spacedRepetition";
+import { getGamificationSummary } from "@/lib/gamification";
 
 /**
  * GET /api/dashboard?childId=...
@@ -36,6 +37,8 @@ export async function GET(req: NextRequest) {
     .orderBy(desc(sessions.date))
     .limit(10);
 
+  const { stats, badges } = await getGamificationSummary(childId);
+
   const skillSummaries = states.map((r) => ({
     skillId: r.skill.id,
     subject: r.skill.subject,
@@ -53,6 +56,9 @@ export async function GET(req: NextRequest) {
     skillsMastered: skillSummaries.filter((s) => s.status === "mastered"),
     areasToGiveMoreAttention: skillSummaries.filter((s) => s.status === "needs_attention"),
     onTrack: skillSummaries.filter((s) => s.status === "on_track"),
+    points: stats.totalPoints,
+    currentStreakDays: stats.currentStreakDays,
+    badges,
     recentSessions: recentSessions.map((s) => ({
       id: s.id,
       date: s.date,
