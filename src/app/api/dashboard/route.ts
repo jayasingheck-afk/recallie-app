@@ -4,6 +4,7 @@ import { db } from "@/db/client";
 import { childSkillStates, sessions, skills, users } from "@/db/schema";
 import { statusToParentLabel } from "@/lib/spacedRepetition";
 import { getGamificationSummary } from "@/lib/gamification";
+import { verifyChildAccess } from "@/lib/currentParent";
 
 /**
  * GET /api/dashboard?childId=...
@@ -17,6 +18,11 @@ export async function GET(req: NextRequest) {
   const childId = req.nextUrl.searchParams.get("childId");
   if (!childId) {
     return NextResponse.json({ error: "childId query param is required" }, { status: 400 });
+  }
+
+  const access = await verifyChildAccess(childId);
+  if (!access.ok) {
+    return NextResponse.json({ error: access.error }, { status: access.status });
   }
 
   const child = await db.select().from(users).where(eq(users.id, childId)).limit(1);

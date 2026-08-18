@@ -13,8 +13,8 @@
  * (Clerk)" for the account setup steps.
  */
 import { db } from "@/db/client";
-import { users } from "@/db/schema";
-import { eq } from "drizzle-orm";
+import { users, parentChildLinks } from "@/db/schema";
+import { and, eq } from "drizzle-orm";
 
 export const DEMO_PARENT_ID = "demo_parent_1";
 
@@ -55,4 +55,40 @@ export async function getCurrentParentId(): Promise<string | null> {
   // Lost a create race against a concurrent request for the same new user — re-fetch.
   const [row] = await db.select().from(users).where(eq(users.clerkUserId, clerkUserId)).limit(1);
   return row?.id ?? null;
+}
+
+export type ChildAccessResult =
+  | { ok: true; parentId: string }
+  | { ok: false; status: 401 | 403; error: string };
+
+/**
+ * Verifies the acting parent (see getCurrentParentId) is actually linked to
+ * the given child before a route hands back or mutates that child's data.
+ *
+ * Every child-scoped route (dashboard, session/today, reviews, gamification,
+ * reports/monthly) accepts a childId param but has no other way to know
+ * whether the caller should be allowed to see it — without this check,
+ * anyone who could guess/enumerate a childId could view or answer on behalf
+ * of a child that isn't theirs. In demo mode this always succeeds for the
+ * seeded demo parent's own children (exactly the same children it could see
+ * before this check existed); it only starts actually restricting access
+ * once Clerk is configured and there's more than one real parent account.
+ */
+export async function verifyChildAccess(childId: string): Promise<ChildAccessResult> {
+  const parentId = await getCurrentParentId();
+  if (!parentId) {
+    return { ok: false, status: 401, error: "Not signed in" };
+  }
+
+  const link = await db
+    .select()
+    .from(parentChildLinks)
+    .where(and(eq(parentChildLinks.parentId, parentId), eq(parentChildLinks.childId, childId)))
+    .limit(1);
+
+  if (!link[0]) {
+    return { ok: false, status: 403, error: "You don't have access to this child" };
+  }
+
+  return { ok: true, parentId };
 }

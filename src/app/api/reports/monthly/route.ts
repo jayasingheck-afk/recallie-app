@@ -3,6 +3,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/db/client";
 import { users } from "@/db/schema";
 import { computeMonthlyReport } from "@/lib/monthlyReport";
+import { verifyChildAccess } from "@/lib/currentParent";
 
 /**
  * GET /api/reports/monthly?childId=...&year=YYYY&month=1-12
@@ -16,6 +17,11 @@ export async function GET(req: NextRequest) {
   const childId = req.nextUrl.searchParams.get("childId");
   if (!childId) {
     return NextResponse.json({ error: "childId query param is required" }, { status: 400 });
+  }
+
+  const access = await verifyChildAccess(childId);
+  if (!access.ok) {
+    return NextResponse.json({ error: access.error }, { status: access.status });
   }
 
   const child = await db.select().from(users).where(eq(users.id, childId)).limit(1);

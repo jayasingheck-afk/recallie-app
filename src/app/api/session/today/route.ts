@@ -4,6 +4,7 @@ import { db } from "@/db/client";
 import { items, sessions, skills, users } from "@/db/schema";
 import { buildTodaySession } from "@/lib/sessionBuilder";
 import { computeCurrentTermWeek } from "@/lib/curriculumWeek";
+import { verifyChildAccess } from "@/lib/currentParent";
 
 function startOfDay(d: Date) {
   const copy = new Date(d);
@@ -68,6 +69,11 @@ export async function GET(req: NextRequest) {
       { error: "childId and subject ('maths' | 'english') query params are required" },
       { status: 400 }
     );
+  }
+
+  const access = await verifyChildAccess(childId);
+  if (!access.ok) {
+    return NextResponse.json({ error: access.error }, { status: access.status });
   }
 
   const child = await db.select().from(users).where(eq(users.id, childId)).limit(1);

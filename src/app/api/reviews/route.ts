@@ -6,6 +6,7 @@ import { ensureChildSkillState } from "@/lib/sessionBuilder";
 import { updateSkillAfterReview, statusToParentLabel } from "@/lib/spacedRepetition";
 import { checkAnswer } from "@/lib/grading";
 import { pointsForAnswer } from "@/lib/gamification";
+import { verifyChildAccess } from "@/lib/currentParent";
 
 type ReviewBody = {
   childId: string;
@@ -50,6 +51,11 @@ export async function POST(req: NextRequest) {
       { error: "childId, itemId, and responseTimeSec are required" },
       { status: 400 }
     );
+  }
+
+  const access = await verifyChildAccess(childId);
+  if (!access.ok) {
+    return NextResponse.json({ error: access.error }, { status: access.status });
   }
 
   const [item] = await db.select().from(items).where(eq(items.id, itemId)).limit(1);

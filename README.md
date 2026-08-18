@@ -140,12 +140,16 @@ live sign-in/sign-up flow (steps above) has not been tested end-to-end — only 
 until you add your own keys. Please test the real flow once you've added yours and let me know
 if anything doesn't work as expected.
 
-**New gap surfaced by this change (not yet fixed):** child-scoped API routes
-(`/api/dashboard`, `/api/session/today`, `/api/reviews`, `/api/gamification`,
-`/api/reports/monthly`) still trust a `childId` query/body param with no check that the
-signed-in parent actually owns that child — so a signed-in parent could view or answer on
-behalf of a child that isn't theirs by guessing/passing a different id. `/api/children` no
-longer has this problem; these five routes still do. Worth closing as a dedicated follow-up.
+**Authorization on child-scoped routes (closed):** `/api/dashboard`, `/api/session/today`,
+`/api/reviews`, `/api/gamification`, and `/api/reports/monthly` previously trusted a `childId`
+query/body param with no check that the acting parent actually owned that child — a signed-in
+parent could view or answer on behalf of any child by guessing/passing a different id.
+`verifyChildAccess()` (`src/lib/currentParent.ts`) now checks the acting parent has a
+`ParentChildLink` to the requested child before any of these routes do anything — 401 if not
+signed in, 403 if signed in but not linked to that child. Verified: the demo parent's own
+children still get 200 on every route (including a fresh child added via `/api/children`
+mid-testing); an unowned/nonexistent `childId` gets 403 on every route, including
+`POST /api/reviews` with a real item id.
 
 ## Bugs found and fixed while building gamification
 
@@ -180,10 +184,6 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Authorization on child-scoped routes — `/api/dashboard`, `/api/session/today`,
-  `/api/reviews`, `/api/gamification`, `/api/reports/monthly` all trust a `childId` param
-  with no check that the acting parent (now resolvable via `getCurrentParentId()`) actually
-  owns that child. See "Auth (Clerk)" above.
 - Real item banks — Week 1 only (62 items) so far, and the 54 generated items still need
   human review per the project's QA process before they're "production" content. Weeks
   2-10 (Term 1) and other year levels/terms still need generating.
