@@ -1,0 +1,1312 @@
+{
+  "_note": "Week 5 item bank: Term 1, Week 5 skills (Maths: multiplication as equal groups/facts for 2,3,5,10, time to the minute; English: identifying persuasive opinion/reasons, writing persuasive texts, modal verbs and apostrophes). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3MULT_Y3_001",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "easy",
+      "questionText": "There are 4 groups of 3 apples. How many apples are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "4 groups of 3 means 4 x 3.",
+        "4 x 3 = 12.",
+        "There are 12 apples in total."
+      ],
+      "commonMisconceptions": [
+        "Adding 4 + 3 instead of multiplying.",
+        "Miscounting the number of groups."
+      ],
+      "hints": [
+        "'Groups of' is a clue to multiply.",
+        "Multiply the number of groups by the amount in each group."
+      ],
+      "tags": [
+        "multiplication",
+        "equal_groups"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_002",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "easy",
+      "questionText": "What is 5 x 2?",
+      "questionType": "short_answer",
+      "answerKey": "10",
+      "stepByStepSolution": [
+        "Think of 5 groups of 2.",
+        "2 + 2 + 2 + 2 + 2 = 10.",
+        "So 5 x 2 = 10."
+      ],
+      "commonMisconceptions": [
+        "Confusing 5 x 2 with 5 + 2.",
+        "Skip counting incorrectly."
+      ],
+      "hints": [
+        "You can skip count by 2s five times.",
+        "5 groups of 2 objects."
+      ],
+      "tags": [
+        "multiplication",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_003",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "easy",
+      "questionText": "What is 3 x 10?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "Think of 3 groups of 10.",
+        "10 + 10 + 10 = 30.",
+        "So 3 x 10 = 30."
+      ],
+      "commonMisconceptions": [
+        "Adding a zero incorrectly.",
+        "Confusing 3 x 10 with 3 + 10."
+      ],
+      "hints": [
+        "Multiplying by 10 just adds a zero to the other number.",
+        "3 groups of 10 objects."
+      ],
+      "tags": [
+        "multiplication",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_004",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "medium",
+      "questionText": "An array has 4 rows with 5 dots in each row. How many dots are there altogether?",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "An array with 4 rows of 5 represents 4 x 5.",
+        "4 x 5 = 20.",
+        "There are 20 dots altogether."
+      ],
+      "commonMisconceptions": [
+        "Counting only one row instead of all rows.",
+        "Adding rows instead of multiplying."
+      ],
+      "hints": [
+        "An array's rows x columns gives the total.",
+        "4 rows of 5 means 4 x 5."
+      ],
+      "tags": [
+        "multiplication",
+        "arrays"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_005",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "medium",
+      "questionText": "Which multiplication fact matches this picture description: 3 rows, 3 dots in each row?",
+      "questionType": "short_answer",
+      "answerKey": "3 x 3 = 9",
+      "stepByStepSolution": [
+        "3 rows with 3 dots in each row is an array.",
+        "This means 3 x 3.",
+        "3 x 3 = 9."
+      ],
+      "commonMisconceptions": [
+        "Writing the addition instead of the multiplication fact.",
+        "Reversing rows and columns incorrectly (though 3x3 is the same either way here)."
+      ],
+      "hints": [
+        "Rows x dots per row = total.",
+        "Write it as a multiplication sentence: rows x dots."
+      ],
+      "tags": [
+        "multiplication",
+        "arrays"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_006",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "medium",
+      "questionText": "A farmer has 6 baskets with 5 eggs in each basket. How many eggs does the farmer have in total?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "6 baskets of 5 eggs means 6 x 5.",
+        "6 x 5 = 30.",
+        "The farmer has 30 eggs in total."
+      ],
+      "commonMisconceptions": [
+        "Adding 6 + 5 instead of multiplying.",
+        "Forgetting to multiply by the number of baskets."
+      ],
+      "hints": [
+        "'Baskets with eggs in each' is a clue for equal groups.",
+        "Multiply the number of baskets by the number in each basket."
+      ],
+      "tags": [
+        "multiplication",
+        "word_problem",
+        "equal_groups"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_007",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "hard",
+      "questionText": "There are 7 tables with 2 chairs at each table. How many chairs are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "14",
+      "stepByStepSolution": [
+        "7 tables of 2 chairs means 7 x 2.",
+        "7 x 2 = 14.",
+        "There are 14 chairs in total."
+      ],
+      "commonMisconceptions": [
+        "Not recognising 'each table' as equal groups.",
+        "Adding instead of multiplying."
+      ],
+      "hints": [
+        "Look for the phrase 'at each' \u2014 it signals equal groups.",
+        "Multiply the number of tables by chairs per table."
+      ],
+      "tags": [
+        "multiplication",
+        "word_problem",
+        "equal_groups"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_008",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "easy",
+      "questionText": "What is 2 x 8? A) 10   B) 16   C) 18",
+      "questionType": "multiple_choice",
+      "answerKey": "16",
+      "stepByStepSolution": [
+        "2 x 8 means 8 groups of 2 or 2 groups of 8.",
+        "8 + 8 = 16.",
+        "So 2 x 8 = 16."
+      ],
+      "commonMisconceptions": [
+        "Adding 2 + 8 instead of multiplying.",
+        "Doubling the wrong number."
+      ],
+      "hints": [
+        "Think of it as doubling 8.",
+        "2 x 8 is the same as 8 x 2."
+      ],
+      "tags": [
+        "multiplication",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_009",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "medium",
+      "questionText": "What is 10 x 3? A) 13   B) 30   C) 103",
+      "questionType": "multiple_choice",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "10 x 3 means 3 groups of 10.",
+        "10 + 10 + 10 = 30.",
+        "So 10 x 3 = 30."
+      ],
+      "commonMisconceptions": [
+        "Confusing multiplication with place value writing (like '103').",
+        "Adding instead of multiplying."
+      ],
+      "hints": [
+        "Multiplying by 10 adds a zero to the other number.",
+        "3 groups of 10 objects."
+      ],
+      "tags": [
+        "multiplication",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3MULT_Y3_010",
+      "skillId": "M3N06_multiplication_equal_groups",
+      "difficulty": "hard",
+      "questionText": "A garden has 5 rows of flowers with 6 flowers in each row. If 2 flowers are picked, how many flowers are left in the garden?",
+      "questionType": "short_answer",
+      "answerKey": "28",
+      "stepByStepSolution": [
+        "First find the total: 5 rows of 6 means 5 x 6 = 30.",
+        "Then subtract the picked flowers: 30 - 2 = 28.",
+        "There are 28 flowers left."
+      ],
+      "commonMisconceptions": [
+        "Forgetting the subtraction step after multiplying.",
+        "Multiplying the wrong two numbers."
+      ],
+      "hints": [
+        "First multiply to find the total, then subtract what was taken away.",
+        "5 x 6 gives the total number of flowers before any are picked."
+      ],
+      "tags": [
+        "multiplication",
+        "word_problem",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_001",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "easy",
+      "questionText": "An analog clock shows the hour hand just past 3 and the minute hand pointing at the 6. What time is it?",
+      "questionType": "short_answer",
+      "answerKey": "3:30",
+      "stepByStepSolution": [
+        "The hour hand just past 3 means it's after 3 o'clock.",
+        "The minute hand at 6 means 30 minutes have passed.",
+        "So the time is 3:30."
+      ],
+      "commonMisconceptions": [
+        "Reading the hour hand as if it were the minute hand.",
+        "Not knowing that the 6 on a clock face means 30 minutes."
+      ],
+      "hints": [
+        "Each number on the clock face represents 5 minutes for the minute hand.",
+        "The 6 is halfway around, meaning 30 minutes."
+      ],
+      "tags": [
+        "time",
+        "analog_clock"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_002",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "easy",
+      "questionText": "An analog clock shows the hour hand just past 7 and the minute hand pointing at the 3. What time is it?",
+      "questionType": "short_answer",
+      "answerKey": "7:15",
+      "stepByStepSolution": [
+        "The hour hand just past 7 means it's after 7 o'clock.",
+        "The minute hand at 3 means 15 minutes have passed (3 x 5 = 15).",
+        "So the time is 7:15."
+      ],
+      "commonMisconceptions": [
+        "Reading the minute hand as '3 minutes' instead of multiplying by 5.",
+        "Confusing the hour and minute hands."
+      ],
+      "hints": [
+        "Multiply the number the minute hand points to by 5.",
+        "3 x 5 = 15 minutes."
+      ],
+      "tags": [
+        "time",
+        "analog_clock"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_003",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "medium",
+      "questionText": "A digital clock shows 4:47. How many minutes until it is 5:00?",
+      "questionType": "short_answer",
+      "answerKey": "13",
+      "stepByStepSolution": [
+        "From 4:47 to 5:00 is the same as 60 - 47.",
+        "60 - 47 = 13.",
+        "There are 13 minutes until 5:00."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 47 from 50 instead of 60.",
+        "Forgetting that an hour has 60 minutes."
+      ],
+      "hints": [
+        "An hour has 60 minutes, so count up to 60.",
+        "Subtract 47 from 60."
+      ],
+      "tags": [
+        "time",
+        "digital_clock",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_004",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "medium",
+      "questionText": "A movie starts at 2:15 and lasts for 45 minutes. What time does the movie finish?",
+      "questionType": "short_answer",
+      "answerKey": "3:00",
+      "stepByStepSolution": [
+        "Start at 2:15 and add 45 minutes.",
+        "2:15 + 45 minutes = 3:00 (since 15 + 45 = 60 minutes, which is 1 hour).",
+        "The movie finishes at 3:00."
+      ],
+      "commonMisconceptions": [
+        "Adding 45 minutes but forgetting to carry over to the next hour.",
+        "Adding the minutes and hours separately without converting 60 minutes to 1 hour."
+      ],
+      "hints": [
+        "Add the minutes first; if it reaches 60, add an hour and start the minutes at 0.",
+        "15 + 45 = 60 minutes = 1 hour."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_005",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "hard",
+      "questionText": "School starts at 9:00 and a lesson lasts 50 minutes. If the lesson starts right when school starts, what time does the lesson end?",
+      "questionType": "short_answer",
+      "answerKey": "9:50",
+      "stepByStepSolution": [
+        "Start at 9:00 and add 50 minutes.",
+        "9:00 + 50 minutes = 9:50.",
+        "The lesson ends at 9:50."
+      ],
+      "commonMisconceptions": [
+        "Adding the minutes incorrectly.",
+        "Rounding to the nearest 10 minutes instead of being exact."
+      ],
+      "hints": [
+        "Add the minutes directly onto the starting time.",
+        "9:00 plus 50 minutes doesn't reach the next hour."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_006",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "medium",
+      "questionText": "Which time is later: 6:40 or 6:25?",
+      "questionType": "short_answer",
+      "answerKey": "6:40",
+      "stepByStepSolution": [
+        "Compare the minutes since the hour is the same.",
+        "40 minutes is more than 25 minutes.",
+        "So 6:40 is later."
+      ],
+      "commonMisconceptions": [
+        "Assuming a smaller-looking number is always earlier without comparing properly.",
+        "Confusing 'later' with 'earlier'."
+      ],
+      "hints": [
+        "When the hour is the same, compare the minutes.",
+        "A larger minute value means later in that hour."
+      ],
+      "tags": [
+        "time",
+        "comparison"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_007",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "easy",
+      "questionText": "How many minutes are there in half an hour?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "An hour has 60 minutes.",
+        "Half of 60 is 30.",
+        "So half an hour is 30 minutes."
+      ],
+      "commonMisconceptions": [
+        "Thinking half an hour is 50 minutes.",
+        "Not knowing the total minutes in an hour."
+      ],
+      "hints": [
+        "An hour is 60 minutes.",
+        "Half of 60 is 30."
+      ],
+      "tags": [
+        "time",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_008",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "medium",
+      "questionText": "A train leaves at 10:20 and the trip takes 25 minutes. What time does the train arrive?",
+      "questionType": "short_answer",
+      "answerKey": "10:45",
+      "stepByStepSolution": [
+        "Start at 10:20 and add 25 minutes.",
+        "20 + 25 = 45 minutes.",
+        "The train arrives at 10:45."
+      ],
+      "commonMisconceptions": [
+        "Adding the minutes incorrectly.",
+        "Forgetting to keep the hour the same when it doesn't roll over."
+      ],
+      "hints": [
+        "Add the minutes together since it doesn't reach 60.",
+        "20 + 25 = 45."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_009",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "hard",
+      "questionText": "A recipe needs to bake for 1 hour and 20 minutes, starting at 11:50. What time will it be ready?",
+      "questionType": "short_answer",
+      "answerKey": "1:10",
+      "stepByStepSolution": [
+        "First add 1 hour to 11:50, giving 12:50.",
+        "Then add the remaining 20 minutes: 12:50 + 20 minutes = 1:10.",
+        "The recipe will be ready at 1:10."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to roll over the hour when minutes pass 60.",
+        "Adding hours and minutes in the wrong order."
+      ],
+      "hints": [
+        "Add the hour first, then the extra minutes.",
+        "50 + 20 = 70 minutes, which is 1 hour 10 minutes past 12:50."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "word_problem",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "M3TIME_Y3_010",
+      "skillId": "M3M04_time_to_minute",
+      "difficulty": "easy",
+      "questionText": "Write 8 o'clock and 15 minutes as a digital time.",
+      "questionType": "short_answer",
+      "answerKey": "8:15",
+      "stepByStepSolution": [
+        "'8 o'clock and 15 minutes' means the hour is 8 and the minutes are 15.",
+        "Write this as 8:15."
+      ],
+      "commonMisconceptions": [
+        "Writing the minutes before the hour.",
+        "Confusing 15 minutes with a quarter written incorrectly."
+      ],
+      "hints": [
+        "Digital time is written as hour:minutes.",
+        "The hour comes first, then the minutes."
+      ],
+      "tags": [
+        "time",
+        "digital_clock"
+      ]
+    },
+    {
+      "id": "EPERS_Y3_001",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "easy",
+      "questionText": "What is the author's opinion in this text?",
+      "questionType": "short_answer",
+      "answerKey": "the school pool should stay open all year round",
+      "stepByStepSolution": [
+        "Look at the first and last sentences, which usually state the opinion clearly.",
+        "The text says the pool 'should stay open all year round' and 'must stay open all year'.",
+        "This is the author's opinion."
+      ],
+      "commonMisconceptions": [
+        "Confusing a supporting reason with the main opinion.",
+        "Missing the opinion stated at the start and end."
+      ],
+      "hints": [
+        "The opinion is often stated at the very beginning and repeated at the end.",
+        "Look for words like 'should' or 'must'."
+      ],
+      "tags": [
+        "persuasive_text",
+        "author_opinion"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_002",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "easy",
+      "questionText": "Which word in the text signals that the author is giving their first reason?",
+      "questionType": "short_answer",
+      "answerKey": "first",
+      "stepByStepSolution": [
+        "Persuasive texts often use signal words to introduce reasons.",
+        "'First' introduces the first reason given.",
+        "This helps organise the argument."
+      ],
+      "commonMisconceptions": [
+        "Missing the signal word entirely.",
+        "Confusing a signal word with a reason itself."
+      ],
+      "hints": [
+        "Look for words that come before a reason, like 'first', 'second', or 'finally'.",
+        "These words help organise the argument."
+      ],
+      "tags": [
+        "persuasive_text",
+        "signal_words"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_003",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "medium",
+      "questionText": "According to the text, why is the school pool helpful for students who can't afford private lessons?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it gives every student a fair chance to learn to swim",
+        "the school pool gives everyone a chance to learn to swim"
+      ],
+      "stepByStepSolution": [
+        "Find the sentence about students who cannot afford private lessons.",
+        "It says the school pool 'gives every student a fair chance to learn to swim'.",
+        "This is the reason given."
+      ],
+      "commonMisconceptions": [
+        "Giving a made-up reason instead of using the text.",
+        "Confusing this reason with a different one in the text."
+      ],
+      "hints": [
+        "Look for the sentence that mentions 'private swimming lessons'.",
+        "The next part of that sentence explains why it matters."
+      ],
+      "tags": [
+        "persuasive_text",
+        "reading_comprehension"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_004",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "medium",
+      "questionText": "What is one reason the author gives for keeping the pool open on hot days?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "students can cool off safely instead of using unsafe places like the river",
+        "so students don't use unsafe places like the river"
+      ],
+      "stepByStepSolution": [
+        "Look at the third reason in the text.",
+        "It mentions cooling off safely instead of unsafe places like the river.",
+        "This is the reason for hot days."
+      ],
+      "commonMisconceptions": [
+        "Mixing up this reason with the fitness reason.",
+        "Missing the safety angle of the argument."
+      ],
+      "hints": [
+        "Look for the word 'finally' \u2014 it introduces this reason.",
+        "The reason is about safety on hot days."
+      ],
+      "tags": [
+        "persuasive_text",
+        "reading_comprehension"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_005",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "medium",
+      "questionText": "Which sentence from the text is a reason, not the main opinion? A) Swimming keeps students fit and healthy, which helps them concentrate better in class.   B) Our school pool should stay open all year round.   C) For all these reasons, our school pool must stay open all year.",
+      "questionType": "multiple_choice",
+      "answerKey": "Swimming keeps students fit and healthy, which helps them concentrate better in class.",
+      "stepByStepSolution": [
+        "The main opinion is stated at the start and end of the text.",
+        "The sentence about fitness supports the opinion \u2014 it's a reason, not the opinion itself.",
+        "The other two options both restate the main opinion."
+      ],
+      "commonMisconceptions": [
+        "Confusing a supporting reason with the main opinion.",
+        "Picking the first sentence without checking its role."
+      ],
+      "hints": [
+        "The opinion says what should happen; reasons explain why.",
+        "Look for a sentence that gives evidence, not a call to action."
+      ],
+      "tags": [
+        "persuasive_text",
+        "reasoning"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_006",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "hard",
+      "questionText": "Why might the author have chosen to give three separate reasons instead of just one?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to make the argument stronger",
+        "to be more convincing",
+        "multiple reasons make the argument more persuasive"
+      ],
+      "stepByStepSolution": [
+        "Persuasive writing is more convincing with multiple supporting reasons.",
+        "Three reasons cover different angles: health, fairness, and safety.",
+        "This makes the argument stronger overall."
+      ],
+      "commonMisconceptions": [
+        "Thinking one reason is always enough to persuade.",
+        "Not connecting the number of reasons to persuasive strength."
+      ],
+      "hints": [
+        "Think about what makes an argument more convincing.",
+        "More reasons can appeal to more people's concerns."
+      ],
+      "tags": [
+        "persuasive_text",
+        "reasoning",
+        "author_purpose"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_007",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "easy",
+      "questionText": "Is this text trying to inform, entertain, or persuade the reader?",
+      "questionType": "short_answer",
+      "answerKey": "persuade",
+      "stepByStepSolution": [
+        "The text gives an opinion and reasons to support it.",
+        "This is the structure of a persuasive text.",
+        "The purpose is to persuade the reader."
+      ],
+      "commonMisconceptions": [
+        "Confusing persuasive texts with informative ones.",
+        "Thinking any text with facts is purely informative."
+      ],
+      "hints": [
+        "A persuasive text tries to convince you of an opinion.",
+        "Look for words like 'should' and 'must'."
+      ],
+      "tags": [
+        "persuasive_text",
+        "text_purpose"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_008",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "medium",
+      "questionText": "What technique does the author use in the last sentence to strengthen their argument? A) restating the opinion after giving reasons   B) telling a joke   C) asking a question",
+      "questionType": "multiple_choice",
+      "answerKey": "restating the opinion after giving reasons",
+      "stepByStepSolution": [
+        "The last sentence repeats the main opinion.",
+        "This comes after all the reasons have been given.",
+        "Restating the opinion reminds the reader what the author wants."
+      ],
+      "commonMisconceptions": [
+        "Confusing a conclusion with a new idea.",
+        "Not recognising restating as a persuasive technique."
+      ],
+      "hints": [
+        "Look at what the final sentence does compared to the first.",
+        "It reminds the reader of the opinion after building the case."
+      ],
+      "tags": [
+        "persuasive_text",
+        "author_technique"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_009",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "hard",
+      "questionText": "If someone disagreed with this text, which reason might they question first?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "any of the three reasons could reasonably be questioned",
+        "the fitness reason",
+        "the fairness reason",
+        "the safety reason"
+      ],
+      "stepByStepSolution": [
+        "A reader could question whether swimming really helps concentration, whether the pool is the only fair option, or whether the river is truly unsafe.",
+        "Any of the three reasons is open to some debate.",
+        "Critical readers often look for the weakest link in an argument."
+      ],
+      "commonMisconceptions": [
+        "Assuming persuasive texts are always completely convincing.",
+        "Not thinking critically about the reasons given."
+      ],
+      "hints": [
+        "Think about whether each reason is completely proven or just an opinion.",
+        "Good readers question persuasive arguments rather than accepting them automatically."
+      ],
+      "tags": [
+        "persuasive_text",
+        "critical_thinking"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EPERS_Y3_010",
+      "skillId": "E3LY03_LA03_persuasive_opinion",
+      "difficulty": "medium",
+      "questionText": "Which audience is this persuasive text most likely written for? A) school decision-makers, like the principal or school board   B) babies   C) people who have never heard of a pool",
+      "questionType": "multiple_choice",
+      "answerKey": "school decision-makers, like the principal or school board",
+      "stepByStepSolution": [
+        "The text argues for a school decision \u2014 keeping the pool open.",
+        "This kind of decision is usually made by school leaders.",
+        "So the audience is likely school decision-makers."
+      ],
+      "commonMisconceptions": [
+        "Picking an audience unrelated to the topic.",
+        "Not thinking about who has the power to make the decision being argued for."
+      ],
+      "hints": [
+        "Think about who could actually act on this opinion.",
+        "The text is arguing for a school policy decision."
+      ],
+      "tags": [
+        "persuasive_text",
+        "audience"
+      ],
+      "passage": "Save Our School Pool!\n\nOur school pool should stay open all year round. First, swimming keeps students fit and healthy, which helps them concentrate better in class. Second, many families cannot afford private swimming lessons, so the school pool gives every student a fair chance to learn to swim. Finally, having the pool open means students can cool off safely on hot days instead of using unsafe places like the river. For all these reasons, our school pool must stay open all year."
+    },
+    {
+      "id": "EWPERS_Y3_001",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "easy",
+      "questionText": "What should the opening of a persuasive text usually state? A) the writer's opinion   B) a made-up story   C) a list of unrelated facts",
+      "questionType": "multiple_choice",
+      "answerKey": "the writer's opinion",
+      "stepByStepSolution": [
+        "A persuasive text starts by stating the opinion being argued.",
+        "This tells the reader what the writer wants them to believe or do.",
+        "The other options don't fit a persuasive opening."
+      ],
+      "commonMisconceptions": [
+        "Confusing a persuasive opening with a narrative opening.",
+        "Thinking the opinion should be saved for the end only."
+      ],
+      "hints": [
+        "Persuasive writing usually states its opinion early.",
+        "Think about what convinces a reader from the very start."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "structure"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_002",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "How many reasons should a short persuasive text usually include to support its opinion?",
+      "questionType": "short_answer",
+      "answerKey": "2 to 3",
+      "stepByStepSolution": [
+        "A short persuasive text is strongest with a few clear reasons.",
+        "Around 2-3 reasons is a good number for a short piece.",
+        "Too few reasons can seem weak; too many can be hard to follow."
+      ],
+      "commonMisconceptions": [
+        "Thinking one reason is always enough.",
+        "Trying to include too many reasons without explaining any well."
+      ],
+      "hints": [
+        "Think about what makes an argument convincing without being overwhelming.",
+        "A short text usually has 2 or 3 well-explained reasons."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "structure"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_003",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "Which sentence is the best example of a persuasive reason with an example? A) Recycling helps the environment, for example by reducing the rubbish sent to landfill.   B) Recycling is a word with nine letters.   C) I don't really care about recycling.",
+      "questionType": "multiple_choice",
+      "answerKey": "Recycling helps the environment, for example by reducing the rubbish sent to landfill.",
+      "stepByStepSolution": [
+        "A good persuasive reason gives a claim and then supports it with an example.",
+        "Option A states a reason ('helps the environment') and gives an example ('reducing rubbish').",
+        "The other options don't give a persuasive reason with an example."
+      ],
+      "commonMisconceptions": [
+        "Confusing a fact about the word itself with a persuasive reason.",
+        "Choosing a sentence that shows no opinion at all."
+      ],
+      "hints": [
+        "Look for a sentence that makes a claim and then explains or gives an example.",
+        "A reason should support the writer's opinion."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "reasons_examples"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_004",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "What is the purpose of the conclusion in a persuasive text? A) to restate the opinion and leave a strong final impression   B) to introduce brand new reasons for the first time   C) to change the topic completely",
+      "questionType": "multiple_choice",
+      "answerKey": "to restate the opinion and leave a strong final impression",
+      "stepByStepSolution": [
+        "A persuasive conclusion sums up the argument.",
+        "It usually restates the opinion to remind the reader.",
+        "New reasons shouldn't appear for the first time in the conclusion."
+      ],
+      "commonMisconceptions": [
+        "Thinking new reasons should be saved for the conclusion.",
+        "Confusing the conclusion with an introduction."
+      ],
+      "hints": [
+        "A conclusion wraps up what has already been argued.",
+        "It should leave the reader with a clear final message."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "structure",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_005",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "easy",
+      "questionText": "Which of these openings is most persuasive for a text arguing that students should have more art classes? A) Every student deserves the chance to explore their creativity through art.   B) Art class happens on Tuesdays.   C) My favourite colour is blue.",
+      "questionType": "multiple_choice",
+      "answerKey": "Every student deserves the chance to explore their creativity through art.",
+      "stepByStepSolution": [
+        "A persuasive opening should connect to the opinion being argued.",
+        "Option A directly relates to why art classes matter.",
+        "The other options are facts or personal details that don't build an argument."
+      ],
+      "commonMisconceptions": [
+        "Choosing a fact that doesn't support any opinion.",
+        "Choosing an unrelated personal statement."
+      ],
+      "hints": [
+        "Look for the sentence that makes a claim connected to the topic.",
+        "A persuasive opening should hint at the opinion to come."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "structure"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_006",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "hard",
+      "questionText": "A student wrote: 'Dogs are the best pets. They are furry.' Why is this a weak persuasive argument?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "the reason doesn't really explain why dogs are the best pets",
+        "being furry isn't a strong reason",
+        "the reason is too simple/doesn't connect well to the opinion"
+      ],
+      "stepByStepSolution": [
+        "A strong reason should clearly connect to and support the opinion.",
+        "'They are furry' doesn't really explain why dogs are the BEST pets \u2014 many animals are furry.",
+        "The reason needs to be more specific and convincing."
+      ],
+      "commonMisconceptions": [
+        "Thinking any reason at all makes an argument strong.",
+        "Not checking whether a reason logically supports the opinion."
+      ],
+      "hints": [
+        "Ask: does this reason really explain the opinion, or is it too vague?",
+        "A stronger reason would explain a unique benefit of dogs."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "reasoning",
+        "evaluating_arguments"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_007",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "Which connecting word could a writer use to introduce their second reason in a persuasive text? A) Secondly   B) Once upon a time   C) The end",
+      "questionType": "multiple_choice",
+      "answerKey": "Secondly",
+      "stepByStepSolution": [
+        "Persuasive texts use signal words to organise reasons in order.",
+        "'Secondly' clearly introduces the second reason.",
+        "The other options don't fit a persuasive structure."
+      ],
+      "commonMisconceptions": [
+        "Using a story-style opener in a persuasive text.",
+        "Not knowing common ordering words used in arguments."
+      ],
+      "hints": [
+        "Look for a word that shows order, like 'firstly' or 'secondly'.",
+        "These words help the reader follow the argument."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "signal_words"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_008",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "A persuasive poster about recycling should mainly use which kind of language? A) convincing language that supports an opinion   B) random unrelated facts   C) only questions with no opinion given",
+      "questionType": "multiple_choice",
+      "answerKey": "convincing language that supports an opinion",
+      "stepByStepSolution": [
+        "A persuasive poster is designed to convince the audience of an opinion.",
+        "This means using language that supports and argues for that opinion.",
+        "The other options don't achieve a persuasive purpose."
+      ],
+      "commonMisconceptions": [
+        "Thinking a persuasive poster is just for sharing random facts.",
+        "Forgetting that persuasive texts need a clear opinion."
+      ],
+      "hints": [
+        "Think about what a poster trying to convince someone would say.",
+        "It needs a clear opinion backed up by reasons."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "language_choices"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_009",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "hard",
+      "questionText": "Why is it helpful to think about the audience before writing a persuasive text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "so you can choose reasons that will matter most to that audience",
+        "different audiences care about different things",
+        "to make the argument more convincing for that specific audience"
+      ],
+      "stepByStepSolution": [
+        "Different audiences care about different things.",
+        "Thinking about the audience helps you choose the most convincing reasons for them.",
+        "This makes the persuasive text more effective."
+      ],
+      "commonMisconceptions": [
+        "Writing the same argument for every audience without adjusting it.",
+        "Not considering what matters to the specific reader."
+      ],
+      "hints": [
+        "Think about what would convince the actual reader, not just anyone.",
+        "A reason that works for parents might not work as well for classmates."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "audience",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EWPERS_Y3_010",
+      "skillId": "E3LY06_LA03_write_persuasive",
+      "difficulty": "medium",
+      "questionText": "Put these persuasive text parts in the correct order: reasons, conclusion, opinion statement.",
+      "questionType": "short_answer",
+      "answerKey": "opinion statement, reasons, conclusion",
+      "stepByStepSolution": [
+        "A persuasive text usually starts by stating the opinion.",
+        "Then it gives reasons to support that opinion.",
+        "It ends with a conclusion that restates the opinion."
+      ],
+      "commonMisconceptions": [
+        "Starting with the conclusion instead of the opinion.",
+        "Putting reasons before stating what they're arguing for."
+      ],
+      "hints": [
+        "Think about what a reader needs to know first, in the middle, and at the end.",
+        "State the opinion, support it, then wrap up."
+      ],
+      "tags": [
+        "persuasive_writing",
+        "structure",
+        "sequencing"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_001",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "easy",
+      "questionText": "Which sentence uses a modal verb? A) I can swim.   B) I swim.   C) I swam.",
+      "questionType": "multiple_choice",
+      "answerKey": "I can swim.",
+      "stepByStepSolution": [
+        "Modal verbs express ability, possibility, or necessity, like 'can', 'could', 'should', 'must'.",
+        "'Can' in 'I can swim' is a modal verb.",
+        "The other sentences don't use a modal verb."
+      ],
+      "commonMisconceptions": [
+        "Confusing regular verbs with modal verbs.",
+        "Not recognising common modal verbs like 'can'."
+      ],
+      "hints": [
+        "Modal verbs are words like can, could, should, must.",
+        "Look for a helper word before the main verb."
+      ],
+      "tags": [
+        "modal_verbs",
+        "grammar"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_002",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "easy",
+      "questionText": "Which modal verb best completes this sentence: 'You ___ finish your homework before dinner.' A) should   B) swims   C) happily",
+      "questionType": "multiple_choice",
+      "answerKey": "should",
+      "stepByStepSolution": [
+        "Modal verbs express necessity or advice, like 'should'.",
+        "'Should' fits because it gives advice about finishing homework.",
+        "The other options aren't modal verbs."
+      ],
+      "commonMisconceptions": [
+        "Choosing a regular verb instead of a modal verb.",
+        "Choosing an adverb instead of a modal verb."
+      ],
+      "hints": [
+        "Modal verbs often express advice or necessity, like should or must.",
+        "Think about what word gives advice here."
+      ],
+      "tags": [
+        "modal_verbs",
+        "grammar"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_003",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "medium",
+      "questionText": "Which sentence expresses possibility using a modal verb? A) It might rain later today.   B) It rained yesterday.   C) It is raining now.",
+      "questionType": "multiple_choice",
+      "answerKey": "It might rain later today.",
+      "stepByStepSolution": [
+        "'Might' expresses that something is possible but not certain.",
+        "This is a modal verb showing possibility.",
+        "The other sentences state facts, not possibilities."
+      ],
+      "commonMisconceptions": [
+        "Confusing a statement of fact with a statement of possibility.",
+        "Not recognising 'might' as a modal verb."
+      ],
+      "hints": [
+        "Modal verbs like 'might' and 'could' show something isn't certain.",
+        "Look for a word suggesting uncertainty."
+      ],
+      "tags": [
+        "modal_verbs",
+        "grammar"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_004",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "medium",
+      "questionText": "Fix the apostrophe mistake: 'Its going to rain today.'",
+      "questionType": "short_answer",
+      "answerKey": "It's going to rain today.",
+      "stepByStepSolution": [
+        "'It's' is a contraction of 'it is'.",
+        "'Its' without an apostrophe shows possession, which isn't what's meant here.",
+        "The correct sentence is 'It's going to rain today.'"
+      ],
+      "commonMisconceptions": [
+        "Confusing 'its' (possession) with 'it's' (it is).",
+        "Leaving out the apostrophe entirely."
+      ],
+      "hints": [
+        "'It's' with an apostrophe means 'it is'.",
+        "'Its' without an apostrophe shows something belongs to it."
+      ],
+      "tags": [
+        "apostrophes",
+        "contractions",
+        "editing"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_005",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "medium",
+      "questionText": "What does the apostrophe in 'don't' show?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "missing letters",
+        "that a letter (o) has been left out",
+        "it's a contraction of 'do not'"
+      ],
+      "stepByStepSolution": [
+        "'Don't' is a contraction of 'do not'.",
+        "The apostrophe replaces the missing letter 'o'.",
+        "This shows where letters have been left out."
+      ],
+      "commonMisconceptions": [
+        "Thinking apostrophes are only for showing possession.",
+        "Not connecting the apostrophe to the missing letters."
+      ],
+      "hints": [
+        "Contractions join two words and use an apostrophe for missing letters.",
+        "'Do not' becomes 'don't' \u2014 the 'o' is missing."
+      ],
+      "tags": [
+        "apostrophes",
+        "contractions"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_006",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "easy",
+      "questionText": "Which word is a correct contraction of 'they are'?",
+      "questionType": "short_answer",
+      "answerKey": "they're",
+      "stepByStepSolution": [
+        "'They are' can be shortened using an apostrophe.",
+        "The apostrophe replaces the missing letter 'a'.",
+        "'They're' is the correct contraction."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'they're', 'their', and 'there'.",
+        "Placing the apostrophe in the wrong spot."
+      ],
+      "hints": [
+        "Contractions combine two words with an apostrophe for missing letters.",
+        "Think about which letter is missing from 'they are'."
+      ],
+      "tags": [
+        "apostrophes",
+        "contractions"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_007",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "hard",
+      "questionText": "Which sentence correctly uses a modal verb to express something that must happen? A) Students must wear their hats outside.   B) Students wearing hats outside.   C) Students wear hat outside.",
+      "questionType": "multiple_choice",
+      "answerKey": "Students must wear their hats outside.",
+      "stepByStepSolution": [
+        "'Must' is a modal verb expressing necessity.",
+        "Option A is a complete, correctly formed sentence using 'must'.",
+        "The other options are grammatically incomplete or incorrect."
+      ],
+      "commonMisconceptions": [
+        "Choosing an incomplete sentence.",
+        "Not recognising 'must' as showing necessity."
+      ],
+      "hints": [
+        "Modal verbs like 'must' show something is required.",
+        "Check that the sentence is grammatically complete."
+      ],
+      "tags": [
+        "modal_verbs",
+        "grammar"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_008",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "medium",
+      "questionText": "Fix this sentence: 'The dogs bone was buried in the yard.'",
+      "questionType": "short_answer",
+      "answerKey": "The dog's bone was buried in the yard.",
+      "stepByStepSolution": [
+        "The bone belongs to the dog, so an apostrophe is needed to show possession.",
+        "'Dog's' with an apostrophe before the s shows singular possession.",
+        "The corrected sentence is 'The dog's bone was buried in the yard.'"
+      ],
+      "commonMisconceptions": [
+        "Forgetting the apostrophe for possession.",
+        "Placing the apostrophe after the s instead of before it for a singular owner."
+      ],
+      "hints": [
+        "When something belongs to one dog, add 's to show possession.",
+        "Check whether the owner is singular or plural before placing the apostrophe."
+      ],
+      "tags": [
+        "apostrophes",
+        "possession",
+        "editing"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_009",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "medium",
+      "questionText": "Which modal verb shows the strongest level of certainty: 'might', 'could', or 'must'?",
+      "questionType": "short_answer",
+      "answerKey": "must",
+      "stepByStepSolution": [
+        "Modal verbs can show different levels of certainty.",
+        "'Might' and 'could' suggest something is only possible.",
+        "'Must' suggests something is very certain or required."
+      ],
+      "commonMisconceptions": [
+        "Thinking all modal verbs show the same level of certainty.",
+        "Confusing 'could' with 'must'."
+      ],
+      "hints": [
+        "Think about which word sounds the most certain or required.",
+        "'Must' is stronger than 'might' or 'could'."
+      ],
+      "tags": [
+        "modal_verbs",
+        "grammar",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EMODAL_Y3_010",
+      "skillId": "E3LA03_11_modal_verbs_apostrophes",
+      "difficulty": "hard",
+      "questionText": "Why is the apostrophe placement different in 'the girls' bags' compared to 'the girl's bag'?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "one shows possession for multiple girls (plural) and one shows possession for one girl (singular)",
+        "the plural possessive apostrophe goes after the s, the singular one goes before the s"
+      ],
+      "stepByStepSolution": [
+        "'The girl's bag' means the bag belongs to one girl (singular possession).",
+        "'The girls' bags' means the bags belong to more than one girl (plural possession).",
+        "The apostrophe's position shows whether the owner is singular or plural."
+      ],
+      "commonMisconceptions": [
+        "Placing the apostrophe in the same spot regardless of whether the owner is singular or plural.",
+        "Not noticing the difference between one girl and many girls."
+      ],
+      "hints": [
+        "Check whether you're talking about one owner or many owners.",
+        "Singular: apostrophe before 's. Plural (already ending in s): apostrophe after the s."
+      ],
+      "tags": [
+        "apostrophes",
+        "possession",
+        "reasoning"
+      ]
+    }
+  ]
+}

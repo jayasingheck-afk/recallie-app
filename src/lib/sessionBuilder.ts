@@ -10,9 +10,9 @@
  *  4. Order items so no more than 2 consecutive items share a skill.
  *
  * This is an MVP implementation: it works against whatever Items exist in
- * the bank (currently Weeks 1-4 skills — see src/db/seed/sample-items.json,
+ * the bank (currently Weeks 1-5 skills — see src/db/seed/sample-items.json,
  * week1-item-bank.json, week2-item-bank.json, week3-item-bank.json,
- * week4-item-bank.json). As more weeks are generated
+ * week4-item-bank.json, week5-item-bank.json). As more weeks are generated
  * and imported, pool sizes will grow and sessions will fill out naturally —
  * no changes needed here, since skills/items are looked up generically by
  * term+week (curriculumWeek.ts controls how far a child is allowed to roll
