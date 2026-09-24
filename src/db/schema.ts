@@ -27,6 +27,7 @@ export const users = pgTable(
     state: text("state"), // "VIC" | "NSW" (null for parents)
     yearLevel: integer("yearLevel"), // 1-6 (null for parents)
     displayName: text("displayName"),
+    enrolledAt: timestamp("enrolledAt"), // children only: when they started, used to derive curriculum term/week
     createdAt: timestamp("createdAt").notNull().defaultNow(),
     updatedAt: timestamp("updatedAt").notNull().defaultNow(),
   },

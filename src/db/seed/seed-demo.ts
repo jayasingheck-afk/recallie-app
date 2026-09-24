@@ -1,6 +1,6 @@
 /**
- * Seeds a demo parent + child user and a small sample item bank (Week 1
- * skills only) so the session builder and review API can be exercised
+ * Seeds a demo parent + child user and a small sample item bank (Weeks 1-2
+ * skills) so the session builder and review API can be exercised
  * end-to-end during development.
  *
  * Run with: npm run db:seed:demo  (after npm run db:seed)

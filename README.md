@@ -2,6 +2,30 @@
 
 Early build-out of the Recallie app, per the project's tech-stack and pedagogy docs.
 
+## Repo recovery — September 2026 (read this if things don't run)
+
+A fresh Claude session picked this repo back up after about a month and found it was
+actually **broken at HEAD** — `npm run dev` would 500 on any route touching
+`/api/session/today` because `src/lib/curriculumWeek.ts` was imported but had never
+actually been committed, and `User.enrolledAt` (a column several routes depend on) was
+missing from both `schema.ts` and the database migrations. Both were part of earlier
+tarball deliveries that evidently didn't fully land — most likely lost somewhere in a round
+of manual `tar -xzf` + `git add -A` that didn't catch every new file before committing. The
+Week 2 item bank (`week2-item-bank.json`) was similarly never committed, despite being
+delivered.
+
+This has now been fixed: `curriculumWeek.ts` recreated, `enrolledAt` added to the schema
+with a proper Drizzle migration (`drizzle/0001_...sql`), and the Week 2 item bank restored.
+Everything below describes the *intended* current state, now that these are back in place —
+run `npm run db:migrate` after pulling this update, in addition to the usual seed commands,
+since this update includes a real schema migration for the first time.
+
+Two pieces of repo housekeeping worth doing at the same time, unrelated to the bug above:
+`recallie-app` was accidentally committed as an empty git submodule reference (harmless, but
+confusing — remove with `git rm --cached recallie-app` and delete the empty folder), and
+`tsconfig.tsbuildinfo` (a build artifact that changes on every compile) had been committed —
+it's now in `.gitignore`; run `git rm --cached tsconfig.tsbuildinfo` once to stop tracking it.
+
 ## Stack
 
 - **Next.js 16** (App Router, TypeScript, Tailwind v4)
@@ -82,10 +106,10 @@ There's still no login — every add-child call runs as one hard-coded demo pare
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
   clamped to term 1 / **week 2** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
-  bank content reaches so far — see "Curriculum content: Week 2" and "Explicit next steps"
-  below. Note the curriculum *sequence* (which skills are "new" each week) is already fully
-  seeded for all 10 weeks of Term 1, both subjects — see `seed.ts`/`year3-curriculum.json` —
-  it's specifically the item bank (actual practice questions) that's the limiting factor.
+  bank content reaches so far. Note the curriculum *sequence* (which skills are "new" each
+  week) is already fully seeded for all 10 weeks of Term 1, both subjects — see `seed.ts`/
+  `year3-curriculum.json` — it's specifically the item bank (actual practice questions)
+  that's the limiting factor.
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings,
   all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-2**
   (112 items total across 10 skills — 8 original hand-written samples + 104 generated per the
@@ -96,6 +120,28 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2 bank
   (`week2-item-bank.json`) is entirely `short_answer`/`multiple_choice` so all 50 of its items
   are usable in live sessions immediately.
+
+## Curriculum content: Week 2
+
+Added a second week of real, auto-gradable practice content so a child can actually progress
+past Week 1 instead of practising the same 5 skills forever. The curriculum *sequence* data
+(which skills are "new" each week, all 10 weeks of Term 1, both subjects) was already fully
+seeded from day one, so this is purely about the missing item bank content plus raising the
+clamp that was protecting against empty sessions.
+
+- `src/db/seed/week2-item-bank.json` — 50 items across the 5 skills Week 2 introduces:
+  `M3N03_compare_order_10k`, `M3M02_measure_length` (Maths), `E3LY01_02_literal_comprehension`,
+  `E3LY06_informative_paragraphs`, `E3LA06_nouns_verbs_agreement` (English). All items are
+  `short_answer` or `multiple_choice`, so every item is usable in a live session immediately.
+- The literal-comprehension items each have a short reading passage (the `Item` schema and
+  session/child-page plumbing already support a `passage` field; `seed-demo.ts` now passes
+  it through when seeding).
+- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` is 2.
+
+**Verified**: a fresh child backdated 25 days (which would otherwise compute a later week)
+correctly clamps to Week 2 content rather than an empty/broken session; grading works for
+both `short_answer` and `multiple_choice` items in the new bank; existing Week-1 children
+unaffected.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -157,39 +203,6 @@ children still get 200 on every route (including a fresh child added via `/api/c
 mid-testing); an unowned/nonexistent `childId` gets 403 on every route, including
 `POST /api/reviews` with a real item id.
 
-## Curriculum content: Week 2
-
-Added a second week of real, auto-gradable practice content so a child can actually progress
-past Week 1 instead of practising the same 5 skills forever. The curriculum *sequence* data
-(which skills are "new" each week, for all 10 weeks of Term 1, both subjects) was already
-fully seeded from day one — `src/db/seed/year3-curriculum.json` and `seed.ts` — so this update
-is purely about writing the missing item bank content and raising the clamp that was
-protecting against empty sessions.
-
-- `src/db/seed/week2-item-bank.json` (new) — 50 items across the 5 skills Week 2 introduces:
-  `M3N03_compare_order_10k`, `M3M02_measure_length` (Maths), `E3LY01_02_literal_comprehension`,
-  `E3LY06_informative_paragraphs`, `E3LA06_nouns_verbs_agreement` (English). All items are
-  `short_answer` or `multiple_choice` (no `multi_part`/`open_response`), so every item is
-  usable in a live session immediately — unlike part of the Week 1 bank. Same
-  pending-human-review caveat as Week 1: AI-generated, not yet checked by a
-  curriculum-qualified reviewer.
-- The literal-comprehension items needed short reading passages, which the `Item` schema and
-  session/child-page plumbing already supported (`passage` field) but the seed script wasn't
-  actually passing through — `seed-demo.ts`'s `SeedItem` type and `seedItemBank()` now include
-  `passage`, so these items render their passage text above the question on `/child`.
-- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` raised from 1 to 2, with the file's
-  comments corrected to clarify that curriculum *sequence* data was never the bottleneck —
-  item content specifically is what gates how far `MAX_AVAILABLE_WEEK` can go.
-
-**Verified**: created a fresh test child, backdated 8 days (→ resolves to Week 2 with no
-prior skill state) — session builder correctly pulls only Week 2 "new" skills, all 5 skills'
-items render with correct passages, grading works for both short_answer and multiple_choice
-(tested one correct and one incorrect answer), and the dashboard correctly reflects new skill
-progress. A second test child backdated 25 days (which would naturally compute to Week 4)
-correctly clamps to Week 2 content, not Week 3+ or an empty session — the same class of bug
-fixed for the original Week 1 clamp. Existing Week-1-only children (recent `enrolledAt`)
-verified unaffected. Full page-level regression and `npx tsc --noEmit` clean.
-
 ## Bugs found and fixed while building gamification
 
 Two pre-existing correctness issues surfaced while testing the new points/streak/badges
@@ -226,8 +239,8 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 - Real item banks — Weeks 1-2 only (112 items) so far, and all of it still needs human
   review per the project's QA process before it's "production" content. Weeks 3-10 (Term 1)
   and other year levels/terms still need generating; the curriculum *sequence* for all 10
-  weeks already exists (see "Curriculum content: Week 2" above), so each future week is
-  "write the item bank + bump `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed.
+  weeks already exists, so each future week is "write the item bank + bump
+  `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed.
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.

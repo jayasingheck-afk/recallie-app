@@ -8,6 +8,13 @@
       "when": 1786980416048,
       "tag": "0000_faulty_sphinx",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790252748866,
+      "tag": "0001_tiresome_doctor_doom",
+      "breakpoints": true
     }
   ]
 }
