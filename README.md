@@ -105,21 +105,22 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   needs an email service and is still a next step.
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
-  clamped to term 1 / **week 3** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
+  clamped to term 1 / **week 4** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
   bank content reaches so far. Note the curriculum *sequence* (which skills are "new" each
   week) is already fully seeded for all 10 weeks of Term 1, both subjects — see `seed.ts`/
   `year3-curriculum.json` — it's specifically the item bank (actual practice questions)
   that's the limiting factor.
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings,
-  all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-3**
-  (162 items total across 15 skills — 8 original hand-written samples + 154 generated per the
+  all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-4**
+  (222 items total across 21 skills — 8 original hand-written samples + 214 generated per the
   project's item-generation prompt templates, pending human review). `multi_part` items
   (object-valued answer keys) and items tagged `open_response` are stored but intentionally
   excluded from live sessions by `sessionBuilder.ts`, since the MVP grader
   (`src/lib/grading.ts`) only reliably auto-marks single-value `short_answer` /
-  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2 and Week 3 banks
-  (`week2-item-bank.json`, `week3-item-bank.json`) are entirely `short_answer`/`multiple_choice`
-  so all of their items are usable in live sessions immediately.
+  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2-4 banks
+  (`week2-item-bank.json`, `week3-item-bank.json`, `week4-item-bank.json`) are entirely
+  `short_answer`/`multiple_choice` so all of their items are usable in live sessions
+  immediately.
 
 ## Curriculum content: Week 2
 
@@ -166,6 +167,44 @@ rather than an empty/broken session; grading works for both `short_answer` and
 `multiple_choice` items in the new bank (including case-insensitive matching on the
 inferential-comprehension items); a full page/API regression pass and a production
 `next build` both completed cleanly with no errors.
+
+## Curriculum content: Week 4
+
+Added a fourth week of real, auto-gradable practice content. This finishes out the
+remaining, already-defined skills for **Weeks 4-10 of Term 1** one week at a time — the
+curriculum sequence for all of Term 1's 10 weeks (which skills are "new" each week) has
+existed since the original seed, so each remaining week is purely "write the item bank +
+raise `MAX_AVAILABLE_WEEK`", no new curriculum design needed until Term 1 is finished and
+Term 2 begins.
+
+- `src/db/seed/week4-item-bank.json` — 60 items across the 6 skills Week 4 introduces:
+  `M3N04_add_sub_1000_regroup`, `M3M02_measure_capacity`, `M3ST01_categorical_data` (Maths);
+  `E3LA04_LY03_text_structure`, `E3LY06_LA04_information_report`, `E3LA08_tense_consistency`
+  (English). All items are `short_answer` or `multiple_choice`.
+- The text-structure items use a short instructional passage ("How to Make a Paper Boat")
+  to test recognising introduction/body/conclusion structure and signposting.
+- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` is now 4.
+- `src/db/seed/seed-demo.ts` now also loads `week4-item-bank.json`.
+
+**Verified**: a child backdated 22 days correctly receives Week 4 content for both Maths and
+English; a child backdated 100 days correctly clamps to Week 4 rather than an empty/broken
+session; grading verified correct/incorrect/case-insensitive across all three question
+styles used (straight computation, unit/vocabulary multiple-choice, and passage-based);
+a full page/API regression pass and a production `next build` both completed cleanly.
+
+## Year 3 full-syllabus plan (in progress)
+
+Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
+parent-facing "assign a focus topic" feature alongside the automatic daily session. Before
+generating content at that scale, a curriculum-accuracy check against the real Australian
+Curriculum v9.0 Year 3 content descriptors (ACARA/QCAA) found that Term 1's 10-week sequence
+already touches nearly the entire year's content descriptor set (21/23 Maths, 26/28 English)
+— so "the rest of the year" is mostly about *depth progression* per term, not new topics,
+plus 4 small content-descriptor gaps and finishing Term 1's remaining item banks (Weeks
+4-10) first. The full plan — term-by-term depth progression tables for every strand, the 4
+gaps to fill, and the topic-assignment feature's proposed shape — is written up in this
+project's `claude/year3-full-syllabus-plan.md` doc. Current status: Weeks 1-4 of Term 1 are
+now complete; Weeks 5-10 and the Terms 2-4 curriculum mapping are still to come.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -260,11 +299,11 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Real item banks — Weeks 1-3 only (162 items) so far, and all of it still needs human
-  review per the project's QA process before it's "production" content. Weeks 4-10 (Term 1)
-  and other year levels/terms still need generating; the curriculum *sequence* for all 10
-  weeks already exists, so each future week is "write the item bank + bump
-  `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed.
+- Real item banks — Weeks 1-4 only (222 items) so far, and all of it still needs human
+  review per the project's QA process before it's "production" content. Weeks 5-10 (Term 1)
+  still need generating (sequence already exists, so each is "write the item bank + bump
+  `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed); Terms 2-4 need genuine new
+  curriculum-design work first (see `claude/year3-full-syllabus-plan.md` in the project).
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.

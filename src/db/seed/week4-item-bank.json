@@ -1,0 +1,1580 @@
+{
+  "_note": "Week 4 item bank: Term 1, Week 4 skills (Maths: add/sub with regrouping, capacity, categorical data; English: text structure, information reports, tense consistency). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3N04R_Y3_001",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 247 + 186?",
+      "questionType": "short_answer",
+      "answerKey": "433",
+      "stepByStepSolution": [
+        "Add the ones: 7 + 6 = 13. Write 3, carry 1 ten.",
+        "Add the tens: 4 + 8 + 1 (carried) = 13. Write 3, carry 1 hundred.",
+        "Add the hundreds: 2 + 1 + 1 (carried) = 4.",
+        "Put it together: 433."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry the extra ten or hundred to the next column.",
+        "Writing both digits of a two-digit column sum instead of carrying."
+      ],
+      "hints": [
+        "When a column adds to 10 or more, you need to carry to the next column.",
+        "Add the ones first, then the tens, then the hundreds."
+      ],
+      "tags": [
+        "addition",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_002",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 356 + 275?",
+      "questionType": "short_answer",
+      "answerKey": "631",
+      "stepByStepSolution": [
+        "Add the ones: 6 + 5 = 11. Write 1, carry 1 ten.",
+        "Add the tens: 5 + 7 + 1 = 13. Write 3, carry 1 hundred.",
+        "Add the hundreds: 3 + 2 + 1 = 6.",
+        "Put it together: 631."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry when a column totals 10 or more.",
+        "Adding the carried digit to the wrong column."
+      ],
+      "hints": [
+        "Check each column: does it add to 10 or more? If so, carry.",
+        "Work from the ones column to the hundreds column."
+      ],
+      "tags": [
+        "addition",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_003",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "medium",
+      "questionText": "What is 523 - 268?",
+      "questionType": "short_answer",
+      "answerKey": "255",
+      "stepByStepSolution": [
+        "Ones: 3 - 8 needs regrouping. Borrow a ten: 13 - 8 = 5.",
+        "Tens: after lending, 1 ten left minus 6, so borrow a hundred: 11 - 6 = 5.",
+        "Hundreds: after lending, 4 - 2 = 2.",
+        "Put it together: 255."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the smaller digit from the larger one regardless of position (e.g. 8 - 3 instead of borrowing).",
+        "Forgetting to reduce the next column after borrowing."
+      ],
+      "hints": [
+        "When the top digit is smaller, you need to borrow from the next column.",
+        "Reduce the column you borrowed from by 1."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_004",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "medium",
+      "questionText": "What is 700 - 356?",
+      "questionType": "short_answer",
+      "answerKey": "344",
+      "stepByStepSolution": [
+        "Ones: 0 - 6 needs regrouping, borrow through the tens and hundreds.",
+        "After borrowing: 10 - 6 = 4 in the ones.",
+        "Tens: 9 - 5 = 4 (since we borrowed through).",
+        "Hundreds: 6 - 3 = 3. Put it together: 344."
+      ],
+      "commonMisconceptions": [
+        "Getting confused when there are zeros to borrow through.",
+        "Stopping the subtraction because a digit is zero."
+      ],
+      "hints": [
+        "When there's a zero, you may need to borrow from further along.",
+        "Try breaking 700 into 699 + 1 to make borrowing easier."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping",
+        "zeros"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_005",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "medium",
+      "questionText": "A shop had 342 toys. They sold 178 toys. How many toys are left?",
+      "questionType": "short_answer",
+      "answerKey": "164",
+      "stepByStepSolution": [
+        "'Sold' and 'left' tell you to subtract.",
+        "342 - 178: ones need regrouping, 12 - 8 = 4.",
+        "Tens: after lending, 3 - 7 needs regrouping, borrow a hundred: 13 - 7 = 6.",
+        "Hundreds: 2 - 1 = 1. Put it together: 164."
+      ],
+      "commonMisconceptions": [
+        "Not recognising this as a subtraction word problem.",
+        "Making an error while regrouping across two columns."
+      ],
+      "hints": [
+        "'Sold' means some are taken away \u2014 subtract.",
+        "Line up 342 and 178 by place value before subtracting."
+      ],
+      "tags": [
+        "subtraction",
+        "word_problem",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_006",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "hard",
+      "questionText": "Two classes raised money: Class A raised $268 and Class B raised $195. How much did they raise altogether?",
+      "questionType": "short_answer",
+      "answerKey": "463",
+      "stepByStepSolution": [
+        "'Altogether' means add.",
+        "Ones: 8 + 5 = 13, write 3 carry 1.",
+        "Tens: 6 + 9 + 1 = 16, write 6 carry 1.",
+        "Hundreds: 2 + 1 + 1 = 4. Put it together: 463."
+      ],
+      "commonMisconceptions": [
+        "Not carrying across two columns in a row.",
+        "Losing track of the carried digit."
+      ],
+      "hints": [
+        "'Altogether' is a clue to add both amounts.",
+        "Carry to the next column whenever a column totals 10 or more."
+      ],
+      "tags": [
+        "addition",
+        "word_problem",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_007",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "hard",
+      "questionText": "A number is 429 more than 386. What is the number?",
+      "questionType": "short_answer",
+      "answerKey": "815",
+      "stepByStepSolution": [
+        "'More than' means add the two numbers.",
+        "Ones: 9 + 6 = 15, write 5 carry 1.",
+        "Tens: 2 + 8 + 1 = 11, write 1 carry 1.",
+        "Hundreds: 4 + 3 + 1 = 8. Put it together: 815."
+      ],
+      "commonMisconceptions": [
+        "Thinking 'more than' means subtract.",
+        "Missing a carried digit."
+      ],
+      "hints": [
+        "'429 more than 386' means 386 + 429.",
+        "Carry any time a column reaches 10 or more."
+      ],
+      "tags": [
+        "addition",
+        "word_problem",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_008",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 618 + 274? A) 892   B) 882   C) 802",
+      "questionType": "multiple_choice",
+      "answerKey": "892",
+      "stepByStepSolution": [
+        "Ones: 8 + 4 = 12, write 2 carry 1.",
+        "Tens: 1 + 7 + 1 = 9.",
+        "Hundreds: 6 + 2 = 8.",
+        "Put it together: 892."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry from the ones column.",
+        "Adding the hundreds incorrectly."
+      ],
+      "hints": [
+        "Add each column starting from the ones.",
+        "Check: does the ones column need a carry?"
+      ],
+      "tags": [
+        "addition",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_009",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "medium",
+      "questionText": "What is 452 - 187? A) 265   B) 275   C) 335",
+      "questionType": "multiple_choice",
+      "answerKey": "265",
+      "stepByStepSolution": [
+        "Ones: 2 - 7 needs regrouping, borrow: 12 - 7 = 5.",
+        "Tens: after lending, 4 - 8 needs regrouping, borrow: 14 - 8 = 6.",
+        "Hundreds: after lending, 3 - 1 = 2.",
+        "Put it together: 265."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the smaller digit from the larger regardless of order.",
+        "Forgetting to reduce the column that was borrowed from."
+      ],
+      "hints": [
+        "When the top digit is smaller than the bottom, borrow from the next column.",
+        "Work from the ones column across to the hundreds."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "M3N04R_Y3_010",
+      "skillId": "M3N04_add_sub_1000_regroup",
+      "difficulty": "hard",
+      "questionText": "Maya had $500. She spent $267 on a bike. How much money does she have left?",
+      "questionType": "short_answer",
+      "answerKey": "233",
+      "stepByStepSolution": [
+        "'Spent' and 'left' mean subtract.",
+        "Ones: 0 - 7 needs regrouping through the tens and hundreds.",
+        "After borrowing: ones = 10 - 7 = 3, tens = 9 - 6 = 3, hundreds = 4 - 2 = 2.",
+        "Put it together: 233."
+      ],
+      "commonMisconceptions": [
+        "Struggling to borrow when there are zeros in the number.",
+        "Forgetting a step when borrowing across two columns."
+      ],
+      "hints": [
+        "'Spent' means money is taken away \u2014 subtract.",
+        "When there's a zero, borrow from further along the number."
+      ],
+      "tags": [
+        "subtraction",
+        "word_problem",
+        "regrouping",
+        "zeros"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_001",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the capacity of a bathtub: millilitres or litres? A) millilitres   B) litres",
+      "questionType": "multiple_choice",
+      "answerKey": "litres",
+      "stepByStepSolution": [
+        "Think about how much liquid a bathtub can hold.",
+        "A bathtub holds a large amount of water, so litres make more sense than millilitres."
+      ],
+      "commonMisconceptions": [
+        "Choosing millilitres for very large capacities.",
+        "Not picturing the real-world size of the object."
+      ],
+      "hints": [
+        "Picture how much liquid the container really holds before choosing a unit.",
+        "Big containers like bathtubs and buckets are usually measured in litres."
+      ],
+      "tags": [
+        "units",
+        "capacity",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_002",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the capacity of a teaspoon: millilitres or litres? A) millilitres   B) litres",
+      "questionType": "multiple_choice",
+      "answerKey": "millilitres",
+      "stepByStepSolution": [
+        "Think about how little liquid a teaspoon holds.",
+        "Small amounts like a teaspoon are measured in millilitres."
+      ],
+      "commonMisconceptions": [
+        "Choosing litres for very small capacities.",
+        "Confusing millilitres and litres."
+      ],
+      "hints": [
+        "Small amounts of liquid use millilitres.",
+        "Big containers use litres."
+      ],
+      "tags": [
+        "units",
+        "capacity",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_003",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "medium",
+      "questionText": "How many millilitres are there in 3 litres?",
+      "questionType": "short_answer",
+      "answerKey": "3000",
+      "stepByStepSolution": [
+        "Remember: 1 litre = 1000 millilitres.",
+        "Multiply 1000 by the number of litres: 1000 x 3 = 3000.",
+        "So 3 litres = 3000 millilitres."
+      ],
+      "commonMisconceptions": [
+        "Multiplying by 100 instead of 1000.",
+        "Forgetting the conversion fact between litres and millilitres."
+      ],
+      "hints": [
+        "1 litre = 1000 mL.",
+        "Multiply 1000 by the number of litres."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "capacity"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_004",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "medium",
+      "questionText": "A bottle holds 2000 mL. How many litres is that?",
+      "questionType": "short_answer",
+      "answerKey": "2",
+      "stepByStepSolution": [
+        "1000 mL = 1 litre.",
+        "Divide 2000 by 1000 to find the number of litres.",
+        "2000 \u00f7 1000 = 2, so the bottle holds 2 litres."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the wrong number (e.g. 100 instead of 1000).",
+        "Mixing up which direction to convert."
+      ],
+      "hints": [
+        "1000 mL makes 1 litre.",
+        "Divide by 1000 to change mL into litres."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "capacity"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_005",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "hard",
+      "questionText": "A jug holds 1 litre 500 mL of juice. How many millilitres is that in total?",
+      "questionType": "short_answer",
+      "answerKey": "1500",
+      "stepByStepSolution": [
+        "Convert the litre part: 1 litre = 1000 mL.",
+        "Add the extra 500 mL: 1000 + 500 = 1500.",
+        "So the jug holds 1500 mL in total."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert the litre part before adding.",
+        "Adding 1 + 500 instead of 1000 + 500."
+      ],
+      "hints": [
+        "Change the litres into millilitres first, then add the rest.",
+        "1 litre is the same as 1000 mL."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "capacity"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_006",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "medium",
+      "questionText": "A fish tank holds 8 litres of water. A bucket holds 3000 mL. Which holds more water, and by how many mL?",
+      "questionType": "short_answer",
+      "answerKey": "the fish tank, by 5000 mL",
+      "stepByStepSolution": [
+        "Convert 8 litres to mL: 8 x 1000 = 8000 mL.",
+        "Compare 8000 mL to 3000 mL.",
+        "8000 - 3000 = 5000, so the fish tank holds 5000 mL more."
+      ],
+      "commonMisconceptions": [
+        "Comparing 8 and 3000 directly without converting to the same unit first.",
+        "Subtracting in the wrong order."
+      ],
+      "hints": [
+        "Change both amounts into the same unit before comparing.",
+        "8 litres is a lot more than 3000 mL \u2014 convert first to check by how much."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "comparison",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_007",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "easy",
+      "questionText": "Which container would most likely hold about 250 mL of water? A) a cup   B) a swimming pool   C) a bathtub",
+      "questionType": "multiple_choice",
+      "answerKey": "a cup",
+      "stepByStepSolution": [
+        "Think about the real size of each container.",
+        "A cup is a small container, matching a small amount like 250 mL."
+      ],
+      "commonMisconceptions": [
+        "Picking a container that is far too large for the amount given.",
+        "Not connecting the number to a familiar real-world object."
+      ],
+      "hints": [
+        "250 mL is a small amount, similar to a cup of water.",
+        "Swimming pools and bathtubs hold thousands of millilitres."
+      ],
+      "tags": [
+        "units",
+        "capacity",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_008",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "medium",
+      "questionText": "A recipe needs 500 mL of milk. Sam has a 1 litre bottle that is full. How much milk will be left after making the recipe?",
+      "questionType": "short_answer",
+      "answerKey": "500",
+      "stepByStepSolution": [
+        "Convert 1 litre to mL: 1000 mL.",
+        "Subtract the amount used: 1000 - 500 = 500.",
+        "So 500 mL of milk will be left."
+      ],
+      "commonMisconceptions": [
+        "Not converting the litre to mL before subtracting.",
+        "Adding instead of subtracting."
+      ],
+      "hints": [
+        "Change 1 litre into millilitres first.",
+        "'Used' means subtract from the total."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_009",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "hard",
+      "questionText": "Three bottles hold 750 mL, 250 mL and 1 litre. What is the total capacity in millilitres?",
+      "questionType": "short_answer",
+      "answerKey": "2000",
+      "stepByStepSolution": [
+        "Convert 1 litre to mL: 1000 mL.",
+        "Add all three amounts: 750 + 250 + 1000.",
+        "750 + 250 = 1000, then 1000 + 1000 = 2000 mL total."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert the litre amount before adding.",
+        "Making an addition error with three numbers."
+      ],
+      "hints": [
+        "Change every amount into the same unit (mL) before adding.",
+        "Add the numbers two at a time to keep it manageable."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3CAP_Y3_010",
+      "skillId": "M3M02_measure_capacity",
+      "difficulty": "easy",
+      "questionText": "Which is more: 1 litre or 500 mL? A) 1 litre   B) 500 mL   C) they are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "1 litre",
+      "stepByStepSolution": [
+        "1 litre equals 1000 mL.",
+        "Compare 1000 mL to 500 mL.",
+        "1000 is more than 500, so 1 litre is more."
+      ],
+      "commonMisconceptions": [
+        "Thinking a smaller-looking number (1) is less than a bigger-looking number (500) without converting.",
+        "Not knowing the litre-to-mL conversion."
+      ],
+      "hints": [
+        "Change litres into millilitres so you're comparing the same unit.",
+        "1 litre = 1000 mL, which is bigger than 500 mL."
+      ],
+      "tags": [
+        "units",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_001",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "easy",
+      "questionText": "A class voted for their favourite fruit: Apple - 6 votes, Banana - 4 votes, Orange - 8 votes. Which fruit got the most votes?",
+      "questionType": "short_answer",
+      "answerKey": "orange",
+      "stepByStepSolution": [
+        "Compare the three vote totals: 6, 4, and 8.",
+        "8 is the highest number.",
+        "Orange got the most votes."
+      ],
+      "commonMisconceptions": [
+        "Picking the fruit listed first instead of comparing the numbers.",
+        "Confusing 'most' with 'least'."
+      ],
+      "hints": [
+        "Look at all three numbers and find the biggest one.",
+        "'Most votes' means the highest number."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_002",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "easy",
+      "questionText": "A class voted for their favourite fruit: Apple - 6 votes, Banana - 4 votes, Orange - 8 votes. Which fruit got the fewest votes?",
+      "questionType": "short_answer",
+      "answerKey": "banana",
+      "stepByStepSolution": [
+        "Compare the three vote totals: 6, 4, and 8.",
+        "4 is the lowest number.",
+        "Banana got the fewest votes."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'fewest' with 'most'.",
+        "Miscounting the votes listed."
+      ],
+      "hints": [
+        "'Fewest' means the smallest number.",
+        "Compare all three totals carefully."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_003",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "medium",
+      "questionText": "A class voted for their favourite fruit: Apple - 6 votes, Banana - 4 votes, Orange - 8 votes. How many students voted in total?",
+      "questionType": "short_answer",
+      "answerKey": "18",
+      "stepByStepSolution": [
+        "Add all the votes together: 6 + 4 + 8.",
+        "6 + 4 = 10.",
+        "10 + 8 = 18 students voted in total."
+      ],
+      "commonMisconceptions": [
+        "Only adding two of the three categories.",
+        "Making an addition error."
+      ],
+      "hints": [
+        "Add every category's votes together, not just some.",
+        "Check your total by adding again in a different order."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table",
+        "totals"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_004",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "medium",
+      "questionText": "Pets owned by students: Dog - 9, Cat - 7, Fish - 3, Bird - 5. How many more students own a dog than a fish?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Find the two numbers to compare: dog (9) and fish (3).",
+        "Subtract: 9 - 3 = 6.",
+        "6 more students own a dog than a fish."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order.",
+        "Comparing the wrong two categories."
+      ],
+      "hints": [
+        "'How many more' means subtract the smaller number from the larger one.",
+        "Make sure you're comparing dog and fish, not other pets."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table",
+        "comparison"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_005",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "hard",
+      "questionText": "Pets owned by students: Dog - 9, Cat - 7, Fish - 3, Bird - 5. How many students were surveyed altogether?",
+      "questionType": "short_answer",
+      "answerKey": "24",
+      "stepByStepSolution": [
+        "Add every category: 9 + 7 + 3 + 5.",
+        "9 + 7 = 16, and 3 + 5 = 8.",
+        "16 + 8 = 24 students in total."
+      ],
+      "commonMisconceptions": [
+        "Missing one of the four categories when adding.",
+        "Adding the numbers in a way that causes a mistake."
+      ],
+      "hints": [
+        "Add all four categories, not just some of them.",
+        "Try grouping the numbers into pairs to make adding easier."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table",
+        "totals"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_006",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "medium",
+      "questionText": "Which of these is a categorical variable that could be collected for a class survey? A) favourite colour   B) height in centimetres   C) number of pets",
+      "questionType": "multiple_choice",
+      "answerKey": "favourite colour",
+      "stepByStepSolution": [
+        "A categorical variable sorts things into named groups or categories, not numbers.",
+        "Favourite colour groups people into categories like red, blue, green.",
+        "Height and number of pets are numerical, not categorical."
+      ],
+      "commonMisconceptions": [
+        "Confusing numerical data (like height) with categorical data (like colour).",
+        "Thinking any survey question is automatically categorical."
+      ],
+      "hints": [
+        "Categorical data uses group names, not numbers.",
+        "Favourite colour is a group/category, not a measurement."
+      ],
+      "tags": [
+        "categorical_data",
+        "data_types"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_007",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "easy",
+      "questionText": "A tally shows: Red |||| , Blue ||| , Green ||||| . How many students chose green?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Count the tally marks for green: |||||.",
+        "Each mark represents one student.",
+        "There are 5 marks, so 5 students chose green."
+      ],
+      "commonMisconceptions": [
+        "Miscounting the tally marks.",
+        "Confusing the counts for different colours."
+      ],
+      "hints": [
+        "Count each tally mark one at a time.",
+        "Make sure you're counting the green tally, not another colour."
+      ],
+      "tags": [
+        "categorical_data",
+        "tally",
+        "frequency_table"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_008",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "medium",
+      "questionText": "A tally shows: Red |||| , Blue ||| , Green ||||| . How many students were surveyed in total?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "Count each tally: Red = 4, Blue = 3, Green = 5.",
+        "Add them together: 4 + 3 + 5.",
+        "4 + 3 = 7, then 7 + 5 = 12 students in total."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the colours.",
+        "Miscounting one of the tally groups."
+      ],
+      "hints": [
+        "Count each colour's tally marks carefully first.",
+        "Add all three totals together."
+      ],
+      "tags": [
+        "categorical_data",
+        "tally",
+        "totals"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_009",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "hard",
+      "questionText": "A survey asks 'What is your favourite season?' Suggest one good reason to collect this as categorical data rather than a number.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "seasons are named groups not numbers",
+        "seasons are categories, not numbers",
+        "you can't measure a season with a number"
+      ],
+      "stepByStepSolution": [
+        "Think about what a season actually is \u2014 summer, autumn, winter, spring.",
+        "These are names or labels, not measurable amounts.",
+        "So they should be recorded as categories, not numbers."
+      ],
+      "commonMisconceptions": [
+        "Trying to assign a number value to something that is really a category.",
+        "Not recognising that named groups are categorical data."
+      ],
+      "hints": [
+        "Seasons are names, not amounts you can count or measure.",
+        "Categorical data is about grouping into named types."
+      ],
+      "tags": [
+        "categorical_data",
+        "data_types",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "M3ST01_Y3_010",
+      "skillId": "M3ST01_categorical_data",
+      "difficulty": "medium",
+      "questionText": "A frequency table shows favourite sports: Soccer - 10, Netball - 6, Swimming - 6, Cricket - 8. Which two sports are equally popular?",
+      "questionType": "short_answer",
+      "answerKey": "netball and swimming",
+      "stepByStepSolution": [
+        "Compare all four numbers: 10, 6, 6, 8.",
+        "Netball and Swimming both have 6.",
+        "Those two sports are equally popular."
+      ],
+      "commonMisconceptions": [
+        "Assuming no two categories can have the same value.",
+        "Comparing the wrong pair of numbers."
+      ],
+      "hints": [
+        "Look for two categories that share the exact same number.",
+        "Netball and Swimming have matching totals."
+      ],
+      "tags": [
+        "categorical_data",
+        "frequency_table",
+        "comparison"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_001",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "easy",
+      "questionText": "In the paper boat text, which part usually comes first?",
+      "questionType": "multiple_choice",
+      "answerKey": "Introduction",
+      "stepByStepSolution": [
+        "Look at the order the sections appear in the text.",
+        "The Introduction is placed at the very top, before the steps.",
+        "So Introduction comes first."
+      ],
+      "commonMisconceptions": [
+        "Assuming the steps always come first in an instructional text.",
+        "Not looking at the actual order of the passage."
+      ],
+      "hints": [
+        "Check which heading appears at the very top of the text.",
+        "An introduction usually tells you what the text is about before anything else."
+      ],
+      "tags": [
+        "text_structure",
+        "informational_text"
+      ],
+      "passage": "How to Make a Paper Boat\n\nIntroduction: Paper boats are fun and easy to make with just one sheet of paper.\n\nWhat You Need: You will need one sheet of rectangular paper.\n\nSteps: First, fold the paper in half. Next, fold the corners down to make a triangle shape. Then, fold up the bottom edges on both sides. Finally, open out the boat shape gently.\n\nConclusion: Now your paper boat is ready to float on water!"
+    },
+    {
+      "id": "ETEXT_Y3_002",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "easy",
+      "questionText": "In the paper boat text, which part comes last?",
+      "questionType": "multiple_choice",
+      "answerKey": "Conclusion",
+      "stepByStepSolution": [
+        "Look at the order the sections appear in the text.",
+        "The Conclusion is placed at the very bottom.",
+        "So Conclusion comes last."
+      ],
+      "commonMisconceptions": [
+        "Confusing the conclusion with the steps section.",
+        "Not checking the order carefully."
+      ],
+      "hints": [
+        "The conclusion usually wraps up the text at the end.",
+        "Check the very last heading in the passage."
+      ],
+      "tags": [
+        "text_structure",
+        "informational_text"
+      ],
+      "passage": "How to Make a Paper Boat\n\nIntroduction: Paper boats are fun and easy to make with just one sheet of paper.\n\nWhat You Need: You will need one sheet of rectangular paper.\n\nSteps: First, fold the paper in half. Next, fold the corners down to make a triangle shape. Then, fold up the bottom edges on both sides. Finally, open out the boat shape gently.\n\nConclusion: Now your paper boat is ready to float on water!"
+    },
+    {
+      "id": "ETEXT_Y3_003",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "medium",
+      "questionText": "What is the purpose of a heading like 'What You Need' in an instructional text? A) It tells the reader what materials to gather before starting   B) It tells the reader how the story ends   C) It describes a character's feelings",
+      "questionType": "multiple_choice",
+      "answerKey": "It tells the reader what materials to gather before starting",
+      "stepByStepSolution": [
+        "Headings help organise information into clear sections.",
+        "'What You Need' signals a list of materials.",
+        "This helps the reader gather things before beginning the steps."
+      ],
+      "commonMisconceptions": [
+        "Thinking headings are just decoration and don't have a purpose.",
+        "Confusing an instructional heading with a story element."
+      ],
+      "hints": [
+        "A heading tells you what kind of information is coming next.",
+        "Think about what 'What You Need' would list."
+      ],
+      "tags": [
+        "text_structure",
+        "headings",
+        "informational_text"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_004",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "medium",
+      "questionText": "Why do writers use headings and subheadings in a text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to organise information",
+        "to help readers find information",
+        "to make the text easier to follow",
+        "to break the text into sections"
+      ],
+      "stepByStepSolution": [
+        "Headings act like signposts in a text.",
+        "They group related information together.",
+        "This makes it easier for readers to find and follow information."
+      ],
+      "commonMisconceptions": [
+        "Thinking headings are only for decoration.",
+        "Not understanding that they organise content."
+      ],
+      "hints": [
+        "Think about what a heading helps a reader do.",
+        "Headings work like signposts, guiding the reader through sections."
+      ],
+      "tags": [
+        "text_structure",
+        "headings",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_005",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "medium",
+      "questionText": "A persuasive text usually has an introduction, then arguments, then a conclusion. What would you expect to find in the introduction of a persuasive text? A) The writer's opinion or main point   B) A list of ingredients   C) A picture caption",
+      "questionType": "multiple_choice",
+      "answerKey": "The writer's opinion or main point",
+      "stepByStepSolution": [
+        "An introduction sets up what the text will be about.",
+        "In a persuasive text, this usually means stating the writer's opinion.",
+        "This lets the reader know the main point straight away."
+      ],
+      "commonMisconceptions": [
+        "Confusing a persuasive text's structure with an instructional text's structure.",
+        "Thinking the introduction only appears in stories."
+      ],
+      "hints": [
+        "Think about what a persuasive text is trying to do \u2014 convince someone.",
+        "The introduction usually states the opinion being argued."
+      ],
+      "tags": [
+        "text_structure",
+        "persuasive_text"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_006",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "easy",
+      "questionText": "Which text structure feature helps you quickly find a specific section without reading the whole text? A) headings   B) the title only   C) the last sentence",
+      "questionType": "multiple_choice",
+      "answerKey": "headings",
+      "stepByStepSolution": [
+        "Headings label each section of a text.",
+        "You can scan headings to find the section you need.",
+        "This is faster than reading the whole text."
+      ],
+      "commonMisconceptions": [
+        "Thinking only the title helps you navigate a text.",
+        "Not recognising headings as a navigation tool."
+      ],
+      "hints": [
+        "Think about labels that break a text into parts.",
+        "Headings act like signposts for different sections."
+      ],
+      "tags": [
+        "text_structure",
+        "headings",
+        "navigation"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_007",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "hard",
+      "questionText": "A recount text (retelling a real event) usually follows which order? A) orientation, then events in time order, then a concluding comment   B) events in random order, then a title   C) a conclusion, then an introduction",
+      "questionType": "multiple_choice",
+      "answerKey": "orientation, then events in time order, then a concluding comment",
+      "stepByStepSolution": [
+        "A recount tells the reader who/what/when/where first (orientation).",
+        "Then it retells events in the order they happened.",
+        "It usually ends with a comment about the event."
+      ],
+      "commonMisconceptions": [
+        "Thinking a recount can be told in any random order.",
+        "Confusing a recount's structure with a persuasive text's structure."
+      ],
+      "hints": [
+        "Think about how you would tell a friend about something that happened to you.",
+        "You'd usually set the scene first, then tell what happened in order."
+      ],
+      "tags": [
+        "text_structure",
+        "recount"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_008",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "medium",
+      "questionText": "In the paper boat text, which section would most likely list the materials needed?",
+      "questionType": "short_answer",
+      "answerKey": "What You Need",
+      "stepByStepSolution": [
+        "Look at the passage's headings.",
+        "'What You Need' is specifically about materials.",
+        "This is where the paper requirement is listed."
+      ],
+      "commonMisconceptions": [
+        "Looking in the wrong section, like the steps or conclusion.",
+        "Not connecting the heading's name to its content."
+      ],
+      "hints": [
+        "Find the heading whose name matches 'materials' or 'need'.",
+        "Re-read the heading list in the passage."
+      ],
+      "tags": [
+        "text_structure",
+        "informational_text"
+      ],
+      "passage": "How to Make a Paper Boat\n\nIntroduction: Paper boats are fun and easy to make with just one sheet of paper.\n\nWhat You Need: You will need one sheet of rectangular paper.\n\nSteps: First, fold the paper in half. Next, fold the corners down to make a triangle shape. Then, fold up the bottom edges on both sides. Finally, open out the boat shape gently.\n\nConclusion: Now your paper boat is ready to float on water!"
+    },
+    {
+      "id": "ETEXT_Y3_009",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "medium",
+      "questionText": "Why might a writer group similar information into the same paragraph?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to keep related ideas together",
+        "to make the text easier to understand",
+        "to organise ideas clearly",
+        "so readers aren't confused by mixed ideas"
+      ],
+      "stepByStepSolution": [
+        "Paragraphs group related ideas together.",
+        "This helps readers follow one idea before moving to the next.",
+        "It keeps the text organised and easy to understand."
+      ],
+      "commonMisconceptions": [
+        "Thinking paragraphs are just random breaks in text.",
+        "Not connecting paragraph grouping to reader understanding."
+      ],
+      "hints": [
+        "Think about what happens if ideas are all mixed together instead of grouped.",
+        "Paragraphs help keep one topic together at a time."
+      ],
+      "tags": [
+        "text_structure",
+        "paragraphs",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "ETEXT_Y3_010",
+      "skillId": "E3LA04_LY03_text_structure",
+      "difficulty": "easy",
+      "questionText": "Which of these is an example of signposting in a text? A) a heading like 'Step 1'   B) a character's name   C) a full stop",
+      "questionType": "multiple_choice",
+      "answerKey": "a heading like 'Step 1'",
+      "stepByStepSolution": [
+        "Signposting means features that guide the reader through a text.",
+        "A heading like 'Step 1' shows the reader where they are in a sequence.",
+        "Character names and full stops don't guide readers through structure."
+      ],
+      "commonMisconceptions": [
+        "Confusing punctuation with structural signposting.",
+        "Thinking any word in the text counts as signposting."
+      ],
+      "hints": [
+        "Signposting helps readers know what's coming next or where they are.",
+        "Think about headings, numbers, or labels."
+      ],
+      "tags": [
+        "text_structure",
+        "headings",
+        "signposting"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_001",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "easy",
+      "questionText": "What is usually the first part of an information report? A) An introduction that says what the report is about   B) A joke to make the reader laugh   C) A list of questions",
+      "questionType": "multiple_choice",
+      "answerKey": "An introduction that says what the report is about",
+      "stepByStepSolution": [
+        "An information report starts by telling the reader the topic.",
+        "This is the introduction.",
+        "It sets up what the rest of the report will explain."
+      ],
+      "commonMisconceptions": [
+        "Thinking an information report starts with detailed facts straight away.",
+        "Confusing an information report's opening with a story's opening."
+      ],
+      "hints": [
+        "Think about what a reader needs to know before the details.",
+        "The introduction names the topic."
+      ],
+      "tags": [
+        "information_report",
+        "text_structure"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_002",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "medium",
+      "questionText": "Which sentence would best open an information report about koalas? A) Koalas are marsupials that live in Australia.   B) Once upon a time there was a koala.   C) I love koalas so much!",
+      "questionType": "multiple_choice",
+      "answerKey": "Koalas are marsupials that live in Australia.",
+      "stepByStepSolution": [
+        "An information report's introduction states facts about the topic.",
+        "'Koalas are marsupials that live in Australia' gives a factual overview.",
+        "The other options sound like a story or personal opinion, not a report."
+      ],
+      "commonMisconceptions": [
+        "Choosing a story-style opening for a factual report.",
+        "Choosing an opinion sentence instead of a factual one."
+      ],
+      "hints": [
+        "An information report is factual, not a story.",
+        "Look for the sentence that states a fact about koalas."
+      ],
+      "tags": [
+        "information_report",
+        "text_structure"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_003",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "medium",
+      "questionText": "In an information report about the ocean, which body paragraph topics would make sense together? A) Ocean animals, ocean plants, and ocean depth   B) A birthday party, a pet dog, and a holiday   C) A joke, a poem, and a song",
+      "questionType": "multiple_choice",
+      "answerKey": "Ocean animals, ocean plants, and ocean depth",
+      "stepByStepSolution": [
+        "Body paragraphs in an information report should be grouped by subtopic.",
+        "Ocean animals, plants, and depth are all related to the ocean topic.",
+        "The other groups don't relate to an ocean report at all."
+      ],
+      "commonMisconceptions": [
+        "Mixing unrelated topics into one report.",
+        "Not grouping related subtopics together."
+      ],
+      "hints": [
+        "Each body paragraph should cover one subtopic related to the main topic.",
+        "Think about what naturally relates to 'the ocean'."
+      ],
+      "tags": [
+        "information_report",
+        "structure",
+        "subtopics"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_004",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "easy",
+      "questionText": "What should the conclusion of an information report do? A) Sum up the main information   B) Introduce a brand new topic   C) Ask the reader a riddle",
+      "questionType": "multiple_choice",
+      "answerKey": "Sum up the main information",
+      "stepByStepSolution": [
+        "A conclusion wraps up what has been said.",
+        "It sums up the key information from the report.",
+        "It should not introduce brand new information."
+      ],
+      "commonMisconceptions": [
+        "Thinking the conclusion should add completely new facts.",
+        "Confusing the conclusion with the introduction."
+      ],
+      "hints": [
+        "A conclusion looks back at what was already said.",
+        "It should feel like a wrap-up, not a new start."
+      ],
+      "tags": [
+        "information_report",
+        "text_structure"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_005",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "hard",
+      "questionText": "Which sentence would fit best in the conclusion of an information report about the water cycle? A) The water cycle shows how water moves through nature again and again.   B) Water is made of hydrogen and oxygen atoms.   C) Rain falls from clouds when they get heavy.",
+      "questionType": "multiple_choice",
+      "answerKey": "The water cycle shows how water moves through nature again and again.",
+      "stepByStepSolution": [
+        "A conclusion sums up the whole topic, not just one detail.",
+        "Option A gives a general wrap-up statement about the whole water cycle.",
+        "The other options are specific facts that belong in body paragraphs, not the conclusion."
+      ],
+      "commonMisconceptions": [
+        "Putting a specific fact in the conclusion instead of a summary.",
+        "Confusing detail sentences with summary sentences."
+      ],
+      "hints": [
+        "A conclusion should sound like a summary of everything, not one small fact.",
+        "Look for the sentence that talks about the whole topic."
+      ],
+      "tags": [
+        "information_report",
+        "text_structure",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_006",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "medium",
+      "questionText": "An information report about sharks has these paragraph topics: 'What sharks eat', 'Where sharks live', 'Types of sharks'. Which subtopic would come first if the report follows a logical order, starting with a general introduction to types?",
+      "questionType": "short_answer",
+      "answerKey": "Types of sharks",
+      "stepByStepSolution": [
+        "Starting with 'types' gives readers a general overview before details.",
+        "Then 'where they live' and 'what they eat' can follow with more specific facts.",
+        "This creates a logical general-to-specific order."
+      ],
+      "commonMisconceptions": [
+        "Choosing a random order without a logical reason.",
+        "Starting with the most specific detail before general information."
+      ],
+      "hints": [
+        "Reports often move from general information to more specific details.",
+        "Which topic feels the most 'big picture'?"
+      ],
+      "tags": [
+        "information_report",
+        "structure",
+        "subtopics",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_007",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "easy",
+      "questionText": "True or false: an information report should include the writer's personal opinion throughout.",
+      "questionType": "short_answer",
+      "answerKey": "false",
+      "stepByStepSolution": [
+        "Information reports are meant to be factual.",
+        "Personal opinions belong in persuasive texts, not information reports.",
+        "So the statement is false."
+      ],
+      "commonMisconceptions": [
+        "Confusing information reports with persuasive texts.",
+        "Thinking all writing includes personal opinion."
+      ],
+      "hints": [
+        "Information reports focus on facts, not opinions.",
+        "Persuasive texts are the ones built around opinions."
+      ],
+      "tags": [
+        "information_report",
+        "text_types",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_008",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "medium",
+      "questionText": "Which of these would NOT belong in an information report about bicycles? A) how bicycles are used for transport   B) different types of bicycles   C) a made-up story about a magic bicycle",
+      "questionType": "multiple_choice",
+      "answerKey": "a made-up story about a magic bicycle",
+      "stepByStepSolution": [
+        "Information reports contain facts, not made-up stories.",
+        "How bicycles are used and different types are both factual topics.",
+        "A magic bicycle story is imaginative, not factual."
+      ],
+      "commonMisconceptions": [
+        "Including imaginative content in a factual report.",
+        "Not distinguishing between fact and fiction."
+      ],
+      "hints": [
+        "Information reports stick to real facts.",
+        "Look for the option that isn't true or factual."
+      ],
+      "tags": [
+        "information_report",
+        "text_types",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_009",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "medium",
+      "questionText": "Why do writers group information into body paragraphs by subtopic in an information report?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to keep similar information together",
+        "so the report is organised and clear",
+        "to make it easier for readers to understand",
+        "to avoid mixing unrelated facts"
+      ],
+      "stepByStepSolution": [
+        "Grouping by subtopic keeps related facts together.",
+        "This makes each paragraph focused on one idea.",
+        "It helps the reader follow the report clearly."
+      ],
+      "commonMisconceptions": [
+        "Mixing multiple subtopics into a single paragraph.",
+        "Not seeing the benefit of grouping information."
+      ],
+      "hints": [
+        "Think about what would happen if all facts were jumbled together.",
+        "Subtopics help organise the report clearly."
+      ],
+      "tags": [
+        "information_report",
+        "structure",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "EREPORT_Y3_010",
+      "skillId": "E3LY06_LA04_information_report",
+      "difficulty": "hard",
+      "questionText": "A student's information report about volcanoes has body paragraphs in this order: 'How volcanoes erupt', 'What a volcano is', 'Famous volcanoes'. What's a better logical order?",
+      "questionType": "short_answer",
+      "answerKey": "What a volcano is, how volcanoes erupt, famous volcanoes",
+      "stepByStepSolution": [
+        "Start with defining the topic before explaining how it works.",
+        "'What a volcano is' should come first as a general introduction to the subtopic.",
+        "Then 'how volcanoes erupt' explains a process, and 'famous volcanoes' gives specific examples last."
+      ],
+      "commonMisconceptions": [
+        "Starting with a process before defining the basic topic.",
+        "Placing examples before the general explanation."
+      ],
+      "hints": [
+        "Definitions usually come before explanations of how something works.",
+        "Specific examples usually come after the general information."
+      ],
+      "tags": [
+        "information_report",
+        "structure",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_001",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "easy",
+      "questionText": "Which sentence is written in the past tense? A) She walks to school.   B) She walked to school.   C) She will walk to school.",
+      "questionType": "multiple_choice",
+      "answerKey": "She walked to school.",
+      "stepByStepSolution": [
+        "Past tense describes something that already happened.",
+        "'Walked' has the -ed ending showing past action.",
+        "The other sentences are present and future tense."
+      ],
+      "commonMisconceptions": [
+        "Confusing present tense verbs with past tense verbs.",
+        "Not recognising the -ed ending as a past tense signal."
+      ],
+      "hints": [
+        "Past tense verbs often end in -ed.",
+        "Think about when the action happened \u2014 already, now, or later?"
+      ],
+      "tags": [
+        "tense",
+        "past_tense"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_002",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "easy",
+      "questionText": "Which sentence is written in the future tense? A) I eat breakfast.   B) I ate breakfast.   C) I will eat breakfast.",
+      "questionType": "multiple_choice",
+      "answerKey": "I will eat breakfast.",
+      "stepByStepSolution": [
+        "Future tense describes something that hasn't happened yet.",
+        "'Will eat' shows an action that is going to happen later.",
+        "The other sentences are present and past tense."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'will' with a present tense marker.",
+        "Not recognising 'will + verb' as future tense."
+      ],
+      "hints": [
+        "Future tense often uses the word 'will'.",
+        "Think about whether the action is happening now, already happened, or hasn't happened yet."
+      ],
+      "tags": [
+        "tense",
+        "future_tense"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_003",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "medium",
+      "questionText": "Fix the tense mistake: 'Yesterday, I walk to the park and play with my friends.'",
+      "questionType": "short_answer",
+      "answerKey": "Yesterday, I walked to the park and played with my friends.",
+      "stepByStepSolution": [
+        "The word 'yesterday' tells you the sentence should be in past tense.",
+        "Change 'walk' to 'walked' and 'play' to 'played'.",
+        "This keeps the tense consistent with 'yesterday'."
+      ],
+      "commonMisconceptions": [
+        "Leaving the verbs in present tense despite a past time clue.",
+        "Fixing only one of the two verbs."
+      ],
+      "hints": [
+        "Look for time words like 'yesterday' that tell you which tense to use.",
+        "Check every verb in the sentence, not just one."
+      ],
+      "tags": [
+        "tense",
+        "consistency",
+        "editing"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_004",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "medium",
+      "questionText": "Fix the tense mistake: 'Tomorrow, we go to the beach and swam in the ocean.'",
+      "questionType": "short_answer",
+      "answerKey": "Tomorrow, we will go to the beach and swim in the ocean.",
+      "stepByStepSolution": [
+        "'Tomorrow' signals the future tense.",
+        "Change 'go' to 'will go' and 'swam' to 'swim' (or 'will swim').",
+        "This keeps both verbs consistent with a future event."
+      ],
+      "commonMisconceptions": [
+        "Mixing past and future tense in the same sentence.",
+        "Not noticing the time word 'tomorrow'."
+      ],
+      "hints": [
+        "Time words like 'tomorrow' point to future tense.",
+        "Check both verbs match the same tense."
+      ],
+      "tags": [
+        "tense",
+        "consistency",
+        "editing"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_005",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "hard",
+      "questionText": "Which sentence keeps its tense consistent throughout? A) She ran to the shop and buys some milk.   B) She ran to the shop and bought some milk.   C) She runs to the shop and bought some milk.",
+      "questionType": "multiple_choice",
+      "answerKey": "She ran to the shop and bought some milk.",
+      "stepByStepSolution": [
+        "Consistent tense means all verbs in a sentence describe the same time period.",
+        "'Ran' and 'bought' are both past tense.",
+        "The other options mix past and present tense verbs."
+      ],
+      "commonMisconceptions": [
+        "Not checking that every verb in a sentence matches.",
+        "Assuming one correct verb means the whole sentence is fine."
+      ],
+      "hints": [
+        "Check every verb in the sentence, not just the first one.",
+        "All verbs describing the same event should usually match in tense."
+      ],
+      "tags": [
+        "tense",
+        "consistency"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_006",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "medium",
+      "questionText": "What tense is the verb 'thinking' most likely used in: 'She is thinking about her holiday'?",
+      "questionType": "short_answer",
+      "answerKey": "present tense",
+      "stepByStepSolution": [
+        "'Is thinking' describes something happening right now.",
+        "This is a present tense (present continuous) form.",
+        "So the tense is present."
+      ],
+      "commonMisconceptions": [
+        "Confusing present continuous with past or future tense.",
+        "Focusing only on the word 'thinking' without 'is'."
+      ],
+      "hints": [
+        "Look at the whole verb phrase, not just one word.",
+        "'Is + verb-ing' usually shows something happening now."
+      ],
+      "tags": [
+        "tense",
+        "present_tense"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_007",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "easy",
+      "questionText": "Which word signals that a sentence should probably be in past tense? A) yesterday   B) tomorrow   C) next week",
+      "questionType": "multiple_choice",
+      "answerKey": "yesterday",
+      "stepByStepSolution": [
+        "Time words give clues about which tense to use.",
+        "'Yesterday' refers to a day that has already passed.",
+        "'Tomorrow' and 'next week' refer to the future."
+      ],
+      "commonMisconceptions": [
+        "Confusing future time words with past time words.",
+        "Not linking time words to the correct tense."
+      ],
+      "hints": [
+        "Think about whether the time word refers to the past or the future.",
+        "'Yesterday' is a day that has already happened."
+      ],
+      "tags": [
+        "tense",
+        "past_tense",
+        "time_words"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_008",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "medium",
+      "questionText": "Rewrite this sentence to be consistently in the present tense: 'He kicked the ball and scores a goal.'",
+      "questionType": "short_answer",
+      "answerKey": "He kicks the ball and scores a goal.",
+      "stepByStepSolution": [
+        "Both verbs need to match the same tense.",
+        "'Scores' is already present tense, so change 'kicked' to 'kicks'.",
+        "Now both verbs are present tense."
+      ],
+      "commonMisconceptions": [
+        "Changing the wrong verb to match.",
+        "Leaving one verb in a different tense."
+      ],
+      "hints": [
+        "Find the verb that is already correct, then match the other one to it.",
+        "Present tense verbs often don't have an -ed ending."
+      ],
+      "tags": [
+        "tense",
+        "consistency",
+        "editing"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_009",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "hard",
+      "questionText": "Why is it important to keep tense consistent when writing a recount of something that happened?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "so the reader isn't confused about when things happened",
+        "to make the writing clear",
+        "because mixing tenses is confusing for the reader"
+      ],
+      "stepByStepSolution": [
+        "A recount describes events that already happened.",
+        "If the tense keeps changing, the reader can get confused about when things occurred.",
+        "Keeping the tense the same throughout makes the timeline clear."
+      ],
+      "commonMisconceptions": [
+        "Thinking tense doesn't affect how clear a story is.",
+        "Not connecting tense consistency to reader understanding."
+      ],
+      "hints": [
+        "Think about how confusing it would be if a sentence jumped between times.",
+        "Consistent tense keeps the timeline of events clear."
+      ],
+      "tags": [
+        "tense",
+        "consistency",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "ETENSE_Y3_010",
+      "skillId": "E3LA08_tense_consistency",
+      "difficulty": "medium",
+      "questionText": "Which sentence uses future tense correctly? A) Next week, we will visit our grandparents.   B) Next week, we visited our grandparents.   C) Next week, we visit our grandparents yesterday.",
+      "questionType": "multiple_choice",
+      "answerKey": "Next week, we will visit our grandparents.",
+      "stepByStepSolution": [
+        "'Next week' signals a future event.",
+        "'Will visit' matches the future time word correctly.",
+        "The other options either use past tense or mix past and future clues."
+      ],
+      "commonMisconceptions": [
+        "Using past tense with a future time word.",
+        "Mixing two different time clues in one sentence."
+      ],
+      "hints": [
+        "Match the verb tense to the time word in the sentence.",
+        "'Will + verb' is a common way to show future tense."
+      ],
+      "tags": [
+        "tense",
+        "future_tense"
+      ]
+    }
+  ]
+}

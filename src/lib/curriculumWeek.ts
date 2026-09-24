@@ -6,13 +6,13 @@
  * Note: src/db/seed/year3-curriculum.json and seed.ts already define and
  * insert curriculumSequenceEntries rows for ALL 10 weeks of Year 3 Term 1
  * (both subjects) — the "new skill" sequence isn't the bottleneck. What's
- * actually limited is the item bank: only Weeks 1-3 have real practice
+ * actually limited is the item bank: only Weeks 1-4 have real practice
  * questions written for their newly-introduced skills so far (see
  * src/db/seed/week1-item-bank.json, week2-item-bank.json,
- * week3-item-bank.json). Advancing MAX_AVAILABLE_WEEK further without
- * matching item content would leave a child with "new" skills that have no
- * items to practise — raise it only once each additional week's item bank
- * exists.
+ * week3-item-bank.json, week4-item-bank.json). Advancing MAX_AVAILABLE_WEEK
+ * further without matching item content would leave a child with "new"
+ * skills that have no items to practise — raise it only once each
+ * additional week's item bank exists.
  */
 
 const WEEKS_PER_TERM = 10;
@@ -23,7 +23,7 @@ const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 // weeks; item content is what's actually rate-limiting here). Raise
 // MAX_AVAILABLE_TERM once Term 2+ curriculum + items exist.
 const MAX_AVAILABLE_TERM = 1;
-const MAX_AVAILABLE_WEEK = 3;
+const MAX_AVAILABLE_WEEK = 4;
 
 export type TermWeek = { term: number; week: number };
 
