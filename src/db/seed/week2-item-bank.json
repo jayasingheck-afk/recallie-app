@@ -1,0 +1,1294 @@
+{
+  "_note": "Week 2 item bank for Year 3 Maths & English, generated following the project's Maths/English item-generation prompt templates (curriculum_codes, skill_description, difficulty, question_text, question_type, answer_key, step_by_step_solution, common_misconceptions, hints, tags). This is AI-generated content pending the human review step described in the project instructions -- do not treat as final/published without a curriculum-qualified reviewer checking wording, difficulty, and Australian English throughout. All items use short_answer or multiple_choice so every item is auto-gradable and usable in live sessions immediately (unlike some of the Week 1 bank's multi_part items).",
+  "items": [
+    {
+      "id": "M3N03_Y3_001",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "easy",
+      "questionText": "Which is greater: 3,482 or 3,428? Write the greater number.",
+      "questionType": "short_answer",
+      "answerKey": "3482",
+      "stepByStepSolution": [
+        "Compare the digits from left to right.",
+        "Both start with 3 thousands.",
+        "Look at the hundreds: 4 hundreds is more than 4 hundreds — look at the tens next.",
+        "3482 has 8 tens, 3428 has 2 tens, so 3482 is greater."
+      ],
+      "commonMisconceptions": [
+        "Comparing digits from right to left instead of left to right.",
+        "Thinking more digits after the comma always means bigger, when both numbers have the same number of digits."
+      ],
+      "hints": [
+        "Line the numbers up and compare column by column, starting from the thousands.",
+        "Find the first column where the digits are different — the bigger digit there wins."
+      ],
+      "tags": [
+        "place_value",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_002",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "easy",
+      "questionText": "Which is smaller: 6,050 or 6,005? Write the smaller number.",
+      "questionType": "short_answer",
+      "answerKey": "6005",
+      "stepByStepSolution": [
+        "Both numbers have 6 thousands and 0 hundreds.",
+        "Compare the tens: 6050 has 5 tens, 6005 has 0 tens.",
+        "0 tens is fewer than 5 tens, so 6005 is smaller."
+      ],
+      "commonMisconceptions": [
+        "Assuming the number with more non-zero digits is always bigger.",
+        "Ignoring the placeholder zero in the tens column."
+      ],
+      "hints": [
+        "Compare column by column starting from the thousands.",
+        "Check the tens column carefully — a 0 there matters."
+      ],
+      "tags": [
+        "place_value",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_003",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "easy",
+      "questionText": "Which symbol correctly compares these numbers? 7,215 ___ 7,251   A) 7215 is greater than 7251   B) 7215 is less than 7251   C) 7215 is equal to 7251",
+      "questionType": "multiple_choice",
+      "answerKey": "7215 is less than 7251",
+      "stepByStepSolution": [
+        "Both numbers have 7 thousands and 2 hundreds.",
+        "Compare the tens: 7215 has 1 ten, 7251 has 5 tens.",
+        "1 ten is fewer than 5 tens, so 7215 is less than 7251."
+      ],
+      "commonMisconceptions": [
+        "Comparing only the first digit and stopping there.",
+        "Assuming the number that 'looks longer when read aloud' is bigger."
+      ],
+      "hints": [
+        "Compare the numbers column by column from the left.",
+        "Find the first column that's different — that tells you which is bigger."
+      ],
+      "tags": [
+        "place_value",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_004",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "medium",
+      "questionText": "Which of these numbers is between 4,000 and 5,000 on the number line? A) 3999   B) 4501   C) 5006",
+      "questionType": "multiple_choice",
+      "answerKey": "4501",
+      "stepByStepSolution": [
+        "A number between 4,000 and 5,000 must be more than 4000 and less than 5000.",
+        "3999 is just below 4000, so it doesn't count.",
+        "5006 is above 5000, so it doesn't count.",
+        "4501 fits between 4000 and 5000."
+      ],
+      "commonMisconceptions": [
+        "Picking a number just because it starts with a 4 or a 5, without checking both ends of the range.",
+        "Thinking 5006 is close enough to 5000 to count as 'between'."
+      ],
+      "hints": [
+        "Picture a number line from 4000 to 5000 — which option sits inside that stretch?",
+        "Check each option against both the lower and upper number."
+      ],
+      "tags": [
+        "number_line",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_005",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "medium",
+      "questionText": "Which number is the largest of these three: 2,910, 2,190, 2,901?",
+      "questionType": "short_answer",
+      "answerKey": "2910",
+      "stepByStepSolution": [
+        "All three numbers start with 2 thousands.",
+        "Compare the hundreds: 2910 and 2901 have 9 hundreds, 2190 has 1 hundred.",
+        "So 2190 is smallest — compare 2910 and 2901 next.",
+        "2910 has 1 ten, 2901 has 0 tens, so 2910 is the largest."
+      ],
+      "commonMisconceptions": [
+        "Only comparing the first two digits and assuming that's enough.",
+        "Getting confused because the same digits (2, 9, 1, 0) appear in a different order in each number."
+      ],
+      "hints": [
+        "Line all three numbers up under each other by place value.",
+        "Work column by column from the thousands until you find a difference."
+      ],
+      "tags": [
+        "place_value",
+        "ordering"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_006",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "medium",
+      "questionText": "A school raised $6,340 in Term 1 and $6,430 in Term 2. Which term raised more money? A) Term 1   B) Term 2   C) They raised the same amount",
+      "questionType": "multiple_choice",
+      "answerKey": "Term 2",
+      "stepByStepSolution": [
+        "Compare 6340 and 6430.",
+        "Both have 6 thousands.",
+        "6430 has 4 hundreds, 6340 has 3 hundreds.",
+        "4 hundreds is more than 3 hundreds, so Term 2 raised more."
+      ],
+      "commonMisconceptions": [
+        "Assuming the numbers are equal just because they use the same digits.",
+        "Comparing the tens column before the hundreds column."
+      ],
+      "hints": [
+        "Line the two amounts up by place value.",
+        "Compare from the biggest place value (thousands) down."
+      ],
+      "tags": [
+        "place_value",
+        "comparing",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_007",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "hard",
+      "questionText": "Zoe says 8,099 is greater than 8,100 because 99 is a bigger number than 100. Is Zoe correct? Answer yes or no.",
+      "questionType": "short_answer",
+      "answerKey": "no",
+      "stepByStepSolution": [
+        "Compare 8099 and 8100 by place value, not by the last two digits alone.",
+        "Both have 8 thousands, but 8100 has 1 hundred and 8099 has 0 hundreds.",
+        "1 hundred is more than 0 hundreds, so 8100 is actually greater.",
+        "Zoe is not correct — you can't compare numbers just by their last few digits."
+      ],
+      "commonMisconceptions": [
+        "Comparing only the last two or three digits instead of the whole number.",
+        "Assuming a bigger 'chunk' at the end always wins, ignoring place value."
+      ],
+      "hints": [
+        "Always compare whole numbers by place value, starting from the largest place.",
+        "Line 8099 and 8100 up by columns and check the hundreds column first."
+      ],
+      "tags": [
+        "place_value",
+        "comparing",
+        "misconception"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_008",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "medium",
+      "questionText": "What number comes next in this counting pattern? 3,450   3,460   3,470   ___   A) 3480   B) 3471   C) 3400",
+      "questionType": "multiple_choice",
+      "answerKey": "3480",
+      "stepByStepSolution": [
+        "Look at how much the number grows each time.",
+        "3450 to 3460 is +10, and 3460 to 3470 is +10.",
+        "Add 10 more to 3470.",
+        "3470 + 10 = 3480."
+      ],
+      "commonMisconceptions": [
+        "Adding 1 instead of 10 to the last number.",
+        "Not checking the pattern between earlier terms before answering."
+      ],
+      "hints": [
+        "Work out the jump between each pair of numbers in the pattern.",
+        "Add that same jump to the last number given."
+      ],
+      "tags": [
+        "number_line",
+        "patterns"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_009",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "hard",
+      "questionText": "Which list correctly orders the numbers from largest to smallest? A) 9201, 9120, 9102   B) 9102, 9120, 9201   C) 9201, 9102, 9120",
+      "questionType": "multiple_choice",
+      "answerKey": "9201, 9120, 9102",
+      "stepByStepSolution": [
+        "Compare the numbers by place value: all start with 9 thousands and 1 or 2 hundreds.",
+        "9201 has 2 hundreds — the most — so it's largest.",
+        "Between 9120 and 9102, compare the tens: 9120 has 2 tens, 9102 has 0 tens.",
+        "So the order from largest to smallest is 9201, 9120, 9102."
+      ],
+      "commonMisconceptions": [
+        "Ordering by how the digits look rather than their place value.",
+        "Only comparing the first digit and assuming that's enough since they're all '9-something'."
+      ],
+      "hints": [
+        "Compare the hundreds digit of each number first.",
+        "For numbers that tie on hundreds, compare the tens digit next."
+      ],
+      "tags": [
+        "place_value",
+        "ordering"
+      ]
+    },
+    {
+      "id": "M3N03_Y3_010",
+      "skillId": "M3N03_compare_order_10k",
+      "difficulty": "easy",
+      "questionText": "Which number is closest to 5,000: 4,890 or 5,150?",
+      "questionType": "short_answer",
+      "answerKey": "4890",
+      "stepByStepSolution": [
+        "Find the difference between each number and 5000.",
+        "5000 - 4890 = 110.",
+        "5150 - 5000 = 150.",
+        "110 is less than 150, so 4890 is closer to 5000."
+      ],
+      "commonMisconceptions": [
+        "Assuming the larger number is always 'closer' to a round number.",
+        "Not actually calculating the distance from 5000 for both numbers."
+      ],
+      "hints": [
+        "Work out how far each number is from 5000.",
+        "Compare the two distances — the smaller distance is closer."
+      ],
+      "tags": [
+        "place_value",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_001",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "easy",
+      "questionText": "How many centimetres are there in 1 metre?",
+      "questionType": "short_answer",
+      "answerKey": "100",
+      "stepByStepSolution": [
+        "A metre is a unit for measuring longer lengths.",
+        "A centimetre is a much smaller unit.",
+        "There are 100 centimetres in every metre."
+      ],
+      "commonMisconceptions": [
+        "Confusing metres and centimetres and answering 10 (which is centimetres in a decimetre, not a metre).",
+        "Mixing up metres with kilometres."
+      ],
+      "hints": [
+        "Think about a metre ruler — how many centimetre marks are on it?",
+        "Remember: 100 cm = 1 m."
+      ],
+      "tags": [
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_002",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the length of your classroom: centimetres or metres? A) centimetres   B) metres",
+      "questionType": "multiple_choice",
+      "answerKey": "metres",
+      "stepByStepSolution": [
+        "A classroom is quite long, much longer than a pencil or a book.",
+        "Centimetres would need a huge number to measure something that long.",
+        "Metres are a better fit for measuring rooms and buildings."
+      ],
+      "commonMisconceptions": [
+        "Choosing centimetres because it's the unit used most often for small classroom objects.",
+        "Not thinking about how big the object actually is before choosing a unit."
+      ],
+      "hints": [
+        "Picture how big the object is before choosing a unit.",
+        "Big things (rooms, ovals, buildings) usually use metres; small things (pencils, books) usually use centimetres."
+      ],
+      "tags": [
+        "units",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_003",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the length of a pencil: centimetres or metres? A) centimetres   B) metres",
+      "questionType": "multiple_choice",
+      "answerKey": "centimetres",
+      "stepByStepSolution": [
+        "A pencil is quite short.",
+        "Metres would give a tiny, awkward number (like 0.15 m) for something this short.",
+        "Centimetres give a sensible whole number for small objects like a pencil."
+      ],
+      "commonMisconceptions": [
+        "Always choosing metres because it's the 'bigger, more official' unit.",
+        "Not comparing the size of the object to each unit before choosing."
+      ],
+      "hints": [
+        "Picture how big the object is before choosing a unit.",
+        "Small things like pencils and books are usually measured in centimetres."
+      ],
+      "tags": [
+        "units",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_004",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "medium",
+      "questionText": "How many centimetres are there in 3 metres?",
+      "questionType": "short_answer",
+      "answerKey": "300",
+      "stepByStepSolution": [
+        "There are 100 centimetres in every metre.",
+        "3 metres means 3 groups of 100 centimetres.",
+        "3 x 100 = 300."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of multiplying: 3 + 100 = 103.",
+        "Forgetting a zero and writing 30 instead of 300."
+      ],
+      "hints": [
+        "Remember: 1 m = 100 cm.",
+        "Multiply 100 by the number of metres."
+      ],
+      "tags": [
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_005",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "medium",
+      "questionText": "A pencil case is measured as 240 cm long. Is this a sensible length for a pencil case? Answer yes or no.",
+      "questionType": "short_answer",
+      "answerKey": "no",
+      "stepByStepSolution": [
+        "240 cm is the same as 2 m 40 cm.",
+        "A pencil case that is over 2 metres long would be enormous — much bigger than a real pencil case.",
+        "This length doesn't make sense, so the answer is no."
+      ],
+      "commonMisconceptions": [
+        "Not converting to metres to check if the size makes sense.",
+        "Assuming any measurement given must be correct without checking it against real life."
+      ],
+      "hints": [
+        "Try converting the centimetres to metres to picture the real size.",
+        "Think about how long a real pencil case is compared to your own height."
+      ],
+      "tags": [
+        "estimation",
+        "units"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_006",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "medium",
+      "questionText": "Which is longer: 150 cm or 1 m? A) 150 cm   B) 1 m   C) They are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "150 cm",
+      "stepByStepSolution": [
+        "Convert 1 m into centimetres: 1 m = 100 cm.",
+        "Compare 150 cm with 100 cm.",
+        "150 cm is more than 100 cm, so 150 cm is longer."
+      ],
+      "commonMisconceptions": [
+        "Comparing the numbers 150 and 1 without converting to the same unit first.",
+        "Assuming metres are always 'more' than centimetres because the unit sounds bigger."
+      ],
+      "hints": [
+        "Convert both lengths to the same unit before comparing.",
+        "Remember 1 m = 100 cm."
+      ],
+      "tags": [
+        "units",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_007",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "medium",
+      "questionText": "A ruler shows a pencil starting at the 0 mark and ending exactly at the 12 cm mark. How long is the pencil? A) 12 cm   B) 12 m   C) 1.2 cm",
+      "questionType": "multiple_choice",
+      "answerKey": "12 cm",
+      "stepByStepSolution": [
+        "The pencil starts at 0 and ends at 12 on the ruler.",
+        "Rulers for small objects like pencils are marked in centimetres.",
+        "The length is the ending mark minus the starting mark: 12 - 0 = 12 cm."
+      ],
+      "commonMisconceptions": [
+        "Reading the ending number but forgetting to check the unit marked on the ruler.",
+        "Choosing an unrealistic unit (metres) for a pencil-sized object."
+      ],
+      "hints": [
+        "Subtract the starting mark from the ending mark.",
+        "Check what unit the ruler is actually marked in."
+      ],
+      "tags": [
+        "measuring_instruments",
+        "reading_scales"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_008",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "hard",
+      "questionText": "Mia's bookshelf is 3 m long. Jack's book is 30 cm long. Which is longer, Mia's bookshelf or Jack's book?",
+      "questionType": "short_answer",
+      "answerKey": "Mia's bookshelf",
+      "stepByStepSolution": [
+        "Convert both lengths to the same unit: 3 m = 300 cm.",
+        "Compare 300 cm with 30 cm.",
+        "300 cm is much more than 30 cm, so Mia's bookshelf is longer."
+      ],
+      "commonMisconceptions": [
+        "Comparing 3 and 30 directly without converting to the same unit first.",
+        "Assuming the number with more digits (30) is automatically bigger than 3."
+      ],
+      "hints": [
+        "Convert everything to the same unit before comparing.",
+        "Remember 1 m = 100 cm, so 3 m = 300 cm."
+      ],
+      "tags": [
+        "units",
+        "comparing",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_009",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "hard",
+      "questionText": "A garden bed is 4 m long. A second garden bed is 250 cm long. How many centimetres longer is the first garden bed?",
+      "questionType": "short_answer",
+      "answerKey": "150",
+      "stepByStepSolution": [
+        "Convert 4 m into centimetres: 4 m = 400 cm.",
+        "Compare with the second garden bed: 250 cm.",
+        "Find the difference: 400 - 250 = 150.",
+        "The first garden bed is 150 cm longer."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert 4 m into centimetres before comparing.",
+        "Subtracting in the wrong order and getting a negative or incorrect difference."
+      ],
+      "hints": [
+        "Convert every length to the same unit first.",
+        "Then subtract the smaller length from the larger one."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3M02L_Y3_010",
+      "skillId": "M3M02_measure_length",
+      "difficulty": "easy",
+      "questionText": "Which tool would you use to measure the length of the school oval: a ruler or a trundle wheel? A) ruler   B) trundle wheel",
+      "questionType": "multiple_choice",
+      "answerKey": "trundle wheel",
+      "stepByStepSolution": [
+        "A school oval is very long — much longer than a ruler could measure in one go.",
+        "A trundle wheel is designed to measure long distances by rolling along the ground.",
+        "A ruler is better suited to small objects like books or pencils."
+      ],
+      "commonMisconceptions": [
+        "Assuming a ruler can be used for any measuring job, no matter the size.",
+        "Not thinking about which tool actually suits a very long distance."
+      ],
+      "hints": [
+        "Think about how long the oval really is.",
+        "Choose the measuring tool that's designed for that kind of distance."
+      ],
+      "tags": [
+        "measuring_instruments",
+        "estimation"
+      ]
+    },
+    {
+      "id": "ELIT_Y3_001",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "easy",
+      "questionText": "Where was Ben going camping?",
+      "questionType": "short_answer",
+      "answerKey": "Lake Eucumbene",
+      "stepByStepSolution": [
+        "The question asks 'where', so look for a place name in the text.",
+        "The text says Ben was 'going camping with his uncle at Lake Eucumbene'.",
+        "The place name is Lake Eucumbene."
+      ],
+      "commonMisconceptions": [
+        "Answering with 'camping' instead of the actual place name.",
+        "Guessing a place instead of finding it stated in the text."
+      ],
+      "hints": [
+        "Scan the text for a place name.",
+        "Look near the word 'camping' for where it says he was going."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Ben packed his backpack early on Saturday morning. He was going camping with his uncle at Lake Eucumbene. Before they left, Ben checked he had his torch, his water bottle and his warm jumper. His uncle smiled and said the weather forecast was perfect for the weekend."
+    },
+    {
+      "id": "ELIT_Y3_002",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "easy",
+      "questionText": "Who was Ben going camping with?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "his uncle",
+        "uncle"
+      ],
+      "stepByStepSolution": [
+        "The question asks 'who', so look for a person in the text.",
+        "The text says Ben 'was going camping with his uncle'.",
+        "The person is his uncle."
+      ],
+      "commonMisconceptions": [
+        "Answering with 'Ben' instead of the other person mentioned.",
+        "Not reading closely enough to notice who else is in the text."
+      ],
+      "hints": [
+        "Look for the word 'with' — who comes right after it?",
+        "Find the family member named in the first two sentences."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Ben packed his backpack early on Saturday morning. He was going camping with his uncle at Lake Eucumbene. Before they left, Ben checked he had his torch, his water bottle and his warm jumper. His uncle smiled and said the weather forecast was perfect for the weekend."
+    },
+    {
+      "id": "ELIT_Y3_003",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "easy",
+      "questionText": "What day did Ben pack his backpack?",
+      "questionType": "short_answer",
+      "answerKey": "Saturday",
+      "stepByStepSolution": [
+        "The question asks 'what day', so look for a day of the week.",
+        "The text says Ben 'packed his backpack early on Saturday morning'.",
+        "The day is Saturday."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'Saturday morning' with 'the weekend' mentioned later in the text.",
+        "Skipping the first sentence, where the day is stated."
+      ],
+      "hints": [
+        "Check the very first sentence of the text.",
+        "Look for the day-of-the-week word."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Ben packed his backpack early on Saturday morning. He was going camping with his uncle at Lake Eucumbene. Before they left, Ben checked he had his torch, his water bottle and his warm jumper. His uncle smiled and said the weather forecast was perfect for the weekend."
+    },
+    {
+      "id": "ELIT_Y3_004",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "medium",
+      "questionText": "Which of these did Ben NOT check he had? A) torch   B) water bottle   C) football",
+      "questionType": "multiple_choice",
+      "answerKey": "football",
+      "stepByStepSolution": [
+        "The text lists three things Ben checked: 'his torch, his water bottle and his warm jumper'.",
+        "A football is not one of the three things listed.",
+        "So the answer is football."
+      ],
+      "commonMisconceptions": [
+        "Picking one of the items that IS listed in the text.",
+        "Not reading the full list carefully before choosing."
+      ],
+      "hints": [
+        "Find the sentence that lists what Ben checked.",
+        "Compare each option to that list — which one is missing from it?"
+      ],
+      "tags": [
+        "literal_comprehension",
+        "detail"
+      ],
+      "passage": "Ben packed his backpack early on Saturday morning. He was going camping with his uncle at Lake Eucumbene. Before they left, Ben checked he had his torch, his water bottle and his warm jumper. His uncle smiled and said the weather forecast was perfect for the weekend."
+    },
+    {
+      "id": "ELIT_Y3_005",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "easy",
+      "questionText": "What is a baby wombat called?",
+      "questionType": "short_answer",
+      "answerKey": "joey",
+      "stepByStepSolution": [
+        "The question asks about the name for a baby wombat.",
+        "The text says 'a baby wombat is called a joey'.",
+        "The answer is joey."
+      ],
+      "commonMisconceptions": [
+        "Answering 'kangaroo' because it's mentioned in the same sentence.",
+        "Confusing the baby's name with the animal's name."
+      ],
+      "hints": [
+        "Look at the last sentence of the text.",
+        "Find the word right after 'is called'."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Wombats are marsupials that live in Australia. They dig long burrows underground to stay cool in summer and warm in winter. Wombats are mostly active at night and eat grasses and roots. A baby wombat is called a joey, just like a baby kangaroo."
+    },
+    {
+      "id": "ELIT_Y3_006",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "medium",
+      "questionText": "What do wombats dig to help them stay cool in summer and warm in winter?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "burrows",
+        "long burrows"
+      ],
+      "stepByStepSolution": [
+        "The question asks what wombats dig.",
+        "The text says they 'dig long burrows underground to stay cool in summer and warm in winter'.",
+        "The answer is burrows."
+      ],
+      "commonMisconceptions": [
+        "Answering 'underground' instead of naming what they actually dig.",
+        "Confusing this with what they eat, mentioned in the next sentence."
+      ],
+      "hints": [
+        "Look for the word right after 'dig'.",
+        "Find the sentence that mentions summer and winter."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "detail"
+      ],
+      "passage": "Wombats are marsupials that live in Australia. They dig long burrows underground to stay cool in summer and warm in winter. Wombats are mostly active at night and eat grasses and roots. A baby wombat is called a joey, just like a baby kangaroo."
+    },
+    {
+      "id": "ELIT_Y3_007",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "medium",
+      "questionText": "When are wombats mostly active? A) during the day   B) at night   C) only in winter",
+      "questionType": "multiple_choice",
+      "answerKey": "at night",
+      "stepByStepSolution": [
+        "The text says 'Wombats are mostly active at night'.",
+        "This directly answers the question.",
+        "The answer is at night."
+      ],
+      "commonMisconceptions": [
+        "Assuming an animal is active during the day without checking the text.",
+        "Confusing 'stay cool in summer, warm in winter' with when they are active."
+      ],
+      "hints": [
+        "Find the sentence that uses the word 'active'.",
+        "Read what comes right after it."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Wombats are marsupials that live in Australia. They dig long burrows underground to stay cool in summer and warm in winter. Wombats are mostly active at night and eat grasses and roots. A baby wombat is called a joey, just like a baby kangaroo."
+    },
+    {
+      "id": "ELIT_Y3_008",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "easy",
+      "questionText": "What do wombats eat?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "grasses and roots",
+        "grass and roots"
+      ],
+      "stepByStepSolution": [
+        "The question asks about what wombats eat.",
+        "The text says wombats 'eat grasses and roots'.",
+        "The answer is grasses and roots."
+      ],
+      "commonMisconceptions": [
+        "Answering with where they live instead of what they eat.",
+        "Only naming one of the two foods mentioned."
+      ],
+      "hints": [
+        "Look for the word 'eat' in the text.",
+        "List both foods mentioned right after it."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "detail"
+      ],
+      "passage": "Wombats are marsupials that live in Australia. They dig long burrows underground to stay cool in summer and warm in winter. Wombats are mostly active at night and eat grasses and roots. A baby wombat is called a joey, just like a baby kangaroo."
+    },
+    {
+      "id": "ELIT_Y3_009",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "medium",
+      "questionText": "Who did Mia give the torn book to?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Mr Lee",
+        "the librarian",
+        "Mr. Lee"
+      ],
+      "stepByStepSolution": [
+        "The question asks 'who', so look for a person's name.",
+        "The text says Mia 'took it straight to Mr Lee, the librarian'.",
+        "The person is Mr Lee."
+      ],
+      "commonMisconceptions": [
+        "Answering 'the librarian' role only when a specific name is also expected, or vice versa — either is acceptable here.",
+        "Confusing Mia (who found the book) with the person she gave it to."
+      ],
+      "hints": [
+        "Find the sentence with the word 'took'.",
+        "Look for the name right after it."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "who_what_where"
+      ],
+      "passage": "Mia found a torn library book under her desk. She took it straight to Mr Lee, the librarian. Mr Lee thanked Mia and said he would fix the book with sticky tape that afternoon."
+    },
+    {
+      "id": "ELIT_Y3_010",
+      "skillId": "E3LY01_02_literal_comprehension",
+      "difficulty": "medium",
+      "questionText": "What did Mr Lee say he would use to fix the book?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "sticky tape",
+        "tape"
+      ],
+      "stepByStepSolution": [
+        "The question asks what Mr Lee would use to fix the book.",
+        "The text says he 'would fix the book with sticky tape'.",
+        "The answer is sticky tape."
+      ],
+      "commonMisconceptions": [
+        "Answering 'the afternoon' (when he'd fix it) instead of what he'd use.",
+        "Guessing a different repair tool not mentioned in the text."
+      ],
+      "hints": [
+        "Look for the word 'with' near the end of the text.",
+        "Find what comes right after it."
+      ],
+      "tags": [
+        "literal_comprehension",
+        "detail"
+      ],
+      "passage": "Mia found a torn library book under her desk. She took it straight to Mr Lee, the librarian. Mr Lee thanked Mia and said he would fix the book with sticky tape that afternoon."
+    },
+    {
+      "id": "EINF_Y3_001",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "easy",
+      "questionText": "Which sentence is the best topic sentence for a fact file about koalas? A) Koalas are marsupials that live in Australia.   B) My dog also likes to sleep a lot.   C) Yesterday I saw a bird.",
+      "questionType": "multiple_choice",
+      "answerKey": "Koalas are marsupials that live in Australia.",
+      "stepByStepSolution": [
+        "A topic sentence should introduce the main idea of the fact file.",
+        "Option A is directly about koalas, which is the topic.",
+        "Options B and C are not about koalas at all."
+      ],
+      "commonMisconceptions": [
+        "Picking a sentence that's interesting but off-topic.",
+        "Choosing a sentence about a personal experience instead of a fact about the topic."
+      ],
+      "hints": [
+        "A topic sentence should tell the reader what the whole fact file is about.",
+        "Ask: does this sentence match the topic (koalas)?"
+      ],
+      "tags": [
+        "text_structure",
+        "topic_sentence"
+      ]
+    },
+    {
+      "id": "EINF_Y3_002",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "A fact file about sharks should be organised using: A) one long paragraph with no headings   B) short paragraphs, each about one main idea   C) a made-up story about a shark",
+      "questionType": "multiple_choice",
+      "answerKey": "short paragraphs, each about one main idea",
+      "stepByStepSolution": [
+        "Informative texts are easier to read when information is grouped clearly.",
+        "Short paragraphs, each with one main idea, help the reader find information quickly.",
+        "A made-up story is a narrative, not an informative text."
+      ],
+      "commonMisconceptions": [
+        "Thinking longer paragraphs always sound more informative.",
+        "Confusing informative writing with narrative (story) writing."
+      ],
+      "hints": [
+        "Think about what makes a fact file easy to read and find information in.",
+        "Compare the three options to what a real fact file usually looks like."
+      ],
+      "tags": [
+        "text_structure",
+        "paragraphs"
+      ]
+    },
+    {
+      "id": "EINF_Y3_003",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "In an informative text, the sentence at the start of a paragraph that tells the reader the main idea is called the ___ sentence.",
+      "questionType": "short_answer",
+      "answerKey": "topic",
+      "stepByStepSolution": [
+        "The main-idea sentence at the start of a paragraph has a special name.",
+        "It is called the topic sentence.",
+        "It tells the reader what that paragraph will be about."
+      ],
+      "commonMisconceptions": [
+        "Confusing this with the 'title' of the whole text.",
+        "Forgetting the specific term and describing it instead of naming it."
+      ],
+      "hints": [
+        "This term starts the same way as the word 'topic'.",
+        "It's the sentence that introduces what the paragraph is about."
+      ],
+      "tags": [
+        "text_structure",
+        "topic_sentence"
+      ]
+    },
+    {
+      "id": "EINF_Y3_004",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "Read the topic sentence: 'Emus are large Australian birds.' Which sentence best supports this with a fact? A) Emus can grow up to 2 metres tall.   B) My favourite colour is green.   C) I went to the park on Sunday.",
+      "questionType": "multiple_choice",
+      "answerKey": "Emus can grow up to 2 metres tall.",
+      "stepByStepSolution": [
+        "A supporting sentence should give more information about the topic sentence.",
+        "Option A gives a fact about how big emus grow, which supports the topic sentence.",
+        "Options B and C are not related to emus at all."
+      ],
+      "commonMisconceptions": [
+        "Choosing a sentence just because it sounds interesting, without checking if it's about emus.",
+        "Adding a personal opinion or unrelated event instead of a fact."
+      ],
+      "hints": [
+        "A supporting sentence should add more detail about the same topic.",
+        "Check whether each option is actually about emus."
+      ],
+      "tags": [
+        "text_structure",
+        "supporting_details"
+      ]
+    },
+    {
+      "id": "EINF_Y3_005",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "easy",
+      "questionText": "A fact file is an example of which type of text? A) narrative   B) informative   C) persuasive",
+      "questionType": "multiple_choice",
+      "answerKey": "informative",
+      "stepByStepSolution": [
+        "A fact file gives true information about a topic.",
+        "This makes it an informative text, not a story (narrative) or an attempt to convince (persuasive).",
+        "The answer is informative."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'fact file' with 'story' because both are types of writing.",
+        "Thinking any text with opinions in it must be persuasive."
+      ],
+      "hints": [
+        "Think about the purpose of a fact file — is it to tell a story, give facts, or convince someone?",
+        "Match the purpose to the correct text type name."
+      ],
+      "tags": [
+        "text_types"
+      ]
+    },
+    {
+      "id": "EINF_Y3_006",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "hard",
+      "questionText": "Which group of sentences is organised into a clear paragraph about one topic? A) Frogs are amphibians. They have smooth, moist skin. Some frogs are poisonous. My birthday is in July.   B) Frogs are amphibians. They have smooth, moist skin. Many frogs can jump very far. Tadpoles grow into frogs.   C) Frogs jump. Birthday. Skin colour sometimes.",
+      "questionType": "multiple_choice",
+      "answerKey": "Frogs are amphibians. They have smooth, moist skin. Many frogs can jump very far. Tadpoles grow into frogs.",
+      "stepByStepSolution": [
+        "A well-organised paragraph stays on one topic all the way through.",
+        "Option A includes an unrelated sentence about a birthday.",
+        "Option C is made up of unconnected fragments, not full sentences.",
+        "Option B stays focused on frogs the whole way through."
+      ],
+      "commonMisconceptions": [
+        "Picking the option with the most facts, even if one sentence is off-topic.",
+        "Not noticing a sentence that doesn't belong."
+      ],
+      "hints": [
+        "Read each option and check if every sentence is about the same topic.",
+        "Look out for one sentence that doesn't belong in the group."
+      ],
+      "tags": [
+        "text_structure",
+        "paragraphs"
+      ]
+    },
+    {
+      "id": "EINF_Y3_007",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "True or false: an informative fact file should include the writer's personal opinions about the topic.",
+      "questionType": "short_answer",
+      "answerKey": "false",
+      "stepByStepSolution": [
+        "An informative text is meant to give facts, not opinions.",
+        "Personal opinions belong in persuasive writing, not fact files.",
+        "So the statement is false."
+      ],
+      "commonMisconceptions": [
+        "Thinking any writing can include the writer's own feelings.",
+        "Mixing up informative and persuasive text purposes."
+      ],
+      "hints": [
+        "Think about the purpose of a fact file — facts or feelings?",
+        "Compare this to what a persuasive text would do instead."
+      ],
+      "tags": [
+        "text_types",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EINF_Y3_008",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "easy",
+      "questionText": "What is the purpose of an informative text: to entertain, to inform, or to persuade?",
+      "questionType": "short_answer",
+      "answerKey": "to inform",
+      "stepByStepSolution": [
+        "The word 'informative' is a clue.",
+        "Informative texts are written to give the reader facts and information.",
+        "The answer is to inform."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'to entertain' because facts can sometimes be interesting to read.",
+        "Mixing up informative texts with persuasive texts."
+      ],
+      "hints": [
+        "Look closely at the word 'informative' — what does it sound like it's related to?",
+        "Match the purpose to the text type's name."
+      ],
+      "tags": [
+        "text_types",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EINF_Y3_009",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "Which is a good closing sentence for a fact file about dolphins? A) Dolphins are amazing, intelligent animals that live in our oceans.   B) I hate dolphins.   C) What is your favourite colour?",
+      "questionType": "multiple_choice",
+      "answerKey": "Dolphins are amazing, intelligent animals that live in our oceans.",
+      "stepByStepSolution": [
+        "A closing sentence should sum up the topic in a positive, factual way.",
+        "Option A wraps up the facts about dolphins clearly.",
+        "Options B and C are off-topic or express a strong personal opinion, which doesn't suit an informative text."
+      ],
+      "commonMisconceptions": [
+        "Picking a sentence that introduces a brand new idea instead of summing up.",
+        "Choosing an opinion-based sentence for an informative text."
+      ],
+      "hints": [
+        "A closing sentence should remind the reader what the fact file was about.",
+        "Check which option best sums up the topic in a factual way."
+      ],
+      "tags": [
+        "text_structure",
+        "closing_sentence"
+      ]
+    },
+    {
+      "id": "EINF_Y3_010",
+      "skillId": "E3LY06_informative_paragraphs",
+      "difficulty": "medium",
+      "questionText": "A fact file about the topic 'Volcanoes' should mostly contain: facts, feelings, or made-up stories?",
+      "questionType": "short_answer",
+      "answerKey": "facts",
+      "stepByStepSolution": [
+        "A fact file is named for what it contains — facts.",
+        "Feelings and made-up stories belong to other types of writing.",
+        "The answer is facts."
+      ],
+      "commonMisconceptions": [
+        "Thinking a fact file can include imaginative or made-up details to make it interesting.",
+        "Confusing fact files with narrative writing."
+      ],
+      "hints": [
+        "The name 'fact file' is a strong clue.",
+        "Think about what a reader would expect to learn from this kind of text."
+      ],
+      "tags": [
+        "text_types",
+        "purpose"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_001",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "easy",
+      "questionText": "Find the noun in this sentence: 'The dog barked loudly.'",
+      "questionType": "short_answer",
+      "answerKey": "dog",
+      "stepByStepSolution": [
+        "A noun names a person, place, animal or thing.",
+        "In this sentence, 'dog' names an animal.",
+        "So the noun is dog."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'barked', which is an action (verb), not a naming word.",
+        "Choosing 'loudly', which describes how the dog barked."
+      ],
+      "hints": [
+        "Look for the word that names a person, place, animal or thing.",
+        "Which word in the sentence is the animal?"
+      ],
+      "tags": [
+        "nouns",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_002",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "easy",
+      "questionText": "Find the verb in this sentence: 'The dog barked loudly.'",
+      "questionType": "short_answer",
+      "answerKey": "barked",
+      "stepByStepSolution": [
+        "A verb is a doing or action word.",
+        "In this sentence, 'barked' tells us what the dog did.",
+        "So the verb is barked."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'dog', which is the noun, not the action.",
+        "Choosing 'loudly', which describes the action rather than naming it."
+      ],
+      "hints": [
+        "Look for the word that tells you what is happening.",
+        "Which word describes the dog's action?"
+      ],
+      "tags": [
+        "verbs",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_003",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "easy",
+      "questionText": "Which word in this sentence is a noun: 'Mia kicked the ball.'? A) Mia   B) kicked   C) the",
+      "questionType": "multiple_choice",
+      "answerKey": "Mia",
+      "stepByStepSolution": [
+        "A noun names a person, place, animal or thing.",
+        "'Mia' is the name of a person.",
+        "'kicked' is an action (verb), and 'the' is not a naming word."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'kicked', which is the action Mia did.",
+        "Choosing 'the', which is a small linking word, not a naming word."
+      ],
+      "hints": [
+        "Look for the word that names a specific person.",
+        "Which option is someone's name?"
+      ],
+      "tags": [
+        "nouns",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_004",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "medium",
+      "questionText": "Choose the correct verb: 'The birds ___ in the sky.' A) fly   B) flies   C) flying",
+      "questionType": "multiple_choice",
+      "answerKey": "fly",
+      "stepByStepSolution": [
+        "'Birds' is a plural (more than one) subject.",
+        "Plural subjects need a plural-matching verb form.",
+        "'fly' matches 'birds'; 'flies' is for a single bird, and 'flying' needs a helper word like 'are'."
+      ],
+      "commonMisconceptions": [
+        "Using 'flies', which only matches a singular subject like 'the bird'.",
+        "Choosing 'flying' without the helper verb 'are' in front of it."
+      ],
+      "hints": [
+        "Check whether the subject is one thing or more than one.",
+        "'Birds' is plural, so it needs the plural verb form 'fly'."
+      ],
+      "tags": [
+        "subject_verb_agreement",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_005",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "medium",
+      "questionText": "Choose the correct verb: 'She ___ to school every day.' A) walk   B) walks   C) walking",
+      "questionType": "multiple_choice",
+      "answerKey": "walks",
+      "stepByStepSolution": [
+        "'She' is a singular (one person) subject.",
+        "Singular subjects like 'he', 'she' or 'it' usually need a verb ending in 's'.",
+        "'walks' matches 'she'; 'walk' is for plural or 'I/you', and 'walking' needs a helper word."
+      ],
+      "commonMisconceptions": [
+        "Using 'walk' without the 's' ending needed for 'she'.",
+        "Choosing 'walking' without a helper verb like 'is' in front of it."
+      ],
+      "hints": [
+        "Check whether the subject is 'he/she/it' (singular) — these usually need an 's' on the verb.",
+        "'She' needs 'walks', not 'walk'."
+      ],
+      "tags": [
+        "subject_verb_agreement",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_006",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "medium",
+      "questionText": "Fix the mistake: 'The cats plays in the yard.' Write the correct verb.",
+      "questionType": "short_answer",
+      "answerKey": "play",
+      "stepByStepSolution": [
+        "'Cats' is a plural subject (more than one cat).",
+        "Plural subjects need a verb without the 's' ending.",
+        "The correct verb is play, not plays."
+      ],
+      "commonMisconceptions": [
+        "Keeping 'plays' because it 'sounds right' without checking if the subject is plural.",
+        "Not noticing that 'cats' (plural) needs a different verb form than 'cat' (singular)."
+      ],
+      "hints": [
+        "Check if the subject is one thing or more than one.",
+        "'Cats' is plural, so the verb shouldn't end in 's'."
+      ],
+      "tags": [
+        "subject_verb_agreement",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_007",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "easy",
+      "questionText": "Is 'jump' a noun or a verb?",
+      "questionType": "short_answer",
+      "answerKey": "verb",
+      "stepByStepSolution": [
+        "'Jump' describes an action you can do.",
+        "Words that describe actions are verbs.",
+        "So 'jump' is a verb."
+      ],
+      "commonMisconceptions": [
+        "Thinking any short, simple word must be a noun.",
+        "Confusing an action word with a naming word."
+      ],
+      "hints": [
+        "Can you 'do' this word, like an action? That usually means it's a verb.",
+        "Try using it in a sentence: 'I can jump.'"
+      ],
+      "tags": [
+        "parts_of_speech",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_008",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "easy",
+      "questionText": "Is 'teacher' a noun or a verb?",
+      "questionType": "short_answer",
+      "answerKey": "noun",
+      "stepByStepSolution": [
+        "'Teacher' names a person.",
+        "Words that name a person, place, animal or thing are nouns.",
+        "So 'teacher' is a noun."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'teacher' (a person) with 'teach' (an action/verb).",
+        "Assuming any word ending in '-er' must be a verb."
+      ],
+      "hints": [
+        "Does this word name a person, place, animal or thing? That means it's a noun.",
+        "'Teacher' names a person's job."
+      ],
+      "tags": [
+        "parts_of_speech",
+        "nouns"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_009",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "hard",
+      "questionText": "Which sentence has correct subject-verb agreement? A) The children plays outside.   B) The children play outside.   C) The children playing outside.",
+      "questionType": "multiple_choice",
+      "answerKey": "The children play outside.",
+      "stepByStepSolution": [
+        "'Children' is a plural subject.",
+        "A plural subject needs a plural-matching verb, without an 's' ending.",
+        "'play' matches 'children'; 'plays' is for a singular subject, and 'playing' needs a helper verb like 'are'."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'plays' because it's a common verb ending, without checking the subject.",
+        "Choosing 'playing' without noticing it needs a helper verb like 'are' to make a complete sentence."
+      ],
+      "hints": [
+        "Check if 'children' is singular or plural.",
+        "Plural subjects need the verb form without an 's' ending."
+      ],
+      "tags": [
+        "subject_verb_agreement",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ENVA_Y3_010",
+      "skillId": "E3LA06_nouns_verbs_agreement",
+      "difficulty": "medium",
+      "questionText": "Fix the mistake: 'He run to the shop.' Write the correct verb.",
+      "questionType": "short_answer",
+      "answerKey": "runs",
+      "stepByStepSolution": [
+        "'He' is a singular subject.",
+        "Singular subjects like 'he/she/it' usually need a verb ending in 's'.",
+        "The correct verb is runs, not run."
+      ],
+      "commonMisconceptions": [
+        "Keeping 'run' because it's the more common form of the word.",
+        "Not adding the 's' ending needed for a singular subject like 'he'."
+      ],
+      "hints": [
+        "Check if the subject is 'he/she/it' — these usually need an 's' on the verb.",
+        "'He' needs 'runs', not 'run'."
+      ],
+      "tags": [
+        "subject_verb_agreement",
+        "verbs"
+      ]
+    }
+  ]
+}

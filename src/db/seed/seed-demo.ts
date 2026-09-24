@@ -6,10 +6,12 @@
  * Run with: npm run db:seed:demo  (after npm run db:seed)
  */
 import "dotenv/config";
+import { isNull, and, eq } from "drizzle-orm";
 import { db } from "../client";
 import { users, parentChildLinks, items } from "../schema";
 import sampleItems from "./sample-items.json";
 import week1ItemBank from "./week1-item-bank.json";
+import week2ItemBank from "./week2-item-bank.json";
 
 const DEMO_PARENT_ID = "demo_parent_1";
 const DEMO_CHILD_ID = "demo_child_1";
@@ -35,8 +37,17 @@ async function seedDemoUsers() {
       state: "NSW",
       yearLevel: 3,
       displayName: "Alex",
+      enrolledAt: new Date(),
     })
     .onConflictDoNothing({ target: users.id });
+
+  // Backfill enrolledAt for any pre-existing child rows from before this column
+  // existed, so curriculum-week derivation (computeCurrentTermWeek) has a value
+  // to work with. Only touches rows where it's still null — safe to re-run.
+  await db
+    .update(users)
+    .set({ enrolledAt: new Date() })
+    .where(and(eq(users.role, "child"), isNull(users.enrolledAt)));
 
   await db
     .insert(parentChildLinks)
@@ -54,6 +65,7 @@ type SeedItem = {
   id: string;
   skillId: string;
   questionText: string;
+  passage?: string;
   questionType: string;
   answerKey: unknown;
   stepByStepSolution: string[];
@@ -71,6 +83,7 @@ async function seedItemBank(bankName: string, bankItems: SeedItem[]) {
         id: item.id,
         skillId: item.skillId,
         questionText: item.questionText,
+        passage: item.passage ?? null,
         questionType: item.questionType,
         answerKey: item.answerKey,
         stepByStepSolution: item.stepByStepSolution,
@@ -83,6 +96,7 @@ async function seedItemBank(bankName: string, bankItems: SeedItem[]) {
         target: items.id,
         set: {
           questionText: item.questionText,
+          passage: item.passage ?? null,
           questionType: item.questionType,
           answerKey: item.answerKey,
           stepByStepSolution: item.stepByStepSolution,
@@ -101,6 +115,7 @@ async function main() {
   await seedDemoUsers();
   await seedItemBank("sample-items.json", sampleItems.items as SeedItem[]);
   await seedItemBank("week1-item-bank.json", week1ItemBank.items as SeedItem[]);
+  await seedItemBank("week2-item-bank.json", week2ItemBank.items as SeedItem[]);
   console.log("Demo seed complete.");
   process.exit(0);
 }
