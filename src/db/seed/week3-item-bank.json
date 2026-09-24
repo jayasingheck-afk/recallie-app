@@ -1,0 +1,1276 @@
+{
+  "_note": "Week 3 item bank for Year 3 Maths & English, generated following the project's Maths/English item-generation prompt templates (curriculum_codes, skill_description, difficulty, question_text, question_type, answer_key, step_by_step_solution, common_misconceptions, hints, tags). This is AI-generated content pending the human review step described in the project instructions -- do not treat as final/published without a curriculum-qualified reviewer checking wording, difficulty, and Australian English throughout. All items use short_answer or multiple_choice so every item is auto-gradable and usable in live sessions immediately.",
+  "items": [
+    {
+      "id": "M3N04_Y3_001",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 234 + 152?",
+      "questionType": "short_answer",
+      "answerKey": "386",
+      "stepByStepSolution": [
+        "Add the ones: 4 + 2 = 6.",
+        "Add the tens: 3 + 5 = 8.",
+        "Add the hundreds: 2 + 1 = 3.",
+        "Put it together: 386."
+      ],
+      "commonMisconceptions": [
+        "Adding digits from the wrong column (mixing up tens and ones).",
+        "Forgetting to write down a digit for one of the columns."
+      ],
+      "hints": [
+        "Line the numbers up by place value: hundreds, tens, ones.",
+        "Add each column separately, starting from the ones."
+      ],
+      "tags": [
+        "addition",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_002",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 468 - 235?",
+      "questionType": "short_answer",
+      "answerKey": "233",
+      "stepByStepSolution": [
+        "Subtract the ones: 8 - 5 = 3.",
+        "Subtract the tens: 6 - 3 = 3.",
+        "Subtract the hundreds: 4 - 2 = 2.",
+        "Put it together: 233."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order (top digit minus bottom digit reversed).",
+        "Losing track of which column has been subtracted already."
+      ],
+      "hints": [
+        "Line the numbers up by place value.",
+        "Subtract each column separately, starting from the ones."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_003",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 321 + 456? A) 777   B) 787   C) 767",
+      "questionType": "multiple_choice",
+      "answerKey": "777",
+      "stepByStepSolution": [
+        "Add the ones: 1 + 6 = 7.",
+        "Add the tens: 2 + 5 = 7.",
+        "Add the hundreds: 3 + 4 = 7.",
+        "Put it together: 777."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong pair of digits from each column.",
+        "Making a small addition slip in one column and not checking the total."
+      ],
+      "hints": [
+        "Add each column separately: ones, then tens, then hundreds.",
+        "Check your answer by adding the columns again."
+      ],
+      "tags": [
+        "addition",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_004",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "medium",
+      "questionText": "A school has 213 boys and 154 girls. How many students are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "367",
+      "stepByStepSolution": [
+        "Add the ones: 3 + 4 = 7.",
+        "Add the tens: 1 + 5 = 6.",
+        "Add the hundreds: 2 + 1 = 3.",
+        "Put it together: 367 students."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding when combining two groups.",
+        "Adding the digits in the wrong column."
+      ],
+      "hints": [
+        "This problem combines two groups, so you need to add.",
+        "Line the two numbers up by place value before adding."
+      ],
+      "tags": [
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_005",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "medium",
+      "questionText": "A shop had 578 apples. They sold 143 apples. How many apples are left?",
+      "questionType": "short_answer",
+      "answerKey": "435",
+      "stepByStepSolution": [
+        "Subtract the ones: 8 - 3 = 5.",
+        "Subtract the tens: 7 - 4 = 3.",
+        "Subtract the hundreds: 5 - 1 = 4.",
+        "Put it together: 435 apples left."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting when the problem describes something being taken away.",
+        "Subtracting in the wrong order within a column."
+      ],
+      "hints": [
+        "'Sold' and 'left' are clues that something is being taken away — subtract.",
+        "Line the numbers up by place value before subtracting."
+      ],
+      "tags": [
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_006",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "medium",
+      "questionText": "What is 645 - 320? A) 325   B) 335   C) 315",
+      "questionType": "multiple_choice",
+      "answerKey": "325",
+      "stepByStepSolution": [
+        "Subtract the ones: 5 - 0 = 5.",
+        "Subtract the tens: 4 - 2 = 2.",
+        "Subtract the hundreds: 6 - 3 = 3.",
+        "Put it together: 325."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the tens digits in the wrong order.",
+        "Forgetting to bring down the ones digit correctly."
+      ],
+      "hints": [
+        "Subtract each column separately: ones, then tens, then hundreds.",
+        "Check your answer by adding it back to 320 to see if you get 645."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_007",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "medium",
+      "questionText": "Use place value to add: 320 + 450. Add the hundreds first, then the tens, then the ones. What is the total?",
+      "questionType": "short_answer",
+      "answerKey": "770",
+      "stepByStepSolution": [
+        "Add the hundreds: 300 + 400 = 700.",
+        "Add the tens: 20 + 50 = 70.",
+        "Add the ones: 0 + 0 = 0.",
+        "Combine: 700 + 70 + 0 = 770."
+      ],
+      "commonMisconceptions": [
+        "Adding the digits without paying attention to their place value.",
+        "Forgetting to include a place value that has a zero in it."
+      ],
+      "hints": [
+        "Break each number into hundreds, tens and ones before adding.",
+        "Add the matching place-value parts together, then combine them."
+      ],
+      "tags": [
+        "addition",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_008",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "hard",
+      "questionText": "Tom has 356 marbles. His sister has 123 fewer marbles than Tom. How many marbles does his sister have?",
+      "questionType": "short_answer",
+      "answerKey": "233",
+      "stepByStepSolution": [
+        "'Fewer than' means his sister has less, so subtract.",
+        "Subtract the ones: 6 - 3 = 3.",
+        "Subtract the tens: 5 - 2 = 3.",
+        "Subtract the hundreds: 3 - 1 = 2.",
+        "Put it together: 233 marbles."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting when the problem says 'fewer than'.",
+        "Subtracting from the wrong number (123 instead of 356)."
+      ],
+      "hints": [
+        "'Fewer than' is a clue to subtract from the larger amount.",
+        "Line 356 and 123 up by place value before subtracting."
+      ],
+      "tags": [
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_009",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "hard",
+      "questionText": "Which number sentence matches this problem: 'A library had 482 books. 251 books were borrowed. How many books are left?' A) 482 + 251   B) 482 - 251   C) 251 - 482",
+      "questionType": "multiple_choice",
+      "answerKey": "482 - 251",
+      "stepByStepSolution": [
+        "'Borrowed' means books are taken away from the library.",
+        "'How many are left' is a clue that something has been removed.",
+        "The library started with more books (482), so subtract the smaller amount (251) from it."
+      ],
+      "commonMisconceptions": [
+        "Choosing addition because the problem has two numbers, without reading the words carefully.",
+        "Subtracting in the wrong order (smaller number first)."
+      ],
+      "hints": [
+        "Look for words like 'borrowed' or 'left' — they usually mean subtraction.",
+        "The number you start with (482) should come first in the subtraction."
+      ],
+      "tags": [
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3N04_Y3_010",
+      "skillId": "M3N04_add_sub_1000_no_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 100 + 250 + 3?",
+      "questionType": "short_answer",
+      "answerKey": "353",
+      "stepByStepSolution": [
+        "Add the first two numbers: 100 + 250 = 350.",
+        "Add the last number: 350 + 3 = 353."
+      ],
+      "commonMisconceptions": [
+        "Adding the numbers in the wrong order and losing track of a digit.",
+        "Forgetting to include the smallest number (3) in the total."
+      ],
+      "hints": [
+        "Add two numbers at a time, then add the third.",
+        "Check that all three numbers have been included in your total."
+      ],
+      "tags": [
+        "addition",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_001",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "easy",
+      "questionText": "How many grams are there in 1 kilogram?",
+      "questionType": "short_answer",
+      "answerKey": "1000",
+      "stepByStepSolution": [
+        "A kilogram is a unit for measuring heavier objects.",
+        "A gram is a much smaller unit.",
+        "There are 1000 grams in every kilogram."
+      ],
+      "commonMisconceptions": [
+        "Confusing grams and kilograms with centimetres and metres (100 instead of 1000).",
+        "Guessing a round number without recalling the actual conversion."
+      ],
+      "hints": [
+        "Think of 'kilo' as meaning a thousand.",
+        "Remember: 1000 g = 1 kg."
+      ],
+      "tags": [
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_002",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the mass of an apple: grams or kilograms? A) grams   B) kilograms",
+      "questionType": "multiple_choice",
+      "answerKey": "grams",
+      "stepByStepSolution": [
+        "An apple is quite light.",
+        "Kilograms would give an awkward tiny number (like 0.15 kg) for something this light.",
+        "Grams give a sensible whole number for small, light objects."
+      ],
+      "commonMisconceptions": [
+        "Always choosing kilograms because it sounds like the 'main' unit for mass.",
+        "Not comparing the size of the object to each unit before choosing."
+      ],
+      "hints": [
+        "Picture how heavy the object really is before choosing a unit.",
+        "Light things like fruit are usually measured in grams."
+      ],
+      "tags": [
+        "units",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_003",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the mass of a fridge: grams or kilograms? A) grams   B) kilograms",
+      "questionType": "multiple_choice",
+      "answerKey": "kilograms",
+      "stepByStepSolution": [
+        "A fridge is very heavy.",
+        "Grams would need a huge, hard-to-read number for something this heavy.",
+        "Kilograms are a better fit for heavy objects like furniture and appliances."
+      ],
+      "commonMisconceptions": [
+        "Choosing grams because it's the smaller, more familiar unit.",
+        "Not thinking about how heavy the object actually is before choosing a unit."
+      ],
+      "hints": [
+        "Picture how heavy the object really is before choosing a unit.",
+        "Heavy things like furniture and people are usually measured in kilograms."
+      ],
+      "tags": [
+        "units",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_004",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "medium",
+      "questionText": "How many grams are there in 2 kilograms?",
+      "questionType": "short_answer",
+      "answerKey": "2000",
+      "stepByStepSolution": [
+        "There are 1000 grams in every kilogram.",
+        "2 kilograms means 2 groups of 1000 grams.",
+        "2 x 1000 = 2000."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of multiplying: 2 + 1000 = 1002.",
+        "Forgetting a zero and writing 200 instead of 2000."
+      ],
+      "hints": [
+        "Remember: 1 kg = 1000 g.",
+        "Multiply 1000 by the number of kilograms."
+      ],
+      "tags": [
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_005",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "medium",
+      "questionText": "A bag of rice is labelled as 5 g. Is this a sensible mass for a bag of rice? Answer yes or no.",
+      "questionType": "short_answer",
+      "answerKey": "no",
+      "stepByStepSolution": [
+        "5 g is about the mass of a small coin.",
+        "A real bag of rice is much heavier than that — usually measured in kilograms.",
+        "This label doesn't make sense, so the answer is no."
+      ],
+      "commonMisconceptions": [
+        "Assuming any labelled measurement must be correct without checking it against real life.",
+        "Not comparing 5 g to something familiar to judge if it's sensible."
+      ],
+      "hints": [
+        "Think about how heavy a real bag of rice feels.",
+        "Compare 5 g to something small and light you know, like a coin."
+      ],
+      "tags": [
+        "estimation",
+        "units"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_006",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "medium",
+      "questionText": "Which is heavier: 900 g or 1 kg? A) 900 g   B) 1 kg   C) They are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "1 kg",
+      "stepByStepSolution": [
+        "Convert 1 kg into grams: 1 kg = 1000 g.",
+        "Compare 900 g with 1000 g.",
+        "1000 g is more than 900 g, so 1 kg is heavier."
+      ],
+      "commonMisconceptions": [
+        "Comparing the numbers 900 and 1 without converting to the same unit first.",
+        "Assuming grams are always 'more' than kilograms because the number looks bigger."
+      ],
+      "hints": [
+        "Convert both masses to the same unit before comparing.",
+        "Remember 1 kg = 1000 g."
+      ],
+      "tags": [
+        "units",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_007",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "medium",
+      "questionText": "A kitchen scale's pointer rests exactly on the 250 g mark. How much does the item on the scale weigh? A) 250 g   B) 250 kg   C) 25 g",
+      "questionType": "multiple_choice",
+      "answerKey": "250 g",
+      "stepByStepSolution": [
+        "Kitchen scales for small items are usually marked in grams.",
+        "The pointer is resting on the 250 mark.",
+        "The item weighs 250 g."
+      ],
+      "commonMisconceptions": [
+        "Reading the number but forgetting to check the unit marked on the scale.",
+        "Choosing an unrealistic unit (kilograms) for a small kitchen item."
+      ],
+      "hints": [
+        "Read the number the pointer is resting on.",
+        "Check what unit the scale is actually marked in."
+      ],
+      "tags": [
+        "measuring_instruments",
+        "reading_scales"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_008",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "hard",
+      "questionText": "A watermelon weighs 3 kg. A pineapple weighs 900 g. How many grams heavier is the watermelon?",
+      "questionType": "short_answer",
+      "answerKey": "2100",
+      "stepByStepSolution": [
+        "Convert 3 kg into grams: 3 kg = 3000 g.",
+        "Compare with the pineapple: 900 g.",
+        "Find the difference: 3000 - 900 = 2100.",
+        "The watermelon is 2100 g heavier."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert 3 kg into grams before comparing.",
+        "Subtracting in the wrong order and getting an incorrect difference."
+      ],
+      "hints": [
+        "Convert every mass to the same unit first.",
+        "Then subtract the smaller mass from the larger one."
+      ],
+      "tags": [
+        "units",
+        "conversion",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_009",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "medium",
+      "questionText": "Which tool would you use to measure how much a toy elephant weighs: kitchen scales or bathroom scales? A) kitchen scales   B) bathroom scales",
+      "questionType": "multiple_choice",
+      "answerKey": "kitchen scales",
+      "stepByStepSolution": [
+        "A toy elephant is a small, light object.",
+        "Kitchen scales are designed for smaller, lighter items.",
+        "Bathroom scales are designed for much heavier things, like a person."
+      ],
+      "commonMisconceptions": [
+        "Assuming bathroom scales are always the 'main' scale to use.",
+        "Not thinking about how light the toy actually is before choosing a tool."
+      ],
+      "hints": [
+        "Think about how heavy the object really is.",
+        "Choose the scale that's designed for that kind of weight."
+      ],
+      "tags": [
+        "measuring_instruments",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3MASS_Y3_010",
+      "skillId": "M3M02_measure_mass",
+      "difficulty": "easy",
+      "questionText": "Which is lighter: 2 kg or 1500 g? Write the lighter mass using its own unit (for example, '1500 g').",
+      "questionType": "short_answer",
+      "answerKey": "1500 g",
+      "stepByStepSolution": [
+        "Convert 2 kg into grams: 2 kg = 2000 g.",
+        "Compare 2000 g with 1500 g.",
+        "1500 g is less than 2000 g, so 1500 g is lighter."
+      ],
+      "commonMisconceptions": [
+        "Comparing 2 and 1500 directly without converting to the same unit first.",
+        "Assuming the number written in grams is always smaller just because grams are a smaller unit."
+      ],
+      "hints": [
+        "Convert both masses to the same unit before comparing.",
+        "Remember 1 kg = 1000 g, so 2 kg = 2000 g."
+      ],
+      "tags": [
+        "units",
+        "comparing"
+      ]
+    },
+    {
+      "id": "EINFER_Y3_001",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "How do you think Ella was feeling when her mum asked about her day? A) Excited   B) Embarrassed   C) Proud",
+      "questionType": "multiple_choice",
+      "answerKey": "Embarrassed",
+      "stepByStepSolution": [
+        "Ella hid her shoes, looked down, and only mumbled a short answer.",
+        "These are all clues that she felt uncomfortable about something that happened.",
+        "This suggests Ella was feeling embarrassed."
+      ],
+      "commonMisconceptions": [
+        "Picking a feeling that isn't supported by any clue in the text.",
+        "Only reading the dialogue and missing the actions around it."
+      ],
+      "hints": [
+        "Look at what Ella DOES, not just what she says.",
+        "Hiding something and avoiding eye contact are both clues about how someone feels."
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "character_feelings"
+      ],
+      "passage": "Ella stared at her muddy shoes and quickly hid them behind the back door. When her mum asked how her day was, Ella looked down at the floor and mumbled, 'Fine, I guess.' She didn't mention the puddle at recess or her torn jacket sitting at the bottom of her bag."
+    },
+    {
+      "id": "EINFER_Y3_002",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "Why do you think Ella hid her shoes? A) She didn't want her mum to see they were muddy   B) She was playing a hiding game   C) She forgot where she put them",
+      "questionType": "multiple_choice",
+      "answerKey": "She didn't want her mum to see they were muddy",
+      "stepByStepSolution": [
+        "Ella 'quickly hid' her shoes right after noticing they were muddy.",
+        "This suggests she was trying to avoid getting in trouble or being asked questions.",
+        "There's no clue in the text about a game or forgetting."
+      ],
+      "commonMisconceptions": [
+        "Choosing an answer not supported by any evidence in the text.",
+        "Ignoring the connection between the muddy shoes and the hiding."
+      ],
+      "hints": [
+        "Think about what happened right before Ella hid the shoes.",
+        "What would most children want to avoid if their shoes were muddy?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "inference"
+      ],
+      "passage": "Ella stared at her muddy shoes and quickly hid them behind the back door. When her mum asked how her day was, Ella looked down at the floor and mumbled, 'Fine, I guess.' She didn't mention the puddle at recess or her torn jacket sitting at the bottom of her bag."
+    },
+    {
+      "id": "EINFER_Y3_003",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "What clue in the text tells you Ella might be hiding something? A) She looked down at the floor and mumbled   B) She smiled brightly   C) She talked loudly about her day",
+      "questionType": "multiple_choice",
+      "answerKey": "She looked down at the floor and mumbled",
+      "stepByStepSolution": [
+        "Looking down and mumbling are body-language clues, not direct statements.",
+        "People who are hiding something often avoid eye contact and give short answers.",
+        "This is the clue that matches Ella's behaviour in the text."
+      ],
+      "commonMisconceptions": [
+        "Picking a clue that isn't actually in the text.",
+        "Not recognising body language as a clue to a character's feelings."
+      ],
+      "hints": [
+        "Look for actions or body language, not just words.",
+        "Which option actually appears in the passage?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "evidence"
+      ],
+      "passage": "Ella stared at her muddy shoes and quickly hid them behind the back door. When her mum asked how her day was, Ella looked down at the floor and mumbled, 'Fine, I guess.' She didn't mention the puddle at recess or her torn jacket sitting at the bottom of her bag."
+    },
+    {
+      "id": "EINFER_Y3_009",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "hard",
+      "questionText": "Why didn't Ella mention the puddle at recess or her torn jacket? A) She forgot about them completely   B) She didn't want to get in trouble or worry her mum   C) She thought her mum already knew",
+      "questionType": "multiple_choice",
+      "answerKey": "She didn't want to get in trouble or worry her mum",
+      "stepByStepSolution": [
+        "Ella already hid her shoes and gave a short, vague answer about her day.",
+        "This pattern suggests she is avoiding topics that might upset her mum or get her in trouble.",
+        "It's unlikely she simply forgot two separate things from the same day."
+      ],
+      "commonMisconceptions": [
+        "Assuming a character simply forgot, without considering the pattern of avoidance in the text.",
+        "Not connecting this question to the earlier clues about hiding and mumbling."
+      ],
+      "hints": [
+        "Think about the pattern in Ella's behaviour throughout the whole passage.",
+        "What would connect the hidden shoes, the short answer, AND not mentioning the jacket?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "inference"
+      ],
+      "passage": "Ella stared at her muddy shoes and quickly hid them behind the back door. When her mum asked how her day was, Ella looked down at the floor and mumbled, 'Fine, I guess.' She didn't mention the puddle at recess or her torn jacket sitting at the bottom of her bag."
+    },
+    {
+      "id": "EINFER_Y3_004",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "What can you infer about how Biscuit might be feeling? A) Excited   B) Tired or unwell   C) Hungry",
+      "questionType": "multiple_choice",
+      "answerKey": "Tired or unwell",
+      "stepByStepSolution": [
+        "Biscuit usually barks and runs to the door, but today he didn't move at all.",
+        "A sudden change from an animal's usual behaviour often suggests something is wrong.",
+        "This suggests Biscuit might be tired or unwell."
+      ],
+      "commonMisconceptions": [
+        "Assuming Biscuit's behaviour hasn't changed, without comparing it to what's 'usual'.",
+        "Picking a feeling with no supporting clue in the text."
+      ],
+      "hints": [
+        "Compare Biscuit's usual behaviour to what happened today.",
+        "A big change in behaviour is often a clue that something is different."
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "character_feelings"
+      ],
+      "passage": "Sam's dog, Biscuit, usually barks and runs to the door whenever someone arrives home. But today, when Sam's older brother walked in, Biscuit stayed curled up on his bed and didn't even lift his head."
+    },
+    {
+      "id": "EINFER_Y3_005",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "Which detail helps you know that Biscuit's behaviour is unusual? A) He usually barks and runs to the door   B) He is a dog named Biscuit   C) Sam has an older brother",
+      "questionType": "multiple_choice",
+      "answerKey": "He usually barks and runs to the door",
+      "stepByStepSolution": [
+        "The text tells us what Biscuit 'usually' does.",
+        "Comparing this to what happened today shows the behaviour has changed.",
+        "This is the detail that lets us know something is different."
+      ],
+      "commonMisconceptions": [
+        "Choosing a detail that's just background information, not a comparison.",
+        "Not noticing the word 'usually' as a signal for comparison."
+      ],
+      "hints": [
+        "Look for the word 'usually' in the text — it sets up a comparison.",
+        "Which detail tells you what's normal, so you can spot what's not?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "evidence"
+      ],
+      "passage": "Sam's dog, Biscuit, usually barks and runs to the door whenever someone arrives home. But today, when Sam's older brother walked in, Biscuit stayed curled up on his bed and didn't even lift his head."
+    },
+    {
+      "id": "EINFER_Y3_010",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "hard",
+      "questionText": "What might Sam do next, based on Biscuit's unusual behaviour? A) Ignore it completely   B) Check if Biscuit is feeling okay   C) Take Biscuit for a walk immediately",
+      "questionType": "multiple_choice",
+      "answerKey": "Check if Biscuit is feeling okay",
+      "stepByStepSolution": [
+        "Biscuit's behaviour is very different from usual, which is a sign something might be wrong.",
+        "A caring pet owner would likely want to check on their pet.",
+        "This is the most sensible next step based on the clues in the text."
+      ],
+      "commonMisconceptions": [
+        "Picking an action that ignores the clue that something is unusual.",
+        "Choosing an action that doesn't match how most people would respond to a pet acting strangely."
+      ],
+      "hints": [
+        "Think about how someone would respond if they noticed their pet acting unusually.",
+        "What would show they care about Biscuit's wellbeing?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "prediction"
+      ],
+      "passage": "Sam's dog, Biscuit, usually barks and runs to the door whenever someone arrives home. But today, when Sam's older brother walked in, Biscuit stayed curled up on his bed and didn't even lift his head."
+    },
+    {
+      "id": "EINFER_Y3_006",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "How is Jayden most likely feeling? A) Nervous   B) Bored   C) Angry",
+      "questionType": "multiple_choice",
+      "answerKey": "Nervous",
+      "stepByStepSolution": [
+        "Jayden's hands were shaking and his mind suddenly went blank.",
+        "These are both common signs of nervousness, especially in front of a crowd.",
+        "This suggests Jayden is feeling nervous."
+      ],
+      "commonMisconceptions": [
+        "Choosing a feeling that doesn't match the physical clues described.",
+        "Ignoring the shaking hands as a clue to his emotional state."
+      ],
+      "hints": [
+        "Look at what's happening to Jayden's body — shaking hands are a big clue.",
+        "Think about how most people feel right before public speaking."
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "character_feelings"
+      ],
+      "passage": "Jayden's hands were shaking as he walked up to the microphone. He had practised his speech every night for two weeks, but his mind suddenly went blank as he looked out at all the faces staring back at him."
+    },
+    {
+      "id": "EINFER_Y3_007",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "medium",
+      "questionText": "What evidence from the text tells you how Jayden is feeling? A) His hands were shaking   B) He practised for two weeks   C) He walked up to the microphone",
+      "questionType": "multiple_choice",
+      "answerKey": "His hands were shaking",
+      "stepByStepSolution": [
+        "Shaking hands is a physical sign of a feeling, not just an action.",
+        "Practising and walking up are actions, but they don't directly show emotion.",
+        "The shaking hands is the clue that reveals how Jayden feels."
+      ],
+      "commonMisconceptions": [
+        "Confusing an action (walking up) with actual evidence of feeling.",
+        "Assuming that preparing for something means a character isn't nervous."
+      ],
+      "hints": [
+        "Look for physical clues, like what someone's body is doing.",
+        "Which detail directly describes a feeling-related reaction?"
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "evidence"
+      ],
+      "passage": "Jayden's hands were shaking as he walked up to the microphone. He had practised his speech every night for two weeks, but his mind suddenly went blank as he looked out at all the faces staring back at him."
+    },
+    {
+      "id": "EINFER_Y3_008",
+      "skillId": "E3LY01_02_inferential_comprehension",
+      "difficulty": "hard",
+      "questionText": "Why might Jayden's mind have suddenly gone blank? A) He was very well prepared and confident   B) He felt nervous being watched by so many people   C) He forgot his speech was today",
+      "questionType": "multiple_choice",
+      "answerKey": "He felt nervous being watched by so many people",
+      "stepByStepSolution": [
+        "The text says his mind went blank right as he looked out at all the faces.",
+        "This timing suggests the crowd made him nervous, even though he had practised.",
+        "Practising a lot doesn't always stop nervousness from affecting memory."
+      ],
+      "commonMisconceptions": [
+        "Assuming that practising means a character can't also feel nervous.",
+        "Missing the connection between 'looked out at all the faces' and his mind going blank."
+      ],
+      "hints": [
+        "Look at what happened right before his mind went blank.",
+        "Being well-prepared and still feeling nervous can both be true at once."
+      ],
+      "tags": [
+        "inferential_comprehension",
+        "inference"
+      ],
+      "passage": "Jayden's hands were shaking as he walked up to the microphone. He had practised his speech every night for two weeks, but his mind suddenly went blank as he looked out at all the faces staring back at him."
+    },
+    {
+      "id": "ENAR_Y3_001",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "easy",
+      "questionText": "Which sentence best describes the 'problem' in a narrative? A) The tricky situation the main character needs to solve   B) The name of the story's setting   C) The list of characters in the story",
+      "questionType": "multiple_choice",
+      "answerKey": "The tricky situation the main character needs to solve",
+      "stepByStepSolution": [
+        "Every narrative usually has a problem that drives the story forward.",
+        "It's the challenge or difficulty the main character faces.",
+        "Options B and C describe other story elements, not the problem."
+      ],
+      "commonMisconceptions": [
+        "Confusing the problem with the setting or character list.",
+        "Thinking the problem is just any event, rather than a challenge to solve."
+      ],
+      "hints": [
+        "The problem is what makes the story interesting — a challenge to overcome.",
+        "Ask: what does the main character need to fix or solve?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "problem"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_002",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "In a narrative, when is the 'solution' usually found? A) At the very beginning   B) Near the end, after the problem   C) It never appears in a story",
+      "questionType": "multiple_choice",
+      "answerKey": "Near the end, after the problem",
+      "stepByStepSolution": [
+        "Stories usually introduce a problem first.",
+        "The characters then try to solve it as the story goes on.",
+        "The solution usually comes near the end, once the problem has been worked through."
+      ],
+      "commonMisconceptions": [
+        "Thinking the solution comes before the problem is introduced.",
+        "Assuming every story ends without any solution at all."
+      ],
+      "hints": [
+        "Think about the order of events in a story you know well.",
+        "The problem comes first — the solution comes after."
+      ],
+      "tags": [
+        "narrative_structure",
+        "solution"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_003",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "Which sentence shows a character's feelings, not just an action? A) Mia slammed the door, her cheeks burning with anger.   B) Mia opened the door.   C) Mia walked to school.",
+      "questionType": "multiple_choice",
+      "answerKey": "Mia slammed the door, her cheeks burning with anger.",
+      "stepByStepSolution": [
+        "Option A describes both an action AND how Mia feels (angry).",
+        "Options B and C only describe actions, with no feeling shown.",
+        "'Cheeks burning with anger' is a clue to Mia's emotion."
+      ],
+      "commonMisconceptions": [
+        "Picking a sentence that only shows action, missing the emotional detail.",
+        "Not noticing descriptive phrases that reveal feelings."
+      ],
+      "hints": [
+        "Look for words that describe an emotion, not just movement.",
+        "Which sentence tells you HOW the character feels while doing the action?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "character_feelings"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_004",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "easy",
+      "questionText": "In a story, words that a character actually says out loud, usually shown inside quotation marks, are called ___.",
+      "questionType": "short_answer",
+      "answerKey": "dialogue",
+      "stepByStepSolution": [
+        "When characters speak in a story, their exact words are written down.",
+        "These spoken words are called dialogue.",
+        "Dialogue is usually shown inside quotation marks."
+      ],
+      "commonMisconceptions": [
+        "Confusing dialogue with narration (the parts describing what happens).",
+        "Forgetting the specific term and describing it instead of naming it."
+      ],
+      "hints": [
+        "Think about what a character actually SAYS, not just does.",
+        "This word starts with 'dia-' and relates to conversation."
+      ],
+      "tags": [
+        "narrative_structure",
+        "dialogue"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_005",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "Which of these is written as dialogue? A) Jack said he was hungry.   B) 'I'm starving!' Jack said.   C) Jack felt hungry after school.",
+      "questionType": "multiple_choice",
+      "answerKey": "'I'm starving!' Jack said.",
+      "stepByStepSolution": [
+        "Dialogue shows the character's exact spoken words, usually in quotation marks.",
+        "Option B has quotation marks around Jack's actual words.",
+        "Options A and C describe what happened without quoting exact words."
+      ],
+      "commonMisconceptions": [
+        "Choosing a sentence that describes speech without actually quoting it.",
+        "Not noticing the quotation marks as the key clue for dialogue."
+      ],
+      "hints": [
+        "Look for quotation marks — they show a character's exact words.",
+        "Which option lets you 'hear' exactly what Jack said?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "dialogue"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_006",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "Read this story problem: 'Zara's kite got stuck high in a tree.' Which sentence is the best solution? A) Zara asked her dad to help her get a ladder.   B) Zara went home and had dinner.   C) Zara's kite was bright red.",
+      "questionType": "multiple_choice",
+      "answerKey": "Zara asked her dad to help her get a ladder.",
+      "stepByStepSolution": [
+        "A solution should directly address the problem — the stuck kite.",
+        "Asking for help with a ladder is a sensible way to get the kite down.",
+        "Options B and C don't help solve the problem at all."
+      ],
+      "commonMisconceptions": [
+        "Choosing an unrelated event instead of an action that solves the problem.",
+        "Picking a description (like the kite's colour) instead of a solution."
+      ],
+      "hints": [
+        "A solution should be an action that fixes the problem.",
+        "Which option actually helps get the kite out of the tree?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "solution"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_007",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "hard",
+      "questionText": "Which story opening best sets up a clear problem? A) Ben loved Saturdays because there was no school.   B) Ben woke up and realised he had lost his backpack the night before the school excursion.   C) Ben's favourite colour was blue.",
+      "questionType": "multiple_choice",
+      "answerKey": "Ben woke up and realised he had lost his backpack the night before the school excursion.",
+      "stepByStepSolution": [
+        "A good problem-setting opening introduces a challenge the character needs to solve.",
+        "Losing a backpack right before an excursion is a clear, specific problem.",
+        "Options A and C are just facts about Ben, with no challenge to solve."
+      ],
+      "commonMisconceptions": [
+        "Confusing a simple fact about a character with an actual story problem.",
+        "Missing the urgency created by 'the night before the school excursion'."
+      ],
+      "hints": [
+        "Look for a sentence that creates a challenge or worry for the character.",
+        "A problem usually needs solving — does the sentence set one up?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "problem"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_008",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "True or false: a good narrative solution should solve the problem introduced earlier in the story.",
+      "questionType": "short_answer",
+      "answerKey": "true",
+      "stepByStepSolution": [
+        "A narrative's structure connects the problem and the solution.",
+        "The solution should directly relate to and resolve the problem from earlier.",
+        "So the statement is true."
+      ],
+      "commonMisconceptions": [
+        "Thinking a solution can be about anything, even if unrelated to the problem.",
+        "Not recognising that stories need this connection to feel complete."
+      ],
+      "hints": [
+        "Think about what makes a story feel 'finished' and satisfying.",
+        "A solution that ignores the problem wouldn't make sense to a reader."
+      ],
+      "tags": [
+        "narrative_structure",
+        "solution"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_009",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "Which sentence includes both a character's feeling and dialogue? A) 'I can't believe we won!' cheered Priya, jumping with joy.   B) Priya walked home.   C) The game finished at 3 o'clock.",
+      "questionType": "multiple_choice",
+      "answerKey": "'I can't believe we won!' cheered Priya, jumping with joy.",
+      "stepByStepSolution": [
+        "Option A has quoted words (dialogue) AND a description of feeling (joy).",
+        "Options B and C are plain actions or facts, with neither dialogue nor feeling."
+      ],
+      "commonMisconceptions": [
+        "Picking a sentence with only one of the two features (dialogue or feeling), not both.",
+        "Overlooking the quotation marks as a sign of dialogue."
+      ],
+      "hints": [
+        "Look for BOTH quotation marks and a feeling word in the same sentence.",
+        "Which option lets you hear Priya speak AND know how she feels?"
+      ],
+      "tags": [
+        "narrative_structure",
+        "dialogue",
+        "character_feelings"
+      ]
+    },
+    {
+      "id": "ENAR_Y3_010",
+      "skillId": "E3LY06_3LE02_narrative_problem_solution",
+      "difficulty": "medium",
+      "questionText": "Which order correctly shows a narrative's structure? A) Solution, then problem   B) Problem, then solution   C) There is no particular order",
+      "questionType": "multiple_choice",
+      "answerKey": "Problem, then solution",
+      "stepByStepSolution": [
+        "Stories usually introduce a problem for the character to face.",
+        "The character then works towards fixing it, leading to the solution.",
+        "So the correct order is problem, then solution."
+      ],
+      "commonMisconceptions": [
+        "Thinking a solution could logically come before its problem is introduced.",
+        "Assuming narrative structure is random rather than following a pattern."
+      ],
+      "hints": [
+        "Think about a story you know well and the order events happened in.",
+        "The challenge always comes before it gets resolved."
+      ],
+      "tags": [
+        "narrative_structure",
+        "sequence"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_001",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "easy",
+      "questionText": "Find the adjective in this sentence: 'The fluffy cat slept on the mat.'",
+      "questionType": "short_answer",
+      "answerKey": "fluffy",
+      "stepByStepSolution": [
+        "An adjective describes a noun, adding detail about what it's like.",
+        "In this sentence, 'fluffy' describes what the cat is like.",
+        "So the adjective is fluffy."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'slept', which is an action (verb), not a describing word.",
+        "Choosing 'cat' or 'mat', which are the nouns being described."
+      ],
+      "hints": [
+        "Look for the word that describes what something is like.",
+        "Which word tells you more about the cat?"
+      ],
+      "tags": [
+        "adjectives",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_002",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "easy",
+      "questionText": "Find the adverb in this sentence: 'She ran quickly to the bus.'",
+      "questionType": "short_answer",
+      "answerKey": "quickly",
+      "stepByStepSolution": [
+        "An adverb often describes HOW an action is done.",
+        "In this sentence, 'quickly' tells us how she ran.",
+        "So the adverb is quickly."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'ran', which is the action itself, not the word describing how it was done.",
+        "Choosing 'bus', which is a noun, not a describing word."
+      ],
+      "hints": [
+        "Look for the word that tells you HOW the action happened.",
+        "Which word describes the way she ran?"
+      ],
+      "tags": [
+        "adverbs",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_003",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "easy",
+      "questionText": "Which word is an adjective in this sentence: 'The tall giraffe ate leaves.'? A) tall   B) ate   C) leaves",
+      "questionType": "multiple_choice",
+      "answerKey": "tall",
+      "stepByStepSolution": [
+        "An adjective describes a noun.",
+        "'Tall' describes what the giraffe is like.",
+        "'ate' is a verb, and 'leaves' is a noun being eaten, not a describing word."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'ate', which is the action the giraffe did.",
+        "Choosing 'leaves', which is what the giraffe ate, not a description."
+      ],
+      "hints": [
+        "Look for the word that describes the giraffe.",
+        "Which word tells you what the giraffe is like?"
+      ],
+      "tags": [
+        "adjectives",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_004",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "medium",
+      "questionText": "Which sentence uses commas correctly in a list? A) I packed apples, bananas and grapes.   B) I packed apples bananas, and grapes.   C) I packed, apples bananas and grapes.",
+      "questionType": "multiple_choice",
+      "answerKey": "I packed apples, bananas and grapes.",
+      "stepByStepSolution": [
+        "In a list, commas go between each item, except usually before the final 'and'.",
+        "Option A places the comma correctly, between 'apples' and 'bananas'.",
+        "Options B and C place commas in the wrong spots."
+      ],
+      "commonMisconceptions": [
+        "Placing a comma right before 'and' at the end of a short list.",
+        "Placing a comma right after the verb instead of between list items."
+      ],
+      "hints": [
+        "Commas usually go between list items, not right before 'and' in a short list.",
+        "Read the sentence aloud — commas often go where you'd naturally pause."
+      ],
+      "tags": [
+        "commas",
+        "punctuation"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_005",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "medium",
+      "questionText": "Which sentence correctly uses a comma in a list of three items? A) My favourite fruits are mangoes, apples and pears.   B) My favourite fruits are mangoes apples, and pears.   C) My favourite fruits are, mangoes apples and pears.",
+      "questionType": "multiple_choice",
+      "answerKey": "My favourite fruits are mangoes, apples and pears.",
+      "stepByStepSolution": [
+        "A list of three items needs a comma between the first and second item.",
+        "Option A places the comma correctly, between 'mangoes' and 'apples'.",
+        "Options B and C place the comma in the wrong spot."
+      ],
+      "commonMisconceptions": [
+        "Placing the comma right before 'and' instead of between the first two items.",
+        "Placing a comma right after a verb like 'are'."
+      ],
+      "hints": [
+        "Commas go between list items, one after another.",
+        "Check where each comma sits compared to the items in the list."
+      ],
+      "tags": [
+        "commas",
+        "punctuation"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_006",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "medium",
+      "questionText": "Which sentence contains an adverb? A) The dog barked loudly.   B) The loud dog slept.   C) The dog is big.",
+      "questionType": "multiple_choice",
+      "answerKey": "The dog barked loudly.",
+      "stepByStepSolution": [
+        "An adverb often describes HOW an action happens.",
+        "'Loudly' describes how the dog barked — that's an adverb.",
+        "'Loud' in option B describes the dog itself, making it an adjective instead."
+      ],
+      "commonMisconceptions": [
+        "Confusing an adjective (loud) with an adverb (loudly) because they look similar.",
+        "Picking a sentence with a describing word that describes a noun, not an action."
+      ],
+      "hints": [
+        "Look for a word ending in '-ly' that describes an action.",
+        "Check whether the describing word is attached to a noun (adjective) or a verb (adverb)."
+      ],
+      "tags": [
+        "adverbs",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_007",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "easy",
+      "questionText": "Choose the better adjective to describe a puppy: 'boring' or 'playful'? Write the word that best fits a fun, energetic puppy.",
+      "questionType": "short_answer",
+      "answerKey": "playful",
+      "stepByStepSolution": [
+        "Think about words that describe a fun, energetic animal.",
+        "'Playful' suggests fun and energy, which fits a typical puppy.",
+        "'Boring' doesn't match the idea of an energetic puppy."
+      ],
+      "commonMisconceptions": [
+        "Choosing a word just because it's shorter or more familiar, without checking the meaning fits.",
+        "Not connecting the adjective's meaning to the description given (fun, energetic)."
+      ],
+      "hints": [
+        "Think about what a fun, energetic puppy would actually be like.",
+        "Which word matches that description better?"
+      ],
+      "tags": [
+        "adjectives",
+        "word_choice"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_008",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "hard",
+      "questionText": "Which sentence uses both an adjective and an adverb? A) The brave firefighter climbed quickly up the ladder.   B) The firefighter climbed the ladder.   C) The ladder was tall.",
+      "questionType": "multiple_choice",
+      "answerKey": "The brave firefighter climbed quickly up the ladder.",
+      "stepByStepSolution": [
+        "'Brave' describes the firefighter — that's an adjective.",
+        "'Quickly' describes how the firefighter climbed — that's an adverb.",
+        "Option A has both; options B and C only have one or neither."
+      ],
+      "commonMisconceptions": [
+        "Picking a sentence with only one describing word instead of checking for both types.",
+        "Confusing 'tall' describing the ladder with an adverb."
+      ],
+      "hints": [
+        "Find a word that describes a person or thing (adjective).",
+        "Then look for a separate word that describes an action (adverb)."
+      ],
+      "tags": [
+        "adjectives",
+        "adverbs",
+        "parts_of_speech"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_009",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "medium",
+      "questionText": "Which sentence correctly uses commas in a list? A) For breakfast I ate toast, eggs and juice.   B) For breakfast I ate toast eggs and juice.   C) For breakfast, I ate toast eggs, and, juice.",
+      "questionType": "multiple_choice",
+      "answerKey": "For breakfast I ate toast, eggs and juice.",
+      "stepByStepSolution": [
+        "A list of three items needs a comma between the first two items.",
+        "Option A places the comma correctly, between 'toast' and 'eggs'.",
+        "Option B is missing the comma entirely, and option C has commas in the wrong places."
+      ],
+      "commonMisconceptions": [
+        "Leaving out commas in a list altogether.",
+        "Adding extra, unnecessary commas throughout the sentence."
+      ],
+      "hints": [
+        "Commas go between list items, not scattered randomly through the sentence.",
+        "Check that there's exactly one comma between each pair of items (except before the final 'and')."
+      ],
+      "tags": [
+        "commas",
+        "punctuation"
+      ]
+    },
+    {
+      "id": "EADJ_Y3_010",
+      "skillId": "E3LA02_03_adjectives_adverbs_commas",
+      "difficulty": "easy",
+      "questionText": "Which word in this sentence is an adverb: 'The kitten climbed carefully down the tree.'? A) kitten   B) carefully   C) tree",
+      "questionType": "multiple_choice",
+      "answerKey": "carefully",
+      "stepByStepSolution": [
+        "An adverb often describes HOW an action is done.",
+        "'Carefully' describes how the kitten climbed.",
+        "'kitten' and 'tree' are nouns, not describing words."
+      ],
+      "commonMisconceptions": [
+        "Choosing a noun instead of the word describing the action.",
+        "Not recognising the '-ly' ending as a common adverb clue."
+      ],
+      "hints": [
+        "Look for the word that tells you HOW the kitten climbed.",
+        "Many adverbs end in '-ly' — does that help narrow it down?"
+      ],
+      "tags": [
+        "adverbs",
+        "parts_of_speech"
+      ]
+    }
+  ]
+}

@@ -105,21 +105,21 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   needs an email service and is still a next step.
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
-  clamped to term 1 / **week 2** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
+  clamped to term 1 / **week 3** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
   bank content reaches so far. Note the curriculum *sequence* (which skills are "new" each
   week) is already fully seeded for all 10 weeks of Term 1, both subjects — see `seed.ts`/
   `year3-curriculum.json` — it's specifically the item bank (actual practice questions)
   that's the limiting factor.
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings,
-  all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-2**
-  (112 items total across 10 skills — 8 original hand-written samples + 104 generated per the
+  all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-3**
+  (162 items total across 15 skills — 8 original hand-written samples + 154 generated per the
   project's item-generation prompt templates, pending human review). `multi_part` items
   (object-valued answer keys) and items tagged `open_response` are stored but intentionally
   excluded from live sessions by `sessionBuilder.ts`, since the MVP grader
   (`src/lib/grading.ts`) only reliably auto-marks single-value `short_answer` /
-  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2 bank
-  (`week2-item-bank.json`) is entirely `short_answer`/`multiple_choice` so all 50 of its items
-  are usable in live sessions immediately.
+  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2 and Week 3 banks
+  (`week2-item-bank.json`, `week3-item-bank.json`) are entirely `short_answer`/`multiple_choice`
+  so all of their items are usable in live sessions immediately.
 
 ## Curriculum content: Week 2
 
@@ -136,12 +136,36 @@ clamp that was protecting against empty sessions.
 - The literal-comprehension items each have a short reading passage (the `Item` schema and
   session/child-page plumbing already support a `passage` field; `seed-demo.ts` now passes
   it through when seeding).
-- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` is 2.
 
 **Verified**: a fresh child backdated 25 days (which would otherwise compute a later week)
 correctly clamps to Week 2 content rather than an empty/broken session; grading works for
 both `short_answer` and `multiple_choice` items in the new bank; existing Week-1 children
 unaffected.
+
+## Curriculum content: Week 3
+
+Added a third week of real, auto-gradable practice content, following the identical pattern
+used for Week 2. Again, no session-builder or schema changes were needed — skills/items are
+looked up generically by term+week, and the Week 3 sequence entries already existed from the
+original curriculum seed.
+
+- `src/db/seed/week3-item-bank.json` — 50 items across the 5 skills Week 3 introduces:
+  `M3N04_add_sub_1000_no_regroup`, `M3M02_measure_mass` (Maths),
+  `E3LY01_02_inferential_comprehension`, `E3LY06_3LE02_narrative_problem_solution`,
+  `E3LA02_03_adjectives_adverbs_commas` (English). All items are `short_answer` or
+  `multiple_choice`, so every item is usable in a live session immediately.
+- The inferential-comprehension items include three short reading passages, each used across
+  a small cluster of items (same `passage` field mechanism as Week 2's literal-comprehension
+  items).
+- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` is now 3.
+- `src/db/seed/seed-demo.ts` now also loads `week3-item-bank.json`.
+
+**Verified**: a fresh child backdated 15 days correctly receives Week 3 content for both
+Maths and English (including passages); a child backdated 90 days correctly clamps to Week 3
+rather than an empty/broken session; grading works for both `short_answer` and
+`multiple_choice` items in the new bank (including case-insensitive matching on the
+inferential-comprehension items); a full page/API regression pass and a production
+`next build` both completed cleanly with no errors.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -236,8 +260,8 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Real item banks — Weeks 1-2 only (112 items) so far, and all of it still needs human
-  review per the project's QA process before it's "production" content. Weeks 3-10 (Term 1)
+- Real item banks — Weeks 1-3 only (162 items) so far, and all of it still needs human
+  review per the project's QA process before it's "production" content. Weeks 4-10 (Term 1)
   and other year levels/terms still need generating; the curriculum *sequence* for all 10
   weeks already exists, so each future week is "write the item bank + bump
   `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed.
