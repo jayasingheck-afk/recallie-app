@@ -19,6 +19,9 @@
  * allowed to roll forward via MAX_AVAILABLE_WEEK/MAX_AVAILABLE_TERM).
  * Item pool queries exclude "multi_part" question types and items tagged
  * "open_response" — the MVP grader (src/lib/grading.ts) can't auto-mark them.
+ * Also excludes items with reviewStatus "flagged" — see this file's
+ * pickItemsForSkills() and src/db/seed/export-items-for-review.ts /
+ * import-review.ts for the human content-review workflow.
  */
 import { and, eq, inArray, ne, sql } from "drizzle-orm";
 import { db } from "@/db/client";
@@ -77,7 +80,11 @@ async function pickItemsForSkills(
           // items have no single correct answer). See week1-item-bank.json's
           // _note for the source of this rule.
           ne(items.questionType, "multi_part"),
-          sql`NOT (${items.tags} @> ARRAY['open_response']::text[])`
+          sql`NOT (${items.tags} @> ARRAY['open_response']::text[])`,
+          // Human content review (see export-items-for-review.ts / import-review.ts):
+          // "pending" items still show (that's every item until reviewed) — only
+          // items a reviewer has explicitly flagged are excluded from live sessions.
+          ne(items.reviewStatus, "flagged")
         )
       )
       .orderBy(sql`RANDOM()`)

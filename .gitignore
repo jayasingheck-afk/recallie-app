@@ -4,3 +4,8 @@ node_modules/
 *.log
 *.tsbuildinfo
 
+# Content review workbooks (src/db/seed/export-items-for-review.ts) are a
+# personal working document, not source — they go stale immediately and
+# don't diff well in git. Keep them out of version control.
+recallie-content-review*.xlsx
+

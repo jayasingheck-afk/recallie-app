@@ -180,10 +180,22 @@ export const items = pgTable(
     tags: text("tags").array().notNull().default([]),
     curriculumCodes: jsonb("curriculumCodes"), // { AC: [...], VIC: [...], NSW: [...] }
     metadata: jsonb("metadata"),
+    // Human content-review tracking (see src/db/seed/export-items-for-review.ts /
+    // import-review.ts). "pending" is the default for every AI-generated item —
+    // deliberately still shown in live sessions (see sessionBuilder.ts's query),
+    // since most content is fine and a blanket hide-until-approved default would
+    // empty every session on day one. Only "flagged" items are excluded, as soon
+    // as a completed review spreadsheet is imported.
+    reviewStatus: text("reviewStatus").notNull().default("pending"), // "pending" | "approved" | "flagged"
+    reviewNotes: text("reviewNotes"),
+    reviewedAt: timestamp("reviewedAt"),
     createdAt: timestamp("createdAt").notNull().defaultNow(),
     updatedAt: timestamp("updatedAt").notNull().defaultNow(),
   },
-  (table) => [index("item_skill_difficulty_idx").on(table.skillId, table.difficulty)]
+  (table) => [
+    index("item_skill_difficulty_idx").on(table.skillId, table.difficulty),
+    index("item_review_status_idx").on(table.reviewStatus),
+  ]
 );
 
 // -------------------------

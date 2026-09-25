@@ -333,6 +333,52 @@ matches an embedded option) plus all multi-value/array-answerKey items in the wh
 submissions against new Term 2 items, `/api/gamification`, `/api/reports/monthly`) and a
 production `next build` both completed cleanly.
 
+## Content review workflow
+
+All 1,522 generated items are AI-written and need a human review pass before they're treated
+as production content — this is a spreadsheet-based process rather than a new admin UI, so it
+doesn't need a dev server running to work through.
+
+- `src/db/seed/export-items-for-review.ts` — exports every item to a formatted `.xlsx`
+  workbook: an "Items" tab (one row per item, sorted by subject/term/week/skill, with a
+  `reviewStatus` dropdown and free-text `reviewNotes` column, autofilter and a frozen header),
+  a "Summary" tab (live `COUNTIFS` tally of pending/approved/flagged per subject), and an
+  "Instructions" tab explaining what to fill in and what happens next. Re-running it later
+  picks up whatever review decisions are already saved in the database, so nothing already
+  reviewed has to be redone.
+  ```
+  npm run review:export -- recallie-content-review.xlsx
+  ```
+- `src/db/seed/import-review.ts` — reads a completed workbook back and updates each item's
+  `reviewStatus`/`reviewNotes` in the database, matching by `itemId`. Only those two columns
+  are trusted from the sheet; editing any other column (question text, answer key, etc.) in
+  the spreadsheet has no effect on the real data. Warns about unrecognised statuses (defaults
+  them to `pending`) and about any item ids present in the sheet but not in the database.
+  ```
+  npm run review:import -- recallie-content-review.xlsx
+  ```
+- **Default behaviour, deliberately chosen to keep the app usable during review**: every item
+  starts `pending`, and `pending`/`approved` items both keep appearing in live sessions
+  exactly as they do today — only items a reviewer explicitly marks `flagged` are excluded
+  (`src/lib/sessionBuilder.ts`'s item-pool query). Marking something `approved` is purely a
+  record of having checked it; it doesn't change what children see. A stricter
+  "hide-until-approved" default was considered and deliberately rejected, since it would empty
+  every session app-wide on day one (nothing has been reviewed yet).
+  `src/db/schema.ts`'s `items` table gained three columns for this: `reviewStatus` (text,
+  default `"pending"`), `reviewNotes` (text, nullable), `reviewedAt` (timestamp, nullable) —
+  see migration `drizzle/0002_perfect_slyde.sql`.
+
+**Verified**: exported the full 1,522-item workbook, ran it through a formula-recalculation
+check (0 errors across 9 formulas), spot-checked the Summary tab's counts against a direct
+database query (736 maths + 786 english = 1,522, matching exactly), round-tripped a test
+import (marked one item `approved` with a note, one `flagged` with a note, and one with a
+deliberately invalid status to confirm it's safely defaulted to `pending` with a warning
+rather than silently corrupting data), confirmed the flagged item's skill pool dropped from 14
+items to 13 and that `buildTodaySession` never returned it across 15 repeated builds, then
+reset all 1,522 items back to a clean `pending` state before delivery so Chandana's real
+export starts fresh. A production `next build` and the usual API regression pass both stayed
+clean after the schema change.
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -448,9 +494,9 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 ## Explicit next steps (not yet built)
 
 - Real item banks — **the full Year 3 curriculum is now done** (1,522 items across 151
-  skills, Terms 1-4, Weeks 1-10, both subjects), and all of it still needs human review per
-  the project's QA process before it's "production" content. Year 4+ content is not yet
-  designed.
+  skills, Terms 1-4, Weeks 1-10, both subjects). The human-review workflow now exists (see
+  "Content review workflow" above) but the review itself hasn't been done yet — every item is
+  still `reviewStatus: "pending"`. Year 4+ content is not yet designed.
 - The parent-facing "assign a focus topic" feature (browse-by-topic practice alongside the
   automatic daily session) described in `claude/year3-full-syllabus-plan.md` — designed but
   not built: a new route, a `GET /api/topics` endpoint, and a session-builder variant that
