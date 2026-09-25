@@ -86,12 +86,14 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   below). `drag_drop`/`matching` have no content or grader yet.
 - **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
   `GET`/`POST /api/children` (parent onboarding — list/add children), `GET /api/gamification`
-  (points, streak, badges), `GET /api/reports/monthly` (monthly progress report).
+  (points, streak, badges), `GET /api/reports/monthly` (monthly progress report),
+  `GET /api/progress-map` (journey trail data — see "Visual progress map" below).
 - **UI**: `/child` (one-item-at-a-time practice with hints + feedback, real persisted points/
-  streak/badges), `/parent/dashboard` (skills mastered / areas to give more attention / recent
-  sessions / points, streak & badge shelf, links to reports), `/parent/children` (add a child,
-  switch between them), `/parent/reports` (monthly progress report with month navigation and
-  a print/Save-as-PDF button).
+  streak/badges), `/child/map` (the visual "journey trail" through the curriculum),
+  `/parent/dashboard` (skills mastered / areas to give more attention / recent sessions /
+  points, streak & badge shelf, links to reports and the journey map), `/parent/children`
+  (add a child, switch between them), `/parent/reports` (monthly progress report with month
+  navigation and a print/Save-as-PDF button).
 - **`src/lib/gamification.ts`** — points, daily practice streak, and a 7-badge starter set
   (First Steps, Mission Complete, 3-/7-Day Streak, Number Ninja, Word Wizard, Century Club).
   Fully derived from existing `ReviewEvent`/`Session` rows — no new mutable state, so nothing
@@ -468,6 +470,43 @@ production `next build`, and a regression pass across `/api/children`, `/api/gam
 `/api/dashboard`, `/api/reports/monthly`, `/api/topics`, and `/api/focus-topic` all stayed
 clean, and all test review events/skill states were cleaned up afterward.
 
+## Visual progress map ("journey trail")
+
+A child-facing "journey trail" beyond the badge shelf: one stop per curriculum week (Term 1
+Week 1 through Term 4 Week 10 — 40 stops, the whole Year 3 curriculum), styled as an
+adventure path grouped into four decorative "chapters" (🌳 The Learning Forest, 🐊 River
+Crossing, ⛰️ Mountain Trail, 🏰 Castle Summit — cosmetic flavour only, no relation to real
+curriculum content). Each stop shows whether the child has passed that week (green,
+checkmark-style icon), is on it right now (blue, pulsing, "📍 You are here!"), or hasn't
+reached it yet (grey, padlock, description hidden so nothing spoils ahead). Tapping a
+reached stop expands the skills introduced that week and how many the child has gone on to
+master — mastery keeps climbing on already-passed stops as spaced-repetition review
+continues, it isn't frozen at "completed".
+
+- `GET /api/progress-map?childId=...` (`src/app/api/progress-map/route.ts`) — built entirely
+  from data that already existed: `computeCurrentTermWeek` (same term/week logic
+  `sessionBuilder.ts` uses) for where the child is, `curriculumSequenceEntries` for which
+  skills each week introduces (both subjects combined into one trail, since term/week is
+  shared), and `ChildSkillState` for mastery counts. No new schema, no migration.
+  `curriculumWeek.ts`'s `MAX_AVAILABLE_TERM`/`MAX_AVAILABLE_WEEK` are now exported so this
+  route (and anything else that needs "how long is the whole curriculum") doesn't re-hardcode
+  4/10.
+- `/child/map` (`src/app/child/map/page.tsx`) — the trail itself, linked from a "🗺️ My
+  journey" link on `/child` and a "🗺️ Journey map" link on `/parent/dashboard` (parents can
+  see the same view via their child's `childId`).
+
+**Verified**: confirmed the 40 stops sum to exactly 151 skills (73 maths + 78 english) with
+zero gaps or double-counting; a backdated test child at Term 1 Week 4 showed Weeks 1-3
+correctly `completed`, Week 4 `current`, Week 5+ `locked`; manually marking a skill
+`mastered` in the database and re-fetching correctly bumped that week's mastered count;
+`tsc --noEmit`, production `next build`, and a full regression pass across every other API
+route and page all stayed clean. Screenshotted the rendered page (Playwright against the
+local dev server) to check the visual design actually reads as intended — caught and fixed
+one cosmetic issue this way (the 🏞️/🏕️ emoji rendered as fallback glyphs in the headless
+screenshot environment; swapped for plain-codepoint alternatives 🐊/⛺ that render reliably
+everywhere) — and confirmed a stray overlay in the screenshots was just Next.js's own
+dev-mode indicator badge (only appears under `next dev`, not a real page element).
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -583,13 +622,15 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 ## Explicit next steps (not yet built)
 
 - Real item banks — **the full Year 3 curriculum is now done** (1,522 items across 151
-  skills, Terms 1-4, Weeks 1-10, both subjects). The human-review workflow now exists (see
-  "Content review workflow" above) but the review itself hasn't been done yet — every item is
-  still `reviewStatus: "pending"`. Year 4+ content is not yet designed.
+  skills, Terms 1-4, Weeks 1-10, both subjects). The human-review workflow exists (see
+  "Content review workflow" above) but Chandana has **deliberately deferred the review
+  itself** ("I will arrange someone to check later in live") — every item is still
+  `reviewStatus: "pending"`, which is expected, not outstanding work. Year 4+ content is not
+  yet designed.
 - Stripe subscriptions, free trial gating.
-- Gamification: a visual "progress map" (spatial/adventure-style, beyond the badge shelf) is
-  still open; badges are only evaluated on demand (no push notification when one's earned
-  outside an active session).
+- Gamification: badges are only evaluated on demand (no push notification when one's earned
+  outside an active session). The visual "progress map" is now built — see "Visual progress
+  map" above.
 - Monthly report *emailing* — generation + an in-app printable view exist (`/parent/reports`);
   actually sending it (scheduled, via email) needs an email service (e.g. Resend, SES) not yet
   wired up.

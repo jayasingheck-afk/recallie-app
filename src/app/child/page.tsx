@@ -212,9 +212,14 @@ function ChildSessionInner() {
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">Hi there! 👋</h1>
-          <Link href="/parent/children" className="text-xs text-slate-400 hover:underline">
-            Switch child
-          </Link>
+          <div className="flex gap-3">
+            <Link href="/parent/children" className="text-xs text-slate-400 hover:underline">
+              Switch child
+            </Link>
+            <Link href={`/child/map?childId=${childId}`} className="text-xs text-sky-500 hover:underline">
+              🗺️ My journey
+            </Link>
+          </div>
         </div>
         <div className="flex gap-2">
           {(["maths", "english"] as const).map((s) => (

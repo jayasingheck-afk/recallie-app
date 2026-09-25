@@ -21,8 +21,10 @@ const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 // All of Year 3 (Terms 1-4, Weeks 1-10) now has real curriculum + item
 // content. A child who has been enrolled long enough simply stays clamped
 // at the end of Year 3 (term 4, week 10) until Year 4 content is designed.
-const MAX_AVAILABLE_TERM = 4;
-const MAX_AVAILABLE_WEEK = 10;
+// Exported so other places that need "how long is the whole curriculum"
+// (e.g. src/app/api/progress-map/route.ts) don't re-hardcode 4/10.
+export const MAX_AVAILABLE_TERM = 4;
+export const MAX_AVAILABLE_WEEK = 10;
 
 export type TermWeek = { term: number; week: number };
 

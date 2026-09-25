@@ -250,6 +250,9 @@ function ParentDashboardInner() {
           {data.child.displayName}&apos;s progress
         </h1>
         <div className="flex gap-4">
+          <Link href={`/child/map?childId=${childId}`} className="text-sm text-sky-600 hover:underline">
+            🗺️ Journey map
+          </Link>
           <Link href={`/parent/reports?childId=${childId}`} className="text-sm text-sky-600 hover:underline">
             Monthly report
           </Link>
