@@ -1,0 +1,4243 @@
+{
+  "_note": "Year 3 Term 3 Maths item bank: 160 retrieval-practice items across 16 skills (10 items each), aligned to the Australian Curriculum v9.0 with deeper Term 3 difficulty, written in Australian English for spaced-repetition practice.",
+  "items": [
+    {
+      "id": "T3M01_Y3_001",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "easy",
+      "questionText": "Write the number sixty-four thousand, two hundred and seventeen using digits.",
+      "questionType": "short_answer",
+      "answerKey": "64217",
+      "stepByStepSolution": [
+        "Break the number into parts: sixty-four thousand, and two hundred and seventeen.",
+        "Write 64 for the thousands part, then 217 for the rest.",
+        "Combine them: 64,217."
+      ],
+      "commonMisconceptions": [
+        "Writing the number as 64000217 by joining the words directly.",
+        "Missing a placeholder zero, e.g. writing 6417 instead of 64217."
+      ],
+      "hints": [
+        "Think about how many thousands, hundreds, tens and ones are in the number.",
+        "There are 64 thousands and then 217 more — write 64 then 217 straight after it."
+      ],
+      "tags": [
+        "place_value",
+        "numerals"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_002",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "easy",
+      "questionText": "What is the value of the digit 7 in the number 47,932? A) 7   B) 70   C) 7,000",
+      "questionType": "multiple_choice",
+      "answerKey": "7,000",
+      "stepByStepSolution": [
+        "Find the digit 7 in 47,932.",
+        "Look at which place it sits in — it is in the thousands place.",
+        "Its value is 7 thousands, which is 7,000."
+      ],
+      "commonMisconceptions": [
+        "Thinking the value is just the digit itself (7) rather than its place value.",
+        "Confusing the thousands place with the hundreds place."
+      ],
+      "hints": [
+        "Look at which column the 7 sits in — ones, tens, hundreds or thousands?",
+        "Count the places from the right: 2 is ones, 3 is tens, 9 is hundreds, 7 is thousands."
+      ],
+      "tags": [
+        "place_value",
+        "digit_value"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_003",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "easy",
+      "questionText": "Order these numbers from smallest to largest: 58,204   85,024   58,420",
+      "questionType": "short_answer",
+      "answerKey": "58,204, 58,420, 85,024",
+      "stepByStepSolution": [
+        "Compare the ten-thousands digit first — two numbers start with 5 and one starts with 8.",
+        "85,024 is the largest because 8 ten-thousands is more than 5 ten-thousands.",
+        "For the two numbers starting with 58, compare the hundreds digit: 58,204 has 2 hundreds, 58,420 has 4 hundreds, so 58,204 is smaller."
+      ],
+      "commonMisconceptions": [
+        "Ordering by the first digit only without checking the rest of the number.",
+        "Assuming the number with more digits after the comma is always bigger."
+      ],
+      "hints": [
+        "Start by comparing the digit with the highest place value in each number.",
+        "Two of the numbers begin with 58 — you'll need to compare the hundreds digit to tell them apart."
+      ],
+      "tags": [
+        "ordering",
+        "comparing_numbers"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_004",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "medium",
+      "questionText": "A stadium can hold ninety-three thousand and forty spectators. Write this number using digits, then name the digit that is in the hundreds place.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "93,040 and 0",
+        "93040, the hundreds digit is 0"
+      ],
+      "stepByStepSolution": [
+        "Ninety-three thousand is 93,000.",
+        "Forty more makes 93,040.",
+        "The hundreds place is the third digit from the right, which is 0."
+      ],
+      "commonMisconceptions": [
+        "Writing 93,400 by putting the 40 in the wrong place.",
+        "Forgetting the zero placeholder in the hundreds place."
+      ],
+      "hints": [
+        "Ninety-three thousand and forty means there are no hundreds at all.",
+        "Write 93 for the thousands, then think about what goes in the hundreds, tens and ones columns before the 40."
+      ],
+      "tags": [
+        "place_value",
+        "word_to_numeral"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_005",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "medium",
+      "questionText": "Which number is closest in value to 100,000? A) 89,999   B) 99,090   C) 90,909",
+      "questionType": "multiple_choice",
+      "answerKey": "99,090",
+      "stepByStepSolution": [
+        "Compare the ten-thousands digits: A has 8, B and C both have 9.",
+        "B and C both start with 9 ten-thousands, so compare the thousands digit: B has 9 thousands, C has 0 thousands.",
+        "99,090 is closest to 100,000 because it has the most thousands after the 9 ten-thousands."
+      ],
+      "commonMisconceptions": [
+        "Picking the number with the most digits that look like 9s without checking their place value.",
+        "Rounding each number instead of comparing place value directly."
+      ],
+      "hints": [
+        "Look at the ten-thousands digit of each number first.",
+        "Two numbers both have 9 ten-thousands — compare their thousands digit next to see which is closer to 100,000."
+      ],
+      "tags": [
+        "comparing_numbers",
+        "rounding"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_006",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "medium",
+      "questionText": "Write a number that is between 45,600 and 45,700, and explain which place value column changes.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "45,650, the tens digit changes",
+        "45650",
+        "any number strictly between 45,600 and 45,700, with the tens digit changing"
+      ],
+      "stepByStepSolution": [
+        "The thousands and hundreds digits (4, 5, 6) must stay almost the same for a number between these two.",
+        "Only the tens and ones digits can change, for example 45,650.",
+        "Check the number is bigger than 45,600 and smaller than 45,700."
+      ],
+      "commonMisconceptions": [
+        "Choosing a number outside the range, such as 45,750.",
+        "Changing the hundreds digit instead of the tens digit."
+      ],
+      "hints": [
+        "The thousands and hundreds digits will stay the same as 45,6__.",
+        "Try changing only the tens digit, keeping it less than 45,700."
+      ],
+      "tags": [
+        "place_value",
+        "number_line"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_007",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "medium",
+      "questionText": "A charity raised $76,450 last year and $67,540 this year. Which year raised more money, and by using place value, explain how you know.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Last year, because 7 ten-thousands is more than 6 ten-thousands",
+        "Last year ($76,450), because the ten-thousands digit 7 is bigger than 6"
+      ],
+      "stepByStepSolution": [
+        "Compare the ten-thousands digit of each amount: 7 in $76,450 and 6 in $67,540.",
+        "Since 7 ten-thousands is more than 6 ten-thousands, $76,450 is the bigger amount.",
+        "So last year raised more money."
+      ],
+      "commonMisconceptions": [
+        "Comparing digits from left to right without matching up the same place value column.",
+        "Assuming the two numbers are equal because they use the same digits."
+      ],
+      "hints": [
+        "Line up both numbers by place value and compare the digit furthest to the left first.",
+        "76,450 and 67,540 use the same digits, but check which one has more ten-thousands."
+      ],
+      "tags": [
+        "comparing_numbers",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_008",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "hard",
+      "questionText": "Using the digits 3, 0, 8, 5, 1 exactly once each, write the largest possible 5-digit number and the smallest possible 5-digit number.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Largest: 85,310; Smallest: 10,358",
+        "85310 and 10358"
+      ],
+      "stepByStepSolution": [
+        "For the largest number, place the digits from biggest to smallest: 8, 5, 3, 1, 0.",
+        "For the smallest number, a leading zero isn't allowed, so put the smallest non-zero digit (1) first, then arrange the rest from smallest to largest.",
+        "This gives 85,310 as the largest and 10,358 as the smallest."
+      ],
+      "commonMisconceptions": [
+        "Placing 0 as the first digit of the smallest number, which isn't a valid 5-digit number.",
+        "Arranging digits in the order they were given instead of ordering them by size."
+      ],
+      "hints": [
+        "For the biggest number, put the digits in order from largest to smallest.",
+        "For the smallest number, remember a 5-digit number can't start with 0 — use the next smallest digit first."
+      ],
+      "tags": [
+        "place_value",
+        "digit_arrangement"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_009",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "hard",
+      "questionText": "Which statement about 60,000 and 6,000 is true? A) 60,000 is 10 times as large as 6,000   B) 60,000 is 100 times as large as 6,000   C) 60,000 is 6 times as large as 6,000",
+      "questionType": "multiple_choice",
+      "answerKey": "60,000 is 10 times as large as 6,000",
+      "stepByStepSolution": [
+        "Divide 60,000 by 6,000 to find how many times bigger it is.",
+        "60,000 ÷ 6,000 = 10.",
+        "So 60,000 is 10 times as large as 6,000."
+      ],
+      "commonMisconceptions": [
+        "Counting the extra zero and assuming it means 100 times bigger.",
+        "Confusing 'times as large' with 'more than' found by simple subtraction."
+      ],
+      "hints": [
+        "Try dividing the larger number by the smaller number.",
+        "60,000 has one more zero than 6,000 — what does adding one zero do to a number's value?"
+      ],
+      "tags": [
+        "place_value",
+        "multiplicative_thinking"
+      ]
+    },
+    {
+      "id": "T3M01_Y3_010",
+      "skillId": "M3N01_place_value_beyond_10k",
+      "difficulty": "hard",
+      "questionText": "A number has 8 ten-thousands, 0 thousands, 4 hundreds, 12 tens and 3 ones. Write the number in standard form. (Hint: 12 tens needs to be regrouped.)",
+      "questionType": "short_answer",
+      "answerKey": "80523",
+      "stepByStepSolution": [
+        "Write out the value of each part: 80,000 + 0 + 400 + 120 + 3.",
+        "Notice that 12 tens is the same as 1 hundred and 2 tens, so regroup it.",
+        "Add everything together: 80,000 + 500 + 20 + 3 = 80,523."
+      ],
+      "commonMisconceptions": [
+        "Writing 12 directly into the tens column, giving an incorrect number like 80,4123.",
+        "Forgetting to regroup the extra ten into the hundreds place."
+      ],
+      "hints": [
+        "12 tens is more than 9 tens, so some of it needs to move into the hundreds column.",
+        "12 tens = 1 hundred and 2 tens — add that hundred to the 4 hundreds already there."
+      ],
+      "tags": [
+        "place_value",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_001",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "easy",
+      "questionText": "Calculate: 2,486 + 1,357",
+      "questionType": "short_answer",
+      "answerKey": "3843",
+      "stepByStepSolution": [
+        "Add the ones: 6+7=13, write 3 and carry 1.",
+        "Add the tens: 8+5+1=14, write 4 and carry 1; add the hundreds: 4+3+1=8.",
+        "Add the thousands: 2+1=3. The answer is 3,843."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry the regrouped ten into the next column.",
+        "Adding digits from left to right and losing track of carries."
+      ],
+      "hints": [
+        "Line up the numbers by place value and start adding from the ones column.",
+        "When a column adds to 10 or more, carry the extra ten into the next column."
+      ],
+      "tags": [
+        "addition",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_002",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "easy",
+      "questionText": "Calculate: 5,003 − 2,748",
+      "questionType": "short_answer",
+      "answerKey": "2255",
+      "stepByStepSolution": [
+        "Since 3 ones is less than 8 ones, regroup from the tens — but the tens digit is 0, so regroup through the hundreds and tens together.",
+        "After regrouping, subtract each column: ones, tens, hundreds, thousands.",
+        "The answer is 2,255."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the smaller digit from the larger one instead of regrouping (e.g. saying 8−3=5).",
+        "Getting stuck when there are zeros to regroup through."
+      ],
+      "hints": [
+        "You'll need to regroup, but there's a zero in the tens place to work around.",
+        "Think of 5,003 as 4 thousands, 9 hundreds, 9 tens and 13 ones before you subtract."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping",
+        "zeros"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_003",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "easy",
+      "questionText": "Estimate the answer to 3,912 + 2,876 by rounding each number to the nearest thousand. A) 6,000   B) 7,000   C) 8,000",
+      "questionType": "multiple_choice",
+      "answerKey": "7,000",
+      "stepByStepSolution": [
+        "Round 3,912 to the nearest thousand: 4,000.",
+        "Round 2,876 to the nearest thousand: 3,000.",
+        "Add the rounded numbers: 4,000+3,000=7,000."
+      ],
+      "commonMisconceptions": [
+        "Rounding to the nearest hundred instead of the nearest thousand.",
+        "Adding the exact numbers instead of the rounded ones."
+      ],
+      "hints": [
+        "Round each number to its nearest thousand before adding.",
+        "3,912 rounds up to 4,000 and 2,876 rounds up to 3,000."
+      ],
+      "tags": [
+        "estimation",
+        "rounding"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_004",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "medium",
+      "questionText": "Calculate 6,254 − 3,879, then use estimation to check if your answer is reasonable.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2,375; estimate 6,000-4,000=2,000, which is close, so the answer is reasonable",
+        "2375"
+      ],
+      "stepByStepSolution": [
+        "Subtract using regrouping: 6,254−3,879=2,375.",
+        "Round to the nearest thousand: 6,000−4,000=2,000.",
+        "Since 2,375 is close to the estimate of 2,000, the answer makes sense."
+      ],
+      "commonMisconceptions": [
+        "Skipping the estimation step and not checking whether the answer is sensible.",
+        "Making a regrouping error, such as forgetting to reduce the digit you borrowed from."
+      ],
+      "hints": [
+        "Work out the exact subtraction first using regrouping.",
+        "Round both numbers to the nearest thousand and subtract to see if your exact answer is close."
+      ],
+      "tags": [
+        "subtraction",
+        "estimation"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_005",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "medium",
+      "questionText": "A school library has 4,215 fiction books and 2,988 non-fiction books. How many books are there altogether?",
+      "questionType": "short_answer",
+      "answerKey": "7203",
+      "stepByStepSolution": [
+        "Add the ones: 5+8=13, write 3 and carry 1.",
+        "Add the tens: 1+8+1=10, write 0 and carry 1; add the hundreds: 2+9+1=12, write 2 and carry 1.",
+        "Add the thousands: 4+2+1=7. The total is 7,203 books."
+      ],
+      "commonMisconceptions": [
+        "Losing track of multiple carries across several columns.",
+        "Forgetting to add the final carried thousand."
+      ],
+      "hints": [
+        "Add column by column starting from the ones, carrying whenever a column reaches 10 or more.",
+        "You'll need to carry twice before reaching the thousands column."
+      ],
+      "tags": [
+        "addition",
+        "real_world",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_006",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "medium",
+      "questionText": "A factory produced 8,003 toys. It sold 4,567 of them. Estimate the number remaining by rounding to the nearest thousand, then find the exact number remaining.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Estimate: 8,000-5,000=3,000; exact: 3,436",
+        "3436"
+      ],
+      "stepByStepSolution": [
+        "Round 8,003 to 8,000 and 4,567 to 5,000, giving an estimate of 8,000−5,000=3,000.",
+        "Subtract exactly, regrouping through the zeros in 8,003.",
+        "The exact answer is 3,436, which is close to the estimate."
+      ],
+      "commonMisconceptions": [
+        "Rounding 4,567 down to 4,000 instead of up to 5,000.",
+        "Making an error when regrouping across the zero in the tens and hundreds places."
+      ],
+      "hints": [
+        "Round each number to the nearest thousand first to estimate.",
+        "8,003 has zeros in the hundreds and tens places, so you'll need to regroup through both."
+      ],
+      "tags": [
+        "subtraction",
+        "estimation",
+        "zeros"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_007",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "medium",
+      "questionText": "Which estimate best checks whether 4,678 + 3,295 = 7,973 is reasonable? A) 4,000 + 3,000 = 7,000   B) 5,000 + 3,000 = 8,000   C) 4,700 + 3,300 = 8,000",
+      "questionType": "multiple_choice",
+      "answerKey": "5,000 + 3,000 = 8,000",
+      "stepByStepSolution": [
+        "Round 4,678 to the nearest thousand: it rounds up to 5,000.",
+        "Round 3,295 to the nearest thousand: it rounds down to 3,000.",
+        "5,000+3,000=8,000, which is close to 7,973, showing the answer is reasonable."
+      ],
+      "commonMisconceptions": [
+        "Rounding 4,678 down to 4,000 instead of up to 5,000.",
+        "Rounding to the nearest hundred instead of the nearest thousand as asked."
+      ],
+      "hints": [
+        "Check whether each number rounds up or down to its nearest thousand.",
+        "4,678 is closer to 5,000 than to 4,000."
+      ],
+      "tags": [
+        "estimation",
+        "rounding"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_008",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "hard",
+      "questionText": "Find the missing number: 5,142 + ___ = 9,000",
+      "questionType": "short_answer",
+      "answerKey": "3858",
+      "stepByStepSolution": [
+        "Rewrite the problem as a subtraction: 9,000−5,142.",
+        "Regroup through the zeros in 9,000 to subtract.",
+        "The missing number is 3,858."
+      ],
+      "commonMisconceptions": [
+        "Trying to add instead of realising this needs subtraction to find the missing part.",
+        "Making regrouping errors when subtracting from a number with several zeros."
+      ],
+      "hints": [
+        "Turn this into a subtraction problem: what is 9,000 minus 5,142?",
+        "You'll need to regroup through the zeros in the tens, hundreds and thousands places."
+      ],
+      "tags": [
+        "subtraction",
+        "missing_number",
+        "zeros"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_009",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "hard",
+      "questionText": "A shop had $7,250 in sales on Saturday and $1,000 less on Sunday. If it needs $15,000 in total sales for the weekend to hit its target, how much more does it need on Monday?",
+      "questionType": "short_answer",
+      "answerKey": "$1,500",
+      "stepByStepSolution": [
+        "Find Sunday's sales: $7,250 − $1,000 = $6,250.",
+        "Add Saturday and Sunday's sales: $7,250 + $6,250 = $13,500.",
+        "Subtract from the target: $15,000 − $13,500 = $1,500 still needed."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to work out Sunday's sales before adding the two days together.",
+        "Subtracting the target from the total instead of the total from the target."
+      ],
+      "hints": [
+        "First work out how much was made on Sunday, then add both days together.",
+        "Once you know the total for Saturday and Sunday, subtract it from $15,000."
+      ],
+      "tags": [
+        "multi_step",
+        "real_world",
+        "money"
+      ]
+    },
+    {
+      "id": "T3M02_Y3_010",
+      "skillId": "M3N04_add_sub_4digit_regroup",
+      "difficulty": "hard",
+      "questionText": "The difference between two 4-digit numbers is 2,468. If the smaller number is 3,975, what is the larger number, and how could you check your answer using subtraction?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "6,443; check by subtracting 3,975 from 6,443, which should give 2,468",
+        "6443"
+      ],
+      "stepByStepSolution": [
+        "Since the difference is 2,468 and the smaller number is 3,975, add them to find the larger number: 3,975+2,468=6,443.",
+        "Check by subtracting: 6,443−3,975 should equal 2,468.",
+        "Because it matches, the larger number is confirmed as 6,443."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 2,468 from 3,975 instead of adding, because the word 'difference' suggests subtraction.",
+        "Not checking the answer with the inverse operation."
+      ],
+      "hints": [
+        "To find the larger number, add the difference to the smaller number.",
+        "Check your answer by subtracting the smaller number from your result — it should give back 2,468."
+      ],
+      "tags": [
+        "subtraction",
+        "inverse_operations",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_001",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "easy",
+      "questionText": "Which fraction is equivalent to 1/2? A) 2/3   B) 2/4   C) 3/8",
+      "questionType": "multiple_choice",
+      "answerKey": "2/4",
+      "stepByStepSolution": [
+        "Multiply the numerator and denominator of 1/2 by the same number.",
+        "Multiplying by 2 gives 2/4.",
+        "So 2/4 is equivalent to 1/2."
+      ],
+      "commonMisconceptions": [
+        "Thinking any fraction with a 2 in it must be equivalent to 1/2.",
+        "Adding the same number to top and bottom instead of multiplying."
+      ],
+      "hints": [
+        "Multiply the top and bottom of 1/2 by the same number to find an equivalent fraction.",
+        "Try multiplying both the numerator and denominator of 1/2 by 2."
+      ],
+      "tags": [
+        "equivalent_fractions"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_002",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "easy",
+      "questionText": "Describe how you would shade two same-size rectangles to show that 2/4 is the same amount as 1/2.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Shade 1 out of 2 equal parts in one rectangle and 2 out of 4 equal parts in an identical rectangle — the shaded area is the same size in both"
+      ],
+      "stepByStepSolution": [
+        "Draw two identical rectangles of the same size.",
+        "In the first, split it into 2 equal parts and shade 1; in the second, split it into 4 equal parts and shade 2.",
+        "The shaded area in both rectangles covers exactly half, showing 1/2=2/4."
+      ],
+      "commonMisconceptions": [
+        "Shading unequal parts, which makes the fractions inaccurate.",
+        "Using two rectangles of different sizes, making the comparison unfair."
+      ],
+      "hints": [
+        "Use two rectangles that are exactly the same size to compare fairly.",
+        "In the first rectangle shade 1 out of 2 equal parts, and in the second shade 2 out of 4 equal parts."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "models"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_003",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "easy",
+      "questionText": "Write a fraction equivalent to 1/3 with a denominator of 6.",
+      "questionType": "short_answer",
+      "answerKey": "2/6",
+      "stepByStepSolution": [
+        "To change the denominator from 3 to 6, multiply by 2.",
+        "Multiply the numerator by the same number: 1×2=2.",
+        "The equivalent fraction is 2/6."
+      ],
+      "commonMisconceptions": [
+        "Multiplying only the denominator and leaving the numerator the same.",
+        "Adding 3 to both numerator and denominator instead of multiplying."
+      ],
+      "hints": [
+        "What do you need to multiply 3 by to get 6?",
+        "Multiply the numerator by the same number you multiplied the denominator by."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "denominators"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_004",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "medium",
+      "questionText": "Are 3/4 and 6/8 equivalent? Explain how you know using multiplication.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Yes, they are equivalent because 3x2=6 and 4x2=8"
+      ],
+      "stepByStepSolution": [
+        "Check what number 4 is multiplied by to get 8: it is 2.",
+        "Multiply the numerator 3 by the same number 2, which gives 6.",
+        "Since 6/8 matches, the two fractions are equivalent."
+      ],
+      "commonMisconceptions": [
+        "Comparing the numerators and denominators separately without checking they scale by the same factor.",
+        "Assuming fractions are only equivalent if they look similar."
+      ],
+      "hints": [
+        "Find the number that turns the denominator 4 into 8.",
+        "Check whether multiplying the numerator of 3/4 by that same number gives 6."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_005",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "medium",
+      "questionText": "Which pair of fractions are NOT equivalent? A) 1/2 and 4/8   B) 2/3 and 4/6   C) 1/4 and 2/6",
+      "questionType": "multiple_choice",
+      "answerKey": "1/4 and 2/6",
+      "stepByStepSolution": [
+        "Check A: 1×4=4 and 2×4=8, so 1/2=4/8 — equivalent.",
+        "Check B: 2×2=4 and 3×2=6, so 2/3=4/6 — equivalent.",
+        "Check C: 1×2=2 but 4×2=8, not 6, so 1/4 and 2/6 are not equivalent."
+      ],
+      "commonMisconceptions": [
+        "Assuming two fractions are equivalent just because both numerators or both denominators went up.",
+        "Not checking that both parts scale by the same factor."
+      ],
+      "hints": [
+        "For each pair, check if the numerator and denominator are multiplied by the same number.",
+        "Try scaling 1/4 up — does multiplying both parts by the same number ever give 2/6?"
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "non_examples"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_006",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "medium",
+      "questionText": "Place 1/2 and 2/4 on the same number line from 0 to 1. What do you notice about their positions?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "They land on exactly the same point on the number line, halfway between 0 and 1"
+      ],
+      "stepByStepSolution": [
+        "Divide the number line into 2 equal parts to mark 1/2.",
+        "Divide another copy of the same number line into 4 equal parts to mark 2/4.",
+        "Both marks land at the same point, halfway between 0 and 1, showing the fractions are equal."
+      ],
+      "commonMisconceptions": [
+        "Marking 2/4 further along the line than 1/2 because it 'looks bigger'.",
+        "Dividing the number line into unequal sections."
+      ],
+      "hints": [
+        "Divide the number line into equal parts matching each denominator.",
+        "Both fractions should land on the exact same spot if they are equivalent."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "number_line"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_007",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "medium",
+      "questionText": "Find two different fractions that are both equivalent to 3/6.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1/2 and 2/4",
+        "1/2 and 6/12",
+        "2/4 and 6/12"
+      ],
+      "stepByStepSolution": [
+        "Simplify 3/6 by dividing both parts by 3, giving 1/2.",
+        "Find another equivalent fraction by multiplying 1/2 by 2, giving 2/4.",
+        "So 1/2 and 2/4 (or 6/12) are both equivalent to 3/6."
+      ],
+      "commonMisconceptions": [
+        "Only simplifying the fraction and not realising you can also make it bigger.",
+        "Changing the numerator and denominator by different amounts."
+      ],
+      "hints": [
+        "Try simplifying 3/6 by dividing both numbers by the same amount.",
+        "You can also multiply 3/6 by a fraction like 2/2 to make an equivalent fraction with bigger numbers."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "simplifying"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_008",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "hard",
+      "questionText": "A student says 2/5 and 3/6 must be equivalent because both fractions have a difference of 3 between the numerator and denominator. Explain why this reasoning is incorrect.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "They are not equivalent because equivalence depends on a common multiplying factor, not the difference between numerator and denominator; 2/5 is less than half while 3/6 is exactly half"
+      ],
+      "stepByStepSolution": [
+        "Check if there's a single number that multiplies both parts of 2/5 to get 3/6 — there isn't, since 2×1.5=3 but 5×1.5=7.5, not 6.",
+        "Compare the fractions as amounts: 2/5 is less than half, while 3/6 is exactly half.",
+        "Since they represent different amounts, they are not equivalent, showing that matching differences don't create equivalent fractions."
+      ],
+      "commonMisconceptions": [
+        "Believing that a constant difference between numerator and denominator always makes fractions equivalent.",
+        "Not checking equivalence by looking for a common multiplying factor."
+      ],
+      "hints": [
+        "Try to find one number that both the numerator and denominator of 2/5 could be multiplied by to reach 3/6.",
+        "Compare both fractions to 1/2 — is 2/5 the same amount as 3/6?"
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "misconceptions",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_009",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "hard",
+      "questionText": "A recipe uses 4/8 of a cup of flour. Write this fraction in its simplest form, and name one other fraction equivalent to it with a denominator between 10 and 20.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1/2, and an equivalent fraction such as 8/16"
+      ],
+      "stepByStepSolution": [
+        "Simplify 4/8 by dividing both numerator and denominator by 4, giving 1/2.",
+        "Find a denominator between 10 and 20 that 2 divides into evenly, such as 16.",
+        "Since 2×8=16, multiply the numerator by 8 too: 1×8=8, giving 8/16."
+      ],
+      "commonMisconceptions": [
+        "Simplifying incorrectly, such as dividing only the denominator by 4.",
+        "Choosing a denominator outside the 10-20 range by mistake."
+      ],
+      "hints": [
+        "Divide both parts of 4/8 by the same number to simplify it first.",
+        "Once simplified to 1/2, think of a denominator between 10 and 20 that 2 divides into evenly."
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "simplifying",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M03_Y3_010",
+      "skillId": "M3N07_fraction_equivalence",
+      "difficulty": "hard",
+      "questionText": "Which fraction is equivalent to 5/10 AND also equivalent to 4/8? A) 3/5   B) 1/2   C) 2/5",
+      "questionType": "multiple_choice",
+      "answerKey": "1/2",
+      "stepByStepSolution": [
+        "Simplify 5/10 by dividing both parts by 5, giving 1/2.",
+        "Simplify 4/8 by dividing both parts by 4, giving 1/2.",
+        "Since both simplify to 1/2, the answer that matches both is 1/2."
+      ],
+      "commonMisconceptions": [
+        "Simplifying only one of the two fractions and guessing for the other.",
+        "Confusing 2/5 with 1/2 because they look similar."
+      ],
+      "hints": [
+        "Simplify each fraction to its lowest terms first.",
+        "Both 5/10 and 4/8 simplify to the same simple fraction — what is it?"
+      ],
+      "tags": [
+        "equivalent_fractions",
+        "simplifying"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_001",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "easy",
+      "questionText": "Use partitioning to calculate 12 x 13. Show the four partial products before adding them.",
+      "questionType": "short_answer",
+      "answerKey": "156",
+      "stepByStepSolution": [
+        "Split 12 into 10+2 and 13 into 10+3.",
+        "Multiply each part: 10×10=100, 10×3=30, 2×10=20, 2×3=6.",
+        "Add the four parts: 100+30+20+6=156."
+      ],
+      "commonMisconceptions": [
+        "Forgetting one of the four partial products when adding.",
+        "Multiplying only the tens parts and ignoring the ones parts."
+      ],
+      "hints": [
+        "Split both numbers into tens and ones before multiplying.",
+        "You should have four smaller multiplications to add together at the end."
+      ],
+      "tags": [
+        "multiplication",
+        "partitioning",
+        "area_model"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_002",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "easy",
+      "questionText": "Calculate 21 x 11 using the area model.",
+      "questionType": "short_answer",
+      "answerKey": "231",
+      "stepByStepSolution": [
+        "Split 21 into 20+1 and 11 into 10+1.",
+        "Multiply each part: 20×10=200, 20×1=20, 1×10=10, 1×1=1.",
+        "Add them together: 200+20+10+1=231."
+      ],
+      "commonMisconceptions": [
+        "Assuming multiplying by 11 just means repeating the digits.",
+        "Missing the 1×1 partial product because it seems too small to matter."
+      ],
+      "hints": [
+        "Break 21 into 20 and 1, and 11 into 10 and 1.",
+        "Add up all four partial products, even the smallest one."
+      ],
+      "tags": [
+        "multiplication",
+        "area_model"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_003",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "easy",
+      "questionText": "When using the area model to multiply 23 x 14, which pair of numbers would you multiply first, working with the biggest parts? A) 20 x 10   B) 3 x 4   C) 23 x 4",
+      "questionType": "multiple_choice",
+      "answerKey": "20 x 10",
+      "stepByStepSolution": [
+        "Split 23 into 20+3 and 14 into 10+4.",
+        "The area model usually starts with the largest parts: the tens by tens.",
+        "So the first multiplication is 20×10."
+      ],
+      "commonMisconceptions": [
+        "Thinking you must multiply the ones digits first.",
+        "Multiplying 23 by a whole part of 14 instead of splitting both numbers."
+      ],
+      "hints": [
+        "In the area model, both numbers are split into tens and ones before multiplying.",
+        "Start with the biggest rectangle in the area model: tens times tens."
+      ],
+      "tags": [
+        "multiplication",
+        "area_model"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_004",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "medium",
+      "questionText": "Calculate 23 x 14 using partitioning, showing all working.",
+      "questionType": "short_answer",
+      "answerKey": "322",
+      "stepByStepSolution": [
+        "Split 23 into 20+3 and 14 into 10+4.",
+        "Multiply each part: 20×10=200, 20×4=80, 3×10=30, 3×4=12.",
+        "Add the parts together: 200+80+30+12=322."
+      ],
+      "commonMisconceptions": [
+        "Adding the partial products incorrectly, especially forgetting to carry when totalling.",
+        "Multiplying 20×4 as 24 instead of 80."
+      ],
+      "hints": [
+        "Break both numbers into tens and ones, then find four partial products.",
+        "Add all four partial products carefully: 200, 80, 30 and 12."
+      ],
+      "tags": [
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_005",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "medium",
+      "questionText": "A classroom has 15 rows of desks with 16 desks in each row. How many desks are there in total? Use the area model to solve it.",
+      "questionType": "short_answer",
+      "answerKey": "240",
+      "stepByStepSolution": [
+        "Split 15 into 10+5 and 16 into 10+6.",
+        "Multiply each part: 10×10=100, 10×6=60, 5×10=50, 5×6=30.",
+        "Add them: 100+60+50+30=240 desks."
+      ],
+      "commonMisconceptions": [
+        "Adding the two numbers instead of multiplying them.",
+        "Losing track of one partial product when adding four numbers."
+      ],
+      "hints": [
+        "Think of this as rows multiplied by desks per row, then split both numbers into tens and ones.",
+        "Add all four partial products: 100, 60, 50 and 30."
+      ],
+      "tags": [
+        "multiplication",
+        "area_model",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_006",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "medium",
+      "questionText": "Using partitioning, 32 x 21 splits into which four partial products? A) 30x20, 30x1, 2x20, 2x1   B) 32x20, 32x1   C) 30x21, 2x21",
+      "questionType": "multiple_choice",
+      "answerKey": "30x20, 30x1, 2x20, 2x1",
+      "stepByStepSolution": [
+        "Split 32 into 30+2 and 21 into 20+1.",
+        "Multiplying each part of one number by each part of the other gives four separate products.",
+        "These are 30×20, 30×1, 2×20 and 2×1."
+      ],
+      "commonMisconceptions": [
+        "Only splitting one of the two numbers instead of both.",
+        "Combining two of the partial products into one step."
+      ],
+      "hints": [
+        "Both numbers need to be split into tens and ones before multiplying.",
+        "You should end up with four smaller multiplications, not two."
+      ],
+      "tags": [
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_007",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "medium",
+      "questionText": "Estimate 28 x 19 by rounding, then calculate the exact answer using the area model.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Estimate: 30x20=600; exact: 532",
+        "532"
+      ],
+      "stepByStepSolution": [
+        "Round 28 to 30 and 19 to 20, giving an estimate of 30×20=600.",
+        "Split 28 into 20+8 and 19 into 10+9 to calculate exactly: 20×10=200, 20×9=180, 8×10=80, 8×9=72.",
+        "Add the parts: 200+180+80+72=532, which is reasonably close to the estimate of 600."
+      ],
+      "commonMisconceptions": [
+        "Rounding 19 down to 10 instead of up to 20.",
+        "Forgetting to compare the exact answer back to the estimate."
+      ],
+      "hints": [
+        "Round each number to the nearest ten before estimating.",
+        "Split 28 and 19 into tens and ones to find four partial products for the exact answer."
+      ],
+      "tags": [
+        "multiplication",
+        "estimation",
+        "area_model"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_008",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "hard",
+      "questionText": "A market stall sells apple boxes with 24 apples in each box. If 27 boxes are sold in a day, how many apples were sold? Use partitioning and show your working.",
+      "questionType": "short_answer",
+      "answerKey": "648",
+      "stepByStepSolution": [
+        "Split 24 into 20+4 and 27 into 20+7.",
+        "Multiply each part: 20×20=400, 20×7=140, 4×20=80, 4×7=28.",
+        "Add the parts together: 400+140+80+28=648 apples."
+      ],
+      "commonMisconceptions": [
+        "Making an addition error when totalling four two- or three-digit partial products.",
+        "Multiplying 4×20 as 40 instead of 80."
+      ],
+      "hints": [
+        "Split both 24 and 27 into tens and ones before multiplying.",
+        "Carefully add your four partial products: 400, 140, 80 and 28."
+      ],
+      "tags": [
+        "multiplication",
+        "partitioning",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_009",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "hard",
+      "questionText": "Two students calculate 36 x 24 differently. One gets 864 and the other gets 744. Use the area model to work out which answer is correct and explain the likely mistake in the wrong one.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "864 is correct; the mistake was probably a partial product error, such as miscalculating one of the four parts"
+      ],
+      "stepByStepSolution": [
+        "Split 36 into 30+6 and 24 into 20+4.",
+        "Multiply each part: 30×20=600, 30×4=120, 6×20=120, 6×4=24.",
+        "Add the parts: 600+120+120+24=864, confirming that answer is correct and 744 came from a calculation slip somewhere in the partial products."
+      ],
+      "commonMisconceptions": [
+        "Assuming the smaller answer is more likely to be wrong without checking the working.",
+        "Not verifying an answer using the area model when two answers disagree."
+      ],
+      "hints": [
+        "Work through the area model yourself to find all four partial products.",
+        "Add your four partial products carefully and compare the total to both given answers."
+      ],
+      "tags": [
+        "multiplication",
+        "area_model",
+        "checking_work"
+      ]
+    },
+    {
+      "id": "T3M04_Y3_010",
+      "skillId": "M3N06_mult_2digit_by_2digit",
+      "difficulty": "hard",
+      "questionText": "A gardener plants seedlings in a rectangular plot with 18 rows and 22 seedlings per row. Later, she adds 2 more seedlings to each row. How many seedlings are there now in total?",
+      "questionType": "short_answer",
+      "answerKey": "432",
+      "stepByStepSolution": [
+        "Find the new number of seedlings per row: 22+2=24.",
+        "Split 18 into 10+8 and 24 into 20+4 to multiply: 10×20=200, 10×4=40, 8×20=160, 8×4=32.",
+        "Add the parts: 200+40+160+32=432 seedlings."
+      ],
+      "commonMisconceptions": [
+        "Multiplying 18 by the original 22 instead of the new 24 seedlings per row.",
+        "Missing a partial product when adding up the area model parts."
+      ],
+      "hints": [
+        "First work out the new number of seedlings in each row after the 2 are added.",
+        "Then use partitioning to multiply 18 by that new number."
+      ],
+      "tags": [
+        "multiplication",
+        "area_model",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_001",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "easy",
+      "questionText": "A movie starts at 2:15 pm and finishes at 4:00 pm. How long is the movie?",
+      "questionType": "short_answer",
+      "answerKey": "1 hour 45 minutes",
+      "stepByStepSolution": [
+        "From 2:15 pm to 3:15 pm is 1 hour.",
+        "From 3:15 pm to 4:00 pm is 45 minutes.",
+        "Add them together: 1 hour + 45 minutes = 1 hour 45 minutes."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the minutes directly (15 from 00) and getting confused instead of regrouping.",
+        "Forgetting to add the hour and minute parts together at the end."
+      ],
+      "hints": [
+        "Count forward in a whole hour first, then count the remaining minutes.",
+        "From 2:15 pm, go to 3:15 pm, then work out how many minutes to 4:00 pm."
+      ],
+      "tags": [
+        "elapsed_time",
+        "duration"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_002",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "easy",
+      "questionText": "Jayden starts his homework at 4:30 pm and finishes 25 minutes later. What time does he finish?",
+      "questionType": "short_answer",
+      "answerKey": "4:55 pm",
+      "stepByStepSolution": [
+        "Start at 4:30 pm.",
+        "Add 25 minutes to the time.",
+        "4:30 pm + 25 minutes = 4:55 pm."
+      ],
+      "commonMisconceptions": [
+        "Adding the minutes incorrectly and going past the hour without adjusting.",
+        "Confusing am and pm when writing the final time."
+      ],
+      "hints": [
+        "Count forward in minutes from 4:30 pm.",
+        "30 minutes plus 25 minutes is 55 minutes, so the hour stays the same."
+      ],
+      "tags": [
+        "elapsed_time",
+        "adding_time"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_003",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "easy",
+      "questionText": "How many minutes are there between 9:10 am and 9:45 am? A) 25 minutes   B) 35 minutes   C) 45 minutes",
+      "questionType": "multiple_choice",
+      "answerKey": "35 minutes",
+      "stepByStepSolution": [
+        "Find the difference between the minute values: 45−10.",
+        "45−10=35.",
+        "So there are 35 minutes between the two times."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the hour digits instead of focusing on the minutes.",
+        "Miscounting on the clock face by a few minutes."
+      ],
+      "hints": [
+        "Both times are in the same hour, so just compare the minutes.",
+        "Subtract 10 from 45."
+      ],
+      "tags": [
+        "elapsed_time",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_004",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "medium",
+      "questionText": "A train departs at 10:50 am and arrives at 12:20 pm. How long did the journey take?",
+      "questionType": "short_answer",
+      "answerKey": "1 hour 30 minutes",
+      "stepByStepSolution": [
+        "From 10:50 am to 11:00 am is 10 minutes.",
+        "From 11:00 am to 12:20 pm is 1 hour 20 minutes.",
+        "Add the two parts: 10 minutes + 1 hour 20 minutes = 1 hour 30 minutes."
+      ],
+      "commonMisconceptions": [
+        "Not realising the journey crosses over from am to pm.",
+        "Subtracting 50 from 20 directly and getting confused by the negative result."
+      ],
+      "hints": [
+        "Break the journey into two parts: first to 11:00 am, then from 11:00 am to 12:20 pm.",
+        "Add the minutes from the first part to the hour and minutes of the second part."
+      ],
+      "tags": [
+        "elapsed_time",
+        "crossing_hour",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_005",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "medium",
+      "questionText": "A holiday camp runs from Monday to Friday of the same week. If it starts on Monday, how many days long is the camp, including both Monday and Friday?",
+      "questionType": "short_answer",
+      "answerKey": "5 days",
+      "stepByStepSolution": [
+        "List the days from Monday to Friday: Monday, Tuesday, Wednesday, Thursday, Friday.",
+        "Count each day once.",
+        "There are 5 days in total."
+      ],
+      "commonMisconceptions": [
+        "Miscounting by forgetting to include the first or last day.",
+        "Confusing the number of days with the number of nights."
+      ],
+      "hints": [
+        "List out each day of the week the camp runs on.",
+        "Make sure you count both the starting day and the finishing day."
+      ],
+      "tags": [
+        "duration",
+        "calendar"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_006",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "medium",
+      "questionText": "A flight leaves at 11:40 pm and lands at 2:15 am the next day. How long was the flight? A) 2 hours 35 minutes   B) 2 hours 25 minutes   C) 14 hours 35 minutes",
+      "questionType": "multiple_choice",
+      "answerKey": "2 hours 35 minutes",
+      "stepByStepSolution": [
+        "From 11:40 pm to midnight is 20 minutes.",
+        "From midnight to 2:15 am is 2 hours 15 minutes.",
+        "Add the two parts: 20 minutes + 2 hours 15 minutes = 2 hours 35 minutes."
+      ],
+      "commonMisconceptions": [
+        "Not accounting for the flight crossing midnight into a new day.",
+        "Subtracting the times directly without splitting at midnight."
+      ],
+      "hints": [
+        "Break the flight time into two parts: before midnight and after midnight.",
+        "20 minutes to reach midnight, then add the time from midnight to 2:15 am."
+      ],
+      "tags": [
+        "elapsed_time",
+        "crossing_midnight"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_007",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "medium",
+      "questionText": "A basketball match has four quarters, each lasting 12 minutes, with a 15 minute break at half-time. How long does the whole match take, including the break?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "63 minutes",
+        "1 hour 3 minutes"
+      ],
+      "stepByStepSolution": [
+        "Find the total playing time: 4 quarters × 12 minutes = 48 minutes.",
+        "Add the half-time break: 48+15=63 minutes.",
+        "This can also be written as 1 hour 3 minutes."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the half-time break in the total.",
+        "Multiplying the wrong numbers, such as 4×15 instead of 4×12."
+      ],
+      "hints": [
+        "First work out the total time for all four quarters without the break.",
+        "Then add the 15 minute break to your total."
+      ],
+      "tags": [
+        "duration",
+        "multi_step",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_008",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "hard",
+      "questionText": "A library is open from 9:15 am to 5:00 pm each day, except it closes for a 30 minute lunch break from 12:45 pm. How many hours and minutes is the library actually open?",
+      "questionType": "short_answer",
+      "answerKey": "7 hours 15 minutes",
+      "stepByStepSolution": [
+        "Find the total time from opening to closing: 9:15 am to 5:00 pm is 7 hours 45 minutes.",
+        "Subtract the 30 minute lunch break: 7 hours 45 minutes − 30 minutes.",
+        "This gives 7 hours 15 minutes of actual opening time."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to subtract the lunch break from the total time.",
+        "Miscalculating the total time from 9:15 am to 5:00 pm."
+      ],
+      "hints": [
+        "First work out the total time the library is meant to be open, from opening to closing.",
+        "Then subtract the 30 minute break from that total."
+      ],
+      "tags": [
+        "elapsed_time",
+        "multi_step",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_009",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "hard",
+      "questionText": "Mia's family leaves home at 7:35 am to drive to a beach 3 hours and 40 minutes away, but they stop for a 25 minute break on the way. What time do they arrive at the beach?",
+      "questionType": "short_answer",
+      "answerKey": "11:40 am",
+      "stepByStepSolution": [
+        "Add the driving time and the break together: 3 hours 40 minutes + 25 minutes = 4 hours 5 minutes.",
+        "Add this total to the departure time: 7:35 am + 4 hours 5 minutes.",
+        "This gives an arrival time of 11:40 am."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the 25 minute break in the total travel time.",
+        "Making an error when adding minutes that go over 60."
+      ],
+      "hints": [
+        "First combine the driving time and the break into one total duration.",
+        "Then add that total duration to the 7:35 am departure time."
+      ],
+      "tags": [
+        "elapsed_time",
+        "multi_step",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M05_Y3_010",
+      "skillId": "M3M03_duration_word_problems",
+      "difficulty": "hard",
+      "questionText": "A school camp runs for 3 days and 2 nights, starting on a Wednesday. On which day does the camp end?",
+      "questionType": "short_answer",
+      "answerKey": "Friday",
+      "stepByStepSolution": [
+        "Day 1 is Wednesday.",
+        "Day 2 is Thursday.",
+        "Day 3, the last day of camp, is Friday."
+      ],
+      "commonMisconceptions": [
+        "Counting nights instead of days when working out the end date.",
+        "Starting the count from Thursday instead of Wednesday."
+      ],
+      "hints": [
+        "List the days one by one starting from Wednesday as Day 1.",
+        "Remember the camp lasts 3 days in total, including the starting day."
+      ],
+      "tags": [
+        "duration",
+        "calendar",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_001",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "easy",
+      "questionText": "Which type of angle is exactly 90 degrees? A) acute angle   B) right angle   C) obtuse angle",
+      "questionType": "multiple_choice",
+      "answerKey": "right angle",
+      "stepByStepSolution": [
+        "Recall that a right angle measures exactly 90 degrees.",
+        "An acute angle is smaller than 90 degrees, and an obtuse angle is larger than 90 degrees.",
+        "So the angle described is a right angle."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'right angle' with 'a correct angle' rather than a specific measurement.",
+        "Mixing up acute and obtuse angle definitions."
+      ],
+      "hints": [
+        "Think about the corner of a square or a book — what type of angle is that?",
+        "A right angle is neither smaller nor bigger than 90 degrees — it's exactly 90."
+      ],
+      "tags": [
+        "angles",
+        "angle_types"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_002",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "easy",
+      "questionText": "Look around your classroom. Name one object that has a right angle.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "a book corner",
+        "a door corner",
+        "a table corner",
+        "a piece of paper"
+      ],
+      "stepByStepSolution": [
+        "Look for corners that form a square shape, like a piece of paper.",
+        "Check that the corner looks like an 'L' shape, not too wide or too narrow.",
+        "Objects like a book, table or door often have right angle corners."
+      ],
+      "commonMisconceptions": [
+        "Choosing a rounded corner that has no clear angle at all.",
+        "Picking a corner that is actually wider or narrower than 90 degrees."
+      ],
+      "hints": [
+        "Think of objects with square or rectangular corners.",
+        "A right angle corner looks like the corner of a piece of paper."
+      ],
+      "tags": [
+        "angles",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_003",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "easy",
+      "questionText": "Is the angle formed by the hands of a clock at 3:00 an acute, right, or obtuse angle?",
+      "questionType": "short_answer",
+      "answerKey": "right angle",
+      "stepByStepSolution": [
+        "At 3:00, the minute hand points to 12 and the hour hand points to 3.",
+        "This forms a quarter turn of the clock face.",
+        "A quarter turn is exactly 90 degrees, which is a right angle."
+      ],
+      "commonMisconceptions": [
+        "Guessing based on how the hands look without thinking about the quarter turn.",
+        "Confusing this with the angle at other times, like 3:15."
+      ],
+      "hints": [
+        "Picture the clock face split into four equal quarters.",
+        "The distance from 12 to 3 on a clock is one quarter of a full turn."
+      ],
+      "tags": [
+        "angles",
+        "clocks"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_004",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "medium",
+      "questionText": "Describe an angle that is smaller than a right angle. What type of angle is this called?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "acute angle"
+      ],
+      "stepByStepSolution": [
+        "A right angle measures 90 degrees.",
+        "An angle smaller than 90 degrees is called an acute angle.",
+        "This kind of angle looks like a narrow, pointed wedge shape."
+      ],
+      "commonMisconceptions": [
+        "Thinking any angle drawn small on paper counts, without comparing it to 90 degrees.",
+        "Confusing acute with obtuse angles."
+      ],
+      "hints": [
+        "Think about how the angle compares to the corner of a square.",
+        "An angle 'less than a square corner' is called acute."
+      ],
+      "tags": [
+        "angles",
+        "angle_types"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_005",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "medium",
+      "questionText": "Which of these angle sizes is an obtuse angle? A) 45 degrees   B) 90 degrees   C) 120 degrees",
+      "questionType": "multiple_choice",
+      "answerKey": "120 degrees",
+      "stepByStepSolution": [
+        "Recall that acute angles are less than 90 degrees, right angles are exactly 90 degrees, and obtuse angles are more than 90 degrees but less than 180 degrees.",
+        "Compare each option to these ranges.",
+        "120 degrees is more than 90 degrees, so it is an obtuse angle."
+      ],
+      "commonMisconceptions": [
+        "Thinking obtuse angles must be close to 180 degrees rather than just more than 90.",
+        "Confusing 90 degrees (right angle) with obtuse."
+      ],
+      "hints": [
+        "Obtuse angles are bigger than a right angle but smaller than a straight line.",
+        "Which of the three options is bigger than 90 degrees?"
+      ],
+      "tags": [
+        "angles",
+        "angle_measurement"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_006",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "medium",
+      "questionText": "A triangle has one angle that measures 100 degrees. What type of angle is this, and what does that tell you about the other two angles in the triangle?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "It is an obtuse angle; the other two angles must both be acute, since all three angles add to 180 degrees"
+      ],
+      "stepByStepSolution": [
+        "Since 100 degrees is more than 90 degrees, it is an obtuse angle.",
+        "The three angles in a triangle always add up to 180 degrees.",
+        "Since one angle already uses 100 degrees, the remaining two angles together must be 80 degrees, so each must be less than 90 degrees (acute)."
+      ],
+      "commonMisconceptions": [
+        "Thinking a triangle can have two obtuse angles.",
+        "Not connecting the angle sum of a triangle (180 degrees) to reasoning about the other angles."
+      ],
+      "hints": [
+        "Remember that all three angles in a triangle add up to 180 degrees.",
+        "If one angle takes up 100 degrees, how many degrees are left to share between the other two?"
+      ],
+      "tags": [
+        "angles",
+        "triangles",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_007",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "medium",
+      "questionText": "Picture a pair of scissors opened wide, almost flat. Would the angle between the blades be acute, right, or obtuse? Explain your thinking.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Obtuse, because the angle between the blades is much wider than a right angle but not a full flat line"
+      ],
+      "stepByStepSolution": [
+        "Picture the scissors opened wide but not completely flat.",
+        "Compare this angle to a right angle (90 degrees) — it looks noticeably wider.",
+        "Since it's wider than 90 degrees but not a straight line (180 degrees), it is an obtuse angle."
+      ],
+      "commonMisconceptions": [
+        "Assuming any wide-looking angle must be a straight angle (180 degrees).",
+        "Not comparing the angle to a right angle as a reference point."
+      ],
+      "hints": [
+        "Compare the angle to the corner of a square piece of paper — is it wider or narrower?",
+        "An angle that is clearly more open than a right angle, but not completely flat, is obtuse."
+      ],
+      "tags": [
+        "angles",
+        "real_world",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_008",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "hard",
+      "questionText": "A clock shows 4:00. Is the angle between the hour and minute hand acute, right, or obtuse? Explain how you worked it out.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Obtuse; at 4:00 the hands form an angle of 120 degrees, which is more than 90 but less than 180 degrees"
+      ],
+      "stepByStepSolution": [
+        "A full clock face is 360 degrees, divided into 12 equal hour marks of 30 degrees each.",
+        "At 4:00, the hour hand is at the 4 and the minute hand is at the 12, which is 4 hour-marks apart.",
+        "4×30=120 degrees, and since this is more than 90 degrees but less than 180, the angle is obtuse."
+      ],
+      "commonMisconceptions": [
+        "Assuming all clock hand angles at exact hours are right angles like at 3:00.",
+        "Forgetting each hour mark represents 30 degrees on a clock face."
+      ],
+      "hints": [
+        "Each hour mark on a clock represents 30 degrees. How many hour marks are between the 12 and the 4?",
+        "Multiply the number of hour marks apart by 30 degrees to find the angle."
+      ],
+      "tags": [
+        "angles",
+        "clocks",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_009",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "hard",
+      "questionText": "A shape has 4 angles: two are right angles, one is acute, and one is obtuse. Could this shape be a rectangle? Explain why or why not.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "No, because a rectangle has four right angles, not a mix of angle types"
+      ],
+      "stepByStepSolution": [
+        "Recall that a rectangle always has exactly four right angles.",
+        "The shape described has only two right angles, plus one acute and one obtuse angle.",
+        "Since this doesn't match a rectangle's angles, the shape cannot be a rectangle — it might be a different quadrilateral."
+      ],
+      "commonMisconceptions": [
+        "Assuming any four-sided shape with some right angles must be a rectangle.",
+        "Not recalling that all four angles in a rectangle must be exactly 90 degrees."
+      ],
+      "hints": [
+        "Think about how many right angles a rectangle actually has.",
+        "Compare the angle types described to what you know about a rectangle's angles."
+      ],
+      "tags": [
+        "angles",
+        "shapes",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M06_Y3_010",
+      "skillId": "M3M05_angle_types",
+      "difficulty": "hard",
+      "questionText": "Two angles fit together to form a right angle. If one of the angles measures 35 degrees, what type of angle is the other one, and what is its size?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Acute angle, measuring 55 degrees"
+      ],
+      "stepByStepSolution": [
+        "Since the two angles together form a right angle, they must add up to 90 degrees.",
+        "Subtract the known angle from 90: 90−35=55 degrees.",
+        "Since 55 degrees is less than 90 degrees, the other angle is acute."
+      ],
+      "commonMisconceptions": [
+        "Adding the two angles instead of subtracting to find the missing one.",
+        "Assuming the missing angle must also be a 'nice' number like 45 degrees."
+      ],
+      "hints": [
+        "Remember the two angles must add up to exactly 90 degrees.",
+        "Subtract 35 from 90 to find the size of the other angle."
+      ],
+      "tags": [
+        "angles",
+        "missing_angle",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M07_Y3_001",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "easy",
+      "questionText": "On the Park Map, the scale is 1 cm = 50 m. If the playground is 2 cm from the main gate on the map, how far is it in real life?",
+      "questionType": "short_answer",
+      "answerKey": "100 m",
+      "stepByStepSolution": [
+        "The scale tells us that every 1 cm on the map equals 50 m in real life.",
+        "The playground is 2 cm from the gate on the map.",
+        "Multiply: 2×50=100 m in real life."
+      ],
+      "commonMisconceptions": [
+        "Adding 50 to the map distance instead of multiplying.",
+        "Forgetting to convert from map centimetres into real metres."
+      ],
+      "hints": [
+        "Use the scale to work out what 1 cm represents, then multiply by the number of centimetres.",
+        "2 cm on the map means 2 lots of 50 m."
+      ],
+      "tags": [
+        "scale",
+        "maps"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_002",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "easy",
+      "questionText": "Using the Park Map, which feature is closest to the main gate? A) the lake   B) the picnic area   C) the playground",
+      "questionType": "multiple_choice",
+      "answerKey": "the picnic area",
+      "stepByStepSolution": [
+        "Check the distance from the main gate to each feature: playground is 2 cm away, lake is a diagonal distance further, picnic area is 1 cm away.",
+        "Compare these distances.",
+        "The picnic area, at 1 cm, is the closest to the main gate."
+      ],
+      "commonMisconceptions": [
+        "Assuming the feature listed first on the map must be closest.",
+        "Not comparing all distances before choosing."
+      ],
+      "hints": [
+        "Look at how many centimetres away each feature is from the gate.",
+        "The picnic area is only 1 cm away — compare that to the other distances."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "comparing_distances"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_003",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "easy",
+      "questionText": "How far, in real life, is the picnic area from the main gate?",
+      "questionType": "short_answer",
+      "answerKey": "50 m",
+      "stepByStepSolution": [
+        "The picnic area is 1 cm from the main gate on the map.",
+        "The scale is 1 cm = 50 m.",
+        "So the real-life distance is 50 m."
+      ],
+      "commonMisconceptions": [
+        "Multiplying by the wrong number of centimetres.",
+        "Confusing the picnic area's distance with the playground's distance."
+      ],
+      "hints": [
+        "Check how many centimetres away the picnic area is on the map.",
+        "Use the scale: 1 cm = 50 m."
+      ],
+      "tags": [
+        "scale",
+        "maps"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_004",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "medium",
+      "questionText": "The lake is 4 cm to the right and 3 cm up from the main gate. What is the straight-line map distance (in cm) from the gate to the lake? (Hint: this forms a 3-4-5 right triangle.)",
+      "questionType": "short_answer",
+      "answerKey": "5 cm",
+      "stepByStepSolution": [
+        "The gate to lake path forms a right-angled triangle with sides 4 cm and 3 cm.",
+        "Recognise this as a 3-4-5 triangle pattern.",
+        "So the straight-line distance is 5 cm."
+      ],
+      "commonMisconceptions": [
+        "Simply adding 4 cm and 3 cm together to get 7 cm, forgetting the path is diagonal.",
+        "Not recognising the 3-4-5 triangle pattern."
+      ],
+      "hints": [
+        "The path from the gate to the lake isn't a straight left-right or up-down line — it's diagonal.",
+        "This forms a right triangle with sides 3 and 4 — is there a special number pattern for the third side?"
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "geometry"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_005",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "medium",
+      "questionText": "Using the fact that the gate-to-lake map distance is 5 cm, and the scale of 1 cm = 50 m, how far is the lake from the main gate in real life?",
+      "questionType": "short_answer",
+      "answerKey": "250 m",
+      "stepByStepSolution": [
+        "The map distance from the gate to the lake is 5 cm.",
+        "Each centimetre on the map represents 50 m in real life.",
+        "Multiply: 5×50=250 m."
+      ],
+      "commonMisconceptions": [
+        "Using the wrong map distance (e.g. 4 cm or 3 cm) instead of the diagonal distance of 5 cm.",
+        "Adding instead of multiplying when applying the scale."
+      ],
+      "hints": [
+        "Use the diagonal map distance, not just the horizontal or vertical part.",
+        "Multiply the map distance by 50."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "multi_step"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_006",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "medium",
+      "questionText": "If a new bench is placed exactly halfway along the walking track between the main gate and the lake (a real-life distance of 250 m), how far is the bench from the main gate?",
+      "questionType": "short_answer",
+      "answerKey": "125 m",
+      "stepByStepSolution": [
+        "The full real-life distance from the gate to the lake is 250 m.",
+        "Halfway means dividing this distance by 2.",
+        "250÷2=125 m."
+      ],
+      "commonMisconceptions": [
+        "Halving the map distance in centimetres but forgetting to also apply the scale.",
+        "Dividing the wrong total, such as halving 5 cm without converting to metres first."
+      ],
+      "hints": [
+        "First find the total real-life distance from the gate to the lake.",
+        "Then divide that real-life distance by 2 to find the halfway point."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "multi_step"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_007",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "medium",
+      "questionText": "On the Park Map, what does the dashed line symbol most likely represent, based on the map's key? A) a fence   B) a walking track   C) a river",
+      "questionType": "multiple_choice",
+      "answerKey": "a walking track",
+      "stepByStepSolution": [
+        "The map's key explains that the dashed line symbol shows the walking track.",
+        "Match the description in the key to the correct feature.",
+        "So the dashed line represents the walking track."
+      ],
+      "commonMisconceptions": [
+        "Guessing the symbol's meaning without checking the key.",
+        "Assuming all dashed lines on maps always mean the same thing."
+      ],
+      "hints": [
+        "Check the map's key or legend for what the dashed line stands for.",
+        "The passage describes the dashed line as showing a walking track."
+      ],
+      "tags": [
+        "maps",
+        "map_keys"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_008",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "hard",
+      "questionText": "A second walking track is planned that is twice as long as the current track from the gate to the lake (250 m real-life). How many real-life metres long would this new track be?",
+      "questionType": "short_answer",
+      "answerKey": "500 m",
+      "stepByStepSolution": [
+        "The current track's real-life length is 250 m.",
+        "The new track is twice as long.",
+        "250×2=500 m."
+      ],
+      "commonMisconceptions": [
+        "Doubling the map distance in centimetres and forgetting to reapply the scale.",
+        "Confusing 'twice as long' with 'twice as far from the gate'."
+      ],
+      "hints": [
+        "Start with the real-life length of the current track.",
+        "Multiply that real-life length by 2."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "multi_step"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_009",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "hard",
+      "questionText": "The entire park is a rectangle measuring 6 cm by 5 cm on the map. What is the real-life perimeter of the park?",
+      "questionType": "short_answer",
+      "answerKey": "1,100 m",
+      "stepByStepSolution": [
+        "Convert each map side to real life using the scale: 6 cm×50=300 m and 5 cm×50=250 m.",
+        "Add the length and width: 300+250=550 m.",
+        "Double this to find the perimeter: 550×2=1,100 m."
+      ],
+      "commonMisconceptions": [
+        "Finding the area instead of the perimeter.",
+        "Converting only one side to real-life metres and leaving the other in centimetres."
+      ],
+      "hints": [
+        "Convert both the length and width to real-life metres first using the scale.",
+        "Remember perimeter means adding all four sides, or doubling the sum of length and width."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "perimeter"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M07_Y3_010",
+      "skillId": "M3SP02_scale_maps",
+      "difficulty": "hard",
+      "questionText": "A cyclist rides from the main gate to the playground, then continues in a straight line to the lake. Estimate the total real-life distance the cyclist rides, showing your working.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Approximately 280 m in total (about 100 m from gate to playground, plus about 180 m from playground to the lake) — accept reasonable estimates in this range with working shown"
+      ],
+      "stepByStepSolution": [
+        "Find the distance from the gate to the playground: 2 cm × 50 = 100 m.",
+        "Estimate the distance from the playground to the lake by finding the map distance between them and applying the scale (roughly 3.6 cm, which is about 180 m).",
+        "Add both distances together for a total of about 280 m."
+      ],
+      "commonMisconceptions": [
+        "Only calculating one leg of the journey and forgetting to add both parts.",
+        "Not realising the second leg of the trip is a diagonal distance, not a straight horizontal one."
+      ],
+      "hints": [
+        "Break the journey into two parts: gate to playground, then playground to lake.",
+        "Find each map distance separately, convert both to real-life metres, then add them together."
+      ],
+      "tags": [
+        "scale",
+        "maps",
+        "estimation"
+      ],
+      "passage": "Park Map: The map shows a rectangular park. The scale is 1 cm = 50 m. The main gate is at the bottom-left corner. The playground is 2 cm to the right of the main gate. The lake is 4 cm to the right and 3 cm up from the main gate. The picnic area is 1 cm up from the main gate. A walking track, shown on the map's key as a dashed line, runs straight from the main gate to the lake. The whole park is a rectangle measuring 6 cm by 5 cm on the map."
+    },
+    {
+      "id": "T3M08_Y3_001",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "easy",
+      "questionText": "How many Year 3A students chose swimming as their favourite sport?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Look at the Year 3A column graph data.",
+        "Find the value for swimming.",
+        "The value shown is 3 students."
+      ],
+      "commonMisconceptions": [
+        "Reading the value for Year 3B instead of Year 3A.",
+        "Mixing up swimming with another sport in the data."
+      ],
+      "hints": [
+        "Make sure you're looking at the Year 3A data, not Year 3B.",
+        "Find 'swimming' in the Year 3A list."
+      ],
+      "tags": [
+        "data_comparison",
+        "reading_graphs"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_002",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "easy",
+      "questionText": "Which sport was most popular in Year 3B?",
+      "questionType": "short_answer",
+      "answerKey": "Basketball",
+      "stepByStepSolution": [
+        "Look at all the values for Year 3B: Soccer 6, Basketball 7, Swimming 4, Tennis 3.",
+        "Find the largest number among these.",
+        "Basketball has the highest value (7), so it is the most popular."
+      ],
+      "commonMisconceptions": [
+        "Choosing soccer because it's often popular in general, without checking Year 3B's actual data.",
+        "Comparing to Year 3A's data instead of Year 3B's."
+      ],
+      "hints": [
+        "Look only at the Year 3B numbers.",
+        "Find the biggest number among the Year 3B values."
+      ],
+      "tags": [
+        "data_comparison",
+        "reading_graphs"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_003",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "easy",
+      "questionText": "How many more students in Year 3A chose soccer compared to tennis? A) 4   B) 6   C) 8",
+      "questionType": "multiple_choice",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Find the number of Year 3A students who chose soccer: 8.",
+        "Find the number who chose tennis: 2.",
+        "Subtract: 8−2=6."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order and getting a negative number.",
+        "Using the Year 3B values instead of Year 3A."
+      ],
+      "hints": [
+        "Find the soccer and tennis values for Year 3A only.",
+        "Subtract the tennis number from the soccer number."
+      ],
+      "tags": [
+        "data_comparison",
+        "subtraction"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_004",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "medium",
+      "questionText": "Compare the number of students who chose basketball in Year 3A and Year 3B. Which class had more, and by how many?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Year 3B had more, by 2 students"
+      ],
+      "stepByStepSolution": [
+        "Year 3A basketball: 5 students.",
+        "Year 3B basketball: 7 students.",
+        "Since 7 is more than 5, Year 3B had more, by 7−5=2 students."
+      ],
+      "commonMisconceptions": [
+        "Comparing the wrong sport by mistake.",
+        "Reporting which class had more without stating the actual difference."
+      ],
+      "hints": [
+        "Find the basketball value for each class separately.",
+        "Subtract the smaller value from the larger one to find the difference."
+      ],
+      "tags": [
+        "data_comparison",
+        "subtraction"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_005",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "medium",
+      "questionText": "What is the total number of students surveyed across both Year 3A and Year 3B?",
+      "questionType": "short_answer",
+      "answerKey": "38",
+      "stepByStepSolution": [
+        "Add up Year 3A's totals: 8+5+3+2=18.",
+        "Add up Year 3B's totals: 6+7+4+3=20.",
+        "Add both class totals together: 18+20=38 students."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add all four sports for each class before combining totals.",
+        "Adding only one class's total and doubling it instead of adding both separately."
+      ],
+      "hints": [
+        "First find the total for each class separately by adding all four sports.",
+        "Then add the two class totals together."
+      ],
+      "tags": [
+        "data_comparison",
+        "addition",
+        "multi_step"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_006",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "medium",
+      "questionText": "Which conclusion is best supported by the data? A) Swimming is more popular than soccer in both classes   B) Basketball is more popular in Year 3B than in Year 3A   C) Tennis is the most popular sport overall",
+      "questionType": "multiple_choice",
+      "answerKey": "Basketball is more popular in Year 3B than in Year 3A",
+      "stepByStepSolution": [
+        "Compare basketball numbers: Year 3A has 5, Year 3B has 7.",
+        "Since 7 is greater than 5, basketball is indeed more popular in Year 3B.",
+        "Check the other options against the data to confirm they are incorrect."
+      ],
+      "commonMisconceptions": [
+        "Choosing an option based on a general impression rather than checking the actual numbers.",
+        "Not checking every option against the data before deciding."
+      ],
+      "hints": [
+        "Check each statement carefully against the actual numbers in both classes.",
+        "Compare the basketball values for Year 3A and Year 3B specifically."
+      ],
+      "tags": [
+        "data_comparison",
+        "drawing_conclusions"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_007",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "medium",
+      "questionText": "In which class is the difference between the most popular and least popular sport the greatest? Explain your answer using the numbers.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Year 3A, because the difference is 8-2=6, while Year 3B's difference is 7-3=4"
+      ],
+      "stepByStepSolution": [
+        "Year 3A's most popular is soccer (8), least popular is tennis (2), giving a difference of 6.",
+        "Year 3B's most popular is basketball (7), least popular is tennis (3), giving a difference of 4.",
+        "Since 6 is greater than 4, Year 3A has the greater difference."
+      ],
+      "commonMisconceptions": [
+        "Only calculating the difference for one class and assuming it applies to both.",
+        "Mixing up most and least popular sports within a class."
+      ],
+      "hints": [
+        "Find the highest and lowest values within each class separately.",
+        "Subtract the lowest from the highest for each class, then compare the two differences."
+      ],
+      "tags": [
+        "data_comparison",
+        "subtraction",
+        "reasoning"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_008",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "hard",
+      "questionText": "If 3 more students join Year 3A and all choose swimming, how would this change the most popular sport in Year 3A, if at all?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Swimming would rise to 6, but soccer (8) would still be the most popular sport, so there is no change"
+      ],
+      "stepByStepSolution": [
+        "Add the 3 new students to the current swimming total: 3+3=6.",
+        "Compare this new total to the other sports in Year 3A, especially soccer's 8.",
+        "Since 8 is still greater than 6, soccer remains the most popular sport."
+      ],
+      "commonMisconceptions": [
+        "Assuming swimming automatically becomes most popular just because it increased.",
+        "Forgetting to compare the new total to all other sports, not just the original swimming number."
+      ],
+      "hints": [
+        "Work out the new number of students who chose swimming after the change.",
+        "Compare this new number to soccer's total to see if it takes the lead."
+      ],
+      "tags": [
+        "data_comparison",
+        "reasoning",
+        "multi_step"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_009",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "hard",
+      "questionText": "A new column graph combines both classes' results for each sport. What would the combined total be for tennis?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Find Year 3A's tennis total: 2.",
+        "Find Year 3B's tennis total: 3.",
+        "Add them together: 2+3=5."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong sport's totals together by mistake.",
+        "Forgetting to include one of the two classes."
+      ],
+      "hints": [
+        "Find the tennis value in each class's data separately.",
+        "Add the two tennis values together."
+      ],
+      "tags": [
+        "data_comparison",
+        "addition"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M08_Y3_010",
+      "skillId": "M3ST02_03_compare_datasets",
+      "difficulty": "hard",
+      "questionText": "Explain one similarity and one difference between the two classes' favourite sports, using specific numbers from the data.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Sample answer: a similarity is that tennis is the least popular sport in both classes (2 in 3A, 3 in 3B); a difference is that soccer is most popular in 3A (8) while basketball is most popular in 3B (7)"
+      ],
+      "stepByStepSolution": [
+        "Compare the least popular sport in each class — both classes have tennis as the lowest, though with slightly different numbers (2 and 3).",
+        "Compare the most popular sport in each class — Year 3A favours soccer (8) while Year 3B favours basketball (7).",
+        "State one similarity and one difference clearly, backed up with the actual numbers."
+      ],
+      "commonMisconceptions": [
+        "Giving a vague comparison without referring to specific numbers from the data.",
+        "Mixing up which class has which favourite sport."
+      ],
+      "hints": [
+        "Look for a sport that ranks the same way (highest or lowest) in both classes.",
+        "Look for a sport where the two classes clearly disagree on popularity."
+      ],
+      "tags": [
+        "data_comparison",
+        "reasoning"
+      ],
+      "passage": "Favourite Sport Survey (Number of Students): Year 3A — Soccer: 8, Basketball: 5, Swimming: 3, Tennis: 2. Year 3B — Soccer: 6, Basketball: 7, Swimming: 4, Tennis: 3."
+    },
+    {
+      "id": "T3M09_Y3_001",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "easy",
+      "questionText": "How many students in total were surveyed about their favourite weather?",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "Add up all the responses: 12+3+5+0.",
+        "12+3=15, 15+5=20, 20+0=20.",
+        "So 20 students were surveyed in total."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the category with 0 students in the total.",
+        "Adding only some of the categories."
+      ],
+      "hints": [
+        "Add together the number of students for every weather type, including windy.",
+        "Don't forget that 0 students still counts as a category to add."
+      ],
+      "tags": [
+        "data_and_chance",
+        "addition"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_002",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "easy",
+      "questionText": "Based on the survey, if you picked one student at random, which weather would they be most likely to have chosen? A) Rainy   B) Cloudy   C) Sunny",
+      "questionType": "multiple_choice",
+      "answerKey": "Sunny",
+      "stepByStepSolution": [
+        "Compare all the survey values: Sunny 12, Rainy 3, Cloudy 5, Windy 0.",
+        "Find the largest group.",
+        "Sunny has the most students, so it is the most likely choice."
+      ],
+      "commonMisconceptions": [
+        "Choosing an option based on a personal favourite weather rather than the data.",
+        "Not comparing all four categories before answering."
+      ],
+      "hints": [
+        "Look for the weather type with the highest number of students.",
+        "Compare all four numbers from the survey before deciding."
+      ],
+      "tags": [
+        "data_and_chance",
+        "probability",
+        "likelihood"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_003",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "easy",
+      "questionText": "Is it likely, unlikely, certain, or impossible that a randomly chosen student from this class prefers windy weather? Explain why.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Impossible, because 0 students chose windy weather"
+      ],
+      "stepByStepSolution": [
+        "Check the survey data for windy weather: 0 students.",
+        "Since no student in the survey chose windy weather, there is no chance of picking one.",
+        "This means it is impossible."
+      ],
+      "commonMisconceptions": [
+        "Saying 'unlikely' instead of 'impossible' when the count is exactly 0.",
+        "Assuming windy weather could still be chosen because it's a valid option on the survey."
+      ],
+      "hints": [
+        "Check how many students actually chose windy weather in the survey.",
+        "If a group has 0 people in it, what word describes the chance of picking someone from that group?"
+      ],
+      "tags": [
+        "data_and_chance",
+        "probability",
+        "chance_language"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_004",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "medium",
+      "questionText": "Out of 20 students, what fraction of the class prefers rainy weather?",
+      "questionType": "short_answer",
+      "answerKey": "3/20",
+      "stepByStepSolution": [
+        "Find the number of students who chose rainy: 3.",
+        "Find the total number of students: 20.",
+        "Write this as a fraction: 3/20."
+      ],
+      "commonMisconceptions": [
+        "Writing the fraction upside down, such as 20/3.",
+        "Using the wrong weather category's number as the numerator."
+      ],
+      "hints": [
+        "The numerator is the number of students who chose rainy.",
+        "The denominator is the total number of students surveyed."
+      ],
+      "tags": [
+        "data_and_chance",
+        "fractions"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_005",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "medium",
+      "questionText": "If the class conducted the same survey next week and got very similar results, predict how many of the next 10 new students asked would likely say 'sunny'. Explain your reasoning.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "About 6 students, because sunny made up 12 out of 20 (slightly more than half) of the original survey, so about the same proportion of a new group of 10 would likely choose sunny"
+      ],
+      "stepByStepSolution": [
+        "Find what fraction of the original survey chose sunny: 12 out of 20.",
+        "Simplify this to see it's slightly more than half (12/20 = 3/5).",
+        "Apply this same proportion to a new group of 10 students: about 6 students would likely say sunny."
+      ],
+      "commonMisconceptions": [
+        "Assuming exactly 12 students out of any new group will say sunny, regardless of the group size.",
+        "Not scaling the proportion down to fit a smaller group of 10."
+      ],
+      "hints": [
+        "Think about what proportion (or fraction) of the original class chose sunny.",
+        "Apply that same proportion to a new group of only 10 students."
+      ],
+      "tags": [
+        "data_and_chance",
+        "prediction",
+        "proportional_reasoning"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_006",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "medium",
+      "questionText": "Which statement about the survey results is true? A) Cloudy weather was chosen more often than sunny   B) More students chose sunny than rainy and cloudy combined   C) Rainy and windy were chosen equally often",
+      "questionType": "multiple_choice",
+      "answerKey": "More students chose sunny than rainy and cloudy combined",
+      "stepByStepSolution": [
+        "Add rainy and cloudy together: 3+5=8.",
+        "Compare this to the sunny total of 12.",
+        "Since 12 is greater than 8, more students chose sunny than rainy and cloudy combined."
+      ],
+      "commonMisconceptions": [
+        "Comparing sunny to just one other category instead of the combined total.",
+        "Assuming windy and rainy have similar numbers without checking."
+      ],
+      "hints": [
+        "Add together the rainy and cloudy totals first.",
+        "Compare that combined total to the sunny total."
+      ],
+      "tags": [
+        "data_and_chance",
+        "addition",
+        "comparing"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_007",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "medium",
+      "questionText": "A student says, 'It's certain that if you ask any student in this class, they will say either sunny, rainy or cloudy.' Is this true? Explain using the data.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Yes, this is true, because 12+3+5=20, which is the whole class — no students chose any other option like windy"
+      ],
+      "stepByStepSolution": [
+        "Add sunny, rainy and cloudy together: 12+3+5=20.",
+        "Compare this total to the whole class size: 20.",
+        "Since every single student is accounted for in these three categories, the statement is certain to be true."
+      ],
+      "commonMisconceptions": [
+        "Assuming there might be other unlisted weather preferences not shown in the data.",
+        "Not checking that the three categories add up to the full class total."
+      ],
+      "hints": [
+        "Add sunny, rainy and cloudy together and compare the total to the whole class.",
+        "Check if these three groups make up every single student in the survey."
+      ],
+      "tags": [
+        "data_and_chance",
+        "chance_language",
+        "reasoning"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_008",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "hard",
+      "questionText": "If a raffle ticket is given to each student based on their weather choice (1 ticket per student), what is the probability, as a fraction, that the winning ticket belongs to someone who chose cloudy weather?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5/20",
+        "1/4"
+      ],
+      "stepByStepSolution": [
+        "Find the number of students who chose cloudy: 5.",
+        "Find the total number of tickets, which equals the total number of students: 20.",
+        "Write the probability as a fraction: 5/20, which simplifies to 1/4."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to simplify the fraction, or simplifying it incorrectly.",
+        "Using the wrong weather category's number in the fraction."
+      ],
+      "hints": [
+        "The number of favourable outcomes is the number of students who chose cloudy.",
+        "Write this over the total number of students, then simplify if possible."
+      ],
+      "tags": [
+        "data_and_chance",
+        "probability",
+        "fractions"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_009",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "hard",
+      "questionText": "The class wants to combine 'rainy' and 'windy' into a single new category called 'wet or windy weather'. What is this new category's total, and what fraction of the class does it represent, in simplest form?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "3 students, which is 3/20 of the class"
+      ],
+      "stepByStepSolution": [
+        "Add rainy and windy together: 3+0=3.",
+        "Write this as a fraction of the whole class: 3/20.",
+        "Check if it can be simplified — since 3 and 20 share no common factors other than 1, it stays as 3/20."
+      ],
+      "commonMisconceptions": [
+        "Forgetting that windy has 0 students and mistakenly using a different number.",
+        "Trying to simplify a fraction that is already in its simplest form."
+      ],
+      "hints": [
+        "Add the rainy and windy totals together first.",
+        "Check whether the resulting fraction can be simplified — does 3 divide evenly into 20?"
+      ],
+      "tags": [
+        "data_and_chance",
+        "fractions",
+        "simplifying"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M09_Y3_010",
+      "skillId": "M3P01_02_combined_investigation",
+      "difficulty": "hard",
+      "questionText": "The class plans a chance experiment: spin a spinner with sections matching the survey proportions (12 sunny, 3 rainy, 5 cloudy out of 20 equal sections). If the spinner is spun once, is it more likely to land on sunny or on rainy and cloudy combined? Justify your answer.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Sunny is more likely, because sunny has 12 sections while rainy and cloudy combined only have 8 sections"
+      ],
+      "stepByStepSolution": [
+        "The spinner has 12 sections for sunny out of 20 total sections.",
+        "Rainy and cloudy combined have 3+5=8 sections out of 20.",
+        "Since 12 is greater than 8, landing on sunny is more likely than landing on rainy or cloudy combined."
+      ],
+      "commonMisconceptions": [
+        "Assuming combining two categories automatically makes them more likely than a single larger category.",
+        "Not adding rainy and cloudy together before comparing to sunny."
+      ],
+      "hints": [
+        "Add the rainy and cloudy sections together to compare fairly.",
+        "Compare this combined total to the number of sunny sections."
+      ],
+      "tags": [
+        "data_and_chance",
+        "probability",
+        "spinners"
+      ],
+      "passage": "Class Survey Results — Favourite Weather: Sunny — 12 students, Rainy — 3 students, Cloudy — 5 students, Windy — 0 students. Total students in the class: 20."
+    },
+    {
+      "id": "T3M10_Y3_001",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "easy",
+      "questionText": "Zoe has saved $45. She wants to buy a toy that costs $68. How much more does she need to save?",
+      "questionType": "short_answer",
+      "answerKey": "$23",
+      "stepByStepSolution": [
+        "Start with the cost of the toy: $68.",
+        "Subtract the amount already saved: $68−$45.",
+        "This gives $23 still needed."
+      ],
+      "commonMisconceptions": [
+        "Adding the two amounts instead of subtracting.",
+        "Making a subtraction error when regrouping."
+      ],
+      "hints": [
+        "Think about what's left to save: subtract the saved amount from the total cost.",
+        "68 minus 45."
+      ],
+      "tags": [
+        "money",
+        "saving",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_002",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "easy",
+      "questionText": "A pack of pencils costs $4 and a pack of erasers costs $3. How much would it cost to buy 2 packs of pencils and 1 pack of erasers?",
+      "questionType": "short_answer",
+      "answerKey": "$11",
+      "stepByStepSolution": [
+        "Find the cost of 2 packs of pencils: 2×$4=$8.",
+        "Add the cost of 1 pack of erasers: $8+$3.",
+        "The total cost is $11."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply the pencil packs by 2 before adding.",
+        "Adding the unit prices instead of the total cost of each item."
+      ],
+      "hints": [
+        "First work out the cost of the pencils alone.",
+        "Then add on the cost of the erasers."
+      ],
+      "tags": [
+        "money",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_003",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "easy",
+      "questionText": "Which is the better value: 4 apples for $2, or 6 apples for $3? A) 4 apples for $2   B) 6 apples for $3   C) Both are the same value",
+      "questionType": "multiple_choice",
+      "answerKey": "Both are the same value",
+      "stepByStepSolution": [
+        "Find the cost per apple for the first deal: $2÷4=$0.50 per apple.",
+        "Find the cost per apple for the second deal: $3÷6=$0.50 per apple.",
+        "Since both cost the same per apple, the two deals offer the same value."
+      ],
+      "commonMisconceptions": [
+        "Assuming the deal with the bigger numbers (6 apples for $3) must always be better value.",
+        "Comparing the total price without working out the price per apple."
+      ],
+      "hints": [
+        "Work out how much one single apple costs in each deal.",
+        "Divide the total price by the number of apples for each option."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "unit_price"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_004",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "medium",
+      "questionText": "Liam earns $8 pocket money each week. If he saves all of it, how many weeks will it take him to save $56?",
+      "questionType": "short_answer",
+      "answerKey": "7 weeks",
+      "stepByStepSolution": [
+        "Divide the total amount needed by the weekly savings: $56÷$8.",
+        "56÷8=7.",
+        "It will take Liam 7 weeks to save $56."
+      ],
+      "commonMisconceptions": [
+        "Multiplying instead of dividing to find the number of weeks.",
+        "Making a division error, such as miscounting groups of 8."
+      ],
+      "hints": [
+        "Think about how many groups of $8 fit into $56.",
+        "Use division: 56÷8."
+      ],
+      "tags": [
+        "money",
+        "saving",
+        "division"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_005",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "medium",
+      "questionText": "A family budget allows $120 for groceries each week. If they spend $47 on Monday and $38 on Wednesday, how much money is left in the grocery budget for the rest of the week?",
+      "questionType": "short_answer",
+      "answerKey": "$35",
+      "stepByStepSolution": [
+        "Add up what has already been spent: $47+$38=$85.",
+        "Subtract this from the total budget: $120−$85.",
+        "This leaves $35 for the rest of the week."
+      ],
+      "commonMisconceptions": [
+        "Subtracting only one of the two amounts spent.",
+        "Adding the budget and spending together instead of subtracting."
+      ],
+      "hints": [
+        "First add together the amounts spent on Monday and Wednesday.",
+        "Then subtract that total from the weekly budget of $120."
+      ],
+      "tags": [
+        "money",
+        "budgeting",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_006",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "medium",
+      "questionText": "A shop sells a 500 g bag of rice for $4 and a 1 kg (1000 g) bag for $7. Which is the better value per 100 g? A) The 500 g bag   B) The 1 kg bag   C) They are the same value",
+      "questionType": "multiple_choice",
+      "answerKey": "The 1 kg bag",
+      "stepByStepSolution": [
+        "Find the cost per 100 g for the 500 g bag: $4÷5=$0.80 per 100 g.",
+        "Find the cost per 100 g for the 1 kg bag: $7÷10=$0.70 per 100 g.",
+        "Since $0.70 is less than $0.80, the 1 kg bag is better value."
+      ],
+      "commonMisconceptions": [
+        "Comparing the total prices ($4 vs $7) without adjusting for the different sizes.",
+        "Making an error when dividing to find the price per 100 g."
+      ],
+      "hints": [
+        "Work out the price for just 100 g of rice in each bag.",
+        "Divide each bag's price by how many groups of 100 g it contains."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "unit_price"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_007",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "medium",
+      "questionText": "Amelia wants to buy a $75 scooter. She has $30 saved and plans to save $9 each week from now on. How many more weeks does she need to save to afford the scooter?",
+      "questionType": "short_answer",
+      "answerKey": "5 weeks",
+      "stepByStepSolution": [
+        "Find how much more Amelia needs: $75−$30=$45.",
+        "Divide this amount by her weekly savings: $45÷$9.",
+        "This gives 5 more weeks of saving."
+      ],
+      "commonMisconceptions": [
+        "Dividing the full $75 by $9 instead of first subtracting the $30 already saved.",
+        "Making an error in the subtraction step before dividing."
+      ],
+      "hints": [
+        "First work out how much more money Amelia needs in total.",
+        "Then divide that amount by how much she saves each week."
+      ],
+      "tags": [
+        "money",
+        "saving",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_008",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "hard",
+      "questionText": "A cinema offers two ticket deals: Deal A is 3 tickets for $36, and Deal B is 5 tickets for $55. Which deal offers the cheaper price per ticket, and how much would you save per ticket by choosing it?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Deal B is cheaper per ticket, saving $1 per ticket compared to Deal A"
+      ],
+      "stepByStepSolution": [
+        "Find the price per ticket for Deal A: $36÷3=$12.",
+        "Find the price per ticket for Deal B: $55÷5=$11.",
+        "Since $11 is less than $12, Deal B is cheaper, saving $1 per ticket."
+      ],
+      "commonMisconceptions": [
+        "Comparing the total prices ($36 vs $55) without dividing by the number of tickets.",
+        "Assuming the deal with more tickets is always the better per-ticket value without checking."
+      ],
+      "hints": [
+        "Work out the price for just one ticket in each deal.",
+        "Divide each total price by the number of tickets in that deal."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "unit_price"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_009",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "hard",
+      "questionText": "A student has $50 to spend on school supplies. She buys an $18 pencil case, 3 notebooks at $6 each, and wants to save the rest. How much money will she have left to save?",
+      "questionType": "short_answer",
+      "answerKey": "$14",
+      "stepByStepSolution": [
+        "Find the cost of the 3 notebooks: 3×$6=$18.",
+        "Add this to the cost of the pencil case: $18+$18=$36.",
+        "Subtract this total from her $50: $50−$36=$14 left to save."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply the notebook cost by 3 before adding.",
+        "Adding the pencil case and notebook unit price instead of the total notebook cost."
+      ],
+      "hints": [
+        "First work out the total cost of all 3 notebooks.",
+        "Add that to the pencil case cost, then subtract the total from $50."
+      ],
+      "tags": [
+        "money",
+        "budgeting",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T3M10_Y3_010",
+      "skillId": "M3N05_06_financial_word_problems",
+      "difficulty": "hard",
+      "questionText": "A family is comparing two phone plans to save money. Plan X costs $25 per month with no extra fees. Plan Y costs $18 per month but has an extra $10 one-off setup fee. After 3 months, which plan has cost less in total, and by how much?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Plan Y costs less, by $11 in total"
+      ],
+      "stepByStepSolution": [
+        "Find the total cost of Plan X over 3 months: 3×$25=$75.",
+        "Find the total cost of Plan Y over 3 months, including the setup fee: (3×$18)+$10=$54+$10=$64.",
+        "Compare the totals: $75−$64=$11, so Plan Y costs $11 less."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the one-off setup fee when calculating Plan Y's total cost.",
+        "Comparing only the monthly rates ($25 vs $18) without working out the full 3-month totals."
+      ],
+      "hints": [
+        "Work out the total cost of each plan separately over the 3 months, including any extra fees.",
+        "Don't forget Plan Y has an extra one-off fee on top of the monthly cost."
+      ],
+      "tags": [
+        "money",
+        "budgeting",
+        "best_value"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_001",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "easy",
+      "questionText": "Continue the pattern: 5, 10, 15, 20, ___, ___",
+      "questionType": "short_answer",
+      "answerKey": "25, 30",
+      "stepByStepSolution": [
+        "Look at the difference between each number: 10−5=5, 15−10=5.",
+        "The pattern increases by 5 each time.",
+        "Continuing the pattern: 20+5=25, then 25+5=30."
+      ],
+      "commonMisconceptions": [
+        "Adding a different amount each time instead of keeping the pattern consistent.",
+        "Continuing with the wrong operation, such as multiplying instead of adding."
+      ],
+      "hints": [
+        "Find the difference between each pair of numbers in the pattern.",
+        "Once you know the pattern adds 5 each time, keep applying that rule."
+      ],
+      "tags": [
+        "number_patterns",
+        "addition"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_002",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "easy",
+      "questionText": "Continue the pattern: 100, 90, 80, 70, ___, ___",
+      "questionType": "short_answer",
+      "answerKey": "60, 50",
+      "stepByStepSolution": [
+        "Look at the difference between the numbers: 100−90=10, 90−80=10.",
+        "The pattern decreases by 10 each time.",
+        "Continuing: 70−10=60, then 60−10=50."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting because an earlier example pattern was increasing.",
+        "Subtracting an inconsistent amount each time."
+      ],
+      "hints": [
+        "Check whether the numbers are getting bigger or smaller, and by how much.",
+        "The pattern goes down by 10 each time."
+      ],
+      "tags": [
+        "number_patterns",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_003",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "easy",
+      "questionText": "What is the rule for this pattern? 3, 6, 9, 12, 15 A) add 2   B) add 3   C) multiply by 2",
+      "questionType": "multiple_choice",
+      "answerKey": "add 3",
+      "stepByStepSolution": [
+        "Find the difference between consecutive numbers: 6−3=3, 9−6=3.",
+        "Check this stays consistent: 12−9=3, 15−12=3.",
+        "The rule is 'add 3' each time."
+      ],
+      "commonMisconceptions": [
+        "Assuming the rule involves multiplication just because the numbers are a multiplication table.",
+        "Miscounting the difference between numbers."
+      ],
+      "hints": [
+        "Subtract each number from the one after it to find the pattern's rule.",
+        "Check if the difference stays the same throughout the pattern."
+      ],
+      "tags": [
+        "number_patterns",
+        "addition"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_004",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "medium",
+      "questionText": "Describe the rule for this pattern, then find the next two numbers: 2, 4, 8, 16, ___, ___",
+      "questionType": "short_answer",
+      "answerKey": [
+        "The rule is multiply by 2 each time; next numbers are 32 and 64"
+      ],
+      "stepByStepSolution": [
+        "Check the relationship between each number and the next: 4÷2=2, 8÷4=2, 16÷8=2.",
+        "This shows the rule is to multiply each number by 2.",
+        "Continuing the pattern: 16×2=32, then 32×2=64."
+      ],
+      "commonMisconceptions": [
+        "Assuming this is an addition pattern because the earlier numbers increase by small amounts.",
+        "Adding a fixed number instead of noticing the multiplying pattern."
+      ],
+      "hints": [
+        "Check what you would multiply each number by to get the next one.",
+        "Try dividing each number by the one before it to spot the pattern."
+      ],
+      "tags": [
+        "number_patterns",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_005",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "medium",
+      "questionText": "A pattern starts at 4 and follows the rule 'add 6 each time'. What are the first five numbers in this pattern?",
+      "questionType": "short_answer",
+      "answerKey": "4, 10, 16, 22, 28",
+      "stepByStepSolution": [
+        "Start with the first number: 4.",
+        "Add 6 to get the next number: 4+6=10.",
+        "Keep adding 6 each time: 10+6=16, 16+6=22, 22+6=28."
+      ],
+      "commonMisconceptions": [
+        "Starting the pattern from 0 or 6 instead of the given starting number 4.",
+        "Losing track of the running total after a few steps."
+      ],
+      "hints": [
+        "Start with 4, then keep adding 6 to get each next number.",
+        "Write out each step one at a time so you don't lose track."
+      ],
+      "tags": [
+        "number_patterns",
+        "addition"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_006",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "medium",
+      "questionText": "Which pattern follows the rule 'subtract 7 each time'? A) 50, 43, 36, 29   B) 50, 45, 40, 35   C) 50, 40, 30, 20",
+      "questionType": "multiple_choice",
+      "answerKey": "50, 43, 36, 29",
+      "stepByStepSolution": [
+        "Check the difference between each pair of numbers in option A: 50−43=7, 43−36=7.",
+        "Check the other options: option B decreases by 5, and option C decreases by 10.",
+        "Only option A consistently decreases by 7."
+      ],
+      "commonMisconceptions": [
+        "Picking an option because the numbers 'look similar' without checking the actual difference.",
+        "Miscalculating the difference between larger numbers."
+      ],
+      "hints": [
+        "Subtract each number from the one before it in each pattern.",
+        "Find the option where the difference is always exactly 7."
+      ],
+      "tags": [
+        "number_patterns",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_007",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "medium",
+      "questionText": "Look at this pattern: 1, 4, 9, 16, 25. Describe what is happening to the differences between each pair of numbers.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "The differences increase by 2 each time: 3, 5, 7, 9 (these are the square numbers)"
+      ],
+      "stepByStepSolution": [
+        "Find each difference: 4−1=3, 9−4=5, 16−9=7, 25−16=9.",
+        "Notice these differences themselves form a pattern: 3, 5, 7, 9.",
+        "Each difference increases by 2, and the original numbers are actually the square numbers (1², 2², 3², 4², 5²)."
+      ],
+      "commonMisconceptions": [
+        "Assuming the differences stay the same throughout, like a simple addition pattern.",
+        "Not noticing that the differences themselves form their own pattern."
+      ],
+      "hints": [
+        "Work out the difference between each consecutive pair of numbers.",
+        "Look closely at how those differences change as you go along."
+      ],
+      "tags": [
+        "number_patterns",
+        "square_numbers",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_008",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "hard",
+      "questionText": "A pattern begins at 3 and the rule is 'multiply by 2, then add 1'. Find the first four numbers in the pattern.",
+      "questionType": "short_answer",
+      "answerKey": "3, 7, 15, 31",
+      "stepByStepSolution": [
+        "Start with 3.",
+        "Apply the rule to get the next number: 3×2+1=7.",
+        "Keep applying the rule: 7×2+1=15, then 15×2+1=31."
+      ],
+      "commonMisconceptions": [
+        "Adding 1 before multiplying by 2 instead of after.",
+        "Forgetting to add 1 after multiplying at each step."
+      ],
+      "hints": [
+        "Apply both parts of the rule in order: multiply first, then add.",
+        "Do this step by step, using the previous answer each time."
+      ],
+      "tags": [
+        "number_patterns",
+        "multi_step",
+        "two_step_rule"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_009",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "hard",
+      "questionText": "In a number pattern, the 1st term is 5 and each term increases by 4. What is the 10th term in the pattern, without writing out all the terms?",
+      "questionType": "short_answer",
+      "answerKey": "41",
+      "stepByStepSolution": [
+        "Notice that to get from the 1st term to any later term, you add the common difference a number of times equal to (term number − 1).",
+        "For the 10th term, add 4 a total of 9 times: 9×4=36.",
+        "Add this to the starting term: 5+36=41."
+      ],
+      "commonMisconceptions": [
+        "Multiplying the term number by the difference and forgetting to subtract 1 first (using 10×4 instead of 9×4).",
+        "Adding the difference the wrong number of times, such as 10 times instead of 9."
+      ],
+      "hints": [
+        "Think about how many times you need to add 4 to get from the 1st term to the 10th term.",
+        "You add the difference (10−1)=9 times, not 10 times."
+      ],
+      "tags": [
+        "number_patterns",
+        "reasoning",
+        "nth_term"
+      ]
+    },
+    {
+      "id": "T3M11_Y3_010",
+      "skillId": "M3A01_02_number_patterns",
+      "difficulty": "hard",
+      "questionText": "A pattern of shapes uses squares to build a staircase: 1 square, then 3 squares, then 6 squares, then 10 squares. If this pattern continues, how many squares will be in the 6th staircase step? Describe the pattern in the differences to help you.",
+      "questionType": "short_answer",
+      "answerKey": "21 squares",
+      "stepByStepSolution": [
+        "Find the differences between each term: 3−1=2, 6−3=3, 10−6=4.",
+        "Notice the differences themselves increase by 1 each time: 2, 3, 4, 5, 6.",
+        "Continue the pattern: 10+5=15 (5th term), then 15+6=21 (6th term)."
+      ],
+      "commonMisconceptions": [
+        "Assuming the differences stay constant instead of increasing by 1 each time.",
+        "Miscounting which term number corresponds to which value in the sequence."
+      ],
+      "hints": [
+        "Find the difference between each pair of numbers in the pattern first.",
+        "Notice how those differences themselves grow, and use that to find the next terms."
+      ],
+      "tags": [
+        "number_patterns",
+        "triangular_numbers",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_001",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "easy",
+      "questionText": "On a number line from 0 to 1, where would you place 1/4? Describe its position.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1/4 is placed one quarter of the way between 0 and 1, closer to 0"
+      ],
+      "stepByStepSolution": [
+        "Divide the number line from 0 to 1 into 4 equal parts.",
+        "Count 1 part from 0.",
+        "This mark shows the position of 1/4, which is closer to 0 than to 1."
+      ],
+      "commonMisconceptions": [
+        "Placing 1/4 in the middle of the number line, confusing it with 1/2.",
+        "Dividing the number line into unequal sections."
+      ],
+      "hints": [
+        "Divide the number line into 4 equal parts first.",
+        "1/4 is the first mark after 0, out of 4 equal parts."
+      ],
+      "tags": [
+        "number_line",
+        "fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_002",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "easy",
+      "questionText": "Which fraction is closer to 0 on a number line: 1/8 or 1/2? A) 1/8   B) 1/2   C) They are the same distance",
+      "questionType": "multiple_choice",
+      "answerKey": "1/8",
+      "stepByStepSolution": [
+        "Picture both fractions on the same number line from 0 to 1.",
+        "1/8 is a small step from 0, while 1/2 is halfway along.",
+        "Since 1/8 is a smaller fraction, it sits closer to 0."
+      ],
+      "commonMisconceptions": [
+        "Assuming a fraction with a bigger denominator (8) represents a bigger amount.",
+        "Confusing 'closer to 0' with 'bigger number'."
+      ],
+      "hints": [
+        "Think about which fraction represents a smaller amount.",
+        "A fraction with a larger denominator, like eighths, divides the line into smaller steps."
+      ],
+      "tags": [
+        "number_line",
+        "comparing_fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_003",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "easy",
+      "questionText": "Between 0 and 1 on a number line divided into eighths, how many equal parts are there, and what is each part called?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "8 equal parts, each part is called 1/8 (one eighth)"
+      ],
+      "stepByStepSolution": [
+        "The number line from 0 to 1 is divided into 8 equal sections.",
+        "Each of these sections represents the same size.",
+        "Each part is called one eighth, written as 1/8."
+      ],
+      "commonMisconceptions": [
+        "Confusing the total number of parts (8) with the fraction name.",
+        "Thinking the parts are unequal in size."
+      ],
+      "hints": [
+        "Count how many equal sections the line is split into.",
+        "Each equal section out of 8 is called one eighth."
+      ],
+      "tags": [
+        "number_line",
+        "fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_004",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "medium",
+      "questionText": "Which is greater: 3/4 or 5/8? Show their positions on a number line to explain your answer.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "3/4 is greater than 5/8, since 3/4 = 6/8, which is more than 5/8"
+      ],
+      "stepByStepSolution": [
+        "Convert 3/4 to eighths so both fractions have the same denominator: 3/4=6/8.",
+        "Compare 6/8 and 5/8 on the same number line.",
+        "Since 6/8 is further along the line than 5/8, 3/4 is greater than 5/8."
+      ],
+      "commonMisconceptions": [
+        "Comparing the numerators only (3 vs 5) without converting to the same denominator.",
+        "Assuming a fraction with a bigger denominator is automatically bigger."
+      ],
+      "hints": [
+        "Try converting 3/4 into eighths so you can compare fairly.",
+        "Once both fractions have the same denominator, compare their numerators."
+      ],
+      "tags": [
+        "number_line",
+        "comparing_fractions",
+        "equivalent_fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_005",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "medium",
+      "questionText": "Place these fractions in order from smallest to largest: 1/2, 1/8, 3/4",
+      "questionType": "short_answer",
+      "answerKey": "1/8, 1/2, 3/4",
+      "stepByStepSolution": [
+        "Convert all fractions to eighths for easy comparison: 1/2=4/8, 1/8 stays as 1/8, 3/4=6/8.",
+        "Compare the numerators: 1, 4, 6.",
+        "Order from smallest to largest: 1/8, 1/2 (4/8), 3/4 (6/8)."
+      ],
+      "commonMisconceptions": [
+        "Ordering by denominator size instead of the actual value of the fraction.",
+        "Not converting fractions to a common denominator before comparing."
+      ],
+      "hints": [
+        "Try converting all three fractions to eighths first.",
+        "Once they share the same denominator, order them by their numerators."
+      ],
+      "tags": [
+        "number_line",
+        "ordering_fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_006",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "medium",
+      "questionText": "A number line is divided into quarters. Which point marks 3/4? A) three-quarters of the way from 0 to 1   B) halfway between 0 and 1   C) at the very end, at 1",
+      "questionType": "multiple_choice",
+      "answerKey": "three-quarters of the way from 0 to 1",
+      "stepByStepSolution": [
+        "Divide the number line from 0 to 1 into 4 equal parts.",
+        "Count 3 of those 4 parts from 0.",
+        "This point, three-quarters of the way along, marks 3/4."
+      ],
+      "commonMisconceptions": [
+        "Placing 3/4 at the very end of the number line, confusing it with 1.",
+        "Confusing 3/4 with 1/2 by counting the wrong number of parts."
+      ],
+      "hints": [
+        "Count 3 out of the 4 equal sections starting from 0.",
+        "3/4 is close to the end of the line, but not quite at 1."
+      ],
+      "tags": [
+        "number_line",
+        "fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_007",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "medium",
+      "questionText": "How many eighths make the same amount as 1/2? Show this using a number line description.",
+      "questionType": "short_answer",
+      "answerKey": "4 eighths (4/8)",
+      "stepByStepSolution": [
+        "Divide the number line into 8 equal parts.",
+        "Find the halfway point, which is 1/2.",
+        "Count how many eighths reach that halfway point — it takes 4 eighths, so 1/2=4/8."
+      ],
+      "commonMisconceptions": [
+        "Assuming it takes 8 eighths to reach halfway instead of the full line.",
+        "Miscounting the eighths and landing on 3/8 or 5/8 instead of 4/8."
+      ],
+      "hints": [
+        "Divide the number line into 8 equal parts and find the middle point.",
+        "Count how many of those eighths it takes to reach exactly halfway."
+      ],
+      "tags": [
+        "number_line",
+        "equivalent_fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_008",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "hard",
+      "questionText": "A fraction lies exactly halfway between 1/4 and 3/4 on a number line. What fraction is this, and how do you know?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1/2, because it is exactly in the middle of 1/4 and 3/4 on the number line"
+      ],
+      "stepByStepSolution": [
+        "Convert both fractions to eighths: 1/4=2/8 and 3/4=6/8.",
+        "Find the halfway point between 2/8 and 6/8, which is 4/8.",
+        "Since 4/8 simplifies to 1/2, the fraction exactly halfway between 1/4 and 3/4 is 1/2."
+      ],
+      "commonMisconceptions": [
+        "Adding the numerators and denominators directly (1+3 over 4+4) instead of finding the true midpoint.",
+        "Not converting to a common denominator before finding the midpoint."
+      ],
+      "hints": [
+        "Convert both fractions to the same denominator (eighths) first.",
+        "Find the number exactly in between 2/8 and 6/8."
+      ],
+      "tags": [
+        "number_line",
+        "midpoint",
+        "equivalent_fractions"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_009",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "hard",
+      "questionText": "Two fractions, 5/8 and 3/4, are marked on the same number line. Which is further from 1, and by how much (as a fraction)?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5/8 is further from 1, by 1/8, since 3/4 (6/8) is 2/8 from 1, while 5/8 is 3/8 from 1"
+      ],
+      "stepByStepSolution": [
+        "Convert both fractions to eighths: 3/4=6/8 and 5/8 stays the same.",
+        "Find the distance from 1 for each: 1−6/8=2/8, and 1−5/8=3/8.",
+        "Since 3/8 is further than 2/8, 5/8 is further from 1, by a difference of 3/8−2/8=1/8."
+      ],
+      "commonMisconceptions": [
+        "Comparing the fractions directly to each other instead of their distance from 1.",
+        "Making an error converting 3/4 to eighths."
+      ],
+      "hints": [
+        "First find how far each fraction is from 1, using eighths for both.",
+        "Then compare those two 'distance from 1' fractions to find which is further, and by how much."
+      ],
+      "tags": [
+        "number_line",
+        "comparing_fractions",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M12_Y3_010",
+      "skillId": "M3N07_fractions_number_line",
+      "difficulty": "hard",
+      "questionText": "A number line from 0 to 2 is divided into eighths. What fraction (or mixed number) is marked at the 12th eighth mark from 0?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "12/8, which simplifies to 1 and 1/2 (1½)"
+      ],
+      "stepByStepSolution": [
+        "Each mark represents 1/8, so the 12th mark represents 12/8.",
+        "Since 12/8 is more than 1 whole (8/8), separate it into a whole number and a remaining fraction: 12/8=8/8+4/8.",
+        "This equals 1 whole and 4/8, which simplifies to 1 and 1/2."
+      ],
+      "commonMisconceptions": [
+        "Writing the answer only as 12/8 without simplifying to a mixed number.",
+        "Forgetting that the number line extends past 1, up to 2."
+      ],
+      "hints": [
+        "Since the number line goes past 1, this mark will be more than a whole.",
+        "Try splitting 12 eighths into a whole number of eighths (8/8) plus what's left over."
+      ],
+      "tags": [
+        "number_line",
+        "mixed_numbers",
+        "equivalent_fractions"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_001",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "easy",
+      "questionText": "A square has sides of 6 cm. What is its perimeter?",
+      "questionType": "short_answer",
+      "answerKey": "24 cm",
+      "stepByStepSolution": [
+        "A square has 4 equal sides.",
+        "Each side is 6 cm long.",
+        "Add all four sides together, or multiply: 6×4=24 cm."
+      ],
+      "commonMisconceptions": [
+        "Adding only two sides instead of all four.",
+        "Multiplying by the wrong number of sides."
+      ],
+      "hints": [
+        "Remember a square has 4 equal sides.",
+        "Multiply the length of one side by 4."
+      ],
+      "tags": [
+        "perimeter",
+        "squares"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_002",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "easy",
+      "questionText": "A rectangle has a length of 8 cm and a width of 3 cm. What is its perimeter?",
+      "questionType": "short_answer",
+      "answerKey": "22 cm",
+      "stepByStepSolution": [
+        "Add the length and width together: 8+3=11.",
+        "Double this amount, because a rectangle has two pairs of equal sides: 11×2.",
+        "The perimeter is 22 cm."
+      ],
+      "commonMisconceptions": [
+        "Adding the length and width once and forgetting to double it.",
+        "Confusing perimeter with area by multiplying length and width."
+      ],
+      "hints": [
+        "Remember a rectangle has two lengths and two widths.",
+        "Add the length and width, then double the total."
+      ],
+      "tags": [
+        "perimeter",
+        "rectangles"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_003",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "easy",
+      "questionText": "Which unit would you most likely use to measure the perimeter of a classroom whiteboard? A) millimetres   B) centimetres   C) kilometres",
+      "questionType": "multiple_choice",
+      "answerKey": "centimetres",
+      "stepByStepSolution": [
+        "Think about the size of a classroom whiteboard — it's roughly 1 to 2 metres long.",
+        "Millimetres would give an unnecessarily large number, and kilometres would be far too small a unit.",
+        "Centimetres are a sensible, practical unit for this size of object."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilometres because it 'sounds like a bigger, more proper' unit.",
+        "Choosing millimetres because it seems more precise, without thinking about practicality."
+      ],
+      "hints": [
+        "Think about roughly how long a whiteboard is in real life.",
+        "Choose the unit that gives a sensible, easy-to-use number for this size."
+      ],
+      "tags": [
+        "perimeter",
+        "units",
+        "measurement"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_004",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "medium",
+      "questionText": "A triangle has sides measuring 5 cm, 7 cm, and 9 cm. What is its perimeter?",
+      "questionType": "short_answer",
+      "answerKey": "21 cm",
+      "stepByStepSolution": [
+        "Add all three side lengths together: 5+7+9.",
+        "5+7=12, then 12+9=21.",
+        "The perimeter of the triangle is 21 cm."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add all three sides, especially if the shape looks like it might have equal sides.",
+        "Multiplying the sides instead of adding them."
+      ],
+      "hints": [
+        "Add up the lengths of all three sides.",
+        "There's no shortcut here since the sides are all different lengths — just add them all."
+      ],
+      "tags": [
+        "perimeter",
+        "triangles"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_005",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "medium",
+      "questionText": "A rectangular garden has a perimeter of 30 m. If its length is 9 m, what is its width?",
+      "questionType": "short_answer",
+      "answerKey": "6 m",
+      "stepByStepSolution": [
+        "Divide the perimeter by 2 to find the sum of the length and width: 30÷2=15.",
+        "Subtract the known length from this sum: 15−9.",
+        "This gives a width of 6 m."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the length directly from the full perimeter without dividing by 2 first.",
+        "Confusing which number is the length and which is the width."
+      ],
+      "hints": [
+        "First find what the length and width add up to by halving the perimeter.",
+        "Then subtract the known length from that sum to find the width."
+      ],
+      "tags": [
+        "perimeter",
+        "missing_side",
+        "rectangles"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_006",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "medium",
+      "questionText": "A regular pentagon (5 equal sides) has a perimeter of 45 cm. What is the length of one side? A) 5 cm   B) 9 cm   C) 15 cm",
+      "questionType": "multiple_choice",
+      "answerKey": "9 cm",
+      "stepByStepSolution": [
+        "A regular pentagon has 5 equal sides.",
+        "Divide the total perimeter by the number of sides: 45÷5.",
+        "Each side measures 9 cm."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the wrong number of sides, such as using 4 instead of 5.",
+        "Multiplying instead of dividing to find one side's length."
+      ],
+      "hints": [
+        "A regular pentagon has 5 equal sides — divide the perimeter by that number.",
+        "45÷5."
+      ],
+      "tags": [
+        "perimeter",
+        "regular_shapes",
+        "division"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_007",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "medium",
+      "questionText": "A rectangular sports field is 45 m long and 25 m wide. A runner jogs around the outside of the field twice. How far does the runner jog in total?",
+      "questionType": "short_answer",
+      "answerKey": "280 m",
+      "stepByStepSolution": [
+        "Find the perimeter of the field: 2×(45+25)=2×70=140 m.",
+        "Since the runner jogs around twice, multiply the perimeter by 2.",
+        "140×2=280 m in total."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to double the perimeter for the second lap.",
+        "Calculating area instead of perimeter."
+      ],
+      "hints": [
+        "First find the perimeter for one lap around the field.",
+        "Then double that distance because the runner does two laps."
+      ],
+      "tags": [
+        "perimeter",
+        "multi_step",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_008",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "hard",
+      "questionText": "An L-shaped room is made from a 6 m by 4 m rectangle with a 2 m by 2 m square notch cut out of one corner. Explain what happens to the perimeter when the notch is cut out, and give the L-shape's perimeter.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "The perimeter stays the same as the original rectangle, 20 m, because the two sides removed are replaced by two new sides of the same total length"
+      ],
+      "stepByStepSolution": [
+        "Start with the perimeter of the original rectangle: 2×(6+4)=20 m.",
+        "When a square notch is cut from a corner, the two sides removed are replaced by two new sides of the same combined length, so the perimeter often doesn't change.",
+        "This means the L-shaped room still has a perimeter of 20 m."
+      ],
+      "commonMisconceptions": [
+        "Assuming the perimeter must decrease because part of the shape was removed.",
+        "Trying to subtract the cut-out square's perimeter from the rectangle's perimeter."
+      ],
+      "hints": [
+        "Think about what happens to the two sides where the square is cut out — are they removed, or replaced by two shorter sides?",
+        "Compare the total length of the two 'new' sides created by the notch to the two sides they replaced."
+      ],
+      "tags": [
+        "perimeter",
+        "composite_shapes",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_009",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "hard",
+      "questionText": "A farmer wants to fence a rectangular paddock that is 60 m long and needs 200 m of fencing in total. What is the width of the paddock?",
+      "questionType": "short_answer",
+      "answerKey": "40 m",
+      "stepByStepSolution": [
+        "Divide the total fencing by 2 to find the sum of length and width: 200÷2=100.",
+        "Subtract the known length: 100−60.",
+        "This gives a width of 40 m."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the length from the full 200 m without halving first.",
+        "Confusing perimeter fencing with area coverage."
+      ],
+      "hints": [
+        "Halve the total fencing amount to find the combined length and width.",
+        "Then subtract the known length to find the missing width."
+      ],
+      "tags": [
+        "perimeter",
+        "missing_side",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M13_Y3_010",
+      "skillId": "M3M01_02_perimeter_intro",
+      "difficulty": "hard",
+      "questionText": "Two different rectangles both have a perimeter of 24 cm. Find two different possible pairs of length and width for these rectangles.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Sample answers: 10 cm x 2 cm, and 8 cm x 4 cm (accept any two different pairs that add to 12 cm)"
+      ],
+      "stepByStepSolution": [
+        "Since the perimeter is 24 cm, the length and width must add up to half of that: 24÷2=12 cm.",
+        "Choose any two numbers that add to 12, such as 10 and 2.",
+        "Choose a different pair, such as 8 and 4, to show there is more than one possible rectangle."
+      ],
+      "commonMisconceptions": [
+        "Choosing pairs of numbers that don't actually add up to 12.",
+        "Giving the same pair twice instead of two genuinely different rectangles."
+      ],
+      "hints": [
+        "First work out what the length and width must add up to.",
+        "Then think of two different pairs of numbers that give that same sum."
+      ],
+      "tags": [
+        "perimeter",
+        "rectangles",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_001",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "easy",
+      "questionText": "Does a square have line symmetry? If so, how many lines of symmetry does it have?",
+      "questionType": "short_answer",
+      "answerKey": "Yes, 4 lines of symmetry",
+      "stepByStepSolution": [
+        "Check if a fold line can be drawn so both halves match exactly.",
+        "A square can be folded vertically, horizontally, and along both diagonals, and each time the halves match.",
+        "This gives a total of 4 lines of symmetry."
+      ],
+      "commonMisconceptions": [
+        "Only counting the horizontal and vertical lines and forgetting the two diagonal lines.",
+        "Assuming all four-sided shapes have the same number of symmetry lines as a square."
+      ],
+      "hints": [
+        "Think about all the ways you could fold a square so both sides match exactly.",
+        "Don't forget to check the diagonal folds as well as the straight up-down and side-to-side ones."
+      ],
+      "tags": [
+        "symmetry",
+        "shapes"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_002",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "easy",
+      "questionText": "Which letter of the alphabet has a vertical line of symmetry? A) F   B) A   C) G",
+      "questionType": "multiple_choice",
+      "answerKey": "A",
+      "stepByStepSolution": [
+        "Imagine folding each letter down the middle.",
+        "For the letter A, both sides match perfectly when folded vertically.",
+        "F and G do not match when folded this way, so A is the correct answer."
+      ],
+      "commonMisconceptions": [
+        "Choosing a letter based on how it looks rather than testing the fold.",
+        "Confusing horizontal symmetry with vertical symmetry."
+      ],
+      "hints": [
+        "Imagine folding each letter exactly down the middle, top to bottom.",
+        "Which letter would have both halves match perfectly after folding?"
+      ],
+      "tags": [
+        "symmetry",
+        "letters"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_003",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "easy",
+      "questionText": "Name one object you might see at home or school that has a line of symmetry.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "a butterfly picture",
+        "a heart shape",
+        "a plate",
+        "a book"
+      ],
+      "stepByStepSolution": [
+        "Think of objects with two matching halves.",
+        "Picture folding the object down the middle to check if both sides match.",
+        "Objects like a heart, a plate, or a butterfly-shaped picture usually show clear symmetry."
+      ],
+      "commonMisconceptions": [
+        "Naming an object that looks similar on both sides but isn't actually an exact match.",
+        "Confusing symmetry with simply looking neat or tidy."
+      ],
+      "hints": [
+        "Think of an object where folding it in half would make both sides match exactly.",
+        "Round or heart-shaped objects are often good examples."
+      ],
+      "tags": [
+        "symmetry",
+        "real_world"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_004",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "medium",
+      "questionText": "A rectangle (not a square) has line symmetry. How many lines of symmetry does it have, and where are they?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2 lines of symmetry: one horizontal line through the middle, and one vertical line through the middle"
+      ],
+      "stepByStepSolution": [
+        "Try folding the rectangle vertically down the middle — both halves match.",
+        "Try folding it horizontally through the middle — both halves also match.",
+        "Diagonal folds do not match, so a rectangle has exactly 2 lines of symmetry."
+      ],
+      "commonMisconceptions": [
+        "Assuming a rectangle has 4 lines of symmetry like a square.",
+        "Including diagonal lines that don't actually create matching halves."
+      ],
+      "hints": [
+        "Try folding the rectangle in different ways and check if both halves match.",
+        "Diagonal folds won't work for a rectangle the way they do for a square."
+      ],
+      "tags": [
+        "symmetry",
+        "rectangles"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_005",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "medium",
+      "questionText": "A triangle has all three sides the same length (equilateral). How many lines of symmetry does it have?",
+      "questionType": "short_answer",
+      "answerKey": "3 lines of symmetry",
+      "stepByStepSolution": [
+        "An equilateral triangle has all three sides and angles equal.",
+        "A line of symmetry can be drawn from each corner to the middle of the opposite side.",
+        "Since there are 3 corners, there are 3 lines of symmetry."
+      ],
+      "commonMisconceptions": [
+        "Assuming a triangle can only have 1 line of symmetry, like some other triangles do.",
+        "Forgetting that all three corners can each form a line of symmetry in an equilateral triangle."
+      ],
+      "hints": [
+        "Think about drawing a line from each corner to the middle of the opposite side.",
+        "An equilateral triangle is special because all its sides and angles are equal — how many corners does it have?"
+      ],
+      "tags": [
+        "symmetry",
+        "triangles"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_006",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "medium",
+      "questionText": "Which shape has exactly 1 line of symmetry? A) a regular hexagon   B) an isosceles triangle (2 equal sides)   C) a circle",
+      "questionType": "multiple_choice",
+      "answerKey": "an isosceles triangle (2 equal sides)",
+      "stepByStepSolution": [
+        "A regular hexagon has 6 lines of symmetry, and a circle has infinite lines of symmetry.",
+        "An isosceles triangle has only one line of symmetry, running from its top point down to the middle of its base.",
+        "So the isosceles triangle is the shape with exactly 1 line of symmetry."
+      ],
+      "commonMisconceptions": [
+        "Assuming all triangles have the same number of lines of symmetry.",
+        "Not realising a circle has far more than 1 line of symmetry."
+      ],
+      "hints": [
+        "Think about how many ways each shape could be folded so both halves match exactly.",
+        "An isosceles triangle only matches itself when folded one particular way."
+      ],
+      "tags": [
+        "symmetry",
+        "triangles",
+        "comparing_shapes"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_007",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "medium",
+      "questionText": "Describe how you would complete the other half of a symmetrical butterfly shape, if you are given one wing and a vertical line of symmetry down the middle.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Draw the other half as a mirror image of the given half, making sure each point is the same distance from the line of symmetry on the opposite side"
+      ],
+      "stepByStepSolution": [
+        "Look at the shape of the wing you already have and note where its edges are.",
+        "For every point on the given half, mark a matching point the same distance away on the other side of the line of symmetry.",
+        "Connect these matching points to draw the mirror-image half of the butterfly."
+      ],
+      "commonMisconceptions": [
+        "Drawing a similar but not exact mirror image, resulting in unequal-looking wings.",
+        "Placing the new half at the wrong distance from the line of symmetry."
+      ],
+      "hints": [
+        "Every point on your new half should be the same distance from the line of symmetry as the matching point on the original half.",
+        "Think of the line of symmetry like a mirror — what you draw should look like a reflection."
+      ],
+      "tags": [
+        "symmetry",
+        "creating_shapes"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_008",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "hard",
+      "questionText": "A regular hexagon (6 equal sides) has how many lines of symmetry? Explain how you could work this out without just guessing.",
+      "questionType": "short_answer",
+      "answerKey": "6 lines of symmetry",
+      "stepByStepSolution": [
+        "For a regular shape, the number of lines of symmetry usually matches the number of equal sides.",
+        "A hexagon has 6 equal sides.",
+        "So a regular hexagon has 6 lines of symmetry, found by connecting opposite corners and opposite edge midpoints."
+      ],
+      "commonMisconceptions": [
+        "Assuming the number of lines of symmetry is unrelated to the number of sides.",
+        "Undercounting by forgetting lines that go corner-to-corner as well as edge-to-edge."
+      ],
+      "hints": [
+        "For a regular shape, the number of sides often tells you the number of lines of symmetry.",
+        "Try to picture lines connecting opposite corners, as well as lines connecting the midpoints of opposite sides."
+      ],
+      "tags": [
+        "symmetry",
+        "regular_shapes",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_009",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "hard",
+      "questionText": "A student says the letter 'S' has a line of symmetry because the top and bottom loops look similar. Explain why this reasoning is incorrect.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "The letter S has no line of symmetry, because no straight fold makes both halves match exactly — it actually has rotational symmetry instead, since it looks the same after being rotated 180 degrees"
+      ],
+      "stepByStepSolution": [
+        "Line symmetry requires a straight fold line where both halves are an exact mirror image of each other.",
+        "Try folding the letter S vertically, horizontally, or diagonally — none of these folds make the two sides match.",
+        "The S actually shows rotational symmetry, since it looks the same when rotated 180 degrees, which is different from line symmetry."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'looking similar' or having a balanced shape with true line (mirror) symmetry.",
+        "Mixing up rotational symmetry with line symmetry."
+      ],
+      "hints": [
+        "Try imagining different fold lines on the letter S — do any of them create two matching halves?",
+        "Think about what happens if you turn the S upside down instead of folding it — is that a different kind of symmetry?"
+      ],
+      "tags": [
+        "symmetry",
+        "misconceptions",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M14_Y3_010",
+      "skillId": "M3SP01_symmetry",
+      "difficulty": "hard",
+      "questionText": "A shape is made by joining two identical right-angled triangles along their longest side to form a rectangle. Does the resulting rectangle have the same lines of symmetry as a single right-angled triangle? Explain.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "No — a scalene right-angled triangle usually has no lines of symmetry, but the rectangle formed has 2 lines of symmetry"
+      ],
+      "stepByStepSolution": [
+        "A general right-angled triangle (with three different side lengths) has no lines of symmetry, because no single fold makes its two halves match.",
+        "When two identical right-angled triangles are joined along their longest side, they form a rectangle.",
+        "A rectangle has 2 lines of symmetry, which is different from the 0 lines of symmetry in the original triangle."
+      ],
+      "commonMisconceptions": [
+        "Assuming the new combined shape must have the same symmetry as the original triangle.",
+        "Forgetting to check whether the triangle itself has any symmetry before comparing."
+      ],
+      "hints": [
+        "First check how many lines of symmetry a plain right-angled triangle has on its own.",
+        "Then think about the shape created by joining two of them together — does joining them create new symmetry?"
+      ],
+      "tags": [
+        "symmetry",
+        "composite_shapes",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_001",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "easy",
+      "questionText": "Maya buys 3 packets of stickers with 8 stickers in each packet. She then gives 5 stickers to her friend. How many stickers does she have left?",
+      "questionType": "short_answer",
+      "answerKey": "19",
+      "stepByStepSolution": [
+        "Find the total number of stickers Maya starts with: 3×8=24.",
+        "Subtract the stickers she gives away: 24−5.",
+        "She has 19 stickers left."
+      ],
+      "commonMisconceptions": [
+        "Subtracting before multiplying, changing the order of operations needed.",
+        "Forgetting to multiply the packets by the stickers per packet first."
+      ],
+      "hints": [
+        "First work out how many stickers Maya has in total before giving any away.",
+        "Then subtract the 5 stickers she gives to her friend."
+      ],
+      "tags": [
+        "multi_step",
+        "multiplication",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_002",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "easy",
+      "questionText": "A baker makes 40 muffins. She sells 25 of them, then bakes 12 more. How many muffins does she have now?",
+      "questionType": "short_answer",
+      "answerKey": "27",
+      "stepByStepSolution": [
+        "Subtract the muffins sold from the total: 40−25=15.",
+        "Add the new muffins baked: 15+12.",
+        "The baker now has 27 muffins."
+      ],
+      "commonMisconceptions": [
+        "Adding the 12 muffins before subtracting the 25 sold, changing the order of events.",
+        "Forgetting one of the two steps."
+      ],
+      "hints": [
+        "Work through the problem in the order things happened: selling first, then baking more.",
+        "First subtract, then add."
+      ],
+      "tags": [
+        "multi_step",
+        "addition",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_003",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "medium",
+      "questionText": "A shop has 96 apples. They are packed equally into 8 bags. If 3 bags are sold, how many apples were sold?",
+      "questionType": "short_answer",
+      "answerKey": "36",
+      "stepByStepSolution": [
+        "Find how many apples are in each bag: 96÷8=12.",
+        "Multiply this by the number of bags sold: 12×3.",
+        "A total of 36 apples were sold."
+      ],
+      "commonMisconceptions": [
+        "Multiplying before dividing, which gives an incorrect total.",
+        "Subtracting the bags sold from the total bags instead of finding the apples sold."
+      ],
+      "hints": [
+        "First find out how many apples are in just one bag.",
+        "Then multiply that amount by the number of bags sold."
+      ],
+      "tags": [
+        "multi_step",
+        "division",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_004",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "medium",
+      "questionText": "Tom has $50. He buys a $15 book and then earns $8 for washing the car. How much money does he have now?",
+      "questionType": "short_answer",
+      "answerKey": "$43",
+      "stepByStepSolution": [
+        "Subtract the cost of the book from his starting money: $50−$15=$35.",
+        "Add the money he earned: $35+$8.",
+        "Tom now has $43."
+      ],
+      "commonMisconceptions": [
+        "Doing the steps out of order and losing track of the running total.",
+        "Forgetting one of the two steps and only doing the subtraction or the addition."
+      ],
+      "hints": [
+        "First subtract the cost of the book from his starting amount.",
+        "Then add the money he earned afterwards."
+      ],
+      "tags": [
+        "multi_step",
+        "money"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_005",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "medium",
+      "questionText": "A classroom has 6 tables with 4 chairs at each table. If 2 more chairs are added to the room, how many chairs are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "26",
+      "stepByStepSolution": [
+        "Find the total number of chairs at the tables: 6×4=24.",
+        "Add the 2 extra chairs: 24+2.",
+        "There are 26 chairs in total."
+      ],
+      "commonMisconceptions": [
+        "Adding the 2 chairs to the number of tables instead of the total chair count.",
+        "Multiplying the wrong numbers together, such as 6×2."
+      ],
+      "hints": [
+        "First find the total number of chairs already at the tables.",
+        "Then add the 2 extra chairs to that total."
+      ],
+      "tags": [
+        "multi_step",
+        "multiplication",
+        "addition"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_006",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "medium",
+      "questionText": "Which set of operations, in order, would solve this problem? 'A farmer has 84 eggs. He packs them into boxes of 6. He then sells 10 boxes. How many boxes are left?' A) divide, then subtract   B) subtract, then divide   C) multiply, then subtract",
+      "questionType": "multiple_choice",
+      "answerKey": "divide, then subtract",
+      "stepByStepSolution": [
+        "First, divide the total eggs by the number per box to find how many boxes there are: 84÷6.",
+        "Then subtract the boxes sold from this total.",
+        "So the correct order of operations is divide, then subtract."
+      ],
+      "commonMisconceptions": [
+        "Trying to subtract the boxes sold from the number of eggs directly, without first dividing.",
+        "Choosing multiplication because boxes and eggs are being combined, without thinking through the actual steps."
+      ],
+      "hints": [
+        "Think about what you need to find first before you can subtract the boxes sold.",
+        "You need to know the total number of boxes before you can take any away."
+      ],
+      "tags": [
+        "multi_step",
+        "order_of_operations",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_007",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "medium",
+      "questionText": "A school orders 120 pencils, shared equally between 4 classes. Each class then gives away 5 pencils to a neighbouring school. How many pencils does each class have left?",
+      "questionType": "short_answer",
+      "answerKey": "25",
+      "stepByStepSolution": [
+        "Find how many pencils each class receives: 120÷4=30.",
+        "Subtract the pencils given away: 30−5.",
+        "Each class has 25 pencils left."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 5 from 120 before dividing, which changes the meaning of the problem.",
+        "Dividing by the wrong number of classes."
+      ],
+      "hints": [
+        "First work out how many pencils each class starts with.",
+        "Then subtract the 5 pencils each class gives away."
+      ],
+      "tags": [
+        "multi_step",
+        "division",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_008",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "hard",
+      "questionText": "A cinema has 15 rows of seats with 12 seats in each row. If 156 tickets have already been sold, how many seats are still empty?",
+      "questionType": "short_answer",
+      "answerKey": "24",
+      "stepByStepSolution": [
+        "Find the total number of seats in the cinema: 15×12=180.",
+        "Subtract the tickets already sold: 180−156.",
+        "There are 24 empty seats remaining."
+      ],
+      "commonMisconceptions": [
+        "Subtracting before multiplying, using the wrong total for seats.",
+        "Making an arithmetic error in the multiplication step due to the larger numbers involved."
+      ],
+      "hints": [
+        "First calculate the total number of seats using multiplication.",
+        "Then subtract the number of tickets already sold from that total."
+      ],
+      "tags": [
+        "multi_step",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_009",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "hard",
+      "questionText": "A charity collects 245 cans in week one and 189 cans in week two. The cans are then packed equally into 7 boxes for delivery. How many cans go into each box?",
+      "questionType": "short_answer",
+      "answerKey": "62",
+      "stepByStepSolution": [
+        "Add the cans collected over both weeks: 245+189=434.",
+        "Divide this total by the number of boxes: 434÷7.",
+        "Each box receives 62 cans."
+      ],
+      "commonMisconceptions": [
+        "Dividing before adding the two weekly totals together.",
+        "Making an addition error with the larger 3-digit numbers before dividing."
+      ],
+      "hints": [
+        "First add together the cans from both weeks to find the total.",
+        "Then divide that total by the number of boxes."
+      ],
+      "tags": [
+        "multi_step",
+        "addition",
+        "division"
+      ]
+    },
+    {
+      "id": "T3M15_Y3_010",
+      "skillId": "M3N04_06_multi_step_word_problems",
+      "difficulty": "hard",
+      "questionText": "A theatre sells adult tickets for $18 and child tickets for $9. If a family buys 2 adult tickets and 3 child tickets, then pays with a $100 note, how much change do they receive?",
+      "questionType": "short_answer",
+      "answerKey": "$37",
+      "stepByStepSolution": [
+        "Find the cost of the adult tickets: 2×$18=$36.",
+        "Find the cost of the child tickets: 3×$9=$27, then add to the adult total: $36+$27=$63.",
+        "Subtract this from the $100 note: $100−$63=$37 change."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both ticket totals together before subtracting from $100.",
+        "Multiplying the wrong quantities, such as using 3 for the adult tickets instead of 2."
+      ],
+      "hints": [
+        "Find the total cost of the adult tickets and the child tickets separately first.",
+        "Add those two totals together, then subtract from $100."
+      ],
+      "tags": [
+        "multi_step",
+        "money"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_001",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "easy",
+      "questionText": "Find the missing number: 15 + ___ = 40",
+      "questionType": "short_answer",
+      "answerKey": "25",
+      "stepByStepSolution": [
+        "To find the missing number, use the inverse operation of addition, which is subtraction.",
+        "Subtract 15 from 40: 40−15.",
+        "The missing number is 25."
+      ],
+      "commonMisconceptions": [
+        "Adding 15 and 40 together instead of subtracting.",
+        "Subtracting in the wrong order, such as 15−40."
+      ],
+      "hints": [
+        "Think about the opposite of addition to find the missing number.",
+        "Subtract 15 from 40."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "addition"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_002",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "easy",
+      "questionText": "Find the missing number: ___ − 12 = 8",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "Use the inverse operation of subtraction, which is addition.",
+        "Add 8 and 12 together: 8+12.",
+        "The missing number is 20."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 12 from 8 instead of adding, misreading the direction of the inverse operation.",
+        "Guessing a number without checking it works in the original equation."
+      ],
+      "hints": [
+        "Think about the opposite of subtraction to find the missing number.",
+        "Add 8 and 12 together."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_003",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "easy",
+      "questionText": "What is the missing number in 6 x ___ = 42? A) 6   B) 7   C) 8",
+      "questionType": "multiple_choice",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Use the inverse operation of multiplication, which is division.",
+        "Divide 42 by 6: 42÷6.",
+        "The missing number is 7."
+      ],
+      "commonMisconceptions": [
+        "Trying to add or subtract instead of using division to undo multiplication.",
+        "Miscounting the multiples of 6 when checking the answer."
+      ],
+      "hints": [
+        "Think about the opposite of multiplication to find the missing number.",
+        "Divide 42 by 6."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_004",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "medium",
+      "questionText": "Find the missing number: 84 ÷ ___ = 12",
+      "questionType": "short_answer",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Use the inverse operation of division, which is multiplication.",
+        "Since 84÷___=12, think of it as 12×___=84.",
+        "Divide 84 by 12 to find the missing number: 84÷12=7."
+      ],
+      "commonMisconceptions": [
+        "Multiplying 84 by 12 instead of dividing.",
+        "Confusing which number is being divided and which is the divisor."
+      ],
+      "hints": [
+        "Rewrite the equation as a multiplication problem: 12 times what number equals 84?",
+        "Divide 84 by 12 to check your answer."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "division"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_005",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "medium",
+      "questionText": "Find the missing number: 235 − ___ = 158",
+      "questionType": "short_answer",
+      "answerKey": "77",
+      "stepByStepSolution": [
+        "Use the inverse operation of subtraction, which is addition, or subtract directly.",
+        "Subtract 158 from 235: 235−158.",
+        "The missing number is 77."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 235 from 158 instead of the other way around.",
+        "Making a regrouping error with the larger 3-digit numbers."
+      ],
+      "hints": [
+        "Think about what number, when subtracted from 235, leaves 158.",
+        "Try subtracting 158 from 235 to find the missing number."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_006",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "medium",
+      "questionText": "Which number makes this equation true? ___ ÷ 9 = 6 A) 15   B) 54   C) 63",
+      "questionType": "multiple_choice",
+      "answerKey": "54",
+      "stepByStepSolution": [
+        "Use the inverse operation of division, which is multiplication.",
+        "Multiply 9 by 6: 9×6.",
+        "The missing number is 54."
+      ],
+      "commonMisconceptions": [
+        "Adding 9 and 6 together instead of multiplying.",
+        "Dividing 6 by 9 instead of multiplying them."
+      ],
+      "hints": [
+        "Think about the opposite of division to find the missing number.",
+        "Multiply 9 by 6."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "division"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_007",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "medium",
+      "questionText": "Find the missing number: 7 x ___ = 91",
+      "questionType": "short_answer",
+      "answerKey": "13",
+      "stepByStepSolution": [
+        "Use the inverse operation of multiplication, which is division.",
+        "Divide 91 by 7: 91÷7.",
+        "The missing number is 13."
+      ],
+      "commonMisconceptions": [
+        "Guessing a small number without actually dividing to check.",
+        "Making an error when dividing a 2-digit number by 7."
+      ],
+      "hints": [
+        "Think about the opposite of multiplication to find the missing number.",
+        "Divide 91 by 7."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_008",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "hard",
+      "questionText": "Find the missing number: (___ + 15) x 3 = 60",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Undo the multiplication first, since it was the last operation applied: 60÷3=20.",
+        "Now undo the addition: 20−15.",
+        "The missing number is 5."
+      ],
+      "commonMisconceptions": [
+        "Undoing the operations in the wrong order, such as subtracting 15 before dividing by 3.",
+        "Forgetting that the brackets mean the addition happens before the multiplication in the original equation."
+      ],
+      "hints": [
+        "Work backwards through the equation, undoing the last operation first.",
+        "Since the last step was multiplying by 3, start by dividing 60 by 3."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "two_step_equation"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_009",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "hard",
+      "questionText": "Find the missing number: 100 − (___ x 4) = 36",
+      "questionType": "short_answer",
+      "answerKey": "16",
+      "stepByStepSolution": [
+        "Work out what (___ x 4) must equal: 100−36=64.",
+        "Now undo the multiplication: 64÷4.",
+        "The missing number is 16."
+      ],
+      "commonMisconceptions": [
+        "Trying to divide 100 by 4 directly instead of first isolating the bracket.",
+        "Subtracting in the wrong order, such as 36−100."
+      ],
+      "hints": [
+        "First work out what value is inside the brackets by using subtraction.",
+        "Once you know what (___ x 4) equals, divide by 4 to find the missing number."
+      ],
+      "tags": [
+        "missing_number",
+        "inverse_operations",
+        "two_step_equation"
+      ]
+    },
+    {
+      "id": "T3M16_Y3_010",
+      "skillId": "M3A03_missing_number_equations",
+      "difficulty": "hard",
+      "questionText": "A student says that in the equation ___ − 25 = 60, the missing number must be smaller than 60 because you are subtracting. Explain why this reasoning is incorrect, and find the correct missing number.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "The reasoning is incorrect because the missing number must actually be larger than 60, since it needs to still leave 60 after 25 is taken away; the correct missing number is 85"
+      ],
+      "stepByStepSolution": [
+        "Since subtracting 25 from the missing number leaves 60, the missing number must have started out bigger than 60 to have anything left over after subtracting.",
+        "Use the inverse operation, addition, to find it: 60+25.",
+        "The correct missing number is 85, showing the student's reasoning about the size was backwards."
+      ],
+      "commonMisconceptions": [
+        "Assuming subtraction always makes the missing number smaller than the result.",
+        "Not testing the reasoning by actually solving the equation."
+      ],
+      "hints": [
+        "Think about whether the starting number needs to be bigger or smaller than 60 to have 60 left after subtracting 25.",
+        "Use addition to undo the subtraction: add 25 to 60."
+      ],
+      "tags": [
+        "missing_number",
+        "reasoning"
+      ]
+    }
+  ]
+}

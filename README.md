@@ -54,10 +54,11 @@ cp .env.example .env
 # 2. Create tables
 npm run db:migrate
 
-# 3. Seed Year 3 Term 1 Maths & English curriculum (skills + weekly sequence)
+# 3. Seed the full Year 3 Maths & English curriculum (skills + weekly sequence,
+#    Terms 1-4, Weeks 1-10)
 npm run db:seed
 
-# 4. Seed a demo parent/child + a small sample item bank (Week 1 skills only)
+# 4. Seed a demo parent/child + the full item bank (all 4 terms, both subjects)
 npm run db:seed:demo
 
 # 5. Run the app
@@ -105,18 +106,20 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   needs an email service and is still a next step.
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
   their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Now
-  clamped to term 1 / **week 10** (`MAX_AVAILABLE_WEEK`) — **all of Term 1 is complete**.
-  `MAX_AVAILABLE_TERM` stays at 1 until Terms 2-4 curriculum + items exist.
-- **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings,
-  all 10 weeks' sequence entries) from the project docs; item banks for **all of Term 1,
-  Weeks 1-10** (562 items total across 55 skills — 8 original hand-written samples + 554
-  generated per the project's item-generation prompt templates, pending human review).
-  `multi_part` items (object-valued answer keys) and items tagged `open_response` are stored
-  but intentionally excluded from live sessions by `sessionBuilder.ts`, since the MVP grader
-  (`src/lib/grading.ts`) only reliably auto-marks single-value `short_answer` /
-  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2-10 banks are
-  entirely `short_answer`/`multiple_choice` so all of their items are usable in live
-  sessions immediately.
+  clamped to **term 4 / week 10** (`MAX_AVAILABLE_TERM`/`MAX_AVAILABLE_WEEK`) — **the full
+  Year 3 curriculum is complete**; a child enrolled long enough progresses through all four
+  terms and stays clamped at the end of Year 3 rather than looping or erroring.
+- **Seed data**: the full Year 3 curriculum (151 skills across both subjects, VIC+NSW
+  mappings, all 4 terms x 10 weeks of sequence entries) from the project docs; item banks for
+  **all of Terms 1-4, Weeks 1-10** (1,522 items total across 151 skills — 8 original
+  hand-written samples + 1,514 generated per the project's item-generation prompt templates,
+  pending human review). `multi_part` items (object-valued answer keys) and items tagged
+  `open_response` are stored but intentionally excluded from live sessions by
+  `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
+  single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s
+  `_note`. Every other bank (Weeks 2-10 and all of Terms 2-4) is entirely
+  `short_answer`/`multiple_choice` so all of their items are usable in live sessions
+  immediately.
 
 ## Curriculum content: Week 2
 
@@ -275,6 +278,61 @@ evaluative comprehension, case-insensitive multiple-choice word problems, a deci
 answer, and passage-based multimodal reading); a full page/API regression pass and a
 production `next build` both completed cleanly with zero ID collisions across all 562 items.
 
+## Curriculum content: Terms 2-4 (full Year 3 complete)
+
+Chandana asked to cover the rest of the year ("full term 2-4 at once") in one batch, rather
+than term by term. Given the scale (~960 items across 96 new skills), item-bank authorship
+was delegated to 6 parallel subagents — one per Term x Subject combination — each fully
+scoped with the exact item schema, the multiple-choice-answer-embedded-in-questionText rule
+(this project's fix for the earlier "extra positional argument" corruption bug), and a
+guaranteed-unique ID prefix (`T2M`/`T2E`/`T3M`/`T3E`/`T4M`/`T4E`). A further 6 subagents then
+authored the matching curriculum skill-definition objects (AC v9.0 codes, VIC Curriculum 2.0
+phrasing, NSW Stage 2 syllabus outcomes), grounded against the actual item content. All 12
+outputs were independently re-validated (not just trusted) before integration: item schema,
+tag/hint/misconception counts, ID uniqueness within and across all files and against the
+existing 562 Term 1 item IDs, and — critically — every multiple-choice `answerKey` checked
+against its embedded options via the same regex cross-check used for every prior week. Two of
+the six item-bank agents had left a stray `"B) "`-style letter prefix on 68 `answerKey`
+values (`term3-maths` and `term4-maths`); this was caught by the re-validation pass (not
+self-reported) and fixed by stripping the prefix so answers again match the exact-option-text
+convention `src/lib/grading.ts` relies on.
+
+- `src/db/seed/term2-maths-item-bank.json`, `term2-english-item-bank.json`,
+  `term3-maths-item-bank.json`, `term3-english-item-bank.json`, `term4-maths-item-bank.json`,
+  `term4-english-item-bank.json` — 160 items each (960 total), 16 skills each (96 total),
+  10 items per skill.
+- `src/db/seed/year3-curriculum.json` — extended with all 96 new skill-definition objects
+  (`subjects.maths.skills` / `subjects.english.skills`) and new `sequence["2"]`,
+  `sequence["3"]`, `sequence["4"]` entries (weeks 1-6 introduce 2 new skills each, weeks 7-10
+  introduce 1 each — 16 skills/term/subject over 10 weeks).
+- The 4 AC v9.0 content-descriptor gaps identified during Term 1 are now filled and deepened
+  across the year: `AC9M3M03` (time relationships → Term 2's `M3M03_time_relationships` →
+  Term 3's duration word problems → Term 4's timetables/calendars), `AC9M3M06` (money
+  dollars/cents → Term 2's `M3M06_money_dollars_cents` → Term 4's change/budgets),
+  `AC9E3LY04` (reading fluency → Term 2 → Term 3's self-correction strategies → Term 4's
+  fluent reading range), `AC9E3LY05` (listening/viewing comprehension → Term 2 → Term 3's
+  viewing comprehension → Term 4's oral presentation).
+- New Term 2/3 skills were designed only after cross-referencing all 55 existing Term 1
+  skill IDs/AC codes, to avoid duplicating content the original syllabus-plan doc had
+  proposed for "Term 2" that turned out to already be covered by Term 1 Weeks 7-10.
+- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_TERM` is now 4 (`MAX_AVAILABLE_WEEK` stays 10,
+  since every term has 10 weeks) — a child who has been enrolled long enough now progresses
+  through the whole Year 3 curriculum and clamps at Term 4 Week 10 rather than Term 1.
+- `src/db/seed/seed-demo.ts` now loads all 16 item-bank files (10 Term 1 + 6 Terms 2-4).
+
+**Verified**: `npx tsc --noEmit` clean; `db:migrate`/`db:seed`/`db:seed:demo` all ran clean in
+the sandbox (73 maths skills, 78 english skills, 80 sequence entries across 4 terms x 10
+weeks x 2 subjects, 1,522 items total, zero ID collisions); backdated test children landing
+in Term 2 Week 1, Term 3 Week 1, Term 4 Week 1, and Term 4 Week 10 each correctly received
+that term/week's new-skill content for both subjects; a child backdated 200 weeks correctly
+clamped to Term 4 Week 10 instead of erroring or returning an empty session; grading verified
+across the 4 gap-filling skills plus a random sample of 30 multiple-choice items (answerKey
+matches an embedded option) plus all multi-value/array-answerKey items in the whole bank
+(342 items) — 163 checks, 0 failures; a full page/API regression pass (`/`, `/api/children`,
+`/api/dashboard`, `/api/session/today` for both subjects, `/api/reviews` correct + incorrect
+submissions against new Term 2 items, `/api/gamification`, `/api/reports/monthly`) and a
+production `next build` both completed cleanly.
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -286,10 +344,15 @@ already touches nearly the entire year's content descriptor set (21/23 Maths, 26
 plus 4 small content-descriptor gaps and finishing Term 1's remaining item banks first. The
 full plan — term-by-term depth progression tables for every strand, the 4 gaps to fill, and
 the topic-assignment feature's proposed shape — is written up in this project's
-`claude/year3-full-syllabus-plan.md` doc. Current status: **all of Term 1 (Weeks 1-10) is
-now complete** — 55 skills, 562 items, both subjects; the Terms 2-4 curriculum mapping and
-the 4 content-descriptor gaps (`AC9M3M03`, `AC9M3M06`, `AC9E3LY04`, `AC9E3LY05`) are still to
-come.
+`claude/year3-full-syllabus-plan.md` doc. Current status: **the full Year 3 curriculum
+(Terms 1-4, Weeks 1-10) is now complete** — 151 skills, 1,522 items, both subjects; the 4
+content-descriptor gaps (`AC9M3M03`, `AC9M3M06`, `AC9E3LY04`, `AC9E3LY05`) are filled and
+deepened across the year (see "Curriculum content: Terms 2-4" above). The Terms 2-4 skill
+design differs in some details from that doc's original depth-progression table (a few
+proposed "Term 2" skills turned out to already be covered by Term 1 Weeks 7-10, so genuinely
+new/deepened skills were substituted) but keeps its spirit: deepen existing strands, fill the
+4 gaps, and land on ~16 new skills per term per subject. The topic-assignment ("focus topic")
+feature described in that doc is still not built — see "Explicit next steps" below.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -384,10 +447,14 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Real item banks — **all of Term 1 is now done** (562 items across 55 skills, Weeks 1-10),
-  and all of it still needs human review per the project's QA process before it's
-  "production" content. Terms 2-4 need genuine new curriculum-design work first (see
-  `claude/year3-full-syllabus-plan.md` in the project) before their item banks can start.
+- Real item banks — **the full Year 3 curriculum is now done** (1,522 items across 151
+  skills, Terms 1-4, Weeks 1-10, both subjects), and all of it still needs human review per
+  the project's QA process before it's "production" content. Year 4+ content is not yet
+  designed.
+- The parent-facing "assign a focus topic" feature (browse-by-topic practice alongside the
+  automatic daily session) described in `claude/year3-full-syllabus-plan.md` — designed but
+  not built: a new route, a `GET /api/topics` endpoint, and a session-builder variant that
+  takes an explicit `skillId`.
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.

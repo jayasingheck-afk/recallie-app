@@ -20,6 +20,12 @@ import week7ItemBank from "./week7-item-bank.json";
 import week8ItemBank from "./week8-item-bank.json";
 import week9ItemBank from "./week9-item-bank.json";
 import week10ItemBank from "./week10-item-bank.json";
+import term2MathsItemBank from "./term2-maths-item-bank.json";
+import term2EnglishItemBank from "./term2-english-item-bank.json";
+import term3MathsItemBank from "./term3-maths-item-bank.json";
+import term3EnglishItemBank from "./term3-english-item-bank.json";
+import term4MathsItemBank from "./term4-maths-item-bank.json";
+import term4EnglishItemBank from "./term4-english-item-bank.json";
 
 const DEMO_PARENT_ID = "demo_parent_1";
 const DEMO_CHILD_ID = "demo_child_1";
@@ -132,6 +138,12 @@ async function main() {
   await seedItemBank("week8-item-bank.json", week8ItemBank.items as SeedItem[]);
   await seedItemBank("week9-item-bank.json", week9ItemBank.items as SeedItem[]);
   await seedItemBank("week10-item-bank.json", week10ItemBank.items as SeedItem[]);
+  await seedItemBank("term2-maths-item-bank.json", term2MathsItemBank.items as SeedItem[]);
+  await seedItemBank("term2-english-item-bank.json", term2EnglishItemBank.items as SeedItem[]);
+  await seedItemBank("term3-maths-item-bank.json", term3MathsItemBank.items as SeedItem[]);
+  await seedItemBank("term3-english-item-bank.json", term3EnglishItemBank.items as SeedItem[]);
+  await seedItemBank("term4-maths-item-bank.json", term4MathsItemBank.items as SeedItem[]);
+  await seedItemBank("term4-english-item-bank.json", term4EnglishItemBank.items as SeedItem[]);
   console.log("Demo seed complete.");
   process.exit(0);
 }

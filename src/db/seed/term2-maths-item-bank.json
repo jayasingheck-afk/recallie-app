@@ -1,0 +1,4273 @@
+{
+  "_note": "Year 3 Term 2 Maths item bank (Australian Curriculum v9.0): 16 skills x 10 items covering place value, time, multiplication, money, mental strategies, 3D shapes, mass/capacity, data and graphing, fractions, chance, fact families, choosing units, estimation, and grid references.",
+  "items": [
+    {
+      "id": "T2M01_Y3_001",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "easy",
+      "questionText": "Work out 245 + 138.",
+      "questionType": "short_answer",
+      "answerKey": "383",
+      "stepByStepSolution": [
+        "Add the ones: 5 + 8 = 13, so write 3 and carry 1 ten.",
+        "Add the tens: 4 + 3 + 1 (carried) = 8.",
+        "Add the hundreds: 2 + 1 = 3, giving 383."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry the extra ten after adding the ones.",
+        "Adding the digits in the wrong column (e.g. mixing up tens and hundreds)."
+      ],
+      "hints": [
+        "Line up the ones, tens and hundreds columns first.",
+        "Start with the ones column: 5 + 8, and remember to carry."
+      ],
+      "tags": [
+        "addition",
+        "place_value",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_002",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "easy",
+      "questionText": "Work out 500 - 267.",
+      "questionType": "short_answer",
+      "answerKey": "233",
+      "stepByStepSolution": [
+        "Since there are 0 tens and 0 ones in 500, regroup a hundred into 10 tens, and a ten into 10 ones.",
+        "Subtract the ones: 10 - 7 = 3. Subtract the tens: 9 - 6 = 3.",
+        "Subtract the hundreds: 4 - 2 = 2, giving 233."
+      ],
+      "commonMisconceptions": [
+        "Trying to subtract 7 from 0 without regrouping first.",
+        "Regrouping only one place value when two are needed."
+      ],
+      "hints": [
+        "You can't take 7 away from 0, so you'll need to regroup.",
+        "Think of 500 as 4 hundreds, 9 tens and 10 ones."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_003",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "easy",
+      "questionText": "What is 1,000 more than 2,345?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "3345",
+        "3,345"
+      ],
+      "stepByStepSolution": [
+        "Look at the thousands digit in 2,345, which is 2.",
+        "Add 1 to the thousands digit: 2 + 1 = 3.",
+        "Keep the other digits the same, giving 3,345."
+      ],
+      "commonMisconceptions": [
+        "Adding 1,000 to the wrong place value column.",
+        "Changing more digits than just the thousands digit."
+      ],
+      "hints": [
+        "Only the thousands digit needs to change.",
+        "2 thousands plus 1 more thousand is how many thousands?"
+      ],
+      "tags": [
+        "place_value",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_004",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "medium",
+      "questionText": "Work out 1,367 + 2,845.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "4212",
+        "4,212"
+      ],
+      "stepByStepSolution": [
+        "Add the ones: 7 + 5 = 12, write 2 and carry 1.",
+        "Add the tens and hundreds, carrying each time it's needed: 6+4+1=11 (write 1, carry 1), 3+8+1=12 (write 2, carry 1).",
+        "Add the thousands: 1+2+1=4, giving 4,212."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry across more than one column.",
+        "Losing track of a carried digit partway through."
+      ],
+      "hints": [
+        "Work from the ones column and carry any extra ten each time.",
+        "Write the carried digits above the next column so you don't forget them."
+      ],
+      "tags": [
+        "addition",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_005",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "medium",
+      "questionText": "Work out 6,203 - 3,458.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2745",
+        "2,745"
+      ],
+      "stepByStepSolution": [
+        "Regroup to subtract the ones: 3 becomes 13 after borrowing from the tens.",
+        "Continue regrouping across the tens, hundreds and thousands as needed.",
+        "Subtract each column carefully to get 2,745."
+      ],
+      "commonMisconceptions": [
+        "Stopping regrouping after only one column when several are needed.",
+        "Subtracting the smaller digit from the larger digit regardless of position."
+      ],
+      "hints": [
+        "You'll need to regroup more than once because of the zero in the tens place.",
+        "Think of 6,203 as 6 thousands, 1 hundred, 9 tens and 13 ones."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_006",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "medium",
+      "questionText": "The Lightning Ridge library has 4,250 books. On Tuesday, 1,876 books were borrowed. How many books are still in the library?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2374",
+        "2,374"
+      ],
+      "stepByStepSolution": [
+        "This is a subtraction problem: 4,250 - 1,876.",
+        "Regroup across the columns as needed and subtract carefully.",
+        "The answer is 2,374 books still in the library."
+      ],
+      "commonMisconceptions": [
+        "Adding the numbers instead of subtracting.",
+        "Making a regrouping error partway through the subtraction."
+      ],
+      "hints": [
+        "Think about whether the number of books goes up or down.",
+        "Set up 4,250 - 1,876 in columns and regroup where needed."
+      ],
+      "tags": [
+        "word_problem",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_007",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "medium",
+      "questionText": "Which number sentence shows the correct regrouping when working out 532 - 268? A) 5 hundreds, 3 tens, 2 ones becomes 4 hundreds, 12 tens, 2 ones   B) 5 hundreds, 3 tens, 2 ones becomes 4 hundreds, 2 tens, 12 ones   C) 5 hundreds, 3 tens, 2 ones stays the same",
+      "questionType": "multiple_choice",
+      "answerKey": "5 hundreds, 3 tens, 2 ones becomes 4 hundreds, 2 tens, 12 ones",
+      "stepByStepSolution": [
+        "To subtract 8 from 2 in the ones place, you need to regroup a ten into 10 ones.",
+        "This changes 3 tens into 2 tens, and 2 ones into 12 ones.",
+        "The hundreds stay at 5 until you check if more regrouping is needed elsewhere."
+      ],
+      "commonMisconceptions": [
+        "Regrouping a hundred instead of a ten by mistake.",
+        "Thinking no regrouping is needed because 532 looks bigger than 268 overall."
+      ],
+      "hints": [
+        "Look closely at just the ones column: can you take 8 away from 2?",
+        "Borrowing a ten turns 3 tens and 2 ones into 2 tens and 12 ones."
+      ],
+      "tags": [
+        "place_value",
+        "regrouping",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_008",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "hard",
+      "questionText": "Work out 9,999 - 4,567.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5432",
+        "5,432"
+      ],
+      "stepByStepSolution": [
+        "Line up the digits by place value: thousands, hundreds, tens, ones.",
+        "Subtract each column from right to left: 9-7=2, 9-6=3, 9-5=4, 9-4=5.",
+        "No regrouping is needed here since every digit on top is bigger, giving 5,432."
+      ],
+      "commonMisconceptions": [
+        "Assuming regrouping is always needed, even when it isn't.",
+        "Subtracting the top digit from the bottom digit instead of the other way around."
+      ],
+      "hints": [
+        "Check each column: is the top digit always bigger than the bottom digit here?",
+        "Subtract straight down each column from the ones to the thousands."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_009",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "hard",
+      "questionText": "A charity raised $3,678 in week one and $2,945 in week two, then spent $1,200 on new sports equipment. How much money did the charity have left?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5423",
+        "5,423",
+        "$5,423"
+      ],
+      "stepByStepSolution": [
+        "First add the two weeks together: 3,678 + 2,945 = 6,623.",
+        "Then subtract the amount spent: 6,623 - 1,200.",
+        "This gives 5,423 left over."
+      ],
+      "commonMisconceptions": [
+        "Only using one of the two weeks' amounts instead of adding both.",
+        "Subtracting before adding, which changes the order of the steps."
+      ],
+      "hints": [
+        "This is a two-step problem: first combine, then take away.",
+        "Add the two weekly amounts first, then subtract the $1,200."
+      ],
+      "tags": [
+        "word_problem",
+        "addition",
+        "money"
+      ]
+    },
+    {
+      "id": "T2M01_Y3_010",
+      "skillId": "M3N01_04_place_value_10k_regroup",
+      "difficulty": "hard",
+      "questionText": "Maya says 7,000 - 3,254 = 4,246. Is she correct? A) Yes, that is correct   B) No, the correct answer is 3,746   C) No, the correct answer is 4,746",
+      "questionType": "multiple_choice",
+      "answerKey": "No, the correct answer is 3,746",
+      "stepByStepSolution": [
+        "Work out 7,000 - 3,254 carefully by regrouping across the zeros.",
+        "7,000 becomes 6 thousands, 9 hundreds, 9 tens and 10 ones for the subtraction.",
+        "Subtracting column by column gives 3,746, so Maya's answer is not correct."
+      ],
+      "commonMisconceptions": [
+        "Assuming an answer must be right just because it looks close.",
+        "Making a regrouping mistake when there are several zeros in a row."
+      ],
+      "hints": [
+        "Try working out the subtraction yourself before deciding if Maya is right.",
+        "Regrouping across zeros can be tricky — take it one column at a time."
+      ],
+      "tags": [
+        "subtraction",
+        "regrouping",
+        "checking_answers"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_001",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "easy",
+      "questionText": "How many minutes are in 1 hour?",
+      "questionType": "short_answer",
+      "answerKey": "60",
+      "stepByStepSolution": [
+        "Think about a clock face and how the minute hand moves.",
+        "The minute hand goes all the way around once every hour.",
+        "There are 60 minutes in 1 hour."
+      ],
+      "commonMisconceptions": [
+        "Confusing minutes in an hour with seconds in a minute.",
+        "Guessing 100 because it feels like a round number."
+      ],
+      "hints": [
+        "Think about how a clock is divided into small marks.",
+        "Count how many minute marks are on a clock face."
+      ],
+      "tags": [
+        "time",
+        "units"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_002",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "easy",
+      "questionText": "How many seconds are in 1 minute?",
+      "questionType": "short_answer",
+      "answerKey": "60",
+      "stepByStepSolution": [
+        "Think about counting slowly: '1 Mississippi, 2 Mississippi...' up to a minute.",
+        "A minute is made up of 60 of these seconds.",
+        "So there are 60 seconds in 1 minute."
+      ],
+      "commonMisconceptions": [
+        "Mixing up seconds and minutes because they sound similar.",
+        "Guessing a smaller number like 10 or 30."
+      ],
+      "hints": [
+        "This is the same number as minutes in an hour!",
+        "Count how many seconds tick by on a clock during one minute."
+      ],
+      "tags": [
+        "time",
+        "units"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_003",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "easy",
+      "questionText": "How many hours are in 1 day?",
+      "questionType": "short_answer",
+      "answerKey": "24",
+      "stepByStepSolution": [
+        "Think about a full day and night together.",
+        "A clock shows 12 hours twice each day (once for day, once for night).",
+        "12 + 12 = 24 hours in a day."
+      ],
+      "commonMisconceptions": [
+        "Only counting daylight hours instead of the whole day and night.",
+        "Guessing 12 because a clock face only shows up to 12."
+      ],
+      "hints": [
+        "Think about both the daytime and the night-time.",
+        "A clock goes around twice in a full day."
+      ],
+      "tags": [
+        "time",
+        "units"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_004",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "medium",
+      "questionText": "Which activity would most likely take about 5 minutes? A) Brushing your teeth   B) Watching a whole movie   C) Sleeping overnight",
+      "questionType": "multiple_choice",
+      "answerKey": "Brushing your teeth",
+      "stepByStepSolution": [
+        "Think about how long each activity usually takes in real life.",
+        "Watching a movie takes much longer than 5 minutes, and sleeping overnight takes hours.",
+        "Brushing your teeth is a short task that fits best with about 5 minutes."
+      ],
+      "commonMisconceptions": [
+        "Choosing an activity based on how important it feels rather than how long it takes.",
+        "Not comparing all three options before deciding."
+      ],
+      "hints": [
+        "Picture yourself doing each activity — which one finishes quickly?",
+        "A movie and a night's sleep both take far more than a few minutes."
+      ],
+      "tags": [
+        "time",
+        "estimation",
+        "duration"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_005",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "medium",
+      "questionText": "It takes Ben 45 minutes to walk to his grandma's house. It takes Priya 1 hour to walk to hers. Who takes longer, and by how many minutes?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Priya, by 15 minutes",
+        "Priya by 15 minutes"
+      ],
+      "stepByStepSolution": [
+        "Change 1 hour into minutes: 1 hour = 60 minutes.",
+        "Compare 60 minutes (Priya) with 45 minutes (Ben).",
+        "Priya takes longer, by 60 - 45 = 15 minutes."
+      ],
+      "commonMisconceptions": [
+        "Comparing 1 hour and 45 minutes without converting them to the same unit first.",
+        "Subtracting the wrong way round and getting a negative idea of the difference."
+      ],
+      "hints": [
+        "Change the hour into minutes so you're comparing the same units.",
+        "Once both times are in minutes, subtract to find the difference."
+      ],
+      "tags": [
+        "time",
+        "duration",
+        "comparison"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_006",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "medium",
+      "questionText": "A school lunch break lasts 40 minutes. If it starts at 12:00, what time does it finish?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "12:40",
+        "12:40pm",
+        "12:40 pm"
+      ],
+      "stepByStepSolution": [
+        "Start at 12:00 and count on in minutes.",
+        "Add 40 minutes to 12:00.",
+        "This gives a finish time of 12:40."
+      ],
+      "commonMisconceptions": [
+        "Adding 40 minutes and accidentally moving into the next hour.",
+        "Confusing the start time with the finish time."
+      ],
+      "hints": [
+        "Count on from 12:00 in your head or on a clock face.",
+        "12:00 plus 40 minutes is still before 1 o'clock."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_007",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "medium",
+      "questionText": "Is the statement true or false? 2 hours is the same length of time as 90 minutes. A) True   B) False",
+      "questionType": "multiple_choice",
+      "answerKey": "False",
+      "stepByStepSolution": [
+        "Change 2 hours into minutes: 2 x 60 = 120 minutes.",
+        "Compare 120 minutes with 90 minutes.",
+        "They are not equal, so the statement is False."
+      ],
+      "commonMisconceptions": [
+        "Thinking 2 hours equals 100 minutes instead of 120.",
+        "Not converting hours to minutes before comparing."
+      ],
+      "hints": [
+        "Work out how many minutes are in 2 hours first.",
+        "2 hours is more than 90 minutes."
+      ],
+      "tags": [
+        "time",
+        "units",
+        "comparison"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_008",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "hard",
+      "questionText": "A movie starts at 3:15 and finishes at 5:00. How many minutes long is the movie?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "105",
+        "105 minutes"
+      ],
+      "stepByStepSolution": [
+        "From 3:15 to 4:15 is exactly 1 hour, which is 60 minutes.",
+        "From 4:15 to 5:00 is 45 more minutes.",
+        "Add the two parts together: 60 + 45 = 105 minutes."
+      ],
+      "commonMisconceptions": [
+        "Only counting the hour part and forgetting the extra 45 minutes.",
+        "Subtracting the times directly without lining up the minutes correctly."
+      ],
+      "hints": [
+        "Break the time into an easy chunk of one full hour first.",
+        "Work out 3:15 to 4:15, then add on the rest of the time to 5:00."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_009",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "hard",
+      "questionText": "Sione's swimming lesson goes for 50 minutes. If it starts at 4:40, at what time does it finish?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5:30",
+        "5:30pm",
+        "5:30 pm"
+      ],
+      "stepByStepSolution": [
+        "From 4:40, count on 20 minutes to reach 5:00.",
+        "That leaves 50 - 20 = 30 minutes still to add.",
+        "5:00 plus 30 more minutes gives a finish time of 5:30."
+      ],
+      "commonMisconceptions": [
+        "Adding all 50 minutes without noticing the hour changes partway through.",
+        "Miscounting how many minutes are left after reaching 5:00."
+      ],
+      "hints": [
+        "Try counting on to the next hour mark first (5:00), then add what's left.",
+        "How many minutes are left over after you reach 5:00?"
+      ],
+      "tags": [
+        "time",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "T2M02_Y3_010",
+      "skillId": "M3M03_time_relationships",
+      "difficulty": "hard",
+      "questionText": "Which is the best estimate for how long it takes to eat a bowl of cereal? A) About 5 minutes   B) About 5 hours   C) About 5 seconds",
+      "questionType": "multiple_choice",
+      "answerKey": "About 5 minutes",
+      "stepByStepSolution": [
+        "Think about how long breakfast usually takes in real life.",
+        "5 seconds is far too fast, and 5 hours is far too long for a bowl of cereal.",
+        "About 5 minutes is the most sensible estimate."
+      ],
+      "commonMisconceptions": [
+        "Choosing an extreme option without thinking about realistic timing.",
+        "Confusing minutes with hours when estimating everyday tasks."
+      ],
+      "hints": [
+        "Picture yourself actually eating breakfast — is it over in seconds, or does it take longer?",
+        "Compare the three options to a real, everyday amount of time."
+      ],
+      "tags": [
+        "time",
+        "estimation"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_001",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "easy",
+      "questionText": "Break 23 into tens and ones. What are they?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "20 and 3",
+        "2 tens and 3 ones",
+        "20, 3"
+      ],
+      "stepByStepSolution": [
+        "Look at the tens digit in 23, which is 2, meaning 2 tens (20).",
+        "Look at the ones digit in 23, which is 3, meaning 3 ones.",
+        "So 23 is made up of 20 and 3."
+      ],
+      "commonMisconceptions": [
+        "Splitting the number into the wrong place values, such as 2 and 3.",
+        "Forgetting that the tens digit stands for a multiple of ten, not just '2'."
+      ],
+      "hints": [
+        "The first digit tells you how many tens there are.",
+        "2 tens is the same as the number 20."
+      ],
+      "tags": [
+        "partitioning",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_002",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "easy",
+      "questionText": "Use partitioning to work out 12 x 3. (Hint: 12 = 10 + 2)",
+      "questionType": "short_answer",
+      "answerKey": "36",
+      "stepByStepSolution": [
+        "Split 12 into 10 and 2.",
+        "Multiply each part by 3: 10 x 3 = 30, and 2 x 3 = 6.",
+        "Add the parts together: 30 + 6 = 36."
+      ],
+      "commonMisconceptions": [
+        "Only multiplying one of the two parts by 3.",
+        "Adding 10 and 2 before multiplying instead of after."
+      ],
+      "hints": [
+        "Multiply 10 x 3 first, then work out 2 x 3.",
+        "Add your two answers together at the end."
+      ],
+      "tags": [
+        "partitioning",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_003",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "easy",
+      "questionText": "What is 10 x 14?",
+      "questionType": "short_answer",
+      "answerKey": "140",
+      "stepByStepSolution": [
+        "Multiplying by 10 means adding a zero to the end of the number.",
+        "14 with a zero added becomes 140.",
+        "So 10 x 14 = 140."
+      ],
+      "commonMisconceptions": [
+        "Adding two zeros instead of one when multiplying by 10.",
+        "Confusing multiplying by 10 with multiplying by 100."
+      ],
+      "hints": [
+        "Multiplying by 10 is a quick pattern — what happens to the digits?",
+        "Just add one zero to the end of 14."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_004",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "medium",
+      "questionText": "Use an area model to work out 23 x 14. First find 20 x 14. What is 20 x 14?",
+      "questionType": "short_answer",
+      "answerKey": "280",
+      "stepByStepSolution": [
+        "20 x 14 is the same as 2 x 14, then multiplied by 10.",
+        "2 x 14 = 28.",
+        "28 x 10 = 280."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply by the extra 10 after working out 2 x 14.",
+        "Multiplying 20 x 14 as if it were 2 x 1.4."
+      ],
+      "hints": [
+        "Break 20 into 2 tens to make the multiplication easier.",
+        "Work out 2 x 14 first, then multiply that answer by 10."
+      ],
+      "tags": [
+        "area_model",
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_005",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "medium",
+      "questionText": "Using the area model for 23 x 14, find 3 x 14.",
+      "questionType": "short_answer",
+      "answerKey": "42",
+      "stepByStepSolution": [
+        "Multiply 3 by 10 first: 3 x 10 = 30.",
+        "Multiply 3 by 4: 3 x 4 = 12.",
+        "Add the two parts: 30 + 12 = 42."
+      ],
+      "commonMisconceptions": [
+        "Multiplying 3 by only one digit of 14 instead of both.",
+        "Adding instead of multiplying when combining the parts."
+      ],
+      "hints": [
+        "Split 14 into 10 and 4 to make it easier.",
+        "Work out 3 x 10 and 3 x 4 separately, then add them."
+      ],
+      "tags": [
+        "area_model",
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_006",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "medium",
+      "questionText": "Work out 23 x 14 by adding the parts: 20 x 14 = 280 and 3 x 14 = 42. What is 23 x 14 altogether?",
+      "questionType": "short_answer",
+      "answerKey": "322",
+      "stepByStepSolution": [
+        "Take the two parts already found: 280 and 42.",
+        "Add them together: 280 + 42.",
+        "This gives a total of 322."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both parts together at the end.",
+        "Making an addition mistake when combining 280 and 42."
+      ],
+      "hints": [
+        "You already have both parts of the area model — just combine them.",
+        "Add 280 and 42 carefully, lining up the place values."
+      ],
+      "tags": [
+        "area_model",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_007",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "medium",
+      "questionText": "Which is the correct way to split 32 x 15 using partitioning? A) (30 x 15) + (2 x 15)   B) (32 x 10) + (32 x 15)   C) (30 + 2) + (10 + 5)",
+      "questionType": "multiple_choice",
+      "answerKey": "(30 x 15) + (2 x 15)",
+      "stepByStepSolution": [
+        "Partitioning means splitting one number into easier parts, like tens and ones.",
+        "32 can be split into 30 and 2, and each part is multiplied by 15.",
+        "This matches option A: (30 x 15) + (2 x 15)."
+      ],
+      "commonMisconceptions": [
+        "Splitting both numbers and then multiplying them together incorrectly.",
+        "Adding the parts instead of multiplying them first."
+      ],
+      "hints": [
+        "Only one of the two numbers needs to be split into tens and ones.",
+        "Look for the option that splits 32, not 15."
+      ],
+      "tags": [
+        "partitioning",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_008",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "hard",
+      "questionText": "Work out 34 x 12 using an area model or partitioning. Show your final answer.",
+      "questionType": "short_answer",
+      "answerKey": "408",
+      "stepByStepSolution": [
+        "Split 34 into 30 and 4.",
+        "Multiply each part by 12: 30 x 12 = 360, and 4 x 12 = 48.",
+        "Add the parts together: 360 + 48 = 408."
+      ],
+      "commonMisconceptions": [
+        "Adding the parts before finishing both multiplications.",
+        "Making a small addition error when combining 360 and 48."
+      ],
+      "hints": [
+        "Split 34 into 30 and 4 to make the multiplication manageable.",
+        "Work out 30 x 12 and 4 x 12 separately, then add them together."
+      ],
+      "tags": [
+        "area_model",
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_009",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "hard",
+      "questionText": "Work out 21 x 25 using partitioning.",
+      "questionType": "short_answer",
+      "answerKey": "525",
+      "stepByStepSolution": [
+        "Split 21 into 20 and 1.",
+        "Multiply each part by 25: 20 x 25 = 500, and 1 x 25 = 25.",
+        "Add the parts together: 500 + 25 = 525."
+      ],
+      "commonMisconceptions": [
+        "Splitting 25 instead of 21, which can make the numbers harder to work with.",
+        "Forgetting the '1 x 25' part completely."
+      ],
+      "hints": [
+        "Splitting the smaller number (21) often makes this easier.",
+        "Work out 20 x 25 first, then add on 1 x 25."
+      ],
+      "tags": [
+        "partitioning",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M03_Y3_010",
+      "skillId": "M3N06_mult_2digit_by_2digit_intro",
+      "difficulty": "hard",
+      "questionText": "Each box holds 24 party favours. There are 13 boxes. How many party favours are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "312",
+      "stepByStepSolution": [
+        "Split 13 into 10 and 3.",
+        "Multiply each part by 24: 10 x 24 = 240, and 3 x 24 = 72.",
+        "Add the parts together: 240 + 72 = 312."
+      ],
+      "commonMisconceptions": [
+        "Adding 24 and 13 instead of multiplying them.",
+        "Losing track of one part of the partitioning when adding at the end."
+      ],
+      "hints": [
+        "This is a multiplication word problem — think about equal groups.",
+        "Split 13 into 10 and 3 to make the multiplication easier."
+      ],
+      "tags": [
+        "word_problem",
+        "multiplication",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_001",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "easy",
+      "questionText": "How many cents are in $1?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "100",
+        "100 cents"
+      ],
+      "stepByStepSolution": [
+        "Think about the coins that make up one dollar.",
+        "There are 100 small parts, called cents, in every dollar.",
+        "So $1 is equal to 100 cents."
+      ],
+      "commonMisconceptions": [
+        "Guessing 10 cents because of a mix-up with place value words.",
+        "Confusing cents with dollars when reading amounts."
+      ],
+      "hints": [
+        "Think about how many 1 cent parts make up a dollar coin's value.",
+        "The answer is a number you'll use again and again with money."
+      ],
+      "tags": [
+        "money",
+        "dollars_cents"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_002",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "easy",
+      "questionText": "Write $2.50 as cents.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "250",
+        "250 cents",
+        "250c"
+      ],
+      "stepByStepSolution": [
+        "$2.00 is the same as 200 cents.",
+        "50 cents is already in cents.",
+        "Add them together: 200 + 50 = 250 cents."
+      ],
+      "commonMisconceptions": [
+        "Writing 25 cents by only using the digits after the decimal point.",
+        "Forgetting to convert the whole dollar part into cents."
+      ],
+      "hints": [
+        "Change the dollars into cents first, then add the extra cents.",
+        "$2 is 200 cents, plus another 50 cents."
+      ],
+      "tags": [
+        "money",
+        "dollars_cents",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_003",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "easy",
+      "questionText": "Write 75 cents using the dollar sign and decimal point.",
+      "questionType": "short_answer",
+      "answerKey": "$0.75",
+      "stepByStepSolution": [
+        "75 cents is less than one whole dollar.",
+        "Write a 0 before the decimal point to show there are no whole dollars.",
+        "Then write .75 for the cents, giving $0.75."
+      ],
+      "commonMisconceptions": [
+        "Writing it as $75 instead of $0.75.",
+        "Leaving out the 0 before the decimal point."
+      ],
+      "hints": [
+        "Since 75 cents is less than a dollar, the dollar part should be 0.",
+        "Remember to put a 0 before the decimal point."
+      ],
+      "tags": [
+        "money",
+        "dollars_cents"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_004",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "medium",
+      "questionText": "Which amount is written correctly? A) $3.5.0   B) $3.50   C) 3$50",
+      "questionType": "multiple_choice",
+      "answerKey": "$3.50",
+      "stepByStepSolution": [
+        "Money amounts are written with a dollar sign first, then digits, then a decimal point with two digits for cents.",
+        "Option A has two decimal points, and option C has the dollar sign in the wrong place.",
+        "Only option B, $3.50, follows the correct format."
+      ],
+      "commonMisconceptions": [
+        "Placing the dollar sign after the number instead of before it.",
+        "Using more than one decimal point in a money amount."
+      ],
+      "hints": [
+        "A correctly written amount has one dollar sign and one decimal point.",
+        "Check where the dollar sign should go and how many digits follow the decimal point."
+      ],
+      "tags": [
+        "money",
+        "notation"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_005",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "medium",
+      "questionText": "Write 340 cents as dollars and cents.",
+      "questionType": "short_answer",
+      "answerKey": "$3.40",
+      "stepByStepSolution": [
+        "100 cents makes $1, so work out how many whole dollars are in 340 cents.",
+        "340 cents = 3 dollars (300 cents) with 40 cents left over.",
+        "Write this as $3.40."
+      ],
+      "commonMisconceptions": [
+        "Writing $34.0 by misplacing the decimal point.",
+        "Forgetting the leftover cents after finding the whole dollars."
+      ],
+      "hints": [
+        "Work out how many full 100s are in 340 first.",
+        "300 cents is $3, so what happens to the remaining 40 cents?"
+      ],
+      "tags": [
+        "money",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_006",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "medium",
+      "questionText": "Which is worth more, $4.05 or $4.50? A) $4.05   B) $4.50   C) They are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "$4.50",
+      "stepByStepSolution": [
+        "Both amounts have 4 whole dollars, so compare the cents.",
+        "$4.05 has 5 cents, while $4.50 has 50 cents.",
+        "50 cents is more than 5 cents, so $4.50 is worth more."
+      ],
+      "commonMisconceptions": [
+        "Comparing the digits after the decimal point as if they were whole numbers without thinking about place value.",
+        "Assuming $4.05 is bigger because the 5 comes right after the point."
+      ],
+      "hints": [
+        "Compare the cents parts carefully — line up the tens and ones.",
+        "Which is bigger: 5 cents or 50 cents?"
+      ],
+      "tags": [
+        "money",
+        "comparison"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_007",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "medium",
+      "questionText": "Amelia has three $2 coins, one $1 coin, and one 50 cent coin. How much money does she have altogether?",
+      "questionType": "short_answer",
+      "answerKey": "$7.50",
+      "stepByStepSolution": [
+        "Three $2 coins make 3 x $2 = $6.",
+        "Add the $1 coin: $6 + $1 = $7.",
+        "Add the 50 cent coin: $7 + $0.50 = $7.50."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the 50 cent coin in the total.",
+        "Adding the coin values without lining up dollars and cents correctly."
+      ],
+      "hints": [
+        "Add the dollar coins together first.",
+        "Then add on the smaller 50 cent coin at the end."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "coins"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_008",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "hard",
+      "questionText": "Write $12.05 in cents.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1205",
+        "1205 cents",
+        "1,205 cents"
+      ],
+      "stepByStepSolution": [
+        "$12.00 is the same as 1,200 cents.",
+        "5 cents is already in cents.",
+        "Add them together: 1,200 + 5 = 1,205 cents."
+      ],
+      "commonMisconceptions": [
+        "Writing 125 cents by dropping the zero that shows there are no tens of cents.",
+        "Only converting part of the dollar amount into cents."
+      ],
+      "hints": [
+        "Change the whole dollar amount into cents first.",
+        "Don't forget the zero that holds the tens-of-cents place."
+      ],
+      "tags": [
+        "money",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_009",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "hard",
+      "questionText": "Which list of amounts is ordered from smallest to largest? A) $2.05, $2.50, $2.55   B) $2.55, $2.50, $2.05   C) $2.50, $2.05, $2.55",
+      "questionType": "multiple_choice",
+      "answerKey": "$2.05, $2.50, $2.55",
+      "stepByStepSolution": [
+        "Compare the amounts by looking at the cents, since all have 2 whole dollars.",
+        "In cents: 5, 50, and 55 — order these from smallest to largest.",
+        "This gives $2.05, $2.50, $2.55, which matches option A."
+      ],
+      "commonMisconceptions": [
+        "Ordering by the digit right after the decimal point instead of the whole cents value.",
+        "Assuming amounts with more digits are automatically bigger."
+      ],
+      "hints": [
+        "Compare just the cents part of each amount.",
+        "5 cents, 50 cents and 55 cents — which order are these in from smallest?"
+      ],
+      "tags": [
+        "money",
+        "comparison",
+        "ordering"
+      ]
+    },
+    {
+      "id": "T2M04_Y3_010",
+      "skillId": "M3M06_money_dollars_cents",
+      "difficulty": "hard",
+      "questionText": "Jordan is paying for a $6.75 lunch with a $10 note. Without working out the change yet, is $6.75 the same as 675 cents or 67.5 cents?",
+      "questionType": "short_answer",
+      "answerKey": "675 cents",
+      "stepByStepSolution": [
+        "$6.00 is the same as 600 cents.",
+        "75 cents is already in cents.",
+        "Add them together: 600 + 75 = 675 cents, not 67.5 cents."
+      ],
+      "commonMisconceptions": [
+        "Thinking the decimal point carries over directly into a decimal number of cents.",
+        "Forgetting to convert the whole dollars into cents before adding."
+      ],
+      "hints": [
+        "Change the dollar part into cents first, then add the cents part.",
+        "Cents should always be a whole number, not a decimal."
+      ],
+      "tags": [
+        "money",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_001",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "easy",
+      "questionText": "Use doubling to work out 6 + 6.",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "6 + 6 is a double, so think of it as 2 groups of 6.",
+        "Doubling 6 means adding 6 to itself.",
+        "6 + 6 = 12."
+      ],
+      "commonMisconceptions": [
+        "Confusing doubling with adding one more instead of the same number again.",
+        "Miscounting when adding the two equal groups."
+      ],
+      "hints": [
+        "Doubling means adding a number to itself.",
+        "What is 2 groups of 6?"
+      ],
+      "tags": [
+        "doubling",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_002",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "easy",
+      "questionText": "What is 7 + 7?",
+      "questionType": "short_answer",
+      "answerKey": "14",
+      "stepByStepSolution": [
+        "This is a double: 7 + 7.",
+        "Think of two equal groups of 7.",
+        "7 + 7 = 14."
+      ],
+      "commonMisconceptions": [
+        "Mixing up 7 + 7 with 7 + 8 (a near double).",
+        "Losing count when adding the two sevens together."
+      ],
+      "hints": [
+        "This is a doubles fact — you may already know it by heart.",
+        "Think of two hands with 7 fingers held up... nearly!"
+      ],
+      "tags": [
+        "doubling",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_003",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "easy",
+      "questionText": "Bridge to 10 to work out 8 + 5. (Hint: 8 + 2 = 10, then...)",
+      "questionType": "short_answer",
+      "answerKey": "13",
+      "stepByStepSolution": [
+        "Split 5 into 2 and 3, since 8 needs 2 more to make 10.",
+        "Add 8 + 2 to make 10.",
+        "Add on the remaining 3: 10 + 3 = 13."
+      ],
+      "commonMisconceptions": [
+        "Splitting the wrong number, such as splitting 8 instead of 5.",
+        "Forgetting to add on the leftover part after reaching 10."
+      ],
+      "hints": [
+        "Think about how many more 8 needs to reach 10.",
+        "Split 5 into two parts: one that makes 10 with 8, and what's left over."
+      ],
+      "tags": [
+        "bridging_to_10",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_004",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "medium",
+      "questionText": "Use a near double to work out 6 + 7. (Hint: think of 6 + 6, then add 1 more.)",
+      "questionType": "short_answer",
+      "answerKey": "13",
+      "stepByStepSolution": [
+        "6 + 6 is a double, which equals 12.",
+        "7 is one more than 6, so add 1 more to the double.",
+        "12 + 1 = 13."
+      ],
+      "commonMisconceptions": [
+        "Using the wrong double as the starting point, such as 7 + 7.",
+        "Forgetting to add the extra 1 after doubling."
+      ],
+      "hints": [
+        "Find the nearest doubles fact to start from.",
+        "6 + 6 = 12, and 7 is just 1 more than 6."
+      ],
+      "tags": [
+        "near_doubles",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_005",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "medium",
+      "questionText": "Use bridging to 10 to work out 9 + 6.",
+      "questionType": "short_answer",
+      "answerKey": "15",
+      "stepByStepSolution": [
+        "9 needs just 1 more to make 10, so split 6 into 1 and 5.",
+        "Add 9 + 1 to make 10.",
+        "Add on the remaining 5: 10 + 5 = 15."
+      ],
+      "commonMisconceptions": [
+        "Splitting 6 incorrectly so the parts don't add back up to 6.",
+        "Forgetting the leftover part after reaching 10."
+      ],
+      "hints": [
+        "How many more does 9 need to reach 10?",
+        "Split 6 into that amount and what's left over."
+      ],
+      "tags": [
+        "bridging_to_10",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_006",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "medium",
+      "questionText": "Work out 15 - 8 using a mental strategy of your choice.",
+      "questionType": "short_answer",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Think of 15 as 10 + 5.",
+        "Take 8 away, perhaps by first taking away 5 to reach 10, then 3 more.",
+        "This leaves 7."
+      ],
+      "commonMisconceptions": [
+        "Miscounting backwards by ones instead of using an efficient strategy.",
+        "Getting confused about which number to subtract from which."
+      ],
+      "hints": [
+        "Try bridging back through 10.",
+        "15 take away 5 gets you to 10 — how much more do you still need to take away?"
+      ],
+      "tags": [
+        "mental_strategy",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_007",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "medium",
+      "questionText": "Which near-double strategy helps solve 8 + 9? A) Think of 8 + 8, then add 1   B) Think of 9 + 9, then subtract 2   C) Both A and B could work",
+      "questionType": "multiple_choice",
+      "answerKey": "Both A and B could work",
+      "stepByStepSolution": [
+        "8 + 8 = 16, and adding 1 more gives 17.",
+        "9 + 9 = 18, and subtracting 2 also gives 16... let's check: 18 - 1 = 17, since 8 is 1 less than 9.",
+        "Both starting points can lead to the correct answer of 17 when adjusted correctly, so both strategies could work."
+      ],
+      "commonMisconceptions": [
+        "Believing there is only one correct mental strategy for a given sum.",
+        "Adjusting the double by the wrong amount."
+      ],
+      "hints": [
+        "There is often more than one good way to reach the same answer mentally.",
+        "Try both starting doubles and see if each one can be adjusted to work."
+      ],
+      "tags": [
+        "near_doubles",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_008",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "hard",
+      "questionText": "Use a mental strategy to work out 17 - 9.",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "Think of 9 as close to 10.",
+        "Subtract 10 from 17 to get 7, since 9 is 1 less than 10.",
+        "Add back the 1: 7 + 1 = 8."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 10 and forgetting to add the 1 back on.",
+        "Counting backwards one at a time and losing track."
+      ],
+      "hints": [
+        "Try rounding 9 up to 10 to make the subtraction easier.",
+        "Subtract 10 first, then adjust your answer by 1."
+      ],
+      "tags": [
+        "mental_strategy",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_009",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "hard",
+      "questionText": "Use bridging to work out 14 + 7.",
+      "questionType": "short_answer",
+      "answerKey": "21",
+      "stepByStepSolution": [
+        "14 needs 6 more to make 20, so split 7 into 6 and 1.",
+        "Add 14 + 6 to make 20.",
+        "Add on the remaining 1: 20 + 1 = 21."
+      ],
+      "commonMisconceptions": [
+        "Bridging to 10 instead of the nearest ten, 20, which makes the strategy less efficient.",
+        "Splitting 7 into parts that don't add back up to 7."
+      ],
+      "hints": [
+        "Which multiple of 10 is closest to 14?",
+        "Split 7 so that one part takes 14 up to 20."
+      ],
+      "tags": [
+        "bridging_strategy",
+        "mental_strategy",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M05_Y3_010",
+      "skillId": "M3A01_mental_strategies_20",
+      "difficulty": "hard",
+      "questionText": "Explain which strategy you would use to solve 16 - 7 mentally, and give the answer.",
+      "questionType": "short_answer",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "One strategy is to bridge back through 10: 16 - 6 = 10, then subtract the remaining 1.",
+        "10 - 1 = 9.",
+        "So 16 - 7 = 9."
+      ],
+      "commonMisconceptions": [
+        "Losing track of how much has already been subtracted when splitting the number.",
+        "Choosing a strategy but not following through with all of its steps."
+      ],
+      "hints": [
+        "Think about breaking 7 into two friendly parts.",
+        "16 take away 6 gets you to 10 — what's left to subtract?"
+      ],
+      "tags": [
+        "mental_strategy",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_001",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "easy",
+      "questionText": "How many faces does a cube have?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Picture a cube, like a dice or a box.",
+        "Count each flat surface: top, bottom, and four sides.",
+        "A cube has 6 faces."
+      ],
+      "commonMisconceptions": [
+        "Counting edges or vertices instead of faces.",
+        "Forgetting to count the top and bottom faces."
+      ],
+      "hints": [
+        "A face is a flat surface you could trace with your finger.",
+        "Think of a dice — how many flat sides does it have?"
+      ],
+      "tags": [
+        "3d_objects",
+        "faces"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_002",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "easy",
+      "questionText": "How many vertices (corners) does a cube have?",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "A vertex is a corner point where edges meet.",
+        "Picture a cube and count each pointy corner.",
+        "A cube has 8 vertices."
+      ],
+      "commonMisconceptions": [
+        "Counting faces or edges instead of vertices.",
+        "Missing the corners that are on the bottom or hidden from view."
+      ],
+      "hints": [
+        "A vertex is a sharp corner point, not a flat surface.",
+        "Try counting the corners on the top of a box, then the bottom."
+      ],
+      "tags": [
+        "3d_objects",
+        "vertices"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_003",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "easy",
+      "questionText": "Which 3D object has no flat faces at all? A) Cube   B) Sphere   C) Cone",
+      "questionType": "multiple_choice",
+      "answerKey": "Sphere",
+      "stepByStepSolution": [
+        "A cube has 6 flat faces, and a cone has one flat, circular face plus a curved surface.",
+        "A sphere, like a ball, is completely round with no flat surfaces anywhere.",
+        "This makes a sphere the object with no flat faces."
+      ],
+      "commonMisconceptions": [
+        "Thinking a cone has no flat faces because it looks round.",
+        "Confusing a sphere with a cylinder, which does have flat faces."
+      ],
+      "hints": [
+        "Think about a ball versus a can versus an ice-cream cone.",
+        "Which of these three shapes is completely round all over?"
+      ],
+      "tags": [
+        "3d_objects",
+        "faces"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_004",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "medium",
+      "questionText": "How many edges does a cube have?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "An edge is a line where two faces meet.",
+        "A cube has 4 edges on the top, 4 on the bottom, and 4 connecting them.",
+        "4 + 4 + 4 = 12 edges."
+      ],
+      "commonMisconceptions": [
+        "Counting faces or vertices instead of edges.",
+        "Only counting the edges that are easy to see and missing hidden ones."
+      ],
+      "hints": [
+        "An edge is where two flat surfaces meet in a straight line.",
+        "Try counting the top square's edges, the bottom square's edges, and the ones joining them."
+      ],
+      "tags": [
+        "3d_objects",
+        "edges"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_005",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "medium",
+      "questionText": "Which 3D object has exactly one curved face and one flat, circular face? A) Cone   B) Cylinder   C) Sphere",
+      "questionType": "multiple_choice",
+      "answerKey": "Cone",
+      "stepByStepSolution": [
+        "A cylinder has two flat circular faces plus one curved face.",
+        "A sphere has no flat faces at all.",
+        "A cone has just one flat circular face and one curved surface, matching the description."
+      ],
+      "commonMisconceptions": [
+        "Mixing up a cone and a cylinder because both have circular parts.",
+        "Assuming any round object must be a sphere."
+      ],
+      "hints": [
+        "Think about how many flat circles each shape has.",
+        "A cone comes to a point, unlike a cylinder."
+      ],
+      "tags": [
+        "3d_objects",
+        "faces"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_006",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "medium",
+      "questionText": "A rectangular prism (like a tissue box) has how many faces?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "A rectangular prism has a top, bottom, front, back, and two sides.",
+        "Count each of these flat rectangular surfaces.",
+        "This gives a total of 6 faces."
+      ],
+      "commonMisconceptions": [
+        "Assuming all faces must be squares, like a cube.",
+        "Forgetting to count faces that are a different size from the others."
+      ],
+      "hints": [
+        "Think of a shoebox — how many flat sides does it have?",
+        "Count top, bottom, and all four sides around it."
+      ],
+      "tags": [
+        "3d_objects",
+        "faces"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_007",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "medium",
+      "questionText": "How many vertices does a square pyramid have (a pyramid with a square base)?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "The square base has 4 corners.",
+        "There is also 1 more vertex at the very top point of the pyramid.",
+        "4 + 1 = 5 vertices altogether."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to count the top point as a vertex.",
+        "Miscounting the corners of the square base."
+      ],
+      "hints": [
+        "Count the corners of the base shape first.",
+        "Don't forget the single point at the top of the pyramid."
+      ],
+      "tags": [
+        "3d_objects",
+        "vertices"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_008",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "hard",
+      "questionText": "How many edges does a triangular prism have?",
+      "questionType": "short_answer",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "A triangular prism has two triangular ends, each with 3 edges.",
+        "There are also 3 edges connecting the two triangles.",
+        "3 + 3 + 3 = 9 edges altogether."
+      ],
+      "commonMisconceptions": [
+        "Only counting the edges of one triangular end.",
+        "Forgetting the three edges that join the two triangular ends together."
+      ],
+      "hints": [
+        "Picture the two triangle-shaped ends of the prism.",
+        "Don't forget the edges running lengthways between the two triangles."
+      ],
+      "tags": [
+        "3d_objects",
+        "edges"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_009",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "hard",
+      "questionText": "Which statement correctly compares a cube and a cylinder? A) They both have the same number of faces   B) A cube has flat faces only, while a cylinder has one curved face and two flat faces   C) A cylinder has more vertices than a cube",
+      "questionType": "multiple_choice",
+      "answerKey": "A cube has flat faces only, while a cylinder has one curved face and two flat faces",
+      "stepByStepSolution": [
+        "A cube has 6 flat faces and 8 vertices.",
+        "A cylinder has 2 flat circular faces, 1 curved face, and no vertices at all.",
+        "This matches option B, since a cube's faces are all flat but a cylinder has a mix of curved and flat faces."
+      ],
+      "commonMisconceptions": [
+        "Assuming a cylinder has vertices because it has flat circular ends.",
+        "Comparing only the number of faces without thinking about curved versus flat."
+      ],
+      "hints": [
+        "Think carefully about whether a cylinder has any sharp corners.",
+        "Compare the types of faces (flat or curved) rather than just counting them."
+      ],
+      "tags": [
+        "3d_objects",
+        "comparison"
+      ]
+    },
+    {
+      "id": "T2M06_Y3_010",
+      "skillId": "M3SP01_classify_3d_objects",
+      "difficulty": "hard",
+      "questionText": "How many faces does a triangular prism have?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "A triangular prism has 2 triangular ends.",
+        "It also has 3 rectangular faces connecting the triangles.",
+        "2 + 3 = 5 faces altogether."
+      ],
+      "commonMisconceptions": [
+        "Only counting the two triangular ends and forgetting the rectangular sides.",
+        "Confusing a triangular prism with a square pyramid."
+      ],
+      "hints": [
+        "Picture a prism shape, like a tent or a chocolate bar wedge.",
+        "Count the two triangle ends, then the rectangles around the sides."
+      ],
+      "tags": [
+        "3d_objects",
+        "faces"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_001",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "easy",
+      "questionText": "How many grams are in 1 kilogram?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1000",
+        "1000 grams",
+        "1,000 grams"
+      ],
+      "stepByStepSolution": [
+        "Kilo means 1,000 of something.",
+        "So a kilogram is 1,000 of the smaller unit, grams.",
+        "There are 1,000 grams in 1 kilogram."
+      ],
+      "commonMisconceptions": [
+        "Guessing 100 grams by confusing kilograms with another unit.",
+        "Mixing up grams and millilitres."
+      ],
+      "hints": [
+        "'Kilo' is a clue that means one thousand.",
+        "Think about how many small gram weights would balance one kilogram weight."
+      ],
+      "tags": [
+        "mass",
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_002",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "easy",
+      "questionText": "Which is heavier, 500 g or 1 kg? A) 500 g   B) 1 kg   C) They are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "1 kg",
+      "stepByStepSolution": [
+        "1 kg is the same as 1,000 g.",
+        "Compare 1,000 g with 500 g.",
+        "1,000 g is heavier than 500 g, so 1 kg is heavier."
+      ],
+      "commonMisconceptions": [
+        "Comparing 1 and 500 as plain numbers without converting units first.",
+        "Assuming grams are always bigger than kilograms because 'kilo' sounds small."
+      ],
+      "hints": [
+        "Change 1 kg into grams so you're comparing the same unit.",
+        "1 kg equals how many grams?"
+      ],
+      "tags": [
+        "mass",
+        "comparison",
+        "units"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_003",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "easy",
+      "questionText": "A jug holds 2 litres of water. How many millilitres is that?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2000",
+        "2000 mL",
+        "2,000 mL"
+      ],
+      "stepByStepSolution": [
+        "1 litre is the same as 1,000 millilitres.",
+        "2 litres is double this amount.",
+        "2 x 1,000 = 2,000 millilitres."
+      ],
+      "commonMisconceptions": [
+        "Only converting one litre and forgetting to double it for two litres.",
+        "Confusing litres and millilitres as the same size unit."
+      ],
+      "hints": [
+        "1 litre = 1,000 mL — how many millilitres are in 2 litres?",
+        "Multiply 1,000 mL by 2."
+      ],
+      "tags": [
+        "capacity",
+        "units",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_004",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "medium",
+      "questionText": "A bag of flour weighs 1 kg. A bag of sugar weighs 750 g. How many grams do they weigh altogether?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1750",
+        "1750 g",
+        "1,750 g"
+      ],
+      "stepByStepSolution": [
+        "Change the flour's mass into grams: 1 kg = 1,000 g.",
+        "Add the sugar's mass: 1,000 g + 750 g.",
+        "This gives a total of 1,750 g."
+      ],
+      "commonMisconceptions": [
+        "Adding 1 and 750 directly without converting the kilogram to grams first.",
+        "Forgetting to convert units before adding."
+      ],
+      "hints": [
+        "Change everything into the same unit before adding.",
+        "1 kg is equal to how many grams?"
+      ],
+      "tags": [
+        "mass",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_005",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "medium",
+      "questionText": "A bottle holds 1 litre and 250 mL of juice. Write this capacity using only millilitres.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1250",
+        "1250 mL",
+        "1,250 mL"
+      ],
+      "stepByStepSolution": [
+        "Change the 1 litre into millilitres: 1 litre = 1,000 mL.",
+        "Add on the extra 250 mL.",
+        "1,000 mL + 250 mL = 1,250 mL."
+      ],
+      "commonMisconceptions": [
+        "Writing the answer as 1,000,250 mL by not combining the parts correctly.",
+        "Forgetting to convert the litre part into millilitres first."
+      ],
+      "hints": [
+        "Convert the whole litre into millilitres before adding the rest.",
+        "1,000 mL plus another 250 mL."
+      ],
+      "tags": [
+        "capacity",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_006",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "medium",
+      "questionText": "A recipe needs 500 g of butter. Mila only has a 2 kg block. After using what she needs, how much butter (in grams) will be left?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1500",
+        "1500 g",
+        "1,500 g"
+      ],
+      "stepByStepSolution": [
+        "Change 2 kg into grams: 2 kg = 2,000 g.",
+        "Subtract the amount used: 2,000 g - 500 g.",
+        "This leaves 1,500 g of butter."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 500 from 2 without converting kilograms to grams first.",
+        "Adding instead of subtracting the amount used."
+      ],
+      "hints": [
+        "Convert the block of butter into grams before subtracting.",
+        "2 kg equals how many grams?"
+      ],
+      "tags": [
+        "mass",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_007",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "medium",
+      "questionText": "A watermelon has a mass of 3 kg. A pineapple has a mass of 850 g. What is the total mass of both fruits in grams?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "3850",
+        "3850 g",
+        "3,850 g"
+      ],
+      "stepByStepSolution": [
+        "Change the watermelon's mass into grams: 3 kg = 3,000 g.",
+        "Add the pineapple's mass: 3,000 g + 850 g.",
+        "This gives a total of 3,850 g."
+      ],
+      "commonMisconceptions": [
+        "Adding 3 and 850 directly, ignoring that 3 is in kilograms.",
+        "Forgetting to convert before combining the two masses."
+      ],
+      "hints": [
+        "Make sure both masses are in the same unit before adding.",
+        "3 kg is equal to how many grams?"
+      ],
+      "tags": [
+        "mass",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_008",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "hard",
+      "questionText": "A fish tank holds 4 litres of water. Callum pours out 1,600 mL to clean it. How many millilitres of water are left in the tank?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2400",
+        "2400 mL",
+        "2,400 mL"
+      ],
+      "stepByStepSolution": [
+        "Change 4 litres into millilitres: 4 litres = 4,000 mL.",
+        "Subtract the amount poured out: 4,000 mL - 1,600 mL.",
+        "This leaves 2,400 mL."
+      ],
+      "commonMisconceptions": [
+        "Subtracting 1,600 from 4 without converting litres to millilitres first.",
+        "Making a regrouping error when subtracting across the thousands."
+      ],
+      "hints": [
+        "Convert the tank's capacity into millilitres before subtracting.",
+        "4 litres equals how many millilitres?"
+      ],
+      "tags": [
+        "capacity",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_009",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "hard",
+      "questionText": "A box of apples has a mass of 2 kg 300 g. A box of pears has a mass of 1 kg 950 g. What is the combined mass of both boxes in grams?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "4250",
+        "4250 g",
+        "4,250 g"
+      ],
+      "stepByStepSolution": [
+        "Change each mass into grams: 2 kg 300 g = 2,300 g, and 1 kg 950 g = 1,950 g.",
+        "Add the two masses together: 2,300 g + 1,950 g.",
+        "This gives a total of 4,250 g."
+      ],
+      "commonMisconceptions": [
+        "Adding the kilogram and gram parts separately without combining them correctly.",
+        "Forgetting to regroup when the grams add up to more than 1,000."
+      ],
+      "hints": [
+        "Convert both masses fully into grams first.",
+        "Then add the two gram totals together carefully."
+      ],
+      "tags": [
+        "mass",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M07_Y3_010",
+      "skillId": "M3M02_mass_capacity_word_problems",
+      "difficulty": "hard",
+      "questionText": "A jug contains 1.5 L of cordial. If 600 mL is poured into cups, which number sentence finds how much cordial is left, in millilitres? A) 1500 - 600   B) 1500 + 600   C) 600 - 1500",
+      "questionType": "multiple_choice",
+      "answerKey": "1500 - 600",
+      "stepByStepSolution": [
+        "1.5 L is the same as 1,500 mL.",
+        "Since some cordial is poured out, this is a subtraction situation.",
+        "The correct number sentence is 1500 - 600."
+      ],
+      "commonMisconceptions": [
+        "Choosing addition because the problem mentions two amounts.",
+        "Subtracting in the wrong order, taking the larger amount away from the smaller one."
+      ],
+      "hints": [
+        "Is the amount of cordial in the jug going up or down?",
+        "Convert 1.5 L into millilitres before choosing the number sentence."
+      ],
+      "tags": [
+        "capacity",
+        "subtraction",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T2M08_Y3_001",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "easy",
+      "questionText": "According to the graph, how many students voted for Swimming?",
+      "questionType": "short_answer",
+      "answerKey": "14",
+      "stepByStepSolution": [
+        "Find the Swimming column on the graph.",
+        "Read across to see how high the column reaches.",
+        "The Swimming column reaches 14 votes."
+      ],
+      "commonMisconceptions": [
+        "Reading the wrong column by mistake.",
+        "Misreading the scale because it counts up in twos, not ones."
+      ],
+      "hints": [
+        "Find the column labelled Swimming first.",
+        "Read the value straight from the passage describing the graph."
+      ],
+      "tags": [
+        "column_graph",
+        "data"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_002",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "easy",
+      "questionText": "Which sport received the fewest votes?",
+      "questionType": "short_answer",
+      "answerKey": "Cricket",
+      "stepByStepSolution": [
+        "Compare all five vote totals: 10, 8, 14, 6, and 12.",
+        "The smallest number among these is 6.",
+        "6 votes belongs to Cricket, so it received the fewest votes."
+      ],
+      "commonMisconceptions": [
+        "Picking the sport that comes first or last in the list rather than comparing values.",
+        "Confusing 'fewest' with 'most'."
+      ],
+      "hints": [
+        "Compare all the vote totals to find the smallest one.",
+        "Which sport has only 6 votes?"
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "comparison"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_003",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "easy",
+      "questionText": "How many students voted for Basketball?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "Find the Basketball column on the graph.",
+        "Read across to see how high the column reaches.",
+        "The Basketball column reaches 12 votes."
+      ],
+      "commonMisconceptions": [
+        "Mixing up the Basketball total with a nearby column, like Netball.",
+        "Reading the scale incorrectly."
+      ],
+      "hints": [
+        "Find the column labelled Basketball.",
+        "Check its value from the passage describing the graph."
+      ],
+      "tags": [
+        "column_graph",
+        "data"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_004",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "medium",
+      "questionText": "How many more students voted for Netball than Cricket?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Netball received 10 votes and Cricket received 6 votes.",
+        "Subtract to find the difference: 10 - 6.",
+        "This gives a difference of 4 votes."
+      ],
+      "commonMisconceptions": [
+        "Adding the two totals instead of subtracting to find the difference.",
+        "Subtracting in the wrong order."
+      ],
+      "hints": [
+        "Find both values first: Netball and Cricket.",
+        "Subtract the smaller number from the larger number."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "subtraction"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_005",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "medium",
+      "questionText": "What is the total number of votes for Soccer and Basketball combined?",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "Soccer received 8 votes and Basketball received 12 votes.",
+        "Add the two totals together: 8 + 12.",
+        "This gives a combined total of 20 votes."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong two sports together.",
+        "Making a small addition slip when combining the totals."
+      ],
+      "hints": [
+        "Find the votes for Soccer and Basketball first.",
+        "Add these two numbers together."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "addition"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_006",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "medium",
+      "questionText": "The scale on this graph goes up in twos (2, 4, 6, 8...). Why might a graph use a scale of 2 instead of 1? A) To make the graph fit on the page and be easier to read with larger numbers   B) Because scales of 2 are always required   C) It makes no difference at all",
+      "questionType": "multiple_choice",
+      "answerKey": "To make the graph fit on the page and be easier to read with larger numbers",
+      "stepByStepSolution": [
+        "When numbers are larger, counting up by ones would make a very tall graph.",
+        "Using a scale of 2 (or 5, or 10) keeps the graph a sensible size.",
+        "This makes option A the best explanation."
+      ],
+      "commonMisconceptions": [
+        "Thinking there is a fixed rule that all graphs must use a scale of 2.",
+        "Believing the scale choice has no effect on how easy a graph is to read."
+      ],
+      "hints": [
+        "Think about how tall the graph would be if it counted up by ones instead.",
+        "A bigger scale helps fit larger numbers onto the same size page."
+      ],
+      "tags": [
+        "column_graph",
+        "scale",
+        "data"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_007",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "medium",
+      "questionText": "How many students voted altogether across all five sports?",
+      "questionType": "short_answer",
+      "answerKey": "50",
+      "stepByStepSolution": [
+        "List all five totals: 10, 8, 14, 6, and 12.",
+        "Add them together in a sensible order, for example 10 + 8 = 18, then 18 + 14 = 32, then 32 + 6 = 38, then 38 + 12 = 50.",
+        "The total number of votes is 50."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the five sports when adding.",
+        "Making an addition error partway through adding five numbers."
+      ],
+      "hints": [
+        "Add the numbers in a sensible order, perhaps grouping easy pairs first.",
+        "Make sure all five sports are included in your total."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "addition"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_008",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "hard",
+      "questionText": "Which two sports together received exactly the same number of votes as Swimming and Cricket combined?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Soccer and Basketball",
+        "Soccer and Basketball combined",
+        "Soccer, Basketball"
+      ],
+      "stepByStepSolution": [
+        "Swimming and Cricket combined is 14 + 6 = 20.",
+        "Check other pairs of sports to see which also add up to 20.",
+        "Soccer (8) and Basketball (12) also add up to 20, so they match."
+      ],
+      "commonMisconceptions": [
+        "Only checking one possible pair before deciding on an answer.",
+        "Adding three sports together instead of two."
+      ],
+      "hints": [
+        "Work out the total for Swimming and Cricket first.",
+        "Then test other pairs of sports to see which pair adds up to the same total."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "addition"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_009",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "hard",
+      "questionText": "If 3 more students voted for Cricket, would Cricket then have more or fewer votes than Soccer? Explain your answer with numbers.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "More, because 6 + 3 = 9, which is greater than Soccer's 8",
+        "More (9 votes vs 8 votes)"
+      ],
+      "stepByStepSolution": [
+        "Cricket currently has 6 votes, and Soccer has 8 votes.",
+        "Add 3 more votes to Cricket: 6 + 3 = 9.",
+        "9 is greater than 8, so Cricket would then have more votes than Soccer."
+      ],
+      "commonMisconceptions": [
+        "Comparing the original Cricket total (6) to Soccer (8) without adding the extra votes first.",
+        "Adding the 3 votes to Soccer instead of Cricket."
+      ],
+      "hints": [
+        "Work out Cricket's new total first, after adding the 3 extra votes.",
+        "Then compare this new total to Soccer's 8 votes."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "comparison"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M08_Y3_010",
+      "skillId": "M3ST02_column_graphs_scale",
+      "difficulty": "hard",
+      "questionText": "Netball received 10 out of 50 total votes. Written as a simplified fraction, this is... A) 1/5   B) 1/2   C) 1/10",
+      "questionType": "multiple_choice",
+      "answerKey": "1/5",
+      "stepByStepSolution": [
+        "Write Netball's votes as a fraction of the total: 10/50.",
+        "Simplify by dividing both the top and bottom by 10: 10÷10 = 1, and 50÷10 = 5.",
+        "This gives the simplified fraction 1/5."
+      ],
+      "commonMisconceptions": [
+        "Leaving the fraction unsimplified and choosing 10/50 style thinking without simplifying.",
+        "Dividing the top and bottom by different numbers, which changes the fraction's value."
+      ],
+      "hints": [
+        "Write Netball's votes over the total votes as a fraction first.",
+        "Simplify by dividing both numbers by the same amount."
+      ],
+      "tags": [
+        "column_graph",
+        "data",
+        "fractions"
+      ],
+      "passage": "Favourite Sport column graph, showing votes with a scale going up in twos (0, 2, 4, 6, 8...): Netball - 10 votes, Soccer - 8 votes, Swimming - 14 votes, Cricket - 6 votes, Basketball - 12 votes."
+    },
+    {
+      "id": "T2M09_Y3_001",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "easy",
+      "questionText": "What is 1/2 of 12?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Finding 1/2 means sharing into 2 equal groups.",
+        "Share 12 into 2 equal groups.",
+        "Each group has 6, so 1/2 of 12 is 6."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the wrong number, such as dividing by 4 instead of 2.",
+        "Multiplying instead of sharing into equal groups."
+      ],
+      "hints": [
+        "The bottom number of the fraction tells you how many equal groups to share into.",
+        "Share 12 objects into 2 equal groups."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_002",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "easy",
+      "questionText": "What is 1/4 of 8?",
+      "questionType": "short_answer",
+      "answerKey": "2",
+      "stepByStepSolution": [
+        "Finding 1/4 means sharing into 4 equal groups.",
+        "Share 8 into 4 equal groups.",
+        "Each group has 2, so 1/4 of 8 is 2."
+      ],
+      "commonMisconceptions": [
+        "Sharing into 2 groups instead of 4 because of the numerator being 1.",
+        "Confusing 1/4 with 1/2."
+      ],
+      "hints": [
+        "The 4 in 1/4 tells you how many equal groups to make.",
+        "Share 8 objects into 4 equal groups."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_003",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "easy",
+      "questionText": "What is 1/3 of 9?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Finding 1/3 means sharing into 3 equal groups.",
+        "Share 9 into 3 equal groups.",
+        "Each group has 3, so 1/3 of 9 is 3."
+      ],
+      "commonMisconceptions": [
+        "Sharing into the wrong number of groups.",
+        "Multiplying 9 by 3 instead of sharing it."
+      ],
+      "hints": [
+        "The bottom number tells you how many equal groups.",
+        "Share 9 objects into 3 equal groups."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_004",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "medium",
+      "questionText": "There are 20 marbles in a jar. What is 1/4 of the marbles?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Share 20 into 4 equal groups.",
+        "20 ÷ 4 = 5.",
+        "So 1/4 of the marbles is 5 marbles."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the numerator instead of the denominator.",
+        "Multiplying 20 by 4 instead of dividing."
+      ],
+      "hints": [
+        "Think about sharing 20 marbles equally into 4 groups.",
+        "What division fact matches 20 shared into 4 groups?"
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_005",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "medium",
+      "questionText": "A packet has 15 stickers. What is 1/5 of the stickers?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Share 15 into 5 equal groups.",
+        "15 ÷ 5 = 3.",
+        "So 1/5 of the stickers is 3 stickers."
+      ],
+      "commonMisconceptions": [
+        "Sharing into the wrong number of equal groups.",
+        "Confusing 1/5 with 1/3."
+      ],
+      "hints": [
+        "The denominator (5) tells you how many equal groups to share into.",
+        "What is 15 shared equally among 5 groups?"
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_006",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "medium",
+      "questionText": "Leo has 18 lollies. He gives 1/3 of them to his sister. How many lollies does he give her?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Share 18 into 3 equal groups.",
+        "18 ÷ 3 = 6.",
+        "So Leo gives his sister 6 lollies."
+      ],
+      "commonMisconceptions": [
+        "Giving away all 18 lollies instead of just one third.",
+        "Dividing by the wrong number of groups."
+      ],
+      "hints": [
+        "This is a fraction of a group problem — share 18 into 3 equal parts.",
+        "What is 18 shared equally among 3 groups?"
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_007",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "medium",
+      "questionText": "Which picture strategy correctly finds 1/4 of 16? A) Share 16 into 4 equal groups and count how many are in one group   B) Share 16 into 2 equal groups and count how many are in one group   C) Multiply 16 by 4",
+      "questionType": "multiple_choice",
+      "answerKey": "Share 16 into 4 equal groups and count how many are in one group",
+      "stepByStepSolution": [
+        "Finding a unit fraction like 1/4 means sharing into that many equal groups.",
+        "Sharing 16 into 4 equal groups gives 4 in each group.",
+        "This matches option A, sharing into 4 equal groups."
+      ],
+      "commonMisconceptions": [
+        "Thinking the denominator means multiplying rather than sharing.",
+        "Sharing into the wrong number of groups, such as 2 instead of 4."
+      ],
+      "hints": [
+        "The bottom number of the fraction tells you how many equal groups to make.",
+        "Think about what 1/4 actually means when sharing a group."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_008",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "hard",
+      "questionText": "A class of 24 students voted for their favourite fruit. 1/6 of the class chose bananas. How many students chose bananas?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Share 24 into 6 equal groups.",
+        "24 ÷ 6 = 4.",
+        "So 4 students chose bananas."
+      ],
+      "commonMisconceptions": [
+        "Sharing into the wrong number of groups, such as 4 instead of 6.",
+        "Multiplying 24 by 6 instead of dividing."
+      ],
+      "hints": [
+        "Share the whole class into 6 equal groups.",
+        "What division fact matches 24 shared into 6 groups?"
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_009",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "hard",
+      "questionText": "There are 30 eggs in a carton box collection at the farm shop. 1/5 of them are brown. How many eggs are brown?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Share 30 into 5 equal groups.",
+        "30 ÷ 5 = 6.",
+        "So 6 eggs are brown."
+      ],
+      "commonMisconceptions": [
+        "Sharing into the wrong number of groups.",
+        "Confusing the fraction of brown eggs with the fraction of white eggs."
+      ],
+      "hints": [
+        "Share the whole collection into 5 equal groups.",
+        "What is 30 divided into 5 equal groups?"
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M09_Y3_010",
+      "skillId": "M3N07_fraction_of_a_group",
+      "difficulty": "hard",
+      "questionText": "A farmer has 28 sheep. She sells 1/4 of them at the market. How many sheep does she have left?",
+      "questionType": "short_answer",
+      "answerKey": "21",
+      "stepByStepSolution": [
+        "First find 1/4 of 28: 28 ÷ 4 = 7.",
+        "This means 7 sheep were sold.",
+        "Subtract the sold sheep from the total: 28 - 7 = 21 sheep left."
+      ],
+      "commonMisconceptions": [
+        "Giving the answer as the number sold (7) instead of the number remaining.",
+        "Dividing by the wrong number when finding the fraction."
+      ],
+      "hints": [
+        "This is a two-step problem: first find the fraction, then subtract.",
+        "Work out how many sheep were sold before working out how many are left."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M10_Y3_001",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "easy",
+      "questionText": "Which total came up most often?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "7",
+        "Total 7"
+      ],
+      "stepByStepSolution": [
+        "Compare all the tally counts: 1, 2, 1, 3, 4, 5, 2, 1, 1.",
+        "The largest count is 5.",
+        "A total of 5 times was recorded for the total of 7, so 7 came up most often."
+      ],
+      "commonMisconceptions": [
+        "Picking a total based on its size (like 10) rather than how often it appeared.",
+        "Miscounting the tally results."
+      ],
+      "hints": [
+        "Look for the total with the highest tally count, not the highest total value.",
+        "Which total was recorded 5 times?"
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_002",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "easy",
+      "questionText": "How many times did the dice show a total of 5?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Find 'Total 5' in the recorded results.",
+        "Read the number of times listed next to it.",
+        "Total 5 was recorded 3 times."
+      ],
+      "commonMisconceptions": [
+        "Reading the count for a different total by mistake.",
+        "Confusing the total value (5) with the number of times it happened."
+      ],
+      "hints": [
+        "Find the line in the passage that mentions Total 5.",
+        "Read the number right after it."
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_003",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "easy",
+      "questionText": "How many times altogether were the two dice rolled?",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "Add up all the tally counts: 1+2+1+3+4+5+2+1+1.",
+        "Adding these together step by step gives 20.",
+        "The dice were rolled 20 times altogether."
+      ],
+      "commonMisconceptions": [
+        "Assuming the number of rolls equals the number of different totals listed (9).",
+        "Missing one of the totals when adding up the counts."
+      ],
+      "hints": [
+        "Add together every single count listed in the results.",
+        "The passage also tells you directly how many times the dice were rolled."
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "addition"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_004",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "medium",
+      "questionText": "How many times did the total come up as either 2 or 3?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Total 2 happened 1 time, and Total 3 happened 2 times.",
+        "Add these together: 1 + 2.",
+        "This gives 3 times altogether."
+      ],
+      "commonMisconceptions": [
+        "Only counting one of the two totals instead of both.",
+        "Adding the total values (2 + 3 = 5) instead of their tally counts."
+      ],
+      "hints": [
+        "Find the counts for Total 2 and Total 3 separately.",
+        "Add the two counts together, not the totals themselves."
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "addition"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_005",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "medium",
+      "questionText": "Why is it more likely to roll a total of 7 than a total of 2 when rolling two dice? A) There is only one way to make 2 (1+1), but several different ways to make 7 (1+6, 2+5, 3+4, and more)   B) 7 is a lucky number   C) It is not actually more likely; it is just chance",
+      "questionType": "multiple_choice",
+      "answerKey": "There is only one way to make 2 (1+1), but several different ways to make 7 (1+6, 2+5, 3+4, and more)",
+      "stepByStepSolution": [
+        "To roll a total of 2, both dice must show a 1 — there is only one way to do this.",
+        "To roll a total of 7, there are several combinations, such as 1+6, 2+5, and 3+4.",
+        "More combinations mean a total of 7 is more likely than a total of 2."
+      ],
+      "commonMisconceptions": [
+        "Believing luck or superstition explains why some totals appear more often.",
+        "Assuming every total from 2 to 12 is equally likely."
+      ],
+      "hints": [
+        "Think about how many different pairs of numbers can add up to each total.",
+        "Count the ways to make 2 compared with the ways to make 7."
+      ],
+      "tags": [
+        "chance",
+        "probability",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_006",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "medium",
+      "questionText": "How many times did the total come up as 8, 9, or 10 combined?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Total 8 happened 2 times, Total 9 happened 1 time, and Total 10 happened 1 time.",
+        "Add these together: 2 + 1 + 1.",
+        "This gives 4 times altogether."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include all three totals in the sum.",
+        "Adding the total values together instead of the tally counts."
+      ],
+      "hints": [
+        "Find the three separate counts first.",
+        "Add all three counts together."
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "addition"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_007",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "medium",
+      "questionText": "If you rolled two dice one more time, would a total of 12 or a total of 7 be more likely to happen? Give your answer using one word.",
+      "questionType": "short_answer",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "A total of 12 can only happen one way: 6+6.",
+        "A total of 7 can happen in several ways, such as 1+6, 2+5, and 3+4.",
+        "This makes 7 more likely to occur than 12."
+      ],
+      "commonMisconceptions": [
+        "Assuming 12 is more likely because it is a bigger number.",
+        "Thinking all totals are equally likely to occur."
+      ],
+      "hints": [
+        "Think about how many combinations make each total.",
+        "Which total has more possible dice combinations?"
+      ],
+      "tags": [
+        "chance",
+        "probability",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_008",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "hard",
+      "questionText": "Out of the 20 rolls, what fraction of the rolls resulted in a total of 6? Write your answer as a fraction.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "4/20",
+        "1/5"
+      ],
+      "stepByStepSolution": [
+        "Total 6 was recorded 4 times out of 20 rolls.",
+        "Write this as a fraction: 4/20.",
+        "This can also be simplified to 1/5."
+      ],
+      "commonMisconceptions": [
+        "Writing the fraction the wrong way round, such as 20/4.",
+        "Forgetting to use the total number of rolls (20) as the denominator."
+      ],
+      "hints": [
+        "Put the count for Total 6 over the total number of rolls.",
+        "4 out of 20 can also be simplified."
+      ],
+      "tags": [
+        "chance",
+        "data",
+        "fractions"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_009",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "hard",
+      "questionText": "List all the possible pairs of dice numbers that add up to a total of 9.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "3 and 6, or 4 and 5",
+        "3+6 and 4+5"
+      ],
+      "stepByStepSolution": [
+        "Think of two dice numbers (each from 1 to 6) that add to 9.",
+        "3 + 6 = 9, and 4 + 5 = 9 are both possible pairs.",
+        "So the pairs are 3 and 6, or 4 and 5."
+      ],
+      "commonMisconceptions": [
+        "Missing one of the two possible pairs.",
+        "Suggesting a pair that uses a number greater than 6, which isn't possible on a standard dice."
+      ],
+      "hints": [
+        "Remember each dice can only show a number from 1 to 6.",
+        "Try pairs starting from 3 and 6, then check other combinations."
+      ],
+      "tags": [
+        "chance",
+        "probability",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M10_Y3_010",
+      "skillId": "M3P02_chance_experiments_recording",
+      "difficulty": "hard",
+      "questionText": "Based on the tally results, which total would you predict is least likely to occur again? A) A total of 7   B) A total of 2   C) They are equally likely",
+      "questionType": "multiple_choice",
+      "answerKey": "A total of 2",
+      "stepByStepSolution": [
+        "The tally shows Total 2 occurred only 1 time, the fewest of any total.",
+        "There is also only one dice combination (1+1) that makes a total of 2.",
+        "This makes a total of 2 the least likely to occur again."
+      ],
+      "commonMisconceptions": [
+        "Assuming all totals are equally likely regardless of the tally results.",
+        "Confusing 'least likely' with 'most likely'."
+      ],
+      "hints": [
+        "Look back at which total had the smallest tally count.",
+        "Think about how many dice combinations can make that total."
+      ],
+      "tags": [
+        "chance",
+        "probability",
+        "dice"
+      ],
+      "passage": "Results of rolling two dice 20 times and adding the two numbers together, recorded as a tally: Total 2 - 1 time, Total 3 - 2 times, Total 4 - 1 time, Total 5 - 3 times, Total 6 - 4 times, Total 7 - 5 times, Total 8 - 2 times, Total 9 - 1 time, Total 10 - 1 time."
+    },
+    {
+      "id": "T2M11_Y3_001",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "easy",
+      "questionText": "What is 3 x 4?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "Think of 3 groups of 4.",
+        "Add 4 + 4 + 4, or recall the multiplication fact.",
+        "3 x 4 = 12."
+      ],
+      "commonMisconceptions": [
+        "Mixing up 3 x 4 with 3 + 4.",
+        "Miscounting when adding the equal groups."
+      ],
+      "hints": [
+        "Think of 3 equal groups, each with 4 in them.",
+        "This is a times table fact you may already know."
+      ],
+      "tags": [
+        "multiplication",
+        "fact_family"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_002",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "easy",
+      "questionText": "What is 20 ÷ 5?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Think about sharing 20 into groups of 5.",
+        "Count how many groups of 5 make 20.",
+        "20 ÷ 5 = 4."
+      ],
+      "commonMisconceptions": [
+        "Confusing division with multiplication, giving 100 instead.",
+        "Sharing into the wrong number of groups."
+      ],
+      "hints": [
+        "Think about the related multiplication fact: 5 x ? = 20.",
+        "How many groups of 5 fit into 20?"
+      ],
+      "tags": [
+        "division",
+        "fact_family"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_003",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "easy",
+      "questionText": "What is 10 x 6?",
+      "questionType": "short_answer",
+      "answerKey": "60",
+      "stepByStepSolution": [
+        "Multiplying by 10 adds a zero to the end of the number.",
+        "6 with a zero added becomes 60.",
+        "So 10 x 6 = 60."
+      ],
+      "commonMisconceptions": [
+        "Adding two zeros instead of one.",
+        "Confusing multiplying by 10 with multiplying by 100."
+      ],
+      "hints": [
+        "Multiplying by 10 follows an easy pattern.",
+        "Just add a zero to the end of 6."
+      ],
+      "tags": [
+        "multiplication",
+        "fact_family"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_004",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "medium",
+      "questionText": "Write the missing fact in this family: 4 x 5 = 20, 5 x 4 = 20, 20 ÷ 4 = 5, 20 ÷ ? = 4",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "A fact family uses the same three numbers in different ways.",
+        "The missing fact should match the pattern: 20 shared into groups of a certain size gives 4.",
+        "20 ÷ 5 = 4, so the missing number is 5."
+      ],
+      "commonMisconceptions": [
+        "Writing 4 as the missing number instead of 5.",
+        "Not recognising the pattern used in a fact family."
+      ],
+      "hints": [
+        "Look at the other three facts to spot the pattern.",
+        "The three numbers 4, 5, and 20 always appear together in a fact family."
+      ],
+      "tags": [
+        "fact_family",
+        "division",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_005",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "medium",
+      "questionText": "If 6 x 3 = 18, what is 18 ÷ 3?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Multiplication and division facts using the same numbers are connected.",
+        "Since 6 x 3 = 18, then 18 shared into groups of 3 gives back 6.",
+        "18 ÷ 3 = 6."
+      ],
+      "commonMisconceptions": [
+        "Assuming division always gives a different answer from the related multiplication fact.",
+        "Dividing by the wrong number."
+      ],
+      "hints": [
+        "Think about the fact family for 3, 6, and 18.",
+        "Division undoes multiplication — what number multiplied by 3 gives 18?"
+      ],
+      "tags": [
+        "fact_family",
+        "division",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_006",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "medium",
+      "questionText": "Which fact belongs to the same fact family as 7 x 2 = 14? A) 14 ÷ 2 = 7   B) 14 + 2 = 16   C) 7 - 2 = 5",
+      "questionType": "multiple_choice",
+      "answerKey": "14 ÷ 2 = 7",
+      "stepByStepSolution": [
+        "A fact family only includes multiplication and division facts using the same three numbers.",
+        "14 ÷ 2 = 7 uses the same numbers as 7 x 2 = 14.",
+        "This makes option A the correct match."
+      ],
+      "commonMisconceptions": [
+        "Including addition or subtraction facts, which are not part of a multiplication/division fact family.",
+        "Choosing a fact that uses different numbers altogether."
+      ],
+      "hints": [
+        "A fact family for multiplication and division only uses x and ÷.",
+        "Look for the option that uses exactly 7, 2, and 14."
+      ],
+      "tags": [
+        "fact_family",
+        "multiplication",
+        "division"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_007",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "medium",
+      "questionText": "What is 9 x 4?",
+      "questionType": "short_answer",
+      "answerKey": "36",
+      "stepByStepSolution": [
+        "Think of 9 groups of 4, or 4 groups of 9.",
+        "You could work this out as (10 x 4) - 4 = 40 - 4.",
+        "9 x 4 = 36."
+      ],
+      "commonMisconceptions": [
+        "Confusing 9 x 4 with 9 x 5.",
+        "Making a small subtraction error when using the near-ten strategy."
+      ],
+      "hints": [
+        "Try thinking of 9 as one less than 10.",
+        "10 x 4 = 40, so what is 40 take away one group of 4?"
+      ],
+      "tags": [
+        "multiplication",
+        "fact_family"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_008",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "hard",
+      "questionText": "Write all four facts in the fact family for the numbers 5, 8, and 40.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5 x 8 = 40, 8 x 5 = 40, 40 ÷ 5 = 8, 40 ÷ 8 = 5"
+      ],
+      "stepByStepSolution": [
+        "Start with the two multiplication facts: 5 x 8 = 40 and 8 x 5 = 40.",
+        "Then write the two related division facts: 40 ÷ 5 = 8 and 40 ÷ 8 = 5.",
+        "Altogether, the fact family has these four facts."
+      ],
+      "commonMisconceptions": [
+        "Only writing one multiplication and one division fact instead of all four.",
+        "Mixing up which number goes first in the division facts."
+      ],
+      "hints": [
+        "A full fact family for three numbers usually has four related facts.",
+        "Write both multiplication orders, then both division orders."
+      ],
+      "tags": [
+        "fact_family",
+        "multiplication",
+        "division"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_009",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "hard",
+      "questionText": "A number fact family includes 6 x 10 = 60. What are the other three facts in this family?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "10 x 6 = 60, 60 ÷ 6 = 10, 60 ÷ 10 = 6"
+      ],
+      "stepByStepSolution": [
+        "Swap the order of the multiplication: 10 x 6 = 60.",
+        "Write the related division fact starting with dividing by 6: 60 ÷ 6 = 10.",
+        "Write the other division fact: 60 ÷ 10 = 6."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include both division facts.",
+        "Writing an incorrect division fact that doesn't match the numbers."
+      ],
+      "hints": [
+        "Swap the order of the two numbers being multiplied first.",
+        "Then think about the two ways 60 can be divided using 6 and 10."
+      ],
+      "tags": [
+        "fact_family",
+        "multiplication",
+        "division"
+      ]
+    },
+    {
+      "id": "T2M11_Y3_010",
+      "skillId": "M3A02_03_fact_families",
+      "difficulty": "hard",
+      "questionText": "There are 32 chairs to be shared equally into 4 rows for assembly. Use a division fact to work out how many chairs go in each row.",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "This is a sharing situation, so use division: 32 ÷ 4.",
+        "Think about the related multiplication fact: 4 x 8 = 32.",
+        "So 32 ÷ 4 = 8 chairs in each row."
+      ],
+      "commonMisconceptions": [
+        "Multiplying 32 by 4 instead of dividing.",
+        "Sharing the chairs into the wrong number of rows."
+      ],
+      "hints": [
+        "This is a division word problem — think about equal sharing.",
+        "What number multiplied by 4 gives 32?"
+      ],
+      "tags": [
+        "fact_family",
+        "division",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_001",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "easy",
+      "questionText": "Zara buys a pencil for $1.20 and a rubber for $0.80. How much did she spend altogether?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$2.00",
+        "$2",
+        "2.00"
+      ],
+      "stepByStepSolution": [
+        "Add the two amounts together: $1.20 + $0.80.",
+        "Add the cents first: 20 + 80 = 100 cents, which is $1.00.",
+        "Add the dollars: $1 + $1.00 = $2.00 altogether."
+      ],
+      "commonMisconceptions": [
+        "Adding the dollars and cents in separate columns without regrouping the cents.",
+        "Forgetting to combine 100 cents into an extra whole dollar."
+      ],
+      "hints": [
+        "Add the cents parts together first.",
+        "100 cents makes another whole dollar — remember to include it."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_002",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "easy",
+      "questionText": "Tom has $5.00. He spends $2.50 on a drink. How much money does he have left?",
+      "questionType": "short_answer",
+      "answerKey": "$2.50",
+      "stepByStepSolution": [
+        "This is a subtraction problem: $5.00 - $2.50.",
+        "Subtract the amounts carefully, regrouping if needed.",
+        "This leaves $2.50."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting the amount spent.",
+        "Subtracting the wrong way round."
+      ],
+      "hints": [
+        "Think about whether Tom's money goes up or down after spending.",
+        "Work out $5.00 - $2.50."
+      ],
+      "tags": [
+        "money",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_003",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "easy",
+      "questionText": "A muffin costs $3.00 and a juice costs $2.00. How much do both cost together?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$5.00",
+        "$5"
+      ],
+      "stepByStepSolution": [
+        "Add the two costs together: $3.00 + $2.00.",
+        "Since these are whole dollar amounts, simply add the dollars.",
+        "$3.00 + $2.00 = $5.00."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding the two costs.",
+        "Forgetting to write the answer with a dollar sign and decimal point."
+      ],
+      "hints": [
+        "This is an addition word problem about two costs.",
+        "Add $3 and $2 together."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_004",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "medium",
+      "questionText": "Mia buys a book for $8.50 and a bookmark for $1.25. How much change does she get from $10.00?",
+      "questionType": "short_answer",
+      "answerKey": "$0.25",
+      "stepByStepSolution": [
+        "First add the two costs: $8.50 + $1.25 = $9.75.",
+        "Then subtract this total from $10.00.",
+        "$10.00 - $9.75 = $0.25 change."
+      ],
+      "commonMisconceptions": [
+        "Only subtracting one of the two item costs from $10.00.",
+        "Making a regrouping error when subtracting close to a whole dollar."
+      ],
+      "hints": [
+        "This is a two-step problem: find the total cost first.",
+        "Then subtract that total from $10.00."
+      ],
+      "tags": [
+        "money",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_005",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "medium",
+      "questionText": "A canteen sells a sandwich for $4.50 and a piece of fruit for $1.50. If Jack buys both and pays with a $10 note, how much change does he receive?",
+      "questionType": "short_answer",
+      "answerKey": "$4.00",
+      "stepByStepSolution": [
+        "Add the two costs: $4.50 + $1.50 = $6.00.",
+        "Subtract this total from the $10 note.",
+        "$10.00 - $6.00 = $4.00 change."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both items before subtracting from $10.",
+        "Subtracting only one item's cost instead of the total."
+      ],
+      "hints": [
+        "Find the total cost of both items first.",
+        "Then subtract that total from $10.00."
+      ],
+      "tags": [
+        "money",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_006",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "medium",
+      "questionText": "Grace saved $12.00. She spent $4.75 on a comic and $2.25 on stickers. How much money does she have left?",
+      "questionType": "short_answer",
+      "answerKey": "$5.00",
+      "stepByStepSolution": [
+        "Add the two amounts spent: $4.75 + $2.25 = $7.00.",
+        "Subtract this total from her savings: $12.00 - $7.00.",
+        "This leaves $5.00."
+      ],
+      "commonMisconceptions": [
+        "Subtracting each cost separately without combining them first.",
+        "Adding the amount spent to her savings instead of subtracting."
+      ],
+      "hints": [
+        "Work out the total amount spent first.",
+        "Then subtract that total from Grace's starting savings."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_007",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "medium",
+      "questionText": "Which number sentence correctly finds the total cost of a $6.40 toy and a $3.60 toy? A) $6.40 + $3.60   B) $6.40 - $3.60   C) $6.40 x $3.60",
+      "questionType": "multiple_choice",
+      "answerKey": "$6.40 + $3.60",
+      "stepByStepSolution": [
+        "Finding a total cost means combining amounts, which uses addition.",
+        "Subtraction or multiplication would not give the combined cost of both toys.",
+        "The correct number sentence is $6.40 + $3.60."
+      ],
+      "commonMisconceptions": [
+        "Choosing subtraction because the word 'change' or 'left' feels familiar.",
+        "Assuming a harder-looking operation, like multiplication, must be correct for money."
+      ],
+      "hints": [
+        "Think about what 'total cost' means — are the amounts combined or compared?",
+        "Combining two amounts always uses addition."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_008",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "hard",
+      "questionText": "Ali has $20.00. He buys a cap for $12.50 and a drink bottle for $4.75. How much money does he have left?",
+      "questionType": "short_answer",
+      "answerKey": "$2.75",
+      "stepByStepSolution": [
+        "Add the two costs: $12.50 + $4.75 = $17.25.",
+        "Subtract this total from Ali's money: $20.00 - $17.25.",
+        "This leaves $2.75."
+      ],
+      "commonMisconceptions": [
+        "Subtracting each item separately and losing track partway through.",
+        "Making a regrouping error when subtracting close to a whole number."
+      ],
+      "hints": [
+        "Add both costs together before subtracting from $20.00.",
+        "Line up the dollars and cents carefully when subtracting."
+      ],
+      "tags": [
+        "money",
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_009",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "hard",
+      "questionText": "Ruby is saving for a $25.00 game. She has already saved $16.50 and her nan gives her $3.75 more. How much more does Ruby need to reach $25.00?",
+      "questionType": "short_answer",
+      "answerKey": "$4.75",
+      "stepByStepSolution": [
+        "Add what Ruby already has: $16.50 + $3.75 = $20.25.",
+        "Subtract this from the total cost of the game: $25.00 - $20.25.",
+        "Ruby still needs $4.75."
+      ],
+      "commonMisconceptions": [
+        "Subtracting straight from $25.00 without first adding the nan's gift.",
+        "Making a regrouping error when subtracting from a whole number."
+      ],
+      "hints": [
+        "Work out how much Ruby has saved altogether first.",
+        "Then subtract that amount from the cost of the game."
+      ],
+      "tags": [
+        "money",
+        "subtraction",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M12_Y3_010",
+      "skillId": "M3N04_word_problems_money",
+      "difficulty": "hard",
+      "questionText": "A family buys three movie tickets at $8.50 each and one popcorn for $6.00. What is the total cost?",
+      "questionType": "short_answer",
+      "answerKey": "$31.50",
+      "stepByStepSolution": [
+        "Find the cost of the three tickets: 3 x $8.50 = $25.50.",
+        "Add the cost of the popcorn: $25.50 + $6.00.",
+        "This gives a total cost of $31.50."
+      ],
+      "commonMisconceptions": [
+        "Only buying the cost of one ticket instead of multiplying by three.",
+        "Forgetting to add the popcorn cost after finding the ticket total."
+      ],
+      "hints": [
+        "This is a two-step problem: multiply first, then add.",
+        "Find the total ticket cost before adding the popcorn."
+      ],
+      "tags": [
+        "money",
+        "multiplication",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_001",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the length of your pencil? A) Millimetres or centimetres   B) Kilometres   C) Litres",
+      "questionType": "multiple_choice",
+      "answerKey": "Millimetres or centimetres",
+      "stepByStepSolution": [
+        "A pencil is a small object, so a small unit of length is best.",
+        "Kilometres are used for very long distances, and litres measure capacity, not length.",
+        "Millimetres or centimetres are the most sensible choice for a pencil."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilometres because it sounds like an official measuring unit.",
+        "Confusing a length unit with a capacity unit like litres."
+      ],
+      "hints": [
+        "Think about the actual size of a pencil.",
+        "Would you use a huge unit or a small unit for something this size?"
+      ],
+      "tags": [
+        "units",
+        "length",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_002",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "easy",
+      "questionText": "Which tool would you use to measure how much water is in a bottle? A) Ruler   B) Measuring jug   C) Bathroom scale",
+      "questionType": "multiple_choice",
+      "answerKey": "Measuring jug",
+      "stepByStepSolution": [
+        "A ruler measures length, and a bathroom scale measures mass.",
+        "Water in a bottle is a capacity, which needs a tool that measures volume.",
+        "A measuring jug is designed to measure capacity, so it is the best choice."
+      ],
+      "commonMisconceptions": [
+        "Choosing a ruler because it is a familiar measuring tool for everything.",
+        "Confusing capacity with mass and picking a scale."
+      ],
+      "hints": [
+        "Think about what is being measured: length, mass, or capacity?",
+        "Which tool has marked lines for millilitres or litres?"
+      ],
+      "tags": [
+        "units",
+        "capacity",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_003",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the mass of an apple? A) Grams   B) Kilometres   C) Litres",
+      "questionType": "multiple_choice",
+      "answerKey": "Grams",
+      "stepByStepSolution": [
+        "An apple is fairly light, so a small mass unit works well.",
+        "Kilometres measure distance and litres measure capacity, not mass.",
+        "Grams are the appropriate unit for something as light as an apple."
+      ],
+      "commonMisconceptions": [
+        "Confusing mass units with length or capacity units.",
+        "Choosing kilograms unnecessarily for something so light, when grams give more useful detail."
+      ],
+      "hints": [
+        "Think about how heavy an apple actually is.",
+        "Which of these three options actually measures mass?"
+      ],
+      "tags": [
+        "units",
+        "mass",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_004",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "medium",
+      "questionText": "Which unit would you use to measure the distance from Melbourne to Sydney? A) Centimetres   B) Kilometres   C) Millilitres",
+      "questionType": "multiple_choice",
+      "answerKey": "Kilometres",
+      "stepByStepSolution": [
+        "The distance between two cities is very long.",
+        "Centimetres would give an extremely large, hard-to-use number, and millilitres measure capacity, not distance.",
+        "Kilometres are the sensible unit for long distances like this."
+      ],
+      "commonMisconceptions": [
+        "Choosing centimetres because it is a familiar unit from the classroom.",
+        "Mixing up a distance unit with a capacity unit."
+      ],
+      "hints": [
+        "Think about how far it actually is between two major cities.",
+        "Which unit is designed for very long distances?"
+      ],
+      "tags": [
+        "units",
+        "length",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_005",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "medium",
+      "questionText": "Which tool is best for measuring the length of the classroom: a 30 cm ruler or a trundle wheel? Explain in one short sentence why.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "A trundle wheel, because it can measure longer distances more easily than a small ruler",
+        "A trundle wheel, because the classroom is too long to measure easily with a small ruler"
+      ],
+      "stepByStepSolution": [
+        "A classroom is much longer than 30 cm.",
+        "Using a small ruler would mean measuring many, many times in a row.",
+        "A trundle wheel is designed for measuring longer distances more efficiently."
+      ],
+      "commonMisconceptions": [
+        "Choosing the ruler because it is the more familiar, everyday tool.",
+        "Not considering how many times a small ruler would need to be used."
+      ],
+      "hints": [
+        "Think about how many times you'd need to move a 30 cm ruler across the room.",
+        "Which tool is specially designed for measuring longer distances?"
+      ],
+      "tags": [
+        "units",
+        "length",
+        "tools"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_006",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "medium",
+      "questionText": "Which unit is best for measuring the capacity of a bathtub? A) Millilitres   B) Litres   C) Grams",
+      "questionType": "multiple_choice",
+      "answerKey": "Litres",
+      "stepByStepSolution": [
+        "A bathtub holds a large amount of water.",
+        "Millilitres would give an extremely large number, and grams measure mass, not capacity.",
+        "Litres are the sensible unit for a large capacity like a bathtub."
+      ],
+      "commonMisconceptions": [
+        "Confusing capacity with mass and choosing grams.",
+        "Choosing millilitres without thinking about how large the resulting number would be."
+      ],
+      "hints": [
+        "Think about how much water a bathtub actually holds.",
+        "Which unit is used for larger amounts of liquid?"
+      ],
+      "tags": [
+        "units",
+        "capacity",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_007",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "medium",
+      "questionText": "Would you use a kitchen scale or bathroom scale to measure the mass of a bag of rice? Give a one-word answer: kitchen or bathroom.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Kitchen",
+        "kitchen scale"
+      ],
+      "stepByStepSolution": [
+        "A bag of rice is a light, food-related item.",
+        "A bathroom scale is designed for measuring heavier things, like a person's mass.",
+        "A kitchen scale is more suitable for a lighter, everyday food item like rice."
+      ],
+      "commonMisconceptions": [
+        "Choosing a bathroom scale simply because it is a bigger, more familiar scale.",
+        "Not thinking about how light a bag of rice actually is."
+      ],
+      "hints": [
+        "Think about how heavy a bag of rice really is compared to a person.",
+        "Which scale is designed for smaller, lighter amounts?"
+      ],
+      "tags": [
+        "units",
+        "mass",
+        "tools"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_008",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "hard",
+      "questionText": "Explain why you would use millimetres, not metres, to measure the width of a matchstick.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Because a matchstick is very small, so millimetres give a more precise measurement than metres"
+      ],
+      "stepByStepSolution": [
+        "A matchstick is a very small, thin object.",
+        "Using metres would give a tiny, hard-to-read decimal number.",
+        "Millimetres give a more precise and sensible measurement for something this small."
+      ],
+      "commonMisconceptions": [
+        "Believing metres are always the 'correct' unit no matter the object's size.",
+        "Not considering how difficult it would be to read a measurement in metres for something so small."
+      ],
+      "hints": [
+        "Think about how small a matchstick actually is.",
+        "Which unit gives a clearer, more precise number for tiny objects?"
+      ],
+      "tags": [
+        "units",
+        "length",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_009",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "hard",
+      "questionText": "A builder needs to measure the length of a new fence line. Which tool and unit are most appropriate? A) A ruler, measuring in millimetres   B) A tape measure or trundle wheel, measuring in metres   C) A measuring jug, measuring in litres",
+      "questionType": "multiple_choice",
+      "answerKey": "A tape measure or trundle wheel, measuring in metres",
+      "stepByStepSolution": [
+        "A fence line is much longer than a small ruler could easily measure.",
+        "A measuring jug is used for capacity, not length, so option C doesn't make sense.",
+        "A tape measure or trundle wheel, measuring in metres, is the most appropriate choice."
+      ],
+      "commonMisconceptions": [
+        "Choosing a ruler because it is the most familiar length tool, without considering the fence's actual length.",
+        "Confusing a length task with a capacity task."
+      ],
+      "hints": [
+        "Think about how long a fence line usually is.",
+        "Which tool and unit suit a longer length like this?"
+      ],
+      "tags": [
+        "units",
+        "length",
+        "measurement_choices"
+      ]
+    },
+    {
+      "id": "T2M13_Y3_010",
+      "skillId": "M3M01_choosing_units",
+      "difficulty": "hard",
+      "questionText": "Why would you choose kilograms rather than grams to weigh a full backpack? Answer in one short sentence.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Because the backpack is fairly heavy, so kilograms are a more sensible unit than grams for larger masses"
+      ],
+      "stepByStepSolution": [
+        "A full backpack is reasonably heavy.",
+        "Using grams would give a very large number that is harder to work with.",
+        "Kilograms give a simpler, more sensible number for something this heavy."
+      ],
+      "commonMisconceptions": [
+        "Assuming grams should always be used because they are a more familiar unit from earlier learning.",
+        "Not thinking about how large the number in grams would be."
+      ],
+      "hints": [
+        "Think about how heavy a full backpack actually feels.",
+        "Which unit gives a simpler number for heavier objects?"
+      ],
+      "tags": [
+        "units",
+        "mass",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_001",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "easy",
+      "questionText": "Round 47 to the nearest 10.",
+      "questionType": "short_answer",
+      "answerKey": "50",
+      "stepByStepSolution": [
+        "Look at the ones digit in 47, which is 7.",
+        "Since 7 is 5 or more, round up to the next ten.",
+        "47 rounds to 50."
+      ],
+      "commonMisconceptions": [
+        "Rounding down instead of up when the ones digit is 5 or more.",
+        "Rounding to the nearest 100 instead of the nearest 10."
+      ],
+      "hints": [
+        "Look at the ones digit to decide whether to round up or down.",
+        "Is 7 closer to 0 or closer to 10?"
+      ],
+      "tags": [
+        "rounding",
+        "estimation"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_002",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "easy",
+      "questionText": "Round 23 to the nearest 10.",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "Look at the ones digit in 23, which is 3.",
+        "Since 3 is less than 5, round down to the ten below.",
+        "23 rounds to 20."
+      ],
+      "commonMisconceptions": [
+        "Rounding up instead of down when the ones digit is less than 5.",
+        "Confusing which ten is 'below' and which is 'above'."
+      ],
+      "hints": [
+        "Look at the ones digit to decide the direction of rounding.",
+        "Is 3 closer to 20 or closer to 30?"
+      ],
+      "tags": [
+        "rounding",
+        "estimation"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_003",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "easy",
+      "questionText": "Estimate 29 + 31 by rounding each number to the nearest 10 first.",
+      "questionType": "short_answer",
+      "answerKey": "60",
+      "stepByStepSolution": [
+        "Round 29 to the nearest 10: 29 rounds to 30.",
+        "Round 31 to the nearest 10: 31 rounds to 30.",
+        "Add the rounded numbers: 30 + 30 = 60."
+      ],
+      "commonMisconceptions": [
+        "Adding the exact numbers instead of the rounded ones.",
+        "Rounding one or both numbers incorrectly."
+      ],
+      "hints": [
+        "Round each number to the nearest 10 before adding.",
+        "29 is close to 30, and 31 is also close to 30."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_004",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "medium",
+      "questionText": "Estimate 68 + 24 by rounding to the nearest 10.",
+      "questionType": "short_answer",
+      "answerKey": "90",
+      "stepByStepSolution": [
+        "Round 68 to the nearest 10: 68 rounds to 70.",
+        "Round 24 to the nearest 10: 24 rounds to 20.",
+        "Add the rounded numbers: 70 + 20 = 90."
+      ],
+      "commonMisconceptions": [
+        "Rounding 68 down to 60 instead of up to 70.",
+        "Adding the original numbers instead of the rounded ones."
+      ],
+      "hints": [
+        "Round each number separately before adding.",
+        "Is 68 closer to 60 or 70?"
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "addition"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_005",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "medium",
+      "questionText": "Estimate 9 x 21 by rounding 21 to the nearest 10 first.",
+      "questionType": "short_answer",
+      "answerKey": "180",
+      "stepByStepSolution": [
+        "Round 21 to the nearest 10: 21 rounds to 20.",
+        "Multiply 9 by the rounded number: 9 x 20.",
+        "9 x 20 = 180."
+      ],
+      "commonMisconceptions": [
+        "Rounding 9 as well, when only 21 needed rounding.",
+        "Multiplying using the un-rounded number 21 instead of 20."
+      ],
+      "hints": [
+        "Only round the number that makes the multiplication easier.",
+        "9 x 20 is a simpler multiplication than 9 x 21."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_006",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "medium",
+      "questionText": "Jayden calculated 312 + 289 and got 601. Estimate the answer by rounding to the nearest 10 to check if this is reasonable. A) 310 + 290 = 600, so 601 seems reasonable   B) 310 + 290 = 600, so 601 seems way too small   C) The estimate cannot help check this",
+      "questionType": "multiple_choice",
+      "answerKey": "310 + 290 = 600, so 601 seems reasonable",
+      "stepByStepSolution": [
+        "Round 312 to the nearest 10: 312 rounds to 310.",
+        "Round 289 to the nearest 10: 289 rounds to 290.",
+        "310 + 290 = 600, which is very close to Jayden's answer of 601, so it seems reasonable."
+      ],
+      "commonMisconceptions": [
+        "Believing an estimate must exactly match the calculated answer to be useful.",
+        "Rounding one or both numbers to the wrong nearest ten."
+      ],
+      "hints": [
+        "Round both numbers to the nearest 10 first.",
+        "Compare your estimate to Jayden's actual answer — are they close?"
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "checking_answers"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_007",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "medium",
+      "questionText": "Estimate the answer to 6 x 48 by rounding 48 to the nearest 10.",
+      "questionType": "short_answer",
+      "answerKey": "300",
+      "stepByStepSolution": [
+        "Round 48 to the nearest 10: 48 rounds to 50.",
+        "Multiply 6 by the rounded number: 6 x 50.",
+        "6 x 50 = 300."
+      ],
+      "commonMisconceptions": [
+        "Rounding 48 down to 40 instead of up to 50.",
+        "Multiplying with the original number 48 instead of the rounded number."
+      ],
+      "hints": [
+        "Which ten is 48 closer to: 40 or 50?",
+        "6 x 50 is an easier multiplication to do mentally."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_008",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "hard",
+      "questionText": "Priya says 198 + 405 = 603. Use rounding to the nearest 10 to estimate and check whether her answer is reasonable. What is your estimate?",
+      "questionType": "short_answer",
+      "answerKey": "610",
+      "stepByStepSolution": [
+        "Round 198 to the nearest 10: 198 rounds to 200.",
+        "Round 405 to the nearest 10: 405 rounds to 410.",
+        "Add the rounded numbers: 200 + 410 = 610, which is close to Priya's answer, so it seems reasonable."
+      ],
+      "commonMisconceptions": [
+        "Rounding 198 to 190 instead of 200.",
+        "Adding the exact numbers instead of the rounded ones when estimating."
+      ],
+      "hints": [
+        "Round each number to its nearest 10 first.",
+        "198 is very close to 200."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "checking_answers"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_009",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "hard",
+      "questionText": "Estimate 7 x 32 by rounding 32 to the nearest 10, then use your estimate to check if the exact answer 224 seems reasonable. What is your estimate?",
+      "questionType": "short_answer",
+      "answerKey": "210",
+      "stepByStepSolution": [
+        "Round 32 to the nearest 10: 32 rounds to 30.",
+        "Multiply 7 by the rounded number: 7 x 30.",
+        "7 x 30 = 210, which is close to 224, so the exact answer seems reasonable."
+      ],
+      "commonMisconceptions": [
+        "Rounding 32 up to 40 instead of down to 30.",
+        "Multiplying with the un-rounded number instead of the estimate."
+      ],
+      "hints": [
+        "Is 32 closer to 30 or 40?",
+        "7 x 30 is a simpler multiplication to check against 224."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "checking_answers"
+      ]
+    },
+    {
+      "id": "T2M14_Y3_010",
+      "skillId": "M3N06_estimation_checking",
+      "difficulty": "hard",
+      "questionText": "Liam estimates 493 - 205 by rounding both numbers to the nearest 10 first. What is his estimate?",
+      "questionType": "short_answer",
+      "answerKey": "280",
+      "stepByStepSolution": [
+        "Round 493 to the nearest 10: 493 rounds to 490.",
+        "Round 205 to the nearest 10: 205 rounds to 210.",
+        "Subtract the rounded numbers: 490 - 210 = 280."
+      ],
+      "commonMisconceptions": [
+        "Rounding 205 down to 200 instead of up to 210.",
+        "Subtracting the original numbers instead of the rounded ones."
+      ],
+      "hints": [
+        "Round both numbers to the nearest 10 before subtracting.",
+        "205 is right on the boundary, so remember which way it rounds."
+      ],
+      "tags": [
+        "rounding",
+        "estimation",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T2M15_Y3_001",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "easy",
+      "questionText": "What is at grid reference B2?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Playground",
+        "The playground"
+      ],
+      "stepByStepSolution": [
+        "A grid reference has a letter for the column and a number for the row.",
+        "Find column B, then move to row 2.",
+        "According to the map, the playground is at B2."
+      ],
+      "commonMisconceptions": [
+        "Reading the number first and the letter second.",
+        "Mixing up B2 with a nearby reference like B3."
+      ],
+      "hints": [
+        "Find column B first, then find row 2.",
+        "Check the passage for what is located at B2."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_002",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "easy",
+      "questionText": "What grid reference is the library at?",
+      "questionType": "short_answer",
+      "answerKey": "D1",
+      "stepByStepSolution": [
+        "Find the library mentioned in the map description.",
+        "Read its grid reference directly.",
+        "The library is at D1."
+      ],
+      "commonMisconceptions": [
+        "Swapping the letter and number around, writing 1D instead of D1.",
+        "Confusing the library with another nearby location."
+      ],
+      "hints": [
+        "Search the passage for the word 'library'.",
+        "Grid references are always written as a letter followed by a number."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_003",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "easy",
+      "questionText": "What is at grid reference A3?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Tuckshop",
+        "The tuckshop"
+      ],
+      "stepByStepSolution": [
+        "Find column A, then move to row 3.",
+        "Check what the map says is located there.",
+        "According to the map, the tuckshop is at A3."
+      ],
+      "commonMisconceptions": [
+        "Looking at row A and column 3 instead of the other way around.",
+        "Confusing A3 with A1, the gate's location."
+      ],
+      "hints": [
+        "Find column A first, then find row 3.",
+        "Check the passage for what is located at A3."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_004",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "medium",
+      "questionText": "What grid reference is the oval at?",
+      "questionType": "short_answer",
+      "answerKey": "C4",
+      "stepByStepSolution": [
+        "Find the oval mentioned in the map description.",
+        "Read its grid reference directly.",
+        "The oval is at C4."
+      ],
+      "commonMisconceptions": [
+        "Writing the reference in the wrong order, such as 4C.",
+        "Confusing the oval with the playground."
+      ],
+      "hints": [
+        "Search the passage for the word 'oval'.",
+        "Remember: letter first, then number."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_005",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "medium",
+      "questionText": "Which is further from the gate (A1): the playground (B2) or the oval (C4)? Give a one-word answer.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Oval",
+        "The oval"
+      ],
+      "stepByStepSolution": [
+        "The playground at B2 is 1 column and 1 row away from the gate.",
+        "The oval at C4 is 2 columns and 3 rows away from the gate, which is further.",
+        "So the oval is further from the gate than the playground."
+      ],
+      "commonMisconceptions": [
+        "Comparing only the letters or only the numbers, not both together.",
+        "Assuming the location listed last on the map must be closest."
+      ],
+      "hints": [
+        "Compare how many columns and rows each location is from A1.",
+        "Which location needs to move further across and further down the grid?"
+      ],
+      "tags": [
+        "grid_references",
+        "maps",
+        "comparison"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_006",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "medium",
+      "questionText": "If you are standing at the gate (A1) and want to go to the tuckshop (A3), which direction would you move? A) Down the same column   B) Across the same row   C) Diagonally",
+      "questionType": "multiple_choice",
+      "answerKey": "Down the same column",
+      "stepByStepSolution": [
+        "The gate is at A1 and the tuckshop is at A3.",
+        "Both locations share the same letter, A, meaning they are in the same column.",
+        "Moving from row 1 to row 3 within the same column means moving down the same column."
+      ],
+      "commonMisconceptions": [
+        "Assuming any movement on a grid must be diagonal.",
+        "Not noticing that the letter stays the same between the two references."
+      ],
+      "hints": [
+        "Compare the letters and numbers of both grid references.",
+        "Does the column letter change, or just the row number?"
+      ],
+      "tags": [
+        "grid_references",
+        "maps",
+        "direction"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_007",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "medium",
+      "questionText": "Give the grid reference for the gate.",
+      "questionType": "short_answer",
+      "answerKey": "A1",
+      "stepByStepSolution": [
+        "Find the gate mentioned in the map description.",
+        "Read its grid reference directly.",
+        "The gate is at A1."
+      ],
+      "commonMisconceptions": [
+        "Confusing the gate's reference with the tuckshop's, since both are in column A.",
+        "Writing the number before the letter."
+      ],
+      "hints": [
+        "Search the passage for the word 'gate'.",
+        "Remember to write the letter first, then the number."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_008",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "hard",
+      "questionText": "You are at the library (D1). Describe the grid reference of the location exactly two rows below it in the same column.",
+      "questionType": "short_answer",
+      "answerKey": "D3",
+      "stepByStepSolution": [
+        "The library is at D1, in column D, row 1.",
+        "Moving two rows below means going from row 1 to row 3, while staying in column D.",
+        "This gives the grid reference D3."
+      ],
+      "commonMisconceptions": [
+        "Moving two columns instead of two rows.",
+        "Counting rows incorrectly and landing on D2 instead of D3."
+      ],
+      "hints": [
+        "Staying in the same column means the letter doesn't change.",
+        "Count carefully: row 1, then 2 more rows down."
+      ],
+      "tags": [
+        "grid_references",
+        "maps"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_009",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "hard",
+      "questionText": "A new bubbler (drink fountain) is placed exactly halfway between the playground (B2) and the oval (C4), on the grid line between columns B and C, and between rows 2 and 4. Which row number would be closest to halfway between row 2 and row 4?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Row 2 and row 4 are the two rows being compared.",
+        "The row exactly between them is row 3.",
+        "So row 3 is closest to halfway between rows 2 and 4."
+      ],
+      "commonMisconceptions": [
+        "Choosing row 2 or row 4 instead of the row in between.",
+        "Adding the two row numbers together instead of finding the middle value."
+      ],
+      "hints": [
+        "Think of the rows as points on a number line: 2, 3, 4.",
+        "Which number sits exactly in the middle?"
+      ],
+      "tags": [
+        "grid_references",
+        "maps",
+        "reasoning"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M15_Y3_010",
+      "skillId": "M3SP02_grid_references",
+      "difficulty": "hard",
+      "questionText": "Which statement correctly compares the positions of the tuckshop (A3) and the library (D1)? A) They are in the same row   B) They are in the same column   C) They are in different rows and different columns",
+      "questionType": "multiple_choice",
+      "answerKey": "They are in different rows and different columns",
+      "stepByStepSolution": [
+        "The tuckshop is at A3, and the library is at D1.",
+        "The letters (A and D) are different, and the numbers (3 and 1) are different.",
+        "This means they are in different rows and different columns, matching option C."
+      ],
+      "commonMisconceptions": [
+        "Only comparing the letters or only the numbers, not both.",
+        "Assuming two locations must share something if they are both mentioned on the same map."
+      ],
+      "hints": [
+        "Compare both the letters and the numbers of the two references.",
+        "Are the letters the same? Are the numbers the same?"
+      ],
+      "tags": [
+        "grid_references",
+        "maps",
+        "comparison"
+      ],
+      "passage": "A simple treasure map is drawn on a grid with columns labelled A, B, C, D (left to right) and rows numbered 1, 2, 3, 4 (top to bottom). The playground is at B2. The library is at D1. The tuckshop is at A3. The oval is at C4. The gate is at A1."
+    },
+    {
+      "id": "T2M16_Y3_001",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "easy",
+      "questionText": "Which activity was the most popular?",
+      "questionType": "short_answer",
+      "answerKey": "Chasey",
+      "stepByStepSolution": [
+        "Compare all five totals: 6, 4, 9, 3, and 8.",
+        "The largest number among these is 9.",
+        "9 belongs to Chasey, so it was the most popular activity."
+      ],
+      "commonMisconceptions": [
+        "Picking an activity without comparing all five totals.",
+        "Confusing 'most popular' with 'least popular'."
+      ],
+      "hints": [
+        "Compare all the totals to find the biggest one.",
+        "Which activity was chosen 9 times?"
+      ],
+      "tags": [
+        "data_investigation",
+        "data"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_002",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "easy",
+      "questionText": "How many students chose Reading?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Find Reading in the survey results.",
+        "Read the number listed next to it.",
+        "Reading was chosen by 3 students."
+      ],
+      "commonMisconceptions": [
+        "Reading the wrong activity's total by mistake.",
+        "Confusing Reading with Skipping."
+      ],
+      "hints": [
+        "Find the word 'Reading' in the passage.",
+        "Read the number that comes right after it."
+      ],
+      "tags": [
+        "data_investigation",
+        "data"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_003",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "easy",
+      "questionText": "How many students were surveyed altogether?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "Add up all five totals: 6 + 4 + 9 + 3 + 8.",
+        "Adding these together step by step gives 30.",
+        "30 students were surveyed altogether."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the five activities when adding.",
+        "Miscounting one of the totals from the passage."
+      ],
+      "hints": [
+        "Add together every activity's total.",
+        "Make sure all five activities are included in your total."
+      ],
+      "tags": [
+        "data_investigation",
+        "data",
+        "addition"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_004",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "medium",
+      "questionText": "How many more students chose Chasey than Handball?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Chasey was chosen by 9 students, and Handball by 6.",
+        "Subtract to find the difference: 9 - 6.",
+        "This gives a difference of 3 students."
+      ],
+      "commonMisconceptions": [
+        "Adding the two totals instead of subtracting them.",
+        "Subtracting in the wrong order."
+      ],
+      "hints": [
+        "Find both totals first: Chasey and Handball.",
+        "Subtract the smaller number from the larger number."
+      ],
+      "tags": [
+        "data_investigation",
+        "data",
+        "subtraction"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_005",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "medium",
+      "questionText": "If the column graph uses a scale of 2, what height would the Drawing column need to reach?",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "Drawing was chosen by 8 students.",
+        "A scale of 2 still shows the actual value on the graph, just using marks every 2 units.",
+        "The Drawing column would need to reach the mark for 8."
+      ],
+      "commonMisconceptions": [
+        "Thinking the scale changes the actual data value being shown.",
+        "Confusing the scale's step size with the column's own height."
+      ],
+      "hints": [
+        "The scale changes how the graph is marked, not the actual number of votes.",
+        "How many students chose Drawing?"
+      ],
+      "tags": [
+        "data_investigation",
+        "column_graph",
+        "scale"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_006",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "medium",
+      "questionText": "Why is a tally useful when collecting this kind of data? A) It helps keep an accurate count while collecting answers one at a time   B) It automatically makes a graph   C) It removes the need to ask questions",
+      "questionType": "multiple_choice",
+      "answerKey": "It helps keep an accurate count while collecting answers one at a time",
+      "stepByStepSolution": [
+        "A tally is a simple way to record each answer as it is collected.",
+        "It does not create a graph by itself, and questions still need to be asked to gather the data.",
+        "Its real benefit is helping keep an accurate, running count, matching option A."
+      ],
+      "commonMisconceptions": [
+        "Believing a tally automatically produces a finished graph.",
+        "Thinking data can be collected without asking any questions at all."
+      ],
+      "hints": [
+        "Think about what a tally mark actually does when you're collecting answers.",
+        "Does it draw a graph, or does it just help you count?"
+      ],
+      "tags": [
+        "data_investigation",
+        "data_collection"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_007",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "medium",
+      "questionText": "What is the combined total of students who chose Skipping and Reading?",
+      "questionType": "short_answer",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Skipping was chosen by 4 students, and Reading by 3.",
+        "Add these together: 4 + 3.",
+        "This gives a combined total of 7 students."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong two activities together.",
+        "Subtracting instead of adding the two totals."
+      ],
+      "hints": [
+        "Find the totals for Skipping and Reading first.",
+        "Add these two numbers together."
+      ],
+      "tags": [
+        "data_investigation",
+        "data",
+        "addition"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_008",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "hard",
+      "questionText": "The students want to write one sentence describing the data investigation's findings. Complete this sentence with the correct activity: '___ was the least popular recess activity in our survey.'",
+      "questionType": "short_answer",
+      "answerKey": "Reading",
+      "stepByStepSolution": [
+        "Compare all five totals: 6, 4, 9, 3, and 8.",
+        "The smallest number among these is 3.",
+        "3 belongs to Reading, so Reading was the least popular activity."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'least popular' with 'most popular'.",
+        "Choosing an activity without comparing all five totals carefully."
+      ],
+      "hints": [
+        "Compare all the totals to find the smallest one.",
+        "Which activity was chosen only 3 times?"
+      ],
+      "tags": [
+        "data_investigation",
+        "data",
+        "comparison"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_009",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "hard",
+      "questionText": "If 5 more students were surveyed and all 5 chose Handball, what would the new total for Handball be, and would it then be more popular than Chasey?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "11, and yes, it would be more popular than Chasey",
+        "11, and yes it would be more popular than Chasey (9)"
+      ],
+      "stepByStepSolution": [
+        "Handball currently has 6 votes. Add the 5 new votes: 6 + 5 = 11.",
+        "Compare this new total to Chasey's total of 9.",
+        "11 is greater than 9, so Handball would then be more popular than Chasey."
+      ],
+      "commonMisconceptions": [
+        "Comparing Handball's original total (6) to Chasey without adding the extra votes first.",
+        "Adding the 5 extra votes to the wrong activity."
+      ],
+      "hints": [
+        "Work out Handball's new total first.",
+        "Then compare this new total to Chasey's 9 votes."
+      ],
+      "tags": [
+        "data_investigation",
+        "comparison",
+        "addition"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    },
+    {
+      "id": "T2M16_Y3_010",
+      "skillId": "M3ST01_02_consolidation_term2",
+      "difficulty": "hard",
+      "questionText": "Which question would extend this data investigation further? A) What is your favourite recess activity?   B) How does recess activity choice compare between Year 3 and Year 5 students?   C) What is your name?",
+      "questionType": "multiple_choice",
+      "answerKey": "How does recess activity choice compare between Year 3 and Year 5 students?",
+      "stepByStepSolution": [
+        "Option A is the original question already used in the survey.",
+        "Option C is unrelated to recess activities or data investigation.",
+        "Option B builds on the original investigation by comparing results between two groups, extending the investigation further."
+      ],
+      "commonMisconceptions": [
+        "Choosing the original question again instead of a question that builds on it.",
+        "Choosing an unrelated question that doesn't connect to the data topic at all."
+      ],
+      "hints": [
+        "Think about how the investigation could be made bigger or more interesting.",
+        "Which option compares the results with another group of students?"
+      ],
+      "tags": [
+        "data_investigation",
+        "extension"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates, 'What is your favourite recess activity?' They collected these tally results: Handball - 6, Skipping - 4, Chasey - 9, Reading - 3, Drawing - 8. They plan to show the results on a column graph using a scale that goes up in twos."
+    }
+  ]
+}

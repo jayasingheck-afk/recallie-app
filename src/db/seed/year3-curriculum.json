@@ -1,533 +1,4721 @@
 {
   "version": "1.0",
-  "year_levels": [3],
+  "year_levels": [
+    3
+  ],
   "weeks_per_term": 10,
   "subjects": {
     "maths": {
       "skills": [
-        { "id": "M3N01_represent_numbers_10k", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N01_represent_numbers_10k",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Represent and order numbers to 10,000 using place value (thousands, hundreds, tens, ones).",
-          "ac_codes": ["AC9M3N01", "AC9M3N02"],
+          "ac_codes": [
+            "AC9M3N01",
+            "AC9M3N02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Recognise, model, represent and order natural numbers beyond 10,000 using place value.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Representing numbers", "outcomes": ["MA2-MRNS-01", "MA2-MRNS-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise, model, represent and order natural numbers beyond 10,000 using place value.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing numbers",
+              "outcomes": [
+                "MA2-MRNS-01",
+                "MA2-MRNS-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3M01_metric_units_intro", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M01_metric_units_intro",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Identify which metric units are used for length, mass and capacity; make estimates using familiar items.",
-          "ac_codes": ["AC9M3M01"],
+          "ac_codes": [
+            "AC9M3M01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Identify appropriate metric units for everyday measurements and estimate using known references.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Geometric measure / Non-spatial measure", "outcomes": ["MA2-GM-MEAS-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify appropriate metric units for everyday measurements and estimate using known references.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measure / Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-MEAS-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N03_compare_order_10k", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N03_compare_order_10k",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Compare and order numbers to 10,000; use number lines and place value to reason about size.",
-          "ac_codes": ["AC9M3N01", "AC9M3N03"],
+          "ac_codes": [
+            "AC9M3N01",
+            "AC9M3N03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Order natural numbers beyond 10,000 and locate on number lines.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Representing numbers / Additive relations", "outcomes": ["MA2-MRNS-03", "MA2-ADD-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Order natural numbers beyond 10,000 and locate on number lines.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing numbers / Additive relations",
+              "outcomes": [
+                "MA2-MRNS-03",
+                "MA2-ADD-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3M02_measure_length", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M02_measure_length",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Measure and compare lengths using formal metric units (m, cm); read instruments with labelled markings.",
-          "ac_codes": ["AC9M3M02"],
+          "ac_codes": [
+            "AC9M3M02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Measure and compare lengths using metres and centimetres and instruments with labelled scales.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Geometric measure", "outcomes": ["MA2-GM-LEN-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Measure and compare lengths using metres and centimetres and instruments with labelled scales.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measure",
+              "outcomes": [
+                "MA2-GM-LEN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N04_add_sub_1000_no_regroup", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N04_add_sub_1000_no_regroup",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Add and subtract 2- and 3-digit numbers within 1,000 without regrouping; use place value strategies.",
-          "ac_codes": ["AC9M3N04", "AC9M3A01"],
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3A01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve addition and subtraction problems within 1,000 using place value and mental strategies.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Additive relations", "outcomes": ["MA2-ADD-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve addition and subtraction problems within 1,000 using place value and mental strategies.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations",
+              "outcomes": [
+                "MA2-ADD-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3M02_measure_mass", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M02_measure_mass",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Measure and compare mass using g and kg; read scales on simple instruments.",
-          "ac_codes": ["AC9M3M02"],
+          "ac_codes": [
+            "AC9M3M02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Measure and compare mass using grams and kilograms and instruments with labelled scales.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Non-spatial measure", "outcomes": ["MA2-GM-MASS-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Measure and compare mass using grams and kilograms and instruments with labelled scales.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-MASS-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N04_add_sub_1000_regroup", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N04_add_sub_1000_regroup",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Add and subtract 2- and 3-digit numbers within 1,000 with regrouping; use written and mental strategies.",
-          "ac_codes": ["AC9M3N04", "AC9M3N05"],
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3N05"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve addition and subtraction problems within 1,000 with regrouping using efficient strategies.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Additive relations", "outcomes": ["MA2-ADD-03"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve addition and subtraction problems within 1,000 with regrouping using efficient strategies.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations",
+              "outcomes": [
+                "MA2-ADD-03"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3M02_measure_capacity", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M02_measure_capacity",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Measure and compare capacity using mL and L; read containers with labelled markings.",
-          "ac_codes": ["AC9M3M02"],
+          "ac_codes": [
+            "AC9M3M02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Measure and compare capacity using millilitres and litres and instruments with labelled scales.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Non-spatial measure", "outcomes": ["MA2-GM-CAP-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Measure and compare capacity using millilitres and litres and instruments with labelled scales.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-CAP-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3ST01_categorical_data", "subject": "maths", "year_level": 3, "strand": "Statistics",
+        {
+          "id": "M3ST01_categorical_data",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
           "description": "Collect categorical data; create simple frequency tables.",
-          "ac_codes": ["AC9M3ST01"],
+          "ac_codes": [
+            "AC9M3ST01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Acquire and record categorical data using frequency tables.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Data", "outcomes": ["MA2-DATA-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Acquire and record categorical data using frequency tables.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N06_multiplication_equal_groups", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N06_multiplication_equal_groups",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Represent multiplication as equal groups and arrays; develop facts for 2, 3, 5, 10.",
-          "ac_codes": ["AC9M3N06", "AC9M3A02"],
+          "ac_codes": [
+            "AC9M3N06",
+            "AC9M3A02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Model multiplication as equal groups and arrays; recall multiplication facts for 2, 3, 5 and 10.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Multiplicative relations", "outcomes": ["MA2-MULT-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Model multiplication as equal groups and arrays; recall multiplication facts for 2, 3, 5 and 10.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MULT-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "M3M04_time_to_minute", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M04_time_to_minute",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Tell and write time to the minute; use analog and digital clocks.",
-          "ac_codes": ["AC9M3M04"],
+          "ac_codes": [
+            "AC9M3M04"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Tell and write time to the minute using analog and digital clocks.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Non-spatial measure", "outcomes": ["MA2-GM-TIME-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Tell and write time to the minute using analog and digital clocks.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-TIME-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N06_division_sharing_grouping", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N06_division_sharing_grouping",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Represent division as sharing and grouping; link to multiplication facts for 2, 3, 5, 10.",
-          "ac_codes": ["AC9M3N06", "AC9M3A03"],
+          "ac_codes": [
+            "AC9M3N06",
+            "AC9M3A03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Model division as sharing and grouping; use multiplication facts to solve division problems.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Multiplicative relations", "outcomes": ["MA2-MULT-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Model division as sharing and grouping; use multiplication facts to solve division problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MULT-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "M3M05_angles_as_turns", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M05_angles_as_turns",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Identify angles as turns (quarter, half, three-quarter, full); relate to everyday situations.",
-          "ac_codes": ["AC9M3M05"],
+          "ac_codes": [
+            "AC9M3M05"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Describe angles as turns and relate to everyday contexts.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Geometric measure", "outcomes": ["MA2-GM-ANG-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Describe angles as turns and relate to everyday contexts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measure",
+              "outcomes": [
+                "MA2-GM-ANG-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3ST02_column_graphs", "subject": "maths", "year_level": 3, "strand": "Statistics",
+        {
+          "id": "M3ST02_column_graphs",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
           "description": "Create simple column graphs from categorical data; interpret information.",
-          "ac_codes": ["AC9M3ST02"],
+          "ac_codes": [
+            "AC9M3ST02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create and interpret simple column graphs for categorical data.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Data", "outcomes": ["MA2-DATA-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create and interpret simple column graphs for categorical data.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N06_mult_2digit_by_1digit", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N06_mult_2digit_by_1digit",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Multiply 2-digit by 1-digit numbers using place value, arrays, and mental strategies.",
-          "ac_codes": ["AC9M3N06", "AC9M3A02"],
+          "ac_codes": [
+            "AC9M3N06",
+            "AC9M3A02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve multiplication problems involving 2-digit by 1-digit numbers using strategies.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Multiplicative relations", "outcomes": ["MA2-MULT-03"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve multiplication problems involving 2-digit by 1-digit numbers using strategies.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MULT-03"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "M3SP01_classify_2d_shapes", "subject": "maths", "year_level": 3, "strand": "Space",
+        {
+          "id": "M3SP01_classify_2d_shapes",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
           "description": "Make, compare and classify 2D shapes; describe features (sides, vertices, symmetry).",
-          "ac_codes": ["AC9M3SP01"],
+          "ac_codes": [
+            "AC9M3SP01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Classify 2D shapes by their features and explain reasoning.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Two-dimensional spatial structure", "outcomes": ["MA2-2D-SP-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Classify 2D shapes by their features and explain reasoning.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Two-dimensional spatial structure",
+              "outcomes": [
+                "MA2-2D-SP-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N07_unit_fractions", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N07_unit_fractions",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Recognise and represent unit fractions (1/2, 1/3, 1/4, 1/5, 1/8, 1/10); locate on number lines.",
-          "ac_codes": ["AC9M3N07", "AC9M3A01"],
+          "ac_codes": [
+            "AC9M3N07",
+            "AC9M3A01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Recognise and represent unit fractions and locate on number lines.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Partitioned fractions", "outcomes": ["MA2-FRAC-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise and represent unit fractions and locate on number lines.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Partitioned fractions",
+              "outcomes": [
+                "MA2-FRAC-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "M3SP02_2d_maps_plans", "subject": "maths", "year_level": 3, "strand": "Space",
+        {
+          "id": "M3SP02_2d_maps_plans",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
           "description": "Interpret and create simple 2D representations of familiar environments (maps, plans).",
-          "ac_codes": ["AC9M3SP02"],
+          "ac_codes": [
+            "AC9M3SP02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Interpret and create 2D representations of familiar places and routes.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Two-dimensional spatial structure", "outcomes": ["MA2-2D-SP-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Interpret and create 2D representations of familiar places and routes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Two-dimensional spatial structure",
+              "outcomes": [
+                "MA2-2D-SP-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3P01_chance_language", "subject": "maths", "year_level": 3, "strand": "Probability",
+        {
+          "id": "M3P01_chance_language",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Probability",
           "description": "Identify everyday events involving chance; describe as 'likely', 'unlikely', 'certain', 'impossible'.",
-          "ac_codes": ["AC9M3P01"],
+          "ac_codes": [
+            "AC9M3P01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Describe chance events using likelihood language.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Chance", "outcomes": ["MA2-CHAN-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Describe chance events using likelihood language.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Chance",
+              "outcomes": [
+                "MA2-CHAN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N04_06_word_problems", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N04_06_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Solve one- and two-step word problems involving addition, subtraction, and multiplication; choose operations.",
-          "ac_codes": ["AC9M3N04", "AC9M3N06", "AC9M3A01"],
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3N06",
+            "AC9M3A01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve multi-step problems using addition, subtraction and multiplication.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Additive relations / Multiplicative relations", "outcomes": ["MA2-ADD-04", "MA2-MULT-04"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve multi-step problems using addition, subtraction and multiplication.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations / Multiplicative relations",
+              "outcomes": [
+                "MA2-ADD-04",
+                "MA2-MULT-04"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "M3M02_measurement_problems", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M02_measurement_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Solve simple measurement problems involving length, mass, or capacity (e.g., total length, difference in mass).",
-          "ac_codes": ["AC9M3M02", "AC9M3N04"],
+          "ac_codes": [
+            "AC9M3M02",
+            "AC9M3N04"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve simple problems involving metric measurements of length, mass and capacity.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Geometric measure / Non-spatial measure", "outcomes": ["MA2-GM-PROB-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve simple problems involving metric measurements of length, mass and capacity.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measure / Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-PROB-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3P02_chance_experiments", "subject": "maths", "year_level": 3, "strand": "Probability",
+        {
+          "id": "M3P02_chance_experiments",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Probability",
           "description": "Conduct simple chance experiments (e.g., coin toss, dice roll); record outcomes.",
-          "ac_codes": ["AC9M3P02"],
+          "ac_codes": [
+            "AC9M3P02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Conduct repeated chance experiments and record outcomes.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Chance", "outcomes": ["MA2-CHAN-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Conduct repeated chance experiments and record outcomes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Chance",
+              "outcomes": [
+                "MA2-CHAN-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3N05_06_financial_contexts", "subject": "maths", "year_level": 3, "strand": "Number",
+        {
+          "id": "M3N05_06_financial_contexts",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
           "description": "Apply number skills to simple financial contexts (prices, change, simple budgets); estimate and check reasonableness.",
-          "ac_codes": ["AC9M3N05", "AC9M3N06"],
+          "ac_codes": [
+            "AC9M3N05",
+            "AC9M3N06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve simple financial problems involving money, change and estimation.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Additive relations / Multiplicative relations", "outcomes": ["MA2-ADD-05", "MA2-MULT-05"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve simple financial problems involving money, change and estimation.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations / Multiplicative relations",
+              "outcomes": [
+                "MA2-ADD-05",
+                "MA2-MULT-05"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3M01_04_measurement_consolidation", "subject": "maths", "year_level": 3, "strand": "Measurement",
+        {
+          "id": "M3M01_04_measurement_consolidation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
           "description": "Consolidate time, length, mass, capacity through mixed problems; choose appropriate units and strategies.",
-          "ac_codes": ["AC9M3M01", "AC9M3M02", "AC9M3M04"],
+          "ac_codes": [
+            "AC9M3M01",
+            "AC9M3M02",
+            "AC9M3M04"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Solve mixed measurement problems involving time, length, mass and capacity.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Geometric measure / Non-spatial measure", "outcomes": ["MA2-GM-PROB-02"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve mixed measurement problems involving time, length, mass and capacity.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measure / Non-spatial measure",
+              "outcomes": [
+                "MA2-GM-PROB-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "M3ST02_03_data_interpretation", "subject": "maths", "year_level": 3, "strand": "Statistics",
+        {
+          "id": "M3ST02_03_data_interpretation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
           "description": "Interpret simple data displays (tables, column graphs) in context; answer questions.",
-          "ac_codes": ["AC9M3ST02", "AC9M3ST03"],
+          "ac_codes": [
+            "AC9M3ST02",
+            "AC9M3ST03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Interpret data displays and answer questions about the context.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Data", "outcomes": ["MA2-DATA-03"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Interpret data displays and answer questions about the context.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-03"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
-        }
-      ],
-      "sequence": {
-        "1": { "1": ["M3N01_represent_numbers_10k", "M3M01_metric_units_intro"], "2": ["M3N03_compare_order_10k", "M3M02_measure_length"],
-          "3": ["M3N04_add_sub_1000_no_regroup", "M3M02_measure_mass"],
-          "4": ["M3N04_add_sub_1000_regroup", "M3M02_measure_capacity", "M3ST01_categorical_data"],
-          "5": ["M3N06_multiplication_equal_groups", "M3M04_time_to_minute"],
-          "6": ["M3N06_division_sharing_grouping", "M3M05_angles_as_turns", "M3ST02_column_graphs"],
-          "7": ["M3N06_mult_2digit_by_1digit", "M3SP01_classify_2d_shapes"],
-          "8": ["M3N07_unit_fractions", "M3SP02_2d_maps_plans", "M3P01_chance_language"],
-          "9": ["M3N04_06_word_problems", "M3M02_measurement_problems", "M3P02_chance_experiments"],
-          "10": ["M3N05_06_financial_contexts", "M3M01_04_measurement_consolidation", "M3ST02_03_data_interpretation"] }
-      }
-    },
-    "english": {
-      "skills": [
-        { "id": "E3LY03_purpose_audience_text_types", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Identify purpose and audience of imaginative, informative and persuasive texts; use text features to support understanding.",
-          "ac_codes": ["AC9E3LY03", "AC9E3LA09"],
-          "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Identify the purpose and audience of different text types and explain how language and images support meaning.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension", "outcomes": ["EN2-RECOM-01", "EN2-8B"] }
-          },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA04_paragraphs_narrative_recount", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Plan and write simple paragraphs grouping related ideas; begin a short narrative or recount with clear beginning-middle-end.",
-          "ac_codes": ["AC9E3LA04", "AC9E3LY06"],
+        {
+          "id": "M3N01_04_place_value_10k_regroup",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Add and subtract two- and three-digit numbers using place value to 10,000, including regrouping ones, tens and hundreds.",
+          "ac_codes": [
+            "AC9M3N01",
+            "AC9M3N04"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use paragraphs to organise ideas in written texts; create imaginative or recount texts with clear structure.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise, represent and order numbers to at least 10,000, and add and subtract two- and three-digit numbers using place value, applying regrouping strategies where needed.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations",
+              "outcomes": [
+                "MA2-RN-01",
+                "MA2-AR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY09_high_freq_compound_sentences", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Review high-frequency words; revise basic punctuation (capital letters, full stops, question marks); use compound sentences with 'and', 'but', 'or'.",
-          "ac_codes": ["AC9E3LY09", "AC9E3LA06"],
+        {
+          "id": "M3M03_time_relationships",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Understand and use relationships between units of time (seconds, minutes, hours and days), and estimate and compare the duration of events.",
+          "ac_codes": [
+            "AC9M3M03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Spell high-frequency and phonetically regular words; use compound sentences and correct basic punctuation.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Spelling / Grammar", "outcomes": ["EN2-6B", "EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Tell time to the minute and investigate the relationship between units of time, including seconds, minutes, hours and days.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Time",
+              "outcomes": [
+                "MA2-GM-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY01_02_literal_comprehension", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Retrieve explicit information from short informative and narrative texts; answer who/what/where/when questions.",
-          "ac_codes": ["AC9E3LY01", "AC9E3LY02"],
+        {
+          "id": "M3N06_mult_2digit_by_2digit_intro",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Begin multiplying a two-digit number by a two-digit number by partitioning numbers into tens and ones and combining the parts.",
+          "ac_codes": [
+            "AC9M3N06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Locate and record explicit information from texts using skimming and scanning.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - literal", "outcomes": ["EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Develop efficient mental and written strategies for multiplication, including partitioning two-digit numbers to multiply by a two-digit number.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "E3LY06_informative_paragraphs", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Write a short informative text (e.g., fact file) with a clear topic sentence and supporting details in paragraphs.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LA04"],
+        {
+          "id": "M3M06_money_dollars_cents",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Understand the relationship between dollars and cents, and represent and convert simple money amounts using correct dollar-and-cents notation.",
+          "ac_codes": [
+            "AC9M3M06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create informative texts with topic sentences and supporting details grouped in paragraphs.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - informative", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Represent money values in different ways and count the change required for simple transactions to the nearest five cents, including relating dollars and cents.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Money",
+              "outcomes": [
+                "MA2-RM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
         },
-        { "id": "E3LA06_nouns_verbs_agreement", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Identify nouns and verbs in sentences; introduce subject-verb agreement in simple sentences.",
-          "ac_codes": ["AC9E3LA06", "AC9E3LA01"],
+        {
+          "id": "M3A01_mental_strategies_20",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Algebra",
+          "description": "Use mental strategies such as doubling, bridging to ten and known facts to quickly add and subtract numbers to 20 and beyond.",
+          "ac_codes": [
+            "AC9M3A01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Identify nouns and verbs; ensure subject and verb agree in simple sentences.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar", "outcomes": ["EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recall addition and subtraction facts fluently, and use extended number facts and strategies such as doubling and bridging to ten for mental computation.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations",
+              "outcomes": [
+                "MA2-AR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY01_02_inferential_comprehension", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Make simple inferences using text evidence and prior knowledge; answer why/how questions.",
-          "ac_codes": ["AC9E3LY01", "AC9E3LY02"],
+        {
+          "id": "M3SP01_classify_3d_objects",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Classify and describe 3D objects, including counting and comparing their faces, edges and vertices.",
+          "ac_codes": [
+            "AC9M3SP01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Make inferences about characters' feelings and motives using clues from the text.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - inferential", "outcomes": ["EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Make models of 3D objects and describe key features, including the number of faces, edges and vertices.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "3D spatial structure",
+              "outcomes": [
+                "MA2-3DS-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_3LE02_narrative_problem_solution", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Write a short narrative with a clear problem and solution; include characters' feelings and simple dialogue.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LE02"],
+        {
+          "id": "M3M02_mass_capacity_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Solve word problems involving the measurement and comparison of mass and capacity, using grams, kilograms, millilitres and litres.",
+          "ac_codes": [
+            "AC9M3M02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create narratives with a clear problem and solution; use dialogue and description to show characters' feelings.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - narrative", "outcomes": ["EN2-11D", "EN2-UARL-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Measure and compare mass and capacity using scaled instruments, and solve practical problems involving grams, kilograms, millilitres and litres.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Mass and capacity",
+              "outcomes": [
+                "MA2-GM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA02_03_adjectives_adverbs_commas", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use adjectives and adverbs to add detail; introduce commas in simple lists.",
-          "ac_codes": ["AC9E3LA02", "AC9E3LA11"],
+        {
+          "id": "M3ST02_column_graphs_scale",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
+          "description": "Read, interpret and compare data displayed in column graphs that use a scale (each unit on the axis represents more than one item).",
+          "ac_codes": [
+            "AC9M3ST02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use adjectives and adverbs to add detail; use commas in lists.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar / Punctuation", "outcomes": ["EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Collect, organise and display categorical data using column graphs with a many-to-one scale, and interpret the results.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA04_LY03_text_structure", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Identify how texts are organised (beginning-middle-end; introduction-body-conclusion); recognise signposting (headings, subheadings).",
-          "ac_codes": ["AC9E3LA04", "AC9E3LY03"],
+        {
+          "id": "M3N07_fraction_of_a_group",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Find a unit fraction (such as a half, third or quarter) of a collection or group of objects.",
+          "ac_codes": [
+            "AC9M3N07"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Describe how texts are organised and how headings and subheadings help readers.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - text structure", "outcomes": ["EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Model and represent unit fractions of collections and quantities, including finding a fraction of a group of objects.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Fractions",
+              "outcomes": [
+                "MA2-RQF-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_LA04_information_report", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Plan and write an information report with introduction, body paragraphs (grouped by subtopics), and simple conclusion.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LA04"],
+        {
+          "id": "M3P02_chance_experiments_recording",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Probability",
+          "description": "Conduct repeated chance experiments, systematically record and tally the results, and identify which outcomes occur most and least often.",
+          "ac_codes": [
+            "AC9M3P02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create information reports with clear introduction, body paragraphs and conclusion.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - informative (report)", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Conduct repeated chance experiments, record outcomes using tally marks or tables, and identify and describe variations between trials.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Chance",
+              "outcomes": [
+                "MA2-CHAN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA08_tense_consistency", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use verb tenses (past, present, future); maintain consistent tense within a text.",
-          "ac_codes": ["AC9E3LA08", "AC9E3LA07"],
+        {
+          "id": "M3A02_03_fact_families",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Algebra",
+          "description": "Understand fact families and the inverse relationship between multiplication and division to recall and check number facts.",
+          "ac_codes": [
+            "AC9M3A02",
+            "AC9M3A03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use past, present and future tense; keep tense consistent in writing.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar", "outcomes": ["EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise and use the inverse relationship between multiplication and division to build fluency with fact families and check calculations.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY03_LA03_persuasive_opinion", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Identify the author's opinion and reasons in simple persuasive texts (advertisements, letters, opinion pieces).",
-          "ac_codes": ["AC9E3LY03", "AC9E3LA03"],
+        {
+          "id": "M3N04_word_problems_money",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Solve addition and subtraction word problems set in everyday money contexts, such as working out totals and change.",
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3M06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Identify the author's point of view and supporting reasons in persuasive texts.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - persuasive", "outcomes": ["EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve practical addition and subtraction problems involving money, including calculating totals and the change required for simple transactions.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Money",
+              "outcomes": [
+                "MA2-RM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_LA03_write_persuasive", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Plan and write a short persuasive text (e.g., letter, poster) stating an opinion with 2-3 reasons and examples.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LA03"],
+        {
+          "id": "M3M01_choosing_units",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Choose appropriate metric units and measuring tools (such as millimetres, centimetres, grams, kilograms, millilitres or litres) for a given measuring task.",
+          "ac_codes": [
+            "AC9M3M01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create persuasive texts that state an opinion and give reasons and examples.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - persuasive", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Choose appropriate metric units and instruments to measure and compare the length, mass and capacity of objects, justifying the choice made.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Length, mass and capacity",
+              "outcomes": [
+                "MA2-GM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
         },
-        { "id": "E3LA03_11_modal_verbs_apostrophes", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use modal verbs (can, could, should, must) to express opinion and possibility; introduce apostrophes for contraction.",
-          "ac_codes": ["AC9E3LA03", "AC9E3LA11"],
+        {
+          "id": "M3N06_estimation_checking",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Estimate the answers to multiplication and division problems by rounding, and use the estimate to check whether a calculated answer is reasonable.",
+          "ac_codes": [
+            "AC9M3N06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use modal verbs to express opinion; use apostrophes for contractions.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar / Punctuation", "outcomes": ["EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use estimation and rounding to check the reasonableness of answers to multiplication and division calculations.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA10_LY01_technical_vocabulary", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Use context clues and glossaries to understand topic-specific and technical vocabulary in informative texts.",
-          "ac_codes": ["AC9E3LA10", "AC9E3LY01"],
+        {
+          "id": "M3SP02_grid_references",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Use grid references and simple coordinates to locate and describe positions of features on a map.",
+          "ac_codes": [
+            "AC9M3SP02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use context and reference tools to understand new and technical words in texts.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Vocabulary / Reading comprehension", "outcomes": ["EN2-4B", "EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use grid reference systems to describe locations and follow routes on maps and plans.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Position",
+              "outcomes": [
+                "MA2-GM-03"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
         },
-        { "id": "E3LY06_LA05_explanation_texts", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Write a short explanation text (how/why something happens) using clear sequence words (first, next, then, finally) and topic-specific vocabulary.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LA05"],
+        {
+          "id": "M3ST01_02_consolidation_term2",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
+          "description": "Consolidate collecting categorical data through surveys and representing and interpreting it using tables and column graphs.",
+          "ac_codes": [
+            "AC9M3ST01",
+            "AC9M3ST02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create explanation texts with clear sequence and topic-specific vocabulary.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - explanation", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan and conduct simple surveys, and organise, display and interpret categorical data using tables and column graphs.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
         },
-        { "id": "E3LY10_09_affixes_multisyllabic", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use prefixes and suffixes; use base words + affixes to build and spell multisyllabic words.",
-          "ac_codes": ["AC9E3LY10", "AC9E3LY09"],
+        {
+          "id": "M3N01_place_value_beyond_10k",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Read, write, order and compare whole numbers beyond 10,000, understanding the value of each digit.",
+          "ac_codes": [
+            "AC9M3N01"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use knowledge of prefixes and suffixes to read and spell multisyllabic words.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Spelling", "outcomes": ["EN2-6B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise, represent and order numbers to at least tens of thousands, and understand the value of each digit.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing numbers using place value",
+              "outcomes": [
+                "MA2-RN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY01_LA09_evaluative_comprehension", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Evaluate simple texts: say what worked well, what was clear/unclear, and how language/images helped meaning.",
-          "ac_codes": ["AC9E3LY01", "AC9E3LA09"],
+        {
+          "id": "M3N04_add_sub_4digit_regroup",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Add and subtract 4-digit whole numbers using regrouping, and estimate answers by rounding to check reasonableness.",
+          "ac_codes": [
+            "AC9M3N04"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Evaluate how language and images help the reader understand a text.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - evaluative", "outcomes": ["EN2-RECOM-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise and use the inverse relationship between addition and subtraction to solve problems involving 4-digit numbers with regrouping.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive relations",
+              "outcomes": [
+                "MA2-AR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_3LE04_text_response", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Write a short response to a literary or informative text: state opinion, give reasons and examples from the text.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LE04"],
+        {
+          "id": "M3N07_fraction_equivalence",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Recognise and represent equivalent fractions using shaded models and simple number relationships.",
+          "ac_codes": [
+            "AC9M3N07"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create written responses to texts, stating opinions with reasons and evidence.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - response", "outcomes": ["EN2-11D", "EN2-UARL-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Represent equivalent fractions using different models, including sets, number lines and area models.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing fractions",
+              "outcomes": [
+                "MA2-RQF-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA05_07_cohesive_devices", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use cohesive devices: pronouns, synonyms, connectives (however, because, therefore) to link ideas across sentences.",
-          "ac_codes": ["AC9E3LA05", "AC9E3LA07"],
+        {
+          "id": "M3N06_mult_2digit_by_2digit",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Multiply 2-digit numbers by 2-digit numbers fluently, using partitioning and area models to find partial products.",
+          "ac_codes": [
+            "AC9M3N06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use cohesive devices to link ideas and make texts clear.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar", "outcomes": ["EN2-4A"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Develop efficient strategies and use appropriate digital tools to multiply two-digit numbers, including using the area model.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MR-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 3
+          }
         },
-        { "id": "E3LE01_02_03_literature_characters_themes", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Describe characters, settings and simple themes in literary texts; identify literary devices (simile, imagery, repetition).",
-          "ac_codes": ["AC9E3LE01", "AC9E3LE02", "AC9E3LE03"],
+        {
+          "id": "M3M03_duration_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Solve word problems involving elapsed time and duration, including calculating start times, finish times and time intervals.",
+          "ac_codes": [
+            "AC9M3M03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Discuss characters, themes and literary devices in stories and poems.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Understanding and responding to literature", "outcomes": ["EN2-UARL-01", "EN2-8B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve problems involving the duration of events and the relationship between start time, finish time and elapsed time.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Time",
+              "outcomes": [
+                "MA2-GM-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_3LE02_05_write_imaginative", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Write an imaginative text (story or poem) that develops a character and includes at least one literary device (e.g., simile).",
-          "ac_codes": ["AC9E3LY06", "AC9E3LE02", "AC9E3LE05"],
+        {
+          "id": "M3M05_angle_types",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Identify and classify angles as acute, right or obtuse by comparing them to a right angle in everyday objects and situations.",
+          "ac_codes": [
+            "AC9M3M05"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create imaginative texts that develop characters and use literary devices.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - imaginative", "outcomes": ["EN2-11D", "EN2-UARL-01"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and classify angles as acute, right or obtuse by comparing them with a right angle.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Geometric measurement",
+              "outcomes": [
+                "MA2-GEOM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA03_LE03_figurative_language", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Identify and use figurative language: similes, metaphors (simple); discuss effect on reader.",
-          "ac_codes": ["AC9E3LA03", "AC9E3LE03"],
+        {
+          "id": "M3SP02_scale_maps",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Interpret simple maps and plans that use a scale, using the scale to work out real-life distances between features.",
+          "ac_codes": [
+            "AC9M3SP02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Identify and use simple figurative language such as similes.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Language forms and features", "outcomes": ["EN2-4B", "EN2-8B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Interpret and create simple maps and plans that use a scale to represent real-world distances.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Position",
+              "outcomes": [
+                "MA2-GEOM-02"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY09_01_fluency_decoding", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Read aloud with appropriate phrasing and expression; decode multisyllabic words using phonic and morphemic knowledge.",
-          "ac_codes": ["AC9E3LY09", "AC9E3LY01"],
+        {
+          "id": "M3ST02_03_compare_datasets",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
+          "description": "Compare two data sets displayed as column graphs, reading and interpreting values to answer questions and draw simple conclusions.",
+          "ac_codes": [
+            "AC9M3ST02",
+            "AC9M3ST03"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Read fluently, decoding multisyllabic words using sound-letter patterns and word parts.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading fluency / Decoding", "outcomes": ["EN2-5B", "EN2-6B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Collect, represent and interpret data displayed in column graphs, and compare two related data sets.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data",
+              "outcomes": [
+                "MA2-DATA-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_07_editing_writing", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Edit and improve own writing: check paragraphs, tense, punctuation, spelling; add or remove details for clarity.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LY07"],
+        {
+          "id": "M3P01_02_combined_investigation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Probability",
+          "description": "Use chance language (certain, likely, unlikely, impossible) and conduct simple chance investigations to describe and predict outcomes.",
+          "ac_codes": [
+            "AC9M3P01",
+            "AC9M3P02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Edit writing to improve structure, grammar, punctuation and spelling.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - editing", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Conduct chance experiments and use everyday language to describe and order the likelihood of outcomes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Chance",
+              "outcomes": [
+                "MA2-CHAN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY11_10_spelling_patterns", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Use less common letter patterns, vowel clusters, homophones; apply rules when adding suffixes.",
-          "ac_codes": ["AC9E3LY11", "AC9E3LY10"],
+        {
+          "id": "M3N05_06_financial_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Solve multi-step word problems in money contexts, such as combining costs, finding change and comparing value for money.",
+          "ac_codes": [
+            "AC9M3N05",
+            "AC9M3N06"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Use less common letter patterns and spelling rules to spell multisyllabic words and homophones.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Spelling", "outcomes": ["EN2-6B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve multi-step problems involving purchases, the calculation of change and simple comparisons of value for money.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Financial mathematics",
+              "outcomes": [
+                "MA2-RWN-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA09_LY03_multimodal_reading", "subject": "english", "year_level": 3, "strand": "Reading",
-          "description": "Interpret multimodal texts (e.g., websites, posters, digital stories): how images, layout and words work together.",
-          "ac_codes": ["AC9E3LA09", "AC9E3LY03"],
+        {
+          "id": "M3A01_02_number_patterns",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Algebra",
+          "description": "Identify, describe and continue number patterns based on addition, subtraction, multiplication or division rules.",
+          "ac_codes": [
+            "AC9M3A01",
+            "AC9M3A02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Explain how images and layout contribute to meaning in multimodal texts.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Reading comprehension - multimodal", "outcomes": ["EN2-RECOM-01", "EN2-8B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise, describe and continue number patterns formed by adding, subtracting, multiplying or dividing by a constant amount.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Number patterns and algebraic thinking",
+              "outcomes": [
+                "MA2-FRAC-01",
+                "MA2-CSQ-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LY06_08_multimodal_writing", "subject": "english", "year_level": 3, "strand": "Writing",
-          "description": "Plan, create and publish a short multimodal text (e.g., digital poster, slide, simple webpage) for a specific purpose and audience.",
-          "ac_codes": ["AC9E3LY06", "AC9E3LY08"],
+        {
+          "id": "M3N07_fractions_number_line",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Place and compare fractions on a number line between 0 and 1, understanding the size of a fraction relative to its position.",
+          "ac_codes": [
+            "AC9M3N07"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Create and publish multimodal texts with appropriate form, layout and visual features.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Creating written texts - multimodal", "outcomes": ["EN2-11D"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Locate and compare fractions on a number line, understanding the size of a fraction based on its position between 0 and 1.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing fractions",
+              "outcomes": [
+                "MA2-RQF-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 3 }
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
         },
-        { "id": "E3LA06_LY09_12_language_consolidation", "subject": "english", "year_level": 3, "strand": "Language",
-          "description": "Consolidation: review key grammar, punctuation and spelling patterns from the term; apply in final writing task.",
-          "ac_codes": ["AC9E3LA06", "AC9E3LA11", "AC9E3LY09", "AC9E3LY10", "AC9E3LY11", "AC9E3LY12"],
+        {
+          "id": "M3M01_02_perimeter_intro",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Understand perimeter as the distance around a 2D shape, and measure or calculate it using metric length units.",
+          "ac_codes": [
+            "AC9M3M01",
+            "AC9M3M02"
+          ],
           "state_mappings": {
-            "VIC": { "level": 3, "phrasing": "Apply knowledge of grammar, punctuation and spelling in final writing tasks.", "local_codes": [] },
-            "NSW": { "stage": "Stage 2", "subarea": "Grammar / Spelling - review", "outcomes": ["EN2-4A", "EN2-6B"] }
+            "VIC": {
+              "level": 3,
+              "phrasing": "Measure and calculate the perimeter of two-dimensional shapes using metric units of length.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Length",
+              "outcomes": [
+                "MA2-GM-01"
+              ]
+            }
           },
-          "metadata": { "difficulty_band": "core", "typical_weeks_to_mastery": 2 }
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3SP01_symmetry",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Identify and create symmetrical 2D shapes and patterns, recognising lines of symmetry in shapes and everyday objects.",
+          "ac_codes": [
+            "AC9M3SP01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and describe line symmetry in two-dimensional shapes, and create symmetrical shapes and patterns.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Two-dimensional spatial structure",
+              "outcomes": [
+                "MA2-GEOM-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N04_06_multi_step_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Solve multi-step word problems that combine addition, subtraction, multiplication and division within the same problem.",
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3N06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve multi-step word problems using a combination of the four operations, selecting efficient mental and written strategies.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive and multiplicative relations",
+              "outcomes": [
+                "MA2-AR-01",
+                "MA2-MR-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "M3A03_missing_number_equations",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Algebra",
+          "description": "Find missing numbers in number sentences and simple equations, understanding that both sides of an equation must balance.",
+          "ac_codes": [
+            "AC9M3A03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Find unknown values in number sentences involving addition, subtraction, multiplication and division, understanding equivalence.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Number patterns and algebraic thinking",
+              "outcomes": [
+                "MA2-CSQ-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N01_04_place_value_operations_consolidation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Consolidate place value in numbers up to five digits, and solve addition and subtraction problems (including with regrouping and multi-step word problems) across all Year 3 number ranges.",
+          "ac_codes": [
+            "AC9M3N01",
+            "AC9M3N04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Recognise, represent and order numbers to at least 10,000, and use place value to add and subtract, including with regrouping, to solve problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Place value and number, Additive relations",
+              "outcomes": [
+                "MA2-RN-01",
+                "MA2-AR-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N06_division_2digit_by_1digit",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Divide two-digit numbers by a one-digit number using known multiplication facts, including problems that leave a remainder, and interpret what the remainder means in context.",
+          "ac_codes": [
+            "AC9M3N06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Develop efficient strategies and use appropriate digital tools to solve division problems, representing remainders as fractions, decimals or in context.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations",
+              "outcomes": [
+                "MA2-MR-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N07_adding_subtracting_fractions",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Add and subtract simple fractions with the same denominator, including in word problems, and recognise when a fraction answer is greater than one whole.",
+          "ac_codes": [
+            "AC9M3N07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Represent and compare unit fractions and their multiples in a range of contexts, and add and subtract fractions with the same denominator.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing whole numbers and fractions",
+              "outcomes": [
+                "MA2-RQF-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3M06_money_change_budgets",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Calculate change from a purchase and work out simple budgets, including multi-step problems that combine several prices, a spending limit and money left over.",
+          "ac_codes": [
+            "AC9M3M06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Represent money values in multiple ways, calculate change and simple budgets in everyday shopping contexts, and count out change from a purchase.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Money and financial mathematics",
+              "outcomes": [
+                "MA2-RQF-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "M3M03_timetables_calendars",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Read and use simple timetables and calendars to find elapsed time, compare journey lengths, and work out dates that are a given number of days or weeks apart.",
+          "ac_codes": [
+            "AC9M3M03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Tell time to the nearest minute and use am and pm notation, and read and interpret simple timetables, calendars and time-related problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Time",
+              "outcomes": [
+                "MA2-GM-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "M3SP01_02_transformations",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Describe and identify simple transformations of shapes, including slides (translations) and flips (reflections), and predict how a shape's position or appearance changes.",
+          "ac_codes": [
+            "AC9M3SP01",
+            "AC9M3SP02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and describe translations, reflections and combinations of transformations of two-dimensional shapes, including using coordinates on a grid.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Two-dimensional spatial structure",
+              "outcomes": [
+                "MA2-2DS-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3ST01_03_data_investigation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
+          "description": "Plan and carry out a small data investigation, from posing a question, through collecting and displaying data, to interpreting the results and suggesting improvements.",
+          "ac_codes": [
+            "AC9M3ST01",
+            "AC9M3ST02",
+            "AC9M3ST03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Pose questions to gather categorical data, plan and conduct data collection, then organise and display data in tables and graphs to answer the questions.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Data collection and representation",
+              "outcomes": [
+                "MA2-DATA-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3P01_02_probability_investigation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Probability",
+          "description": "Use chance language and simple probability experiments to compare theoretical and experimental results, such as dice rolls or spinner outcomes, and explain why they may differ.",
+          "ac_codes": [
+            "AC9M3P01",
+            "AC9M3P02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Conduct repeated chance experiments, describe outcomes using everyday and mathematical language, and compare observed results with expectations.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Chance",
+              "outcomes": [
+                "MA2-CHAN-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3A01_02_03_pattern_reasoning",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Algebra",
+          "description": "Consolidate number patterns, fact families, and missing-number reasoning, including describing the rule for a pattern and using inverse operations to find an unknown value.",
+          "ac_codes": [
+            "AC9M3A01",
+            "AC9M3A02",
+            "AC9M3A03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Follow and describe rules for number patterns, use fact families to find unknown quantities, and represent and solve simple equivalence problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Number patterns and algebraic thinking",
+              "outcomes": [
+                "MA2-FG-01",
+                "MA2-FG-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N04_06_consolidation_word_problems",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Solve multi-step word problems using all four operations, choosing the correct operations and order of steps for real-life situations involving money, quantities and fractions.",
+          "ac_codes": [
+            "AC9M3N04",
+            "AC9M3N05",
+            "AC9M3N06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve multi-step practical problems involving addition, subtraction, multiplication and division, selecting and using efficient mental and written strategies.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Additive and multiplicative relations",
+              "outcomes": [
+                "MA2-AR-01",
+                "MA2-MR-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "M3M01_02_04_measurement_investigation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Measurement",
+          "description": "Carry out an investigation that combines measuring and comparing length, mass and capacity with appropriate units and time, including planning a fair test and working with mixed units.",
+          "ac_codes": [
+            "AC9M3M01",
+            "AC9M3M02",
+            "AC9M3M04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Choose and use appropriate metric units to measure and compare length, mass, capacity and time within a planned, fair investigation.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Measurement investigation",
+              "outcomes": [
+                "MA2-GM-01",
+                "MA2-GM-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N05_06_best_value_comparisons",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Compare prices and quantities across different pack sizes or deals to work out best value for money, using unit prices and simple division and multiplication.",
+          "ac_codes": [
+            "AC9M3N05",
+            "AC9M3N06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Solve problems involving multiplication and division to compare quantities and prices, and use this to identify the best value option in shopping contexts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multiplicative relations, Money and financial mathematics",
+              "outcomes": [
+                "MA2-MR-01",
+                "MA2-RQF-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N07_fractions_of_quantities_consolidation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Consolidate finding unit and non-unit fractions of a quantity, and recognise equivalent fractions, including in multi-step word problems with more than one fraction operation.",
+          "ac_codes": [
+            "AC9M3N07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Find equivalent fractions and calculate simple fractions of a quantity, applying this to solve practical, multi-step problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Representing whole numbers and fractions",
+              "outcomes": [
+                "MA2-RQF-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3SP01_3d_nets",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Space",
+          "description": "Recognise and construct simple nets of 3D objects such as cubes and rectangular prisms, and connect the number of faces, edges and vertices to their folded shape.",
+          "ac_codes": [
+            "AC9M3SP01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Connect three-dimensional objects with their nets, and use the features of objects such as faces, edges and vertices to describe them.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Three-dimensional spatial structure",
+              "outcomes": [
+                "MA2-3DS-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3ST02_03_data_communication",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Statistics",
+          "description": "Communicate findings from a data display clearly, describing trends, comparisons and the mode, and justifying conclusions with reference to the actual data.",
+          "ac_codes": [
+            "AC9M3ST02",
+            "AC9M3ST03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Interpret and communicate the results of data investigations using appropriate mathematical language, justifying conclusions by referring to the data.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Interpreting and representing data",
+              "outcomes": [
+                "MA2-DATA-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "M3N01_07_number_review_consolidation",
+          "subject": "maths",
+          "year_level": 3,
+          "strand": "Number",
+          "description": "Review and combine skills from across the number and fractions strands, including place value, the four operations, money, and fractions, in mixed end-of-year problems.",
+          "ac_codes": [
+            "AC9M3N01",
+            "AC9M3N04",
+            "AC9M3N05",
+            "AC9M3N06",
+            "AC9M3N07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate and apply number and fractions understanding, including place value, the four operations, money and fractions, to solve varied end-of-year problems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Number and fractions review",
+              "outcomes": [
+                "MA2-RN-01",
+                "MA2-AR-01",
+                "MA2-MR-01",
+                "MA2-RQF-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
         }
       ],
       "sequence": {
         "1": {
-          "1": ["E3LY03_purpose_audience_text_types", "E3LA04_paragraphs_narrative_recount", "E3LY09_high_freq_compound_sentences"],
-          "2": ["E3LY01_02_literal_comprehension", "E3LY06_informative_paragraphs", "E3LA06_nouns_verbs_agreement"],
-          "3": ["E3LY01_02_inferential_comprehension", "E3LY06_3LE02_narrative_problem_solution", "E3LA02_03_adjectives_adverbs_commas"],
-          "4": ["E3LA04_LY03_text_structure", "E3LY06_LA04_information_report", "E3LA08_tense_consistency"],
-          "5": ["E3LY03_LA03_persuasive_opinion", "E3LY06_LA03_write_persuasive", "E3LA03_11_modal_verbs_apostrophes"],
-          "6": ["E3LA10_LY01_technical_vocabulary", "E3LY06_LA05_explanation_texts", "E3LY10_09_affixes_multisyllabic"],
-          "7": ["E3LY01_LA09_evaluative_comprehension", "E3LY06_3LE04_text_response", "E3LA05_07_cohesive_devices"],
-          "8": ["E3LE01_02_03_literature_characters_themes", "E3LY06_3LE02_05_write_imaginative", "E3LA03_LE03_figurative_language"],
-          "9": ["E3LY09_01_fluency_decoding", "E3LY06_07_editing_writing", "E3LY11_10_spelling_patterns"],
-          "10": ["E3LA09_LY03_multimodal_reading", "E3LY06_08_multimodal_writing", "E3LA06_LY09_12_language_consolidation"]
+          "1": [
+            "M3N01_represent_numbers_10k",
+            "M3M01_metric_units_intro"
+          ],
+          "2": [
+            "M3N03_compare_order_10k",
+            "M3M02_measure_length"
+          ],
+          "3": [
+            "M3N04_add_sub_1000_no_regroup",
+            "M3M02_measure_mass"
+          ],
+          "4": [
+            "M3N04_add_sub_1000_regroup",
+            "M3M02_measure_capacity",
+            "M3ST01_categorical_data"
+          ],
+          "5": [
+            "M3N06_multiplication_equal_groups",
+            "M3M04_time_to_minute"
+          ],
+          "6": [
+            "M3N06_division_sharing_grouping",
+            "M3M05_angles_as_turns",
+            "M3ST02_column_graphs"
+          ],
+          "7": [
+            "M3N06_mult_2digit_by_1digit",
+            "M3SP01_classify_2d_shapes"
+          ],
+          "8": [
+            "M3N07_unit_fractions",
+            "M3SP02_2d_maps_plans",
+            "M3P01_chance_language"
+          ],
+          "9": [
+            "M3N04_06_word_problems",
+            "M3M02_measurement_problems",
+            "M3P02_chance_experiments"
+          ],
+          "10": [
+            "M3N05_06_financial_contexts",
+            "M3M01_04_measurement_consolidation",
+            "M3ST02_03_data_interpretation"
+          ]
+        },
+        "2": {
+          "1": [
+            "M3N01_04_place_value_10k_regroup",
+            "M3M03_time_relationships"
+          ],
+          "2": [
+            "M3N06_mult_2digit_by_2digit_intro",
+            "M3M06_money_dollars_cents"
+          ],
+          "3": [
+            "M3A01_mental_strategies_20",
+            "M3SP01_classify_3d_objects"
+          ],
+          "4": [
+            "M3M02_mass_capacity_word_problems",
+            "M3ST02_column_graphs_scale"
+          ],
+          "5": [
+            "M3N07_fraction_of_a_group",
+            "M3P02_chance_experiments_recording"
+          ],
+          "6": [
+            "M3A02_03_fact_families",
+            "M3N04_word_problems_money"
+          ],
+          "7": [
+            "M3M01_choosing_units"
+          ],
+          "8": [
+            "M3N06_estimation_checking"
+          ],
+          "9": [
+            "M3SP02_grid_references"
+          ],
+          "10": [
+            "M3ST01_02_consolidation_term2"
+          ]
+        },
+        "3": {
+          "1": [
+            "M3N01_place_value_beyond_10k",
+            "M3N04_add_sub_4digit_regroup"
+          ],
+          "2": [
+            "M3N07_fraction_equivalence",
+            "M3N06_mult_2digit_by_2digit"
+          ],
+          "3": [
+            "M3M03_duration_word_problems",
+            "M3M05_angle_types"
+          ],
+          "4": [
+            "M3SP02_scale_maps",
+            "M3ST02_03_compare_datasets"
+          ],
+          "5": [
+            "M3P01_02_combined_investigation",
+            "M3N05_06_financial_word_problems"
+          ],
+          "6": [
+            "M3A01_02_number_patterns",
+            "M3N07_fractions_number_line"
+          ],
+          "7": [
+            "M3M01_02_perimeter_intro"
+          ],
+          "8": [
+            "M3SP01_symmetry"
+          ],
+          "9": [
+            "M3N04_06_multi_step_word_problems"
+          ],
+          "10": [
+            "M3A03_missing_number_equations"
+          ]
+        },
+        "4": {
+          "1": [
+            "M3N01_04_place_value_operations_consolidation",
+            "M3N06_division_2digit_by_1digit"
+          ],
+          "2": [
+            "M3N07_adding_subtracting_fractions",
+            "M3M06_money_change_budgets"
+          ],
+          "3": [
+            "M3M03_timetables_calendars",
+            "M3SP01_02_transformations"
+          ],
+          "4": [
+            "M3ST01_03_data_investigation",
+            "M3P01_02_probability_investigation"
+          ],
+          "5": [
+            "M3A01_02_03_pattern_reasoning",
+            "M3N04_06_consolidation_word_problems"
+          ],
+          "6": [
+            "M3M01_02_04_measurement_investigation",
+            "M3N05_06_best_value_comparisons"
+          ],
+          "7": [
+            "M3N07_fractions_of_quantities_consolidation"
+          ],
+          "8": [
+            "M3SP01_3d_nets"
+          ],
+          "9": [
+            "M3ST02_03_data_communication"
+          ],
+          "10": [
+            "M3N01_07_number_review_consolidation"
+          ]
+        }
+      }
+    },
+    "english": {
+      "skills": [
+        {
+          "id": "E3LY03_purpose_audience_text_types",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Identify purpose and audience of imaginative, informative and persuasive texts; use text features to support understanding.",
+          "ac_codes": [
+            "AC9E3LY03",
+            "AC9E3LA09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify the purpose and audience of different text types and explain how language and images support meaning.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension",
+              "outcomes": [
+                "EN2-RECOM-01",
+                "EN2-8B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA04_paragraphs_narrative_recount",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and write simple paragraphs grouping related ideas; begin a short narrative or recount with clear beginning-middle-end.",
+          "ac_codes": [
+            "AC9E3LA04",
+            "AC9E3LY06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use paragraphs to organise ideas in written texts; create imaginative or recount texts with clear structure.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY09_high_freq_compound_sentences",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Review high-frequency words; revise basic punctuation (capital letters, full stops, question marks); use compound sentences with 'and', 'but', 'or'.",
+          "ac_codes": [
+            "AC9E3LY09",
+            "AC9E3LA06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Spell high-frequency and phonetically regular words; use compound sentences and correct basic punctuation.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Spelling / Grammar",
+              "outcomes": [
+                "EN2-6B",
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY01_02_literal_comprehension",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Retrieve explicit information from short informative and narrative texts; answer who/what/where/when questions.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LY02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Locate and record explicit information from texts using skimming and scanning.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - literal",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_informative_paragraphs",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write a short informative text (e.g., fact file) with a clear topic sentence and supporting details in paragraphs.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LA04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create informative texts with topic sentences and supporting details grouped in paragraphs.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - informative",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA06_nouns_verbs_agreement",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Identify nouns and verbs in sentences; introduce subject-verb agreement in simple sentences.",
+          "ac_codes": [
+            "AC9E3LA06",
+            "AC9E3LA01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify nouns and verbs; ensure subject and verb agree in simple sentences.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY01_02_inferential_comprehension",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Make simple inferences using text evidence and prior knowledge; answer why/how questions.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LY02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Make inferences about characters' feelings and motives using clues from the text.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - inferential",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY06_3LE02_narrative_problem_solution",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write a short narrative with a clear problem and solution; include characters' feelings and simple dialogue.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LE02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create narratives with a clear problem and solution; use dialogue and description to show characters' feelings.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - narrative",
+              "outcomes": [
+                "EN2-11D",
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA02_03_adjectives_adverbs_commas",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use adjectives and adverbs to add detail; introduce commas in simple lists.",
+          "ac_codes": [
+            "AC9E3LA02",
+            "AC9E3LA11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use adjectives and adverbs to add detail; use commas in lists.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar / Punctuation",
+              "outcomes": [
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA04_LY03_text_structure",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Identify how texts are organised (beginning-middle-end; introduction-body-conclusion); recognise signposting (headings, subheadings).",
+          "ac_codes": [
+            "AC9E3LA04",
+            "AC9E3LY03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Describe how texts are organised and how headings and subheadings help readers.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - text structure",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_LA04_information_report",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and write an information report with introduction, body paragraphs (grouped by subtopics), and simple conclusion.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LA04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create information reports with clear introduction, body paragraphs and conclusion.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - informative (report)",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA08_tense_consistency",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use verb tenses (past, present, future); maintain consistent tense within a text.",
+          "ac_codes": [
+            "AC9E3LA08",
+            "AC9E3LA07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use past, present and future tense; keep tense consistent in writing.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY03_LA03_persuasive_opinion",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Identify the author's opinion and reasons in simple persuasive texts (advertisements, letters, opinion pieces).",
+          "ac_codes": [
+            "AC9E3LY03",
+            "AC9E3LA03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify the author's point of view and supporting reasons in persuasive texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - persuasive",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_LA03_write_persuasive",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and write a short persuasive text (e.g., letter, poster) stating an opinion with 2-3 reasons and examples.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LA03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create persuasive texts that state an opinion and give reasons and examples.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - persuasive",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA03_11_modal_verbs_apostrophes",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use modal verbs (can, could, should, must) to express opinion and possibility; introduce apostrophes for contraction.",
+          "ac_codes": [
+            "AC9E3LA03",
+            "AC9E3LA11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use modal verbs to express opinion; use apostrophes for contractions.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar / Punctuation",
+              "outcomes": [
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA10_LY01_technical_vocabulary",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Use context clues and glossaries to understand topic-specific and technical vocabulary in informative texts.",
+          "ac_codes": [
+            "AC9E3LA10",
+            "AC9E3LY01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use context and reference tools to understand new and technical words in texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Vocabulary / Reading comprehension",
+              "outcomes": [
+                "EN2-4B",
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_LA05_explanation_texts",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write a short explanation text (how/why something happens) using clear sequence words (first, next, then, finally) and topic-specific vocabulary.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LA05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create explanation texts with clear sequence and topic-specific vocabulary.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - explanation",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY10_09_affixes_multisyllabic",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use prefixes and suffixes; use base words + affixes to build and spell multisyllabic words.",
+          "ac_codes": [
+            "AC9E3LY10",
+            "AC9E3LY09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use knowledge of prefixes and suffixes to read and spell multisyllabic words.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Spelling",
+              "outcomes": [
+                "EN2-6B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY01_LA09_evaluative_comprehension",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Evaluate simple texts: say what worked well, what was clear/unclear, and how language/images helped meaning.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LA09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Evaluate how language and images help the reader understand a text.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - evaluative",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY06_3LE04_text_response",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write a short response to a literary or informative text: state opinion, give reasons and examples from the text.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LE04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create written responses to texts, stating opinions with reasons and evidence.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - response",
+              "outcomes": [
+                "EN2-11D",
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA05_07_cohesive_devices",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use cohesive devices: pronouns, synonyms, connectives (however, because, therefore) to link ideas across sentences.",
+          "ac_codes": [
+            "AC9E3LA05",
+            "AC9E3LA07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use cohesive devices to link ideas and make texts clear.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-4A"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LE01_02_03_literature_characters_themes",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Describe characters, settings and simple themes in literary texts; identify literary devices (simile, imagery, repetition).",
+          "ac_codes": [
+            "AC9E3LE01",
+            "AC9E3LE02",
+            "AC9E3LE03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Discuss characters, themes and literary devices in stories and poems.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and responding to literature",
+              "outcomes": [
+                "EN2-UARL-01",
+                "EN2-8B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY06_3LE02_05_write_imaginative",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write an imaginative text (story or poem) that develops a character and includes at least one literary device (e.g., simile).",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LE02",
+            "AC9E3LE05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create imaginative texts that develop characters and use literary devices.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - imaginative",
+              "outcomes": [
+                "EN2-11D",
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA03_LE03_figurative_language",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Identify and use figurative language: similes, metaphors (simple); discuss effect on reader.",
+          "ac_codes": [
+            "AC9E3LA03",
+            "AC9E3LE03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and use simple figurative language such as similes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Language forms and features",
+              "outcomes": [
+                "EN2-4B",
+                "EN2-8B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY09_01_fluency_decoding",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Read aloud with appropriate phrasing and expression; decode multisyllabic words using phonic and morphemic knowledge.",
+          "ac_codes": [
+            "AC9E3LY09",
+            "AC9E3LY01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Read fluently, decoding multisyllabic words using sound-letter patterns and word parts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading fluency / Decoding",
+              "outcomes": [
+                "EN2-5B",
+                "EN2-6B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY06_07_editing_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Edit and improve own writing: check paragraphs, tense, punctuation, spelling; add or remove details for clarity.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LY07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Edit writing to improve structure, grammar, punctuation and spelling.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - editing",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY11_10_spelling_patterns",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use less common letter patterns, vowel clusters, homophones; apply rules when adding suffixes.",
+          "ac_codes": [
+            "AC9E3LY11",
+            "AC9E3LY10"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use less common letter patterns and spelling rules to spell multisyllabic words and homophones.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Spelling",
+              "outcomes": [
+                "EN2-6B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA09_LY03_multimodal_reading",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Interpret multimodal texts (e.g., websites, posters, digital stories): how images, layout and words work together.",
+          "ac_codes": [
+            "AC9E3LA09",
+            "AC9E3LY03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Explain how images and layout contribute to meaning in multimodal texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading comprehension - multimodal",
+              "outcomes": [
+                "EN2-RECOM-01",
+                "EN2-8B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_08_multimodal_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan, create and publish a short multimodal text (e.g., digital poster, slide, simple webpage) for a specific purpose and audience.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LY08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create and publish multimodal texts with appropriate form, layout and visual features.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts - multimodal",
+              "outcomes": [
+                "EN2-11D"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA06_LY09_12_language_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidation: review key grammar, punctuation and spelling patterns from the term; apply in final writing task.",
+          "ac_codes": [
+            "AC9E3LA06",
+            "AC9E3LA11",
+            "AC9E3LY09",
+            "AC9E3LY10",
+            "AC9E3LY11",
+            "AC9E3LY12"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Apply knowledge of grammar, punctuation and spelling in final writing tasks.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar / Spelling - review",
+              "outcomes": [
+                "EN2-4A",
+                "EN2-6B"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY04_reading_fluency_range_texts",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Read a range of text types with fluency and accuracy, self-monitoring and self-correcting when a word or sentence doesn't sound or look right.",
+          "ac_codes": [
+            "AC9E3LY04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Read texts with fluency, phrasing and expression, self-correcting when meaning is disrupted.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Fluency",
+              "outcomes": [
+                "EN2-FLUS-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LY05_listening_viewing_comprehension",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Use listening and viewing strategies, such as predicting and identifying the main problem, to understand spoken and visual texts like read-aloud stories.",
+          "ac_codes": [
+            "AC9E3LY05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Listen to and view spoken and multimodal texts, using strategies such as predicting and summarising to build understanding.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Listening and viewing",
+              "outcomes": [
+                "EN2-VOCAB-01",
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA07_complex_sentences",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Build and identify complex sentences that join a main clause to a subordinate clause using words like 'because', 'although' and 'when'.",
+          "ac_codes": [
+            "AC9E3LA07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand how complex sentences link ideas using subordinating conjunctions to show cause, time, condition or contrast.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-GRAM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE04_comparing_texts",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Compare two literary texts by identifying what each is mainly about and finding the shared theme, character or event that connects them.",
+          "ac_codes": [
+            "AC9E3LE04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Compare texts, including one or more experiences drawn from students' own experience, to explore similarities and differences in theme, character or event.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and responding to literature",
+              "outcomes": [
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY07_planning_drafting",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Use planning strategies, such as story maps and graphic organisers, to organise ideas in order before drafting a piece of writing.",
+          "ac_codes": [
+            "AC9E3LY07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan writing by using graphic organisers and other strategies to sequence and organise ideas before drafting.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts",
+              "outcomes": [
+                "EN2-CWT-01",
+                "EN2-PLAN-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA01_sentence_types",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Identify and use the four sentence types — statements, questions, exclamations and commands — and the punctuation that signals each one.",
+          "ac_codes": [
+            "AC9E3LA01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand how different sentence types (statements, questions, exclamations, commands) are used for different purposes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-GRAM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LY08_digital_text_features",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Identify features of digital and online texts, such as hyperlinks, navigation menus, icons and search bars, and explain what each one is used for.",
+          "ac_codes": [
+            "AC9E3LY08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and use navigational and interactive features of digital texts, such as hyperlinks, menus and search functions, to locate information.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LE05_creating_settings",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Create vivid settings in imaginative writing by using descriptive language that appeals to the senses, such as sight, sound, smell and touch.",
+          "ac_codes": [
+            "AC9E3LE05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create imaginative texts that use descriptive and sensory language to build a vivid setting for the reader.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating literary texts",
+              "outcomes": [
+                "EN2-CWT-01",
+                "EN2-CRT-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA09_authors_purpose_devices",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Identify an author's purpose (to inform, persuade or entertain) and point to the language devices, such as facts or persuasive phrases, used to achieve it.",
+          "ac_codes": [
+            "AC9E3LA09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand how authors use language devices to achieve a particular purpose, such as informing, persuading or entertaining an audience.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension",
+              "outcomes": [
+                "EN2-RECOM-01",
+                "EN2-OLC-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY02_summarising",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Summarise the main idea of a text in their own words, identifying the key point without retelling every detail.",
+          "ac_codes": [
+            "AC9E3LY02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Summarise a text's main idea, using own words to identify key information rather than restating every detail.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA02_expanded_noun_groups",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use expanded noun groups, adding describing words before a noun, to give the reader more detail about people, places and things.",
+          "ac_codes": [
+            "AC9E3LA02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand and use expanded noun groups to build detailed descriptions of people, places and things.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-GRAM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_procedural_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and write a procedural (instructional) text with a goal, a materials list and clear, sequenced steps.",
+          "ac_codes": [
+            "AC9E3LY06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan, draft and publish procedural texts that state a goal, list materials and sequence steps clearly for a reader to follow.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts",
+              "outcomes": [
+                "EN2-CWT-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE01_character_motivation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Explore why characters in a story act the way they do, using clues in the text to explain a character's feelings and motivation.",
+          "ac_codes": [
+            "AC9E3LE01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Discuss how characters' feelings and motivations are depicted in texts, using evidence from the text to support responses.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and responding to literature",
+              "outcomes": [
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA11_direct_speech_punctuation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Punctuate direct speech correctly, using quotation marks around the exact words spoken and a capital letter to begin them.",
+          "ac_codes": [
+            "AC9E3LA11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand and correctly use punctuation for direct speech, including quotation marks and capitalisation of spoken words.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar and punctuation",
+              "outcomes": [
+                "EN2-GRAM-01",
+                "EN2-CWT-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY03_comparing_purposes",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Compare two different text types to identify and explain their different purposes: to inform, persuade or entertain.",
+          "ac_codes": [
+            "AC9E3LY03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Compare texts of different types to identify how their purpose (to inform, persuade or entertain) shapes their language and structure.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA06_10_irregular_plurals_verbs",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Correctly form irregular plural nouns (such as 'mouse' to 'mice') and irregular past-tense verbs (such as 'go' to 'went').",
+          "ac_codes": [
+            "AC9E3LA06",
+            "AC9E3LA10"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand and correctly use irregular plural nouns and irregular past-tense verb forms in speaking and writing.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar",
+              "outcomes": [
+                "EN2-GRAM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE03_literary_devices_rhythm",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Identify literary devices that create rhythm and sound in poems, such as onomatopoeia, rhyme and alliteration, and explain their effect.",
+          "ac_codes": [
+            "AC9E3LE03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Discuss how authors use sound devices such as rhyme, rhythm, alliteration and onomatopoeia to create effects in poetry.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and responding to poetry",
+              "outcomes": [
+                "EN2-VOCAB-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY05_viewing_comprehension_visual",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Interpret and explain information and ideas shown in visual and viewed texts, such as images, diagrams and short videos.",
+          "ac_codes": [
+            "AC9E3LY05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Interpret and discuss how images, layout, sound and other visual elements contribute to meaning in viewed texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Viewing and interpreting visual texts",
+              "outcomes": [
+                "EN2-VIEW-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA03_metaphors_personification",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Identify and use metaphors and personification to create imagery and describe things in a more interesting way.",
+          "ac_codes": [
+            "AC9E3LA03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand how metaphor and personification are used to create imagery and enhance meaning in texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Figurative language",
+              "outcomes": [
+                "EN2-VOCAB-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY01_02_synthesising_information",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Combine information found in more than one part of a text, or across two short texts, to answer questions and draw conclusions.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LY02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Locate, connect and compare information across different parts of a text or across two related texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension strategies – combining information",
+              "outcomes": [
+                "EN2-RECOM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE02_settings_mood",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Explain how a story's setting and descriptive language help create mood and atmosphere for the reader.",
+          "ac_codes": [
+            "AC9E3LE02"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Discuss how settings and descriptive language create mood and atmosphere in stories.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding narrative structure and setting",
+              "outcomes": [
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA05_paragraph_cohesion",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use cohesive devices such as topic sentences, pronoun reference and connectives to link ideas within and between paragraphs.",
+          "ac_codes": [
+            "AC9E3LA05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand how paragraphs are structured and linked using topic sentences and cohesive ties.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and applying knowledge of language forms and features",
+              "outcomes": [
+                "EN2-VOCAB-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_persuasive_devices",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Identify and use persuasive language devices, such as rhetorical questions, emotive language and repetition, to influence a reader.",
+          "ac_codes": [
+            "AC9E3LY06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify and use persuasive devices such as rhetorical questions, emotive language and repetition to influence an audience.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating persuasive texts",
+              "outcomes": [
+                "EN2-CWT-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY04_self_correction_strategies",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Use self-correction strategies while reading aloud, such as re-reading and cross-checking, to fix mistakes and keep understanding the text.",
+          "ac_codes": [
+            "AC9E3LY04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use self-monitoring and self-correction strategies, including re-reading and cross-checking, to read with fluency and understanding.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading fluency and self-monitoring",
+              "outcomes": [
+                "EN2-FLU-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LA08_reported_speech",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Convert sentences between direct speech (a speaker's exact words) and reported speech (a retelling of what was said).",
+          "ac_codes": [
+            "AC9E3LA08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Understand the difference between direct and indirect (reported) speech and convert between the two forms.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar – direct and indirect speech",
+              "outcomes": [
+                "EN2-GRAM-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE01_04_character_comparison",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Compare how two characters, in one text or across two texts, respond differently to a similar event or problem.",
+          "ac_codes": [
+            "AC9E3LE01",
+            "AC9E3LE04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Compare characters' feelings, motivations and responses to events within and across texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Understanding and responding to literature – characters",
+              "outcomes": [
+                "EN2-UARL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY03_bias_perspective",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Recognise bias and different perspectives or viewpoints in a text, including whose voice is heard and what might be left out.",
+          "ac_codes": [
+            "AC9E3LY03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify whose perspective a text is told from and discuss how this may leave out other viewpoints.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Responding to and analysing texts – perspective and bias",
+              "outcomes": [
+                "EN2-RESA-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA10_multisyllabic_word_meaning",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use word parts, such as prefixes, suffixes and roots, to work out the meaning of unfamiliar multisyllabic words.",
+          "ac_codes": [
+            "AC9E3LA10"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Use knowledge of prefixes, suffixes and root words to work out the meaning of unfamiliar multisyllabic words.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Vocabulary – word parts and morphology",
+              "outcomes": [
+                "EN2-VOCAB-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY06_LE05_poetry_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and write a short poem that uses at least one literary device, such as rhyme, repetition or onomatopoeia, for effect.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LE05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan and create a short poem, experimenting with sound devices such as rhyme, rhythm and repetition.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating written texts – poetry",
+              "outcomes": [
+                "EN2-CWT-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA07_11_paragraphing_punctuation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Use correct paragraphing and a wider range of punctuation, such as colons to introduce a list and apostrophes for contractions, in writing.",
+          "ac_codes": [
+            "AC9E3LA07",
+            "AC9E3LA11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Organise writing into clear paragraphs and use an increasing range of punctuation, including colons and apostrophes, accurately.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Punctuation and paragraphing",
+              "outcomes": [
+                "EN2-PUNC-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY07_08_revising_multimodal",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Revise a multimodal text, such as a poster, by improving how its words, images and layout work together based on feedback.",
+          "ac_codes": [
+            "AC9E3LY07",
+            "AC9E3LY08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Revise and improve multimodal texts by adjusting text, images and layout in response to feedback.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating and revising multimodal texts",
+              "outcomes": [
+                "EN2-CWT-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 3
+          }
+        },
+        {
+          "id": "E3LA09_evaluating_effectiveness",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Evaluate how effectively an author achieved their purpose (to entertain, inform or persuade) through their language choices.",
+          "ac_codes": [
+            "AC9E3LA09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Identify a text's purpose and evaluate how well the author's language choices achieve that purpose.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Responding to and analysing texts – author's purpose and effect",
+              "outcomes": [
+                "EN2-RESA-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY09_handwriting_legibility",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write legibly and with growing fluency, using consistent letter size, formation and spacing between words.",
+          "ac_codes": [
+            "AC9E3LY09"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Write legibly and fluently, using consistent letter formation, sizing and spacing between words.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Handwriting and letter formation",
+              "outcomes": [
+                "EN2-HANDW-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "foundational",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LY06_08_multimodal_project",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan, create and present a short multimodal project that combines written text with images, audio or other modes for a real audience and purpose.",
+          "ac_codes": [
+            "AC9E3LY06",
+            "AC9E3LY07",
+            "AC9E3LY08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan and create a short multimodal text that combines written language with images or sound to suit a specific purpose and audience.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Multimodal and digital texts",
+              "outcomes": [
+                "EN2-MMTXT-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY10_11_spelling_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidate spelling strategies from across the year, including visual, phonic and morphemic approaches, homophones and common suffix rules.",
+          "ac_codes": [
+            "AC9E3LY10",
+            "AC9E3LY11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Apply a combination of spelling strategies (visual, phonic, morphemic) to spell an increasing range of words correctly, including homophones and words with common suffixes.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Spelling consolidation",
+              "outcomes": [
+                "EN2-SPELL-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LE01_05_independent_imaginative_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Independently plan and write a complete imaginative story that develops a character and setting and includes at least one literary device.",
+          "ac_codes": [
+            "AC9E3LE01",
+            "AC9E3LE02",
+            "AC9E3LE03",
+            "AC9E3LE04",
+            "AC9E3LE05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Independently plan and create an imaginative text that develops character and setting and uses a literary device such as a simile.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Creating imaginative texts",
+              "outcomes": [
+                "EN2-CWT-01",
+                "EN2-UARL-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA01_11_grammar_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidate understanding of sentence types (statements, questions, commands, exclamations), punctuation and grammar features covered across the year.",
+          "ac_codes": [
+            "AC9E3LA01",
+            "AC9E3LA02",
+            "AC9E3LA03",
+            "AC9E3LA04",
+            "AC9E3LA05",
+            "AC9E3LA06",
+            "AC9E3LA07",
+            "AC9E3LA08",
+            "AC9E3LA09",
+            "AC9E3LA10",
+            "AC9E3LA11"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate use of different sentence types, punctuation and grammatical features covered throughout the year.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Grammar and sentence structure consolidation",
+              "outcomes": [
+                "EN2-GRAM-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY04_fluent_reading_range",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Read a range of increasingly complex texts fluently, with appropriate pace, phrasing and expression, self-correcting when meaning breaks down.",
+          "ac_codes": [
+            "AC9E3LY04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Read an increasing range of texts with fluency, accuracy and expression, self-correcting errors that affect meaning.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reading fluency across text types",
+              "outcomes": [
+                "EN2-FLUE-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY05_oral_presentation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Plan and deliver a short, clear oral presentation to a small audience, using appropriate volume, pace and simple visual supports.",
+          "ac_codes": [
+            "AC9E3LY05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Plan and deliver a short spoken presentation to a familiar audience, using clear voice, pacing and supporting visuals.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Oral presentation skills",
+              "outcomes": [
+                "EN2-ORAL-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY01_02_03_comprehension_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Consolidate literal, inferential and evaluative comprehension strategies to understand and respond to a range of texts.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LY02",
+            "AC9E3LY03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate the use of literal, inferential and evaluative comprehension strategies across a range of texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Comprehension consolidation",
+              "outcomes": [
+                "EN2-RECOM-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA06_07_editing_independent",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Independently edit own writing to correct subject-verb agreement and improve cohesion, punctuation and clarity.",
+          "ac_codes": [
+            "AC9E3LA06",
+            "AC9E3LA07"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Independently reread and edit own writing, checking subject-verb agreement, cohesion, punctuation and clarity.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Independent editing",
+              "outcomes": [
+                "EN2-CWT-04"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LE02_03_04_text_analysis_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Consolidate analysis of how setting, mood and theme are created in a text, and compare features across two or more texts.",
+          "ac_codes": [
+            "AC9E3LE02",
+            "AC9E3LE03",
+            "AC9E3LE04"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate skills in analysing setting, mood and theme, and comparing features across different texts.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Analysing and comparing texts",
+              "outcomes": [
+                "EN2-UARL-03"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA02_03_descriptive_language_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidate use of adjectives, adverbs and expanded noun groups to add descriptive detail to writing.",
+          "ac_codes": [
+            "AC9E3LA02",
+            "AC9E3LA03"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate use of adjectives, adverbs and expanded noun groups to create more detailed and descriptive writing.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Descriptive language consolidation",
+              "outcomes": [
+                "EN2-GRAM-04"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LY06_reflective_writing",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Write a short reflective text describing a personal experience or piece of learning, including feelings and what was learnt.",
+          "ac_codes": [
+            "AC9E3LY06"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Create a short reflective text about a personal experience, describing feelings and identifying what was learnt.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Reflective writing",
+              "outcomes": [
+                "EN2-CWT-05"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 1
+          }
+        },
+        {
+          "id": "E3LA04_05_text_structure_cohesion_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidate understanding of typical text structures (narrative, informative, persuasive) and use cohesive devices to link ideas across a text.",
+          "ac_codes": [
+            "AC9E3LA04",
+            "AC9E3LA05"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate knowledge of text structures for different text types and use cohesive devices to connect ideas clearly.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Text structure and cohesion",
+              "outcomes": [
+                "EN2-COH-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LA08_09_10_language_choices_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Language",
+          "description": "Consolidate understanding of verb tense, an author's purpose and language choices, and strategies for building vocabulary.",
+          "ac_codes": [
+            "AC9E3LA08",
+            "AC9E3LA09",
+            "AC9E3LA10"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Consolidate understanding of tense, author's purpose and word choice, and strategies for expanding vocabulary.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Language choices and vocabulary",
+              "outcomes": [
+                "EN2-VOCAB-02"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY07_08_publishing_process",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Writing",
+          "description": "Complete the full writing process, from planning through drafting and editing to publishing, to produce a finished piece of writing.",
+          "ac_codes": [
+            "AC9E3LY07",
+            "AC9E3LY08"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Work through the stages of planning, drafting, editing and publishing to produce a completed piece of writing.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "The writing process and publishing",
+              "outcomes": [
+                "EN2-CWT-06"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "extension",
+            "typical_weeks_to_mastery": 2
+          }
+        },
+        {
+          "id": "E3LY01_12_year_review_consolidation",
+          "subject": "english",
+          "year_level": 3,
+          "strand": "Reading",
+          "description": "Comprehensive end-of-year review drawing together reading, viewing and language skills developed across Year 3.",
+          "ac_codes": [
+            "AC9E3LY01",
+            "AC9E3LY02",
+            "AC9E3LA01",
+            "AC9E3LA06",
+            "AC9E3LE01"
+          ],
+          "state_mappings": {
+            "VIC": {
+              "level": 3,
+              "phrasing": "Comprehensive review consolidating reading, viewing and language skills developed throughout the year.",
+              "local_codes": []
+            },
+            "NSW": {
+              "stage": "Stage 2",
+              "subarea": "Year-end review",
+              "outcomes": [
+                "EN2-REV-01"
+              ]
+            }
+          },
+          "metadata": {
+            "difficulty_band": "core",
+            "typical_weeks_to_mastery": 3
+          }
+        }
+      ],
+      "sequence": {
+        "1": {
+          "1": [
+            "E3LY03_purpose_audience_text_types",
+            "E3LA04_paragraphs_narrative_recount",
+            "E3LY09_high_freq_compound_sentences"
+          ],
+          "2": [
+            "E3LY01_02_literal_comprehension",
+            "E3LY06_informative_paragraphs",
+            "E3LA06_nouns_verbs_agreement"
+          ],
+          "3": [
+            "E3LY01_02_inferential_comprehension",
+            "E3LY06_3LE02_narrative_problem_solution",
+            "E3LA02_03_adjectives_adverbs_commas"
+          ],
+          "4": [
+            "E3LA04_LY03_text_structure",
+            "E3LY06_LA04_information_report",
+            "E3LA08_tense_consistency"
+          ],
+          "5": [
+            "E3LY03_LA03_persuasive_opinion",
+            "E3LY06_LA03_write_persuasive",
+            "E3LA03_11_modal_verbs_apostrophes"
+          ],
+          "6": [
+            "E3LA10_LY01_technical_vocabulary",
+            "E3LY06_LA05_explanation_texts",
+            "E3LY10_09_affixes_multisyllabic"
+          ],
+          "7": [
+            "E3LY01_LA09_evaluative_comprehension",
+            "E3LY06_3LE04_text_response",
+            "E3LA05_07_cohesive_devices"
+          ],
+          "8": [
+            "E3LE01_02_03_literature_characters_themes",
+            "E3LY06_3LE02_05_write_imaginative",
+            "E3LA03_LE03_figurative_language"
+          ],
+          "9": [
+            "E3LY09_01_fluency_decoding",
+            "E3LY06_07_editing_writing",
+            "E3LY11_10_spelling_patterns"
+          ],
+          "10": [
+            "E3LA09_LY03_multimodal_reading",
+            "E3LY06_08_multimodal_writing",
+            "E3LA06_LY09_12_language_consolidation"
+          ]
+        },
+        "2": {
+          "1": [
+            "E3LY04_reading_fluency_range_texts",
+            "E3LY05_listening_viewing_comprehension"
+          ],
+          "2": [
+            "E3LA07_complex_sentences",
+            "E3LE04_comparing_texts"
+          ],
+          "3": [
+            "E3LY07_planning_drafting",
+            "E3LA01_sentence_types"
+          ],
+          "4": [
+            "E3LY08_digital_text_features",
+            "E3LE05_creating_settings"
+          ],
+          "5": [
+            "E3LA09_authors_purpose_devices",
+            "E3LY02_summarising"
+          ],
+          "6": [
+            "E3LA02_expanded_noun_groups",
+            "E3LY06_procedural_writing"
+          ],
+          "7": [
+            "E3LE01_character_motivation"
+          ],
+          "8": [
+            "E3LA11_direct_speech_punctuation"
+          ],
+          "9": [
+            "E3LY03_comparing_purposes"
+          ],
+          "10": [
+            "E3LA06_10_irregular_plurals_verbs"
+          ]
+        },
+        "3": {
+          "1": [
+            "E3LE03_literary_devices_rhythm",
+            "E3LY05_viewing_comprehension_visual"
+          ],
+          "2": [
+            "E3LA03_metaphors_personification",
+            "E3LY01_02_synthesising_information"
+          ],
+          "3": [
+            "E3LE02_settings_mood",
+            "E3LA05_paragraph_cohesion"
+          ],
+          "4": [
+            "E3LY06_persuasive_devices",
+            "E3LY04_self_correction_strategies"
+          ],
+          "5": [
+            "E3LA08_reported_speech",
+            "E3LE01_04_character_comparison"
+          ],
+          "6": [
+            "E3LY03_bias_perspective",
+            "E3LA10_multisyllabic_word_meaning"
+          ],
+          "7": [
+            "E3LY06_LE05_poetry_writing"
+          ],
+          "8": [
+            "E3LA07_11_paragraphing_punctuation"
+          ],
+          "9": [
+            "E3LY07_08_revising_multimodal"
+          ],
+          "10": [
+            "E3LA09_evaluating_effectiveness"
+          ]
+        },
+        "4": {
+          "1": [
+            "E3LY09_handwriting_legibility",
+            "E3LY06_08_multimodal_project"
+          ],
+          "2": [
+            "E3LY10_11_spelling_consolidation",
+            "E3LE01_05_independent_imaginative_writing"
+          ],
+          "3": [
+            "E3LA01_11_grammar_consolidation",
+            "E3LY04_fluent_reading_range"
+          ],
+          "4": [
+            "E3LY05_oral_presentation",
+            "E3LY01_02_03_comprehension_consolidation"
+          ],
+          "5": [
+            "E3LA06_07_editing_independent",
+            "E3LE02_03_04_text_analysis_consolidation"
+          ],
+          "6": [
+            "E3LA02_03_descriptive_language_consolidation",
+            "E3LY06_reflective_writing"
+          ],
+          "7": [
+            "E3LA04_05_text_structure_cohesion_consolidation"
+          ],
+          "8": [
+            "E3LA08_09_10_language_choices_consolidation"
+          ],
+          "9": [
+            "E3LY07_08_publishing_process"
+          ],
+          "10": [
+            "E3LY01_12_year_review_consolidation"
+          ]
         }
       }
     }

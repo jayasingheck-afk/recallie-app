@@ -1,0 +1,4142 @@
+{
+  "_note": "Term 4 Year 3 Maths item bank: 160 retrieval-practice items across 16 end-of-year consolidation skills, aligned to the Australian Curriculum v9.0, for spaced-repetition practice in Recallie.",
+  "items": [
+    {
+      "id": "T4M01_Y3_001",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "easy",
+      "questionText": "Write the value of the digit 4 in the number 46,215.",
+      "questionType": "short_answer",
+      "answerKey": "40,000",
+      "stepByStepSolution": [
+        "Look at where the 4 sits - it is in the ten-thousands place.",
+        "Multiply the digit by the value of that place: 4 x 10,000.",
+        "So the digit 4 has a value of 40,000."
+      ],
+      "commonMisconceptions": [
+        "Reading the digit's face value (4) instead of its place value.",
+        "Confusing the ten-thousands and thousands places."
+      ],
+      "hints": [
+        "Look carefully at which column the digit 4 is sitting in.",
+        "Count the places from the right: ones, tens, hundreds, thousands, ten-thousands."
+      ],
+      "tags": [
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_002",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "easy",
+      "questionText": "Work out 23,400 + 15,300.",
+      "questionType": "short_answer",
+      "answerKey": "38,700",
+      "stepByStepSolution": [
+        "Line up the numbers by place value.",
+        "Add each column starting from the ones.",
+        "23,400 + 15,300 = 38,700."
+      ],
+      "commonMisconceptions": [
+        "Not lining up the digits by place value.",
+        "Forgetting to carry over when a column adds to 10 or more."
+      ],
+      "hints": [
+        "Try lining the numbers up under each other by place value.",
+        "Add the thousands first: 23,000 + 15,000, then add the hundreds."
+      ],
+      "tags": [
+        "addition",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_003",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "easy",
+      "questionText": "Which number is the same as 6 ten-thousands, 3 thousands, and 2 tens? A) 6,320   B) 63,020   C) 6,032",
+      "questionType": "multiple_choice",
+      "answerKey": "63,020",
+      "stepByStepSolution": [
+        "Six ten-thousands is 60,000.",
+        "Three thousands is 3,000, and two tens is 20.",
+        "Add them together: 60,000 + 3,000 + 20 = 63,020."
+      ],
+      "commonMisconceptions": [
+        "Mixing up ten-thousands with thousands, writing 6,320 instead of 63,020.",
+        "Leaving out the hundreds and ones places and writing a 4-digit number."
+      ],
+      "hints": [
+        "Start with the biggest place value first - ten-thousands.",
+        "Write down 60,000, then add on the 3,000 and the 20."
+      ],
+      "tags": [
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_004",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "medium",
+      "questionText": "A charity fun run raised $34,560 in the morning session and $8,750 in the afternoon session. How much did the fun run raise altogether?",
+      "questionType": "short_answer",
+      "answerKey": "$43,310",
+      "stepByStepSolution": [
+        "Add the two amounts together: 34,560 + 8,750.",
+        "Add from the ones column, regrouping where needed.",
+        "The total raised is $43,310."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to regroup (carry) when a column total is 10 or more.",
+        "Lining up the numbers incorrectly because they have a different number of digits."
+      ],
+      "hints": [
+        "Line the two amounts up by place value, with the ones on the right.",
+        "Add the ones first, then the tens, remembering to carry where needed."
+      ],
+      "tags": [
+        "addition",
+        "money",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_005",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "medium",
+      "questionText": "Calculate 100,000 minus 45,320.",
+      "questionType": "short_answer",
+      "answerKey": "54,680",
+      "stepByStepSolution": [
+        "Line up 100,000 and 45,320 by place value.",
+        "Regroup across the columns of zeros to subtract.",
+        "The difference is 54,680."
+      ],
+      "commonMisconceptions": [
+        "Getting confused about regrouping across several zeros.",
+        "Subtracting the smaller digit from the larger digit in each column regardless of order."
+      ],
+      "hints": [
+        "You will need to regroup across the zeros - think of 100,000 as 99,999 plus 1.",
+        "Try subtracting column by column from the ones, working carefully with borrowing."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_006",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "medium",
+      "questionText": "A stadium sold 48,650 tickets for a concert on Friday and 36,900 tickets on Saturday. How many tickets were sold in total across both nights?",
+      "questionType": "short_answer",
+      "answerKey": "85,550",
+      "stepByStepSolution": [
+        "Add the two ticket totals together.",
+        "Add each place value column, regrouping when a column reaches 10 or more.",
+        "48,650 + 36,900 = 85,550 tickets."
+      ],
+      "commonMisconceptions": [
+        "Adding the digits without regrouping the tens or hundreds.",
+        "Misreading 36,900 as 3,690 by missing a digit."
+      ],
+      "hints": [
+        "Set the numbers out with the ones lined up underneath each other.",
+        "Start with the ones and tens columns, then move left, carrying where needed."
+      ],
+      "tags": [
+        "addition",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_007",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "medium",
+      "questionText": "Which number has the digit 7 in the ten-thousands place? A) 27,943   B) 72,943   C) 39,472",
+      "questionType": "multiple_choice",
+      "answerKey": "72,943",
+      "stepByStepSolution": [
+        "The ten-thousands place is the second digit from the left in a 5-digit number.",
+        "Check each option's second digit from the left.",
+        "72,943 has 7 in the ten-thousands place, so B is correct."
+      ],
+      "commonMisconceptions": [
+        "Picking a number just because it contains a 7 anywhere.",
+        "Miscounting the places from the left instead of matching them to their names."
+      ],
+      "hints": [
+        "Find the second digit from the left in each number - that's the ten-thousands place.",
+        "Check option B carefully: what is its second digit?"
+      ],
+      "tags": [
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_008",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "hard",
+      "questionText": "A town had a population of 84,500. During the year, 6,750 people moved in and 9,320 people moved away. What is the town's population now?",
+      "questionType": "short_answer",
+      "answerKey": "81,930",
+      "stepByStepSolution": [
+        "Add the people who moved in: 84,500 + 6,750 = 91,250.",
+        "Subtract the people who moved away: 91,250 - 9,320.",
+        "The new population is 81,930."
+      ],
+      "commonMisconceptions": [
+        "Only doing one of the two steps instead of both.",
+        "Subtracting before adding, which changes the order needed for this problem."
+      ],
+      "hints": [
+        "This problem needs two steps - think about what happens first.",
+        "Add the people moving in, then subtract the people moving away, from your new total."
+      ],
+      "tags": [
+        "word_problem",
+        "addition",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_009",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "hard",
+      "questionText": "Calculate 90,004 minus 37,568.",
+      "questionType": "short_answer",
+      "answerKey": "52,436",
+      "stepByStepSolution": [
+        "Line the numbers up by place value, ones on the right.",
+        "Regroup across several columns, since 90,004 has zeros in the middle.",
+        "Subtracting carefully gives 52,436."
+      ],
+      "commonMisconceptions": [
+        "Getting stuck when regrouping across multiple zero columns.",
+        "Subtracting the top digit from the bottom digit when the top digit is smaller."
+      ],
+      "hints": [
+        "You will need to regroup through the tens, hundreds and thousands columns because of the zeros.",
+        "Try renaming 90,004 as 8 ten-thousands, 9 thousands, 9 hundreds, 9 tens and 14 ones before subtracting."
+      ],
+      "tags": [
+        "subtraction",
+        "place_value"
+      ]
+    },
+    {
+      "id": "T4M01_Y3_010",
+      "skillId": "M3N01_04_place_value_operations_consolidation",
+      "difficulty": "hard",
+      "questionText": "A charity has a goal of raising $75,000. So far they have raised $28,460 from a raffle and $19,875 from a sausage sizzle. How much more do they need to raise to reach their goal?",
+      "questionType": "short_answer",
+      "answerKey": "$26,665",
+      "stepByStepSolution": [
+        "Add the two amounts raised so far: 28,460 + 19,875 = 48,335.",
+        "Subtract this total from the goal: 75,000 - 48,335.",
+        "They still need to raise $26,665."
+      ],
+      "commonMisconceptions": [
+        "Subtracting only one amount from the goal instead of the combined total.",
+        "Making a regrouping error when subtracting from a number ending in zeros."
+      ],
+      "hints": [
+        "First work out how much has been raised altogether from both events.",
+        "Then subtract that combined amount from the $75,000 goal."
+      ],
+      "tags": [
+        "word_problem",
+        "money",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_001",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "Work out 48 divided by 6.",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "Think of the multiplication fact: 6 x ? = 48.",
+        "6 x 8 = 48, so 48 divided by 6 = 8.",
+        "There is no remainder because 48 shares exactly into 6 groups."
+      ],
+      "commonMisconceptions": [
+        "Confusing 48 divided by 6 with 48 divided by 8, mixing up the numbers.",
+        "Guessing without checking the multiplication fact family."
+      ],
+      "hints": [
+        "Think about the 6 times table.",
+        "What number times 6 gives you 48?"
+      ],
+      "tags": [
+        "division",
+        "times_tables"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_002",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "Divide 63 by 7.",
+      "questionType": "short_answer",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "Recall the 7 times table.",
+        "7 x 9 = 63.",
+        "So 63 divided by 7 = 9."
+      ],
+      "commonMisconceptions": [
+        "Mixing up 63 divided by 7 with 63 divided by 9.",
+        "Trying to subtract 7 one at a time and losing count."
+      ],
+      "hints": [
+        "Think about the 7 times table facts.",
+        "What times 7 equals 63?"
+      ],
+      "tags": [
+        "division",
+        "times_tables"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_003",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "What is 36 divided by 4? A) 8   B) 9   C) 7",
+      "questionType": "multiple_choice",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "Think of the 4 times table.",
+        "4 x 9 = 36.",
+        "So 36 divided by 4 = 9, which is option B."
+      ],
+      "commonMisconceptions": [
+        "Choosing 8 because 4 x 8 = 32, a nearby fact.",
+        "Choosing 7 by guessing rather than checking the times table."
+      ],
+      "hints": [
+        "Think about counting up in groups of 4.",
+        "4 x 9 equals 36 - check the times table."
+      ],
+      "tags": [
+        "division",
+        "times_tables"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_004",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "Divide 57 by 5. Write your answer as a whole number and a remainder.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "11 remainder 2",
+        "11 r2"
+      ],
+      "stepByStepSolution": [
+        "Find the closest multiple of 5 that is not more than 57: 5 x 11 = 55.",
+        "Subtract: 57 - 55 = 2.",
+        "So 57 divided by 5 = 11 remainder 2."
+      ],
+      "commonMisconceptions": [
+        "Rounding up to 12 instead of stopping at the largest multiple that fits.",
+        "Forgetting to state the remainder."
+      ],
+      "hints": [
+        "Think about the 5 times table - which multiple of 5 is closest to 57 without going over?",
+        "5 x 11 = 55 - how much is left over from 57?"
+      ],
+      "tags": [
+        "division",
+        "remainder"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_005",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "A netball coach has 46 players and wants to put them into teams of 8. How many full teams can she make, and how many players will be left over?",
+      "questionType": "short_answer",
+      "answerKey": "5 full teams, 6 players left over",
+      "stepByStepSolution": [
+        "Divide 46 by 8: 8 x 5 = 40.",
+        "Subtract: 46 - 40 = 6.",
+        "So there are 5 full teams with 6 players left over."
+      ],
+      "commonMisconceptions": [
+        "Rounding to 6 teams, ignoring that the 6th team would not be full.",
+        "Saying 8 teams because that is the size of one team, not the number of teams."
+      ],
+      "hints": [
+        "Think about how many times 8 fits into 46 without going over.",
+        "8 x 5 = 40 - how many players does that leave?"
+      ],
+      "tags": [
+        "division",
+        "remainder",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_006",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "Divide 72 by 6.",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "Break 72 into 60 + 12.",
+        "Divide each part by 6: 60 divided by 6 = 10, and 12 divided by 6 = 2.",
+        "Add the parts together: 10 + 2 = 12."
+      ],
+      "commonMisconceptions": [
+        "Trying to divide the tens and ones separately without combining the results correctly.",
+        "Confusing 72 divided by 6 with 72 divided by 8."
+      ],
+      "hints": [
+        "Try splitting 72 into 60 and 12, since both divide evenly by 6.",
+        "60 divided by 6 = 10 and 12 divided by 6 = 2 - what do these add up to?"
+      ],
+      "tags": [
+        "division"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_007",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "Which division has a remainder? A) 42 divided by 6   B) 50 divided by 7   C) 45 divided by 9",
+      "questionType": "multiple_choice",
+      "answerKey": "50 divided by 7",
+      "stepByStepSolution": [
+        "Check each fact: 6 x 7 = 42, so 42 divided by 6 has no remainder.",
+        "9 x 5 = 45, so 45 divided by 9 has no remainder.",
+        "7 x 7 = 49, which leaves 1 left over from 50, so 50 divided by 7 has a remainder."
+      ],
+      "commonMisconceptions": [
+        "Assuming any 2-digit divided by 1-digit division automatically has a remainder.",
+        "Not checking the multiplication fact carefully before deciding."
+      ],
+      "hints": [
+        "Check each one using the matching multiplication fact.",
+        "Try the 7 times table around 50 - does it divide exactly?"
+      ],
+      "tags": [
+        "division",
+        "remainder"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_008",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "A baker has 85 bread rolls to pack into bags of 9. How many bags can be completely filled, and how many rolls will be left over?",
+      "questionType": "short_answer",
+      "answerKey": "9 bags, 4 rolls left over",
+      "stepByStepSolution": [
+        "Find the largest multiple of 9 that is not more than 85: 9 x 9 = 81.",
+        "Subtract: 85 - 81 = 4.",
+        "So 9 bags can be filled, with 4 rolls left over."
+      ],
+      "commonMisconceptions": [
+        "Rounding up to 10 bags, which is not possible without enough rolls.",
+        "Miscounting the times table and choosing 9 x 8 instead of 9 x 9."
+      ],
+      "hints": [
+        "Think about the 9 times table near 85.",
+        "9 x 9 = 81 - how many rolls does that leave over?"
+      ],
+      "tags": [
+        "division",
+        "remainder",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_009",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "Divide 91 by 7, then explain in one sentence what the remainder tells you (if there is one).",
+      "questionType": "short_answer",
+      "answerKey": [
+        "13, no remainder",
+        "13 no remainder"
+      ],
+      "stepByStepSolution": [
+        "Recall that 7 x 13 = 91.",
+        "Since 91 shares exactly into groups of 7, there is nothing left over.",
+        "So 91 divided by 7 = 13 with no remainder."
+      ],
+      "commonMisconceptions": [
+        "Assuming a 2-digit number divided by a 1-digit number must always leave a remainder.",
+        "Mixing up 7 x 13 with 7 x 12."
+      ],
+      "hints": [
+        "Think about the 7 times table for numbers close to 91.",
+        "7 x 13 = 91 - does this share out exactly?"
+      ],
+      "tags": [
+        "division"
+      ]
+    },
+    {
+      "id": "T4M02_Y3_010",
+      "skillId": "M3N06_division_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "A farmer has 79 eggs to pack into cartons that hold 6 eggs each. How many cartons can be completely filled? How many eggs are left over, and can these leftover eggs fill another whole carton?",
+      "questionType": "short_answer",
+      "answerKey": "13 cartons, 1 egg left over; that is not enough to fill another whole carton",
+      "stepByStepSolution": [
+        "Find the largest multiple of 6 up to 79: 6 x 13 = 78.",
+        "Subtract: 79 - 78 = 1 egg left over.",
+        "With only 1 egg left, there is not enough to fill another carton, so it cannot make a full extra carton."
+      ],
+      "commonMisconceptions": [
+        "Rounding up to 14 cartons even though there are not enough eggs to fill it.",
+        "Forgetting to explain what happens to the remainder in context."
+      ],
+      "hints": [
+        "Think about the 6 times table close to 79.",
+        "6 x 13 = 78 - how many eggs are left, and is that enough for another carton?"
+      ],
+      "tags": [
+        "division",
+        "remainder",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_001",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "easy",
+      "questionText": "Work out 2/5 + 1/5.",
+      "questionType": "short_answer",
+      "answerKey": "3/5",
+      "stepByStepSolution": [
+        "Since both fractions have the same denominator (5), just add the numerators.",
+        "2 + 1 = 3.",
+        "So 2/5 + 1/5 = 3/5."
+      ],
+      "commonMisconceptions": [
+        "Adding the denominators as well as the numerators.",
+        "Writing the answer as a whole number instead of a fraction."
+      ],
+      "hints": [
+        "When the denominators match, you only need to add the top numbers.",
+        "2 + 1 = 3, so what is 3 out of 5 as a fraction?"
+      ],
+      "tags": [
+        "fractions",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_002",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "easy",
+      "questionText": "Work out 5/8 minus 2/8.",
+      "questionType": "short_answer",
+      "answerKey": "3/8",
+      "stepByStepSolution": [
+        "The denominators are the same, so subtract the numerators.",
+        "5 - 2 = 3.",
+        "So 5/8 - 2/8 = 3/8."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the denominators as well.",
+        "Getting the order of subtraction mixed up."
+      ],
+      "hints": [
+        "Keep the denominator the same and just work with the numerators.",
+        "5 - 2 = 3, so the answer is 3 eighths."
+      ],
+      "tags": [
+        "fractions",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_003",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "easy",
+      "questionText": "What is 3/6 + 2/6? A) 5/6   B) 5/12   C) 1/6",
+      "questionType": "multiple_choice",
+      "answerKey": "5/6",
+      "stepByStepSolution": [
+        "The denominators match, so add the numerators: 3 + 2 = 5.",
+        "Keep the denominator the same, which is 6.",
+        "So 3/6 + 2/6 = 5/6, option A."
+      ],
+      "commonMisconceptions": [
+        "Adding the denominators together to get 12, choosing option B.",
+        "Only adding part of the fractions incorrectly."
+      ],
+      "hints": [
+        "Since the bottom numbers are the same, do not change them.",
+        "Just add the top numbers: 3 + 2."
+      ],
+      "tags": [
+        "fractions",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_004",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "medium",
+      "questionText": "Zara ate 3/8 of a pizza and her brother ate 4/8 of the same pizza. What fraction of the pizza did they eat altogether?",
+      "questionType": "short_answer",
+      "answerKey": "7/8",
+      "stepByStepSolution": [
+        "The denominators are the same (8), so add the numerators.",
+        "3 + 4 = 7.",
+        "Together they ate 7/8 of the pizza."
+      ],
+      "commonMisconceptions": [
+        "Adding the denominators to get a fraction like 7/16.",
+        "Forgetting that the whole pizza is 8/8, not more."
+      ],
+      "hints": [
+        "Keep the denominator as 8 and add the numerators.",
+        "3 + 4 = 7 - what fraction is that out of 8?"
+      ],
+      "tags": [
+        "fractions",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_005",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "medium",
+      "questionText": "A ribbon is cut into tenths. Maya uses 7/10 of the ribbon, then gives away 2/10 more of the original ribbon. What fraction of the original ribbon does Maya have left?",
+      "questionType": "short_answer",
+      "answerKey": "1/10",
+      "stepByStepSolution": [
+        "Maya starts with the whole ribbon, which is 10/10.",
+        "She used 7/10, leaving 10/10 - 7/10 = 3/10.",
+        "She then gives away 2/10 more: 3/10 - 2/10 = 1/10 left."
+      ],
+      "commonMisconceptions": [
+        "Only doing one subtraction step instead of two.",
+        "Adding the fractions instead of subtracting them."
+      ],
+      "hints": [
+        "Work out how much ribbon is left after the first use before doing anything else.",
+        "There are two subtraction steps here - do them one at a time."
+      ],
+      "tags": [
+        "fractions",
+        "subtraction",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_006",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "medium",
+      "questionText": "Work out 9/12 minus 4/12, and write the answer in its simplest form.",
+      "questionType": "short_answer",
+      "answerKey": "5/12",
+      "stepByStepSolution": [
+        "Subtract the numerators since the denominators match: 9 - 4 = 5.",
+        "This gives 5/12.",
+        "5 and 12 share no common factors other than 1, so 5/12 is already in simplest form."
+      ],
+      "commonMisconceptions": [
+        "Trying to simplify 5/12 even though it cannot be simplified further.",
+        "Subtracting the denominators as well as the numerators."
+      ],
+      "hints": [
+        "Subtract the numerators first: 9 - 4.",
+        "Check whether 5 and 12 share any common factors to simplify."
+      ],
+      "tags": [
+        "fractions",
+        "subtraction",
+        "simplifying"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_007",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "medium",
+      "questionText": "Which calculation gives an answer greater than 1 whole? A) 3/4 + 2/4   B) 1/4 + 2/4   C) 2/4 minus 1/4",
+      "questionType": "multiple_choice",
+      "answerKey": "3/4 + 2/4",
+      "stepByStepSolution": [
+        "Work out each calculation: 3/4 + 2/4 = 5/4.",
+        "1/4 + 2/4 = 3/4, and 2/4 minus 1/4 = 1/4.",
+        "5/4 is more than 4/4 (1 whole), so option A is greater than 1 whole."
+      ],
+      "commonMisconceptions": [
+        "Assuming any addition of fractions must be less than 1.",
+        "Not comparing the numerator to the denominator to check against one whole."
+      ],
+      "hints": [
+        "Remember that 4/4 is equal to one whole.",
+        "Add each pair of fractions and compare the numerator to the denominator."
+      ],
+      "tags": [
+        "fractions",
+        "addition",
+        "comparing"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_008",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "hard",
+      "questionText": "A jug holds 12/12 (a full jug) of juice. Dad pours out 5/12 for breakfast and 3/12 for lunch. How much juice is left in the jug, as a fraction?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "4/12",
+        "1/3"
+      ],
+      "stepByStepSolution": [
+        "Add the amounts poured out: 5/12 + 3/12 = 8/12.",
+        "Subtract this from the full jug: 12/12 - 8/12 = 4/12.",
+        "So 4/12 of the jug is left, which can also be written as 1/3."
+      ],
+      "commonMisconceptions": [
+        "Subtracting each amount from 12/12 separately and losing track of the running total.",
+        "Forgetting to simplify 4/12 to 1/3 when asked for a simplest form."
+      ],
+      "hints": [
+        "First work out the total amount poured out altogether.",
+        "Then subtract that total from the full 12/12."
+      ],
+      "tags": [
+        "fractions",
+        "multi_step",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_009",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "hard",
+      "questionText": "Two-fifths of the class walked to school, one-fifth rode a bike, and the rest were driven. What fraction of the class was driven to school?",
+      "questionType": "short_answer",
+      "answerKey": "2/5",
+      "stepByStepSolution": [
+        "The whole class is 5/5.",
+        "Add the fractions already accounted for: 2/5 + 1/5 = 3/5.",
+        "Subtract from the whole: 5/5 - 3/5 = 2/5 were driven."
+      ],
+      "commonMisconceptions": [
+        "Forgetting that the whole class equals 5/5, not some other number.",
+        "Only subtracting one of the two given fractions."
+      ],
+      "hints": [
+        "Work out what fraction walked or rode altogether first.",
+        "Subtract that combined fraction from the whole class (5/5)."
+      ],
+      "tags": [
+        "fractions",
+        "word_problem",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M03_Y3_010",
+      "skillId": "M3N07_adding_subtracting_fractions",
+      "difficulty": "hard",
+      "questionText": "Explain why 6/9 minus 2/9 is worked out differently from 6/9 minus 2/6. What is the correct answer to 6/9 minus 2/9?",
+      "questionType": "short_answer",
+      "answerKey": "4/9",
+      "stepByStepSolution": [
+        "In 6/9 minus 2/9, both fractions are ninths, so subtract the numerators directly: 6 - 2 = 4, giving 4/9.",
+        "In 6/9 minus 2/6, the denominators (9 and 6) are different, meaning the pieces are different sizes.",
+        "Because the pieces are different sizes, the numerators cannot simply be subtracted for 6/9 minus 2/6, but 6/9 minus 2/9 = 4/9 is correct as it stands."
+      ],
+      "commonMisconceptions": [
+        "Subtracting numerators even when denominators are different.",
+        "Believing all fractions with similar numbers can be subtracted the same way."
+      ],
+      "hints": [
+        "Check whether the denominators are the same in each expression before subtracting.",
+        "For 6/9 minus 2/9, the denominators match, so just subtract the top numbers."
+      ],
+      "tags": [
+        "fractions",
+        "reasoning",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_001",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "easy",
+      "questionText": "Ben buys a pencil case for $6.50 and pays with a $10 note. How much change does he get?",
+      "questionType": "short_answer",
+      "answerKey": "$3.50",
+      "stepByStepSolution": [
+        "Start with the amount paid: $10.00.",
+        "Subtract the cost of the item: $10.00 - $6.50.",
+        "The change is $3.50."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order, giving an incorrect result.",
+        "Forgetting to line up the decimal points when subtracting money."
+      ],
+      "hints": [
+        "Line up the dollars and cents carefully before subtracting.",
+        "Think: $10.00 minus $6.50."
+      ],
+      "tags": [
+        "money",
+        "change"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_002",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "easy",
+      "questionText": "A drink costs $2.20. If you pay with a $5 note, how much change should you receive?",
+      "questionType": "short_answer",
+      "answerKey": "$2.80",
+      "stepByStepSolution": [
+        "Write down the amount paid: $5.00.",
+        "Subtract the price of the drink: $5.00 - $2.20.",
+        "The change is $2.80."
+      ],
+      "commonMisconceptions": [
+        "Rounding the price before subtracting, leading to an inaccurate answer.",
+        "Mixing up dollars and cents when subtracting."
+      ],
+      "hints": [
+        "Start with $5.00 and take away $2.20 carefully.",
+        "Check the cents column first: 00 minus 20 needs regrouping."
+      ],
+      "tags": [
+        "money",
+        "change"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_003",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "easy",
+      "questionText": "You buy a $4.00 book and pay with a $5 note. How much change do you get? A) $1.00   B) $9.00   C) $0.50",
+      "questionType": "multiple_choice",
+      "answerKey": "$1.00",
+      "stepByStepSolution": [
+        "Subtract the price from the amount paid: $5.00 - $4.00.",
+        "This gives $1.00.",
+        "So the change is $1.00, option A."
+      ],
+      "commonMisconceptions": [
+        "Adding the amounts instead of subtracting.",
+        "Choosing an answer that does not make sense compared to the amount paid."
+      ],
+      "hints": [
+        "Think about what is left after paying for the book.",
+        "$5.00 minus $4.00 equals how much?"
+      ],
+      "tags": [
+        "money",
+        "change"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_004",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "medium",
+      "questionText": "At the school canteen, Priya buys a sandwich for $4.50 and a juice box for $2.30. She pays with a $10 note. How much change does she get?",
+      "questionType": "short_answer",
+      "answerKey": "$3.20",
+      "stepByStepSolution": [
+        "Add the two items together: $4.50 + $2.30 = $6.80.",
+        "Subtract this total from the $10 note: $10.00 - $6.80.",
+        "Priya receives $3.20 in change."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both items before subtracting from the $10.",
+        "Making a regrouping error when subtracting the cents."
+      ],
+      "hints": [
+        "First work out the total cost of both items.",
+        "Then subtract that total from the $10 note."
+      ],
+      "tags": [
+        "money",
+        "budget",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_005",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "medium",
+      "questionText": "Jack has $15 to spend at the fete. He buys a show bag for $8.75 and a drink for $3.50. Does he have enough left over to also buy a $2.90 icy pole? Show your working.",
+      "questionType": "short_answer",
+      "answerKey": "No - he has $2.75 left, which is 15 cents short of the $2.90 icy pole",
+      "stepByStepSolution": [
+        "Subtract the show bag: $15.00 - $8.75 = $6.25.",
+        "Subtract the drink: $6.25 - $3.50 = $2.75.",
+        "Since the icy pole costs $2.90 and Jack only has $2.75 left, he is 15 cents short."
+      ],
+      "commonMisconceptions": [
+        "Adding up all the costs first without checking against the amount Jack actually has left.",
+        "Assuming he has enough just because $15 seems like plenty."
+      ],
+      "hints": [
+        "Work out how much money Jack has left after each purchase, step by step.",
+        "Compare his remaining money to the price of the icy pole - is it enough?"
+      ],
+      "tags": [
+        "money",
+        "budget",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_006",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "medium",
+      "questionText": "A stall sells stickers for $0.80 each. If Amelia has $5.00, what is the greatest number of stickers she can buy, and how much change will she have?",
+      "questionType": "short_answer",
+      "answerKey": "6 stickers, $0.20 change",
+      "stepByStepSolution": [
+        "Try multiplying $0.80 by different numbers: 0.80 x 6 = $4.80.",
+        "Since 0.80 x 7 = $5.60 is too much, the greatest number she can buy is 6.",
+        "Subtract: $5.00 - $4.80 = $0.20 change."
+      ],
+      "commonMisconceptions": [
+        "Rounding up to 7 stickers without checking if there is enough money.",
+        "Forgetting to work out the leftover change after buying the stickers."
+      ],
+      "hints": [
+        "Try multiplying $0.80 by different numbers to see how close you can get to $5.00 without going over.",
+        "6 stickers cost $4.80 - how much change is left from $5.00?"
+      ],
+      "tags": [
+        "money",
+        "budget",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_007",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "medium",
+      "questionText": "A toy costs $12.60. You pay with a $20 note. How much change should you receive? A) $7.40   B) $8.40   C) $7.60",
+      "questionType": "multiple_choice",
+      "answerKey": "$7.40",
+      "stepByStepSolution": [
+        "Subtract the price from the amount paid: $20.00 - $12.60.",
+        "Regroup the cents: 20.00 - 12.60 = 7.40.",
+        "The correct change is $7.40, option A."
+      ],
+      "commonMisconceptions": [
+        "Making a regrouping mistake in the cents column, leading to $8.40.",
+        "Subtracting only the dollars and ignoring the cents properly."
+      ],
+      "hints": [
+        "Line up $20.00 and $12.60 carefully by the decimal point.",
+        "Check your regrouping in the cents column: 00 minus 60 needs borrowing from the dollars."
+      ],
+      "tags": [
+        "money",
+        "change"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_008",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "hard",
+      "questionText": "Leo is buying supplies for a class party with a $25 budget. He buys chips for $6.40, a cake for $11.20, and drinks for $5.90. Has he stayed within budget, and if so, how much money does he have left?",
+      "questionType": "short_answer",
+      "answerKey": "Yes, he has $1.50 left",
+      "stepByStepSolution": [
+        "Add up all three items: $6.40 + $11.20 + $5.90 = $23.50.",
+        "Compare this to the budget: $23.50 is less than $25.00, so he has stayed within budget.",
+        "Subtract to find the leftover amount: $25.00 - $23.50 = $1.50."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add all three prices before comparing to the budget.",
+        "Assuming he has gone over budget without checking the total carefully."
+      ],
+      "hints": [
+        "Add up the cost of all three items first.",
+        "Then compare the total to the $25 budget to see how much, if any, is left."
+      ],
+      "tags": [
+        "money",
+        "budget",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_009",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "hard",
+      "questionText": "A family orders a $34.50 pizza meal and pays with two $20 notes. How much change should they receive?",
+      "questionType": "short_answer",
+      "answerKey": "$5.50",
+      "stepByStepSolution": [
+        "Work out the total amount paid: two $20 notes = $40.00.",
+        "Subtract the cost of the meal: $40.00 - $34.50.",
+        "The change to receive is $5.50."
+      ],
+      "commonMisconceptions": [
+        "Forgetting that two $20 notes make $40, not $20.",
+        "Making an error when regrouping across the dollars and cents."
+      ],
+      "hints": [
+        "First work out how much money was paid altogether using both notes.",
+        "Then subtract $34.50 from that total."
+      ],
+      "tags": [
+        "money",
+        "change",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M04_Y3_010",
+      "skillId": "M3M06_money_change_budgets",
+      "difficulty": "hard",
+      "questionText": "Grace has $30 to spend on gifts. She wants to buy 3 identical toys and still have at least $6 left over. What is the greatest price per toy she could pay? Show your reasoning.",
+      "questionType": "short_answer",
+      "answerKey": "$8.00 per toy",
+      "stepByStepSolution": [
+        "Work out the most she can spend on toys altogether: $30 - $6 = $24.",
+        "Divide this by 3 toys: $24 divided by 3 = $8.00.",
+        "So the greatest price per toy, to stay within budget, is $8.00."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to subtract the $6 she wants left over before dividing.",
+        "Dividing $30 by 3 directly, ignoring the leftover amount she wants to keep."
+      ],
+      "hints": [
+        "First work out the total amount she is allowed to spend on all three toys.",
+        "Then divide that amount by 3 to find the price of one toy."
+      ],
+      "tags": [
+        "money",
+        "budget",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_001",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "easy",
+      "questionText": "A movie starts at 3:15 pm and finishes at 4:00 pm. How long is the movie?",
+      "questionType": "short_answer",
+      "answerKey": "45 minutes",
+      "stepByStepSolution": [
+        "Find the difference between the start and finish times.",
+        "From 3:15 to 4:00 is 45 minutes.",
+        "So the movie is 45 minutes long."
+      ],
+      "commonMisconceptions": [
+        "Assuming it must be a round number like 1 hour without checking carefully.",
+        "Counting the hour incorrectly and ignoring the minutes."
+      ],
+      "hints": [
+        "Count on from 3:15 to 4:00 in your head or on a number line.",
+        "How many minutes are there from 3:15 to 3:45? Then to 4:00?"
+      ],
+      "tags": [
+        "time",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_002",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "easy",
+      "questionText": "If today is Tuesday the 3rd, what date will it be next Tuesday?",
+      "questionType": "short_answer",
+      "answerKey": "the 10th",
+      "stepByStepSolution": [
+        "A week has 7 days.",
+        "Add 7 days to the 3rd.",
+        "3 + 7 = 10, so next Tuesday is the 10th."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong number of days, such as 5 or 6 instead of 7.",
+        "Forgetting that next Tuesday means one full week later."
+      ],
+      "hints": [
+        "Think about how many days are in one week.",
+        "Add that number of days to the 3rd."
+      ],
+      "tags": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_003",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "easy",
+      "questionText": "How many days are in the month of June? A) 30   B) 31   C) 28",
+      "questionType": "multiple_choice",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "Recall the months with 30 days: April, June, September, November.",
+        "June is one of these months.",
+        "So June has 30 days, option A."
+      ],
+      "commonMisconceptions": [
+        "Confusing June with July, which has 31 days.",
+        "Mixing up the pattern of 30- and 31-day months."
+      ],
+      "hints": [
+        "Think of the rhyme '30 days has September, April, June and November'.",
+        "Is June one of the months in that rhyme?"
+      ],
+      "tags": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_004",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "medium",
+      "questionText": "A bus timetable shows a bus leaves the station at 9:40 am and arrives at the beach at 10:25 am. How long does the bus trip take?",
+      "questionType": "short_answer",
+      "answerKey": "45 minutes",
+      "stepByStepSolution": [
+        "Find the time from 9:40 to 10:00: that is 20 minutes.",
+        "Find the time from 10:00 to 10:25: that is 25 minutes.",
+        "Add the two parts together: 20 + 25 = 45 minutes."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the minutes directly (40 from 25) without regrouping across the hour.",
+        "Forgetting to add both parts of the elapsed time together."
+      ],
+      "hints": [
+        "Break the journey into two parts: from 9:40 to 10:00, then from 10:00 to 10:25.",
+        "Add the minutes from each part together."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "timetable"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_005",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "medium",
+      "questionText": "Which train takes the longest to complete its journey, and how long does it take?",
+      "questionType": "short_answer",
+      "answerKey": "Train C, 1 hour 10 minutes",
+      "stepByStepSolution": [
+        "Work out the travel time for each train: Train A takes 50 minutes, Train B takes 40 minutes.",
+        "Train C travels from 9:00 am to 10:10 am, which is 1 hour 10 minutes.",
+        "Comparing all three, Train C takes the longest."
+      ],
+      "commonMisconceptions": [
+        "Comparing departure times instead of the total length of each journey.",
+        "Making an error calculating elapsed time across the hour for Train C."
+      ],
+      "hints": [
+        "Work out how long each train's journey takes, one at a time.",
+        "Compare the three elapsed times to see which is the biggest."
+      ],
+      "tags": [
+        "timetable",
+        "elapsed_time",
+        "comparing"
+      ],
+      "passage": "A train timetable shows three trains. Train A departs at 8:15 am and arrives at 9:05 am. Train B departs at 8:50 am and arrives at 9:30 am. Train C departs at 9:00 am and arrives at 10:10 am."
+    },
+    {
+      "id": "T4M05_Y3_006",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "medium",
+      "questionText": "If a school term starts on Monday 5 October and lasts exactly 9 weeks, on what day of the week will the last day of the 9th week fall?",
+      "questionType": "short_answer",
+      "answerKey": "Sunday",
+      "stepByStepSolution": [
+        "A term of exactly 9 weeks is 9 x 7 = 63 days.",
+        "Since 63 days is an exact number of weeks, the days of the week repeat in the same pattern.",
+        "Starting on a Monday, the last day of the 9th week falls on a Sunday, the day before the pattern repeats."
+      ],
+      "commonMisconceptions": [
+        "Forgetting that a whole number of weeks always lands on the day before the start day.",
+        "Miscounting the total number of days in 9 weeks."
+      ],
+      "hints": [
+        "Think about how many days are in 9 weeks altogether.",
+        "If a week starts on Monday, which day is always the last day of that week?"
+      ],
+      "tags": [
+        "calendar",
+        "weeks"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_007",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "medium",
+      "questionText": "A netball match starts at 2:05 pm and lasts 55 minutes. What time does it finish? A) 2:60 pm   B) 3:00 pm   C) 2:50 pm",
+      "questionType": "multiple_choice",
+      "answerKey": "3:00 pm",
+      "stepByStepSolution": [
+        "Start at 2:05 pm and add 55 minutes.",
+        "Adding 55 minutes to 2:05 pm crosses over the hour mark.",
+        "2:05 pm plus 55 minutes = 3:00 pm, option B."
+      ],
+      "commonMisconceptions": [
+        "Writing an impossible time like 2:60 pm instead of converting to the next hour.",
+        "Adding only part of the 55 minutes."
+      ],
+      "hints": [
+        "Adding 55 minutes will take you past the 3:00 mark.",
+        "Think: 2:05 plus 55 minutes equals what full hour time?"
+      ],
+      "tags": [
+        "time",
+        "elapsed_time"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_008",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "hard",
+      "questionText": "Mia needs to arrive at her destination by 9:35 am. Which trains could she catch, and which train should she avoid? Explain why.",
+      "questionType": "short_answer",
+      "answerKey": "Train A or Train B; avoid Train C because it arrives at 10:10 am, which is after 9:35 am",
+      "stepByStepSolution": [
+        "Check each train's arrival time against Mia's deadline of 9:35 am.",
+        "Train A arrives at 9:05 am and Train B arrives at 9:30 am, both before 9:35 am.",
+        "Train C arrives at 10:10 am, which is too late, so Mia should avoid Train C."
+      ],
+      "commonMisconceptions": [
+        "Only checking departure times rather than arrival times.",
+        "Assuming the train that leaves last will also arrive last, without checking the actual arrival time."
+      ],
+      "hints": [
+        "Compare each train's arrival time to Mia's 9:35 am deadline.",
+        "Which train's arrival time is later than 9:35 am?"
+      ],
+      "tags": [
+        "timetable",
+        "reasoning"
+      ],
+      "passage": "A train timetable shows three trains. Train A departs at 8:15 am and arrives at 9:05 am. Train B departs at 8:50 am and arrives at 9:30 am. Train C departs at 9:00 am and arrives at 10:10 am."
+    },
+    {
+      "id": "T4M05_Y3_009",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "hard",
+      "questionText": "A holiday begins on Wednesday 14 January and lasts for 17 days, including the first day. What date and day of the week does the holiday end on?",
+      "questionType": "short_answer",
+      "answerKey": "Friday 30 January",
+      "stepByStepSolution": [
+        "Counting 17 days including the start day means adding 16 more days to 14 January.",
+        "14 + 16 = 30, so the last day is 30 January.",
+        "Counting forward from Wednesday by 16 days lands on a Friday."
+      ],
+      "commonMisconceptions": [
+        "Adding 17 days instead of 16, which shifts the answer by one day too many.",
+        "Losing track of the day-of-week pattern across more than two weeks."
+      ],
+      "hints": [
+        "Remember the first day already counts as day 1, so you only add on the remaining days.",
+        "Try counting forward in weeks first (14 days = 2 weeks lands back on Wednesday), then add the extra days."
+      ],
+      "tags": [
+        "calendar",
+        "elapsed_time",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M05_Y3_010",
+      "skillId": "M3M03_timetables_calendars",
+      "difficulty": "hard",
+      "questionText": "A school assembly runs from 9:20 am to 10:05 am, followed straight after by recess which lasts 20 minutes, then a Maths lesson that runs until 11:10 am. How long is the Maths lesson?",
+      "questionType": "short_answer",
+      "answerKey": "45 minutes",
+      "stepByStepSolution": [
+        "Work out when recess finishes: assembly ends at 10:05 am, and recess is 20 minutes, so recess ends at 10:25 am.",
+        "The Maths lesson starts right after recess, at 10:25 am, and finishes at 11:10 am.",
+        "The length of the Maths lesson is 11:10 am minus 10:25 am = 45 minutes."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to work out when recess ends before finding the start of the Maths lesson.",
+        "Calculating the elapsed time from the wrong starting point, such as the start of assembly."
+      ],
+      "hints": [
+        "First work out what time recess finishes.",
+        "Then find the elapsed time from the end of recess to 11:10 am."
+      ],
+      "tags": [
+        "time",
+        "elapsed_time",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_001",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "easy",
+      "questionText": "If you slide a shape to the left without turning or flipping it, what type of transformation is this? A) translation   B) reflection   C) rotation",
+      "questionType": "multiple_choice",
+      "answerKey": "translation",
+      "stepByStepSolution": [
+        "Sliding a shape in any direction, without turning or flipping it, is called a translation.",
+        "The shape stays exactly the same size and orientation - it just moves position.",
+        "So sliding left is an example of a translation, option A."
+      ],
+      "commonMisconceptions": [
+        "Confusing a slide (translation) with a flip (reflection).",
+        "Thinking any movement of a shape must be a rotation."
+      ],
+      "hints": [
+        "Think about the everyday meaning of sliding something across a table.",
+        "A slide keeps the shape facing the same way - what is that called?"
+      ],
+      "tags": [
+        "transformations",
+        "translation"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_002",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "easy",
+      "questionText": "What is another word used in maths for flipping a shape?",
+      "questionType": "short_answer",
+      "answerKey": "reflection",
+      "stepByStepSolution": [
+        "Flipping a shape creates a mirror image of it.",
+        "This mirror-image transformation has a special maths name.",
+        "The maths word for flipping is reflection."
+      ],
+      "commonMisconceptions": [
+        "Confusing reflection with rotation (turning).",
+        "Using the everyday word flip instead of the maths term."
+      ],
+      "hints": [
+        "Think about what you see when you look in a mirror.",
+        "The maths word starts with 're-' and relates to mirrors."
+      ],
+      "tags": [
+        "transformations",
+        "reflection"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_003",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "easy",
+      "questionText": "Which transformation would turn the letter 'b' into the letter 'd'? A) translation (slide)   B) reflection (flip)   C) neither, they are always different letters",
+      "questionType": "multiple_choice",
+      "answerKey": "reflection (flip)",
+      "stepByStepSolution": [
+        "Look carefully at the shape of the letters b and d.",
+        "If you flip the letter b sideways like a mirror image, it becomes d.",
+        "This flipping transformation is called a reflection, option B."
+      ],
+      "commonMisconceptions": [
+        "Thinking a slide (translation) could change the letter's shape or orientation.",
+        "Believing the letters are unrelated rather than mirror images of each other."
+      ],
+      "hints": [
+        "Try picturing 'b' in a mirror - what letter does it look like?",
+        "This kind of mirror-image change is called a reflection."
+      ],
+      "tags": [
+        "transformations",
+        "reflection"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_004",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "medium",
+      "questionText": "A triangle is translated (slid) 4 squares to the right and 2 squares up on a grid. Describe what happens to the size and shape of the triangle after this translation.",
+      "questionType": "short_answer",
+      "answerKey": "The size and shape stay exactly the same - only the position changes",
+      "stepByStepSolution": [
+        "A translation means sliding a shape without turning or flipping it.",
+        "During a translation, every point of the shape moves the same distance in the same direction.",
+        "This means the size, shape, and orientation of the triangle stay exactly the same - only its position on the grid changes."
+      ],
+      "commonMisconceptions": [
+        "Thinking a translation changes the size of the shape.",
+        "Believing the shape rotates or flips during a translation."
+      ],
+      "hints": [
+        "Think about what actually changes when you slide an object across a table.",
+        "Does sliding change how big or what shape something is?"
+      ],
+      "tags": [
+        "transformations",
+        "translation",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_005",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "medium",
+      "questionText": "Describe what a square looks like after it is reflected across a vertical line drawn through its middle. Has its size changed? Has its orientation changed?",
+      "questionType": "short_answer",
+      "answerKey": "It still looks like the same square; the size has not changed, and because a square is symmetrical, the orientation looks the same too",
+      "stepByStepSolution": [
+        "When you reflect a shape, you create its mirror image across a line.",
+        "A square is symmetrical, so its mirror image looks exactly the same as the original.",
+        "The size of the square does not change during a reflection - only its position may change."
+      ],
+      "commonMisconceptions": [
+        "Assuming a reflection always makes a shape look completely different.",
+        "Thinking reflecting a shape makes it bigger or smaller."
+      ],
+      "hints": [
+        "Think about the line of symmetry running down the middle of a square.",
+        "Does a square look different from its mirror image?"
+      ],
+      "tags": [
+        "transformations",
+        "reflection",
+        "symmetry"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_006",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "medium",
+      "questionText": "A shape is flipped to create its mirror image, then that image is flipped again across the same line. What is the result compared to the original shape? A) It looks the same as the original shape.   B) It is upside down compared to the original.   C) It has become a completely different shape.",
+      "questionType": "multiple_choice",
+      "answerKey": "It looks the same as the original shape.",
+      "stepByStepSolution": [
+        "Flipping a shape once creates its mirror image.",
+        "Flipping that mirror image again, across the same line, undoes the first flip.",
+        "So after two reflections across the same line, the shape looks the same as it did originally, option A."
+      ],
+      "commonMisconceptions": [
+        "Assuming that flipping twice always turns the shape upside down.",
+        "Not realising that two identical reflections cancel each other out."
+      ],
+      "hints": [
+        "Try this with your hand - flip it once, then flip it back the same way.",
+        "What happens when you undo a flip with the exact same flip again?"
+      ],
+      "tags": [
+        "transformations",
+        "reflection",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_007",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "medium",
+      "questionText": "On a grid, a point starts at position (2, 3). After a translation of 3 squares right and 1 square down, what is the new position of the point?",
+      "questionType": "short_answer",
+      "answerKey": "(5, 2)",
+      "stepByStepSolution": [
+        "Moving right increases the first number (x-coordinate): 2 + 3 = 5.",
+        "Moving down decreases the second number (y-coordinate): 3 - 1 = 2.",
+        "So the new position of the point is (5, 2)."
+      ],
+      "commonMisconceptions": [
+        "Adding both movements to the same coordinate instead of the correct one.",
+        "Confusing down with up and adding instead of subtracting."
+      ],
+      "hints": [
+        "Moving right or left changes the first number in the position.",
+        "Moving up or down changes the second number in the position."
+      ],
+      "tags": [
+        "transformations",
+        "translation",
+        "coordinates"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_008",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "hard",
+      "questionText": "A rectangle is translated 5 squares up, then reflected across a horizontal line. Explain, step by step, what happens to the rectangle's position and appearance after both transformations.",
+      "questionType": "short_answer",
+      "answerKey": "After the translation, the rectangle has moved 5 squares up but looks exactly the same; after the reflection, the rectangle becomes a mirror image (flipped) across the horizontal line, while staying the same size and shape",
+      "stepByStepSolution": [
+        "The translation moves the whole rectangle 5 squares up, without changing its size, shape, or orientation.",
+        "The reflection then flips this moved rectangle across a horizontal line, creating a mirror image that appears upside down compared to before.",
+        "Throughout both transformations, the size and shape of the rectangle never change - only its position and orientation."
+      ],
+      "commonMisconceptions": [
+        "Mixing up the order of transformations and describing the reflection happening first.",
+        "Believing the rectangle's size changes during either transformation."
+      ],
+      "hints": [
+        "Work through the transformations in order: first the translation, then the reflection.",
+        "Remember that neither a translation nor a reflection changes the size of a shape."
+      ],
+      "tags": [
+        "transformations",
+        "translation",
+        "reflection"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_009",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "hard",
+      "questionText": "A pattern is made by reflecting a right-angled triangle across one of its short sides. Describe the new combined shape that is formed.",
+      "questionType": "short_answer",
+      "answerKey": "The reflection creates a shape made of two right-angled triangles joined together, forming either a rectangle or a larger isosceles triangle, depending on which side is used for the reflection",
+      "stepByStepSolution": [
+        "Picture the right-angled triangle and the line it is reflected across (one of its short sides).",
+        "Reflecting across that side creates a mirror-image triangle joined to the original along that side.",
+        "Depending on the triangle's shape, the two triangles together can form a rectangle or a larger isosceles triangle."
+      ],
+      "commonMisconceptions": [
+        "Assuming the combined shape must always be the same regardless of which side is used.",
+        "Forgetting that the mirror-image triangle is exactly the same size as the original."
+      ],
+      "hints": [
+        "Try sketching a right-angled triangle and its mirror image joined along one short side.",
+        "Think about what two identical right-angled triangles can make when joined together."
+      ],
+      "tags": [
+        "transformations",
+        "reflection",
+        "shapes"
+      ]
+    },
+    {
+      "id": "T4M06_Y3_010",
+      "skillId": "M3SP01_02_transformations",
+      "difficulty": "hard",
+      "questionText": "A point starts at (6, 2) on a grid. It is translated 2 squares left and 4 squares up, and then reflected so that its x-coordinate becomes negative while its y-coordinate stays the same. What is the point's final position?",
+      "questionType": "short_answer",
+      "answerKey": "(-4, 6)",
+      "stepByStepSolution": [
+        "First apply the translation: (6 - 2, 2 + 4) = (4, 6).",
+        "The reflection changes the x-coordinate to its negative, while the y-coordinate stays the same.",
+        "So the final position after both transformations is (-4, 6)."
+      ],
+      "commonMisconceptions": [
+        "Applying the transformations in the wrong order and getting a different result.",
+        "Forgetting to change the sign of the x-coordinate during the reflection step."
+      ],
+      "hints": [
+        "Do the translation first, then apply the reflection to the new position.",
+        "Remember the reflection only changes the sign of the x-coordinate, not the y-coordinate."
+      ],
+      "tags": [
+        "transformations",
+        "translation",
+        "reflection"
+      ]
+    },
+    {
+      "id": "T4M07_Y3_001",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "easy",
+      "questionText": "In a full statistical investigation, which step comes first: posing a question, collecting data, or displaying data?",
+      "questionType": "short_answer",
+      "answerKey": "posing a question",
+      "stepByStepSolution": [
+        "A statistical investigation always begins with deciding what you want to find out.",
+        "This means writing a clear question to investigate.",
+        "So the first step is posing a question."
+      ],
+      "commonMisconceptions": [
+        "Thinking data collection comes before deciding on a question.",
+        "Believing displaying the data is the very first step."
+      ],
+      "hints": [
+        "Think about what you need to know before you can collect any data.",
+        "What do you need to decide before asking people anything?"
+      ],
+      "tags": [
+        "data_investigation",
+        "process"
+      ]
+    },
+    {
+      "id": "T4M07_Y3_002",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "easy",
+      "questionText": "Which activity was the most popular?",
+      "questionType": "short_answer",
+      "answerKey": "Handball",
+      "stepByStepSolution": [
+        "Look at the number of students for each activity.",
+        "Handball has 8 students, which is more than any other activity.",
+        "So handball was the most popular activity."
+      ],
+      "commonMisconceptions": [
+        "Picking the first activity listed rather than comparing all the numbers.",
+        "Confusing 'most popular' with the smallest number instead of the largest."
+      ],
+      "hints": [
+        "Compare all the numbers of students for each activity.",
+        "Which number is the biggest?"
+      ],
+      "tags": [
+        "data_investigation",
+        "interpreting_data"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_003",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "easy",
+      "questionText": "How many students chose Reading or Other combined? A) 5   B) 8   C) 3",
+      "questionType": "multiple_choice",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Find the number of students for Reading: 3.",
+        "Find the number of students for Other: 2.",
+        "Add them together: 3 + 2 = 5, option A."
+      ],
+      "commonMisconceptions": [
+        "Adding the wrong two categories together.",
+        "Forgetting to add both numbers and just using one of them."
+      ],
+      "hints": [
+        "Find the numbers for Reading and Other separately first.",
+        "Add those two numbers together."
+      ],
+      "tags": [
+        "data_investigation",
+        "interpreting_data"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_004",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "medium",
+      "questionText": "How many students were surveyed in total? Use this to check whether the data adds up correctly.",
+      "questionType": "short_answer",
+      "answerKey": "24 students",
+      "stepByStepSolution": [
+        "Add up all the categories: 8 + 5 + 6 + 3 + 2.",
+        "This gives a total of 24.",
+        "Since the survey says 24 students were asked, the data checks out correctly."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the categories when adding.",
+        "Not checking the total against the number stated in the survey."
+      ],
+      "hints": [
+        "Add up all five category totals.",
+        "Compare your total to the number of students mentioned in the survey."
+      ],
+      "tags": [
+        "data_investigation",
+        "addition",
+        "checking"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_005",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "medium",
+      "questionText": "If the class wanted to display this data, would a column graph or a line graph suit categories like Handball, Skipping, and Basketball? Explain your choice in one sentence.",
+      "questionType": "short_answer",
+      "answerKey": "A column graph, because the categories are not a time sequence, and a line graph is usually used to show change over time",
+      "stepByStepSolution": [
+        "Think about what each type of graph is best suited for.",
+        "A line graph is generally used to show change over time or continuous data.",
+        "Since the categories here are different activities, not a time sequence, a column graph is the better choice."
+      ],
+      "commonMisconceptions": [
+        "Choosing a line graph just because it looks more advanced.",
+        "Not recognising that categorical data suits a column graph better than a line graph."
+      ],
+      "hints": [
+        "Think about what a line graph usually shows - is it change over time?",
+        "Are 'Handball' and 'Skipping' points in time, or separate categories?"
+      ],
+      "tags": [
+        "data_investigation",
+        "graphs",
+        "reasoning"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_006",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "medium",
+      "questionText": "Write one investigation question that this data could help answer.",
+      "questionType": "short_answer",
+      "answerKey": "What is the most popular recess activity among Year 3 students?",
+      "stepByStepSolution": [
+        "Think about what the data is actually showing - favourite recess activities.",
+        "A good investigation question should be something the data can directly answer.",
+        "For example: 'What is the most popular recess activity among Year 3 students?'"
+      ],
+      "commonMisconceptions": [
+        "Writing a question unrelated to the data collected.",
+        "Writing a question that cannot be answered using this particular data."
+      ],
+      "hints": [
+        "Think about what the survey was actually asking students.",
+        "Try turning the survey topic into a question starting with 'What' or 'Which'."
+      ],
+      "tags": [
+        "data_investigation",
+        "question_posing"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_007",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "medium",
+      "questionText": "Which activity had exactly 6 students choose it? A) Skipping   B) Basketball   C) Reading",
+      "questionType": "multiple_choice",
+      "answerKey": "Basketball",
+      "stepByStepSolution": [
+        "Check each activity's number of students in the data.",
+        "Basketball has 6 students choosing it.",
+        "So the correct answer is Basketball, option B."
+      ],
+      "commonMisconceptions": [
+        "Confusing similar numbers, like mixing up 5 and 6.",
+        "Picking an activity at random without checking the data carefully."
+      ],
+      "hints": [
+        "Go through each activity and check its number.",
+        "Which one matches exactly 6 students?"
+      ],
+      "tags": [
+        "data_investigation",
+        "interpreting_data"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_008",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "hard",
+      "questionText": "The class wants to make their investigation more useful next term. Suggest one improvement they could make to how they collect this data, and explain why it would help.",
+      "questionType": "short_answer",
+      "answerKey": "Survey a larger or more varied group of students, such as the whole year level, so the results better represent everyone",
+      "stepByStepSolution": [
+        "Think about limitations of only surveying one class of 24 students.",
+        "A small sample might not represent the views of the whole year level.",
+        "Suggesting a larger or more varied sample would make the investigation more reliable."
+      ],
+      "commonMisconceptions": [
+        "Suggesting changes that do not actually improve the reliability of the data.",
+        "Not explaining why the suggested change would help."
+      ],
+      "hints": [
+        "Think about how many students were actually asked, and who else could be asked.",
+        "Would asking more people, or a wider range of people, give a fuller picture?"
+      ],
+      "tags": [
+        "data_investigation",
+        "reasoning",
+        "reflection"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_009",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "hard",
+      "questionText": "A new student joins the class and prefers a recess activity not listed in the survey - trampolining. Explain how this would affect the total and the categories in the data display.",
+      "questionType": "short_answer",
+      "answerKey": "The total would increase to 25, and either a new category (Trampolining) would need to be added or the response would be counted under 'Other'",
+      "stepByStepSolution": [
+        "Adding a new student's response means the overall total changes from 24 to 25.",
+        "Since trampolining is not already a category, either a new category must be created for it, or it could be counted under 'Other'.",
+        "This shows how a data display sometimes needs updating as new information comes in."
+      ],
+      "commonMisconceptions": [
+        "Ignoring the new response entirely and keeping the total the same.",
+        "Forcing the new activity into an existing unrelated category without explanation."
+      ],
+      "hints": [
+        "Think about what happens to the total number of students surveyed.",
+        "Does trampolining fit into any of the existing categories, or does it need its own?"
+      ],
+      "tags": [
+        "data_investigation",
+        "reasoning",
+        "categories"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M07_Y3_010",
+      "skillId": "M3ST01_03_data_investigation",
+      "difficulty": "hard",
+      "questionText": "Describe, in order, the four main steps of a full statistical investigation (pose, collect, display, interpret), using the recess activity survey as your example for each step.",
+      "questionType": "short_answer",
+      "answerKey": "1) Pose a question, e.g. 'What is the most popular recess activity?'; 2) Collect data, e.g. survey 24 students; 3) Display the data, e.g. make a column graph; 4) Interpret the results, e.g. conclude handball was most popular",
+      "stepByStepSolution": [
+        "List the four steps in order: pose a question, collect data, display data, and interpret the results.",
+        "Match each step to what actually happened in the recess survey example.",
+        "For instance: posing 'What is the most popular activity?', collecting responses from 24 students, displaying them in a column graph, then interpreting that handball was most popular."
+      ],
+      "commonMisconceptions": [
+        "Mixing up the order of the steps, such as displaying before collecting.",
+        "Only naming the steps without connecting them to the actual survey example."
+      ],
+      "hints": [
+        "Think about what must happen before you can display any data.",
+        "Try matching each step to something that happened in the recess activity survey."
+      ],
+      "tags": [
+        "data_investigation",
+        "process",
+        "reasoning"
+      ],
+      "passage": "Year 3 students carried out a survey asking classmates: 'What is your favourite recess activity?' Here are the results from 24 students: Handball - 8 students, Skipping - 5 students, Basketball - 6 students, Reading - 3 students, Other - 2 students."
+    },
+    {
+      "id": "T4M08_Y3_001",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "easy",
+      "questionText": "If you flip a fair coin, what is the theoretical chance of it landing on heads? A) 1 out of 2   B) 1 out of 3   C) 2 out of 2",
+      "questionType": "multiple_choice",
+      "answerKey": "1 out of 2",
+      "stepByStepSolution": [
+        "A coin has two equally likely outcomes: heads or tails.",
+        "Since there are 2 possible outcomes and only 1 is heads, the chance is 1 out of 2.",
+        "So the correct answer is option A."
+      ],
+      "commonMisconceptions": [
+        "Thinking heads is more or less likely than tails without reason.",
+        "Confusing chance with the actual number of flips done."
+      ],
+      "hints": [
+        "Think about how many sides a coin has, and how many show heads.",
+        "There are 2 equally likely outcomes - what fraction is 1 of those 2?"
+      ],
+      "tags": [
+        "probability",
+        "chance"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_002",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "easy",
+      "questionText": "A spinner is divided into 4 equal sections coloured red, blue, green, and yellow. What is the theoretical chance of landing on blue?",
+      "questionType": "short_answer",
+      "answerKey": "1 out of 4",
+      "stepByStepSolution": [
+        "The spinner has 4 equal sections in total.",
+        "Only 1 of those sections is blue.",
+        "So the theoretical chance of landing on blue is 1 out of 4."
+      ],
+      "commonMisconceptions": [
+        "Assuming each colour has a different chance without checking the equal sections.",
+        "Confusing the number of colours with the number of equally sized sections."
+      ],
+      "hints": [
+        "Count how many equal sections the spinner is divided into.",
+        "How many of those sections are blue?"
+      ],
+      "tags": [
+        "probability",
+        "chance"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_003",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "easy",
+      "questionText": "A bag contains 3 red counters and 3 blue counters. Which statement is true about pulling out a counter without looking? A) Red and blue are equally likely.   B) Red is more likely than blue.   C) Blue is impossible.",
+      "questionType": "multiple_choice",
+      "answerKey": "Red and blue are equally likely.",
+      "stepByStepSolution": [
+        "Count the counters of each colour: 3 red and 3 blue.",
+        "Since there is an equal number of each colour, they are equally likely to be pulled out.",
+        "So the correct answer is option A."
+      ],
+      "commonMisconceptions": [
+        "Assuming one colour must be more likely just because it is listed first.",
+        "Believing 'equally likely' is not possible in a probability question."
+      ],
+      "hints": [
+        "Compare the number of red counters to the number of blue counters.",
+        "Are these numbers the same or different?"
+      ],
+      "tags": [
+        "probability",
+        "chance"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_004",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "medium",
+      "questionText": "Based on theoretical probability, how many times would you expect each number to come up out of 20 dice rolls if the results matched perfectly?",
+      "questionType": "short_answer",
+      "answerKey": "about 3 to 4 times",
+      "stepByStepSolution": [
+        "A fair dice has 6 equally likely outcomes, so each number has a 1 out of 6 chance.",
+        "Divide the total rolls by 6: 20 divided by 6 is about 3.3.",
+        "This means we would expect each number to appear about 3 to 4 times if the results matched theoretical probability exactly."
+      ],
+      "commonMisconceptions": [
+        "Expecting exactly the same number of rolls for every outcome with no variation allowed.",
+        "Forgetting that theoretical probability gives an expected average, not a guaranteed exact result."
+      ],
+      "hints": [
+        "Think about how many equally likely outcomes a dice has.",
+        "Divide the total number of rolls (20) by the number of possible outcomes (6)."
+      ],
+      "tags": [
+        "probability",
+        "dice",
+        "theoretical"
+      ],
+      "passage": "Priya rolled a fair 6-sided dice 20 times and recorded these results: rolled a 1 - 2 times, a 2 - 4 times, a 3 - 5 times, a 4 - 2 times, a 5 - 3 times, a 6 - 4 times."
+    },
+    {
+      "id": "T4M08_Y3_005",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "medium",
+      "questionText": "Compare Priya's experimental results to what you would expect theoretically. Which number came up more often than expected, and which numbers came up less often than expected?",
+      "questionType": "short_answer",
+      "answerKey": "3 came up more often than expected (5 times); 1 and 4 came up less often than expected (2 times each)",
+      "stepByStepSolution": [
+        "The expected number of rolls for each outcome is about 3 to 4 times.",
+        "Compare each actual result: 3 appeared 5 times (more than expected), while 1 and 4 each appeared only 2 times (less than expected).",
+        "This shows that experimental results do not always match theoretical expectations exactly."
+      ],
+      "commonMisconceptions": [
+        "Assuming every result must exactly match the theoretical expectation.",
+        "Only comparing one number instead of checking all six."
+      ],
+      "hints": [
+        "Compare each actual count to the expected value of about 3 to 4.",
+        "Which numbers are higher than expected, and which are lower?"
+      ],
+      "tags": [
+        "probability",
+        "dice",
+        "comparing"
+      ],
+      "passage": "Priya rolled a fair 6-sided dice 20 times and recorded these results: rolled a 1 - 2 times, a 2 - 4 times, a 3 - 5 times, a 4 - 2 times, a 5 - 3 times, a 6 - 4 times."
+    },
+    {
+      "id": "T4M08_Y3_006",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "medium",
+      "questionText": "What is the experimental probability of rolling a 3, based on Priya's results? Write it as a fraction out of the total rolls.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5/20",
+        "1/4"
+      ],
+      "stepByStepSolution": [
+        "Find how many times a 3 was rolled: 5 times.",
+        "Find the total number of rolls: 20.",
+        "Write this as a fraction: 5 out of 20, which simplifies to 1/4."
+      ],
+      "commonMisconceptions": [
+        "Using the theoretical probability (1/6) instead of calculating from the actual results.",
+        "Forgetting to simplify or correctly write the fraction."
+      ],
+      "hints": [
+        "Look at how many times a 3 actually came up in the results.",
+        "Write that as a fraction out of the total number of rolls (20)."
+      ],
+      "tags": [
+        "probability",
+        "dice",
+        "experimental"
+      ],
+      "passage": "Priya rolled a fair 6-sided dice 20 times and recorded these results: rolled a 1 - 2 times, a 2 - 4 times, a 3 - 5 times, a 4 - 2 times, a 5 - 3 times, a 6 - 4 times."
+    },
+    {
+      "id": "T4M08_Y3_007",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "medium",
+      "questionText": "If you flip a coin 3 times and get heads all 3 times, what is the chance of getting heads on the 4th flip? A) 1 out of 2, the same as always   B) Very likely, since it's already happened 3 times   C) Impossible, since it's tails' turn",
+      "questionType": "multiple_choice",
+      "answerKey": "1 out of 2, the same as always",
+      "stepByStepSolution": [
+        "Each coin flip is independent - earlier flips do not affect later ones.",
+        "No matter what happened before, the coin still has 2 equally likely outcomes each time.",
+        "So the chance of heads on the 4th flip remains 1 out of 2, option A."
+      ],
+      "commonMisconceptions": [
+        "Believing that previous results influence future independent events.",
+        "Assuming tails is somehow 'due' to happen next."
+      ],
+      "hints": [
+        "Think about whether earlier coin flips can affect a brand new flip.",
+        "Does the coin remember what happened before?"
+      ],
+      "tags": [
+        "probability",
+        "reasoning",
+        "independent_events"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_008",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "hard",
+      "questionText": "A student predicts that a spinner with 4 equal sections (red, blue, green, yellow) will land on each colour exactly 5 times out of 20 spins. After actually spinning it 20 times, the results were: red 7, blue 3, green 6, yellow 4. Explain why the experimental results do not exactly match the prediction, even though the spinner is fair.",
+      "questionType": "short_answer",
+      "answerKey": "Chance events do not always match the theoretical prediction exactly, especially with a small number of trials; results tend to get closer to the expected probability with more spins",
+      "stepByStepSolution": [
+        "The prediction of 5 out of 20 for each colour is the theoretical (expected) result, based on equal chances.",
+        "Actual results can vary from this because chance events involve randomness, especially over a relatively small number of trials.",
+        "With more spins, such as 200 instead of 20, the experimental results would likely get closer to matching the theoretical prediction."
+      ],
+      "commonMisconceptions": [
+        "Assuming a fair spinner must always give exactly equal results in any number of trials.",
+        "Believing the spinner is somehow broken or unfair just because the results varied."
+      ],
+      "hints": [
+        "Think about whether chance events always turn out exactly as predicted, even when they are fair.",
+        "What might happen to the results if the spinner was spun many more times, like 200 times?"
+      ],
+      "tags": [
+        "probability",
+        "reasoning",
+        "experimental"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_009",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "hard",
+      "questionText": "Design a fair experiment to test whether a 6-sided dice is 'loaded' (unfair) towards rolling a 6. Describe how many times you would roll it and what result would make you suspicious that it is not fair.",
+      "questionType": "short_answer",
+      "answerKey": "Roll the dice many times, e.g. 60 times, and check whether 6 comes up close to 10 times (60 divided by 6); if 6 comes up much more often than expected, that would suggest the dice is not fair",
+      "stepByStepSolution": [
+        "To test fairness, the dice should be rolled many times - a small number of rolls is not reliable enough.",
+        "Work out the expected number of 6s for a fair dice, for example 60 divided by 6 = 10 times out of 60 rolls.",
+        "If the actual number of 6s is much higher than 10, such as 25, this would suggest the dice may not be fair."
+      ],
+      "commonMisconceptions": [
+        "Suggesting too few rolls to draw a reliable conclusion.",
+        "Not comparing the actual results to a calculated expected value."
+      ],
+      "hints": [
+        "Think about how many rolls would give you a reliable, fair test - is a small number like 6 rolls enough?",
+        "Work out what number of 6s you'd expect for a fair dice over your chosen number of rolls."
+      ],
+      "tags": [
+        "probability",
+        "investigation",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M08_Y3_010",
+      "skillId": "M3P01_02_probability_investigation",
+      "difficulty": "hard",
+      "questionText": "A bag has 10 counters: some red and some blue, but you do not know how many of each. After pulling out and replacing a counter 40 times, you get red 30 times and blue 10 times. Estimate how many red and blue counters are likely in the bag out of 10, and explain your reasoning.",
+      "questionType": "short_answer",
+      "answerKey": "About 7 or 8 red counters and 2 or 3 blue counters, since red came up roughly three-quarters of the time in the experiment",
+      "stepByStepSolution": [
+        "Look at the experimental results: red was pulled 30 times out of 40, and blue 10 times out of 40.",
+        "This means red came up about three-quarters (30/40) of the time, and blue about one-quarter (10/40).",
+        "Applying this ratio to the 10 counters in the bag suggests around 7 or 8 are red, and 2 or 3 are blue."
+      ],
+      "commonMisconceptions": [
+        "Assuming the bag must have exactly 30 red and 10 blue counters, ignoring that there are only 10 counters total.",
+        "Not connecting the experimental proportion to the actual number of counters in the bag."
+      ],
+      "hints": [
+        "Think about what fraction of the 40 pulls were red, and what fraction were blue.",
+        "Apply that same fraction to the 10 counters actually in the bag."
+      ],
+      "tags": [
+        "probability",
+        "estimation",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_001",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "easy",
+      "questionText": "Find the missing number: 4 x [blank] = 24.",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Think of the 4 times table.",
+        "4 x 6 = 24.",
+        "So the missing number is 6."
+      ],
+      "commonMisconceptions": [
+        "Dividing incorrectly, e.g. thinking 24 divided by 4 = 8.",
+        "Guessing without checking against the 4 times table."
+      ],
+      "hints": [
+        "Think about which times table includes 24.",
+        "4 times what equals 24? Try counting up in 4s."
+      ],
+      "tags": [
+        "fact_families",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_002",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "easy",
+      "questionText": "Continue the pattern: 5, 10, 15, 20, ___, ___.",
+      "questionType": "short_answer",
+      "answerKey": "25, 30",
+      "stepByStepSolution": [
+        "Look at how much the pattern increases each time.",
+        "Each number increases by 5.",
+        "Adding 5 to 20 gives 25, and adding 5 again gives 30."
+      ],
+      "commonMisconceptions": [
+        "Adding a different amount each time instead of a consistent number.",
+        "Losing track and skipping a step in the pattern."
+      ],
+      "hints": [
+        "Look at the difference between each number in the pattern.",
+        "What do you add each time to get the next number?"
+      ],
+      "tags": [
+        "patterns",
+        "skip_counting"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_003",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "easy",
+      "questionText": "If 7 x 8 = 56, what is 56 divided by 8? A) 7   B) 8   C) 6",
+      "questionType": "multiple_choice",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Multiplication and division facts are related in a fact family.",
+        "Since 7 x 8 = 56, this means 56 divided by 8 = 7.",
+        "So the correct answer is option A."
+      ],
+      "commonMisconceptions": [
+        "Repeating the given number (8) instead of finding the related fact.",
+        "Not recognising the connection between multiplication and division facts."
+      ],
+      "hints": [
+        "Think about the fact family for 7, 8, and 56.",
+        "If 7 groups of 8 make 56, how many 8s are in 56?"
+      ],
+      "tags": [
+        "fact_families",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_004",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "medium",
+      "questionText": "Find the unknown value: [blank] divided by 6 = 9.",
+      "questionType": "short_answer",
+      "answerKey": "54",
+      "stepByStepSolution": [
+        "Think about the related multiplication fact: the unknown value = 6 x 9.",
+        "6 x 9 = 54.",
+        "So the missing number is 54."
+      ],
+      "commonMisconceptions": [
+        "Dividing 9 by 6 instead of using the inverse multiplication fact.",
+        "Confusing which number goes where in the fact family."
+      ],
+      "hints": [
+        "Think about the multiplication fact that matches this division.",
+        "What is 6 x 9?"
+      ],
+      "tags": [
+        "fact_families",
+        "division",
+        "unknown_value"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_005",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "medium",
+      "questionText": "Describe the rule for this pattern, then find the next two numbers: 3, 6, 12, 24, ___, ___.",
+      "questionType": "short_answer",
+      "answerKey": "Rule: multiply by 2 each time; next numbers are 48, 96",
+      "stepByStepSolution": [
+        "Compare each number to the one before it: 6 is double 3, 12 is double 6, 24 is double 12.",
+        "The rule for this pattern is to multiply each number by 2 to get the next one.",
+        "Following the rule: 24 x 2 = 48, and 48 x 2 = 96."
+      ],
+      "commonMisconceptions": [
+        "Assuming the pattern is addition-based rather than multiplication-based.",
+        "Multiplying by the wrong number, such as 3 instead of 2."
+      ],
+      "hints": [
+        "Look at how each number relates to the one before it - is it addition or multiplication?",
+        "Try dividing 24 by 12, then 12 by 6 - what do you notice?"
+      ],
+      "tags": [
+        "patterns",
+        "multiplication",
+        "rule"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_006",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "medium",
+      "questionText": "Using the fact family for 8, 9, and 72, write all four number sentences (two multiplication, two division).",
+      "questionType": "short_answer",
+      "answerKey": "8 x 9 = 72, 9 x 8 = 72, 72 divided by 8 = 9, 72 divided by 9 = 8",
+      "stepByStepSolution": [
+        "A fact family uses the same three numbers in related multiplication and division sentences.",
+        "Write the two multiplication facts: 8 x 9 = 72 and 9 x 8 = 72.",
+        "Write the two division facts: 72 divided by 8 = 9 and 72 divided by 9 = 8."
+      ],
+      "commonMisconceptions": [
+        "Only writing one or two of the four possible number sentences.",
+        "Mixing up which number should be the answer in the division sentences."
+      ],
+      "hints": [
+        "Remember a fact family always has 2 multiplication and 2 division sentences.",
+        "Start with 8 x 9 = 72, then think about how to rearrange it."
+      ],
+      "tags": [
+        "fact_families",
+        "multiplication",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_007",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "medium",
+      "questionText": "What is the unknown value in this equation? 9 x [blank] = 63. A) 6   B) 7   C) 8",
+      "questionType": "multiple_choice",
+      "answerKey": "7",
+      "stepByStepSolution": [
+        "Think about the 9 times table.",
+        "9 x 7 = 63.",
+        "So the correct answer is option B."
+      ],
+      "commonMisconceptions": [
+        "Choosing a nearby but incorrect multiple, like 9 x 6 = 54.",
+        "Confusing 9 x 7 with 9 x 8."
+      ],
+      "hints": [
+        "Think about counting up in the 9 times table.",
+        "Which multiple of 9 equals 63?"
+      ],
+      "tags": [
+        "fact_families",
+        "multiplication",
+        "unknown_value"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_008",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "hard",
+      "questionText": "A pattern follows the rule 'multiply by 3, then subtract 2' to get the next number. Starting at 4, find the next three numbers in the pattern.",
+      "questionType": "short_answer",
+      "answerKey": "10, 28, 82",
+      "stepByStepSolution": [
+        "Apply the rule to the starting number: 4 x 3 = 12, then 12 - 2 = 10.",
+        "Apply the rule again to 10: 10 x 3 = 30, then 30 - 2 = 28.",
+        "Apply the rule once more to 28: 28 x 3 = 84, then 84 - 2 = 82."
+      ],
+      "commonMisconceptions": [
+        "Only applying part of the rule, such as multiplying but forgetting to subtract.",
+        "Applying the rule to the wrong previous number in the sequence."
+      ],
+      "hints": [
+        "Remember the rule has two parts - multiply first, then subtract.",
+        "Apply the whole rule to 4 first, then use that new number for the next step."
+      ],
+      "tags": [
+        "patterns",
+        "two_step_rule",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_009",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "hard",
+      "questionText": "In a fact family with an unknown number, [blank] x 7 = 84. Use this fact to also find 84 divided by that unknown value, and 84 divided by 7.",
+      "questionType": "short_answer",
+      "answerKey": "the unknown value is 12; 84 divided by 12 = 7; 84 divided by 7 = 12",
+      "stepByStepSolution": [
+        "First solve for the unknown: the unknown value x 7 = 84, so the unknown value = 84 divided by 7 = 12.",
+        "Using this fact family, 84 divided by 12 must equal 7, since 12 x 7 = 84.",
+        "Also, 84 divided by 7 = 12, completing the fact family."
+      ],
+      "commonMisconceptions": [
+        "Solving only the first equation and not connecting it to the related division facts.",
+        "Mixing up which number is being divided by which in the fact family."
+      ],
+      "hints": [
+        "First work out what number multiplied by 7 gives 84.",
+        "Once you know that number, think about how the fact family connects all three numbers."
+      ],
+      "tags": [
+        "fact_families",
+        "unknown_value",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M09_Y3_010",
+      "skillId": "M3A01_02_03_pattern_reasoning",
+      "difficulty": "hard",
+      "questionText": "A garden path is made from tiles following this pattern: row 1 has 1 tile, row 2 has 4 tiles, row 3 has 9 tiles, row 4 has 16 tiles. If this pattern continues, how many tiles would be needed for row 6? Explain the rule you used.",
+      "questionType": "short_answer",
+      "answerKey": "36 tiles; the rule is that each row's number of tiles equals the row number multiplied by itself",
+      "stepByStepSolution": [
+        "Look at how each row's number of tiles relates to its row number: 1x1=1, 2x2=4, 3x3=9, 4x4=16.",
+        "The rule is that the number of tiles equals the row number multiplied by itself.",
+        "For row 6: 6 x 6 = 36 tiles."
+      ],
+      "commonMisconceptions": [
+        "Assuming the pattern increases by a fixed amount, like adding 3 each time, instead of recognising the squaring rule.",
+        "Applying the wrong row number when calculating, such as using 5 instead of 6."
+      ],
+      "hints": [
+        "Compare each row number to its number of tiles - is there a multiplication relationship?",
+        "Try multiplying the row number by itself for row 3: does that match 9?"
+      ],
+      "tags": [
+        "patterns",
+        "reasoning",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_001",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "easy",
+      "questionText": "A shop has 24 apples. They sell 9 in the morning and receive a new delivery of 15 in the afternoon. How many apples does the shop have now?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "Start with 24 apples and subtract the ones sold: 24 - 9 = 15.",
+        "Add the new delivery: 15 + 15 = 30.",
+        "So the shop now has 30 apples."
+      ],
+      "commonMisconceptions": [
+        "Adding the delivery before subtracting the apples sold, mixing up the order of steps.",
+        "Forgetting one of the two steps entirely."
+      ],
+      "hints": [
+        "Work out how many apples are left after selling some, first.",
+        "Then add on the new delivery."
+      ],
+      "tags": [
+        "word_problem",
+        "addition",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_002",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "easy",
+      "questionText": "There are 6 packs of pencils with 8 pencils in each pack. How many pencils are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "48",
+      "stepByStepSolution": [
+        "Multiply the number of packs by the number of pencils in each pack.",
+        "6 x 8 = 48.",
+        "So there are 48 pencils in total."
+      ],
+      "commonMisconceptions": [
+        "Adding 6 and 8 instead of multiplying.",
+        "Miscounting the times table fact for 6 x 8."
+      ],
+      "hints": [
+        "Think about repeated groups - 6 packs of 8.",
+        "What is 6 x 8?"
+      ],
+      "tags": [
+        "word_problem",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_003",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "easy",
+      "questionText": "A class of 27 students is split into equal groups of 3 for an activity. How many groups are there? A) 9   B) 8   C) 24",
+      "questionType": "multiple_choice",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "Divide the total number of students by the group size.",
+        "27 divided by 3 = 9.",
+        "So there are 9 groups, option A."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of dividing.",
+        "Miscounting the division fact for 27 divided by 3."
+      ],
+      "hints": [
+        "Think about how many groups of 3 fit into 27.",
+        "27 divided by 3 = ?"
+      ],
+      "tags": [
+        "word_problem",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_004",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "medium",
+      "questionText": "A school ordered 5 boxes of 24 juice boxes each for a sports day. If 87 juice boxes were given out, how many are left?",
+      "questionType": "short_answer",
+      "answerKey": "33",
+      "stepByStepSolution": [
+        "Work out the total number of juice boxes ordered: 5 x 24 = 120.",
+        "Subtract the number given out: 120 - 87.",
+        "There are 33 juice boxes left."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply first to find the total before subtracting.",
+        "Making a subtraction error when regrouping."
+      ],
+      "hints": [
+        "First find the total number of juice boxes ordered.",
+        "Then subtract the number that has already been given out."
+      ],
+      "tags": [
+        "word_problem",
+        "multiplication",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_005",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "medium",
+      "questionText": "A garden has 4 rows of tomato plants with 12 plants in each row. Each plant produces 6 tomatoes. How many tomatoes are produced in total?",
+      "questionType": "short_answer",
+      "answerKey": "288",
+      "stepByStepSolution": [
+        "Work out the total number of plants: 4 x 12 = 48.",
+        "Multiply the number of plants by the number of tomatoes each one produces: 48 x 6.",
+        "This gives a total of 288 tomatoes."
+      ],
+      "commonMisconceptions": [
+        "Only multiplying two of the three numbers and stopping too early.",
+        "Adding some of the numbers instead of multiplying them."
+      ],
+      "hints": [
+        "First work out the total number of plants in the garden.",
+        "Then multiply that total by how many tomatoes each plant produces."
+      ],
+      "tags": [
+        "word_problem",
+        "multiplication",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_006",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "medium",
+      "questionText": "A library has 156 fiction books and 3 times as many non-fiction books. How many books does the library have altogether?",
+      "questionType": "short_answer",
+      "answerKey": "624",
+      "stepByStepSolution": [
+        "Work out the number of non-fiction books: 156 x 3 = 468.",
+        "Add the fiction and non-fiction books together: 156 + 468.",
+        "This gives a total of 624 books altogether."
+      ],
+      "commonMisconceptions": [
+        "Adding 156 and 3 instead of multiplying to find the non-fiction total.",
+        "Forgetting to add both totals together at the end."
+      ],
+      "hints": [
+        "First work out how many non-fiction books there are by multiplying.",
+        "Then add the fiction and non-fiction totals together."
+      ],
+      "tags": [
+        "word_problem",
+        "multiplication",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_007",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "medium",
+      "questionText": "A cafe sells 60 coffees in the morning and half that number in the afternoon. How many coffees were sold altogether that day? A) 90   B) 30   C) 120",
+      "questionType": "multiple_choice",
+      "answerKey": "90",
+      "stepByStepSolution": [
+        "Find half of 60: 60 divided by 2 = 30.",
+        "Add the morning and afternoon totals: 60 + 30.",
+        "This gives 90 coffees altogether, option A."
+      ],
+      "commonMisconceptions": [
+        "Only giving the afternoon total (30) as the final answer, forgetting to add the morning sales.",
+        "Doubling instead of halving to find the afternoon amount."
+      ],
+      "hints": [
+        "First work out half of 60 for the afternoon sales.",
+        "Then add the morning and afternoon amounts together."
+      ],
+      "tags": [
+        "word_problem",
+        "division",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_008",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "hard",
+      "questionText": "A school fete sold 240 raffle tickets on Friday and 176 more than that on Saturday. On Sunday, they sold half as many tickets as Saturday. How many raffle tickets were sold in total over the three days?",
+      "questionType": "short_answer",
+      "answerKey": "864",
+      "stepByStepSolution": [
+        "Work out Saturday's sales: 240 + 176 = 416.",
+        "Work out Sunday's sales: 416 divided by 2 = 208.",
+        "Add all three days together: 240 + 416 + 208 = 864 raffle tickets."
+      ],
+      "commonMisconceptions": [
+        "Calculating Sunday's sales based on Friday's total instead of Saturday's.",
+        "Forgetting to add all three days together at the end."
+      ],
+      "hints": [
+        "Work out each day's sales one at a time, in order.",
+        "Remember Sunday's sales are based on Saturday's total, not Friday's."
+      ],
+      "tags": [
+        "word_problem",
+        "multi_step",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_009",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "hard",
+      "questionText": "A charity is packing hampers. Each hamper needs 3 tins, 2 packets of pasta, and 1 jar of sauce. If the charity has 96 tins, 58 packets of pasta, and 30 jars of sauce, what is the greatest number of complete hampers they can pack, and which item runs out first?",
+      "questionType": "short_answer",
+      "answerKey": "29 hampers; the pasta runs out first",
+      "stepByStepSolution": [
+        "Work out how many hampers each item could supply: tins give 96 divided by 3 = 32, pasta gives 58 divided by 2 = 29, sauce gives 30 divided by 1 = 30.",
+        "Compare the three results - the smallest number limits how many complete hampers can be made.",
+        "Since pasta only allows for 29 hampers, that is the limiting item, so 29 complete hampers can be packed and pasta runs out first."
+      ],
+      "commonMisconceptions": [
+        "Picking the largest number of possible hampers instead of the smallest (limiting) one.",
+        "Forgetting to divide each resource by its amount needed per hamper before comparing."
+      ],
+      "hints": [
+        "Work out separately how many hampers each ingredient could make on its own.",
+        "Which ingredient allows for the fewest hampers? That's your limit."
+      ],
+      "tags": [
+        "word_problem",
+        "division",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M10_Y3_010",
+      "skillId": "M3N04_06_consolidation_word_problems",
+      "difficulty": "hard",
+      "questionText": "A theatre has 18 rows of seats with 24 seats in each row. If 3/4 of the seats were filled for a show, how many seats were filled?",
+      "questionType": "short_answer",
+      "answerKey": "324",
+      "stepByStepSolution": [
+        "Work out the total number of seats: 18 x 24 = 432.",
+        "Find 1/4 of this total by dividing by 4: 432 divided by 4 = 108.",
+        "Multiply by 3 to find 3/4: 108 x 3 = 324 seats were filled."
+      ],
+      "commonMisconceptions": [
+        "Finding 1/4 of the total and stopping there instead of multiplying by 3.",
+        "Making an error multiplying 18 x 24 for the total number of seats."
+      ],
+      "hints": [
+        "First work out the total number of seats in the theatre.",
+        "Then find one quarter of that total, before multiplying by 3 to get three quarters."
+      ],
+      "tags": [
+        "word_problem",
+        "fractions",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_001",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the length of a pencil - millimetres, metres, or kilometres?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "millimetres",
+        "centimetres",
+        "millimetres or centimetres"
+      ],
+      "stepByStepSolution": [
+        "Think about the actual size of a pencil - it is quite small.",
+        "Metres and kilometres are used for much longer distances.",
+        "Millimetres or centimetres are the best units for measuring something as small as a pencil."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilometres, which is far too large a unit for a small object.",
+        "Confusing millimetres and metres because the names sound similar."
+      ],
+      "hints": [
+        "Think about how long a pencil actually is compared to a metre.",
+        "Would millimetres, centimetres, or kilometres make more sense for something this small?"
+      ],
+      "tags": [
+        "measurement",
+        "length",
+        "units"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_002",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the mass of an apple - grams or kilograms?",
+      "questionType": "short_answer",
+      "answerKey": "grams",
+      "stepByStepSolution": [
+        "Think about how heavy an apple actually is.",
+        "A kilogram is quite a large amount of mass for a single apple.",
+        "Grams are the better unit for something as light as an apple."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilograms because it sounds like the main unit for mass.",
+        "Confusing mass units with capacity units like litres."
+      ],
+      "hints": [
+        "Think about how heavy an apple feels in your hand.",
+        "Would grams or kilograms better describe that weight?"
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "units"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_003",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "easy",
+      "questionText": "Which unit would best measure the capacity of a bathtub? A) millilitres   B) litres   C) grams",
+      "questionType": "multiple_choice",
+      "answerKey": "litres",
+      "stepByStepSolution": [
+        "Think about how much water a bathtub can hold - it is a large amount.",
+        "Millilitres are used for very small amounts, and grams measure mass, not capacity.",
+        "Litres are the best unit for measuring a bathtub's capacity, option B."
+      ],
+      "commonMisconceptions": [
+        "Confusing capacity units (litres) with mass units (grams).",
+        "Choosing millilitres, which would give an impractically large number for a bathtub."
+      ],
+      "hints": [
+        "Think about whether a bathtub holds a small or large amount of liquid.",
+        "Grams measure weight, not liquid capacity - can you rule that option out?"
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "units"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_004",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "medium",
+      "questionText": "A recipe needs 250 mL of milk and 500 mL of water. If you are making a triple batch of this recipe, how much liquid (milk and water combined) will you need in total?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "2,250 mL",
+        "2.25 L"
+      ],
+      "stepByStepSolution": [
+        "Work out the total liquid for one batch: 250 + 500 = 750 mL.",
+        "Multiply by 3 for a triple batch: 750 x 3 = 2,250 mL.",
+        "So you would need 2,250 mL (or 2.25 L) of liquid in total."
+      ],
+      "commonMisconceptions": [
+        "Only tripling one of the two liquids instead of both.",
+        "Forgetting to check units when the answer becomes more than 1,000 mL."
+      ],
+      "hints": [
+        "First work out the total liquid needed for a single batch of the recipe.",
+        "Then multiply that total by 3 for the triple batch."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_005",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "medium",
+      "questionText": "A student is investigating how far different paper aeroplanes fly. She measures three flights: 2 m 40 cm, 1 m 85 cm, and 3 m 10 cm. What is the total distance flown across all three flights, in metres and centimetres?",
+      "questionType": "short_answer",
+      "answerKey": "7 m 35 cm",
+      "stepByStepSolution": [
+        "Add the metres together: 2 + 1 + 3 = 6 m.",
+        "Add the centimetres together: 40 + 85 + 10 = 135 cm.",
+        "Since 135 cm is more than 1 m, regroup it as 1 m 35 cm, giving a total of 6 m + 1 m 35 cm = 7 m 35 cm."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to regroup the centimetres when they add up to more than 100.",
+        "Adding metres and centimetres together as if they were the same unit."
+      ],
+      "hints": [
+        "Add the metres and centimetres separately first.",
+        "Check if your centimetre total is more than 100 - if so, you will need to regroup it into metres."
+      ],
+      "tags": [
+        "measurement",
+        "length",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_006",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "medium",
+      "questionText": "A jug holds 1 L 250 mL of water. If 480 mL is poured out, how much water is left in the jug?",
+      "questionType": "short_answer",
+      "answerKey": "770 mL",
+      "stepByStepSolution": [
+        "Convert the jug's amount to millilitres: 1 L 250 mL = 1,250 mL.",
+        "Subtract the amount poured out: 1,250 - 480.",
+        "This leaves 770 mL of water in the jug."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert the litres to millilitres before subtracting.",
+        "Making a regrouping error when subtracting the hundreds."
+      ],
+      "hints": [
+        "First convert 1 L 250 mL entirely into millilitres.",
+        "Then subtract 480 mL from that total."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_007",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "medium",
+      "questionText": "A watermelon has a mass of 2 kg 300 g. Which of these is the same mass? A) 2,300 g   B) 230 g   C) 23,000 g",
+      "questionType": "multiple_choice",
+      "answerKey": "2,300 g",
+      "stepByStepSolution": [
+        "Convert 2 kg into grams: 2 kg = 2,000 g.",
+        "Add the extra 300 g: 2,000 + 300 = 2,300 g.",
+        "So 2 kg 300 g is the same as 2,300 g, option A."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert the kilograms into grams before adding.",
+        "Making an error with the number of zeros when converting kilograms to grams."
+      ],
+      "hints": [
+        "Remember that 1 kg equals 1,000 g.",
+        "Convert the 2 kg to grams first, then add the extra 300 g."
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "conversion"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_008",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "hard",
+      "questionText": "A class is investigating how long it takes different balls to roll down a ramp. They record three trials for a tennis ball: 4 seconds, 3 seconds, 5 seconds, and three trials for a golf ball: 6 seconds, 7 seconds, 5 seconds. Which ball had the faster average time, and what was the difference between the two averages?",
+      "questionType": "short_answer",
+      "answerKey": "The tennis ball was faster on average (4 seconds vs 6 seconds), a difference of 2 seconds",
+      "stepByStepSolution": [
+        "Find the average time for the tennis ball: (4 + 3 + 5) divided by 3 = 12 divided by 3 = 4 seconds.",
+        "Find the average time for the golf ball: (6 + 7 + 5) divided by 3 = 18 divided by 3 = 6 seconds.",
+        "Compare the two averages: the tennis ball's average (4 seconds) is faster than the golf ball's (6 seconds), a difference of 2 seconds."
+      ],
+      "commonMisconceptions": [
+        "Comparing single trial results instead of calculating the average for each ball.",
+        "Making an error dividing the total time by the number of trials."
+      ],
+      "hints": [
+        "Work out the average time for each ball separately by adding the trials and dividing by 3.",
+        "Then compare the two averages to see which is smaller (faster) and by how much."
+      ],
+      "tags": [
+        "measurement",
+        "time",
+        "average"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_009",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "hard",
+      "questionText": "A student is designing an investigation to find out which brand of paper towel absorbs the most water. Describe two things they should keep the same for a fair test, and one thing they should measure.",
+      "questionType": "short_answer",
+      "answerKey": "Keep the amount of water and the size of paper towel piece the same for each brand; measure the amount of water absorbed, e.g. in mL or grams",
+      "stepByStepSolution": [
+        "Think about what needs to stay the same for the test to be fair, such as the amount of water used and the size of each paper towel piece.",
+        "Keeping these conditions the same means any difference in results is due to the paper towel brand, not other factors.",
+        "The measurement taken should be something like the volume or mass of water absorbed by each towel."
+      ],
+      "commonMisconceptions": [
+        "Changing more than one variable at a time, making the test unfair.",
+        "Not identifying a clear, measurable outcome for the investigation."
+      ],
+      "hints": [
+        "Think about what needs to be identical across each test for it to be a fair comparison.",
+        "What could you measure, in mL or grams, to compare the towels?"
+      ],
+      "tags": [
+        "measurement",
+        "investigation",
+        "fair_test"
+      ]
+    },
+    {
+      "id": "T4M11_Y3_010",
+      "skillId": "M3M01_02_04_measurement_investigation",
+      "difficulty": "hard",
+      "questionText": "A recipe for a large batch of soup needs 1 kg 500 g of vegetables, 2 L of stock, and takes 45 minutes to cook. If you want to make a half batch, work out the new amount of vegetables, stock, and cooking time needed (assume cooking time also halves).",
+      "questionType": "short_answer",
+      "answerKey": "750 g of vegetables, 1 L of stock, about 22 to 23 minutes cooking time",
+      "stepByStepSolution": [
+        "Halve the mass of vegetables: 1 kg 500 g = 1,500 g, and 1,500 divided by 2 = 750 g.",
+        "Halve the capacity of stock: 2 L divided by 2 = 1 L.",
+        "Halve the cooking time: 45 minutes divided by 2 = 22.5 minutes, or about 22 to 23 minutes."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert kilograms and grams before halving the mass.",
+        "Rounding the cooking time incorrectly or forgetting to halve it at all."
+      ],
+      "hints": [
+        "Convert 1 kg 500 g fully into grams before halving.",
+        "Remember to halve all three measurements: mass, capacity, and time."
+      ],
+      "tags": [
+        "measurement",
+        "conversion",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_001",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "easy",
+      "questionText": "Which costs more: 4 apples for $2, or 4 apples for $3? Explain in one sentence.",
+      "questionType": "short_answer",
+      "answerKey": "4 apples for $3, because $3 is more money for the same number of apples",
+      "stepByStepSolution": [
+        "Compare the two prices for the same number of apples (4).",
+        "$3 is more than $2 for the same quantity.",
+        "So paying $3 for 4 apples costs more than paying $2 for 4 apples."
+      ],
+      "commonMisconceptions": [
+        "Assuming more apples must always mean better value, without checking the price.",
+        "Not comparing the same quantity in both cases."
+      ],
+      "hints": [
+        "Check whether both options give you the same number of apples.",
+        "Which price is bigger for the same amount of apples?"
+      ],
+      "tags": [
+        "money",
+        "comparing",
+        "best_value"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_002",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "easy",
+      "questionText": "A pack of 2 pens costs $4. What is the cost of 1 pen?",
+      "questionType": "short_answer",
+      "answerKey": "$2",
+      "stepByStepSolution": [
+        "Divide the total cost by the number of pens.",
+        "$4 divided by 2 = $2.",
+        "So each pen costs $2."
+      ],
+      "commonMisconceptions": [
+        "Multiplying instead of dividing to find the unit price.",
+        "Forgetting to divide by the correct number of items."
+      ],
+      "hints": [
+        "Think about sharing the $4 cost equally between the 2 pens.",
+        "$4 divided by 2 = ?"
+      ],
+      "tags": [
+        "money",
+        "unit_price"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_003",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "easy",
+      "questionText": "Which is the better deal: 5 stickers for $5, or 5 stickers for $4? A) 5 for $4   B) 5 for $5   C) They are the same",
+      "questionType": "multiple_choice",
+      "answerKey": "5 for $4",
+      "stepByStepSolution": [
+        "Compare the two prices for the same number of stickers (5).",
+        "$4 is less money than $5 for the same quantity.",
+        "So 5 stickers for $4 is the better deal, option A."
+      ],
+      "commonMisconceptions": [
+        "Choosing the higher price by mistake.",
+        "Assuming a higher price always means better quality or value."
+      ],
+      "hints": [
+        "Compare the two prices - which one is smaller?",
+        "A lower price for the same amount of stickers is the better deal."
+      ],
+      "tags": [
+        "money",
+        "comparing",
+        "best_value"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_004",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "medium",
+      "questionText": "A 500 g bag of rice costs $2.00, and a 1 kg (1,000 g) bag costs $3.60. Work out the price per 100 g for each bag to decide which is better value.",
+      "questionType": "short_answer",
+      "answerKey": "500 g bag: $0.40 per 100 g; 1 kg bag: $0.36 per 100 g; the 1 kg bag is better value",
+      "stepByStepSolution": [
+        "For the 500 g bag: $2.00 divided by 5 (since 500 g = 5 lots of 100 g) = $0.40 per 100 g.",
+        "For the 1 kg bag: $3.60 divided by 10 (since 1,000 g = 10 lots of 100 g) = $0.36 per 100 g.",
+        "Since $0.36 is less than $0.40, the 1 kg bag offers better value per 100 g."
+      ],
+      "commonMisconceptions": [
+        "Comparing the total prices directly without adjusting for the different sizes.",
+        "Making an error dividing by the wrong number of 100 g portions."
+      ],
+      "hints": [
+        "Work out the price for the same amount (100 g) from each bag.",
+        "Divide each price by how many 100 g portions are in that bag's total size."
+      ],
+      "tags": [
+        "money",
+        "unit_price",
+        "best_value"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_005",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "medium",
+      "questionText": "A juice brand sells a 6-pack for $4.20, or single juices for $0.80 each. If you need 6 juices, which option is cheaper, and by how much?",
+      "questionType": "short_answer",
+      "answerKey": "The 6-pack is cheaper, by $0.60",
+      "stepByStepSolution": [
+        "Work out the cost of 6 single juices: 6 x $0.80 = $4.80.",
+        "Compare this to the price of the 6-pack: $4.20.",
+        "The 6-pack is cheaper by $4.80 - $4.20 = $0.60."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply the single price by 6 before comparing.",
+        "Comparing the single juice price directly to the whole pack price."
+      ],
+      "hints": [
+        "Work out the total cost of buying 6 single juices first.",
+        "Compare that total to the price of the 6-pack."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_006",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "medium",
+      "questionText": "Two shops sell the same football. Shop A sells it for $45 with free delivery. Shop B sells it for $38 plus $9 delivery. Which shop offers the better deal, and what is the total price difference?",
+      "questionType": "short_answer",
+      "answerKey": "Shop A is cheaper (better deal) by $2",
+      "stepByStepSolution": [
+        "Work out the total cost from Shop B: $38 + $9 = $47.",
+        "Compare this to Shop A's total price: $45.",
+        "Shop A is cheaper by $47 - $45 = $2, so Shop A offers the better deal."
+      ],
+      "commonMisconceptions": [
+        "Comparing only the item price and ignoring the delivery cost.",
+        "Making an addition error when combining Shop B's item price and delivery."
+      ],
+      "hints": [
+        "Remember to add the delivery cost to Shop B's price before comparing.",
+        "Which total price is smaller once delivery is included?"
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "addition"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_007",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "medium",
+      "questionText": "Which option gives the best value for money for buying exactly 12 eggs? A) A carton of 12 for $4.80   B) Two cartons of 6 for $2.60 each   C) They are the same value",
+      "questionType": "multiple_choice",
+      "answerKey": "A carton of 12 for $4.80",
+      "stepByStepSolution": [
+        "Work out the cost of Option B for 12 eggs: 2 x $2.60 = $5.20.",
+        "Compare this to Option A's price for 12 eggs: $4.80.",
+        "Since $4.80 is less than $5.20, Option A gives better value, so the answer is A."
+      ],
+      "commonMisconceptions": [
+        "Assuming buying in smaller packs is automatically cheaper.",
+        "Forgetting to double the price of the 6-pack to compare it fairly with the 12-pack."
+      ],
+      "hints": [
+        "Work out how much it would cost to buy 12 eggs using the smaller cartons.",
+        "Compare that total to the price of the single 12-carton."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "comparing"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_008",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "hard",
+      "questionText": "A washing powder comes in three sizes: 1 kg for $6.00, 2.5 kg for $13.75, and 4 kg for $19.60. Work out the price per kilogram for each size, and state which size is the best value.",
+      "questionType": "short_answer",
+      "answerKey": "1 kg: $6.00 per kg; 2.5 kg: $5.50 per kg; 4 kg: $4.90 per kg; the 4 kg size is the best value",
+      "stepByStepSolution": [
+        "Work out the price per kg for the 1 kg size: $6.00 divided by 1 = $6.00 per kg.",
+        "Work out the price per kg for the 2.5 kg size: $13.75 divided by 2.5 = $5.50 per kg.",
+        "Work out the price per kg for the 4 kg size: $19.60 divided by 4 = $4.90 per kg, making the 4 kg size the best value since it has the lowest price per kg."
+      ],
+      "commonMisconceptions": [
+        "Comparing the total prices directly instead of working out the price per kilogram.",
+        "Making a division error when finding the price per kg for the 2.5 kg size."
+      ],
+      "hints": [
+        "Divide each price by its size in kilograms to find the price per kilogram.",
+        "Compare all three unit prices - which one is the smallest?"
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_009",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "hard",
+      "questionText": "A family wants to buy movie tickets. Individual tickets cost $14 each, or a family pass for 2 adults and 3 children costs $58. If the family has exactly 2 adults and 3 children, should they buy the family pass or individual tickets? Justify your answer with numbers.",
+      "questionType": "short_answer",
+      "answerKey": "They should buy the family pass, saving $12 (5 individual tickets would cost $70)",
+      "stepByStepSolution": [
+        "Work out the cost of buying 5 individual tickets: 5 x $14 = $70.",
+        "Compare this to the family pass price: $58.",
+        "Since $58 is less than $70, the family pass is the better choice, saving the family $12."
+      ],
+      "commonMisconceptions": [
+        "Not multiplying the individual ticket price by the correct number of people (5).",
+        "Assuming a family pass is automatically the best deal without checking the numbers."
+      ],
+      "hints": [
+        "Work out the total cost of buying separate tickets for all 5 family members.",
+        "Compare that total to the price of the family pass."
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "T4M12_Y3_010",
+      "skillId": "M3N05_06_best_value_comparisons",
+      "difficulty": "hard",
+      "questionText": "A market stall sells apples in three ways: loose apples at $0.60 each, a bag of 5 for $2.50, or a box of 12 for $6.00. If you need exactly 12 apples, compare all three options and explain which is the cheapest way to buy them.",
+      "questionType": "short_answer",
+      "answerKey": "The box of 12 for $6.00 is cheapest",
+      "stepByStepSolution": [
+        "Work out the cost of buying 12 loose apples: 12 x $0.60 = $7.20.",
+        "Work out the cost of buying enough 5-packs to reach at least 12 apples: 3 bags of 5 = 15 apples for 3 x $2.50 = $7.50.",
+        "Compare all three: the box of 12 for $6.00 is the cheapest way to get 12 apples."
+      ],
+      "commonMisconceptions": [
+        "Forgetting that buying bags of 5 means buying more apples than needed (15 instead of 12).",
+        "Not comparing all three options fairly before deciding."
+      ],
+      "hints": [
+        "Work out the total cost for each of the three ways to reach at least 12 apples.",
+        "Remember that buying in bags of 5 might mean you end up with more apples than you actually need - is that still worth comparing?"
+      ],
+      "tags": [
+        "money",
+        "best_value",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_001",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "easy",
+      "questionText": "Find 1/2 of 20.",
+      "questionType": "short_answer",
+      "answerKey": "10",
+      "stepByStepSolution": [
+        "To find 1/2 of a number, divide it by 2.",
+        "20 divided by 2 = 10.",
+        "So 1/2 of 20 is 10."
+      ],
+      "commonMisconceptions": [
+        "Multiplying by 2 instead of dividing.",
+        "Confusing 1/2 with a different fraction, like 1/4."
+      ],
+      "hints": [
+        "Think about sharing 20 equally between 2 groups.",
+        "20 divided by 2 = ?"
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_002",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "easy",
+      "questionText": "Find 1/4 of 16 apples.",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "To find 1/4 of a number, divide it by 4.",
+        "16 divided by 4 = 4.",
+        "So 1/4 of 16 apples is 4 apples."
+      ],
+      "commonMisconceptions": [
+        "Dividing by 2 instead of 4, confusing halves and quarters.",
+        "Forgetting to divide and instead subtracting a number."
+      ],
+      "hints": [
+        "Think about sharing 16 apples equally into 4 groups.",
+        "16 divided by 4 = ?"
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_003",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "easy",
+      "questionText": "What is 1/3 of 18? A) 6   B) 9   C) 3",
+      "questionType": "multiple_choice",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "To find 1/3 of a number, divide it by 3.",
+        "18 divided by 3 = 6.",
+        "So 1/3 of 18 is 6, option A."
+      ],
+      "commonMisconceptions": [
+        "Dividing by 2 instead of 3, choosing 9 by mistake.",
+        "Not recognising that finding 1/3 means dividing into 3 equal groups."
+      ],
+      "hints": [
+        "Think about sharing 18 equally into 3 groups.",
+        "18 divided by 3 = ?"
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_004",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "medium",
+      "questionText": "Ali has 24 marbles. He gives away 3/4 of them to his friends. How many marbles does he give away?",
+      "questionType": "short_answer",
+      "answerKey": "18",
+      "stepByStepSolution": [
+        "First find 1/4 of 24: 24 divided by 4 = 6.",
+        "Since he gives away 3/4, multiply this by 3: 6 x 3 = 18.",
+        "So Ali gives away 18 marbles."
+      ],
+      "commonMisconceptions": [
+        "Stopping after finding 1/4 and forgetting to multiply by 3.",
+        "Dividing 24 by 3 instead of 4 as the first step."
+      ],
+      "hints": [
+        "First find what 1/4 of 24 is.",
+        "Then multiply that answer by 3 to find 3/4."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_005",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "medium",
+      "questionText": "A recipe makes 30 cupcakes. If 2/5 of the cupcakes are decorated with chocolate icing, how many cupcakes have chocolate icing?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "First find 1/5 of 30: 30 divided by 5 = 6.",
+        "Since we need 2/5, multiply this by 2: 6 x 2 = 12.",
+        "So 12 cupcakes have chocolate icing."
+      ],
+      "commonMisconceptions": [
+        "Finding 1/5 and forgetting to multiply by 2 for the full 2/5.",
+        "Dividing 30 by 2 instead of 5 as the first step."
+      ],
+      "hints": [
+        "First work out what 1/5 of 30 is.",
+        "Then multiply that answer by 2 to find 2/5."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_006",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "medium",
+      "questionText": "A class of 28 students went on an excursion. 3/7 of the students brought their own lunch. How many students brought their own lunch?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "First find 1/7 of 28: 28 divided by 7 = 4.",
+        "Since we need 3/7, multiply this by 3: 4 x 3 = 12.",
+        "So 12 students brought their own lunch."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the wrong number, such as 3 instead of 7, as the first step.",
+        "Forgetting to multiply the unit fraction result by 3."
+      ],
+      "hints": [
+        "First find what 1/7 of 28 is.",
+        "Then multiply that answer by 3."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_007",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "medium",
+      "questionText": "A farmer has 45 sheep. 2/9 of them are lambs. How many lambs does the farmer have? A) 10   B) 5   C) 9",
+      "questionType": "multiple_choice",
+      "answerKey": "10",
+      "stepByStepSolution": [
+        "First find 1/9 of 45: 45 divided by 9 = 5.",
+        "Since we need 2/9, multiply this by 2: 5 x 2 = 10.",
+        "So the farmer has 10 lambs, option A."
+      ],
+      "commonMisconceptions": [
+        "Stopping at 1/9 (5 lambs) instead of finding 2/9.",
+        "Dividing by the wrong number, mixing up 9 with another number."
+      ],
+      "hints": [
+        "First work out 1/9 of 45.",
+        "Then multiply that answer by 2 to find 2/9."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_008",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "hard",
+      "questionText": "A charity collected 96 cans of food. They gave 1/4 to a shelter, 1/3 to a food bank, and kept the rest for their own pantry. How many cans went to their own pantry?",
+      "questionType": "short_answer",
+      "answerKey": "36",
+      "stepByStepSolution": [
+        "Find 1/4 of 96 for the shelter: 96 divided by 4 = 24.",
+        "Find 1/3 of 96 for the food bank: 96 divided by 3 = 32.",
+        "Add these two amounts and subtract from the total: 96 - (24 + 32) = 96 - 56 = 36 cans kept for the pantry."
+      ],
+      "commonMisconceptions": [
+        "Adding the fractions 1/4 and 1/3 directly as if they had the same denominator.",
+        "Forgetting to subtract the given-away amounts from the original total."
+      ],
+      "hints": [
+        "Work out the actual number of cans for each fraction separately, rather than combining the fractions themselves.",
+        "Once you know how many cans were given away in total, subtract that from 96."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_009",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "hard",
+      "questionText": "A water tank holds 120 L. During a hot week, 3/8 of the water is used for the garden, and 1/4 of the original amount is used for washing the car. How much water is left in the tank?",
+      "questionType": "short_answer",
+      "answerKey": "45 L",
+      "stepByStepSolution": [
+        "Find 3/8 of 120 for the garden: 120 divided by 8 = 15, then 15 x 3 = 45 L.",
+        "Find 1/4 of 120 for the car: 120 divided by 4 = 30 L.",
+        "Add the two amounts used: 45 + 30 = 75 L, then subtract from the total: 120 - 75 = 45 L left."
+      ],
+      "commonMisconceptions": [
+        "Adding the fractions 3/8 and 1/4 directly without a common denominator, leading to an incorrect combined fraction.",
+        "Forgetting to subtract the total water used from the original 120 L."
+      ],
+      "hints": [
+        "Work out each fraction of 120 L separately as an actual amount of litres.",
+        "Add both amounts used together, then subtract from the original 120 L."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M13_Y3_010",
+      "skillId": "M3N07_fractions_of_quantities_consolidation",
+      "difficulty": "hard",
+      "questionText": "A bookshop has 84 books on a shelf. 1/2 are fiction, 1/3 of the remaining books are non-fiction, and the rest are picture books. How many picture books are there?",
+      "questionType": "short_answer",
+      "answerKey": "28",
+      "stepByStepSolution": [
+        "Find 1/2 of 84 for fiction: 84 divided by 2 = 42, leaving 42 books remaining.",
+        "Find 1/3 of the remaining 42 books for non-fiction: 42 divided by 3 = 14.",
+        "Subtract to find picture books: 42 - 14 = 28 picture books."
+      ],
+      "commonMisconceptions": [
+        "Finding 1/3 of the original 84 instead of the remaining 42 books.",
+        "Forgetting that 'the rest' means subtracting from what remains after fiction, not from the original total."
+      ],
+      "hints": [
+        "Work out how many books remain after removing the fiction books first.",
+        "Then find 1/3 of that remaining amount for non-fiction, before working out what's left for picture books."
+      ],
+      "tags": [
+        "fractions",
+        "of_quantities",
+        "multi_step"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_001",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "easy",
+      "questionText": "How many faces does a cube have? A) 6   B) 4   C) 8",
+      "questionType": "multiple_choice",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Picture a cube, like a dice.",
+        "Count each flat surface: top, bottom, and four sides.",
+        "A cube has 6 faces in total, option A."
+      ],
+      "commonMisconceptions": [
+        "Confusing the number of faces with the number of edges or corners.",
+        "Miscounting by forgetting the top or bottom face."
+      ],
+      "hints": [
+        "Think of a dice - how many square sides does it have?",
+        "Count the top, bottom, and the sides around it."
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "faces"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_002",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "easy",
+      "questionText": "What 3D shape can be made by folding a net made of 6 identical squares?",
+      "questionType": "short_answer",
+      "answerKey": "a cube",
+      "stepByStepSolution": [
+        "Think about a net made entirely of 6 equal squares joined together.",
+        "When folded up, all 6 squares become the faces of a 3D shape.",
+        "A shape with 6 equal square faces is a cube."
+      ],
+      "commonMisconceptions": [
+        "Confusing a cube with a rectangular prism, which does not need to have all square faces.",
+        "Not recognising that 6 identical squares fold into a cube."
+      ],
+      "hints": [
+        "Think about a shape where every face is the same size and shape.",
+        "What 3D shape has exactly 6 square faces?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_003",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "easy",
+      "questionText": "A rectangular prism (like a box of tissues) has how many faces? A) 6   B) 5   C) 4",
+      "questionType": "multiple_choice",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "Picture a rectangular prism, like a shoebox.",
+        "Count its flat surfaces: top, bottom, front, back, and two sides.",
+        "This gives a total of 6 faces, option A."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to count the top and bottom faces.",
+        "Confusing the number of faces with the number of edges."
+      ],
+      "hints": [
+        "Think of a shoebox - count each flat side including the top and bottom.",
+        "How many rectangular surfaces does it have altogether?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "faces"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_004",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "medium",
+      "questionText": "Describe the net of a cube: how many squares does it have, and how are they typically arranged?",
+      "questionType": "short_answer",
+      "answerKey": "It has 6 identical squares, often arranged in a cross or T-shape so that they fold up to form a closed cube",
+      "stepByStepSolution": [
+        "A cube has 6 identical square faces.",
+        "Its net must therefore contain exactly 6 squares laid out flat.",
+        "A common arrangement is a cross (plus) shape, but there are other valid arrangements that still fold into a closed cube."
+      ],
+      "commonMisconceptions": [
+        "Drawing a net with the wrong number of squares (too many or too few).",
+        "Arranging the squares so they overlap or leave gaps when folded, rather than forming a closed shape."
+      ],
+      "hints": [
+        "Think about how many faces a cube has - that tells you how many squares are needed.",
+        "Picture folding a cross shape made of squares upward - does it close into a cube?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_005",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "medium",
+      "questionText": "A net has 2 identical squares and 4 identical rectangles. What 3D shape would this net most likely fold into?",
+      "questionType": "short_answer",
+      "answerKey": "a rectangular prism with a square cross-section (a square-based prism)",
+      "stepByStepSolution": [
+        "Think about which 3D shapes have exactly 2 identical square faces and 4 identical rectangular faces.",
+        "A rectangular prism with a square top and bottom, and rectangular sides, matches this description.",
+        "So this net would most likely fold into a rectangular prism with square ends."
+      ],
+      "commonMisconceptions": [
+        "Assuming any shape with squares in its net must be a cube.",
+        "Not noticing the difference between the square and rectangular faces described."
+      ],
+      "hints": [
+        "Think about a 3D shape that has two matching square ends and rectangular sides connecting them.",
+        "Is this the same as a cube, or a different kind of prism?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_006",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "medium",
+      "questionText": "Which 3D shape does NOT need any square faces in its typical net? A) cube   B) triangular prism   C) rectangular prism with a square base",
+      "questionType": "multiple_choice",
+      "answerKey": "triangular prism",
+      "stepByStepSolution": [
+        "A cube's net is made entirely of squares.",
+        "A rectangular prism with a square base has 2 square faces and 4 rectangular faces.",
+        "A triangular prism's net has 2 triangular faces and 3 rectangular faces, with no square faces required, so option B is correct."
+      ],
+      "commonMisconceptions": [
+        "Assuming every 3D shape's net must contain at least one square.",
+        "Confusing a triangular prism's net with a rectangular prism's net."
+      ],
+      "hints": [
+        "Think about the shapes of the faces on a triangular prism - are any of them squares?",
+        "Compare this to a cube, which is made entirely of squares."
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_007",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "medium",
+      "questionText": "How many faces, edges, and vertices (corners) does a cube have in total?",
+      "questionType": "short_answer",
+      "answerKey": "6 faces, 12 edges, 8 vertices",
+      "stepByStepSolution": [
+        "Count the faces of a cube: there are 6 square faces.",
+        "Count the edges: there are 12 straight edges where faces meet.",
+        "Count the vertices: there are 8 corners where edges meet."
+      ],
+      "commonMisconceptions": [
+        "Confusing the number of edges with the number of faces.",
+        "Miscounting the vertices by forgetting some of the hidden corners."
+      ],
+      "hints": [
+        "Picture a cube (like a dice) and count each type of feature separately.",
+        "Remember faces are the flat surfaces, edges are the lines, and vertices are the corners."
+      ],
+      "tags": [
+        "3d_shapes",
+        "faces",
+        "edges"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_008",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "hard",
+      "questionText": "A student draws a net for a triangular prism but only includes 2 triangles and 2 rectangles. Explain what is missing from the net and why it would not fold into a complete triangular prism.",
+      "questionType": "short_answer",
+      "answerKey": "One more rectangle is missing; a triangular prism needs 3 rectangular faces, one for each side of the triangular base, so with only 2 rectangles one side would be left open",
+      "stepByStepSolution": [
+        "A triangular prism has 2 triangular faces (the ends) and 3 rectangular faces (the sides).",
+        "The student's net only has 2 rectangles, which is one short of the 3 needed.",
+        "Without the third rectangle, one side of the prism would be left open when the net is folded, so it would not form a complete, closed shape."
+      ],
+      "commonMisconceptions": [
+        "Assuming a triangular prism only needs as many rectangles as it has triangular ends.",
+        "Not connecting the number of sides of the triangle to the number of rectangular faces needed."
+      ],
+      "hints": [
+        "Think about how many sides a triangle has, and how that relates to the number of rectangular faces needed.",
+        "Would the shape close up completely with just 2 rectangles, or would there be a gap?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_009",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "hard",
+      "questionText": "Design a net (describe it in words) for a rectangular prism that measures 4 cm long, 2 cm wide, and 3 cm high. List the six faces you would need to include, with their dimensions.",
+      "questionType": "short_answer",
+      "answerKey": "Two faces of 4 cm by 2 cm, two faces of 4 cm by 3 cm, and two faces of 2 cm by 3 cm",
+      "stepByStepSolution": [
+        "A rectangular prism has 3 pairs of matching opposite faces.",
+        "Work out the dimensions of each pair based on the length (4 cm), width (2 cm), and height (3 cm): 4x2, 4x3, and 2x3.",
+        "So the net needs two of each: two 4 cm by 2 cm faces, two 4 cm by 3 cm faces, and two 2 cm by 3 cm faces."
+      ],
+      "commonMisconceptions": [
+        "Only including 3 faces instead of the full 6 needed, forgetting the matching opposite pairs.",
+        "Mixing up which dimensions belong to which pair of faces."
+      ],
+      "hints": [
+        "Think about the three pairs of opposite faces in a rectangular prism, based on length, width, and height.",
+        "How many faces of each size do you need for a complete net?"
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "measurement"
+      ]
+    },
+    {
+      "id": "T4M14_Y3_010",
+      "skillId": "M3SP01_3d_nets",
+      "difficulty": "hard",
+      "questionText": "A cube-shaped gift box needs to be wrapped using a flat net cut from wrapping paper. If each face of the cube is 10 cm by 10 cm, what is the smallest total area of wrapping paper needed to cover all 6 faces, with no overlap?",
+      "questionType": "short_answer",
+      "answerKey": "600 cm2",
+      "stepByStepSolution": [
+        "Find the area of one face: 10 cm x 10 cm = 100 cm2.",
+        "Since a cube has 6 identical faces, multiply this by 6: 100 x 6 = 600 cm2.",
+        "So the smallest total area of wrapping paper needed is 600 cm2."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply by 6 for all the faces, and only calculating the area of one face.",
+        "Confusing area with perimeter when working out the size of one face."
+      ],
+      "hints": [
+        "First work out the area of just one square face.",
+        "Then multiply that area by the total number of faces on a cube."
+      ],
+      "tags": [
+        "3d_shapes",
+        "nets",
+        "area"
+      ]
+    },
+    {
+      "id": "T4M15_Y3_001",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "easy",
+      "questionText": "How many students were surveyed in total?",
+      "questionType": "short_answer",
+      "answerKey": "24",
+      "stepByStepSolution": [
+        "Add up the number of students for each category: 4 + 9 + 6 + 3 + 2.",
+        "This gives a total of 24 students.",
+        "So 24 students were surveyed altogether."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the categories when adding.",
+        "Confusing the number of books with the number of students."
+      ],
+      "hints": [
+        "Add up all five numbers of students.",
+        "Double-check you have included every category."
+      ],
+      "tags": [
+        "data_communication",
+        "addition"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_002",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "easy",
+      "questionText": "What is the mode (the most common number of books read)?",
+      "questionType": "short_answer",
+      "answerKey": "3 books",
+      "stepByStepSolution": [
+        "Look for the category with the highest number of students.",
+        "9 students read 3 books, which is more than any other category.",
+        "So the mode is 3 books."
+      ],
+      "commonMisconceptions": [
+        "Confusing the mode with the number of students (9) instead of the number of books (3).",
+        "Picking a category at random instead of comparing all the numbers."
+      ],
+      "hints": [
+        "Find which number of books has the most students.",
+        "Which category has the biggest number of students next to it?"
+      ],
+      "tags": [
+        "data_communication",
+        "mode"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_003",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "easy",
+      "questionText": "How many students read either 5 or 6 books? A) 5   B) 3   C) 2",
+      "questionType": "multiple_choice",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Find the number of students who read 5 books: 3.",
+        "Find the number of students who read 6 books: 2.",
+        "Add them together: 3 + 2 = 5, option A."
+      ],
+      "commonMisconceptions": [
+        "Only using one of the two numbers instead of adding them together.",
+        "Confusing the number of books with the number of students."
+      ],
+      "hints": [
+        "Find the two numbers for 5 books and 6 books separately.",
+        "Add those two numbers together."
+      ],
+      "tags": [
+        "data_communication",
+        "addition"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_004",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "medium",
+      "questionText": "Write one sentence, using mathematical language, describing the overall trend in this data.",
+      "questionType": "short_answer",
+      "answerKey": "Most students read 3 or 4 books in the month, while fewer students read either very few (2) or many (6) books",
+      "stepByStepSolution": [
+        "Look across the whole data set, not just one category.",
+        "Notice that the middle values (3 and 4 books) have the highest numbers of students, while the extremes (2 and 6 books) have fewer.",
+        "Write a clear sentence describing this pattern, using words like 'most', 'fewer', or 'trend'."
+      ],
+      "commonMisconceptions": [
+        "Only describing one category instead of the overall pattern.",
+        "Using vague language instead of specific numbers or comparisons."
+      ],
+      "hints": [
+        "Look at the data as a whole rather than just one number.",
+        "Try starting your sentence with 'Most students...' or 'The data shows that...'"
+      ],
+      "tags": [
+        "data_communication",
+        "reasoning"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_005",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "medium",
+      "questionText": "If a new column graph were made from this data, what would the two axes need to show?",
+      "questionType": "short_answer",
+      "answerKey": "The horizontal axis would show the number of books read, and the vertical axis would show the number of students",
+      "stepByStepSolution": [
+        "Think about what the two variables in this data are: number of books, and number of students.",
+        "One axis needs to represent the categories (number of books read).",
+        "The other axis needs to represent the count (number of students), which is usually shown on the vertical axis."
+      ],
+      "commonMisconceptions": [
+        "Swapping the axes so that categories are shown on the vertical axis with no clear scale.",
+        "Forgetting that one axis needs a numeric scale (a count) while the other shows categories."
+      ],
+      "hints": [
+        "Think about which piece of information is being counted, and which is being categorised.",
+        "Which axis usually shows the scale of numbers (like a count) in a column graph?"
+      ],
+      "tags": [
+        "data_communication",
+        "graphs",
+        "reasoning"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_006",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "medium",
+      "questionText": "Using the data, calculate what fraction of the class read 4 or more books.",
+      "questionType": "short_answer",
+      "answerKey": "11/24",
+      "stepByStepSolution": [
+        "Add up the students who read 4, 5, or 6 books: 6 + 3 + 2 = 11.",
+        "Write this as a fraction out of the total number of students surveyed: 24.",
+        "So the fraction is 11/24."
+      ],
+      "commonMisconceptions": [
+        "Only including one of the three categories (4, 5, or 6 books) instead of all three.",
+        "Using the wrong total as the denominator instead of 24."
+      ],
+      "hints": [
+        "Add together the students who read 4, 5, and 6 books.",
+        "Write that total as a fraction out of 24 students."
+      ],
+      "tags": [
+        "data_communication",
+        "fractions"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_007",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "medium",
+      "questionText": "Which number of books was read by the fewest students? A) 2 books   B) 6 books   C) 4 books",
+      "questionType": "multiple_choice",
+      "answerKey": "6 books",
+      "stepByStepSolution": [
+        "Compare the number of students for each category.",
+        "6 books has only 2 students, which is the smallest number.",
+        "So 6 books was read by the fewest students, option B."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'fewest students' with 'fewest books', choosing the smallest book number (2) instead.",
+        "Not checking every category before deciding."
+      ],
+      "hints": [
+        "Compare all five numbers of students carefully.",
+        "Which category has the smallest number of students?"
+      ],
+      "tags": [
+        "data_communication",
+        "interpreting_data"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_008",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "hard",
+      "questionText": "Write a short paragraph (2-3 sentences) that a Year 3 student could use to present this data to their class, including the total number of students, the mode, and one comparison.",
+      "questionType": "short_answer",
+      "answerKey": "Example: We asked 24 students how many books they read. The most common answer was 3 books, chosen by 9 students. More students read 3 or 4 books than read 6 books.",
+      "stepByStepSolution": [
+        "Include the total number of students surveyed (24) somewhere in the paragraph.",
+        "State the mode clearly (3 books, chosen by 9 students).",
+        "Add a comparison between two categories, such as comparing the popular middle values to the less common extreme values."
+      ],
+      "commonMisconceptions": [
+        "Leaving out one of the three required pieces of information: total, mode, or comparison.",
+        "Writing numbers without explaining what they mean in words."
+      ],
+      "hints": [
+        "Make sure your paragraph includes the total, the mode, and a comparison between two categories.",
+        "Try starting with the total number surveyed, then describe the most common result."
+      ],
+      "tags": [
+        "data_communication",
+        "reasoning",
+        "writing"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_009",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "hard",
+      "questionText": "A classmate says '9 out of 24 students didn't read any books.' Explain why this statement is incorrect, using the data provided.",
+      "questionType": "short_answer",
+      "answerKey": "This is incorrect because the 9 refers to students who read exactly 3 books, not students who read no books; there is no category in the data for 0 books",
+      "stepByStepSolution": [
+        "Look carefully at what the number 9 actually represents in the data - it is the number of students who read 3 books.",
+        "There is no category in the data showing students who read 0 books.",
+        "So the classmate's statement is incorrect; the 9 refers to students reading 3 books, not students reading none."
+      ],
+      "commonMisconceptions": [
+        "Confusing the count of students in a category with the number of books they read.",
+        "Assuming missing information (0 books) exists in the data when it does not."
+      ],
+      "hints": [
+        "Check exactly what the number 9 is describing in the original data.",
+        "Does the data mention any students reading 0 books at all?"
+      ],
+      "tags": [
+        "data_communication",
+        "reasoning",
+        "misconceptions"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M15_Y3_010",
+      "skillId": "M3ST02_03_data_communication",
+      "difficulty": "hard",
+      "questionText": "If 4 more students joined the class and all 4 read 3 books, how would this change the mode, the total number of students, and the fraction of students who read 3 books?",
+      "questionType": "short_answer",
+      "answerKey": "The mode stays the same (3 books); the total becomes 28 students; the fraction reading 3 books becomes 13/28",
+      "stepByStepSolution": [
+        "Adding 4 more students who all read 3 books increases that category from 9 to 13 students, which is still the highest count, so the mode remains 3 books.",
+        "The total number of students becomes 24 + 4 = 28.",
+        "The new fraction of students who read 3 books is 13 out of 28, which is larger than the original 9 out of 24."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to update the total number of students after adding the new students.",
+        "Assuming the mode might change without checking that 3 books is still the highest category."
+      ],
+      "hints": [
+        "Work out the new number of students in the '3 books' category first.",
+        "Remember to also update the total number of students in the whole class."
+      ],
+      "tags": [
+        "data_communication",
+        "reasoning",
+        "fractions"
+      ],
+      "passage": "A Year 3 class recorded how many books each student read in a month: 2 books - 4 students, 3 books - 9 students, 4 books - 6 students, 5 books - 3 students, 6 books - 2 students."
+    },
+    {
+      "id": "T4M16_Y3_001",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "easy",
+      "questionText": "Work out 3,450 + 2,300.",
+      "questionType": "short_answer",
+      "answerKey": "5,750",
+      "stepByStepSolution": [
+        "Line up the numbers by place value.",
+        "Add each column starting from the ones.",
+        "3,450 + 2,300 = 5,750."
+      ],
+      "commonMisconceptions": [
+        "Misaligning the digits because the numbers have different values in each column.",
+        "Forgetting to regroup where needed."
+      ],
+      "hints": [
+        "Line the numbers up carefully by place value.",
+        "Add the hundreds and thousands columns separately."
+      ],
+      "tags": [
+        "addition",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_002",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "easy",
+      "questionText": "What is 1/2 of 40?",
+      "questionType": "short_answer",
+      "answerKey": "20",
+      "stepByStepSolution": [
+        "To find 1/2 of a number, divide it by 2.",
+        "40 divided by 2 = 20.",
+        "So 1/2 of 40 is 20."
+      ],
+      "commonMisconceptions": [
+        "Multiplying by 2 instead of dividing.",
+        "Confusing halves with quarters."
+      ],
+      "hints": [
+        "Think about sharing 40 equally into 2 groups.",
+        "40 divided by 2 = ?"
+      ],
+      "tags": [
+        "fractions",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_003",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "easy",
+      "questionText": "You buy a $3.50 item and pay with a $5 note. How much change do you get? A) $1.50   B) $2.50   C) $8.50",
+      "questionType": "multiple_choice",
+      "answerKey": "$1.50",
+      "stepByStepSolution": [
+        "Subtract the cost from the amount paid: $5.00 - $3.50.",
+        "This gives $1.50.",
+        "So the change is $1.50, option A."
+      ],
+      "commonMisconceptions": [
+        "Making a regrouping error in the cents column.",
+        "Adding instead of subtracting."
+      ],
+      "hints": [
+        "Line up $5.00 and $3.50 carefully.",
+        "$5.00 minus $3.50 equals how much?"
+      ],
+      "tags": [
+        "money",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_004",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "medium",
+      "questionText": "Work out 3/8 + 2/8, then work out how much change from $10 you would have if you spent $6.75.",
+      "questionType": "short_answer",
+      "answerKey": "5/8 and $3.25",
+      "stepByStepSolution": [
+        "Add the fractions: 3/8 + 2/8 = 5/8, since the denominators are the same.",
+        "Next, subtract $6.75 from $10.00 to find the change.",
+        "$10.00 - $6.75 = $3.25."
+      ],
+      "commonMisconceptions": [
+        "Adding the denominators as well as the numerators for the fraction part.",
+        "Making a regrouping error in the money subtraction."
+      ],
+      "hints": [
+        "For the fraction, just add the numerators since the denominators match.",
+        "For the money, line up $10.00 and $6.75 carefully before subtracting."
+      ],
+      "tags": [
+        "fractions",
+        "money",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_005",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "medium",
+      "questionText": "Divide 68 by 5, giving your answer as a whole number and remainder. Then double your whole number answer.",
+      "questionType": "short_answer",
+      "answerKey": "13 remainder 3, doubled to 26",
+      "stepByStepSolution": [
+        "Find the largest multiple of 5 up to 68: 5 x 13 = 65.",
+        "Subtract to find the remainder: 68 - 65 = 3, so 68 divided by 5 = 13 remainder 3.",
+        "Double the whole number part: 13 x 2 = 26."
+      ],
+      "commonMisconceptions": [
+        "Rounding up to 14 instead of using the correct whole number part.",
+        "Doubling the remainder instead of the whole number answer."
+      ],
+      "hints": [
+        "Think about the 5 times table close to 68.",
+        "Once you have the whole number and remainder, remember to double just the whole number."
+      ],
+      "tags": [
+        "division",
+        "multiplication",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_006",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "medium",
+      "questionText": "A school raised $12,450 in Term 3 and $8,760 more in Term 4. If they spend $15,000 on new playground equipment, how much money is left?",
+      "questionType": "short_answer",
+      "answerKey": "$6,210",
+      "stepByStepSolution": [
+        "Add the two amounts raised: $12,450 + $8,760 = $21,210.",
+        "Subtract the amount spent: $21,210 - $15,000.",
+        "This leaves $6,210."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both terms' totals before subtracting the spending.",
+        "Making a regrouping error in the subtraction step."
+      ],
+      "hints": [
+        "First work out the total amount raised across both terms.",
+        "Then subtract how much was spent from that total."
+      ],
+      "tags": [
+        "addition",
+        "subtraction",
+        "money"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_007",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "medium",
+      "questionText": "Which is the same as 4/6 simplified? A) 2/3   B) 1/2   C) 4/3",
+      "questionType": "multiple_choice",
+      "answerKey": "2/3",
+      "stepByStepSolution": [
+        "Look for a common factor of the numerator and denominator: both 4 and 6 can be divided by 2.",
+        "Divide both numbers by 2: 4 divided by 2 = 2, and 6 divided by 2 = 3.",
+        "So 4/6 simplifies to 2/3, option A."
+      ],
+      "commonMisconceptions": [
+        "Dividing only the numerator or only the denominator instead of both.",
+        "Choosing an unrelated fraction instead of simplifying correctly."
+      ],
+      "hints": [
+        "Look for a number that divides evenly into both 4 and 6.",
+        "Divide both the top and bottom of the fraction by that number."
+      ],
+      "tags": [
+        "fractions",
+        "simplifying",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_008",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "hard",
+      "questionText": "A shop had 4,500 items in stock. They sold 3/5 of the stock in a sale, then received a new delivery of 800 items. How many items does the shop have now?",
+      "questionType": "short_answer",
+      "answerKey": "2,600",
+      "stepByStepSolution": [
+        "Find 3/5 of 4,500 to see how many were sold: 4,500 divided by 5 = 900, then 900 x 3 = 2,700.",
+        "Subtract the sold items from the original stock: 4,500 - 2,700 = 1,800.",
+        "Add the new delivery: 1,800 + 800 = 2,600 items in stock now."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to find 3/5 correctly, mixing up the unit fraction (1/5) with the required fraction (3/5).",
+        "Forgetting to add the new delivery after calculating the remaining stock."
+      ],
+      "hints": [
+        "First work out how many items were sold using the fraction 3/5.",
+        "Then subtract that from the original stock, and do not forget to add the new delivery at the end."
+      ],
+      "tags": [
+        "fractions",
+        "multi_step",
+        "review"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_009",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "hard",
+      "questionText": "Priya has $50. She spends 2/5 of it on a book, then splits what remains equally between 3 friends as gifts. How much does each friend receive?",
+      "questionType": "short_answer",
+      "answerKey": "$10",
+      "stepByStepSolution": [
+        "Find 2/5 of $50 spent on the book: 50 divided by 5 = 10, then 10 x 2 = $20.",
+        "Subtract to find what remains: $50 - $20 = $30.",
+        "Divide the remaining $30 equally between 3 friends: 30 divided by 3 = $10 each."
+      ],
+      "commonMisconceptions": [
+        "Dividing the original $50 by 3 instead of the remaining amount after buying the book.",
+        "Making an error finding 2/5 of $50, such as using 1/5 instead."
+      ],
+      "hints": [
+        "First work out how much Priya spent on the book.",
+        "Then divide what's left equally between the 3 friends."
+      ],
+      "tags": [
+        "fractions",
+        "money",
+        "division"
+      ]
+    },
+    {
+      "id": "T4M16_Y3_010",
+      "skillId": "M3N01_07_number_review_consolidation",
+      "difficulty": "hard",
+      "questionText": "A community fun run had 3,200 participants. 3/8 finished in under 30 minutes, 1/4 finished between 30 and 45 minutes, and the rest finished in more than 45 minutes. How many participants finished in more than 45 minutes?",
+      "questionType": "short_answer",
+      "answerKey": "1,200",
+      "stepByStepSolution": [
+        "Find 3/8 of 3,200 for under 30 minutes: 3,200 divided by 8 = 400, then 400 x 3 = 1,200.",
+        "Find 1/4 of 3,200 for 30-45 minutes: 3,200 divided by 4 = 800.",
+        "Add these two groups and subtract from the total: 3,200 - (1,200 + 800) = 3,200 - 2,000 = 1,200 finished in more than 45 minutes."
+      ],
+      "commonMisconceptions": [
+        "Adding the fractions 3/8 and 1/4 directly without a common denominator.",
+        "Forgetting to subtract from the total number of participants at the end."
+      ],
+      "hints": [
+        "Work out the actual number of participants for each fraction separately.",
+        "Add those two groups together, then subtract from the total number of participants."
+      ],
+      "tags": [
+        "fractions",
+        "multi_step",
+        "review"
+      ]
+    }
+  ]
+}
