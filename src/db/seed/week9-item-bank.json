@@ -1,0 +1,1635 @@
+{
+  "_note": "Week 9 item bank: Term 1, Week 9 skills (Maths: word problems, measurement problems, chance experiments; English: fluency/decoding, editing writing, spelling patterns). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3WORDPROB_Y3_001",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "easy",
+      "questionText": "Sam has 24 stickers. He gives away 8. How many does he have left?",
+      "questionType": "short_answer",
+      "answerKey": "16",
+      "stepByStepSolution": [
+        "Sam starts with 24 stickers.",
+        "Giving away 8 means subtracting: 24 - 8.",
+        "24 - 8 = 16 stickers left."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting.",
+        "Miscalculating 24 - 8."
+      ],
+      "hints": [
+        "'Gives away' is a clue to subtract.",
+        "24 - 8 = 16."
+      ],
+      "tags": [
+        "word_problems",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_002",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "easy",
+      "questionText": "There are 6 bags with 5 marbles in each. How many marbles in total?",
+      "questionType": "short_answer",
+      "answerKey": "30",
+      "stepByStepSolution": [
+        "6 bags of 5 marbles means 6 x 5.",
+        "6 x 5 = 30.",
+        "There are 30 marbles in total."
+      ],
+      "commonMisconceptions": [
+        "Adding 6 + 5 instead of multiplying.",
+        "Miscounting the bags or marbles."
+      ],
+      "hints": [
+        "'Bags with marbles in each' is a clue to multiply.",
+        "6 x 5 = 30."
+      ],
+      "tags": [
+        "word_problems",
+        "multiplication"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_003",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "medium",
+      "questionText": "Mia buys 3 packs of pencils with 8 pencils in each pack. She gives away 6 pencils. How many pencils does she have left?",
+      "questionType": "short_answer",
+      "answerKey": "18",
+      "stepByStepSolution": [
+        "First find the total pencils: 3 packs of 8 means 3 x 8 = 24.",
+        "Then subtract the pencils given away: 24 - 6.",
+        "24 - 6 = 18 pencils left."
+      ],
+      "commonMisconceptions": [
+        "Only doing one step instead of both multiplying and subtracting.",
+        "Subtracting before multiplying."
+      ],
+      "hints": [
+        "This is a two-step problem: multiply first, then subtract.",
+        "3 x 8 = 24, then 24 - 6 = 18."
+      ],
+      "tags": [
+        "word_problems",
+        "two_step",
+        "multiplication",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_004",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "medium",
+      "questionText": "A school has 45 students in Year 3 and 38 in Year 4. How many students are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "83",
+      "stepByStepSolution": [
+        "Add the two year groups together.",
+        "45 + 38 = 83.",
+        "There are 83 students in total."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Miscalculating the addition."
+      ],
+      "hints": [
+        "'In total' is a clue to add.",
+        "45 + 38 = 83."
+      ],
+      "tags": [
+        "word_problems",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_005",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "medium",
+      "questionText": "Tom had $50. He spent $23. How much does he have left?",
+      "questionType": "short_answer",
+      "answerKey": "27",
+      "stepByStepSolution": [
+        "Tom starts with $50.",
+        "Spending $23 means subtracting: 50 - 23.",
+        "50 - 23 = 27, so he has $27 left."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting.",
+        "Miscalculating 50 - 23."
+      ],
+      "hints": [
+        "'Spent' is a clue to subtract.",
+        "50 - 23 = 27."
+      ],
+      "tags": [
+        "word_problems",
+        "subtraction",
+        "money"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_006",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "medium",
+      "questionText": "Which operation would you use first to solve: 'There are 5 boxes with 6 apples each. 7 apples are eaten. How many are left?' A) add then multiply   B) multiply then subtract   C) subtract then multiply",
+      "questionType": "multiple_choice",
+      "answerKey": "multiply then subtract",
+      "stepByStepSolution": [
+        "First find the total apples: 5 boxes of 6 means multiply (5 x 6).",
+        "Then subtract the apples that were eaten.",
+        "So the order is multiply then subtract."
+      ],
+      "commonMisconceptions": [
+        "Subtracting before finding the total number of apples.",
+        "Adding instead of multiplying for the total."
+      ],
+      "hints": [
+        "Find the total first, then take away what's eaten.",
+        "Multiplication finds the total; subtraction finds what's left."
+      ],
+      "tags": [
+        "word_problems",
+        "two_step",
+        "strategy"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_007",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "hard",
+      "questionText": "A farmer has 3 fields with 12 sheep in each field. 9 sheep are sold. How many sheep are left?",
+      "questionType": "short_answer",
+      "answerKey": "27",
+      "stepByStepSolution": [
+        "First find the total sheep: 3 fields of 12 means 3 x 12 = 36.",
+        "Then subtract the sheep sold: 36 - 9.",
+        "36 - 9 = 27 sheep left."
+      ],
+      "commonMisconceptions": [
+        "Only doing one of the two steps.",
+        "Subtracting before multiplying."
+      ],
+      "hints": [
+        "Multiply first to find the total, then subtract.",
+        "3 x 12 = 36, then 36 - 9 = 27."
+      ],
+      "tags": [
+        "word_problems",
+        "two_step",
+        "multiplication",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_008",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "hard",
+      "questionText": "There are 18 red apples and 15 green apples in a basket. If 9 apples are eaten, how many are left?",
+      "questionType": "short_answer",
+      "answerKey": "24",
+      "stepByStepSolution": [
+        "First find the total apples: 18 + 15 = 33.",
+        "Then subtract the apples eaten: 33 - 9.",
+        "33 - 9 = 24 apples left."
+      ],
+      "commonMisconceptions": [
+        "Only adding or only subtracting instead of both steps.",
+        "Miscalculating the addition or subtraction."
+      ],
+      "hints": [
+        "Add the two apple totals first, then subtract.",
+        "18 + 15 = 33, then 33 - 9 = 24."
+      ],
+      "tags": [
+        "word_problems",
+        "two_step",
+        "addition",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_009",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "hard",
+      "questionText": "A shop had 60 toys. It sold 4 boxes of 5 toys each. How many toys are left?",
+      "questionType": "short_answer",
+      "answerKey": "40",
+      "stepByStepSolution": [
+        "First find how many toys were sold: 4 boxes of 5 means 4 x 5 = 20.",
+        "Then subtract from the starting amount: 60 - 20.",
+        "60 - 20 = 40 toys left."
+      ],
+      "commonMisconceptions": [
+        "Subtracting the number of boxes (4) instead of the total toys sold (20).",
+        "Only doing one of the two steps."
+      ],
+      "hints": [
+        "Multiply first to find how many were sold, then subtract.",
+        "4 x 5 = 20, then 60 - 20 = 40."
+      ],
+      "tags": [
+        "word_problems",
+        "two_step",
+        "multiplication",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3WORDPROB_Y3_010",
+      "skillId": "M3N04_06_word_problems",
+      "difficulty": "hard",
+      "questionText": "What is the first step to solve a two-step word problem? A) guess the answer   B) work out what the question is asking and which operations are needed   C) always add all the numbers together",
+      "questionType": "multiple_choice",
+      "answerKey": "work out what the question is asking and which operations are needed",
+      "stepByStepSolution": [
+        "Guessing doesn't reliably lead to a correct answer.",
+        "Always adding won't work for problems needing subtraction or multiplication.",
+        "The best first step is to understand the question and decide which operations to use."
+      ],
+      "commonMisconceptions": [
+        "Jumping straight to calculating without understanding the question.",
+        "Assuming every word problem needs addition."
+      ],
+      "hints": [
+        "Read the problem carefully and think about what it's really asking.",
+        "Different problems need different operations \u2014 decide before calculating."
+      ],
+      "tags": [
+        "word_problems",
+        "strategy"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_001",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "easy",
+      "questionText": "A ribbon is 45 cm long. Another ribbon is 30 cm long. What is the total length of both ribbons?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "75 cm",
+        "75"
+      ],
+      "stepByStepSolution": [
+        "Add the two ribbon lengths together.",
+        "45 + 30 = 75.",
+        "The total length is 75 cm."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Forgetting to include the unit (cm) in the answer."
+      ],
+      "hints": [
+        "'Total length' is a clue to add.",
+        "45 + 30 = 75 cm."
+      ],
+      "tags": [
+        "measurement",
+        "length",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_002",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "easy",
+      "questionText": "A bag of rice weighs 2 kg. Another weighs 3 kg. What is their total mass?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5 kg",
+        "5"
+      ],
+      "stepByStepSolution": [
+        "Add the two masses together.",
+        "2 + 3 = 5.",
+        "The total mass is 5 kg."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Forgetting to include the unit (kg)."
+      ],
+      "hints": [
+        "'Total mass' is a clue to add.",
+        "2 + 3 = 5 kg."
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_003",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "medium",
+      "questionText": "A jug holds 2 litres of water. If 750 mL is poured out, how much water is left?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1250 mL",
+        "1.25 L",
+        "1 L 250 mL"
+      ],
+      "stepByStepSolution": [
+        "Convert 2 litres to millilitres: 2 L = 2000 mL.",
+        "Subtract the amount poured out: 2000 - 750.",
+        "2000 - 750 = 1250 mL left."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert litres to millilitres before subtracting.",
+        "Subtracting 750 from 2 instead of 2000."
+      ],
+      "hints": [
+        "Convert both amounts to the same unit first.",
+        "2000 mL - 750 mL = 1250 mL."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_004",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "medium",
+      "questionText": "One plank is 120 cm long and another is 85 cm long. What is the difference in length between the two planks?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "35 cm",
+        "35"
+      ],
+      "stepByStepSolution": [
+        "'Difference' means subtract the smaller from the larger.",
+        "120 - 85 = 35.",
+        "The difference in length is 35 cm."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting for 'difference'.",
+        "Subtracting in the wrong order."
+      ],
+      "hints": [
+        "'Difference' is a clue to subtract.",
+        "120 - 85 = 35 cm."
+      ],
+      "tags": [
+        "measurement",
+        "length",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_005",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "medium",
+      "questionText": "A watermelon weighs 4 kg and a pineapple weighs 1 kg 200 g. What is their total mass?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "5 kg 200 g",
+        "5200 g",
+        "5.2 kg"
+      ],
+      "stepByStepSolution": [
+        "Convert to the same unit or add kg and g parts separately.",
+        "4 kg + 1 kg 200 g = 5 kg 200 g.",
+        "The total mass is 5 kg 200 g."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to carry the grams correctly.",
+        "Adding only the kilogram parts and ignoring the grams."
+      ],
+      "hints": [
+        "Add the kilograms together, then add the grams.",
+        "4 kg + 1 kg = 5 kg, plus the extra 200 g."
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "addition",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_006",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "medium",
+      "questionText": "Which unit would you use to measure the mass of a small paperclip? A) kilograms   B) grams   C) litres",
+      "questionType": "multiple_choice",
+      "answerKey": "grams",
+      "stepByStepSolution": [
+        "A paperclip is very light.",
+        "Grams are used for measuring small, light masses.",
+        "Kilograms would be too large a unit, and litres measure capacity, not mass."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilograms for a very light object.",
+        "Confusing mass units with capacity units."
+      ],
+      "hints": [
+        "Think about how light a paperclip is.",
+        "Grams are for small masses; kilograms are for heavier objects."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "mass"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_007",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "hard",
+      "questionText": "A tank holds 10 litres. If 3 L 500 mL is used, how much water is left in the tank?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "6 L 500 mL",
+        "6500 mL",
+        "6.5 L"
+      ],
+      "stepByStepSolution": [
+        "Convert 10 litres to 10 L 0 mL, or think of it as 10000 mL.",
+        "Subtract 3 L 500 mL (3500 mL) from 10000 mL.",
+        "10000 - 3500 = 6500 mL, which is 6 L 500 mL."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to borrow correctly when subtracting the millilitres.",
+        "Subtracting only the litre parts and ignoring the millilitres."
+      ],
+      "hints": [
+        "Convert everything to millilitres to make subtracting easier.",
+        "10000 mL - 3500 mL = 6500 mL."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "subtraction",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_008",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "hard",
+      "questionText": "Three pieces of string measure 15 cm, 22 cm, and 18 cm. What is their total length?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "55 cm",
+        "55"
+      ],
+      "stepByStepSolution": [
+        "Add all three lengths together.",
+        "15 + 22 + 18 = 55.",
+        "The total length is 55 cm."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add all three pieces.",
+        "Adding incorrectly."
+      ],
+      "hints": [
+        "Add the three lengths one at a time.",
+        "15 + 22 = 37, then 37 + 18 = 55."
+      ],
+      "tags": [
+        "measurement",
+        "length",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_009",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "hard",
+      "questionText": "A recipe needs 250 g of flour and 150 g of sugar. What is the total mass of flour and sugar needed?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "400 g",
+        "400"
+      ],
+      "stepByStepSolution": [
+        "Add the two masses together.",
+        "250 + 150 = 400.",
+        "The total mass needed is 400 g."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Miscalculating the addition."
+      ],
+      "hints": [
+        "'Total mass needed' is a clue to add.",
+        "250 + 150 = 400 g."
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MEASPROB_Y3_010",
+      "skillId": "M3M02_measurement_problems",
+      "difficulty": "hard",
+      "questionText": "When solving a measurement word problem with different units (like kg and g), what should you do first? A) ignore the units and just use the numbers   B) convert all measurements to the same unit   C) always convert to the largest unit",
+      "questionType": "multiple_choice",
+      "answerKey": "convert all measurements to the same unit",
+      "stepByStepSolution": [
+        "Mixing units (like kg and g) without converting can lead to mistakes.",
+        "Converting everything to the same unit first makes the calculation accurate.",
+        "It doesn't have to be the largest unit specifically \u2014 just a matching one."
+      ],
+      "commonMisconceptions": [
+        "Trying to add or subtract numbers with different units directly.",
+        "Thinking you always must convert to the largest unit."
+      ],
+      "hints": [
+        "Make sure all measurements use the same unit before calculating.",
+        "You could convert everything to grams or everything to kilograms \u2014 just be consistent."
+      ],
+      "tags": [
+        "measurement",
+        "conversion",
+        "strategy"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_001",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "easy",
+      "questionText": "How many possible outcomes are there when flipping one coin?",
+      "questionType": "short_answer",
+      "answerKey": "2",
+      "stepByStepSolution": [
+        "A coin has two sides: heads and tails.",
+        "Flipping it can only land on one of these two sides.",
+        "So there are 2 possible outcomes."
+      ],
+      "commonMisconceptions": [
+        "Thinking there are more than 2 outcomes.",
+        "Forgetting one of the two sides."
+      ],
+      "hints": [
+        "Think about how many sides a coin has.",
+        "Each side is a possible outcome."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "outcomes"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_002",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "easy",
+      "questionText": "Name the two possible outcomes when flipping a coin.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "heads and tails",
+        "heads, tails"
+      ],
+      "stepByStepSolution": [
+        "A coin has two sides.",
+        "These sides are called heads and tails.",
+        "So the two outcomes are heads and tails."
+      ],
+      "commonMisconceptions": [
+        "Naming only one outcome instead of both.",
+        "Using incorrect names for the coin sides."
+      ],
+      "hints": [
+        "Think of the two sides of a coin by name.",
+        "One side is heads, the other is tails."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "outcomes"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_003",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "easy",
+      "questionText": "How many possible outcomes are there when rolling a standard 6-sided die?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "A standard die has faces numbered 1 to 6.",
+        "Rolling it can land on any one of these 6 numbers.",
+        "So there are 6 possible outcomes."
+      ],
+      "commonMisconceptions": [
+        "Confusing the number of outcomes with the numbers themselves.",
+        "Forgetting the die has exactly 6 faces."
+      ],
+      "hints": [
+        "Count the faces on a standard die.",
+        "Each face shows a different possible outcome."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "outcomes"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_004",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "medium",
+      "questionText": "If you roll a die 10 times and record the results, what are you creating?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "a record of outcomes",
+        "a tally or results table",
+        "a list of results from the experiment"
+      ],
+      "stepByStepSolution": [
+        "Recording each roll's result keeps track of what happened.",
+        "This creates a record, list, or tally of the outcomes from the experiment.",
+        "It helps you see patterns in the results."
+      ],
+      "commonMisconceptions": [
+        "Thinking recording results has no purpose.",
+        "Confusing recording results with predicting future rolls."
+      ],
+      "hints": [
+        "Think about why scientists write down what happens in an experiment.",
+        "A record or tally helps track outcomes over multiple tries."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "recording"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_005",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "medium",
+      "questionText": "Which of these is a fair way to conduct a chance experiment? A) using a die with two sides weighted heavier   B) flipping a normal, evenly balanced coin   C) always choosing the same outcome yourself",
+      "questionType": "multiple_choice",
+      "answerKey": "flipping a normal, evenly balanced coin",
+      "stepByStepSolution": [
+        "A fair experiment gives every outcome an equal chance.",
+        "A weighted die or choosing the outcome yourself isn't random or fair.",
+        "A normal, balanced coin gives heads and tails an equal chance."
+      ],
+      "commonMisconceptions": [
+        "Thinking a weighted die is still fair.",
+        "Confusing choosing an outcome yourself with a random experiment."
+      ],
+      "hints": [
+        "A fair experiment should be random, not controlled by the person.",
+        "An evenly balanced coin gives equal chances to each side."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "fairness"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_006",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "medium",
+      "questionText": "If you flip a coin 20 times, roughly how many times would you expect to get heads?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "about 10",
+        "around 10",
+        "roughly 10"
+      ],
+      "stepByStepSolution": [
+        "A fair coin has an equal chance of heads or tails.",
+        "Over 20 flips, you'd expect roughly half to be heads.",
+        "Half of 20 is 10, so about 10 heads would be expected."
+      ],
+      "commonMisconceptions": [
+        "Expecting exactly 20 heads (all of them).",
+        "Not understanding that chance events can still vary from the expected average."
+      ],
+      "hints": [
+        "Think about half of the total number of flips.",
+        "20 divided by 2 is 10."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "prediction"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_007",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "medium",
+      "questionText": "What is it called when you write down the result each time you repeat a chance experiment?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "recording the outcome",
+        "recording results",
+        "keeping a tally"
+      ],
+      "stepByStepSolution": [
+        "Each time you repeat an experiment, you note what happened.",
+        "This process is called recording the outcome or keeping a tally.",
+        "It helps build a full picture of the results over many trials."
+      ],
+      "commonMisconceptions": [
+        "Thinking you only need to record the final result, not each trial.",
+        "Confusing recording with predicting."
+      ],
+      "hints": [
+        "Think about how scientists keep track of experiment results.",
+        "Recording means writing down what happens each time."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "recording"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_008",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "hard",
+      "questionText": "In a bag of 10 marbles, 4 are blue and 6 are red. If you conduct an experiment by drawing marbles (and replacing each time) 10 times, which colour would you expect to be drawn most often?",
+      "questionType": "short_answer",
+      "answerKey": "red",
+      "stepByStepSolution": [
+        "There are more red marbles (6) than blue marbles (4) in the bag.",
+        "This means there's a bigger chance of drawing a red marble each time.",
+        "So red would likely be drawn most often over many draws."
+      ],
+      "commonMisconceptions": [
+        "Thinking each colour has an equal chance regardless of the numbers.",
+        "Confusing 'most often' with 'always'."
+      ],
+      "hints": [
+        "Compare how many marbles of each colour are in the bag.",
+        "More marbles of a colour means a higher chance of drawing that colour."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "prediction"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_009",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "hard",
+      "questionText": "Why is it useful to repeat a chance experiment many times (like rolling a die 50 times) instead of just once? A) it gives a better idea of the likely pattern of outcomes   B) it always predicts the exact next outcome   C) it changes the chance of each outcome",
+      "questionType": "multiple_choice",
+      "answerKey": "it gives a better idea of the likely pattern of outcomes",
+      "stepByStepSolution": [
+        "A single roll doesn't tell you much about overall patterns.",
+        "Repeating an experiment many times shows a clearer pattern of how often each outcome occurs.",
+        "It doesn't predict a specific next result or change the actual odds."
+      ],
+      "commonMisconceptions": [
+        "Thinking more trials guarantee a specific future outcome.",
+        "Thinking repeating an experiment changes the underlying chance."
+      ],
+      "hints": [
+        "Think about why scientists repeat experiments rather than doing them once.",
+        "More trials give a clearer overall pattern."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "purpose"
+      ]
+    },
+    {
+      "id": "M3CHANCEEXP_Y3_010",
+      "skillId": "M3P02_chance_experiments",
+      "difficulty": "hard",
+      "questionText": "If you toss a coin and it lands on heads 7 times out of 10 tosses, how many times did it land on tails?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "There are only two possible outcomes: heads or tails.",
+        "If heads happened 7 times out of 10, the rest must be tails.",
+        "10 - 7 = 3, so tails happened 3 times."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting to find the remaining tosses.",
+        "Assuming tails must also be 7."
+      ],
+      "hints": [
+        "Total tosses minus heads gives the number of tails.",
+        "10 - 7 = 3."
+      ],
+      "tags": [
+        "chance",
+        "experiments",
+        "recording"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_001",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "easy",
+      "questionText": "How many syllables are in the word 'elephant'?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Break the word into its beats: el-e-phant.",
+        "Count the beats: el (1), e (2), phant (3).",
+        "So 'elephant' has 3 syllables."
+      ],
+      "commonMisconceptions": [
+        "Miscounting the syllable breaks.",
+        "Splitting the word in the wrong places."
+      ],
+      "hints": [
+        "Clap out the word: el-e-phant.",
+        "Each clap or beat is one syllable."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "syllables"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_002",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "easy",
+      "questionText": "How many syllables are in the word 'butterfly'?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Break the word into its beats: but-ter-fly.",
+        "Count the beats: but (1), ter (2), fly (3).",
+        "So 'butterfly' has 3 syllables."
+      ],
+      "commonMisconceptions": [
+        "Miscounting the syllable breaks.",
+        "Thinking 'butterfly' has only 2 syllables."
+      ],
+      "hints": [
+        "Clap out the word: but-ter-fly.",
+        "Each clap or beat is one syllable."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "syllables"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_003",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "medium",
+      "questionText": "Break the word 'important' into its syllables.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "im-por-tant",
+        "im por tant"
+      ],
+      "stepByStepSolution": [
+        "Say the word slowly to find the natural breaks.",
+        "The word breaks into three parts: im, por, tant.",
+        "So 'important' breaks into im-por-tant."
+      ],
+      "commonMisconceptions": [
+        "Splitting the word in the wrong places.",
+        "Missing a syllable break."
+      ],
+      "hints": [
+        "Say the word slowly and listen for each beat.",
+        "im-por-tant has three clear parts."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "syllables"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_004",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "medium",
+      "questionText": "When reading aloud with expression, what should your voice do at the end of a question? A) stay flat   B) rise slightly   C) get quieter",
+      "questionType": "multiple_choice",
+      "answerKey": "rise slightly",
+      "stepByStepSolution": [
+        "Questions usually have a rising tone at the end when spoken aloud.",
+        "This helps the listener know it's a question, not a statement.",
+        "So the voice should rise slightly."
+      ],
+      "commonMisconceptions": [
+        "Keeping the voice flat, as if reading a statement.",
+        "Thinking volume (loud/quiet) is the same as tone/pitch."
+      ],
+      "hints": [
+        "Think about how your voice naturally sounds when you ask a question.",
+        "A rising tone signals a question to the listener."
+      ],
+      "tags": [
+        "fluency",
+        "expression"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_005",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "medium",
+      "questionText": "What does 'phrasing' mean when reading aloud?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "grouping words together in meaningful chunks rather than word by word",
+        "reading in meaningful groups of words, not one word at a time",
+        "reading in natural word groups"
+      ],
+      "stepByStepSolution": [
+        "Reading word-by-word can sound choppy and hard to follow.",
+        "Phrasing means grouping words into natural, meaningful chunks as you read.",
+        "This makes reading aloud sound smoother and clearer."
+      ],
+      "commonMisconceptions": [
+        "Thinking phrasing just means reading fast.",
+        "Confusing phrasing with pronunciation."
+      ],
+      "hints": [
+        "Think about how you naturally group words when speaking.",
+        "Good phrasing sounds like natural speech, not robotic word-by-word reading."
+      ],
+      "tags": [
+        "fluency",
+        "phrasing"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_006",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "medium",
+      "questionText": "Break the multisyllabic word 'disappearing' into its base word plus affixes.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "dis + appear + ing",
+        "dis-appear-ing"
+      ],
+      "stepByStepSolution": [
+        "Look for a prefix at the start and a suffix at the end.",
+        "The prefix is 'dis-', the base word is 'appear', and the suffix is '-ing'.",
+        "So it breaks down as dis + appear + ing."
+      ],
+      "commonMisconceptions": [
+        "Only identifying one affix instead of both.",
+        "Misspelling the base word."
+      ],
+      "hints": [
+        "Look for a word part at the start and another at the end.",
+        "The middle part left over is the base word."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "morphemes"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_007",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "hard",
+      "questionText": "How many syllables are in the word 'refrigerator'?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Break the word into its beats: re-frig-er-a-tor.",
+        "Count the beats: re (1), frig (2), er (3), a (4), tor (5).",
+        "So 'refrigerator' has 5 syllables."
+      ],
+      "commonMisconceptions": [
+        "Miscounting a long, unfamiliar word's syllables.",
+        "Combining two syllables into one beat."
+      ],
+      "hints": [
+        "Say the word slowly, one part at a time.",
+        "re-frig-er-a-tor has five clear parts."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "syllables"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_008",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "hard",
+      "questionText": "What strategy could help you decode the unfamiliar word 'unbreakable'?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "break it into prefix, base word, and suffix (un-break-able)",
+        "split it into smaller word parts you know",
+        "look for a prefix and suffix around a base word"
+      ],
+      "stepByStepSolution": [
+        "Long words can be broken into smaller, familiar parts.",
+        "'Unbreakable' has the prefix 'un-', the base word 'break', and the suffix '-able'.",
+        "Breaking it into these parts makes it easier to read and understand."
+      ],
+      "commonMisconceptions": [
+        "Trying to read the whole long word at once without breaking it apart.",
+        "Ignoring recognisable prefixes and suffixes."
+      ],
+      "hints": [
+        "Look for a prefix and suffix you recognise.",
+        "The base word 'break' should be familiar to you."
+      ],
+      "tags": [
+        "fluency",
+        "decoding",
+        "morphemes"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_009",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "hard",
+      "questionText": "Why is reading with appropriate expression important? A) it helps convey meaning and keeps the listener engaged   B) it makes reading faster   C) it has no real purpose",
+      "questionType": "multiple_choice",
+      "answerKey": "it helps convey meaning and keeps the listener engaged",
+      "stepByStepSolution": [
+        "Flat, expressionless reading can be hard to follow and boring to listen to.",
+        "Reading with expression helps show meaning, emotion, and keeps listeners interested.",
+        "It isn't really about reading faster."
+      ],
+      "commonMisconceptions": [
+        "Thinking expression is just about speed.",
+        "Thinking expression doesn't matter for understanding."
+      ],
+      "hints": [
+        "Think about the difference between a flat voice and an expressive one when telling a story.",
+        "Expression helps convey the meaning and feeling of the text."
+      ],
+      "tags": [
+        "fluency",
+        "expression",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EFLUENCY_Y3_010",
+      "skillId": "E3LY09_01_fluency_decoding",
+      "difficulty": "hard",
+      "questionText": "What does it mean to 'decode' a word?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to work out how to read/pronounce a word using letter-sound and word-part knowledge",
+        "to sound out and read a word using its letters and parts",
+        "figuring out how to read an unfamiliar word"
+      ],
+      "stepByStepSolution": [
+        "Decoding is a reading skill for figuring out unfamiliar words.",
+        "It uses knowledge of letter sounds and word parts (like prefixes and suffixes) to work out pronunciation.",
+        "This helps readers read new or tricky words successfully."
+      ],
+      "commonMisconceptions": [
+        "Confusing decoding with understanding a word's meaning.",
+        "Thinking decoding only applies to short, simple words."
+      ],
+      "hints": [
+        "Think about what you do when you come across a tricky new word.",
+        "You use the letters and word parts to sound it out."
+      ],
+      "tags": [
+        "fluency",
+        "decoding"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_001",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "easy",
+      "questionText": "What should you check first when editing your writing? A) whether it makes sense and answers the task   B) the colour of your pen   C) how long the writing is",
+      "questionType": "multiple_choice",
+      "answerKey": "whether it makes sense and answers the task",
+      "stepByStepSolution": [
+        "Editing is about improving the quality and clarity of writing.",
+        "Checking that it makes sense and does what the task asked is the most important first step.",
+        "The colour of the pen and the writing's length aren't the priority."
+      ],
+      "commonMisconceptions": [
+        "Focusing only on length rather than quality or clarity.",
+        "Thinking presentation matters more than content when editing."
+      ],
+      "hints": [
+        "Think about the purpose of editing \u2014 improving your writing's quality.",
+        "Meaning and task completion come before smaller details."
+      ],
+      "tags": [
+        "editing",
+        "strategy"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_002",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "easy",
+      "questionText": "Fix the punctuation: 'the dog ran fast'",
+      "questionType": "short_answer",
+      "answerKey": "The dog ran fast.",
+      "stepByStepSolution": [
+        "A sentence should start with a capital letter.",
+        "A sentence should end with a full stop.",
+        "So the fixed sentence is: 'The dog ran fast.'"
+      ],
+      "commonMisconceptions": [
+        "Forgetting the capital letter at the start.",
+        "Forgetting the full stop at the end."
+      ],
+      "hints": [
+        "Check the first letter and the last punctuation mark.",
+        "Every sentence needs a capital letter and end punctuation."
+      ],
+      "tags": [
+        "editing",
+        "punctuation"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_003",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "medium",
+      "questionText": "Fix the tense: 'Yesterday, I go to the park.'",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Yesterday, I went to the park.",
+        "I went to the park yesterday."
+      ],
+      "stepByStepSolution": [
+        "The word 'yesterday' shows the sentence is about the past.",
+        "'Go' is present tense, but it should be 'went' (past tense) to match.",
+        "The fixed sentence is: 'Yesterday, I went to the park.'"
+      ],
+      "commonMisconceptions": [
+        "Leaving the verb in present tense despite the past-tense clue word.",
+        "Changing the wrong word in the sentence."
+      ],
+      "hints": [
+        "Look for time clue words like 'yesterday'.",
+        "Change the verb to match the correct tense."
+      ],
+      "tags": [
+        "editing",
+        "tense"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_004",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "medium",
+      "questionText": "Which sentence has consistent tense? A) She walked to school and eats her lunch.   B) She walked to school and ate her lunch.   C) She walks to school and ate her lunch.",
+      "questionType": "multiple_choice",
+      "answerKey": "She walked to school and ate her lunch.",
+      "stepByStepSolution": [
+        "Options A and C mix past and present tense within the same sentence.",
+        "Option B uses past tense consistently throughout: 'walked' and 'ate'.",
+        "Consistent tense makes writing clearer."
+      ],
+      "commonMisconceptions": [
+        "Not noticing a tense switch partway through a sentence.",
+        "Choosing an option that mixes tenses."
+      ],
+      "hints": [
+        "Check that all the verbs in a sentence match the same time period.",
+        "Both verbs should be past tense if the sentence is about the past."
+      ],
+      "tags": [
+        "editing",
+        "tense"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_005",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "medium",
+      "questionText": "Fix the spelling mistake: 'The childs were playing outside.'",
+      "questionType": "short_answer",
+      "answerKey": "The children were playing outside.",
+      "stepByStepSolution": [
+        "'Childs' is not the correct plural of 'child'.",
+        "The correct irregular plural is 'children'.",
+        "The fixed sentence is: 'The children were playing outside.'"
+      ],
+      "commonMisconceptions": [
+        "Adding 's' to 'child' instead of using the irregular plural.",
+        "Not recognising 'children' as the correct plural."
+      ],
+      "hints": [
+        "Some plurals don't just add 's' \u2014 they're irregular.",
+        "The plural of 'child' is 'children'."
+      ],
+      "tags": [
+        "editing",
+        "spelling"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_006",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "medium",
+      "questionText": "Why is it important to start a new paragraph for a new idea?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it makes the writing easier to follow and organised",
+        "it helps organise ideas clearly for the reader",
+        "so the reader can follow each idea separately"
+      ],
+      "stepByStepSolution": [
+        "Mixing many ideas in one paragraph can confuse the reader.",
+        "Starting a new paragraph for each new idea keeps writing organised and clear.",
+        "This helps the reader follow the writing more easily."
+      ],
+      "commonMisconceptions": [
+        "Thinking paragraphs are just about length, not ideas.",
+        "Cramming multiple unrelated ideas into one paragraph."
+      ],
+      "hints": [
+        "Think about how paragraphs help organise longer pieces of writing.",
+        "Each paragraph should usually focus on one main idea."
+      ],
+      "tags": [
+        "editing",
+        "paragraphs"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_007",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "hard",
+      "questionText": "Add a describing word before 'dog' in this sentence: 'The ___ dog ran.'",
+      "questionType": "short_answer",
+      "answerKey": [
+        "big",
+        "small",
+        "brown",
+        "happy",
+        "excited",
+        "fluffy",
+        "little",
+        "friendly"
+      ],
+      "stepByStepSolution": [
+        "A describing word (adjective) adds detail about the noun.",
+        "Words like 'big', 'small', 'brown', or 'fluffy' all describe a dog.",
+        "Adding one improves the sentence with more detail."
+      ],
+      "commonMisconceptions": [
+        "Using a word that isn't a describing word (like a verb).",
+        "Leaving the sentence unchanged."
+      ],
+      "hints": [
+        "Think of a word that describes what the dog looks or acts like.",
+        "An adjective goes before the noun it describes."
+      ],
+      "tags": [
+        "editing",
+        "adjectives",
+        "detail"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_008",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "hard",
+      "questionText": "Remove the unnecessary repeated word: 'The the cat sat on the mat.'",
+      "questionType": "short_answer",
+      "answerKey": "The cat sat on the mat.",
+      "stepByStepSolution": [
+        "The word 'the' is repeated at the very start of the sentence.",
+        "Removing the extra 'the' fixes the mistake.",
+        "The corrected sentence is: 'The cat sat on the mat.'"
+      ],
+      "commonMisconceptions": [
+        "Removing the wrong 'the' from later in the sentence.",
+        "Missing the repeated word altogether."
+      ],
+      "hints": [
+        "Look carefully at the very beginning of the sentence.",
+        "Only one 'the' is needed before 'cat'."
+      ],
+      "tags": [
+        "editing",
+        "proofreading"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_009",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "hard",
+      "questionText": "Which is the best reason to edit your writing after a first draft? A) to make it look neater only   B) to improve clarity, correct mistakes, and strengthen ideas   C) editing isn't necessary if the story is good",
+      "questionType": "multiple_choice",
+      "answerKey": "to improve clarity, correct mistakes, and strengthen ideas",
+      "stepByStepSolution": [
+        "Editing is about more than just neat handwriting.",
+        "It involves fixing mistakes, making meaning clearer, and improving ideas.",
+        "Even a good first draft can usually be strengthened through editing."
+      ],
+      "commonMisconceptions": [
+        "Thinking editing is only about neatness or presentation.",
+        "Believing editing is optional if the first draft seems fine."
+      ],
+      "hints": [
+        "Think about all the things editing can improve, not just appearance.",
+        "Good writers always edit, even strong first drafts."
+      ],
+      "tags": [
+        "editing",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EEDIT_Y3_010",
+      "skillId": "E3LY06_07_editing_writing",
+      "difficulty": "hard",
+      "questionText": "What is one thing you should check about punctuation when editing a piece of writing?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "that sentences start with a capital letter and end with correct punctuation",
+        "capital letters and full stops or question marks are used correctly",
+        "commas, full stops, and capital letters are correct"
+      ],
+      "stepByStepSolution": [
+        "Punctuation includes capital letters, full stops, question marks, and commas.",
+        "Checking that sentences start with a capital letter and end correctly is a key editing step.",
+        "This makes the writing clear and correctly structured."
+      ],
+      "commonMisconceptions": [
+        "Only checking spelling and ignoring punctuation.",
+        "Forgetting to check the end punctuation of every sentence."
+      ],
+      "hints": [
+        "Read through and check the start and end of every sentence.",
+        "Look for capital letters, full stops, question marks, and commas."
+      ],
+      "tags": [
+        "editing",
+        "punctuation"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_001",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "easy",
+      "questionText": "Choose the correct homophone: 'I can ___ (see/sea) the ocean from here.'",
+      "questionType": "short_answer",
+      "answerKey": "see",
+      "stepByStepSolution": [
+        "'See' means to look at or view something with your eyes.",
+        "'Sea' refers to the ocean itself.",
+        "Since the sentence is about looking at the ocean, 'see' is correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'see' (to view) with 'sea' (the ocean).",
+        "Not checking the meaning of the sentence."
+      ],
+      "hints": [
+        "Think about what each word means: 'see' is a verb, 'sea' is a place.",
+        "The sentence needs a verb meaning 'to view'."
+      ],
+      "tags": [
+        "spelling",
+        "homophones"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_002",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "easy",
+      "questionText": "Choose the correct homophone: 'They went ___ (there/their) house.'",
+      "questionType": "short_answer",
+      "answerKey": "their",
+      "stepByStepSolution": [
+        "'Their' shows possession (belonging to them).",
+        "'There' refers to a place.",
+        "Since the sentence is about 'their house' (belonging to them), 'their' is correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'their' (possession) with 'there' (place).",
+        "Not checking which meaning fits the sentence."
+      ],
+      "hints": [
+        "'Their' shows something belongs to a group of people.",
+        "'There' points to a location."
+      ],
+      "tags": [
+        "spelling",
+        "homophones"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_003",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "easy",
+      "questionText": "Choose the correct homophone: '___ (Its/It's) raining outside.'",
+      "questionType": "short_answer",
+      "answerKey": "It's",
+      "stepByStepSolution": [
+        "'It's' is a contraction of 'it is'.",
+        "'Its' shows possession (belonging to it).",
+        "Since the sentence means 'it is raining', 'It's' is correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'it's' (it is) with 'its' (possession).",
+        "Not checking whether the sentence means 'it is'."
+      ],
+      "hints": [
+        "Try replacing the word with 'it is' \u2014 does the sentence still make sense?",
+        "'It's' with an apostrophe means 'it is'."
+      ],
+      "tags": [
+        "spelling",
+        "homophones",
+        "apostrophes"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_004",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "medium",
+      "questionText": "Add the suffix '-ing' to 'run'. Remember to double the last letter. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "running",
+      "stepByStepSolution": [
+        "'Run' ends in a single consonant after a single vowel.",
+        "This means you double the final consonant before adding '-ing'.",
+        "So 'run' + 'ing' becomes 'running'."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to double the final consonant.",
+        "Writing 'runing' instead of 'running'."
+      ],
+      "hints": [
+        "Short words ending in one vowel + one consonant often double that consonant.",
+        "'Run' becomes 'runn' before adding 'ing'."
+      ],
+      "tags": [
+        "spelling",
+        "suffixes",
+        "doubling_rule"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_005",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "medium",
+      "questionText": "Add the suffix '-ed' to 'hop'. Remember to double the last letter. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "hopped",
+      "stepByStepSolution": [
+        "'Hop' ends in a single consonant after a single vowel.",
+        "This means you double the final consonant before adding '-ed'.",
+        "So 'hop' + 'ed' becomes 'hopped'."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to double the final consonant.",
+        "Writing 'hoped' instead of 'hopped' (which is a different word)."
+      ],
+      "hints": [
+        "Double the final consonant before adding the ending.",
+        "'Hop' becomes 'hopp' before adding 'ed'."
+      ],
+      "tags": [
+        "spelling",
+        "suffixes",
+        "doubling_rule"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_006",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "medium",
+      "questionText": "Add the suffix '-ing' to 'make'. Remember to drop the silent 'e'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "making",
+      "stepByStepSolution": [
+        "'Make' ends in a silent 'e'.",
+        "When adding '-ing', drop the silent 'e' first.",
+        "So 'make' + 'ing' becomes 'making'."
+      ],
+      "commonMisconceptions": [
+        "Keeping the silent 'e' and writing 'makeing'.",
+        "Doubling the final consonant instead of dropping the 'e'."
+      ],
+      "hints": [
+        "Words ending in a silent 'e' usually drop the 'e' before '-ing'.",
+        "'Make' loses its 'e' to become 'mak', then add 'ing'."
+      ],
+      "tags": [
+        "spelling",
+        "suffixes",
+        "silent_e_rule"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_007",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "medium",
+      "questionText": "Which word contains the vowel cluster 'ough' pronounced like 'off'? A) though   B) cough   C) through",
+      "questionType": "multiple_choice",
+      "answerKey": "cough",
+      "stepByStepSolution": [
+        "'Ough' can be pronounced many different ways in English.",
+        "In 'cough', it is pronounced like 'off'.",
+        "In 'though' it sounds like 'oh', and in 'through' it sounds like 'oo'."
+      ],
+      "commonMisconceptions": [
+        "Assuming 'ough' is always pronounced the same way.",
+        "Confusing the pronunciation in 'though' or 'through' with 'cough'."
+      ],
+      "hints": [
+        "Say each word aloud and listen to the 'ough' sound.",
+        "'Cough' rhymes with 'off'."
+      ],
+      "tags": [
+        "spelling",
+        "vowel_clusters"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_008",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "hard",
+      "questionText": "Choose the correct homophone: 'Please ___ (write/right) your name here.'",
+      "questionType": "short_answer",
+      "answerKey": "write",
+      "stepByStepSolution": [
+        "'Write' means to put words on paper.",
+        "'Right' can mean correct or a direction.",
+        "Since the sentence is about writing your name, 'write' is correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'write' (to write words) with 'right' (correct/direction).",
+        "Not checking the meaning needed in the sentence."
+      ],
+      "hints": [
+        "Think about which word means 'to write words down'.",
+        "'Right' relates to correctness or direction, not writing."
+      ],
+      "tags": [
+        "spelling",
+        "homophones"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_009",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "hard",
+      "questionText": "Add the suffix '-ed' to 'hope'. Remember to drop the silent 'e'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "hoped",
+      "stepByStepSolution": [
+        "'Hope' ends in a silent 'e'.",
+        "When adding '-ed', drop the silent 'e' first.",
+        "So 'hope' + 'ed' becomes 'hoped'."
+      ],
+      "commonMisconceptions": [
+        "Keeping the silent 'e' and writing 'hopeed'.",
+        "Confusing 'hoped' with 'hopped' (a different base word, 'hop')."
+      ],
+      "hints": [
+        "Words ending in silent 'e' drop the 'e' before adding '-ed'.",
+        "'Hope' loses its 'e' to become 'hop', then add 'ed' \u2014 but be careful not to double the 'p'."
+      ],
+      "tags": [
+        "spelling",
+        "suffixes",
+        "silent_e_rule"
+      ]
+    },
+    {
+      "id": "ESPELL_Y3_010",
+      "skillId": "E3LY11_10_spelling_patterns",
+      "difficulty": "hard",
+      "questionText": "Explain the spelling rule for adding '-ing' to a short word ending in a single consonant after a single vowel, like 'run' or 'hop'.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "double the final consonant before adding -ing",
+        "you double the last letter before adding the ending",
+        "double the final letter, then add -ing"
+      ],
+      "stepByStepSolution": [
+        "Words like 'run' and 'hop' have one vowel followed by one consonant at the end.",
+        "For these short words, you double the final consonant before adding '-ing'.",
+        "This keeps the vowel sound short, like in 'running' and 'hopping'."
+      ],
+      "commonMisconceptions": [
+        "Not doubling the consonant and writing an incorrect spelling.",
+        "Doubling the consonant even when the rule doesn't apply (like after a silent 'e')."
+      ],
+      "hints": [
+        "Check if the word ends in one vowel plus one consonant.",
+        "If so, double that final consonant before adding the ending."
+      ],
+      "tags": [
+        "spelling",
+        "suffixes",
+        "doubling_rule"
+      ]
+    }
+  ]
+}

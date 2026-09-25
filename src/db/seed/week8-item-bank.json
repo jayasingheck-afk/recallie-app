@@ -1,0 +1,1626 @@
+{
+  "_note": "Week 8 item bank: Term 1, Week 8 skills (Maths: unit fractions, 2D maps and plans, chance language; English: literature characters/themes/devices, writing imaginative texts, figurative language). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3FRAC_Y3_001",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "easy",
+      "questionText": "What fraction is one out of two equal parts?",
+      "questionType": "short_answer",
+      "answerKey": "1/2",
+      "stepByStepSolution": [
+        "One equal part out of two total parts is written as a fraction.",
+        "The top number (1) is the part, the bottom number (2) is the total parts.",
+        "So one out of two equal parts is 1/2."
+      ],
+      "commonMisconceptions": [
+        "Writing it as 2/1 instead of 1/2.",
+        "Confusing the numerator and denominator."
+      ],
+      "hints": [
+        "The bottom number shows how many equal parts in total.",
+        "The top number shows how many parts you have."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fractions"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_002",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "easy",
+      "questionText": "What fraction is one out of four equal parts?",
+      "questionType": "short_answer",
+      "answerKey": "1/4",
+      "stepByStepSolution": [
+        "One part out of four equal parts.",
+        "The numerator is 1, the denominator is 4.",
+        "So the fraction is 1/4."
+      ],
+      "commonMisconceptions": [
+        "Writing it as 4/1.",
+        "Confusing quarters with halves."
+      ],
+      "hints": [
+        "The bottom number shows the total number of equal parts.",
+        "1 out of 4 parts is written 1/4."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fractions"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_003",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "easy",
+      "questionText": "Which fraction shows one out of three equal parts? A) 1/2   B) 1/3   C) 1/4",
+      "questionType": "multiple_choice",
+      "answerKey": "1/3",
+      "stepByStepSolution": [
+        "One part out of three equal parts is 1/3.",
+        "1/2 is one out of two parts, and 1/4 is one out of four parts.",
+        "So the correct answer is 1/3."
+      ],
+      "commonMisconceptions": [
+        "Confusing 1/3 with 1/4 or 1/2.",
+        "Not matching the denominator to the number of total parts."
+      ],
+      "hints": [
+        "The bottom number should match the total number of parts.",
+        "Three equal parts means the denominator is 3."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fractions"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_004",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "medium",
+      "questionText": "On a number line from 0 to 1, where would 1/2 sit?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "halfway between 0 and 1",
+        "in the middle, halfway between 0 and 1",
+        "exactly in the middle"
+      ],
+      "stepByStepSolution": [
+        "1/2 means one of two equal parts of the whole distance from 0 to 1.",
+        "This point is exactly in the middle of the number line.",
+        "So 1/2 sits halfway between 0 and 1."
+      ],
+      "commonMisconceptions": [
+        "Placing 1/2 closer to 0 or closer to 1 instead of the middle.",
+        "Confusing 1/2 with a small fraction near 0."
+      ],
+      "hints": [
+        "1/2 is exactly half of the distance.",
+        "Halfway between 0 and 1 is the middle point."
+      ],
+      "tags": [
+        "fractions",
+        "number_line"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_005",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "medium",
+      "questionText": "Which is bigger, 1/4 or 1/8?",
+      "questionType": "short_answer",
+      "answerKey": "1/4",
+      "stepByStepSolution": [
+        "1/4 means the whole is split into 4 equal parts.",
+        "1/8 means the whole is split into 8 equal parts, so each part is smaller.",
+        "Since fewer, bigger parts make a bigger fraction, 1/4 is bigger than 1/8."
+      ],
+      "commonMisconceptions": [
+        "Thinking a bigger denominator (8) always means a bigger fraction.",
+        "Confusing the number of parts with the size of each part."
+      ],
+      "hints": [
+        "The more parts something is split into, the smaller each part is.",
+        "Splitting into 8 pieces makes smaller pieces than splitting into 4."
+      ],
+      "tags": [
+        "fractions",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_006",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "medium",
+      "questionText": "Which fraction represents one out of ten equal parts? A) 1/5   B) 1/8   C) 1/10",
+      "questionType": "multiple_choice",
+      "answerKey": "1/10",
+      "stepByStepSolution": [
+        "One part out of ten equal parts has a denominator of 10.",
+        "1/5 is one out of five parts, and 1/8 is one out of eight parts.",
+        "So the correct answer is 1/10."
+      ],
+      "commonMisconceptions": [
+        "Confusing 1/10 with 1/5 or 1/8.",
+        "Not matching the denominator to the total number of parts."
+      ],
+      "hints": [
+        "The denominator should match the total number of equal parts.",
+        "Ten equal parts means the bottom number is 10."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fractions"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_007",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "medium",
+      "questionText": "If a pizza is cut into 8 equal slices, what fraction does one slice represent?",
+      "questionType": "short_answer",
+      "answerKey": "1/8",
+      "stepByStepSolution": [
+        "The pizza is cut into 8 equal slices in total.",
+        "One slice out of those 8 equal parts is 1/8.",
+        "So one slice represents 1/8 of the pizza."
+      ],
+      "commonMisconceptions": [
+        "Writing 8/1 instead of 1/8.",
+        "Confusing the number of slices with the fraction of one slice."
+      ],
+      "hints": [
+        "The total number of slices becomes the denominator.",
+        "One slice is the numerator: 1."
+      ],
+      "tags": [
+        "fractions",
+        "unit_fractions",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_008",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "hard",
+      "questionText": "Order these fractions from smallest to largest: 1/2, 1/8, 1/4",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1/8, 1/4, 1/2"
+      ],
+      "stepByStepSolution": [
+        "The more parts a whole is split into, the smaller each part is.",
+        "1/8 has the most parts (smallest pieces), then 1/4, then 1/2 (fewest parts, biggest pieces).",
+        "So the order from smallest to largest is 1/8, 1/4, 1/2."
+      ],
+      "commonMisconceptions": [
+        "Ordering by the size of the denominator instead of the size of the fraction.",
+        "Thinking a bigger denominator means a bigger fraction."
+      ],
+      "hints": [
+        "More equal parts means smaller pieces.",
+        "Compare 8, 4, and 2 \u2014 more parts means smaller fractions."
+      ],
+      "tags": [
+        "fractions",
+        "comparing",
+        "ordering"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_009",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "hard",
+      "questionText": "Which is smaller, 1/5 or 1/10?",
+      "questionType": "short_answer",
+      "answerKey": "1/10",
+      "stepByStepSolution": [
+        "1/10 means the whole is split into 10 equal parts.",
+        "1/5 means the whole is split into only 5 equal parts, so each part is bigger.",
+        "Since 10 parts are smaller pieces than 5 parts, 1/10 is smaller than 1/5."
+      ],
+      "commonMisconceptions": [
+        "Thinking a bigger denominator (10) means a bigger fraction.",
+        "Confusing the number of parts with the size of the fraction."
+      ],
+      "hints": [
+        "More parts means smaller pieces.",
+        "Splitting into 10 pieces gives smaller pieces than splitting into 5."
+      ],
+      "tags": [
+        "fractions",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3FRAC_Y3_010",
+      "skillId": "M3N07_unit_fractions",
+      "difficulty": "hard",
+      "questionText": "On a number line from 0 to 1, which point is closer to 0: 1/10 or 1/2?",
+      "questionType": "short_answer",
+      "answerKey": "1/10",
+      "stepByStepSolution": [
+        "1/10 is a very small fraction, close to the start of the number line.",
+        "1/2 is halfway along the number line, much further from 0.",
+        "So 1/10 is closer to 0."
+      ],
+      "commonMisconceptions": [
+        "Thinking a fraction with a bigger denominator is further from 0.",
+        "Confusing the position of 1/10 and 1/2 on the number line."
+      ],
+      "hints": [
+        "Smaller fractions sit closer to 0 on a number line.",
+        "1/10 is a much smaller amount than 1/2."
+      ],
+      "tags": [
+        "fractions",
+        "number_line",
+        "comparing"
+      ]
+    },
+    {
+      "id": "M3MAP_Y3_001",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "easy",
+      "questionText": "Which room is north of the Classroom?",
+      "questionType": "short_answer",
+      "answerKey": "Library",
+      "stepByStepSolution": [
+        "Check the map description for what is directly north of the Classroom.",
+        "The map says 'The Library is directly north of the Classroom.'",
+        "So the Library is north of the Classroom."
+      ],
+      "commonMisconceptions": [
+        "Confusing north with south.",
+        "Guessing without checking the map description."
+      ],
+      "hints": [
+        "Look for the direction word 'north' in the map description.",
+        "North is the direction associated with the Library."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_002",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "easy",
+      "questionText": "Which room is south of the Classroom?",
+      "questionType": "short_answer",
+      "answerKey": "Canteen",
+      "stepByStepSolution": [
+        "Check the map description for what is directly south of the Classroom.",
+        "The map says 'The Canteen is directly south of the Classroom.'",
+        "So the Canteen is south of the Classroom."
+      ],
+      "commonMisconceptions": [
+        "Confusing south with north.",
+        "Mixing up the Canteen and Library positions."
+      ],
+      "hints": [
+        "Look for the direction word 'south' in the map description.",
+        "South is the direction associated with the Canteen."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_003",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "easy",
+      "questionText": "Which room is east of the Classroom?",
+      "questionType": "short_answer",
+      "answerKey": "Playground",
+      "stepByStepSolution": [
+        "Check the map description for what is directly east of the Classroom.",
+        "The map says 'The Playground is directly east of the Classroom.'",
+        "So the Playground is east of the Classroom."
+      ],
+      "commonMisconceptions": [
+        "Confusing east with west.",
+        "Guessing instead of checking the map description."
+      ],
+      "hints": [
+        "Look for the direction word 'east' in the map description.",
+        "East is the direction associated with the Playground."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_004",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "easy",
+      "questionText": "Which room is west of the Classroom?",
+      "questionType": "short_answer",
+      "answerKey": "Office",
+      "stepByStepSolution": [
+        "Check the map description for what is directly west of the Classroom.",
+        "The map says 'The Office is directly west of the Classroom.'",
+        "So the Office is west of the Classroom."
+      ],
+      "commonMisconceptions": [
+        "Confusing west with east.",
+        "Mixing up the Office and Playground positions."
+      ],
+      "hints": [
+        "Look for the direction word 'west' in the map description.",
+        "West is the direction associated with the Office."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_005",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "medium",
+      "questionText": "If you walk from the Classroom to the Library, which direction are you walking?",
+      "questionType": "short_answer",
+      "answerKey": "north",
+      "stepByStepSolution": [
+        "The Library is described as directly north of the Classroom.",
+        "So walking from the Classroom to the Library means walking north.",
+        "The direction is north."
+      ],
+      "commonMisconceptions": [
+        "Confusing the direction of travel with the opposite direction.",
+        "Guessing south instead of north."
+      ],
+      "hints": [
+        "Check which direction the Library is from the Classroom.",
+        "Walking towards a place means walking in that place's direction."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_006",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "medium",
+      "questionText": "If you walk from the Classroom to the Office, which direction are you walking?",
+      "questionType": "short_answer",
+      "answerKey": "west",
+      "stepByStepSolution": [
+        "The Office is described as directly west of the Classroom.",
+        "So walking from the Classroom to the Office means walking west.",
+        "The direction is west."
+      ],
+      "commonMisconceptions": [
+        "Confusing west with east.",
+        "Guessing without checking the map description."
+      ],
+      "hints": [
+        "Check which direction the Office is from the Classroom.",
+        "Walking towards a place means walking in that place's direction."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_007",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "medium",
+      "questionText": "On a map, what does a compass usually show? A) the scale of the map   B) the four main directions (N, S, E, W)   C) the names of buildings",
+      "questionType": "multiple_choice",
+      "answerKey": "the four main directions (N, S, E, W)",
+      "stepByStepSolution": [
+        "A compass symbol on a map is a tool for orientation.",
+        "It shows the four main directions: North, South, East, West.",
+        "It does not show scale or building names."
+      ],
+      "commonMisconceptions": [
+        "Confusing a compass with a map key/legend.",
+        "Thinking a compass shows distances instead of direction."
+      ],
+      "hints": [
+        "A compass helps you know which way is which on a map.",
+        "Think of N, S, E, W as the four main points."
+      ],
+      "tags": [
+        "maps_plans",
+        "map_features"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_008",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "medium",
+      "questionText": "If you are at the Playground and want to reach the Classroom, which direction should you walk?",
+      "questionType": "short_answer",
+      "answerKey": "west",
+      "stepByStepSolution": [
+        "The Playground is east of the Classroom.",
+        "To go back from the Playground to the Classroom, you walk in the opposite direction.",
+        "The opposite of east is west, so you should walk west."
+      ],
+      "commonMisconceptions": [
+        "Walking east again instead of reversing direction.",
+        "Confusing the direction from the Classroom with the direction back to it."
+      ],
+      "hints": [
+        "Think about the opposite direction from how you got there.",
+        "If the Playground is east of the Classroom, going back is west."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_009",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "hard",
+      "questionText": "If you are at the Library and want to reach the Canteen, passing through the Classroom, what direction would you walk the whole way?",
+      "questionType": "short_answer",
+      "answerKey": "south",
+      "stepByStepSolution": [
+        "The Library is north of the Classroom, and the Canteen is south of the Classroom.",
+        "So travelling from the Library through the Classroom to the Canteen is a straight line heading south.",
+        "The direction for the whole trip is south."
+      ],
+      "commonMisconceptions": [
+        "Thinking the direction changes partway through the trip.",
+        "Confusing the overall direction with a single leg of the journey."
+      ],
+      "hints": [
+        "Picture the Library, Classroom, and Canteen in a straight line.",
+        "Since the Library is north and the Canteen is south of the Classroom, the whole path goes south."
+      ],
+      "tags": [
+        "maps_plans",
+        "direction"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3MAP_Y3_010",
+      "skillId": "M3SP02_2d_maps_plans",
+      "difficulty": "hard",
+      "questionText": "Why are maps and plans useful for showing familiar environments? A) they use pictures instead of words   B) they show the position and layout of places clearly   C) they are always drawn to a large scale",
+      "questionType": "multiple_choice",
+      "answerKey": "they show the position and layout of places clearly",
+      "stepByStepSolution": [
+        "Maps aren't just pictures \u2014 they're organised representations of real places.",
+        "Their main purpose is to clearly show where things are located and how they relate to each other.",
+        "This makes finding your way around much easier."
+      ],
+      "commonMisconceptions": [
+        "Thinking maps are just decorative pictures.",
+        "Assuming all maps use a large scale."
+      ],
+      "hints": [
+        "Think about why you'd use a map to find your way somewhere.",
+        "Maps help show the layout and position of places clearly."
+      ],
+      "tags": [
+        "maps_plans",
+        "purpose"
+      ],
+      "passage": "Simple School Map: The Classroom is in the centre. The Library is directly north of the Classroom. The Canteen is directly south of the Classroom. The Playground is directly east of the Classroom. The Office is directly west of the Classroom."
+    },
+    {
+      "id": "M3CHANCE_Y3_001",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "easy",
+      "questionText": "The sun rising tomorrow is: A) impossible   B) unlikely   C) certain",
+      "questionType": "multiple_choice",
+      "answerKey": "certain",
+      "stepByStepSolution": [
+        "The sun rises every single day without fail.",
+        "This means there is no doubt it will happen.",
+        "So the sun rising tomorrow is certain."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'certain' with 'likely'.",
+        "Not recognising an event that always happens."
+      ],
+      "hints": [
+        "'Certain' means it will definitely happen.",
+        "Think about events that happen every day without exception."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_002",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "easy",
+      "questionText": "Rolling a 7 on a normal 6-sided die is: A) impossible   B) unlikely   C) certain",
+      "questionType": "multiple_choice",
+      "answerKey": "impossible",
+      "stepByStepSolution": [
+        "A normal die only has the numbers 1 to 6 on it.",
+        "There is no 7 on the die at all.",
+        "So rolling a 7 is impossible."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'impossible' with 'unlikely'.",
+        "Forgetting a standard die only goes up to 6."
+      ],
+      "hints": [
+        "'Impossible' means it cannot happen at all.",
+        "Check what numbers are actually on a standard die."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_003",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "easy",
+      "questionText": "It snowing in tropical Queensland in summer is: A) likely   B) unlikely   C) certain",
+      "questionType": "multiple_choice",
+      "answerKey": "unlikely",
+      "stepByStepSolution": [
+        "Tropical Queensland has a warm climate, especially in summer.",
+        "Snow is very rare there, though not completely impossible in theory.",
+        "So it snowing there in summer is unlikely."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'unlikely' with 'impossible'.",
+        "Not considering the climate described."
+      ],
+      "hints": [
+        "'Unlikely' means it probably won't happen, but isn't ruled out completely.",
+        "Think about the typical weather in a tropical place."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_004",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "medium",
+      "questionText": "Describe the chance of picking a red ball from a bag that only has red balls: use one word (certain, likely, unlikely, impossible).",
+      "questionType": "short_answer",
+      "answerKey": "certain",
+      "stepByStepSolution": [
+        "If every ball in the bag is red, there's no other colour to pick.",
+        "This means picking a red ball is guaranteed.",
+        "So the chance is certain."
+      ],
+      "commonMisconceptions": [
+        "Saying 'likely' instead of 'certain' when there's no other option.",
+        "Not recognising a guaranteed outcome."
+      ],
+      "hints": [
+        "If ALL the balls are one colour, what are the chances of picking that colour?",
+        "'Certain' means there's no doubt at all."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_005",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "medium",
+      "questionText": "Describe the chance of picking a blue ball from a bag with only red balls: use one word.",
+      "questionType": "short_answer",
+      "answerKey": "impossible",
+      "stepByStepSolution": [
+        "If the bag only has red balls, there is no blue ball to pick.",
+        "This means picking a blue ball cannot happen.",
+        "So the chance is impossible."
+      ],
+      "commonMisconceptions": [
+        "Saying 'unlikely' instead of 'impossible' when there's truly no option.",
+        "Confusing 'impossible' with 'unlikely'."
+      ],
+      "hints": [
+        "If a colour isn't in the bag at all, can you ever pick it?",
+        "'Impossible' means it cannot happen."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_006",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "medium",
+      "questionText": "Which event is 'likely' to happen? A) getting heads when flipping a fair coin   B) it raining in a rainforest this month   C) rolling a die and getting an 8",
+      "questionType": "multiple_choice",
+      "answerKey": "it raining in a rainforest this month",
+      "stepByStepSolution": [
+        "A fair coin flip is 50/50, so 'heads' is possible but not more likely than tails.",
+        "Rainforests get a lot of rain, so rain happening there this month is likely.",
+        "Rolling an 8 on a standard die is impossible."
+      ],
+      "commonMisconceptions": [
+        "Confusing an even chance (50/50) with 'likely'.",
+        "Missing that a die cannot show 8."
+      ],
+      "hints": [
+        "Think about which event happens often in that setting.",
+        "Rainforests are known for frequent rainfall."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_007",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "medium",
+      "questionText": "If a bag has 9 red balls and 1 blue ball, is picking a red ball likely or unlikely?",
+      "questionType": "short_answer",
+      "answerKey": "likely",
+      "stepByStepSolution": [
+        "Most of the balls in the bag (9 out of 10) are red.",
+        "This means there's a much bigger chance of picking a red ball than a blue one.",
+        "So picking a red ball is likely."
+      ],
+      "commonMisconceptions": [
+        "Thinking every outcome has an equal chance regardless of the numbers.",
+        "Confusing 'likely' with 'certain'."
+      ],
+      "hints": [
+        "Compare how many red balls there are to blue balls.",
+        "More red balls means a bigger chance of picking red."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_008",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "hard",
+      "questionText": "If a bag has 9 red balls and 1 blue ball, is picking a blue ball likely or unlikely?",
+      "questionType": "short_answer",
+      "answerKey": "unlikely",
+      "stepByStepSolution": [
+        "Only 1 out of the 10 balls in the bag is blue.",
+        "This means there's only a small chance of picking the blue ball.",
+        "So picking a blue ball is unlikely."
+      ],
+      "commonMisconceptions": [
+        "Thinking a small number of balls means 'impossible' instead of 'unlikely'.",
+        "Confusing 'unlikely' with 'certain'."
+      ],
+      "hints": [
+        "Compare how many blue balls there are to red balls.",
+        "Only 1 blue ball out of 10 means a small chance, not zero."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_009",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "hard",
+      "questionText": "Which word means something has no chance of happening at all? A) unlikely   B) impossible   C) certain",
+      "questionType": "multiple_choice",
+      "answerKey": "impossible",
+      "stepByStepSolution": [
+        "'Unlikely' means a small chance, not zero chance.",
+        "'Certain' means it will definitely happen.",
+        "'Impossible' means there is zero chance at all, which fits the description."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'unlikely' (small chance) with 'impossible' (no chance).",
+        "Confusing 'impossible' with 'certain'."
+      ],
+      "hints": [
+        "'Impossible' means it truly cannot happen.",
+        "Compare this to 'unlikely', which still has a small chance."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "M3CHANCE_Y3_010",
+      "skillId": "M3P01_chance_language",
+      "difficulty": "hard",
+      "questionText": "Which word means something will definitely happen? A) likely   B) certain   C) unlikely",
+      "questionType": "multiple_choice",
+      "answerKey": "certain",
+      "stepByStepSolution": [
+        "'Likely' means probably, but not guaranteed.",
+        "'Unlikely' means probably not.",
+        "'Certain' means it is guaranteed to happen, which fits the description."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'likely' (probable) with 'certain' (guaranteed).",
+        "Mixing up 'certain' and 'unlikely'."
+      ],
+      "hints": [
+        "'Certain' means there's no doubt at all.",
+        "Compare this to 'likely', which still leaves some doubt."
+      ],
+      "tags": [
+        "chance",
+        "language"
+      ]
+    },
+    {
+      "id": "ELITCHAR_Y3_001",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "easy",
+      "questionText": "Who is the main character in this story?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "the seed",
+        "the little seed",
+        "the tiny seed"
+      ],
+      "stepByStepSolution": [
+        "Look at who the story follows and describes throughout.",
+        "The whole story is about the seed's journey to grow.",
+        "So the main character is the seed."
+      ],
+      "commonMisconceptions": [
+        "Naming the sunflower and the seed as if they're two different characters.",
+        "Picking a minor detail instead of the main character."
+      ],
+      "hints": [
+        "Who does the story focus on from start to finish?",
+        "The character the story is 'about' is the main character."
+      ],
+      "tags": [
+        "literature",
+        "characters"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_002",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "easy",
+      "questionText": "Where does the story take place at the start?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "in the dark soil",
+        "deep in the dark soil",
+        "under the ground"
+      ],
+      "stepByStepSolution": [
+        "Look at the very first sentence of the story.",
+        "It says 'Deep in the dark soil, a tiny seed waited.'",
+        "So the story starts in the dark soil, underground."
+      ],
+      "commonMisconceptions": [
+        "Saying the story starts in the sunlight (that's the end setting).",
+        "Missing the opening setting detail."
+      ],
+      "hints": [
+        "Check the very beginning of the text for the setting.",
+        "The story starts underground, before the seed grows."
+      ],
+      "tags": [
+        "literature",
+        "setting"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_003",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "medium",
+      "questionText": "Find the simile in the text that compares the seed's size to something else.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "as small as a grain of sand",
+        "as small as a grain of sand, it whispered"
+      ],
+      "stepByStepSolution": [
+        "A simile uses 'like' or 'as' to compare two things.",
+        "The text says the seed felt 'as small as a grain of sand'.",
+        "This is the simile comparing the seed's size."
+      ],
+      "commonMisconceptions": [
+        "Picking a phrase that isn't a comparison using 'like' or 'as'.",
+        "Missing the simile entirely."
+      ],
+      "hints": [
+        "Look for the words 'as ... as' in the text.",
+        "The comparison is about how small the seed felt."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "simile"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_004",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "medium",
+      "questionText": "What word is repeated to show how hard the seed worked to grow?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "pushed",
+        "it pushed and pushed"
+      ],
+      "stepByStepSolution": [
+        "Look for a word that appears twice in a row in the text.",
+        "The text says 'it pushed and pushed, up through the cold, damp earth'.",
+        "The repeated word 'pushed' shows the effort involved."
+      ],
+      "commonMisconceptions": [
+        "Picking a word that only appears once.",
+        "Missing the repetition technique."
+      ],
+      "hints": [
+        "Look for a word used twice right next to each other.",
+        "Repetition can emphasise effort or struggle."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "repetition"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_005",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "medium",
+      "questionText": "What is a simile? A) a comparison using 'like' or 'as'   B) a word that repeats   C) a made-up word",
+      "questionType": "multiple_choice",
+      "answerKey": "a comparison using 'like' or 'as'",
+      "stepByStepSolution": [
+        "A simile compares two different things.",
+        "It uses the words 'like' or 'as' to make the comparison.",
+        "So the correct definition is option A."
+      ],
+      "commonMisconceptions": [
+        "Confusing a simile with repetition.",
+        "Confusing a simile with a made-up word."
+      ],
+      "hints": [
+        "Think of examples like 'as brave as a lion'.",
+        "The key words to look for are 'like' or 'as'."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "simile"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_006",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "medium",
+      "questionText": "What theme (big idea) does this story teach?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "never give up",
+        "perseverance",
+        "growth through hard work"
+      ],
+      "stepByStepSolution": [
+        "The seed keeps pushing even though it feels too small.",
+        "In the end, its effort pays off and it grows into a strong sunflower.",
+        "The big idea, or theme, is about not giving up \u2014 perseverance."
+      ],
+      "commonMisconceptions": [
+        "Focusing only on the plot events instead of the underlying message.",
+        "Missing the connection between effort and the seed's growth."
+      ],
+      "hints": [
+        "Think about what the story is really trying to teach the reader.",
+        "What happened because the seed didn't give up?"
+      ],
+      "tags": [
+        "literature",
+        "themes"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_007",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "medium",
+      "questionText": "What imagery (descriptive detail) helps you picture the seed's journey? Give one example.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "the cold, damp earth",
+        "bright green shoot",
+        "warm sunlight"
+      ],
+      "stepByStepSolution": [
+        "Imagery uses descriptive words to help you see, feel, or picture something.",
+        "The text describes 'the cold, damp earth' and the 'bright green shoot' breaking into 'warm sunlight'.",
+        "Any of these descriptive phrases is an example of imagery."
+      ],
+      "commonMisconceptions": [
+        "Picking a plain sentence with no descriptive detail.",
+        "Confusing imagery with the plot events themselves."
+      ],
+      "hints": [
+        "Look for describing words about how things feel, look, or seem.",
+        "Imagery appeals to the senses \u2014 sight, touch, and so on."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "imagery"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_008",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "hard",
+      "questionText": "How does the seed change from the beginning to the end of the story?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it grows from a tiny seed into a strong, tall sunflower",
+        "it changes from small and scared to a tall, strong sunflower",
+        "from a small seed to a tall sunflower"
+      ],
+      "stepByStepSolution": [
+        "At the start, the seed feels 'too small' and is underground.",
+        "By the end, it has grown into 'a strong, tall sunflower'.",
+        "So the seed changes from tiny and unsure to strong and fully grown."
+      ],
+      "commonMisconceptions": [
+        "Only describing the physical change without mentioning the seed's feelings.",
+        "Missing the transformation from beginning to end."
+      ],
+      "hints": [
+        "Compare how the seed is described at the start versus the end.",
+        "Think about both size and feeling."
+      ],
+      "tags": [
+        "literature",
+        "character_change"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_009",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "hard",
+      "questionText": "Why might the author use the simile 'as small as a grain of sand'? A) to help the reader picture just how tiny the seed felt   B) to describe the colour of the seed   C) to show the seed was heavy",
+      "questionType": "multiple_choice",
+      "answerKey": "to help the reader picture just how tiny the seed felt",
+      "stepByStepSolution": [
+        "The simile compares the seed's size to something very tiny \u2014 a grain of sand.",
+        "This helps the reader really picture and understand how small the seed felt.",
+        "It has nothing to do with colour or weight."
+      ],
+      "commonMisconceptions": [
+        "Thinking similes are only about colour or appearance in general.",
+        "Missing the purpose of the size comparison."
+      ],
+      "hints": [
+        "Think about what a grain of sand actually looks like \u2014 how big is it?",
+        "The comparison is specifically about size."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "author_purpose"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "ELITCHAR_Y3_010",
+      "skillId": "E3LE01_02_03_literature_characters_themes",
+      "difficulty": "hard",
+      "questionText": "What literary device is used when the author repeats 'pushed and pushed'?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "repetition",
+        "word repetition"
+      ],
+      "stepByStepSolution": [
+        "The word 'pushed' is used twice in a row.",
+        "Using the same word more than once for effect is called repetition.",
+        "So the literary device here is repetition."
+      ],
+      "commonMisconceptions": [
+        "Confusing repetition with a simile.",
+        "Not recognising the device by name."
+      ],
+      "hints": [
+        "What do we call it when a word or phrase is used more than once for effect?",
+        "Think of the literary device name for repeating words."
+      ],
+      "tags": [
+        "literature",
+        "literary_devices",
+        "repetition"
+      ],
+      "passage": "The Brave Little Seed\n\nDeep in the dark soil, a tiny seed waited. 'I am too small,' it whispered, as small as a grain of sand. But it pushed and pushed, up through the cold, damp earth, until \u2014 at last \u2014 a bright green shoot broke through into the warm sunlight. The seed had grown into a strong, tall sunflower, its face turned always towards the sun."
+    },
+    {
+      "id": "EIMAG_Y3_001",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "easy",
+      "questionText": "An imaginative text is: A) a true news report   B) a made-up story or poem   C) a set of instructions",
+      "questionType": "multiple_choice",
+      "answerKey": "a made-up story or poem",
+      "stepByStepSolution": [
+        "An imaginative text comes from the writer's imagination.",
+        "It is not a true report or a set of instructions.",
+        "So the correct answer is a made-up story or poem."
+      ],
+      "commonMisconceptions": [
+        "Confusing imaginative writing with a factual report.",
+        "Confusing imaginative writing with instructional writing."
+      ],
+      "hints": [
+        "Think about texts that are made up, not real events.",
+        "Stories and poems usually come from imagination."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "text_type"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_002",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "easy",
+      "questionText": "Name one literary device you could include in an imaginative story.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "simile",
+        "metaphor",
+        "repetition",
+        "imagery"
+      ],
+      "stepByStepSolution": [
+        "Literary devices make imaginative writing more interesting.",
+        "Examples include similes, metaphors, repetition, and imagery.",
+        "Any one of these is a valid literary device."
+      ],
+      "commonMisconceptions": [
+        "Naming something that isn't a literary device, like a full stop.",
+        "Confusing grammar terms with literary devices."
+      ],
+      "hints": [
+        "Think about techniques used to make descriptions more vivid.",
+        "A simile or metaphor are common examples."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "literary_devices"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_003",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "medium",
+      "questionText": "What does it mean to 'develop' a character in a story?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to show their feelings, thoughts, and actions in detail",
+        "to give the character personality and depth",
+        "to describe what the character thinks, feels, and does"
+      ],
+      "stepByStepSolution": [
+        "A developed character feels real to the reader.",
+        "This means showing their feelings, thoughts, and actions in detail, not just their name.",
+        "This gives the character personality and depth."
+      ],
+      "commonMisconceptions": [
+        "Thinking a character is developed just by naming them.",
+        "Only describing appearance without feelings or actions."
+      ],
+      "hints": [
+        "Think about what makes a character feel real, not flat.",
+        "Show what they think, feel, and do."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "characters"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_004",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "medium",
+      "questionText": "Which sentence best develops a character? A) There was a boy.   B) Sam gripped his bag tightly, his heart pounding as he stepped through the school gates for the first time.   C) It was a sunny day.",
+      "questionType": "multiple_choice",
+      "answerKey": "Sam gripped his bag tightly, his heart pounding as he stepped through the school gates for the first time.",
+      "stepByStepSolution": [
+        "Option A just names a character with no detail.",
+        "Option C describes the weather, not the character.",
+        "Option B shows the character's actions and feelings in detail, developing them."
+      ],
+      "commonMisconceptions": [
+        "Choosing an option with no character detail at all.",
+        "Confusing setting description with character development."
+      ],
+      "hints": [
+        "Look for the sentence with feelings and actions, not just a name.",
+        "Developed characters show emotion and action."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "characters"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_005",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "medium",
+      "questionText": "Give an example of a simile you could use to describe a character who is very fast.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "as fast as lightning",
+        "as fast as the wind",
+        "fast as a cheetah"
+      ],
+      "stepByStepSolution": [
+        "A simile compares something using 'like' or 'as'.",
+        "To describe speed, you could compare the character to something fast, like lightning or the wind.",
+        "'As fast as lightning' is a good example."
+      ],
+      "commonMisconceptions": [
+        "Giving a comparison without 'like' or 'as' (which would be a metaphor instead).",
+        "Comparing to something slow instead of fast."
+      ],
+      "hints": [
+        "Think of very fast things in nature or life.",
+        "Use 'as ... as' to build your simile."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "literary_devices",
+        "simile"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_006",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "medium",
+      "questionText": "Which is an example of imagery? A) He was nice.   B) The warm, golden sunlight spilled across the meadow.   C) The end.",
+      "questionType": "multiple_choice",
+      "answerKey": "The warm, golden sunlight spilled across the meadow.",
+      "stepByStepSolution": [
+        "Imagery uses descriptive words that appeal to the senses.",
+        "Option B describes what you can see and feel \u2014 warmth, colour, movement.",
+        "Options A and C give no sensory description at all."
+      ],
+      "commonMisconceptions": [
+        "Confusing a plain statement with imagery.",
+        "Thinking any sentence with adjectives is automatically strong imagery."
+      ],
+      "hints": [
+        "Look for words describing what you can see, hear, or feel.",
+        "Imagery paints a picture using the senses."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "literary_devices",
+        "imagery"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_007",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "hard",
+      "questionText": "Why do writers use literary devices like similes in imaginative writing?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to make descriptions more vivid and interesting",
+        "to help the reader picture things more clearly",
+        "to make the writing more engaging"
+      ],
+      "stepByStepSolution": [
+        "Plain descriptions can be less interesting to read.",
+        "Similes and other literary devices create vivid, clear pictures in the reader's mind.",
+        "This makes the writing more engaging overall."
+      ],
+      "commonMisconceptions": [
+        "Thinking literary devices are just decoration with no real purpose.",
+        "Overusing them without connecting to meaning."
+      ],
+      "hints": [
+        "Think about the difference between 'he was fast' and 'he was as fast as lightning'.",
+        "Literary devices add vividness and interest."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "literary_devices",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_008",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "hard",
+      "questionText": "What should you think about before writing an imaginative story to help develop your character?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "their personality, feelings, and what they want",
+        "how the character thinks, feels, and acts",
+        "the character's traits and motivations"
+      ],
+      "stepByStepSolution": [
+        "A well-developed character needs more than just a name.",
+        "Think about their personality, feelings, and what they want (their motivation).",
+        "Planning this before writing helps develop a believable character."
+      ],
+      "commonMisconceptions": [
+        "Only planning the character's name and appearance.",
+        "Skipping planning altogether."
+      ],
+      "hints": [
+        "Think about who your character is on the inside, not just what they look like.",
+        "Consider their goals and feelings."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "characters",
+        "planning"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_009",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "hard",
+      "questionText": "Which opening best hooks a reader into an imaginative story? A) This is a story about a boy.   B) The floor trembled as the ground cracked open beneath Maya's feet.   C) Once there was a boy who did some things.",
+      "questionType": "multiple_choice",
+      "answerKey": "The floor trembled as the ground cracked open beneath Maya's feet.",
+      "stepByStepSolution": [
+        "Options A and C are flat and give no exciting detail.",
+        "Option B drops the reader straight into action and creates tension.",
+        "An exciting, active opening hooks the reader's interest."
+      ],
+      "commonMisconceptions": [
+        "Choosing a bland, generic opening sentence.",
+        "Thinking any opening sentence works equally well."
+      ],
+      "hints": [
+        "Look for the sentence that creates excitement or tension right away.",
+        "A strong hook often starts with action or a surprising moment."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "structure",
+        "hooks"
+      ]
+    },
+    {
+      "id": "EIMAG_Y3_010",
+      "skillId": "E3LY06_3LE02_05_write_imaginative",
+      "difficulty": "hard",
+      "questionText": "What is one way you could use repetition as a literary device in your own imaginative writing?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "repeat a key word or phrase to build tension or emphasis",
+        "repeating a phrase to create emphasis or rhythm",
+        "using the same word or phrase more than once for effect"
+      ],
+      "stepByStepSolution": [
+        "Repetition means using the same word or phrase more than once on purpose.",
+        "This can build tension, add emphasis, or create rhythm in your writing.",
+        "For example, repeating 'louder and louder' can build excitement."
+      ],
+      "commonMisconceptions": [
+        "Repeating words accidentally with no clear purpose.",
+        "Thinking repetition is always a mistake to avoid."
+      ],
+      "hints": [
+        "Think of a phrase you could repeat for effect, like 'faster, faster'.",
+        "Repetition can build emphasis or tension when used on purpose."
+      ],
+      "tags": [
+        "imaginative_writing",
+        "literary_devices",
+        "repetition"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_001",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "easy",
+      "questionText": "Which sentence contains a simile? A) The classroom was quiet.   B) Her smile was as bright as the sun.   C) The bell rang loudly.",
+      "questionType": "multiple_choice",
+      "answerKey": "Her smile was as bright as the sun.",
+      "stepByStepSolution": [
+        "A simile compares two things using 'like' or 'as'.",
+        "Option B compares a smile to the sun using 'as ... as'.",
+        "The other options don't make a comparison."
+      ],
+      "commonMisconceptions": [
+        "Choosing a sentence with no 'like' or 'as' comparison.",
+        "Confusing a simile with a plain description."
+      ],
+      "hints": [
+        "Look for the words 'like' or 'as' in the sentence.",
+        "A simile always makes a comparison."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_002",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "easy",
+      "questionText": "What two words are often used in a simile to compare two things?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "like and as",
+        "'like' or 'as'"
+      ],
+      "stepByStepSolution": [
+        "Similes make comparisons using specific connecting words.",
+        "The two most common words used are 'like' and 'as'.",
+        "For example: 'as brave as a lion' or 'ran like the wind'."
+      ],
+      "commonMisconceptions": [
+        "Naming unrelated words instead of 'like' and 'as'.",
+        "Only naming one of the two words."
+      ],
+      "hints": [
+        "Think of examples: 'as fast as' or 'runs like'.",
+        "Both 'like' and 'as' are used to make comparisons."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_003",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "medium",
+      "questionText": "Which sentence contains a metaphor? A) He ran like the wind.   B) He is a lion on the football field.   C) He ran quickly.",
+      "questionType": "multiple_choice",
+      "answerKey": "He is a lion on the football field.",
+      "stepByStepSolution": [
+        "A metaphor says something IS something else, without using 'like' or 'as'.",
+        "Option B says he 'is a lion', which is a direct metaphor.",
+        "Option A uses 'like', making it a simile instead."
+      ],
+      "commonMisconceptions": [
+        "Confusing a simile (using 'like') with a metaphor.",
+        "Choosing a sentence with no figurative language at all."
+      ],
+      "hints": [
+        "A metaphor states something is something else directly.",
+        "Look for a sentence without 'like' or 'as' that still makes a comparison."
+      ],
+      "tags": [
+        "figurative_language",
+        "metaphor"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_004",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "medium",
+      "questionText": "What is the difference between a simile and a metaphor?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "a simile uses 'like' or 'as' to compare, a metaphor says something IS something else",
+        "similes use like/as, metaphors don't",
+        "a simile compares using like/as; a metaphor states something is another thing"
+      ],
+      "stepByStepSolution": [
+        "Both similes and metaphors compare two things.",
+        "A simile uses 'like' or 'as', while a metaphor states directly that something IS something else.",
+        "For example: 'brave as a lion' (simile) vs 'he is a lion' (metaphor)."
+      ],
+      "commonMisconceptions": [
+        "Thinking they are exactly the same thing.",
+        "Forgetting that a metaphor doesn't use 'like' or 'as'."
+      ],
+      "hints": [
+        "Check whether the sentence uses 'like' or 'as'.",
+        "If not, but it still compares, it's likely a metaphor."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile",
+        "metaphor"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_005",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "medium",
+      "questionText": "Write a simile to describe rain falling heavily. (Use 'like' or 'as'.)",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it rained like cats and dogs",
+        "the rain fell like a waterfall",
+        "rain poured down like a waterfall"
+      ],
+      "stepByStepSolution": [
+        "A simile about heavy rain should use 'like' or 'as' to compare it to something.",
+        "Comparing the rain to a waterfall or using the saying 'cats and dogs' both work.",
+        "This creates a vivid picture of heavy rain."
+      ],
+      "commonMisconceptions": [
+        "Writing a comparison without 'like' or 'as' (making it a metaphor instead).",
+        "Describing rain without any comparison at all."
+      ],
+      "hints": [
+        "Think of something else that falls heavily or quickly.",
+        "Use the words 'like' or 'as' to build the comparison."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_006",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "medium",
+      "questionText": "What effect does the metaphor 'the classroom was a zoo' have on the reader? A) it makes the classroom sound calm and quiet   B) it makes the classroom sound chaotic and noisy   C) it has no effect at all",
+      "questionType": "multiple_choice",
+      "answerKey": "it makes the classroom sound chaotic and noisy",
+      "stepByStepSolution": [
+        "A zoo is usually thought of as busy, loud, and full of activity.",
+        "Comparing the classroom to a zoo suggests it is chaotic and noisy, not calm.",
+        "This creates a strong, exaggerated image for the reader."
+      ],
+      "commonMisconceptions": [
+        "Thinking a zoo suggests calmness.",
+        "Missing the exaggerated, humorous effect of the comparison."
+      ],
+      "hints": [
+        "Think about what a zoo is usually like \u2014 quiet or busy?",
+        "Metaphors create a strong image by comparing to something familiar."
+      ],
+      "tags": [
+        "figurative_language",
+        "metaphor",
+        "effect"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_007",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "hard",
+      "questionText": "Identify the simile in this sentence: 'The old man's hands were as rough as sandpaper.'",
+      "questionType": "short_answer",
+      "answerKey": [
+        "as rough as sandpaper",
+        "his hands were as rough as sandpaper"
+      ],
+      "stepByStepSolution": [
+        "Look for the words 'as ... as' in the sentence.",
+        "The comparison 'as rough as sandpaper' describes the texture of the man's hands.",
+        "This is the simile in the sentence."
+      ],
+      "commonMisconceptions": [
+        "Picking only part of the comparison.",
+        "Missing the simile entirely."
+      ],
+      "hints": [
+        "Look for the comparing words 'as ... as'.",
+        "The simile compares the hands' roughness to sandpaper."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_008",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "hard",
+      "questionText": "Explain why writers use figurative language like similes and metaphors.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to create vivid pictures in the reader's mind",
+        "to make descriptions more interesting and vivid",
+        "to help the reader imagine things more clearly"
+      ],
+      "stepByStepSolution": [
+        "Plain descriptions can be less vivid and interesting.",
+        "Similes and metaphors help create strong, clear pictures in the reader's imagination.",
+        "This makes the writing more interesting and memorable."
+      ],
+      "commonMisconceptions": [
+        "Thinking figurative language has no real purpose.",
+        "Overusing figurative language without considering its effect."
+      ],
+      "hints": [
+        "Compare 'she was tired' with 'she was as tired as a sloth'.",
+        "Figurative language adds vividness to descriptions."
+      ],
+      "tags": [
+        "figurative_language",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_009",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "hard",
+      "questionText": "Which is the metaphor version of 'She sang like an angel'? A) She sang like an angel.   B) She was an angel when she sang.   C) She sang nicely.",
+      "questionType": "multiple_choice",
+      "answerKey": "She was an angel when she sang.",
+      "stepByStepSolution": [
+        "The original sentence uses 'like', making it a simile.",
+        "To turn it into a metaphor, remove 'like' and say she directly IS an angel.",
+        "Option B does this: 'She was an angel when she sang.'"
+      ],
+      "commonMisconceptions": [
+        "Keeping the word 'like', which would still be a simile.",
+        "Removing the figurative language altogether."
+      ],
+      "hints": [
+        "A metaphor states something IS something else, without 'like' or 'as'.",
+        "Change 'sang like an angel' into 'was an angel'."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile",
+        "metaphor"
+      ]
+    },
+    {
+      "id": "EFIGLANG_Y3_010",
+      "skillId": "E3LA03_LE03_figurative_language",
+      "difficulty": "hard",
+      "questionText": "What effect does comparing someone's smile to sunshine (a simile) have on the reader?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it makes the smile seem warm, bright, and happy",
+        "it suggests the smile is warm and cheerful",
+        "it creates a happy, warm feeling about the smile"
+      ],
+      "stepByStepSolution": [
+        "Sunshine is usually associated with warmth, brightness, and happiness.",
+        "Comparing a smile to sunshine suggests the smile has those same warm, happy qualities.",
+        "This creates a positive, cheerful impression for the reader."
+      ],
+      "commonMisconceptions": [
+        "Thinking the comparison has no particular emotional effect.",
+        "Missing the positive associations connected to sunshine."
+      ],
+      "hints": [
+        "Think about how sunshine makes you feel.",
+        "The comparison transfers those same feelings to the smile."
+      ],
+      "tags": [
+        "figurative_language",
+        "simile",
+        "effect"
+      ]
+    }
+  ]
+}

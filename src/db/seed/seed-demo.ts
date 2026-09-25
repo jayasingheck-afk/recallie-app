@@ -1,7 +1,7 @@
 /**
- * Seeds a demo parent + child user and a small sample item bank (Weeks 1-6
- * skills) so the session builder and review API can be exercised
- * end-to-end during development.
+ * Seeds a demo parent + child user and a small sample item bank (all of
+ * Term 1, Weeks 1-10) so the session builder and review API can be
+ * exercised end-to-end during development.
  *
  * Run with: npm run db:seed:demo  (after npm run db:seed)
  */
@@ -16,6 +16,10 @@ import week3ItemBank from "./week3-item-bank.json";
 import week4ItemBank from "./week4-item-bank.json";
 import week5ItemBank from "./week5-item-bank.json";
 import week6ItemBank from "./week6-item-bank.json";
+import week7ItemBank from "./week7-item-bank.json";
+import week8ItemBank from "./week8-item-bank.json";
+import week9ItemBank from "./week9-item-bank.json";
+import week10ItemBank from "./week10-item-bank.json";
 
 const DEMO_PARENT_ID = "demo_parent_1";
 const DEMO_CHILD_ID = "demo_child_1";
@@ -124,6 +128,10 @@ async function main() {
   await seedItemBank("week4-item-bank.json", week4ItemBank.items as SeedItem[]);
   await seedItemBank("week5-item-bank.json", week5ItemBank.items as SeedItem[]);
   await seedItemBank("week6-item-bank.json", week6ItemBank.items as SeedItem[]);
+  await seedItemBank("week7-item-bank.json", week7ItemBank.items as SeedItem[]);
+  await seedItemBank("week8-item-bank.json", week8ItemBank.items as SeedItem[]);
+  await seedItemBank("week9-item-bank.json", week9ItemBank.items as SeedItem[]);
+  await seedItemBank("week10-item-bank.json", week10ItemBank.items as SeedItem[]);
   console.log("Demo seed complete.");
   process.exit(0);
 }

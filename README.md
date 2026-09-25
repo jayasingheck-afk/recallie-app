@@ -104,23 +104,19 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   see the file's header comment). Generation + an in-app printable view only; emailing it out
   needs an email service and is still a next step.
 - **`src/lib/curriculumWeek.ts`** — derives a child's current curriculum term/week from
-  their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Currently
-  clamped to term 1 / **week 6** (`MAX_AVAILABLE_WEEK`) because that's as far as real item
-  bank content reaches so far. Note the curriculum *sequence* (which skills are "new" each
-  week) is already fully seeded for all 10 weeks of Term 1, both subjects — see `seed.ts`/
-  `year3-curriculum.json` — it's specifically the item bank (actual practice questions)
-  that's the limiting factor.
+  their `enrolledAt` date (10-week terms) instead of hard-coding term 1 / week 1. Now
+  clamped to term 1 / **week 10** (`MAX_AVAILABLE_WEEK`) — **all of Term 1 is complete**.
+  `MAX_AVAILABLE_TERM` stays at 1 until Terms 2-4 curriculum + items exist.
 - **Seed data**: full Year 3 Term 1 curriculum (55 skills, both subjects, VIC+NSW mappings,
-  all 10 weeks' sequence entries) from the project docs; item banks for **Weeks 1-6**
-  (332 items total across 32 skills — 8 original hand-written samples + 324 generated per the
-  project's item-generation prompt templates, pending human review). `multi_part` items
-  (object-valued answer keys) and items tagged `open_response` are stored but intentionally
-  excluded from live sessions by `sessionBuilder.ts`, since the MVP grader
+  all 10 weeks' sequence entries) from the project docs; item banks for **all of Term 1,
+  Weeks 1-10** (562 items total across 55 skills — 8 original hand-written samples + 554
+  generated per the project's item-generation prompt templates, pending human review).
+  `multi_part` items (object-valued answer keys) and items tagged `open_response` are stored
+  but intentionally excluded from live sessions by `sessionBuilder.ts`, since the MVP grader
   (`src/lib/grading.ts`) only reliably auto-marks single-value `short_answer` /
-  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2-6 banks
-  (`week2-item-bank.json`, `week3-item-bank.json`, `week4-item-bank.json`,
-  `week5-item-bank.json`, `week6-item-bank.json`) are entirely `short_answer`/
-  `multiple_choice` so all of their items are usable in live sessions immediately.
+  `multiple_choice` items — see `week1-item-bank.json`'s `_note`. The Week 2-10 banks are
+  entirely `short_answer`/`multiple_choice` so all of their items are usable in live
+  sessions immediately.
 
 ## Curriculum content: Week 2
 
@@ -241,6 +237,44 @@ case-insensitive across a division word problem, an angle-as-turns item, a passa
 technical-vocabulary item, and a case-insensitive multiple-choice column-graph item; a full
 page/API regression pass and a production `next build` both completed cleanly.
 
+## Curriculum content: Weeks 7-10 (Term 1 complete)
+
+Added the remaining four weeks of Term 1 in one batch, at Chandana's request to cover the
+whole term at once rather than one week at a time. Same established pattern throughout —
+the sequence entries for all of Weeks 7-10 already existed from the original curriculum
+seed, so this was purely item-bank content across 23 skills (230 items).
+
+- `src/db/seed/week7-item-bank.json` — 50 items across 5 skills: `M3N06_mult_2digit_by_1digit`,
+  `M3SP01_classify_2d_shapes` (Maths); `E3LY01_LA09_evaluative_comprehension` (shared "The
+  Lighthouse Keeper" passage), `E3LY06_3LE04_text_response`, `E3LA05_07_cohesive_devices`
+  (English).
+- `src/db/seed/week8-item-bank.json` — 60 items across 6 skills: `M3N07_unit_fractions`,
+  `M3SP02_2d_maps_plans` (shared text-described school map), `M3P01_chance_language` (Maths);
+  `E3LE01_02_03_literature_characters_themes` (shared "The Brave Little Seed" passage),
+  `E3LY06_3LE02_05_write_imaginative`, `E3LA03_LE03_figurative_language` (English).
+- `src/db/seed/week9-item-bank.json` — 60 items across 6 skills: `M3N04_06_word_problems`,
+  `M3M02_measurement_problems`, `M3P02_chance_experiments` (Maths); `E3LY09_01_fluency_decoding`,
+  `E3LY06_07_editing_writing`, `E3LY11_10_spelling_patterns` (English).
+- `src/db/seed/week10-item-bank.json` — 60 items across 6 skills: `M3N05_06_financial_contexts`,
+  `M3M01_04_measurement_consolidation`, `M3ST02_03_data_interpretation` (shared text-described
+  rainfall table, Maths); `E3LA09_LY03_multimodal_reading` (shared text-described fete
+  poster), `E3LY06_08_multimodal_writing`, `E3LA06_LY09_12_language_consolidation` (English,
+  a broad grammar/punctuation/spelling revision skill).
+- Since there's no image rendering yet, visual concepts (2D maps, data tables) are described
+  as text via the existing `passage` field — the same mechanism used for reading passages —
+  rather than skipped.
+- `src/lib/curriculumWeek.ts`'s `MAX_AVAILABLE_WEEK` is now 10 (all of Term 1).
+- `src/db/seed/seed-demo.ts` now loads all ten week banks.
+
+**Verified**: children backdated to land in each of Weeks 7, 8, 9, and 10 correctly receive
+that week's content for both Maths and English; a child backdated 200 days (well past Term 1)
+correctly clamps to Week 10 rather than an empty/broken session; grading verified
+correct/incorrect/case-insensitive/array-accepted-phrasing across six different question
+styles spanning the new banks (2-digit multiplication, unit fractions, passage-based
+evaluative comprehension, case-insensitive multiple-choice word problems, a decimal money
+answer, and passage-based multimodal reading); a full page/API regression pass and a
+production `next build` both completed cleanly with zero ID collisions across all 562 items.
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -249,11 +283,13 @@ generating content at that scale, a curriculum-accuracy check against the real A
 Curriculum v9.0 Year 3 content descriptors (ACARA/QCAA) found that Term 1's 10-week sequence
 already touches nearly the entire year's content descriptor set (21/23 Maths, 26/28 English)
 — so "the rest of the year" is mostly about *depth progression* per term, not new topics,
-plus 4 small content-descriptor gaps and finishing Term 1's remaining item banks (Weeks
-4-10) first. The full plan — term-by-term depth progression tables for every strand, the 4
-gaps to fill, and the topic-assignment feature's proposed shape — is written up in this
-project's `claude/year3-full-syllabus-plan.md` doc. Current status: Weeks 1-6 of Term 1 are
-now complete; Weeks 7-10 and the Terms 2-4 curriculum mapping are still to come.
+plus 4 small content-descriptor gaps and finishing Term 1's remaining item banks first. The
+full plan — term-by-term depth progression tables for every strand, the 4 gaps to fill, and
+the topic-assignment feature's proposed shape — is written up in this project's
+`claude/year3-full-syllabus-plan.md` doc. Current status: **all of Term 1 (Weeks 1-10) is
+now complete** — 55 skills, 562 items, both subjects; the Terms 2-4 curriculum mapping and
+the 4 content-descriptor gaps (`AC9M3M03`, `AC9M3M06`, `AC9E3LY04`, `AC9E3LY05`) are still to
+come.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -348,11 +384,10 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
 
 ## Explicit next steps (not yet built)
 
-- Real item banks — Weeks 1-6 only (332 items) so far, and all of it still needs human
-  review per the project's QA process before it's "production" content. Weeks 7-10 (Term 1)
-  still need generating (sequence already exists, so each is "write the item bank + bump
-  `MAX_AVAILABLE_WEEK`" — no sequence/schema work needed); Terms 2-4 need genuine new
-  curriculum-design work first (see `claude/year3-full-syllabus-plan.md` in the project).
+- Real item banks — **all of Term 1 is now done** (562 items across 55 skills, Weeks 1-10),
+  and all of it still needs human review per the project's QA process before it's
+  "production" content. Terms 2-4 need genuine new curriculum-design work first (see
+  `claude/year3-full-syllabus-plan.md` in the project) before their item banks can start.
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.

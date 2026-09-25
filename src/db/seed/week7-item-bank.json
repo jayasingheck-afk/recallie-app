@@ -1,0 +1,1336 @@
+{
+  "_note": "Week 7 item bank: Term 1, Week 7 skills (Maths: multiplying 2-digit by 1-digit numbers, classifying 2D shapes; English: evaluative comprehension, writing a text response, cohesive devices). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3MULT2_Y3_001",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "What is 12 x 3?",
+      "questionType": "short_answer",
+      "answerKey": "36",
+      "stepByStepSolution": [
+        "Split 12 into 10 and 2.",
+        "10 x 3 = 30, and 2 x 3 = 6.",
+        "30 + 6 = 36."
+      ],
+      "commonMisconceptions": [
+        "Only multiplying part of the number.",
+        "Adding instead of multiplying."
+      ],
+      "hints": [
+        "Break the 2-digit number into tens and ones.",
+        "10 x 3 = 30, 2 x 3 = 6, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_002",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "What is 21 x 4?",
+      "questionType": "short_answer",
+      "answerKey": "84",
+      "stepByStepSolution": [
+        "Split 21 into 20 and 1.",
+        "20 x 4 = 80, and 1 x 4 = 4.",
+        "80 + 4 = 84."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to multiply the ones digit.",
+        "Adding 21 + 4 instead of multiplying."
+      ],
+      "hints": [
+        "Split the number into tens and ones first.",
+        "20 x 4 = 80, 1 x 4 = 4, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_003",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "easy",
+      "questionText": "What is 13 x 2? A) 15   B) 26   C) 23",
+      "questionType": "multiple_choice",
+      "answerKey": "26",
+      "stepByStepSolution": [
+        "Split 13 into 10 and 3.",
+        "10 x 2 = 20, and 3 x 2 = 6.",
+        "20 + 6 = 26."
+      ],
+      "commonMisconceptions": [
+        "Adding 13 + 2 instead of multiplying.",
+        "Only doubling the tens digit."
+      ],
+      "hints": [
+        "Split into tens and ones, then multiply each part.",
+        "10 x 2 = 20, 3 x 2 = 6, 20 + 6 = 26."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_004",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "Use place value to solve 24 x 3. (Hint: split 24 into 20 and 4)",
+      "questionType": "short_answer",
+      "answerKey": "72",
+      "stepByStepSolution": [
+        "Split 24 into 20 and 4.",
+        "20 x 3 = 60, and 4 x 3 = 12.",
+        "60 + 12 = 72."
+      ],
+      "commonMisconceptions": [
+        "Adding the two products incorrectly.",
+        "Forgetting to regroup the tens from 12."
+      ],
+      "hints": [
+        "20 x 3 = 60 and 4 x 3 = 12.",
+        "Add the two parts together: 60 + 12."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_005",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "What is 32 x 3?",
+      "questionType": "short_answer",
+      "answerKey": "96",
+      "stepByStepSolution": [
+        "Split 32 into 30 and 2.",
+        "30 x 3 = 90, and 2 x 3 = 6.",
+        "90 + 6 = 96."
+      ],
+      "commonMisconceptions": [
+        "Miscalculating 30 x 3.",
+        "Forgetting the ones digit part."
+      ],
+      "hints": [
+        "Split into tens and ones.",
+        "30 x 3 = 90, 2 x 3 = 6, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_006",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "A box holds 15 pencils. How many pencils are in 4 boxes?",
+      "questionType": "short_answer",
+      "answerKey": "60",
+      "stepByStepSolution": [
+        "4 boxes of 15 pencils means 15 x 4.",
+        "Split 15 into 10 and 5: 10 x 4 = 40, 5 x 4 = 20.",
+        "40 + 20 = 60 pencils."
+      ],
+      "commonMisconceptions": [
+        "Adding 15 + 4 instead of multiplying.",
+        "Forgetting to add both parts together."
+      ],
+      "hints": [
+        "'4 boxes of 15' means multiply.",
+        "Split 15 into 10 and 5 to make it easier."
+      ],
+      "tags": [
+        "multiplication",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_007",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "medium",
+      "questionText": "Which strategy correctly breaks apart 23 x 4? A) (20 x 4) + (3 x 4)   B) (20 + 4) x (3 + 4)   C) (23 + 4) x 2",
+      "questionType": "multiple_choice",
+      "answerKey": "(20 x 4) + (3 x 4)",
+      "stepByStepSolution": [
+        "23 can be split into 20 and 3 using place value.",
+        "Multiply each part by 4 separately: 20 x 4 and 3 x 4.",
+        "Then add the two results together."
+      ],
+      "commonMisconceptions": [
+        "Adding the parts of 23 together instead of multiplying each by 4.",
+        "Mixing up addition and multiplication in the strategy."
+      ],
+      "hints": [
+        "Split the 2-digit number into tens and ones first.",
+        "Multiply each part separately, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value",
+        "strategy"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_008",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "What is 45 x 3?",
+      "questionType": "short_answer",
+      "answerKey": "135",
+      "stepByStepSolution": [
+        "Split 45 into 40 and 5.",
+        "40 x 3 = 120, and 5 x 3 = 15.",
+        "120 + 15 = 135."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to regroup when adding 120 + 15.",
+        "Miscalculating 40 x 3."
+      ],
+      "hints": [
+        "Split into tens and ones.",
+        "40 x 3 = 120, 5 x 3 = 15, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_009",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "There are 6 rows of chairs with 14 chairs in each row. How many chairs are there in total?",
+      "questionType": "short_answer",
+      "answerKey": "84",
+      "stepByStepSolution": [
+        "6 rows of 14 chairs means 14 x 6.",
+        "Split 14 into 10 and 4: 10 x 6 = 60, 4 x 6 = 24.",
+        "60 + 24 = 84 chairs."
+      ],
+      "commonMisconceptions": [
+        "Adding 14 + 6 instead of multiplying.",
+        "Forgetting to combine both parts."
+      ],
+      "hints": [
+        "'Rows of chairs' is a clue to multiply.",
+        "Split 14 into 10 and 4 to make it easier."
+      ],
+      "tags": [
+        "multiplication",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3MULT2_Y3_010",
+      "skillId": "M3N06_mult_2digit_by_1digit",
+      "difficulty": "hard",
+      "questionText": "What is 38 x 2?",
+      "questionType": "short_answer",
+      "answerKey": "76",
+      "stepByStepSolution": [
+        "Split 38 into 30 and 8.",
+        "30 x 2 = 60, and 8 x 2 = 16.",
+        "60 + 16 = 76."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to regroup the tens from 16.",
+        "Miscalculating 8 x 2."
+      ],
+      "hints": [
+        "Split into tens and ones, then multiply each part.",
+        "30 x 2 = 60, 8 x 2 = 16, then add."
+      ],
+      "tags": [
+        "multiplication",
+        "place_value"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_001",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "easy",
+      "questionText": "How many sides does a triangle have?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "A triangle is a shape with straight sides.",
+        "Count the sides: 3.",
+        "A triangle has 3 sides."
+      ],
+      "commonMisconceptions": [
+        "Confusing sides with vertices (though a triangle has both 3).",
+        "Miscounting the sides."
+      ],
+      "hints": [
+        "'Tri' means three.",
+        "Count each straight edge of the shape."
+      ],
+      "tags": [
+        "2d_shapes",
+        "sides"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_002",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "easy",
+      "questionText": "How many vertices (corners) does a square have?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "A vertex is a corner where two sides meet.",
+        "A square has 4 corners.",
+        "So a square has 4 vertices."
+      ],
+      "commonMisconceptions": [
+        "Confusing vertices with sides.",
+        "Miscounting the corners."
+      ],
+      "hints": [
+        "A vertex is a corner.",
+        "Count each corner of the square."
+      ],
+      "tags": [
+        "2d_shapes",
+        "vertices"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_003",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "easy",
+      "questionText": "Which shape has 5 sides? A) hexagon   B) pentagon   C) square",
+      "questionType": "multiple_choice",
+      "answerKey": "pentagon",
+      "stepByStepSolution": [
+        "A hexagon has 6 sides.",
+        "A pentagon has 5 sides.",
+        "A square has 4 sides, so the answer is pentagon."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'penta' (5) with 'hexa' (6).",
+        "Guessing without checking the number of sides."
+      ],
+      "hints": [
+        "'Penta' means five.",
+        "Compare the number of sides in each shape's name."
+      ],
+      "tags": [
+        "2d_shapes",
+        "sides",
+        "names"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_004",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "easy",
+      "questionText": "How many sides does a hexagon have?",
+      "questionType": "short_answer",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "'Hexa' means six.",
+        "A hexagon has 6 straight sides.",
+        "So a hexagon has 6 sides."
+      ],
+      "commonMisconceptions": [
+        "Confusing hexagon with pentagon.",
+        "Miscounting the sides."
+      ],
+      "hints": [
+        "Think of the prefix 'hexa-' meaning six.",
+        "Count each side of the shape."
+      ],
+      "tags": [
+        "2d_shapes",
+        "sides",
+        "names"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_005",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "medium",
+      "questionText": "A shape has 4 sides of equal length and 4 right angles. What is it called?",
+      "questionType": "short_answer",
+      "answerKey": "square",
+      "stepByStepSolution": [
+        "All 4 sides are equal and all angles are right angles (90 degrees).",
+        "This matches the definition of a square.",
+        "So the shape is a square."
+      ],
+      "commonMisconceptions": [
+        "Confusing a square with a rectangle.",
+        "Forgetting that a square needs equal sides AND right angles."
+      ],
+      "hints": [
+        "A square has both equal sides and right angles.",
+        "A rectangle has right angles but not always equal sides."
+      ],
+      "tags": [
+        "2d_shapes",
+        "classification"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_006",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "medium",
+      "questionText": "A shape has 4 sides but only opposite sides are equal in length, with 4 right angles. What is it called?",
+      "questionType": "short_answer",
+      "answerKey": "rectangle",
+      "stepByStepSolution": [
+        "This shape has 4 right angles like a square.",
+        "But only opposite sides are equal, not all 4 sides.",
+        "This matches the definition of a rectangle."
+      ],
+      "commonMisconceptions": [
+        "Confusing a rectangle with a square.",
+        "Thinking all rectangles have equal sides."
+      ],
+      "hints": [
+        "A rectangle has opposite sides equal, not all four.",
+        "Compare this to a square, where all sides are equal."
+      ],
+      "tags": [
+        "2d_shapes",
+        "classification"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_007",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "medium",
+      "questionText": "Which shape has a line of symmetry that divides it into two matching halves? A) an irregular scribble shape   B) a regular pentagon   C) neither",
+      "questionType": "multiple_choice",
+      "answerKey": "a regular pentagon",
+      "stepByStepSolution": [
+        "Symmetry means a shape can be split into two matching mirror halves.",
+        "A regular pentagon has equal sides and angles, giving it lines of symmetry.",
+        "An irregular scribble shape has no matching halves."
+      ],
+      "commonMisconceptions": [
+        "Thinking all shapes have symmetry.",
+        "Confusing regular and irregular shapes."
+      ],
+      "hints": [
+        "Symmetrical shapes have equal, matching parts.",
+        "Regular shapes (equal sides/angles) usually have symmetry."
+      ],
+      "tags": [
+        "2d_shapes",
+        "symmetry"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_008",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "medium",
+      "questionText": "How many vertices does a triangle have?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "A vertex is a corner where two sides meet.",
+        "A triangle has 3 corners.",
+        "So a triangle has 3 vertices."
+      ],
+      "commonMisconceptions": [
+        "Confusing vertices with sides (though both are 3 for a triangle).",
+        "Miscounting the corners."
+      ],
+      "hints": [
+        "Count each corner of the shape.",
+        "A triangle has the same number of vertices as sides: 3."
+      ],
+      "tags": [
+        "2d_shapes",
+        "vertices"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_009",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "hard",
+      "questionText": "A shape has 3 sides, all of different lengths. What type of triangle is this?",
+      "questionType": "short_answer",
+      "answerKey": "scalene triangle",
+      "stepByStepSolution": [
+        "A triangle with all sides different lengths has a special name.",
+        "This type is called a scalene triangle.",
+        "So the answer is a scalene triangle."
+      ],
+      "commonMisconceptions": [
+        "Confusing scalene with equilateral (equal sides) or isosceles (two equal sides).",
+        "Not knowing the specific triangle names."
+      ],
+      "hints": [
+        "Equilateral: all sides equal. Isosceles: two sides equal. Scalene: no sides equal.",
+        "This triangle has no equal sides, so it's scalene."
+      ],
+      "tags": [
+        "2d_shapes",
+        "triangles",
+        "classification"
+      ]
+    },
+    {
+      "id": "M3SHAPE_Y3_010",
+      "skillId": "M3SP01_classify_2d_shapes",
+      "difficulty": "hard",
+      "questionText": "Which best describes symmetry in a shape? A) a shape that can be split into two identical halves that mirror each other   B) a shape with many sides   C) a shape with curved edges",
+      "questionType": "multiple_choice",
+      "answerKey": "a shape that can be split into two identical halves that mirror each other",
+      "stepByStepSolution": [
+        "Symmetry is about a shape's balance, not its number of sides or curves.",
+        "A symmetrical shape can be folded or split so both halves match exactly, like a mirror image.",
+        "So the correct description is option A."
+      ],
+      "commonMisconceptions": [
+        "Confusing symmetry with having many sides.",
+        "Thinking curved shapes are automatically symmetrical."
+      ],
+      "hints": [
+        "Think about folding a shape in half \u2014 do both halves match?",
+        "Symmetry is about matching halves, not the number of sides."
+      ],
+      "tags": [
+        "2d_shapes",
+        "symmetry"
+      ]
+    },
+    {
+      "id": "EEVAL_Y3_001",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "easy",
+      "questionText": "What is one word from the text that helps you picture the weather?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "howled",
+        "howling",
+        "the wind howled"
+      ],
+      "stepByStepSolution": [
+        "Look for a describing word about the wind or weather.",
+        "The text says 'the wind howled outside'.",
+        "'Howled' is a word that helps you picture and hear the stormy weather."
+      ],
+      "commonMisconceptions": [
+        "Picking an unrelated word.",
+        "Missing the weather description entirely."
+      ],
+      "hints": [
+        "Look for a strong verb describing the wind.",
+        "The text mentions the wind doing something loud."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "language_effect"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_002",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "easy",
+      "questionText": "Do you think this text's description of Tom's feelings is clear or unclear? Answer 'clear' or 'unclear'.",
+      "questionType": "short_answer",
+      "answerKey": "clear",
+      "stepByStepSolution": [
+        "The text says Tom 'didn't mind' the storm and 'loved the quiet hum of the lamp'.",
+        "These are clear, specific descriptions of how Tom felt.",
+        "So the description is clear."
+      ],
+      "commonMisconceptions": [
+        "Saying unclear without checking the specific details given.",
+        "Confusing 'clear' writing with 'exciting' writing."
+      ],
+      "hints": [
+        "Look at how specifically the text describes Tom's feelings.",
+        "Clear writing gives specific details, not vague ones."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "clarity"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_003",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "medium",
+      "questionText": "Which phrase helps you understand why the lighthouse is important?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "guiding ships safely past the jagged rocks",
+        "guiding ships safely past the rocks",
+        "keeping sailors safe"
+      ],
+      "stepByStepSolution": [
+        "Look for the sentence explaining what Tom's light does.",
+        "It says the light was 'guiding ships safely past the jagged rocks below'.",
+        "This phrase explains the lighthouse's importance."
+      ],
+      "commonMisconceptions": [
+        "Choosing an unrelated detail about Tom.",
+        "Missing the connection between the lamp and ship safety."
+      ],
+      "hints": [
+        "Look for the purpose of lighting the lamp.",
+        "What does the light help ships do?"
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "meaning"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_004",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "medium",
+      "questionText": "What worked well in this text to help you imagine the setting?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "descriptive words like 'tall, white lighthouse' and 'jagged rocks'",
+        "the descriptive language about the lighthouse and rocks",
+        "vivid describing words about the lighthouse and rocks"
+      ],
+      "stepByStepSolution": [
+        "The text uses describing words like 'tall, white lighthouse' and 'jagged rocks'.",
+        "These descriptive details help the reader picture the setting clearly.",
+        "This descriptive language is what worked well."
+      ],
+      "commonMisconceptions": [
+        "Ignoring the describing words used.",
+        "Focusing only on the plot instead of the language."
+      ],
+      "hints": [
+        "Look for adjectives that describe the lighthouse and rocks.",
+        "Descriptive language helps build a picture in the reader's mind."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "language_effect"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_005",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "medium",
+      "questionText": "Which word best describes the mood created by the phrase 'the wind howled outside'? A) calm   B) stormy   C) cheerful",
+      "questionType": "multiple_choice",
+      "answerKey": "stormy",
+      "stepByStepSolution": [
+        "'Howled' is a strong, loud word describing the wind.",
+        "This creates a wild, stormy feeling, not a calm or cheerful one.",
+        "So the mood is stormy."
+      ],
+      "commonMisconceptions": [
+        "Confusing a loud, wild word with a calm mood.",
+        "Ignoring the specific word choice."
+      ],
+      "hints": [
+        "Think about what 'howled' sounds like.",
+        "A calm mood would use softer words, like 'breeze' or 'gentle'."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "mood"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_006",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "medium",
+      "questionText": "Which detail makes it clear that Tom is not afraid of the storm?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Tom didn't mind the wind",
+        "he loved the quiet hum of the lamp",
+        "Tom didn't mind"
+      ],
+      "stepByStepSolution": [
+        "Look at how the text describes Tom's reaction to the storm.",
+        "It says 'Tom didn't mind' and that he loved the hum of the lamp.",
+        "This shows he wasn't afraid, even with the storm outside."
+      ],
+      "commonMisconceptions": [
+        "Assuming Tom must be scared because of the storm.",
+        "Missing the direct statement about how Tom felt."
+      ],
+      "hints": [
+        "Look for the sentence describing Tom's feelings about the weather.",
+        "The text tells you directly how Tom felt."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "evidence"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_007",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "medium",
+      "questionText": "How does the phrase 'spiral stairs' help the reader picture the lighthouse?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it shows the stairs curve or wind upward inside the lighthouse",
+        "it helps you imagine climbing round and round to the top",
+        "it describes the shape of the stairs curving upward"
+      ],
+      "stepByStepSolution": [
+        "'Spiral' describes a shape that curves round and round.",
+        "This helps the reader picture stairs winding upward inside a tall, narrow lighthouse.",
+        "It adds a clear visual detail about the lighthouse's inside."
+      ],
+      "commonMisconceptions": [
+        "Thinking 'spiral' just means 'tall'.",
+        "Ignoring what the word 'spiral' actually describes."
+      ],
+      "hints": [
+        "Think about what a spiral shape looks like.",
+        "Picture stairs that wind around as they go up."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "language_effect"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_008",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "hard",
+      "questionText": "What is the effect of describing the hum of the lamp as 'quiet'?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it makes the lighthouse feel calm and peaceful despite the storm outside",
+        "it creates a calm, peaceful feeling",
+        "it shows contrast between the calm inside and the stormy outside"
+      ],
+      "stepByStepSolution": [
+        "The storm outside is loud ('howled'), but the lamp's hum is 'quiet'.",
+        "This contrast makes the inside of the lighthouse feel calm and safe.",
+        "So 'quiet' helps create a peaceful feeling despite the storm."
+      ],
+      "commonMisconceptions": [
+        "Missing the contrast between the loud storm and the quiet lamp.",
+        "Thinking 'quiet' has no particular effect on the mood."
+      ],
+      "hints": [
+        "Compare the loud storm outside to the quiet lamp inside.",
+        "Contrasting words can create a feeling of safety or calm."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "language_effect"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_009",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "hard",
+      "questionText": "Evaluate: does the text clearly explain why Tom's job is important? Give one piece of evidence.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "yes, because it says he guided ships safely past the rocks",
+        "yes, because guiding ships safely past the jagged rocks",
+        "yes - it explains he guides ships safely past the rocks"
+      ],
+      "stepByStepSolution": [
+        "Check whether the text gives a clear reason for Tom's job.",
+        "It says the light was 'guiding ships safely past the jagged rocks below'.",
+        "This is clear evidence that his job keeps sailors safe."
+      ],
+      "commonMisconceptions": [
+        "Saying 'no' without checking the text for evidence.",
+        "Giving an opinion with no evidence from the text."
+      ],
+      "hints": [
+        "Look for the sentence that explains what the lamp does for ships.",
+        "Evidence should be a specific detail from the text."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "evidence"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "EEVAL_Y3_010",
+      "skillId": "E3LY01_LA09_evaluative_comprehension",
+      "difficulty": "hard",
+      "questionText": "Which of these would most improve the reader's understanding of the setting? A) removing all descriptive words   B) adding more sensory details, like sounds and sights   C) making the sentences longer without more detail",
+      "questionType": "multiple_choice",
+      "answerKey": "adding more sensory details, like sounds and sights",
+      "stepByStepSolution": [
+        "Sensory details (what you can see, hear, feel) help readers picture a setting vividly.",
+        "Removing descriptive words would make the setting less clear, not more.",
+        "Longer sentences without extra detail wouldn't help understanding either."
+      ],
+      "commonMisconceptions": [
+        "Thinking longer sentences always mean better description.",
+        "Thinking removing description would help clarity."
+      ],
+      "hints": [
+        "Think about what makes a setting come alive for a reader.",
+        "Sensory details (sounds, sights, feelings) build a clearer picture."
+      ],
+      "tags": [
+        "evaluative_comprehension",
+        "improvement"
+      ],
+      "passage": "The Lighthouse Keeper\n\nOld Tom lived alone in the tall, white lighthouse on Rocky Point. Every night, he climbed the spiral stairs to light the lamp, guiding ships safely past the jagged rocks below. The wind howled outside, but Tom didn't mind \u2014 he loved the quiet hum of the lamp and the feeling that his work kept sailors safe."
+    },
+    {
+      "id": "ETEXTRESP_Y3_001",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "easy",
+      "questionText": "A text response should include: A) only a summary of the plot   B) an opinion supported by reasons and examples from the text   C) a list of unrelated facts",
+      "questionType": "multiple_choice",
+      "answerKey": "an opinion supported by reasons and examples from the text",
+      "stepByStepSolution": [
+        "A text response is more than just retelling the plot.",
+        "It should give an opinion and back it up with reasons and examples.",
+        "So the correct answer is option B."
+      ],
+      "commonMisconceptions": [
+        "Thinking a text response is just a summary.",
+        "Forgetting to include evidence for the opinion."
+      ],
+      "hints": [
+        "A response includes your thinking, not just the story's events.",
+        "Reasons and examples make your opinion convincing."
+      ],
+      "tags": [
+        "text_response",
+        "structure"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_002",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "easy",
+      "questionText": "What should you give as evidence when responding to a text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "examples from the text",
+        "evidence or examples taken from the text",
+        "quotes or examples from the text"
+      ],
+      "stepByStepSolution": [
+        "Evidence should come directly from what you read.",
+        "This means specific examples or details from the text itself.",
+        "So you should use examples from the text as evidence."
+      ],
+      "commonMisconceptions": [
+        "Using made-up examples not found in the text.",
+        "Giving only your opinion with no supporting detail."
+      ],
+      "hints": [
+        "Look back at the text for specific details.",
+        "Evidence is proof taken directly from what you read."
+      ],
+      "tags": [
+        "text_response",
+        "evidence"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_003",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "medium",
+      "questionText": "Why is it important to give reasons for your opinion in a text response?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "so the reader understands why you think that way",
+        "to support and explain your opinion",
+        "to make your opinion convincing"
+      ],
+      "stepByStepSolution": [
+        "An opinion alone doesn't explain your thinking.",
+        "Reasons show the reader why you feel that way.",
+        "This makes your response clearer and more convincing."
+      ],
+      "commonMisconceptions": [
+        "Thinking an opinion doesn't need explaining.",
+        "Giving reasons unrelated to the actual opinion."
+      ],
+      "hints": [
+        "Think about why 'I liked it' isn't enough on its own.",
+        "Reasons help the reader understand and trust your opinion."
+      ],
+      "tags": [
+        "text_response",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_004",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "medium",
+      "questionText": "Which sentence is the best example of a text response with evidence? A) I liked the story.   B) I liked the story because the lighthouse keeper was brave, as shown when he climbed the stairs despite the storm.   C) The story was about a lighthouse.",
+      "questionType": "multiple_choice",
+      "answerKey": "I liked the story because the lighthouse keeper was brave, as shown when he climbed the stairs despite the storm.",
+      "stepByStepSolution": [
+        "Option A gives an opinion with no reason or evidence.",
+        "Option C only summarises the plot with no opinion.",
+        "Option B gives an opinion, a reason, and evidence from the text \u2014 a complete text response."
+      ],
+      "commonMisconceptions": [
+        "Choosing an option with only an opinion and no evidence.",
+        "Choosing an option that's only a plot summary."
+      ],
+      "hints": [
+        "Look for an opinion PLUS a reason PLUS an example.",
+        "A strong response has all three parts working together."
+      ],
+      "tags": [
+        "text_response",
+        "structure",
+        "evidence"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_005",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "medium",
+      "questionText": "What is the first thing you should usually state in a text response?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "your opinion",
+        "your opinion about the text",
+        "what you think of the text"
+      ],
+      "stepByStepSolution": [
+        "A text response usually starts by telling the reader your opinion.",
+        "This gives the reader a clear idea of your view straight away.",
+        "So you should state your opinion first."
+      ],
+      "commonMisconceptions": [
+        "Starting with a plot summary instead of an opinion.",
+        "Leaving the opinion until the very end only."
+      ],
+      "hints": [
+        "Think about what a reader needs to know first.",
+        "Your opinion sets up the rest of your response."
+      ],
+      "tags": [
+        "text_response",
+        "structure"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_006",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "medium",
+      "questionText": "Which is an example, not just an opinion? A) The story was interesting.   B) Tom climbed the spiral stairs every night to light the lamp.   C) I really liked it.",
+      "questionType": "multiple_choice",
+      "answerKey": "Tom climbed the spiral stairs every night to light the lamp.",
+      "stepByStepSolution": [
+        "Options A and C are opinions about how someone felt about the story.",
+        "Option B is a specific detail/event that actually happened in the text.",
+        "This makes option B an example, not an opinion."
+      ],
+      "commonMisconceptions": [
+        "Confusing an opinion (a feeling) with an example (a fact from the text).",
+        "Thinking any true-sounding sentence is automatically an example."
+      ],
+      "hints": [
+        "An opinion is what you think or feel.",
+        "An example is a specific detail or event from the text."
+      ],
+      "tags": [
+        "text_response",
+        "evidence"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_007",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "hard",
+      "questionText": "Why should you use specific examples from the text rather than vague statements?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "specific examples prove your point clearly",
+        "they make your response more convincing and clear",
+        "vague statements don't show evidence"
+      ],
+      "stepByStepSolution": [
+        "A vague statement like 'it was good' doesn't show why.",
+        "A specific example proves your point clearly to the reader.",
+        "This makes your response more convincing."
+      ],
+      "commonMisconceptions": [
+        "Thinking vague statements are just as convincing as specific ones.",
+        "Not connecting the example back to the opinion."
+      ],
+      "hints": [
+        "Compare 'it was exciting' with 'it was exciting because Tom braved the storm'.",
+        "Specific details are more convincing than vague ones."
+      ],
+      "tags": [
+        "text_response",
+        "evidence"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_008",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "hard",
+      "questionText": "Which structure best fits a short text response? A) opinion, then supporting reasons and examples   B) examples first, then a random unrelated opinion   C) just a plot summary with no opinion",
+      "questionType": "multiple_choice",
+      "answerKey": "opinion, then supporting reasons and examples",
+      "stepByStepSolution": [
+        "A clear structure helps the reader follow your thinking.",
+        "Starting with the opinion, then backing it up with reasons and examples, is the clearest structure.",
+        "The other options either skip the opinion or don't connect ideas logically."
+      ],
+      "commonMisconceptions": [
+        "Putting an opinion with no connection to the examples given.",
+        "Leaving out the opinion altogether."
+      ],
+      "hints": [
+        "Think about what order helps a reader follow your argument.",
+        "State your view first, then explain and prove it."
+      ],
+      "tags": [
+        "text_response",
+        "structure"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_009",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "hard",
+      "questionText": "What is one way to end a text response effectively?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "restate your opinion",
+        "sum up your opinion and main reason",
+        "restate your main point"
+      ],
+      "stepByStepSolution": [
+        "A good ending reminds the reader of your overall view.",
+        "Restating your opinion (perhaps with your strongest reason) wraps up the response well.",
+        "This gives the response a clear, complete ending."
+      ],
+      "commonMisconceptions": [
+        "Introducing a brand new opinion at the very end.",
+        "Ending abruptly with no summary at all."
+      ],
+      "hints": [
+        "Think about how to remind the reader of your main point.",
+        "A conclusion should sum up, not introduce new ideas."
+      ],
+      "tags": [
+        "text_response",
+        "structure",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "ETEXTRESP_Y3_010",
+      "skillId": "E3LY06_3LE04_text_response",
+      "difficulty": "hard",
+      "questionText": "Give one reason why an informative text response would explain 'how well the text explained its topic'.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "because that shows if the text achieved its purpose of informing the reader",
+        "informative texts are meant to explain something clearly",
+        "it shows whether the text did its job of informing"
+      ],
+      "stepByStepSolution": [
+        "An informative text's purpose is to explain a topic clearly.",
+        "Judging 'how well it explained the topic' checks if it achieved that purpose.",
+        "This is a key part of evaluating an informative text specifically."
+      ],
+      "commonMisconceptions": [
+        "Judging an informative text the same way as a story (on characters/plot).",
+        "Ignoring the text's actual purpose."
+      ],
+      "hints": [
+        "Think about what an informative text is trying to do.",
+        "Its main job is to explain something clearly to the reader."
+      ],
+      "tags": [
+        "text_response",
+        "purpose"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_001",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "easy",
+      "questionText": "Fill the gap with a pronoun: 'Maria lost her ball. ___ looked everywhere for it.'",
+      "questionType": "short_answer",
+      "answerKey": "She",
+      "stepByStepSolution": [
+        "The sentence is about Maria, a girl.",
+        "Instead of repeating 'Maria', we use the pronoun 'She'.",
+        "'She looked everywhere for it' links back to Maria."
+      ],
+      "commonMisconceptions": [
+        "Using 'He' instead of 'She'.",
+        "Repeating 'Maria' instead of using a pronoun."
+      ],
+      "hints": [
+        "A pronoun replaces a noun already mentioned.",
+        "Maria is a girl, so use a female pronoun."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "pronouns"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_002",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "easy",
+      "questionText": "Which connective shows a reason? A) however   B) because   C) therefore",
+      "questionType": "multiple_choice",
+      "answerKey": "because",
+      "stepByStepSolution": [
+        "'However' shows contrast.",
+        "'Because' explains a reason for something.",
+        "'Therefore' shows a result."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'because' (reason) with 'therefore' (result).",
+        "Confusing 'because' with 'however'."
+      ],
+      "hints": [
+        "'Because' answers the question 'why?'.",
+        "Think about which word explains a cause."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_003",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "easy",
+      "questionText": "Which connective shows a contrast (an opposite idea)? A) however   B) because   C) and",
+      "questionType": "multiple_choice",
+      "answerKey": "however",
+      "stepByStepSolution": [
+        "'However' introduces an opposite or contrasting idea.",
+        "'Because' shows a reason, and 'and' just adds ideas.",
+        "So 'however' is correct for contrast."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'however' with 'and', which just adds ideas.",
+        "Confusing contrast with addition."
+      ],
+      "hints": [
+        "'However' signals a change of direction in the idea.",
+        "Think of a sentence like 'She was tired, however she kept going.'"
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_004",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "medium",
+      "questionText": "Which connective shows a result? A) because   B) however   C) therefore",
+      "questionType": "multiple_choice",
+      "answerKey": "therefore",
+      "stepByStepSolution": [
+        "'Because' explains a reason.",
+        "'However' shows contrast.",
+        "'Therefore' shows what happened as a result, so it's correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'therefore' (result) with 'because' (reason).",
+        "Mixing up all three connectives."
+      ],
+      "hints": [
+        "'Therefore' means 'as a result' or 'so'.",
+        "Look for the word that shows an outcome."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_005",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "medium",
+      "questionText": "Replace the repeated word with a synonym: 'The dog was happy. The happy dog wagged its tail.' Give a synonym for 'happy'.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "joyful",
+        "glad",
+        "delighted",
+        "cheerful"
+      ],
+      "stepByStepSolution": [
+        "Repeating 'happy' twice sounds repetitive.",
+        "A synonym is a word with a similar meaning, like 'joyful' or 'glad'.",
+        "Using a synonym makes the writing flow better."
+      ],
+      "commonMisconceptions": [
+        "Repeating the exact same word instead of finding a synonym.",
+        "Choosing a word with the opposite meaning."
+      ],
+      "hints": [
+        "A synonym means almost the same thing as another word.",
+        "Think of other words that mean 'happy'."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "synonyms"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_006",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "medium",
+      "questionText": "Fill the gap with a connective: 'It was raining, ___ we stayed inside.' (Choose: because, however, therefore)",
+      "questionType": "short_answer",
+      "answerKey": "therefore",
+      "stepByStepSolution": [
+        "Staying inside is the RESULT of it raining.",
+        "'Therefore' links a cause to its result.",
+        "So 'therefore' fits: 'It was raining, therefore we stayed inside.'"
+      ],
+      "commonMisconceptions": [
+        "Using 'however', which would suggest a contrast instead.",
+        "Using 'because', which would need the sentence order reversed."
+      ],
+      "hints": [
+        "Think about which word shows the raining CAUSED the staying inside.",
+        "'Therefore' means 'as a result'."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_007",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "medium",
+      "questionText": "Fill the gap with a connective: 'She practised every day, ___ she still found the piece difficult.' (Choose: because, however, therefore)",
+      "questionType": "short_answer",
+      "answerKey": "however",
+      "stepByStepSolution": [
+        "Practising every day would normally make something easier.",
+        "But the piece was STILL difficult \u2014 this is a contrast.",
+        "'However' correctly signals this unexpected, opposite result."
+      ],
+      "commonMisconceptions": [
+        "Using 'therefore', which would suggest an expected result, not a contrast.",
+        "Using 'because', which doesn't fit the contrasting idea."
+      ],
+      "hints": [
+        "Look for the word that shows a surprising or opposite outcome.",
+        "'However' signals a change of direction in the idea."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_008",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "hard",
+      "questionText": "Why do writers use pronouns instead of repeating the same noun over and over?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to avoid repetition and make writing flow better",
+        "to make the writing less repetitive",
+        "so the writing sounds smoother, not repetitive"
+      ],
+      "stepByStepSolution": [
+        "Repeating the same noun again and again can sound clunky.",
+        "Pronouns replace nouns already mentioned, making writing smoother.",
+        "This helps ideas flow better across sentences."
+      ],
+      "commonMisconceptions": [
+        "Thinking pronouns are used only to save space.",
+        "Not noticing repeated nouns in their own writing."
+      ],
+      "hints": [
+        "Read a paragraph that repeats the same noun many times \u2014 how does it sound?",
+        "Pronouns make writing sound more natural and connected."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "pronouns"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_009",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "hard",
+      "questionText": "Fill the gap with a connective: 'He forgot his lunch ___ he left home in a rush.' (Choose: because, however, therefore)",
+      "questionType": "short_answer",
+      "answerKey": "because",
+      "stepByStepSolution": [
+        "Leaving in a rush is the REASON he forgot his lunch.",
+        "'Because' explains the cause of forgetting his lunch.",
+        "So the sentence reads: 'He forgot his lunch because he left home in a rush.'"
+      ],
+      "commonMisconceptions": [
+        "Using 'therefore', which would need the cause and effect reversed.",
+        "Using 'however', which doesn't fit a simple cause-and-effect link."
+      ],
+      "hints": [
+        "Ask 'why did he forget his lunch?' \u2014 the answer is the reason.",
+        "'Because' introduces the reason for something."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECOHESIVE_Y3_010",
+      "skillId": "E3LA05_07_cohesive_devices",
+      "difficulty": "hard",
+      "questionText": "What is the purpose of cohesive devices like pronouns, synonyms, and connectives in writing?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to link ideas together clearly across sentences",
+        "to connect sentences and ideas smoothly",
+        "they help ideas flow and connect clearly"
+      ],
+      "stepByStepSolution": [
+        "Cohesive devices connect one sentence or idea to the next.",
+        "They help avoid repetition and show relationships (reason, result, contrast) between ideas.",
+        "This makes writing flow smoothly and clearly for the reader."
+      ],
+      "commonMisconceptions": [
+        "Thinking these devices are just about avoiding repeated words.",
+        "Not seeing how connectives show relationships between ideas."
+      ],
+      "hints": [
+        "Think about how sentences connect to form a smooth paragraph.",
+        "Cohesive devices are like glue holding ideas together."
+      ],
+      "tags": [
+        "cohesive_devices",
+        "purpose"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1642 @@
+{
+  "_note": "Week 10 item bank: Term 1, Week 10 skills (Maths: financial contexts, measurement consolidation, data interpretation; English: multimodal reading, multimodal writing, language consolidation). This completes Term 1's item banks. All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3MONEY_Y3_001",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "easy",
+      "questionText": "An item costs $8. You pay with a $10 note. How much change do you get?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$2",
+        "2"
+      ],
+      "stepByStepSolution": [
+        "Find the difference between what you paid and the cost.",
+        "10 - 8 = 2.",
+        "You would get $2 change."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting.",
+        "Forgetting the dollar sign in the answer."
+      ],
+      "hints": [
+        "'Change' means subtract the cost from what you paid.",
+        "10 - 8 = 2."
+      ],
+      "tags": [
+        "financial_contexts",
+        "change"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_002",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "easy",
+      "questionText": "You buy a pencil for $2 and a rubber for $1. What is the total cost?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$3",
+        "3"
+      ],
+      "stepByStepSolution": [
+        "Add the two prices together.",
+        "2 + 1 = 3.",
+        "The total cost is $3."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Miscalculating the addition."
+      ],
+      "hints": [
+        "'Total cost' is a clue to add.",
+        "2 + 1 = 3."
+      ],
+      "tags": [
+        "financial_contexts",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_003",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "medium",
+      "questionText": "An item costs $15. You pay with a $20 note. How much change do you get?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$5",
+        "5"
+      ],
+      "stepByStepSolution": [
+        "Find the difference between what you paid and the cost.",
+        "20 - 15 = 5.",
+        "You would get $5 change."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting.",
+        "Miscalculating 20 - 15."
+      ],
+      "hints": [
+        "'Change' means subtract the cost from what you paid.",
+        "20 - 15 = 5."
+      ],
+      "tags": [
+        "financial_contexts",
+        "change"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_004",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "medium",
+      "questionText": "You have $50 to spend. You buy a toy for $32. How much money do you have left?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$18",
+        "18"
+      ],
+      "stepByStepSolution": [
+        "Find how much is left after spending.",
+        "50 - 32 = 18.",
+        "You have $18 left."
+      ],
+      "commonMisconceptions": [
+        "Adding instead of subtracting.",
+        "Miscalculating 50 - 32."
+      ],
+      "hints": [
+        "'How much is left' means subtract what was spent.",
+        "50 - 32 = 18."
+      ],
+      "tags": [
+        "financial_contexts",
+        "budget",
+        "subtraction"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_005",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "medium",
+      "questionText": "Two items cost $12 and $9. What is their total cost?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$21",
+        "21"
+      ],
+      "stepByStepSolution": [
+        "Add the two prices together.",
+        "12 + 9 = 21.",
+        "The total cost is $21."
+      ],
+      "commonMisconceptions": [
+        "Subtracting instead of adding.",
+        "Miscalculating the addition."
+      ],
+      "hints": [
+        "'Total cost' is a clue to add both prices.",
+        "12 + 9 = 21."
+      ],
+      "tags": [
+        "financial_contexts",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_006",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "medium",
+      "questionText": "Which is the best way to check if $47 change from a $50 note for a $3 item is reasonable? A) $3 + $47 should equal $50   B) $3 x $47 should equal $50   C) it doesn't need checking",
+      "questionType": "multiple_choice",
+      "answerKey": "$3 + $47 should equal $50",
+      "stepByStepSolution": [
+        "Change plus the cost of the item should equal the amount paid.",
+        "$3 + $47 = $50, which checks out correctly.",
+        "Multiplying wouldn't make sense for checking change."
+      ],
+      "commonMisconceptions": [
+        "Trying to multiply the amounts to check instead of adding.",
+        "Thinking change never needs checking."
+      ],
+      "hints": [
+        "Change and cost together should add up to what was paid.",
+        "Use addition to check: cost + change = amount paid."
+      ],
+      "tags": [
+        "financial_contexts",
+        "estimation",
+        "checking"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_007",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "medium",
+      "questionText": "How much would 3 books at $8 each cost in total?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$24",
+        "24"
+      ],
+      "stepByStepSolution": [
+        "3 books at $8 each means 3 x 8.",
+        "3 x 8 = 24.",
+        "The total cost would be $24."
+      ],
+      "commonMisconceptions": [
+        "Adding 3 + 8 instead of multiplying.",
+        "Miscalculating 3 x 8."
+      ],
+      "hints": [
+        "'3 books at $8 each' is a clue to multiply.",
+        "3 x 8 = 24."
+      ],
+      "tags": [
+        "financial_contexts",
+        "multiplication",
+        "budget"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_008",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "hard",
+      "questionText": "You buy 4 items priced at $6 each. How much change do you get from $30?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$6",
+        "6"
+      ],
+      "stepByStepSolution": [
+        "First find the total cost: 4 items at $6 means 4 x 6 = 24.",
+        "Then subtract from the amount paid: 30 - 24.",
+        "30 - 24 = 6, so you get $6 change."
+      ],
+      "commonMisconceptions": [
+        "Only doing one of the two steps.",
+        "Subtracting before multiplying."
+      ],
+      "hints": [
+        "Find the total cost first, then find the change.",
+        "4 x 6 = 24, then 30 - 24 = 6."
+      ],
+      "tags": [
+        "financial_contexts",
+        "two_step",
+        "change"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_009",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "hard",
+      "questionText": "A toy costs $18.50. You pay with a $20 note. How much change do you get?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "$1.50",
+        "1.50"
+      ],
+      "stepByStepSolution": [
+        "Find the difference between what you paid and the cost.",
+        "20 - 18.50 = 1.50.",
+        "You would get $1.50 change."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include the cents in the calculation.",
+        "Miscalculating the subtraction with decimals."
+      ],
+      "hints": [
+        "Subtract carefully, including the cents.",
+        "20.00 - 18.50 = 1.50."
+      ],
+      "tags": [
+        "financial_contexts",
+        "change",
+        "decimals"
+      ]
+    },
+    {
+      "id": "M3MONEY_Y3_010",
+      "skillId": "M3N05_06_financial_contexts",
+      "difficulty": "hard",
+      "questionText": "Estimating costs before shopping is useful because: A) it tells you the exact amount you will spend   B) it helps you check whether you have roughly enough money   C) it replaces the need to add up the actual prices",
+      "questionType": "multiple_choice",
+      "answerKey": "it helps you check whether you have roughly enough money",
+      "stepByStepSolution": [
+        "Estimating gives a rough, quick idea of total cost, not an exact figure.",
+        "This helps you check if you have roughly enough money before shopping.",
+        "You would still need to add up the actual prices for the real total."
+      ],
+      "commonMisconceptions": [
+        "Thinking an estimate gives an exact total.",
+        "Thinking estimating removes the need to calculate the real total."
+      ],
+      "hints": [
+        "An estimate is a quick, rough check, not the final answer.",
+        "It helps you plan before knowing the exact total."
+      ],
+      "tags": [
+        "financial_contexts",
+        "estimation"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_001",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure how long a soccer game lasts? A) minutes   B) grams   C) centimetres",
+      "questionType": "multiple_choice",
+      "answerKey": "minutes",
+      "stepByStepSolution": [
+        "A soccer game is measured by time, not weight or length.",
+        "Minutes are the appropriate unit for measuring how long something takes.",
+        "Grams and centimetres don't measure time."
+      ],
+      "commonMisconceptions": [
+        "Confusing time units with mass or length units.",
+        "Choosing a unit unrelated to time."
+      ],
+      "hints": [
+        "Think about what kind of measurement a 'game' needs \u2014 time.",
+        "Minutes and hours measure time."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "time"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_002",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the length of a pencil? A) kilometres   B) centimetres   C) kilograms",
+      "questionType": "multiple_choice",
+      "answerKey": "centimetres",
+      "stepByStepSolution": [
+        "A pencil is a small object.",
+        "Centimetres are used for measuring small lengths.",
+        "Kilometres are for long distances, and kilograms measure mass, not length."
+      ],
+      "commonMisconceptions": [
+        "Choosing kilometres, which is far too large a unit.",
+        "Confusing length units with mass units."
+      ],
+      "hints": [
+        "Think about how small a pencil is.",
+        "Small lengths are measured in centimetres."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "length"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_003",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "easy",
+      "questionText": "Which unit would you use to measure the mass of a bag of apples? A) litres   B) kilograms   C) minutes",
+      "questionType": "multiple_choice",
+      "answerKey": "kilograms",
+      "stepByStepSolution": [
+        "A bag of apples has a noticeable weight.",
+        "Kilograms are used for measuring everyday masses like this.",
+        "Litres measure capacity, and minutes measure time, not mass."
+      ],
+      "commonMisconceptions": [
+        "Confusing mass units with capacity units.",
+        "Choosing a time unit for a mass question."
+      ],
+      "hints": [
+        "Think about what kind of measurement 'weight' needs.",
+        "Kilograms measure mass."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "mass"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_004",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "medium",
+      "questionText": "Which unit would you use to measure the capacity of a drink bottle? A) millilitres   B) grams   C) hours",
+      "questionType": "multiple_choice",
+      "answerKey": "millilitres",
+      "stepByStepSolution": [
+        "A drink bottle holds a liquid.",
+        "Millilitres (or litres) measure capacity, or how much liquid something holds.",
+        "Grams measure mass, and hours measure time \u2014 neither fits capacity."
+      ],
+      "commonMisconceptions": [
+        "Confusing capacity units with mass units.",
+        "Choosing a time unit for a capacity question."
+      ],
+      "hints": [
+        "Think about what 'capacity' means \u2014 how much liquid it holds.",
+        "Millilitres and litres are capacity units."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "capacity"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_005",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "medium",
+      "questionText": "How many minutes are there in 2 hours?",
+      "questionType": "short_answer",
+      "answerKey": "120",
+      "stepByStepSolution": [
+        "There are 60 minutes in 1 hour.",
+        "For 2 hours, multiply 60 by 2.",
+        "60 x 2 = 120 minutes."
+      ],
+      "commonMisconceptions": [
+        "Forgetting how many minutes are in an hour.",
+        "Adding instead of multiplying."
+      ],
+      "hints": [
+        "1 hour = 60 minutes.",
+        "60 x 2 = 120."
+      ],
+      "tags": [
+        "measurement",
+        "time",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_006",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "medium",
+      "questionText": "How many grams are there in 3 kilograms?",
+      "questionType": "short_answer",
+      "answerKey": "3000",
+      "stepByStepSolution": [
+        "There are 1000 grams in 1 kilogram.",
+        "For 3 kilograms, multiply 1000 by 3.",
+        "1000 x 3 = 3000 grams."
+      ],
+      "commonMisconceptions": [
+        "Forgetting how many grams are in a kilogram.",
+        "Miscalculating the multiplication."
+      ],
+      "hints": [
+        "1 kg = 1000 g.",
+        "1000 x 3 = 3000."
+      ],
+      "tags": [
+        "measurement",
+        "mass",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_007",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "medium",
+      "questionText": "How many millilitres are there in 2 litres?",
+      "questionType": "short_answer",
+      "answerKey": "2000",
+      "stepByStepSolution": [
+        "There are 1000 millilitres in 1 litre.",
+        "For 2 litres, multiply 1000 by 2.",
+        "1000 x 2 = 2000 millilitres."
+      ],
+      "commonMisconceptions": [
+        "Forgetting how many millilitres are in a litre.",
+        "Miscalculating the multiplication."
+      ],
+      "hints": [
+        "1 L = 1000 mL.",
+        "1000 x 2 = 2000."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_008",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "medium",
+      "questionText": "Which is the best unit to measure the distance between two cities? A) centimetres   B) kilometres   C) millilitres",
+      "questionType": "multiple_choice",
+      "answerKey": "kilometres",
+      "stepByStepSolution": [
+        "The distance between cities is very large.",
+        "Kilometres are used for measuring long distances.",
+        "Centimetres would be far too small, and millilitres measure capacity, not distance."
+      ],
+      "commonMisconceptions": [
+        "Choosing centimetres, which is too small a unit for such a large distance.",
+        "Confusing distance units with capacity units."
+      ],
+      "hints": [
+        "Think about how far apart two cities usually are.",
+        "Long distances are measured in kilometres."
+      ],
+      "tags": [
+        "measurement",
+        "units",
+        "length"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_009",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "hard",
+      "questionText": "A recipe takes 45 minutes to cook, plus 15 minutes to prepare. How long does the whole process take in total?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "60 minutes",
+        "1 hour",
+        "1 hour (60 minutes)"
+      ],
+      "stepByStepSolution": [
+        "Add the preparation time and cooking time together.",
+        "45 + 15 = 60 minutes.",
+        "60 minutes is the same as 1 hour."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to add both times together.",
+        "Not recognising that 60 minutes equals 1 hour."
+      ],
+      "hints": [
+        "Add the two amounts of time.",
+        "45 + 15 = 60 minutes, which is 1 hour."
+      ],
+      "tags": [
+        "measurement",
+        "time",
+        "addition"
+      ]
+    },
+    {
+      "id": "M3MEASCON_Y3_010",
+      "skillId": "M3M01_04_measurement_consolidation",
+      "difficulty": "hard",
+      "questionText": "A jug holds 1500 mL. How many litres is this?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "1.5 litres",
+        "1.5 L",
+        "1 litre 500 mL"
+      ],
+      "stepByStepSolution": [
+        "There are 1000 mL in 1 litre.",
+        "1500 mL is 1000 mL (1 litre) plus an extra 500 mL.",
+        "So 1500 mL is 1.5 litres, or 1 litre 500 mL."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to convert correctly between mL and L.",
+        "Writing an incorrect decimal value."
+      ],
+      "hints": [
+        "1000 mL = 1 L, so 1500 mL = 1 L + 500 mL.",
+        "500 mL is half a litre, so the total is 1.5 L."
+      ],
+      "tags": [
+        "measurement",
+        "capacity",
+        "conversion"
+      ]
+    },
+    {
+      "id": "M3DATA_Y3_001",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "easy",
+      "questionText": "On which day was the rainfall the highest?",
+      "questionType": "short_answer",
+      "answerKey": "Wednesday",
+      "stepByStepSolution": [
+        "Compare the rainfall amounts for each day.",
+        "Wednesday has the highest amount, 12 mm.",
+        "So Wednesday had the highest rainfall."
+      ],
+      "commonMisconceptions": [
+        "Picking a day without comparing all the numbers.",
+        "Confusing 'highest' with 'lowest'."
+      ],
+      "hints": [
+        "Compare all five numbers: 5, 0, 12, 8, 0.",
+        "The biggest number shows the highest rainfall."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_002",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "easy",
+      "questionText": "On which days was there no rainfall?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "Tuesday and Friday",
+        "Tuesday, Friday"
+      ],
+      "stepByStepSolution": [
+        "Look for days with a rainfall value of 0.",
+        "Both Tuesday and Friday show 0 mm.",
+        "So there was no rainfall on Tuesday and Friday."
+      ],
+      "commonMisconceptions": [
+        "Naming only one of the two zero-rainfall days.",
+        "Confusing a small number like 5 with zero."
+      ],
+      "hints": [
+        "Look for the value 0 in the table.",
+        "Two days show exactly 0 mm."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_003",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "medium",
+      "questionText": "What is the total rainfall for the week?",
+      "questionType": "short_answer",
+      "answerKey": "25",
+      "stepByStepSolution": [
+        "Add all five days' rainfall together.",
+        "5 + 0 + 12 + 8 + 0 = 25.",
+        "The total rainfall for the week is 25 mm."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the days.",
+        "Adding incorrectly."
+      ],
+      "hints": [
+        "Add all the values in the table together.",
+        "5 + 0 + 12 + 8 + 0 = 25."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables",
+        "addition"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_004",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "medium",
+      "questionText": "How much more rain fell on Wednesday than on Thursday?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Wednesday had 12 mm and Thursday had 8 mm.",
+        "12 - 8 = 4.",
+        "4 mm more rain fell on Wednesday than Thursday."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order.",
+        "Adding instead of finding the difference."
+      ],
+      "hints": [
+        "Find the difference between the two days' amounts.",
+        "12 - 8 = 4."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables",
+        "comparison"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_005",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "medium",
+      "questionText": "Which type of display shows information in rows and columns, like this? A) a column graph   B) a table   C) a pie chart",
+      "questionType": "multiple_choice",
+      "answerKey": "a table",
+      "stepByStepSolution": [
+        "A column graph uses bars to show data visually.",
+        "A pie chart shows data as slices of a circle.",
+        "A table organises data into rows and columns, which matches this display."
+      ],
+      "commonMisconceptions": [
+        "Confusing a table with a column graph.",
+        "Confusing a table with a pie chart."
+      ],
+      "hints": [
+        "Think about how the data is laid out \u2014 rows and columns.",
+        "A table is the display type that uses rows and columns."
+      ],
+      "tags": [
+        "data_interpretation",
+        "display_types"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_006",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "medium",
+      "questionText": "What was the rainfall on Monday?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Look at the table for the value listed next to Monday.",
+        "The table shows Monday - 5.",
+        "So the rainfall on Monday was 5 mm."
+      ],
+      "commonMisconceptions": [
+        "Reading the value for a different day by mistake.",
+        "Misreading the table."
+      ],
+      "hints": [
+        "Find 'Monday' in the table and check its value.",
+        "The value listed is 5."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_007",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "hard",
+      "questionText": "If you turned this data into a column graph, which day's column would be the tallest?",
+      "questionType": "short_answer",
+      "answerKey": "Wednesday",
+      "stepByStepSolution": [
+        "The tallest column in a column graph shows the highest value.",
+        "Wednesday has the highest rainfall value, 12 mm.",
+        "So Wednesday's column would be the tallest."
+      ],
+      "commonMisconceptions": [
+        "Confusing the tallest column with the shortest.",
+        "Picking a day without comparing all values."
+      ],
+      "hints": [
+        "The tallest column matches the day with the highest number.",
+        "Compare all five values to find the highest."
+      ],
+      "tags": [
+        "data_interpretation",
+        "column_graphs"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_008",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "hard",
+      "questionText": "What is the difference between the highest and lowest rainfall amounts in the table?",
+      "questionType": "short_answer",
+      "answerKey": "12",
+      "stepByStepSolution": [
+        "The highest rainfall is 12 mm (Wednesday) and the lowest is 0 mm (Tuesday or Friday).",
+        "12 - 0 = 12.",
+        "The difference between the highest and lowest is 12 mm."
+      ],
+      "commonMisconceptions": [
+        "Comparing the wrong two values.",
+        "Subtracting in the wrong order."
+      ],
+      "hints": [
+        "Find the highest and lowest values first.",
+        "12 - 0 = 12."
+      ],
+      "tags": [
+        "data_interpretation",
+        "tables",
+        "comparison"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_009",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "hard",
+      "questionText": "Why are tables and column graphs useful for showing data like rainfall? A) they make the numbers harder to compare   B) they make it easy to compare and interpret information at a glance   C) they hide the exact numbers",
+      "questionType": "multiple_choice",
+      "answerKey": "they make it easy to compare and interpret information at a glance",
+      "stepByStepSolution": [
+        "Tables and graphs organise data clearly.",
+        "This makes it easy to compare values and interpret information quickly.",
+        "They don't hide numbers or make comparisons harder \u2014 that's the opposite of their purpose."
+      ],
+      "commonMisconceptions": [
+        "Thinking data displays make information harder to understand.",
+        "Thinking data displays hide the actual numbers."
+      ],
+      "hints": [
+        "Think about why we organise data instead of leaving it as a long list.",
+        "Displays like tables and graphs make patterns easier to spot."
+      ],
+      "tags": [
+        "data_interpretation",
+        "purpose"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "M3DATA_Y3_010",
+      "skillId": "M3ST02_03_data_interpretation",
+      "difficulty": "hard",
+      "questionText": "What was the average (mean) daily rainfall for the week, rounded to the nearest whole number?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "First find the total rainfall: 5 + 0 + 12 + 8 + 0 = 25.",
+        "Divide the total by the number of days: 25 divided by 5.",
+        "25 divided by 5 = 5, so the average daily rainfall was 5 mm."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to divide by the number of days after adding.",
+        "Using the wrong total in the calculation."
+      ],
+      "hints": [
+        "Average means total divided by the number of values.",
+        "25 mm total divided by 5 days = 5 mm average."
+      ],
+      "tags": [
+        "data_interpretation",
+        "average",
+        "tables"
+      ],
+      "passage": "Weekly Rainfall Table (in mm): Monday - 5, Tuesday - 0, Wednesday - 12, Thursday - 8, Friday - 0."
+    },
+    {
+      "id": "EMULTIREAD_Y3_001",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "easy",
+      "questionText": "What is the main heading on the poster?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "SCHOOL FETE - SATURDAY!",
+        "School Fete - Saturday"
+      ],
+      "stepByStepSolution": [
+        "Look at the largest, boldest text on the poster.",
+        "It reads 'SCHOOL FETE - SATURDAY!'.",
+        "This is the main heading."
+      ],
+      "commonMisconceptions": [
+        "Picking the smaller text at the bottom instead.",
+        "Missing part of the heading."
+      ],
+      "hints": [
+        "Look for the biggest, boldest words at the top.",
+        "Headings are usually the largest text on a poster."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "layout"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_002",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "easy",
+      "questionText": "What pictures are shown on the poster?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "balloons and a jumping castle",
+        "a jumping castle and balloons"
+      ],
+      "stepByStepSolution": [
+        "Look at the description of the images on the poster.",
+        "It mentions 'a picture of balloons and a jumping castle'.",
+        "So the pictures are balloons and a jumping castle."
+      ],
+      "commonMisconceptions": [
+        "Naming only one of the two images.",
+        "Confusing the images with the text."
+      ],
+      "hints": [
+        "Look for the sentence describing what's pictured.",
+        "Two images are mentioned together."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "images"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_003",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "medium",
+      "questionText": "What time do the gates open, according to the poster?",
+      "questionType": "short_answer",
+      "answerKey": "10am",
+      "stepByStepSolution": [
+        "Look at the smaller text at the bottom of the poster.",
+        "It says 'Gates open 10am.'",
+        "So the gates open at 10am."
+      ],
+      "commonMisconceptions": [
+        "Confusing the gate time with the entry cost.",
+        "Misreading the smaller text."
+      ],
+      "hints": [
+        "Look in the smaller details section of the poster.",
+        "The time information is given there."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "details"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_004",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "medium",
+      "questionText": "How much does entry cost?",
+      "questionType": "short_answer",
+      "answerKey": "$2",
+      "stepByStepSolution": [
+        "Look at the smaller text at the bottom of the poster.",
+        "It says 'Entry $2.'",
+        "So entry costs $2."
+      ],
+      "commonMisconceptions": [
+        "Confusing entry cost with the gate opening time.",
+        "Misreading the details."
+      ],
+      "hints": [
+        "Check the smaller details text for the price.",
+        "The cost information is given there."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "details"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_005",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "medium",
+      "questionText": "Why is the heading written in large, bold text? A) to make it the first thing readers notice   B) it doesn't matter how it's written   C) to save space on the poster",
+      "questionType": "multiple_choice",
+      "answerKey": "to make it the first thing readers notice",
+      "stepByStepSolution": [
+        "Large, bold text stands out visually on a page.",
+        "This design choice makes the heading the first thing a reader notices.",
+        "It isn't about saving space \u2014 bold headings usually take up more space, not less."
+      ],
+      "commonMisconceptions": [
+        "Thinking text size and boldness have no purpose.",
+        "Thinking bold text is used to save space."
+      ],
+      "hints": [
+        "Think about what catches your eye first on a poster.",
+        "Bold, large text draws attention immediately."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "layout",
+        "purpose"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_006",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "medium",
+      "questionText": "Why do you think the poster includes a picture of a jumping castle?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to show that there will be fun activities at the fete",
+        "to attract attention and show it will be fun",
+        "to make the fete look exciting"
+      ],
+      "stepByStepSolution": [
+        "A jumping castle is a fun activity often found at fetes.",
+        "Showing it in the picture suggests the event will have fun activities.",
+        "This helps attract people's interest in attending."
+      ],
+      "commonMisconceptions": [
+        "Thinking the image has no purpose or connection to the event.",
+        "Missing the link between the image and what the fete offers."
+      ],
+      "hints": [
+        "Think about what a jumping castle picture tells you about the event.",
+        "Images on posters usually connect to what the event offers."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "images",
+        "purpose"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_007",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "medium",
+      "questionText": "In a multimodal text like a poster, images and words work together to: A) confuse the reader   B) help communicate the message more clearly   C) take up extra space",
+      "questionType": "multiple_choice",
+      "answerKey": "help communicate the message more clearly",
+      "stepByStepSolution": [
+        "Multimodal texts combine words and images on purpose.",
+        "Together, they help communicate the message more clearly than words alone.",
+        "They aren't meant to confuse the reader or simply fill space."
+      ],
+      "commonMisconceptions": [
+        "Thinking images and words are unrelated on a poster.",
+        "Thinking images are just decoration with no communicative purpose."
+      ],
+      "hints": [
+        "Think about how a picture can support and add to written words.",
+        "Multimodal texts use both to communicate together."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "purpose"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_008",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "hard",
+      "questionText": "Why is important information like the price and time placed in smaller text at the bottom?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "the heading and pictures grab attention first, then details follow",
+        "so the eye-catching heading is seen first, with details after",
+        "less urgent details don't need to be as large as the main heading"
+      ],
+      "stepByStepSolution": [
+        "Posters are designed to grab attention with the heading and images first.",
+        "Detailed information like price and time can be read after the main message catches interest.",
+        "This is a common layout strategy: eye-catching first, details second."
+      ],
+      "commonMisconceptions": [
+        "Thinking smaller text means the information is unimportant.",
+        "Not understanding the layout strategy behind text sizing."
+      ],
+      "hints": [
+        "Think about the order in which your eyes move over a poster.",
+        "Big elements grab attention first, small text gives specific details."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "layout"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_009",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "hard",
+      "questionText": "What is the purpose of this poster?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to advertise or inform people about the school fete",
+        "to tell people about the school fete and invite them",
+        "to invite people to the school fete"
+      ],
+      "stepByStepSolution": [
+        "The poster gives the event name, day, time, cost, and says 'All welcome!'",
+        "This combination shows its purpose is to inform and invite people to the fete.",
+        "It is essentially an advertisement for the event."
+      ],
+      "commonMisconceptions": [
+        "Thinking the poster's purpose is just decorative.",
+        "Missing the invitation aspect ('All welcome!')."
+      ],
+      "hints": [
+        "Think about what information the poster gives and why.",
+        "It tells people about an event and invites them to attend."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "purpose"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIREAD_Y3_010",
+      "skillId": "E3LA09_LY03_multimodal_reading",
+      "difficulty": "hard",
+      "questionText": "What does 'layout' mean when talking about a multimodal text? A) the topic of the text   B) how the words, images, and other elements are arranged on the page   C) the number of words used",
+      "questionType": "multiple_choice",
+      "answerKey": "how the words, images, and other elements are arranged on the page",
+      "stepByStepSolution": [
+        "'Layout' is not about the topic or word count.",
+        "It refers to how all the elements \u2014 words, images, headings \u2014 are arranged and positioned.",
+        "Good layout helps organise a multimodal text clearly."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'layout' with 'topic'.",
+        "Confusing 'layout' with the amount of text."
+      ],
+      "hints": [
+        "Think about the positioning and arrangement of things on a page.",
+        "Layout is about where things are placed, not what they say."
+      ],
+      "tags": [
+        "multimodal_reading",
+        "layout"
+      ],
+      "passage": "School Fete Poster: Large bold heading at the top reads 'SCHOOL FETE - SATURDAY!' Below it is a picture of balloons and a jumping castle. In smaller text at the bottom, it says: 'Gates open 10am. Entry $2. All welcome!'"
+    },
+    {
+      "id": "EMULTIWRITE_Y3_001",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "easy",
+      "questionText": "A multimodal text combines: A) only written words   B) words with images, layout, or other visual elements   C) only pictures with no words",
+      "questionType": "multiple_choice",
+      "answerKey": "words with images, layout, or other visual elements",
+      "stepByStepSolution": [
+        "A multimodal text uses more than one 'mode' of communication.",
+        "This means combining written words with images, layout, or other visual elements.",
+        "It isn't just words alone or pictures alone."
+      ],
+      "commonMisconceptions": [
+        "Thinking a multimodal text is only pictures.",
+        "Thinking a multimodal text is only written words."
+      ],
+      "hints": [
+        "'Multi' means many \u2014 think of many types of elements combined.",
+        "Words plus visuals together make a text multimodal."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "definition"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_002",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "easy",
+      "questionText": "Name one example of a multimodal text.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "a poster",
+        "a digital slide",
+        "a webpage",
+        "a digital story"
+      ],
+      "stepByStepSolution": [
+        "A multimodal text combines words with visuals.",
+        "Examples include posters, digital slides, webpages, and digital stories.",
+        "Any one of these is a valid example."
+      ],
+      "commonMisconceptions": [
+        "Naming a text type with only words, like a plain letter.",
+        "Naming something that isn't really a text at all."
+      ],
+      "hints": [
+        "Think of texts you've seen that mix pictures and words.",
+        "A poster is a common example."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "examples"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_003",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "medium",
+      "questionText": "What should you think about first when planning a multimodal text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "your purpose and audience",
+        "who you are writing for and why",
+        "the purpose and the audience"
+      ],
+      "stepByStepSolution": [
+        "Before creating anything, you need a clear plan.",
+        "Thinking about your purpose (why) and audience (who) shapes all your other decisions.",
+        "This helps you choose the right words, images, and layout."
+      ],
+      "commonMisconceptions": [
+        "Jumping straight to choosing images without a clear plan.",
+        "Ignoring who the text is actually for."
+      ],
+      "hints": [
+        "Ask yourself: why am I making this, and who is it for?",
+        "Purpose and audience guide every other choice."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "planning"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_004",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "medium",
+      "questionText": "Which is most important when choosing images for a multimodal text? A) using as many images as possible   B) choosing images that support and match the message   C) using only black and white images",
+      "questionType": "multiple_choice",
+      "answerKey": "choosing images that support and match the message",
+      "stepByStepSolution": [
+        "Too many images can clutter a text and confuse the message.",
+        "Images should be chosen because they support and match what the text is saying.",
+        "Colour choice isn't the most important factor here."
+      ],
+      "commonMisconceptions": [
+        "Thinking more images always means a better text.",
+        "Choosing images unrelated to the message."
+      ],
+      "hints": [
+        "Ask whether each image helps communicate your message.",
+        "Quality and relevance matter more than quantity."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "images"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_005",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "medium",
+      "questionText": "Why should text on a poster be kept short and clear?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "so it's quick and easy for the audience to read",
+        "so readers can understand the message quickly",
+        "because posters are viewed quickly, not read in detail"
+      ],
+      "stepByStepSolution": [
+        "People usually glance at posters quickly rather than reading them closely.",
+        "Short, clear text ensures the message is understood fast.",
+        "Long, complicated text could be missed or ignored."
+      ],
+      "commonMisconceptions": [
+        "Thinking more text always communicates more clearly.",
+        "Not considering how quickly people usually view posters."
+      ],
+      "hints": [
+        "Think about how long someone actually looks at a poster.",
+        "Short and clear text suits a quick glance."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "text_design"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_006",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "medium",
+      "questionText": "What does 'audience' mean when planning a text? A) the people who will read or view it   B) the topic of the text   C) the length of the text",
+      "questionType": "multiple_choice",
+      "answerKey": "the people who will read or view it",
+      "stepByStepSolution": [
+        "'Audience' is not about the topic or the length.",
+        "It refers to the specific people who will read, view, or use the text.",
+        "Knowing your audience shapes your word choice and design."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'audience' with 'topic'.",
+        "Confusing 'audience' with the text's length."
+      ],
+      "hints": [
+        "Think about who will actually look at or read your text.",
+        "That group of people is your audience."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "audience"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_007",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "hard",
+      "questionText": "What is one reason to plan the layout of a poster before creating it?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to make sure the most important information stands out clearly",
+        "so the important parts are easy to notice",
+        "to organise the words and images clearly"
+      ],
+      "stepByStepSolution": [
+        "Without planning, a poster's most important information might get lost.",
+        "Planning the layout ensures the key message and details stand out clearly.",
+        "This makes the poster more effective at communicating."
+      ],
+      "commonMisconceptions": [
+        "Thinking layout doesn't need planning ahead of time.",
+        "Not considering what should stand out most."
+      ],
+      "hints": [
+        "Think about what you want people to notice first, second, and so on.",
+        "Good layout planning highlights the most important information."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "layout",
+        "planning"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_008",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "hard",
+      "questionText": "How can headings help a reader of a multimodal text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "they show the reader the main idea quickly",
+        "they help organise information and show the main point",
+        "they let readers quickly see what a section is about"
+      ],
+      "stepByStepSolution": [
+        "Headings stand out and are usually the first thing read.",
+        "They quickly show the reader the main idea or topic of a section.",
+        "This helps organise information and guide the reader through the text."
+      ],
+      "commonMisconceptions": [
+        "Thinking headings are just decoration with no real function.",
+        "Not considering how headings guide a reader's attention."
+      ],
+      "hints": [
+        "Think about how a heading helps you decide what a section is about.",
+        "Headings organise information and guide readers quickly."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "layout",
+        "headings"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_009",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "hard",
+      "questionText": "When publishing a multimodal text for a class website, what should you consider about your audience? A) their age, interests, and what they need to know   B) nothing, audience doesn't matter   C) only how long the text is",
+      "questionType": "multiple_choice",
+      "answerKey": "their age, interests, and what they need to know",
+      "stepByStepSolution": [
+        "A class website's audience might include students, parents, and teachers.",
+        "Considering their age, interests, and needs helps you choose the right words, images, and detail level.",
+        "This is more important than just the text length."
+      ],
+      "commonMisconceptions": [
+        "Thinking audience doesn't matter for online publishing.",
+        "Focusing only on length rather than audience needs."
+      ],
+      "hints": [
+        "Think about who exactly will visit the class website.",
+        "Their age and interests should shape your content choices."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "audience",
+        "publishing"
+      ]
+    },
+    {
+      "id": "EMULTIWRITE_Y3_010",
+      "skillId": "E3LY06_08_multimodal_writing",
+      "difficulty": "hard",
+      "questionText": "What is the purpose of a call-to-action on a poster (like 'Come along!')?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to encourage the audience to do something (like attend)",
+        "to invite or encourage people to act",
+        "to persuade people to come or take part"
+      ],
+      "stepByStepSolution": [
+        "A call-to-action tells the reader exactly what to do next.",
+        "Phrases like 'Come along!' encourage people to act, such as attending an event.",
+        "This helps turn interest into actual participation."
+      ],
+      "commonMisconceptions": [
+        "Thinking a call-to-action is just a friendly phrase with no real purpose.",
+        "Confusing a call-to-action with just providing information."
+      ],
+      "hints": [
+        "Think about what the poster wants the reader to actually do.",
+        "A call-to-action directly encourages an action."
+      ],
+      "tags": [
+        "multimodal_writing",
+        "purpose",
+        "call_to_action"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_001",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "easy",
+      "questionText": "Identify the verb in this sentence: 'The dog barked loudly.'",
+      "questionType": "short_answer",
+      "answerKey": "barked",
+      "stepByStepSolution": [
+        "A verb is an action or doing word.",
+        "In this sentence, the action being done is 'barked'.",
+        "So the verb is 'barked'."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'dog', a noun, instead of the verb.",
+        "Choosing 'loudly', an adverb, instead of the verb."
+      ],
+      "hints": [
+        "Look for the word that shows what the dog is doing.",
+        "Verbs describe actions."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "verbs"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_002",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "easy",
+      "questionText": "Identify the adjective in this sentence: 'The fluffy cat slept.'",
+      "questionType": "short_answer",
+      "answerKey": "fluffy",
+      "stepByStepSolution": [
+        "An adjective describes a noun.",
+        "'Fluffy' describes what the cat is like.",
+        "So the adjective is 'fluffy'."
+      ],
+      "commonMisconceptions": [
+        "Choosing 'cat', a noun, instead of the adjective.",
+        "Choosing 'slept', a verb, instead of the adjective."
+      ],
+      "hints": [
+        "Look for the describing word before the noun.",
+        "Adjectives describe what something is like."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "adjectives"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_003",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "medium",
+      "questionText": "Fix the tense: 'She walk to school every day.'",
+      "questionType": "short_answer",
+      "answerKey": "She walks to school every day.",
+      "stepByStepSolution": [
+        "The sentence describes something that happens regularly (every day).",
+        "The verb needs an 's' to match: 'walk' becomes 'walks'.",
+        "The fixed sentence is: 'She walks to school every day.'"
+      ],
+      "commonMisconceptions": [
+        "Leaving the verb as 'walk' without the 's'.",
+        "Changing the wrong word in the sentence."
+      ],
+      "hints": [
+        "Check that the verb matches the subject correctly.",
+        "'She walks' is correct present tense, not 'she walk'."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "tense"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_004",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "medium",
+      "questionText": "Add the correct apostrophe: 'The dogs bone' (showing the bone belongs to one dog).",
+      "questionType": "short_answer",
+      "answerKey": "The dog's bone",
+      "stepByStepSolution": [
+        "To show something belongs to one dog, add an apostrophe and 's'.",
+        "'Dogs' becomes 'dog's' to show possession.",
+        "So the corrected phrase is: 'The dog's bone'."
+      ],
+      "commonMisconceptions": [
+        "Adding the apostrophe after the 's' (dogs') instead of before it.",
+        "Forgetting the apostrophe altogether."
+      ],
+      "hints": [
+        "Singular possession uses apostrophe + s ('s).",
+        "The bone belongs to one dog, so it's dog's, not dogs'."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "apostrophes"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_005",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "medium",
+      "questionText": "Add a comma in the correct place: 'After lunch we went to the park.'",
+      "questionType": "short_answer",
+      "answerKey": "After lunch, we went to the park.",
+      "stepByStepSolution": [
+        "The sentence starts with an introductory phrase, 'After lunch'.",
+        "A comma should follow an introductory phrase before the main sentence.",
+        "So the corrected sentence is: 'After lunch, we went to the park.'"
+      ],
+      "commonMisconceptions": [
+        "Placing the comma in the wrong spot.",
+        "Forgetting the comma altogether."
+      ],
+      "hints": [
+        "Introductory phrases at the start of a sentence are usually followed by a comma.",
+        "Put the comma right after 'lunch'."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "punctuation",
+        "commas"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_006",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "medium",
+      "questionText": "Add the prefix 'un' to 'kind'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "unkind",
+      "stepByStepSolution": [
+        "The prefix 'un-' means 'not'.",
+        "Adding 'un-' to 'kind' makes 'unkind'.",
+        "'Unkind' means 'not kind'."
+      ],
+      "commonMisconceptions": [
+        "Adding the prefix to the end instead of the beginning.",
+        "Misspelling the joined word."
+      ],
+      "hints": [
+        "A prefix goes at the beginning of a word.",
+        "'Un' + 'kind' = 'unkind'."
+      ],
+      "tags": [
+        "consolidation",
+        "spelling",
+        "affixes"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_007",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "medium",
+      "questionText": "Choose the correct homophone: 'I ___ (would/wood) like an apple.'",
+      "questionType": "short_answer",
+      "answerKey": "would",
+      "stepByStepSolution": [
+        "'Would' is used to express a wish or polite request.",
+        "'Wood' refers to the material from trees.",
+        "Since the sentence expresses a wish, 'would' is correct."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'would' (a verb) with 'wood' (a material).",
+        "Not checking which meaning fits the sentence."
+      ],
+      "hints": [
+        "'Would' is used in polite requests like 'I would like...'.",
+        "'Wood' is a material, which doesn't fit this sentence."
+      ],
+      "tags": [
+        "consolidation",
+        "spelling",
+        "homophones"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_008",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "hard",
+      "questionText": "Combine these sentences using a connective: 'It was cold. We wore jackets.' (Use 'so' or 'because'.)",
+      "questionType": "short_answer",
+      "answerKey": [
+        "It was cold, so we wore jackets.",
+        "We wore jackets because it was cold."
+      ],
+      "stepByStepSolution": [
+        "Wearing jackets is a result of the cold weather.",
+        "'So' shows a result, and 'because' shows a reason \u2014 both can link these ideas.",
+        "Either 'It was cold, so we wore jackets.' or 'We wore jackets because it was cold.' works."
+      ],
+      "commonMisconceptions": [
+        "Using a connective that doesn't logically fit, like 'however'.",
+        "Combining the sentences without any connective at all."
+      ],
+      "hints": [
+        "Think about the cause (cold) and effect (jackets).",
+        "'So' and 'because' both link a cause to its effect, just in different sentence orders."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "connectives"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_009",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "hard",
+      "questionText": "Add the suffix '-ness' to 'kind'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "kindness",
+      "stepByStepSolution": [
+        "The suffix '-ness' turns a describing word into a noun.",
+        "Adding '-ness' to 'kind' makes 'kindness'.",
+        "'Kindness' means 'the state of being kind'."
+      ],
+      "commonMisconceptions": [
+        "Misspelling 'kindness' as 'kindess'.",
+        "Adding the wrong suffix instead of '-ness'."
+      ],
+      "hints": [
+        "'Kind' + 'ness' = 'kindness'.",
+        "Keep both 'n's when joining the word parts."
+      ],
+      "tags": [
+        "consolidation",
+        "spelling",
+        "affixes"
+      ]
+    },
+    {
+      "id": "ECONSOL_Y3_010",
+      "skillId": "E3LA06_LY09_12_language_consolidation",
+      "difficulty": "hard",
+      "questionText": "Which sentence uses punctuation correctly? A) whats your name   B) What's your name?   C) whats your name.",
+      "questionType": "multiple_choice",
+      "answerKey": "What's your name?",
+      "stepByStepSolution": [
+        "A question needs a capital letter at the start and a question mark at the end.",
+        "It also needs the correct apostrophe in the contraction 'what's'.",
+        "Only option B has all three correct: capital letter, apostrophe, and question mark."
+      ],
+      "commonMisconceptions": [
+        "Missing the apostrophe in 'what's'.",
+        "Using a full stop instead of a question mark for a question."
+      ],
+      "hints": [
+        "Check for a capital letter, an apostrophe in the contraction, and the right end punctuation.",
+        "Questions end with a question mark, not a full stop."
+      ],
+      "tags": [
+        "consolidation",
+        "grammar",
+        "punctuation"
+      ]
+    }
+  ]
+}
