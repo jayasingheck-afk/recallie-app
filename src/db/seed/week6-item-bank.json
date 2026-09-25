@@ -1,0 +1,1597 @@
+{
+  "_note": "Week 6 item bank: Term 1, Week 6 skills (Maths: division as sharing/grouping linked to x2,3,5,10 facts, angles as turns, column graphs; English: technical vocabulary via context clues/glossary, writing explanation texts, prefixes/suffixes for multisyllabic words). All short_answer/multiple_choice, auto-gradable.",
+  "items": [
+    {
+      "id": "M3DIV_Y3_001",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "easy",
+      "questionText": "Share 12 lollies equally between 3 friends. How many lollies does each friend get?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "Sharing 12 lollies between 3 friends means 12 divided by 3.",
+        "12 divided by 3 is 4.",
+        "Each friend gets 4 lollies."
+      ],
+      "commonMisconceptions": [
+        "Multiplying instead of dividing.",
+        "Sharing the lollies unevenly."
+      ],
+      "hints": [
+        "'Shared equally between' is a clue to divide.",
+        "12 divided by 3 = 4."
+      ],
+      "tags": [
+        "division",
+        "sharing"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_002",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "easy",
+      "questionText": "20 cupcakes are put into boxes of 5. How many boxes are needed?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "20 cupcakes grouped into boxes of 5 means 20 divided by 5.",
+        "20 divided by 5 is 4.",
+        "4 boxes are needed."
+      ],
+      "commonMisconceptions": [
+        "Dividing 5 by 20 instead of 20 by 5.",
+        "Adding instead of dividing."
+      ],
+      "hints": [
+        "'Grouped into boxes of' is a clue to divide.",
+        "How many 5s fit into 20?"
+      ],
+      "tags": [
+        "division",
+        "grouping"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_003",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "easy",
+      "questionText": "What is 10 divided by 2?",
+      "questionType": "short_answer",
+      "answerKey": "5",
+      "stepByStepSolution": [
+        "Think of 10 shared into 2 equal groups.",
+        "5 + 5 = 10.",
+        "So 10 divided by 2 is 5."
+      ],
+      "commonMisconceptions": [
+        "Confusing 10 divided by 2 with 10 minus 2.",
+        "Halving incorrectly."
+      ],
+      "hints": [
+        "Dividing by 2 means splitting into 2 equal groups.",
+        "What number added to itself makes 10?"
+      ],
+      "tags": [
+        "division",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_004",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "easy",
+      "questionText": "What is 18 divided by 3? A) 5   B) 6   C) 9",
+      "questionType": "multiple_choice",
+      "answerKey": "6",
+      "stepByStepSolution": [
+        "18 divided by 3 means splitting 18 into 3 equal groups.",
+        "3 x 6 = 18, so 18 divided by 3 = 6.",
+        "The answer is 6."
+      ],
+      "commonMisconceptions": [
+        "Mixing up the multiplication fact 3 x 9 = 27 with this problem.",
+        "Guessing without checking the related multiplication fact."
+      ],
+      "hints": [
+        "Think of the multiplication fact: 3 x ? = 18.",
+        "3 x 6 = 18."
+      ],
+      "tags": [
+        "division",
+        "facts",
+        "multiple_choice"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_005",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "medium",
+      "questionText": "24 buns are shared equally among 3 plates. How many buns go on each plate?",
+      "questionType": "short_answer",
+      "answerKey": "8",
+      "stepByStepSolution": [
+        "24 buns shared among 3 plates means 24 divided by 3.",
+        "24 divided by 3 is 8.",
+        "Each plate gets 8 buns."
+      ],
+      "commonMisconceptions": [
+        "Sharing unevenly across the plates.",
+        "Multiplying 24 by 3 instead of dividing."
+      ],
+      "hints": [
+        "'Shared equally among' means divide.",
+        "3 x 8 = 24, so 24 divided by 3 = 8."
+      ],
+      "tags": [
+        "division",
+        "sharing",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_006",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "medium",
+      "questionText": "There are 40 counters grouped into equal groups of 10. How many groups are there?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "40 counters grouped into 10s means 40 divided by 10.",
+        "40 divided by 10 is 4.",
+        "There are 4 groups."
+      ],
+      "commonMisconceptions": [
+        "Dividing by the wrong number.",
+        "Confusing the group size with the number of groups."
+      ],
+      "hints": [
+        "Dividing by 10 removes a zero from the number.",
+        "How many 10s fit into 40?"
+      ],
+      "tags": [
+        "division",
+        "grouping",
+        "facts"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_007",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "medium",
+      "questionText": "Which division fact is the inverse (opposite) of 4 x 5 = 20? A) 20 divided by 5 = 4   B) 20 divided by 2 = 10   C) 5 divided by 4 = 1.25",
+      "questionType": "multiple_choice",
+      "answerKey": "20 divided by 5 = 4",
+      "stepByStepSolution": [
+        "Multiplication and division are inverse (opposite) operations.",
+        "Since 4 x 5 = 20, dividing 20 by 5 gives back the other factor, 4.",
+        "So the matching division fact is 20 divided by 5 = 4."
+      ],
+      "commonMisconceptions": [
+        "Choosing a division fact that isn't linked to the original multiplication fact.",
+        "Mixing up which number is the divisor."
+      ],
+      "hints": [
+        "Multiplication and division 'undo' each other.",
+        "If 4 x 5 = 20, then 20 divided by one factor gives the other factor."
+      ],
+      "tags": [
+        "division",
+        "multiplication_link",
+        "inverse_operations"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_008",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "medium",
+      "questionText": "A gardener has 18 seedlings to plant in rows of 2. How many rows will there be?",
+      "questionType": "short_answer",
+      "answerKey": "9",
+      "stepByStepSolution": [
+        "18 seedlings in rows of 2 means 18 divided by 2.",
+        "18 divided by 2 is 9.",
+        "There will be 9 rows."
+      ],
+      "commonMisconceptions": [
+        "Dividing 2 by 18 instead of 18 by 2.",
+        "Miscounting the rows."
+      ],
+      "hints": [
+        "'Rows of 2' tells you the group size.",
+        "How many 2s fit into 18?"
+      ],
+      "tags": [
+        "division",
+        "grouping",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_009",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "hard",
+      "questionText": "A teacher has 30 stickers to share equally among 10 students. How many stickers does each student get?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "30 stickers shared among 10 students means 30 divided by 10.",
+        "30 divided by 10 is 3.",
+        "Each student gets 3 stickers."
+      ],
+      "commonMisconceptions": [
+        "Sharing the stickers unevenly.",
+        "Dividing by the wrong number of students."
+      ],
+      "hints": [
+        "Dividing by 10 removes a zero.",
+        "10 x 3 = 30, so 30 divided by 10 = 3."
+      ],
+      "tags": [
+        "division",
+        "sharing",
+        "word_problem"
+      ]
+    },
+    {
+      "id": "M3DIV_Y3_010",
+      "skillId": "M3N06_division_sharing_grouping",
+      "difficulty": "hard",
+      "questionText": "Which statement best describes division as sharing? A) Splitting a total into a known number of equal groups, to find how many are in each group   B) Splitting a total into groups of a known size, to find how many groups there are   C) Adding equal groups together to find a total",
+      "questionType": "multiple_choice",
+      "answerKey": "Splitting a total into a known number of equal groups, to find how many are in each group",
+      "stepByStepSolution": [
+        "Sharing division starts by knowing the number of groups (for example, 3 friends).",
+        "You then work out how many go into each group.",
+        "This is different from grouping, where you know the group size and find the number of groups."
+      ],
+      "commonMisconceptions": [
+        "Mixing up sharing and grouping division.",
+        "Confusing division with multiplication (adding equal groups)."
+      ],
+      "hints": [
+        "Sharing: you know the number of groups.",
+        "Grouping: you know the size of each group."
+      ],
+      "tags": [
+        "division",
+        "concept"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_001",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "easy",
+      "questionText": "A quarter turn is what fraction of a full turn? A) 1/4   B) 1/2   C) 3/4",
+      "questionType": "multiple_choice",
+      "answerKey": "1/4",
+      "stepByStepSolution": [
+        "A full turn is one whole circle.",
+        "A quarter turn is one of four equal parts of that circle.",
+        "So a quarter turn is 1/4 of a full turn."
+      ],
+      "commonMisconceptions": [
+        "Confusing a quarter turn with a half turn.",
+        "Thinking 'quarter' means a small, unmeasured amount."
+      ],
+      "hints": [
+        "'Quarter' means one of four equal parts.",
+        "Think of cutting a circle into 4 equal slices."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "fractions"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_002",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "easy",
+      "questionText": "A half turn is what fraction of a full turn? A) 1/4   B) 1/2   C) 3/4",
+      "questionType": "multiple_choice",
+      "answerKey": "1/2",
+      "stepByStepSolution": [
+        "A full turn is one whole circle.",
+        "A half turn is exactly half of that circle.",
+        "So a half turn is 1/2 of a full turn."
+      ],
+      "commonMisconceptions": [
+        "Confusing half and quarter turns.",
+        "Thinking a half turn returns you to the same direction."
+      ],
+      "hints": [
+        "'Half' means one of two equal parts.",
+        "A half turn faces you the opposite way."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "fractions"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_003",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "easy",
+      "questionText": "How many quarter turns make one full turn?",
+      "questionType": "short_answer",
+      "answerKey": "4",
+      "stepByStepSolution": [
+        "A full turn can be split into equal quarter turns.",
+        "4 quarter turns make up the whole circle.",
+        "So 4 quarter turns make one full turn."
+      ],
+      "commonMisconceptions": [
+        "Saying 2 instead of 4.",
+        "Confusing quarter turns with half turns."
+      ],
+      "hints": [
+        "Think about turning to face a new direction 4 times to get back to the start.",
+        "1/4 + 1/4 + 1/4 + 1/4 = 1 whole turn."
+      ],
+      "tags": [
+        "angles",
+        "turns"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_004",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "easy",
+      "questionText": "How many quarter turns make one half turn?",
+      "questionType": "short_answer",
+      "answerKey": "2",
+      "stepByStepSolution": [
+        "A half turn is 1/2 of a full turn.",
+        "A quarter turn is 1/4 of a full turn.",
+        "Two quarter turns (1/4 + 1/4) make one half turn (1/2)."
+      ],
+      "commonMisconceptions": [
+        "Saying 4 instead of 2.",
+        "Confusing a half turn with a full turn."
+      ],
+      "hints": [
+        "1/4 + 1/4 = 1/2.",
+        "Two quarter turns added together make a half turn."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "fractions"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_005",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "medium",
+      "questionText": "If you are facing East and make a half turn, which direction do you face?",
+      "questionType": "short_answer",
+      "answerKey": "West",
+      "stepByStepSolution": [
+        "A half turn means turning to face the exact opposite direction.",
+        "The opposite of East is West.",
+        "So you would face West."
+      ],
+      "commonMisconceptions": [
+        "Confusing a half turn with a quarter turn.",
+        "Mixing up compass directions."
+      ],
+      "hints": [
+        "A half turn always ends up facing the opposite way.",
+        "East and West are opposite directions."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "direction"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_006",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "medium",
+      "questionText": "If you are facing North and make a quarter turn clockwise, which direction do you face?",
+      "questionType": "short_answer",
+      "answerKey": "East",
+      "stepByStepSolution": [
+        "Turning clockwise from North goes towards East first.",
+        "A quarter turn clockwise from North lands exactly on East.",
+        "So you would face East."
+      ],
+      "commonMisconceptions": [
+        "Turning anticlockwise instead of clockwise.",
+        "Confusing North/East with North/West."
+      ],
+      "hints": [
+        "Clockwise means the same direction as clock hands move.",
+        "From North, a quarter turn clockwise points to East."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "direction"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_007",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "medium",
+      "questionText": "A skater spins all the way around and stops facing the same way she started. What type of turn did she make? A) quarter turn   B) half turn   C) full turn",
+      "questionType": "multiple_choice",
+      "answerKey": "full turn",
+      "stepByStepSolution": [
+        "Facing the same way she started means she turned the whole way around.",
+        "A turn all the way around a full circle is a full turn.",
+        "So the answer is a full turn."
+      ],
+      "commonMisconceptions": [
+        "Thinking any spin is automatically a full turn regardless of ending direction.",
+        "Confusing a full turn with a half turn."
+      ],
+      "hints": [
+        "A full turn brings you back to exactly where you started facing.",
+        "Think of the whole circle, not just part of it."
+      ],
+      "tags": [
+        "angles",
+        "turns"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_008",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "medium",
+      "questionText": "A clock's minute hand moves from 12 to 6. What type of turn is this?",
+      "questionType": "short_answer",
+      "answerKey": "half turn",
+      "stepByStepSolution": [
+        "Moving from 12 to 6 is exactly halfway around the clock face.",
+        "Halfway around a full circle is a half turn.",
+        "So this is a half turn."
+      ],
+      "commonMisconceptions": [
+        "Thinking it's a quarter turn because it's 'only' from 12 to 6.",
+        "Confusing clock numbers with turn size directly."
+      ],
+      "hints": [
+        "12 to 6 is exactly opposite on the clock face.",
+        "Opposite points on a circle are a half turn apart."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "clocks"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_009",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "hard",
+      "questionText": "If you are facing South and make a three-quarter turn clockwise, which direction do you face?",
+      "questionType": "short_answer",
+      "answerKey": "East",
+      "stepByStepSolution": [
+        "From South, a quarter turn clockwise faces West.",
+        "A half turn clockwise (2 quarters) faces North.",
+        "A three-quarter turn clockwise (3 quarters) faces East."
+      ],
+      "commonMisconceptions": [
+        "Stopping the count after only one or two quarter turns.",
+        "Turning anticlockwise instead of clockwise."
+      ],
+      "hints": [
+        "Count clockwise in quarter turns: South to West to North to East.",
+        "Three-quarter turn = 3 lots of quarter turns."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "direction"
+      ]
+    },
+    {
+      "id": "M3ANGLE_Y3_010",
+      "skillId": "M3M05_angles_as_turns",
+      "difficulty": "hard",
+      "questionText": "Which everyday example best shows a three-quarter turn? A) a clock's minute hand moving from 12 to 9 going clockwise   B) a door opening only slightly   C) turning around to look behind you and then turning straight back",
+      "questionType": "multiple_choice",
+      "answerKey": "a clock's minute hand moving from 12 to 9 going clockwise",
+      "stepByStepSolution": [
+        "Moving clockwise from 12 to 9 passes 3, 6, then 9 \u2014 three of the four quarter-marks.",
+        "That is 3 out of 4 quarter turns, which is a three-quarter turn.",
+        "The other options describe a small turn or two turns that cancel out, not a three-quarter turn."
+      ],
+      "commonMisconceptions": [
+        "Thinking 12 to 9 is only a quarter turn because it 'looks' close on a clock face.",
+        "Assuming any big turn must be a full turn."
+      ],
+      "hints": [
+        "Going clockwise, count the quarter-marks passed: 12 to 3 to 6 to 9 is three quarters.",
+        "A three-quarter turn is 3 of the 4 equal parts of a full turn."
+      ],
+      "tags": [
+        "angles",
+        "turns",
+        "clocks"
+      ]
+    },
+    {
+      "id": "M3GRAPH_Y3_001",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "easy",
+      "questionText": "Which fruit got the most votes?",
+      "questionType": "short_answer",
+      "answerKey": "Bananas",
+      "stepByStepSolution": [
+        "Look at the number of votes for each fruit in the graph.",
+        "Bananas has the tallest column with 8 votes.",
+        "Bananas got the most votes."
+      ],
+      "commonMisconceptions": [
+        "Picking the fruit listed first instead of checking all the numbers.",
+        "Confusing 'most' with 'least'."
+      ],
+      "hints": [
+        "The tallest column has the most votes.",
+        "Compare all four numbers: 5, 8, 3, 6."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation"
+      ],
+      "passage": "Favourite Fruit column graph (number of votes): Apples - 5, Bananas - 8, Oranges - 3, Grapes - 6."
+    },
+    {
+      "id": "M3GRAPH_Y3_002",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "easy",
+      "questionText": "Which fruit got the fewest votes?",
+      "questionType": "short_answer",
+      "answerKey": "Oranges",
+      "stepByStepSolution": [
+        "Look at the number of votes for each fruit in the graph.",
+        "Oranges has the shortest column with 3 votes.",
+        "Oranges got the fewest votes."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'fewest' with 'most'.",
+        "Picking a fruit without comparing all the numbers."
+      ],
+      "hints": [
+        "The shortest column has the fewest votes.",
+        "Compare all four numbers: 5, 8, 3, 6."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation"
+      ],
+      "passage": "Favourite Fruit column graph (number of votes): Apples - 5, Bananas - 8, Oranges - 3, Grapes - 6."
+    },
+    {
+      "id": "M3GRAPH_Y3_003",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "medium",
+      "questionText": "How many more votes did Bananas get than Apples?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Bananas got 8 votes and Apples got 5 votes.",
+        "8 minus 5 is 3.",
+        "Bananas got 3 more votes than Apples."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order.",
+        "Adding instead of finding the difference."
+      ],
+      "hints": [
+        "Find the difference between the two columns' heights.",
+        "8 - 5 = 3."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation",
+        "comparison"
+      ],
+      "passage": "Favourite Fruit column graph (number of votes): Apples - 5, Bananas - 8, Oranges - 3, Grapes - 6."
+    },
+    {
+      "id": "M3GRAPH_Y3_004",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "medium",
+      "questionText": "What is the total number of votes for all fruits?",
+      "questionType": "short_answer",
+      "answerKey": "22",
+      "stepByStepSolution": [
+        "Add together the votes for all four fruits.",
+        "5 + 8 + 3 + 6 = 22.",
+        "The total number of votes is 22."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the fruits.",
+        "Adding incorrectly."
+      ],
+      "hints": [
+        "Add all the column values together.",
+        "5 + 8 = 13, 13 + 3 = 16, 16 + 6 = 22."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation",
+        "addition"
+      ],
+      "passage": "Favourite Fruit column graph (number of votes): Apples - 5, Bananas - 8, Oranges - 3, Grapes - 6."
+    },
+    {
+      "id": "M3GRAPH_Y3_005",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "medium",
+      "questionText": "If you were drawing this data as a column graph, which axis would usually show the fruit names? A) the vertical axis (up the side)   B) the horizontal axis (along the bottom)   C) neither axis",
+      "questionType": "multiple_choice",
+      "answerKey": "the horizontal axis (along the bottom)",
+      "stepByStepSolution": [
+        "Column graphs usually list categories (like fruit names) along the bottom.",
+        "The vertical axis usually shows the numbers (how many votes).",
+        "So fruit names go on the horizontal axis."
+      ],
+      "commonMisconceptions": [
+        "Mixing up which axis shows categories versus numbers.",
+        "Thinking category labels always go on the vertical axis."
+      ],
+      "hints": [
+        "Categories usually sit along the bottom of a column graph.",
+        "The side (vertical) axis usually shows the count or number."
+      ],
+      "tags": [
+        "column_graphs",
+        "graph_structure"
+      ],
+      "passage": "Favourite Fruit column graph (number of votes): Apples - 5, Bananas - 8, Oranges - 3, Grapes - 6."
+    },
+    {
+      "id": "M3GRAPH_Y3_006",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "easy",
+      "questionText": "Which pet is the most common?",
+      "questionType": "short_answer",
+      "answerKey": "Dogs",
+      "stepByStepSolution": [
+        "Look at the number of each pet in the graph.",
+        "Dogs has the tallest column with 12.",
+        "Dogs is the most common pet."
+      ],
+      "commonMisconceptions": [
+        "Picking a pet without comparing all the numbers.",
+        "Confusing 'most common' with 'least common'."
+      ],
+      "hints": [
+        "The tallest column shows the most common pet.",
+        "Compare all four numbers: 12, 9, 4, 2."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation"
+      ],
+      "passage": "Pets Owned column graph (number of pets): Dogs - 12, Cats - 9, Fish - 4, Birds - 2."
+    },
+    {
+      "id": "M3GRAPH_Y3_007",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "easy",
+      "questionText": "Which pet is the least common?",
+      "questionType": "short_answer",
+      "answerKey": "Birds",
+      "stepByStepSolution": [
+        "Look at the number of each pet in the graph.",
+        "Birds has the shortest column with 2.",
+        "Birds is the least common pet."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'least common' with 'most common'.",
+        "Picking Fish instead of checking the exact numbers."
+      ],
+      "hints": [
+        "The shortest column shows the least common pet.",
+        "Compare all four numbers: 12, 9, 4, 2."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation"
+      ],
+      "passage": "Pets Owned column graph (number of pets): Dogs - 12, Cats - 9, Fish - 4, Birds - 2."
+    },
+    {
+      "id": "M3GRAPH_Y3_008",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "medium",
+      "questionText": "How many more dogs are there than cats?",
+      "questionType": "short_answer",
+      "answerKey": "3",
+      "stepByStepSolution": [
+        "Dogs has 12 and Cats has 9.",
+        "12 minus 9 is 3.",
+        "There are 3 more dogs than cats."
+      ],
+      "commonMisconceptions": [
+        "Subtracting in the wrong order.",
+        "Adding instead of subtracting."
+      ],
+      "hints": [
+        "Find the difference between the two columns.",
+        "12 - 9 = 3."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation",
+        "comparison"
+      ],
+      "passage": "Pets Owned column graph (number of pets): Dogs - 12, Cats - 9, Fish - 4, Birds - 2."
+    },
+    {
+      "id": "M3GRAPH_Y3_009",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "medium",
+      "questionText": "What is the total number of pets?",
+      "questionType": "short_answer",
+      "answerKey": "27",
+      "stepByStepSolution": [
+        "Add together all four pet numbers.",
+        "12 + 9 + 4 + 2 = 27.",
+        "The total number of pets is 27."
+      ],
+      "commonMisconceptions": [
+        "Forgetting to include one of the pets.",
+        "Adding incorrectly."
+      ],
+      "hints": [
+        "Add all the column values together.",
+        "12 + 9 = 21, 21 + 4 = 25, 25 + 2 = 27."
+      ],
+      "tags": [
+        "column_graphs",
+        "data_interpretation",
+        "addition"
+      ],
+      "passage": "Pets Owned column graph (number of pets): Dogs - 12, Cats - 9, Fish - 4, Birds - 2."
+    },
+    {
+      "id": "M3GRAPH_Y3_010",
+      "skillId": "M3ST02_column_graphs",
+      "difficulty": "hard",
+      "questionText": "In a column graph, the height of each column shows: A) the order the categories were counted in   B) the number (frequency) for that category   C) the colour of the category",
+      "questionType": "multiple_choice",
+      "answerKey": "the number (frequency) for that category",
+      "stepByStepSolution": [
+        "Each column's height represents how many there are of that category.",
+        "The order and colour of columns don't represent the count.",
+        "So the height shows the number, or frequency, for that category."
+      ],
+      "commonMisconceptions": [
+        "Thinking the order of columns matters for the count.",
+        "Confusing colour or position with the actual data value."
+      ],
+      "hints": [
+        "Taller columns mean bigger numbers.",
+        "The height of a column is what tells you 'how many'."
+      ],
+      "tags": [
+        "column_graphs",
+        "graph_structure"
+      ],
+      "passage": "Pets Owned column graph (number of pets): Dogs - 12, Cats - 9, Fish - 4, Birds - 2."
+    },
+    {
+      "id": "ETECH_Y3_001",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "easy",
+      "questionText": "Using the glossary, what does 'evaporation' mean?",
+      "questionType": "short_answer",
+      "answerKey": "when liquid turns into vapour (gas)",
+      "stepByStepSolution": [
+        "Check the glossary at the end of the text for the word 'evaporation'.",
+        "The glossary says it means when liquid turns into vapour (gas).",
+        "That is the meaning of evaporation."
+      ],
+      "commonMisconceptions": [
+        "Guessing the meaning without checking the glossary.",
+        "Confusing evaporation with condensation."
+      ],
+      "hints": [
+        "A glossary lists the meanings of tricky words.",
+        "Find 'evaporation' in the glossary list."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "glossary"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_002",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "easy",
+      "questionText": "According to the passage, what causes evaporation to happen?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "the sun heating the water",
+        "the sun heats the water",
+        "heat from the sun"
+      ],
+      "stepByStepSolution": [
+        "Look at the sentence describing evaporation in the text.",
+        "It says the sun heats water in oceans and rivers, causing evaporation.",
+        "So the sun's heat causes evaporation."
+      ],
+      "commonMisconceptions": [
+        "Thinking evaporation happens by itself with no cause given.",
+        "Confusing the cause with the effect."
+      ],
+      "hints": [
+        "Look at the very first sentence about the water cycle.",
+        "What does the sun do to the water?"
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "context_clues"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_003",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "medium",
+      "questionText": "Which words in the text act as a context clue for what 'condensation' means?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "cools and changes back into tiny water droplets",
+        "it cools and changes back into tiny water droplets"
+      ],
+      "stepByStepSolution": [
+        "Read the sentence just before the word 'condensation' is introduced.",
+        "It explains that the vapour 'cools and changes back into tiny water droplets'.",
+        "This phrase is the context clue for condensation's meaning."
+      ],
+      "commonMisconceptions": [
+        "Looking at an unrelated sentence for the clue.",
+        "Assuming there is no clue in the text at all."
+      ],
+      "hints": [
+        "Context clues are often in the sentence right before or after a new word.",
+        "Look at what happens to the vapour just before it's called condensation."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "context_clues"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_004",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "medium",
+      "questionText": "Which word means water falling from clouds as rain, hail, or snow? A) evaporation   B) condensation   C) precipitation",
+      "questionType": "multiple_choice",
+      "answerKey": "precipitation",
+      "stepByStepSolution": [
+        "Check the glossary for each of the three words.",
+        "Precipitation is defined as water falling from clouds, such as rain, hail, or snow.",
+        "So precipitation is the correct word."
+      ],
+      "commonMisconceptions": [
+        "Confusing precipitation with condensation.",
+        "Guessing without checking the glossary."
+      ],
+      "hints": [
+        "The glossary gives the exact meaning of each technical word.",
+        "Look for the word about water 'falling'."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "glossary"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_005",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "medium",
+      "questionText": "Using the glossary, explain what 'condensation' means in your own words.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "when vapour cools and turns into liquid droplets",
+        "vapour cooling and turning into liquid droplets",
+        "when water vapour cools and becomes liquid droplets"
+      ],
+      "stepByStepSolution": [
+        "Find 'condensation' in the glossary.",
+        "It means when vapour cools and turns into liquid droplets.",
+        "You can explain it using these key ideas: cooling and turning into liquid."
+      ],
+      "commonMisconceptions": [
+        "Copying an unrelated glossary definition.",
+        "Leaving out the key idea of cooling."
+      ],
+      "hints": [
+        "The glossary gives you the key words to use in your own explanation.",
+        "Include what happens (cools) and what it becomes (liquid droplets)."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "glossary"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_006",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "easy",
+      "questionText": "Which part of the text would you check first to find the meaning of a difficult word? A) the title   B) the glossary   C) the last sentence",
+      "questionType": "multiple_choice",
+      "answerKey": "the glossary",
+      "stepByStepSolution": [
+        "A glossary is a list of word meanings, usually at the end of a text.",
+        "It is the quickest place to check the meaning of a technical word.",
+        "So checking the glossary first is the best strategy."
+      ],
+      "commonMisconceptions": [
+        "Thinking the title always explains hard words.",
+        "Assuming you have to guess instead of using text features."
+      ],
+      "hints": [
+        "Glossaries are built specifically to explain difficult words.",
+        "Look for a list of words and meanings, often at the end of the text."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "glossary",
+        "text_features"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_007",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "medium",
+      "questionText": "What happens right after water vapour cools, according to the passage?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "it condenses into water droplets",
+        "it turns into water droplets",
+        "condensation forms and it turns into droplets"
+      ],
+      "stepByStepSolution": [
+        "Find the sentence about the vapour cooling.",
+        "The text says it 'cools and changes back into tiny water droplets' \u2014 this is condensation.",
+        "So after cooling, the vapour turns into water droplets."
+      ],
+      "commonMisconceptions": [
+        "Confusing this step with evaporation instead of condensation.",
+        "Skipping ahead to precipitation instead of the step right after cooling."
+      ],
+      "hints": [
+        "Read the sentence describing condensation carefully.",
+        "What does the vapour turn into once it cools?"
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "context_clues",
+        "sequence"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_008",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "medium",
+      "questionText": "Why does an informative text like this one often include a glossary?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to help readers understand technical or unfamiliar words",
+        "so readers can look up the meaning of difficult words",
+        "to explain topic-specific vocabulary clearly"
+      ],
+      "stepByStepSolution": [
+        "Informative texts often use technical words that not every reader knows.",
+        "A glossary gives quick, clear definitions of these words.",
+        "This helps readers understand the text without getting confused."
+      ],
+      "commonMisconceptions": [
+        "Thinking a glossary is only decoration.",
+        "Assuming glossaries are only used in fiction texts."
+      ],
+      "hints": [
+        "Think about why a reader might get stuck on a word like 'precipitation'.",
+        "A glossary is a text feature designed to support understanding."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "glossary",
+        "text_features"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_009",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "hard",
+      "questionText": "If a reader did not have the glossary, which strategy could still help them work out what 'evaporation' means?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "using context clues from the surrounding sentences",
+        "reading the sentences around the word for clues",
+        "looking at how the word is used in the sentence"
+      ],
+      "stepByStepSolution": [
+        "Without a glossary, readers can still look at the words and sentences around the unfamiliar word.",
+        "The sentence explains that the sun heats water and this 'causes evaporation... when liquid water turns into water vapour'.",
+        "This is using context clues to figure out the meaning."
+      ],
+      "commonMisconceptions": [
+        "Thinking the only way to find a meaning is a glossary.",
+        "Giving up on an unfamiliar word instead of reading around it."
+      ],
+      "hints": [
+        "Context clues are hints in the surrounding text.",
+        "What does the sentence around 'evaporation' tell you about it?"
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "context_clues"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "ETECH_Y3_010",
+      "skillId": "E3LA10_LY01_technical_vocabulary",
+      "difficulty": "hard",
+      "questionText": "Explain how using both context clues and a glossary together can help a reader understand a technical word.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "context clues give a general idea and the glossary confirms the exact meaning",
+        "context clues help guess the meaning, and the glossary checks if the guess is correct",
+        "using both helps a reader understand and confirm the meaning of a word"
+      ],
+      "stepByStepSolution": [
+        "Context clues from the sentence can give a reader a general idea of a word's meaning.",
+        "The glossary then gives the exact, confirmed meaning.",
+        "Using both together helps a reader understand and check their understanding of technical words."
+      ],
+      "commonMisconceptions": [
+        "Thinking only one strategy should ever be used.",
+        "Assuming context clues and glossaries always give different meanings."
+      ],
+      "hints": [
+        "Think about what each strategy is good for: guessing vs confirming.",
+        "Context clues guess; the glossary confirms."
+      ],
+      "tags": [
+        "technical_vocabulary",
+        "context_clues",
+        "glossary"
+      ],
+      "passage": "The Water Cycle\n\nWater is always moving in a cycle. First, the sun heats water in oceans and rivers, causing evaporation. This is when liquid water turns into water vapour and rises into the air. As the vapour rises, it cools and changes back into tiny water droplets. This process is called condensation, and it forms clouds. When the droplets become too heavy, they fall to the ground as precipitation, such as rain, hail, or snow. The water then collects in rivers, lakes, and oceans, and the cycle begins again.\n\nGlossary:\nevaporation - when liquid turns into vapour (gas)\ncondensation - when vapour cools and turns into liquid droplets\nprecipitation - water falling from clouds, such as rain, hail, or snow"
+    },
+    {
+      "id": "EEXPLAIN_Y3_001",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "easy",
+      "questionText": "What is the purpose of an explanation text? A) to tell a made-up story   B) to explain how or why something happens   C) to persuade someone to agree with an opinion",
+      "questionType": "multiple_choice",
+      "answerKey": "to explain how or why something happens",
+      "stepByStepSolution": [
+        "An explanation text answers a 'how' or 'why' question.",
+        "It is different from a story (narrative) or an opinion piece (persuasive text).",
+        "So its purpose is to explain how or why something happens."
+      ],
+      "commonMisconceptions": [
+        "Confusing explanation texts with narratives.",
+        "Confusing explanation texts with persuasive texts."
+      ],
+      "hints": [
+        "Explanation texts are about processes, not opinions or made-up events.",
+        "Think: does the text answer 'how' or 'why'?"
+      ],
+      "tags": [
+        "explanation_texts",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_002",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "easy",
+      "questionText": "Name one sequence word you could use to start the first step in an explanation text.",
+      "questionType": "short_answer",
+      "answerKey": [
+        "first",
+        "firstly",
+        "to begin with"
+      ],
+      "stepByStepSolution": [
+        "Explanation texts use sequence words to show the order of steps.",
+        "The very first step is often introduced with 'first', 'firstly', or 'to begin with'.",
+        "Any of these words could start the first step."
+      ],
+      "commonMisconceptions": [
+        "Using 'finally' to start the first step.",
+        "Not using any sequence word at all."
+      ],
+      "hints": [
+        "Think about words that mean 'at the start'.",
+        "'First' is the most common word to open a sequence."
+      ],
+      "tags": [
+        "explanation_texts",
+        "sequence_words"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_003",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "easy",
+      "questionText": "Which sequence word usually signals the last step in an explanation? A) first   B) next   C) finally",
+      "questionType": "multiple_choice",
+      "answerKey": "finally",
+      "stepByStepSolution": [
+        "Sequence words show the reader where they are in a process.",
+        "'Finally' signals that this is the last step.",
+        "So the correct answer is 'finally'."
+      ],
+      "commonMisconceptions": [
+        "Confusing 'next' with the ending word.",
+        "Thinking 'first' can also mean 'last'."
+      ],
+      "hints": [
+        "'Finally' means 'at the end'.",
+        "Think about which word means the process is complete."
+      ],
+      "tags": [
+        "explanation_texts",
+        "sequence_words"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_004",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "medium",
+      "questionText": "Put these sequence words in the order they'd usually appear in an explanation text: 'then', 'first', 'finally', 'next'",
+      "questionType": "short_answer",
+      "answerKey": [
+        "first, next, then, finally"
+      ],
+      "stepByStepSolution": [
+        "Explanation texts usually move through steps in time order.",
+        "The order starts with 'first', then 'next', then 'then', and ends with 'finally'.",
+        "So the correct order is: first, next, then, finally."
+      ],
+      "commonMisconceptions": [
+        "Placing 'finally' in the middle.",
+        "Mixing up 'next' and 'then'."
+      ],
+      "hints": [
+        "Think about which word means the very beginning and which means the very end.",
+        "'First' opens the sequence and 'finally' closes it."
+      ],
+      "tags": [
+        "explanation_texts",
+        "sequence_words"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_005",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "medium",
+      "questionText": "Which sentence uses a sequence word correctly in an explanation text? A) Finally, the caterpillar hatches from its egg.   B) The caterpillar eats leaves. First. Then it grows.   C) First, the caterpillar hatches from its egg.",
+      "questionType": "multiple_choice",
+      "answerKey": "First, the caterpillar hatches from its egg.",
+      "stepByStepSolution": [
+        "Hatching from an egg is the very first step in a caterpillar's life cycle.",
+        "'First' correctly signals this is the beginning of the explanation.",
+        "Option C uses the sequence word correctly for the first step."
+      ],
+      "commonMisconceptions": [
+        "Using 'finally' for a step that happens first.",
+        "Using a sequence word as its own sentence with no connection to the step."
+      ],
+      "hints": [
+        "Think about which event happens earliest in the process.",
+        "A sequence word should match where the step falls in the order."
+      ],
+      "tags": [
+        "explanation_texts",
+        "sequence_words"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_006",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "medium",
+      "questionText": "Why do writers use topic-specific vocabulary (special words about the subject) in an explanation text?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "to explain the topic clearly and accurately",
+        "so readers understand the specific topic",
+        "to sound like an expert on the topic"
+      ],
+      "stepByStepSolution": [
+        "Topic-specific words describe exactly what is happening in a process.",
+        "Using the correct words helps readers understand the topic clearly and accurately.",
+        "This makes the explanation more precise than using only general words."
+      ],
+      "commonMisconceptions": [
+        "Thinking technical words are only used to sound impressive.",
+        "Believing any general word works just as well as a technical one."
+      ],
+      "hints": [
+        "Think about how a word like 'evaporation' is more precise than 'water disappearing'.",
+        "Special vocabulary helps explain a topic exactly."
+      ],
+      "tags": [
+        "explanation_texts",
+        "topic_vocabulary"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_007",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "medium",
+      "questionText": "Which topic would most likely include the technical word 'evaporation'? A) how to make a sandwich   B) how the water cycle works   C) how to play a board game",
+      "questionType": "multiple_choice",
+      "answerKey": "how the water cycle works",
+      "stepByStepSolution": [
+        "'Evaporation' is a technical word about water changing into vapour.",
+        "This word is topic-specific to explanations about the water cycle.",
+        "So the correct topic is how the water cycle works."
+      ],
+      "commonMisconceptions": [
+        "Thinking any explanation text could use any technical word.",
+        "Confusing 'evaporation' with a cooking or games term."
+      ],
+      "hints": [
+        "Think about what 'evaporation' actually describes.",
+        "Match the technical word to its matching topic."
+      ],
+      "tags": [
+        "explanation_texts",
+        "topic_vocabulary"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_008",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "hard",
+      "questionText": "What question does an explanation text usually try to answer?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "how or why something happens",
+        "how something works",
+        "why something happens"
+      ],
+      "stepByStepSolution": [
+        "Explanation texts are built around a 'how' or 'why' question.",
+        "For example, 'how does the water cycle work?' or 'why do leaves change colour?'",
+        "So an explanation text usually answers how or why something happens."
+      ],
+      "commonMisconceptions": [
+        "Thinking explanation texts answer 'what happened next' like a story.",
+        "Confusing explanation texts with opinion questions."
+      ],
+      "hints": [
+        "Think about the difference between a story and an explanation.",
+        "Explanations are about processes, not events or opinions."
+      ],
+      "tags": [
+        "explanation_texts",
+        "purpose"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_009",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "hard",
+      "questionText": "Which is the best final (concluding) sentence for an explanation about why it rains? A) And that is how rain forms.   B) Rain is wet.   C) Next, clouds form.",
+      "questionType": "multiple_choice",
+      "answerKey": "And that is how rain forms.",
+      "stepByStepSolution": [
+        "A concluding sentence should sum up the whole process that was explained.",
+        "'And that is how rain forms' wraps up the explanation clearly.",
+        "The other options either give an unrelated fact or introduce a new step, which don't belong at the end."
+      ],
+      "commonMisconceptions": [
+        "Choosing an option that introduces a brand new step at the end.",
+        "Choosing an unrelated fact instead of a summary."
+      ],
+      "hints": [
+        "A good ending sums up the process, it doesn't add new information.",
+        "Look for a sentence that signals the explanation is complete."
+      ],
+      "tags": [
+        "explanation_texts",
+        "structure",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "EEXPLAIN_Y3_010",
+      "skillId": "E3LY06_LA05_explanation_texts",
+      "difficulty": "hard",
+      "questionText": "Explanation texts are usually organised in what order?",
+      "questionType": "short_answer",
+      "answerKey": [
+        "time order (sequence)",
+        "the order the steps happen in",
+        "chronological or sequence order"
+      ],
+      "stepByStepSolution": [
+        "Explanation texts describe a process, step by step.",
+        "The steps are placed in the order they actually happen, called time order or sequence order.",
+        "This is why sequence words like 'first' and 'then' are so important in this text type."
+      ],
+      "commonMisconceptions": [
+        "Thinking explanation texts can be organised in any random order.",
+        "Confusing time order with order of importance."
+      ],
+      "hints": [
+        "Think about how a process actually unfolds, step by step.",
+        "This is the same order sequence words help to show."
+      ],
+      "tags": [
+        "explanation_texts",
+        "structure"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_001",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "easy",
+      "questionText": "Add the prefix 'un' to 'happy'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "unhappy",
+      "stepByStepSolution": [
+        "The prefix 'un-' means 'not'.",
+        "Adding 'un-' to the front of 'happy' makes 'unhappy'.",
+        "'Unhappy' means 'not happy'."
+      ],
+      "commonMisconceptions": [
+        "Adding 'un-' to the end instead of the front.",
+        "Misspelling the joined word."
+      ],
+      "hints": [
+        "A prefix is added to the beginning of a base word.",
+        "'Un' + 'happy' = 'unhappy'."
+      ],
+      "tags": [
+        "affixes",
+        "prefixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_002",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "easy",
+      "questionText": "Add the suffix 'ful' to 'care'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "careful",
+      "stepByStepSolution": [
+        "The suffix '-ful' means 'full of'.",
+        "Adding '-ful' to the end of 'care' makes 'careful'.",
+        "'Careful' means 'full of care'."
+      ],
+      "commonMisconceptions": [
+        "Adding the suffix to the front instead of the end.",
+        "Misspelling the joined word."
+      ],
+      "hints": [
+        "A suffix is added to the end of a base word.",
+        "'Care' + 'ful' = 'careful'."
+      ],
+      "tags": [
+        "affixes",
+        "suffixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_003",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "easy",
+      "questionText": "Which prefix means 'not'? A) re-   B) un-   C) -ing",
+      "questionType": "multiple_choice",
+      "answerKey": "un-",
+      "stepByStepSolution": [
+        "'Re-' usually means 'again'.",
+        "'Un-' usually means 'not'.",
+        "'-ing' is a suffix, not a prefix, and shows an action happening now."
+      ],
+      "commonMisconceptions": [
+        "Confusing 're-' with 'un-'.",
+        "Not noticing that '-ing' is a suffix, not a prefix."
+      ],
+      "hints": [
+        "Prefixes go at the beginning of a word.",
+        "Think of 'unhappy' \u2014 'un-' makes it mean 'not happy'."
+      ],
+      "tags": [
+        "affixes",
+        "prefixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_004",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "easy",
+      "questionText": "What is the base word in 'replay'?",
+      "questionType": "short_answer",
+      "answerKey": "play",
+      "stepByStepSolution": [
+        "'Replay' is made of the prefix 're-' plus a base word.",
+        "Removing 're-' leaves 'play'.",
+        "So the base word is 'play'."
+      ],
+      "commonMisconceptions": [
+        "Saying 'replay' is the base word itself.",
+        "Including part of the prefix in the answer."
+      ],
+      "hints": [
+        "Take away the prefix to find the base word.",
+        "'Re' + 'play' = 'replay'."
+      ],
+      "tags": [
+        "affixes",
+        "base_words"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_005",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "medium",
+      "questionText": "Add the suffix '-less' to 'hope'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "hopeless",
+      "stepByStepSolution": [
+        "The suffix '-less' means 'without'.",
+        "Adding '-less' to 'hope' makes 'hopeless'.",
+        "'Hopeless' means 'without hope'."
+      ],
+      "commonMisconceptions": [
+        "Misspelling 'hopeless' as 'hopless'.",
+        "Adding the suffix to the wrong part of the word."
+      ],
+      "hints": [
+        "'Hope' + 'less' = 'hopeless'.",
+        "Keep the whole base word and add the suffix to the end."
+      ],
+      "tags": [
+        "affixes",
+        "suffixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_006",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "medium",
+      "questionText": "What is the base word in 'careless'?",
+      "questionType": "short_answer",
+      "answerKey": "care",
+      "stepByStepSolution": [
+        "'Careless' is made of a base word plus the suffix '-less'.",
+        "Removing '-less' leaves 'care'.",
+        "So the base word is 'care'."
+      ],
+      "commonMisconceptions": [
+        "Saying 'careless' is the base word itself.",
+        "Confusing the base word with the whole word."
+      ],
+      "hints": [
+        "Take away the suffix to find the base word.",
+        "'Care' + 'less' = 'careless'."
+      ],
+      "tags": [
+        "affixes",
+        "base_words"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_007",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "medium",
+      "questionText": "Which suffix means 'without'? A) -ful   B) -less   C) -ness",
+      "questionType": "multiple_choice",
+      "answerKey": "-less",
+      "stepByStepSolution": [
+        "'-ful' means 'full of'.",
+        "'-less' means 'without'.",
+        "'-ness' turns a word into a noun, often meaning 'the state of being'."
+      ],
+      "commonMisconceptions": [
+        "Confusing '-ful' and '-less', which have opposite meanings.",
+        "Thinking '-ness' means 'without'."
+      ],
+      "hints": [
+        "Think of 'careless' meaning 'without care'.",
+        "'-less' is the opposite of '-ful'."
+      ],
+      "tags": [
+        "affixes",
+        "suffixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_008",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "medium",
+      "questionText": "Add the prefix 're' to 'build'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "rebuild",
+      "stepByStepSolution": [
+        "The prefix 're-' means 'again'.",
+        "Adding 're-' to 'build' makes 'rebuild'.",
+        "'Rebuild' means 'to build again'."
+      ],
+      "commonMisconceptions": [
+        "Adding a hyphen or space that changes the spelling.",
+        "Confusing 're-' with 'un-'."
+      ],
+      "hints": [
+        "'Re' + 'build' = 'rebuild'.",
+        "'Re-' at the start of a word usually means 'again'."
+      ],
+      "tags": [
+        "affixes",
+        "prefixes"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_009",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "hard",
+      "questionText": "Break 'unbelievable' into its base word plus affixes (prefix + base + suffix).",
+      "questionType": "short_answer",
+      "answerKey": [
+        "un + believe + able",
+        "un-believe-able",
+        "prefix un, base believe, suffix able"
+      ],
+      "stepByStepSolution": [
+        "'Unbelievable' has a prefix at the start and a suffix at the end.",
+        "The prefix is 'un-', the base word is 'believe', and the suffix is '-able'.",
+        "So it breaks down as un + believe + able."
+      ],
+      "commonMisconceptions": [
+        "Only identifying one affix instead of both.",
+        "Misspelling the base word as 'belief' instead of 'believe'."
+      ],
+      "hints": [
+        "Look for a word part at the start and another at the end.",
+        "The middle part left over is the base word."
+      ],
+      "tags": [
+        "affixes",
+        "multisyllabic_words"
+      ]
+    },
+    {
+      "id": "EAFFIX_Y3_010",
+      "skillId": "E3LY10_09_affixes_multisyllabic",
+      "difficulty": "hard",
+      "questionText": "Add the suffix '-ness' to 'kind'. What word do you make?",
+      "questionType": "short_answer",
+      "answerKey": "kindness",
+      "stepByStepSolution": [
+        "The suffix '-ness' turns a describing word into a noun, often meaning 'the state of being'.",
+        "Adding '-ness' to 'kind' makes 'kindness'.",
+        "'Kindness' means 'the state of being kind'."
+      ],
+      "commonMisconceptions": [
+        "Misspelling 'kindness' as 'kindess'.",
+        "Adding the wrong suffix, like '-ful', instead of '-ness'."
+      ],
+      "hints": [
+        "'Kind' + 'ness' = 'kindness'.",
+        "Keep both 'n's when joining 'kind' and 'ness'."
+      ],
+      "tags": [
+        "affixes",
+        "suffixes"
+      ]
+    }
+  ]
+}

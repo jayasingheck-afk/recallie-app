@@ -1,5 +1,5 @@
 /**
- * Seeds a demo parent + child user and a small sample item bank (Weeks 1-5
+ * Seeds a demo parent + child user and a small sample item bank (Weeks 1-6
  * skills) so the session builder and review API can be exercised
  * end-to-end during development.
  *
@@ -15,6 +15,7 @@ import week2ItemBank from "./week2-item-bank.json";
 import week3ItemBank from "./week3-item-bank.json";
 import week4ItemBank from "./week4-item-bank.json";
 import week5ItemBank from "./week5-item-bank.json";
+import week6ItemBank from "./week6-item-bank.json";
 
 const DEMO_PARENT_ID = "demo_parent_1";
 const DEMO_CHILD_ID = "demo_child_1";
@@ -122,6 +123,7 @@ async function main() {
   await seedItemBank("week3-item-bank.json", week3ItemBank.items as SeedItem[]);
   await seedItemBank("week4-item-bank.json", week4ItemBank.items as SeedItem[]);
   await seedItemBank("week5-item-bank.json", week5ItemBank.items as SeedItem[]);
+  await seedItemBank("week6-item-bank.json", week6ItemBank.items as SeedItem[]);
   console.log("Demo seed complete.");
   process.exit(0);
 }
