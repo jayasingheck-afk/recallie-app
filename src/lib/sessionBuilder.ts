@@ -17,11 +17,15 @@
  * here for the full-year rollout, since skills/items are looked up
  * generically by term+week (curriculumWeek.ts controls how far a child is
  * allowed to roll forward via MAX_AVAILABLE_WEEK/MAX_AVAILABLE_TERM).
- * Item pool queries exclude "multi_part" question types and items tagged
- * "open_response" — the MVP grader (src/lib/grading.ts) can't auto-mark them.
- * Also excludes items with reviewStatus "flagged" — see this file's
- * pickItemsForSkills() and src/db/seed/export-items-for-review.ts /
- * import-review.ts for the human content-review workflow.
+ * Item pool queries include "multi_part" items (graded part-by-part, see
+ * src/lib/grading.ts's checkMultiPartAnswer) and items tagged "open_response"
+ * (self-assessed by the child against a revealed model answer — see
+ * src/app/api/reviews/route.ts and src/app/child/page.tsx). No content or
+ * UI exists yet for "drag_drop"/"matching" question types, so those simply
+ * never appear (nothing to exclude in the query). Also excludes items with
+ * reviewStatus "flagged" — see this file's pickItemsForSkills() and
+ * src/db/seed/export-items-for-review.ts / import-review.ts for the human
+ * content-review workflow.
  *
  * Also blends in a parent-assigned "focus topic" when one is set (see
  * src/app/api/focus-topic/route.ts and users.assignedFocusSkillId): a small
@@ -49,6 +53,18 @@ export type SessionItem = {
   hints: string[];
   tags: string[];
   slotType: "review" | "new" | "mixed" | "focus";
+  // "multi_part" items only: the ordered sub-answer keys (e.g. ["largest",
+  // "smallest"]) so the UI can render one labelled input per part. Never the
+  // answer VALUES — those stay server-side until grading, same as every
+  // other question type.
+  answerFields?: string[];
+  // "open_response"-tagged items only (self-assessed, see grading.ts's doc
+  // comment): the model answer is shown to the child up front as part of
+  // self-marking, so — unlike every other question type — it's safe (and
+  // necessary) to include it in the session payload rather than withholding
+  // it until after submission.
+  stepByStepSolution?: string[];
+  commonMisconceptions?: string[];
 };
 
 export type BuildSessionParams = {
@@ -81,13 +97,6 @@ async function pickItemsForSkills(
       .where(
         and(
           eq(items.skillId, skillId),
-          // MVP grader only reliably auto-marks single-value short_answer /
-          // multiple_choice items. Exclude question types and tags it can't
-          // grade yet (multi_part has object-valued answer keys; open_response
-          // items have no single correct answer). See week1-item-bank.json's
-          // _note for the source of this rule.
-          ne(items.questionType, "multi_part"),
-          sql`NOT (${items.tags} @> ARRAY['open_response']::text[])`,
           // Human content review (see export-items-for-review.ts / import-review.ts):
           // "pending" items still show (that's every item until reviewed) — only
           // items a reviewer has explicitly flagged are excluded from live sessions.
@@ -251,18 +260,24 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
 
   function addBucket(bySkill: Record<string, any[]>, slotType: SessionItem["slotType"]) {
     for (const [skillId, rows] of Object.entries(bySkill)) {
-      const list: SessionItem[] = rows.map((r: any) => ({
-        itemId: r.id,
-        skillId,
-        skillDescription: skillDescById.get(skillId) ?? skillId,
-        questionText: r.questionText,
-        passage: r.passage ?? null,
-        questionType: r.questionType,
-        difficulty: r.difficulty,
-        hints: r.hints ?? [],
-        tags: r.tags ?? [],
-        slotType,
-      }));
+      const list: SessionItem[] = rows.map((r: any) => {
+        const isOpenResponse = (r.tags ?? []).includes("open_response");
+        return {
+          itemId: r.id,
+          skillId,
+          skillDescription: skillDescById.get(skillId) ?? skillId,
+          questionText: r.questionText,
+          passage: r.passage ?? null,
+          questionType: r.questionType,
+          difficulty: r.difficulty,
+          hints: r.hints ?? [],
+          tags: r.tags ?? [],
+          slotType,
+          answerFields: r.questionType === "multi_part" ? Object.keys(r.answerKey ?? {}) : undefined,
+          stepByStepSolution: isOpenResponse ? r.stepByStepSolution ?? [] : undefined,
+          commonMisconceptions: isOpenResponse ? r.commonMisconceptions ?? [] : undefined,
+        };
+      });
       if (list.length) buckets.set(`${slotType}:${skillId}`, list);
     }
   }

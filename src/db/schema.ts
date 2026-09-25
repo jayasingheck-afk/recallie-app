@@ -156,6 +156,11 @@ export const reviewEvents = pgTable(
     responseTimeSec: real("responseTimeSec").notNull(),
     isReview: boolean("isReview"),
     isMixed: boolean("isMixed"),
+    // true for "open_response" items (free-text/subjective multi_part sub-answers) where
+    // `correct` came from the child's own honest self-assessment against the revealed
+    // model answer, not an exact-match grader — see src/lib/grading.ts and
+    // src/app/api/reviews/route.ts.
+    selfAssessed: boolean("selfAssessed").notNull().default(false),
     timestamp: timestamp("timestamp").notNull().defaultNow(),
   },
   (table) => [

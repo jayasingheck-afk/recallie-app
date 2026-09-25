@@ -18,15 +18,28 @@ type SessionItem = {
   hints: string[];
   tags: string[];
   slotType: "review" | "new" | "mixed";
+  answerFields?: string[]; // "multi_part" items only — one labelled input per key
+  stepByStepSolution?: string[]; // "open_response" items only — the model answer, shown up front for self-marking
+  commonMisconceptions?: string[];
 };
 
 type ReviewFeedback = {
   correct: boolean;
+  partsCorrect?: Record<string, boolean>;
   stepByStepSolution: string[];
   commonMisconceptions: string[];
   skillStatusLabel: string;
   pointsEarned: number;
 };
+
+// Turns a multi_part answer-key field like "largest" or "a" into a readable
+// input label ("Largest", "(a)") — the question text itself already spells
+// out what each part is asking, so this just needs to be a clear pointer to
+// which box goes with which part, not a full restatement.
+function fieldLabel(key: string): string {
+  if (/^[a-z]$/i.test(key)) return `(${key})`;
+  return key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, " ");
+}
 
 type Badge = {
   key: string;
@@ -57,6 +70,8 @@ function ChildSessionInner() {
   const [sessionItems, setSessionItems] = useState<SessionItem[]>([]);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
+  const [multiPartAnswers, setMultiPartAnswers] = useState<Record<string, string>>({});
+  const [revealed, setRevealed] = useState(false); // "open_response" items: has the model answer been shown yet?
   const [hintsShown, setHintsShown] = useState(0);
   const [feedback, setFeedback] = useState<ReviewFeedback | null>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -97,6 +112,8 @@ function ChildSessionInner() {
     setIndex(0);
     setFeedback(null);
     setAnswer("");
+    setMultiPartAnswers({});
+    setRevealed(false);
     setHintsShown(0);
     setAlreadyCompletedToday(false);
 
@@ -127,8 +144,12 @@ function ChildSessionInner() {
 
   const current = sessionItems[index];
   const isDone = !loading && sessionItems.length > 0 && index >= sessionItems.length;
+  const isOpenResponse = current?.tags.includes("open_response") ?? false;
+  const isMultiPart = !isOpenResponse && current?.questionType === "multi_part";
+  const multiPartComplete =
+    !isMultiPart || (current?.answerFields ?? []).every((f) => (multiPartAnswers[f] ?? "").trim().length > 0);
 
-  async function submitAnswer() {
+  async function postReview(extra: { submittedAnswer?: unknown; selfAssessedCorrect?: boolean }) {
     if (!current) return;
     setSubmitting(true);
     const responseTimeSec = (Date.now() - startedAt) / 1000;
@@ -139,11 +160,11 @@ function ChildSessionInner() {
         body: JSON.stringify({
           childId,
           itemId: current.itemId,
-          submittedAnswer: answer,
           attempts: 1,
           hintUsed: hintsShown > 0,
           responseTimeSec,
           slotType: current.slotType,
+          ...extra,
         }),
       });
       if (!res.ok) throw new Error((await res.json()).error ?? "Could not submit answer");
@@ -163,9 +184,24 @@ function ChildSessionInner() {
     }
   }
 
+  function submitAnswer() {
+    postReview({ submittedAnswer: isMultiPart ? multiPartAnswers : answer });
+  }
+
+  // "open_response" items: no exact-match grading exists, so instead of
+  // submitting straight away, the child first reveals the model answer
+  // (already included in the session payload for these items — see
+  // sessionBuilder.ts) and then honestly self-marks. selfAssess() is what
+  // actually submits, carrying that self-report as selfAssessedCorrect.
+  function selfAssess(correct: boolean) {
+    postReview({ submittedAnswer: answer, selfAssessedCorrect: correct });
+  }
+
   function nextItem() {
     setIndex((i) => i + 1);
     setAnswer("");
+    setMultiPartAnswers({});
+    setRevealed(false);
     setHintsShown(0);
     setFeedback(null);
     setStartedAt(Date.now());
@@ -269,42 +305,107 @@ function ChildSessionInner() {
 
           <p className="mb-4 text-lg font-medium text-slate-900">{current.questionText}</p>
 
-          {!feedback && (
-            <>
-              <input
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                placeholder="Type your answer…"
-                className="mb-3 w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
-                onKeyDown={(e) => e.key === "Enter" && answer && submitAnswer()}
-              />
-
-              {current.hints.length > 0 && (
-                <div className="mb-3">
-                  {hintsShown < current.hints.length ? (
-                    <button
-                      onClick={() => setHintsShown((h) => h + 1)}
-                      className="text-sm font-medium text-amber-600 hover:underline"
-                    >
-                      💡 Show a hint ({hintsShown}/{current.hints.length} used)
-                    </button>
-                  ) : null}
-                  {current.hints.slice(0, hintsShown).map((h, i) => (
-                    <p key={i} className="mt-1 text-sm text-amber-700">
-                      Hint {i + 1}: {h}
-                    </p>
-                  ))}
+          {!feedback && isMultiPart && (
+            <div className="mb-3 space-y-2">
+              {(current.answerFields ?? []).map((field) => (
+                <div key={field}>
+                  <label className="mb-1 block text-xs font-medium text-slate-500">{fieldLabel(field)}</label>
+                  <input
+                    value={multiPartAnswers[field] ?? ""}
+                    onChange={(e) => setMultiPartAnswers((prev) => ({ ...prev, [field]: e.target.value }))}
+                    placeholder="Type your answer…"
+                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
+                  />
                 </div>
-              )}
+              ))}
+            </div>
+          )}
 
-              <button
-                onClick={submitAnswer}
-                disabled={!answer || submitting}
-                className="w-full rounded-lg bg-sky-600 py-2 font-semibold text-white disabled:opacity-40"
-              >
-                {submitting ? "Checking…" : "Check my answer"}
-              </button>
-            </>
+          {!feedback && !isMultiPart && !isOpenResponse && (
+            <input
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              placeholder="Type your answer…"
+              className="mb-3 w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
+              onKeyDown={(e) => e.key === "Enter" && answer && submitAnswer()}
+            />
+          )}
+
+          {!feedback && isOpenResponse && !revealed && (
+            <textarea
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              placeholder="Have a go — write your answer here…"
+              rows={3}
+              className="mb-3 w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 focus:border-sky-500 focus:outline-none"
+            />
+          )}
+
+          {!feedback && (isOpenResponse ? !revealed : true) && current.hints.length > 0 && (
+            <div className="mb-3">
+              {hintsShown < current.hints.length ? (
+                <button
+                  onClick={() => setHintsShown((h) => h + 1)}
+                  className="text-sm font-medium text-amber-600 hover:underline"
+                >
+                  💡 Show a hint ({hintsShown}/{current.hints.length} used)
+                </button>
+              ) : null}
+              {current.hints.slice(0, hintsShown).map((h, i) => (
+                <p key={i} className="mt-1 text-sm text-amber-700">
+                  Hint {i + 1}: {h}
+                </p>
+              ))}
+            </div>
+          )}
+
+          {!feedback && !isOpenResponse && (
+            <button
+              onClick={submitAnswer}
+              disabled={(isMultiPart ? !multiPartComplete : !answer) || submitting}
+              className="w-full rounded-lg bg-sky-600 py-2 font-semibold text-white disabled:opacity-40"
+            >
+              {submitting ? "Checking…" : "Check my answer"}
+            </button>
+          )}
+
+          {!feedback && isOpenResponse && !revealed && (
+            <button
+              onClick={() => setRevealed(true)}
+              className="w-full rounded-lg bg-sky-600 py-2 font-semibold text-white"
+            >
+              Show me the model answer
+            </button>
+          )}
+
+          {!feedback && isOpenResponse && revealed && (
+            <div className="rounded-xl bg-slate-50 p-4">
+              <p className="mb-2 text-sm font-semibold text-slate-700">Here&apos;s one good way to answer it:</p>
+              <ol className="mb-3 list-decimal space-y-1 pl-5 text-sm text-slate-700">
+                {(current.stepByStepSolution ?? []).map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+              <p className="mb-3 text-sm font-medium text-slate-900">
+                Compare it with what you wrote — how did you go?
+              </p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => selfAssess(true)}
+                  disabled={submitting}
+                  className="flex-1 rounded-lg bg-emerald-600 py-2 font-semibold text-white disabled:opacity-40"
+                >
+                  I got it! ✅
+                </button>
+                <button
+                  onClick={() => selfAssess(false)}
+                  disabled={submitting}
+                  className="flex-1 rounded-lg bg-amber-500 py-2 font-semibold text-white disabled:opacity-40"
+                >
+                  Still practising 💪
+                </button>
+              </div>
+            </div>
           )}
 
           {feedback && (
@@ -316,12 +417,23 @@ function ChildSessionInner() {
               <p className="mb-2 font-semibold">
                 {feedback.correct ? "Nice work — that's correct! 🎉" : "Good try — let's see how to get there:"}
               </p>
-              <ol className="mb-3 list-decimal space-y-1 pl-5 text-sm">
-                {feedback.stepByStepSolution.map((step, i) => (
-                  <li key={i}>{step}</li>
-                ))}
-              </ol>
-              {!feedback.correct && feedback.commonMisconceptions.length > 0 && (
+              {feedback.partsCorrect && (
+                <ul className="mb-3 space-y-0.5 text-sm">
+                  {Object.entries(feedback.partsCorrect).map(([part, ok]) => (
+                    <li key={part}>
+                      {ok ? "✅" : "🔁"} {fieldLabel(part)}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {!isOpenResponse && (
+                <ol className="mb-3 list-decimal space-y-1 pl-5 text-sm">
+                  {feedback.stepByStepSolution.map((step, i) => (
+                    <li key={i}>{step}</li>
+                  ))}
+                </ol>
+              )}
+              {!feedback.correct && !isOpenResponse && feedback.commonMisconceptions.length > 0 && (
                 <p className="mb-3 text-xs italic">{feedback.commonMisconceptions[0]}</p>
               )}
               <button

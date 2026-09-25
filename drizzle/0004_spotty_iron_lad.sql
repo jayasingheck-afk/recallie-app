@@ -1,0 +1,1 @@
+ALTER TABLE "ReviewEvent" ADD COLUMN "selfAssessed" boolean DEFAULT false NOT NULL;

@@ -4,7 +4,7 @@ import { db } from "@/db/client";
 import { childSkillStates, items, reviewEvents, sessions } from "@/db/schema";
 import { ensureChildSkillState } from "@/lib/sessionBuilder";
 import { updateSkillAfterReview, statusToParentLabel } from "@/lib/spacedRepetition";
-import { checkAnswer } from "@/lib/grading";
+import { checkAnswer, checkMultiPartAnswer } from "@/lib/grading";
 import { pointsForAnswer } from "@/lib/gamification";
 import { verifyChildAccess } from "@/lib/currentParent";
 
@@ -17,6 +17,11 @@ type ReviewBody = {
   responseTimeSec: number;
   sessionId?: string;
   slotType?: "review" | "new" | "mixed";
+  // Required instead of relying on submittedAnswer for items tagged
+  // "open_response" (see grading.ts's doc comment): the child has already
+  // revealed the model answer client-side and is reporting their own honest
+  // self-assessment, since no exact-match grader can fairly mark free text.
+  selfAssessedCorrect?: boolean;
 };
 
 function startOfDay(d: Date) {
@@ -33,6 +38,11 @@ function startOfDay(d: Date) {
  * completed on today's Session (if one is in progress). Returns immediate,
  * constructive feedback (correct/incorrect + step-by-step solution) per the
  * retrieval-practice design — no "fail" language, just growth-oriented status.
+ *
+ * Three grading paths, chosen by the item itself (never the request body):
+ * single-value exact match, "multi_part" (graded part-by-part, `partsCorrect`
+ * in the response), and "open_response"-tagged items (self-assessed by the
+ * child — see `selfAssessedCorrect` below and src/lib/grading.ts).
  */
 export async function POST(req: NextRequest) {
   let body: ReviewBody;
@@ -63,7 +73,37 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `No item found with id ${itemId}` }, { status: 404 });
   }
 
-  const correct = checkAnswer(item.answerKey, submittedAnswer);
+  // Grading strategy depends on the item, not a client-chosen mode, so a
+  // child can't sidestep grading by claiming the wrong type:
+  //  - "open_response"-tagged items (any questionType) can't be fairly
+  //    exact-matched — the child self-assesses after seeing the model
+  //    answer, and selfAssessedCorrect is required and trusted as-is.
+  //  - "multi_part" items are graded part-by-part (see checkMultiPartAnswer);
+  //    the whole item counts correct only if every part does.
+  //  - everything else uses the original single-value exact match.
+  const isOpenResponse = (item.tags ?? []).includes("open_response");
+  let correct: boolean;
+  let partsCorrect: Record<string, boolean> | undefined;
+  const selfAssessed = isOpenResponse;
+
+  if (isOpenResponse) {
+    if (typeof body.selfAssessedCorrect !== "boolean") {
+      return NextResponse.json(
+        { error: "selfAssessedCorrect (boolean) is required for this item" },
+        { status: 400 }
+      );
+    }
+    correct = body.selfAssessedCorrect;
+  } else if (item.questionType === "multi_part") {
+    const graded = checkMultiPartAnswer(
+      item.answerKey as Record<string, unknown>,
+      submittedAnswer as Record<string, unknown> | null | undefined
+    );
+    correct = graded.correct;
+    partsCorrect = graded.partsCorrect;
+  } else {
+    correct = checkAnswer(item.answerKey, submittedAnswer);
+  }
 
   // Ensure the child has a spaced-repetition state row for this skill (first exposure = lazy init).
   const currentState = await ensureChildSkillState(childId, item.skillId);
@@ -108,6 +148,7 @@ export async function POST(req: NextRequest) {
     responseTimeSec,
     isReview: body.slotType === "review",
     isMixed: body.slotType === "mixed",
+    selfAssessed,
   });
 
   // Mark the item completed on today's session, if one exists. A child can
@@ -137,6 +178,7 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({
     correct,
+    partsCorrect,
     stepByStepSolution: item.stepByStepSolution,
     commonMisconceptions: item.commonMisconceptions,
     skillStatus: updated.status,

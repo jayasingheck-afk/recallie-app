@@ -80,8 +80,10 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   (stability/difficulty/lapses → next review interval + status).
 - **`src/lib/sessionBuilder.ts`** — daily session assembly: ~40% review / ~35% new /
   ~25% mixed, interleaved so no more than 2 consecutive items share a skill.
-- **`src/lib/grading.ts`** — simple string-match grading for `short_answer` /
-  `multiple_choice` items (MVP only — see comments for what's missing).
+- **`src/lib/grading.ts`** — string-match grading for `short_answer` / `multiple_choice`
+  items, part-by-part grading for `multi_part` items, plus self-assessment for
+  `open_response`-tagged items (see "Grading support for multi_part and open_response items"
+  below). `drag_drop`/`matching` have no content or grader yet.
 - **API routes**: `GET /api/session/today`, `POST /api/reviews`, `GET /api/dashboard`,
   `GET`/`POST /api/children` (parent onboarding — list/add children), `GET /api/gamification`
   (points, streak, badges), `GET /api/reports/monthly` (monthly progress report).
@@ -113,13 +115,10 @@ There's still no login — every add-child call runs as one hard-coded demo pare
   mappings, all 4 terms x 10 weeks of sequence entries) from the project docs; item banks for
   **all of Terms 1-4, Weeks 1-10** (1,522 items total across 151 skills — 8 original
   hand-written samples + 1,514 generated per the project's item-generation prompt templates,
-  pending human review). `multi_part` items (object-valued answer keys) and items tagged
-  `open_response` are stored but intentionally excluded from live sessions by
-  `sessionBuilder.ts`, since the MVP grader (`src/lib/grading.ts`) only reliably auto-marks
-  single-value `short_answer` / `multiple_choice` items — see `week1-item-bank.json`'s
-  `_note`. Every other bank (Weeks 2-10 and all of Terms 2-4) is entirely
-  `short_answer`/`multiple_choice` so all of their items are usable in live sessions
-  immediately.
+  pending human review). The 4 `multi_part` items and 2 `open_response`-tagged items in the
+  bank (all in `week1-item-bank.json`) are fully usable in live sessions — see "Grading
+  support for multi_part and open_response items" below. Every other bank (Weeks 2-10 and
+  all of Terms 2-4) is entirely `short_answer`/`multiple_choice`.
 
 ## Curriculum content: Week 2
 
@@ -420,6 +419,55 @@ and rebuilding reverted the maths session to `focus: 0`. A production `next buil
 --noEmit`, and a regression pass across `/api/children`, `/api/gamification`,
 `/api/reports/monthly`, and `/api/reviews` all stayed clean after the schema change.
 
+## Grading support for multi_part and open_response items
+
+`multi_part` and `open_response`-tagged items were previously excluded from every child's
+session entirely, because the MVP grader could only exact-match a single-value answer. Both
+are now live:
+
+- **`multi_part` items** (an object of several short exact sub-answers, e.g.
+  `{ largest: "8520", smallest: "2058" }`) are graded part-by-part
+  (`src/lib/grading.ts`'s `checkMultiPartAnswer`) with the same forgiving whitespace/case
+  match as everything else; the item counts correct only if every part does.
+  `/api/reviews`'s response includes `partsCorrect` so the child sees which specific parts
+  they got right, not just one pass/fail for the whole question. The child UI renders one
+  labelled input per sub-answer key (`answerFields` on the session item — the ordered keys
+  only, never the values, so nothing about the answer leaks before grading).
+- **`open_response`-tagged items** (free-text answers with no single correct wording, e.g.
+  "what's the purpose of this text?") can't be fairly exact-matched for a Year 3 writer, so
+  they're **self-assessed** instead: the child writes their own attempt, reveals the model
+  answer/step-by-step solution (included directly in the session payload for these items
+  only — see `sessionBuilder.ts`'s `SessionItem.stepByStepSolution` — since there's no other
+  way to self-assess without seeing it), and honestly marks "I got it! ✅" or "Still
+  practising 💪". That self-report becomes `selfAssessedCorrect` in the `/api/reviews`
+  request; the grading path is chosen by the item's own tags/type, never by anything the
+  client sends, so a child can't sidestep grading. `reviewEvents` gained a `selfAssessed`
+  boolean (migration `drizzle/0004_spotty_iron_lad.sql`) to keep this distinguishable from
+  auto-graded events for future reporting/audit.
+- A content fix that fell out of this work: two of the four `multi_part` items in the whole
+  bank (`E3LY03_Y3_009`'s purpose/audience question, `E3LA04_Y3_008`'s sentence/reason
+  question) had at least one genuinely subjective sub-answer that no per-part exact match
+  could fairly grade — tagged `open_response` so they route to self-assessment instead. The
+  other two `multi_part` items (numeric/single-word sub-answers) needed no changes and are
+  now auto-graded normally.
+- `sessionBuilder.ts`'s item-pool query no longer excludes `multi_part` or `open_response`
+  items — only `reviewStatus: "flagged"` items are excluded now (unchanged from the content
+  review workflow). `drag_drop`/`matching` question types still don't appear simply because
+  no content of those types exists yet, not because of any exclusion rule.
+
+**Verified**: all three grading paths tested directly against a running dev server — a fully
+correct multi_part submission, a partially-correct one (confirmed `partsCorrect` correctly
+flags the wrong part and `correct: false` overall, 0 points), an open_response submission
+missing `selfAssessedCorrect` (correctly rejected with 400), and one with it supplied
+(correctly recorded with `selfAssessed: true` in the database). Confirmed via a targeted
+`buildTodaySession` sweep that all 4 multi_part items in the bank now appear in real sessions
+with the right payload shape — `answerFields` present but `stepByStepSolution` withheld for
+the two auto-graded ones, both present for the two open_response ones. A plain short_answer
+item was re-tested to confirm the original grading path is unaffected. `tsc --noEmit`,
+production `next build`, and a regression pass across `/api/children`, `/api/gamification`,
+`/api/dashboard`, `/api/reports/monthly`, `/api/topics`, and `/api/focus-topic` all stayed
+clean, and all test review events/skill states were cleaned up afterward.
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -538,8 +586,6 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
   skills, Terms 1-4, Weeks 1-10, both subjects). The human-review workflow now exists (see
   "Content review workflow" above) but the review itself hasn't been done yet — every item is
   still `reviewStatus: "pending"`. Year 4+ content is not yet designed.
-- Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
-  teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.
 - Gamification: a visual "progress map" (spatial/adventure-style, beyond the badge shelf) is
   still open; badges are only evaluated on demand (no push notification when one's earned

@@ -37,18 +37,26 @@ async function hydrateRemainingItems(plannedItemIds: string[], completedItemIds:
   return remainingIds
     .map((id) => byId.get(id))
     .filter((r): r is NonNullable<typeof r> => Boolean(r))
-    .map((r) => ({
-      itemId: r.item.id,
-      skillId: r.item.skillId,
-      skillDescription: r.skill.canonicalDescription,
-      questionText: r.item.questionText,
-      passage: r.item.passage ?? null,
-      questionType: r.item.questionType,
-      difficulty: r.item.difficulty,
-      hints: r.item.hints ?? [],
-      tags: r.item.tags ?? [],
-      slotType: "review" as const,
-    }));
+    .map((r) => {
+      const tags = r.item.tags ?? [];
+      const isOpenResponse = tags.includes("open_response");
+      return {
+        itemId: r.item.id,
+        skillId: r.item.skillId,
+        skillDescription: r.skill.canonicalDescription,
+        questionText: r.item.questionText,
+        passage: r.item.passage ?? null,
+        questionType: r.item.questionType,
+        difficulty: r.item.difficulty,
+        hints: r.item.hints ?? [],
+        tags,
+        slotType: "review" as const,
+        answerFields:
+          r.item.questionType === "multi_part" ? Object.keys((r.item.answerKey as object) ?? {}) : undefined,
+        stepByStepSolution: isOpenResponse ? r.item.stepByStepSolution ?? [] : undefined,
+        commonMisconceptions: isOpenResponse ? r.item.commonMisconceptions ?? [] : undefined,
+      };
+    });
 }
 
 /**
