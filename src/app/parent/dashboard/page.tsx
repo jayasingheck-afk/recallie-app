@@ -26,6 +26,13 @@ type Badge = {
   earned: boolean;
 };
 
+type FocusTopic = {
+  skillId: string;
+  subject: string;
+  description: string;
+  assignedAt: string | null;
+} | null;
+
 type DashboardData = {
   child: { id: string; displayName: string; yearLevel: number; state: string };
   skillsMastered: SkillSummary[];
@@ -34,6 +41,7 @@ type DashboardData = {
   points: number;
   currentStreakDays: number;
   badges: Badge[];
+  focusTopic: FocusTopic;
   recentSessions: {
     id: string;
     date: string;
@@ -44,7 +52,9 @@ type DashboardData = {
   }[];
 };
 
-function SkillCard({ s }: { s: SkillSummary }) {
+type TopicTree = { subject: string; yearLevel: number; strands: { strand: string; skills: { id: string; description: string }[] }[] };
+
+function SkillCard({ s, onAssignFocus }: { s: SkillSummary; onAssignFocus?: (skillId: string) => void }) {
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-3">
       <div className="mb-1 flex items-center justify-between">
@@ -54,7 +64,139 @@ function SkillCard({ s }: { s: SkillSummary }) {
         <span className="text-xs text-slate-400">{s.reviewCount} reviews</span>
       </div>
       <p className="text-sm text-slate-800">{s.description}</p>
+      {onAssignFocus && (
+        <button
+          onClick={() => onAssignFocus(s.skillId)}
+          className="mt-2 text-xs font-medium text-sky-600 hover:underline"
+        >
+          Assign as focus topic
+        </button>
+      )}
     </div>
+  );
+}
+
+function FocusTopicSection({ childId, focusTopic, onChanged }: { childId: string; focusTopic: FocusTopic; onChanged: () => void }) {
+  const [subject, setSubject] = useState<"maths" | "english">("maths");
+  const [tree, setTree] = useState<TopicTree | null>(null);
+  const [selectedSkillId, setSelectedSkillId] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
+
+  useEffect(() => {
+    setTree(null);
+    setSelectedSkillId("");
+    fetch(`/api/topics?subject=${subject}`)
+      .then((res) => res.json())
+      .then(setTree)
+      .catch(() => setTree(null));
+  }, [subject]);
+
+  async function assign(skillId: string) {
+    setBusy(true);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/focus-topic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ childId, skillId }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? "Could not assign focus topic");
+      setNotice(`Focus topic set to "${data.description}" — it'll show up in their next ${data.subject} session.`);
+      onChanged();
+    } catch (err: any) {
+      setNotice(err.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function clear() {
+    setBusy(true);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/focus-topic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ childId, skillId: null }),
+      });
+      if (!res.ok) throw new Error((await res.json()).error ?? "Could not clear focus topic");
+      setNotice("Focus topic cleared.");
+      onChanged();
+    } catch (err: any) {
+      setNotice(err.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <section className="mb-8 rounded-xl border border-sky-200 bg-sky-50 p-4">
+      <h2 className="mb-1 flex items-center gap-2 text-lg font-semibold text-sky-800">🎯 Focus topic</h2>
+      <p className="mb-3 text-sm text-sky-700">
+        Pick a specific skill to give extra practice on — it gets blended into their next daily
+        session alongside the usual review and new-learning mix, so there's still just one
+        session to do.
+      </p>
+
+      {focusTopic ? (
+        <div className="mb-3 flex items-center justify-between rounded-lg border border-sky-200 bg-white p-3">
+          <div>
+            <span className="text-xs font-medium uppercase tracking-wide text-slate-400">
+              Currently assigned · {focusTopic.subject}
+            </span>
+            <p className="text-sm text-slate-800">{focusTopic.description}</p>
+          </div>
+          <button
+            onClick={clear}
+            disabled={busy}
+            className="text-xs font-medium text-slate-500 hover:text-red-600 hover:underline disabled:opacity-50"
+          >
+            Clear
+          </button>
+        </div>
+      ) : (
+        <p className="mb-3 text-sm text-slate-500">No focus topic assigned right now.</p>
+      )}
+
+      <div className="flex flex-wrap items-center gap-2">
+        <select
+          value={subject}
+          onChange={(e) => setSubject(e.target.value as "maths" | "english")}
+          className="rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm"
+        >
+          <option value="maths">Maths</option>
+          <option value="english">English</option>
+        </select>
+        <select
+          value={selectedSkillId}
+          onChange={(e) => setSelectedSkillId(e.target.value)}
+          className="min-w-0 flex-1 rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm"
+        >
+          <option value="">
+            {tree ? "Choose a skill to assign…" : "Loading skills…"}
+          </option>
+          {tree?.strands.map((s) => (
+            <optgroup key={s.strand} label={s.strand}>
+              {s.skills.map((sk) => (
+                <option key={sk.id} value={sk.id}>
+                  {sk.description}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+        <button
+          onClick={() => selectedSkillId && assign(selectedSkillId)}
+          disabled={!selectedSkillId || busy}
+          className="rounded-md bg-sky-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-sky-700 disabled:opacity-50"
+        >
+          Assign
+        </button>
+      </div>
+      {notice && <p className="mt-2 text-sm text-sky-700">{notice}</p>}
+    </section>
   );
 }
 
@@ -63,9 +205,9 @@ function ParentDashboardInner() {
   const childId = searchParams.get("childId") || DEMO_CHILD_ID;
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [quickAssignNotice, setQuickAssignNotice] = useState<string | null>(null);
 
-  useEffect(() => {
-    setData(null);
+  function loadDashboard() {
     setError(null);
     fetch(`/api/dashboard?childId=${childId}`)
       .then(async (res) => {
@@ -74,7 +216,29 @@ function ParentDashboardInner() {
       })
       .then(setData)
       .catch((err) => setError(err.message));
+  }
+
+  useEffect(() => {
+    setData(null);
+    loadDashboard();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [childId]);
+
+  async function quickAssignFocus(skillId: string, description: string) {
+    setQuickAssignNotice(null);
+    try {
+      const res = await fetch("/api/focus-topic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ childId, skillId }),
+      });
+      if (!res.ok) throw new Error((await res.json()).error ?? "Could not assign focus topic");
+      setQuickAssignNotice(`Focus topic set to "${description}".`);
+      loadDashboard();
+    } catch (err: any) {
+      setQuickAssignNotice(err.message);
+    }
+  }
 
   if (error) return <p className="p-8 text-red-600">{error}</p>;
   if (!data) return <p className="p-8 text-slate-500">Loading…</p>;
@@ -116,6 +280,8 @@ function ParentDashboardInner() {
           </p>
         </div>
       </div>
+
+      <FocusTopicSection childId={childId} focusTopic={data.focusTopic} onChanged={loadDashboard} />
 
       <section className="mb-8">
         <h2 className="mb-3 text-lg font-semibold text-slate-700">Badges</h2>
@@ -161,12 +327,17 @@ function ParentDashboardInner() {
             ({data.areasToGiveMoreAttention.length})
           </span>
         </h2>
+        {quickAssignNotice && <p className="mb-2 text-sm text-sky-700">{quickAssignNotice}</p>}
         {data.areasToGiveMoreAttention.length === 0 ? (
           <p className="text-sm text-slate-500">Nothing needs extra attention right now — great work!</p>
         ) : (
           <div className="grid gap-2 sm:grid-cols-2">
             {data.areasToGiveMoreAttention.map((s) => (
-              <SkillCard key={s.skillId} s={s} />
+              <SkillCard
+                key={s.skillId}
+                s={s}
+                onAssignFocus={(skillId) => quickAssignFocus(skillId, s.description)}
+              />
             ))}
           </div>
         )}

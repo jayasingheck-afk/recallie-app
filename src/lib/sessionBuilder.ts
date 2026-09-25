@@ -22,10 +22,17 @@
  * Also excludes items with reviewStatus "flagged" — see this file's
  * pickItemsForSkills() and src/db/seed/export-items-for-review.ts /
  * import-review.ts for the human content-review workflow.
+ *
+ * Also blends in a parent-assigned "focus topic" when one is set (see
+ * src/app/api/focus-topic/route.ts and users.assignedFocusSkillId): a small
+ * slice of the session (carved out of the "mixed" allocation, so overall
+ * length doesn't change) is reserved for that skill specifically, labelled
+ * slotType "focus". Only applies when the assigned skill's subject matches
+ * the session being built; otherwise this behaves exactly as before.
  */
 import { and, eq, inArray, ne, sql } from "drizzle-orm";
 import { db } from "@/db/client";
-import { childSkillStates, curriculumSequenceEntries, items, skills } from "@/db/schema";
+import { childSkillStates, curriculumSequenceEntries, items, skills, users } from "@/db/schema";
 
 type ItemRow = typeof items.$inferSelect;
 import { getYearConfig, SESSION_COMPOSITION } from "./yearConfig";
@@ -41,7 +48,7 @@ export type SessionItem = {
   difficulty: string;
   hints: string[];
   tags: string[];
-  slotType: "review" | "new" | "mixed";
+  slotType: "review" | "new" | "mixed" | "focus";
 };
 
 export type BuildSessionParams = {
@@ -56,7 +63,7 @@ export type BuildSessionParams = {
 export type BuildSessionResult = {
   plannedItemIds: string[];
   items: SessionItem[];
-  breakdown: { review: number; new: number; mixed: number; target: number };
+  breakdown: { review: number; new: number; mixed: number; focus: number; target: number };
 };
 
 const NEAR_DUE_WINDOW_DAYS = 2;
@@ -144,7 +151,29 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
   const { items: targetN } = getYearConfig(yearLevel);
   const nReview = Math.round(targetN * SESSION_COMPOSITION.review);
   const nNew = Math.round(targetN * SESSION_COMPOSITION.new);
-  const nMixed = targetN - nReview - nNew;
+  let nMixed = targetN - nReview - nNew;
+
+  // Parent-assigned focus topic: carve a small slice out of the "mixed"
+  // allocation (rather than adding on top) so a focus assignment doesn't
+  // change the overall session length. Only applies if it's set and its
+  // subject matches the session being built right now.
+  let focusSkillId: string | null = null;
+  let focusSkillDescription: string | null = null;
+  let nFocus = 0;
+  const childRow = await db.select().from(users).where(eq(users.id, childId)).limit(1);
+  if (childRow[0]?.assignedFocusSkillId) {
+    const focusSkillRow = await db
+      .select()
+      .from(skills)
+      .where(eq(skills.id, childRow[0].assignedFocusSkillId))
+      .limit(1);
+    if (focusSkillRow[0] && focusSkillRow[0].subject === subject) {
+      focusSkillId = focusSkillRow[0].id;
+      focusSkillDescription = focusSkillRow[0].canonicalDescription;
+      nFocus = Math.min(4, Math.max(2, Math.round(targetN * 0.15)));
+      nMixed = Math.max(0, nMixed - nFocus);
+    }
+  }
 
   const nearDueCutoff = new Date(now.getTime() + NEAR_DUE_WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
@@ -207,6 +236,7 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
   const mixedItemsBySkill = mixedSkillIds.length
     ? await pickItemsForSkills(mixedSkillIds, Math.max(1, Math.ceil(nMixed / Math.max(1, mixedSkillIds.length))), usedItemIds)
     : {};
+  const focusItemsBySkill = focusSkillId ? await pickItemsForSkills([focusSkillId], nFocus, usedItemIds) : {};
 
   // If review/mixed pools came up short (e.g. brand-new child, tiny item bank),
   // backfill remaining slots from new-skill items so the session isn't empty.
@@ -215,6 +245,7 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
     ? await db.select().from(skills).where(inArray(skills.id, focusNewSkillIds))
     : [];
   for (const s of newSkillRows) skillDescById.set(s.id, s.canonicalDescription);
+  if (focusSkillId && focusSkillDescription) skillDescById.set(focusSkillId, focusSkillDescription);
 
   const buckets = new Map<string, SessionItem[]>();
 
@@ -239,10 +270,11 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
   addBucket(reviewItemsBySkill, "review");
   addBucket(newItemsBySkill, "new");
   addBucket(mixedItemsBySkill, "mixed");
+  addBucket(focusItemsBySkill, "focus");
 
   const ordered = interleave(buckets);
 
-  const counts = { review: 0, new: 0, mixed: 0 };
+  const counts = { review: 0, new: 0, mixed: 0, focus: 0 };
   for (const it of ordered) counts[it.slotType]++;
 
   return {

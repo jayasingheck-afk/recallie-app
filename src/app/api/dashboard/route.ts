@@ -45,6 +45,19 @@ export async function GET(req: NextRequest) {
 
   const { stats, badges } = await getGamificationSummary(childId);
 
+  let focusTopic: { skillId: string; subject: string; description: string; assignedAt: Date | null } | null = null;
+  if (child[0].assignedFocusSkillId) {
+    const focusSkillRow = await db.select().from(skills).where(eq(skills.id, child[0].assignedFocusSkillId)).limit(1);
+    if (focusSkillRow[0]) {
+      focusTopic = {
+        skillId: focusSkillRow[0].id,
+        subject: focusSkillRow[0].subject,
+        description: focusSkillRow[0].canonicalDescription,
+        assignedAt: child[0].assignedFocusSetAt,
+      };
+    }
+  }
+
   const skillSummaries = states.map((r) => ({
     skillId: r.skill.id,
     subject: r.skill.subject,
@@ -65,6 +78,7 @@ export async function GET(req: NextRequest) {
     points: stats.totalPoints,
     currentStreakDays: stats.currentStreakDays,
     badges,
+    focusTopic,
     recentSessions: recentSessions.map((s) => ({
       id: s.id,
       date: s.date,

@@ -28,6 +28,12 @@ export const users = pgTable(
     yearLevel: integer("yearLevel"), // 1-6 (null for parents)
     displayName: text("displayName"),
     enrolledAt: timestamp("enrolledAt"), // children only: when they started, used to derive curriculum term/week
+    // Parent-assigned "focus topic" (children only) — see src/lib/sessionBuilder.ts
+    // and src/app/api/focus-topic/route.ts. Nullable: most children have no
+    // assignment, in which case the daily session is built exactly as before.
+    // Persists until the parent changes or clears it — no auto-expiry.
+    assignedFocusSkillId: text("assignedFocusSkillId").references(() => skills.id, { onDelete: "set null" }),
+    assignedFocusSetAt: timestamp("assignedFocusSetAt"),
     createdAt: timestamp("createdAt").notNull().defaultNow(),
     updatedAt: timestamp("updatedAt").notNull().defaultNow(),
   },

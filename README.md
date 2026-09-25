@@ -379,6 +379,47 @@ reset all 1,522 items back to a clean `pending` state before delivery so Chandan
 export starts fresh. A production `next build` and the usual API regression pass both stayed
 clean after the schema change.
 
+## Focus topic feature
+
+A parent-assigned "focus topic": the parent picks one specific skill for their child, and it
+gets blended into that child's next daily session for the matching subject — no separate
+practice mode, no extra screen for the child to find. Two design questions were resolved with
+Chandana before building: **who picks the topic** (the parent, not the child — a "quick assign"
+button sits right on the "areas to give more attention" cards, plus a full browse-by-strand
+picker) and **how it's delivered** (blended into today's session rather than a standalone
+activity, so it doesn't add another thing for the child to do).
+
+- `src/db/schema.ts` — `users` gained `assignedFocusSkillId` (nullable, FK to `skills.id`,
+  `onDelete: "set null"`) and `assignedFocusSetAt` (nullable timestamp). One active assignment
+  per child, no history table, persists until the parent changes or clears it — no
+  auto-expiry. See migration `drizzle/0003_quick_viper.sql`.
+- `GET /api/topics?subject=maths|english&yearLevel=3` — returns the strand → skill tree so a
+  parent can browse and pick a skill (`src/app/api/topics/route.ts`).
+- `GET/POST /api/focus-topic` — reads or sets a child's current assignment
+  (`src/app/api/focus-topic/route.ts`); `POST` with `skillId: null` clears it. Both verify
+  parent ownership of the child via the existing `verifyChildAccess` helper.
+- `src/lib/sessionBuilder.ts` — if the child has an assignment whose subject matches the
+  session being built, a small "focus" slice (`Math.min(4, Math.max(2, round(targetN * 0.15)))`
+  items, so 2-4 out of Year 3's 20-item target) is carved **out of** the existing `mixed`
+  slice rather than added on top, so total session length never changes. If the assignment's
+  subject doesn't match the subject being built (e.g. a maths focus topic on an English
+  session), it has no effect at all. The new "focus" items flow through the same
+  `interleave()` bucketing as review/new/mixed, so they're still spread through the session
+  rather than clumped together.
+- `src/app/api/dashboard/route.ts` and `src/app/parent/dashboard/page.tsx` — the dashboard now
+  surfaces the current assignment (or lack of one), a subject/skill picker to set or change it,
+  a "Clear" button, and a one-click "Assign as focus topic" button directly on each "area to
+  give more attention" card.
+
+**Verified**: `GET /api/topics?subject=maths` returns a correctly grouped strand → skill tree;
+assigning a skill via `POST /api/focus-topic` and rebuilding the day's maths session produced
+`breakdown: {review: 0, new: 8, mixed: 0, focus: 3, target: 20}` with exactly 3 items from the
+assigned skill and the target unchanged at 20; the same child's English session for the same
+day showed `focus: 0` (a maths-only assignment doesn't touch English); clearing the assignment
+and rebuilding reverted the maths session to `focus: 0`. A production `next build`, `tsc
+--noEmit`, and a regression pass across `/api/children`, `/api/gamification`,
+`/api/reports/monthly`, and `/api/reviews` all stayed clean after the schema change.
+
 ## Year 3 full-syllabus plan (in progress)
 
 Chandana asked for the full Year 3 Maths + English syllabus (not just Term 1), plus a new
@@ -398,7 +439,7 @@ design differs in some details from that doc's original depth-progression table 
 proposed "Term 2" skills turned out to already be covered by Term 1 Weeks 7-10, so genuinely
 new/deepened skills were substituted) but keeps its spirit: deepen existing strands, fill the
 4 gaps, and land on ~16 new skills per term per subject. The topic-assignment ("focus topic")
-feature described in that doc is still not built — see "Explicit next steps" below.
+feature described in that doc is now built — see "Focus topic feature" above.
 
 ## Auth (Clerk) — optional, opt-in
 
@@ -497,10 +538,6 @@ discouraging). Worth deciding: raise the mastery/attention thresholds, add a dis
   skills, Terms 1-4, Weeks 1-10, both subjects). The human-review workflow now exists (see
   "Content review workflow" above) but the review itself hasn't been done yet — every item is
   still `reviewStatus: "pending"`. Year 4+ content is not yet designed.
-- The parent-facing "assign a focus topic" feature (browse-by-topic practice alongside the
-  automatic daily session) described in `claude/year3-full-syllabus-plan.md` — designed but
-  not built: a new route, a `GET /api/topics` endpoint, and a session-builder variant that
-  takes an explicit `skillId`.
 - Grading support for `multi_part` (object-valued answers) and `open_response` (rubric/
   teacher-review) item types — currently excluded from live sessions entirely.
 - Stripe subscriptions, free trial gating.
