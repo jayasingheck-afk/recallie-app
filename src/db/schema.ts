@@ -127,7 +127,7 @@ export const childSkillStates = pgTable(
     reviewCount: integer("reviewCount").notNull().default(0),
     lastReviewedAt: timestamp("lastReviewedAt"),
     nextReviewAt: timestamp("nextReviewAt").notNull().defaultNow(),
-    status: text("status").notNull().default("on_track"), // "on_track" | "needs_attention" | "mastered"
+    status: text("status").notNull().default("still_building"), // "still_building" | "on_track" | "needs_attention" | "mastered" — see src/lib/spacedRepetition.ts
     recentAccuracy3: real("recentAccuracy3"),
     createdAt: timestamp("createdAt").notNull().defaultNow(),
     updatedAt: timestamp("updatedAt").notNull().defaultNow(),

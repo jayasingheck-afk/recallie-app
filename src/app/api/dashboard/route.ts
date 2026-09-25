@@ -10,7 +10,9 @@ import { verifyChildAccess } from "@/lib/currentParent";
  * GET /api/dashboard?childId=...
  *
  * Parent-facing progress summary: skills mastered, "areas to give more
- * attention" (never "weaknesses" — see project tone guidelines), and
+ * attention" (never "weaknesses" — see project tone guidelines), skills
+ * "still building" (new, not yet showing trouble — see spacedRepetition.ts
+ * for why this is separate from "needs_attention"), on-track skills, and
  * recent sessions. Numeric internal fields (stability/difficulty) are
  * included for admin/debug use but the UI should prefer skillStatusLabel.
  */
@@ -75,6 +77,7 @@ export async function GET(req: NextRequest) {
     skillsMastered: skillSummaries.filter((s) => s.status === "mastered"),
     areasToGiveMoreAttention: skillSummaries.filter((s) => s.status === "needs_attention"),
     onTrack: skillSummaries.filter((s) => s.status === "on_track"),
+    stillBuilding: skillSummaries.filter((s) => s.status === "still_building"),
     points: stats.totalPoints,
     currentStreakDays: stats.currentStreakDays,
     badges,

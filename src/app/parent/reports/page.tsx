@@ -52,6 +52,7 @@ type MonthlyReportData = {
     skillsMastered: SkillSummary[];
     areasToGiveMoreAttention: SkillSummary[];
     onTrack: SkillSummary[];
+    stillBuilding: SkillSummary[];
   };
 };
 

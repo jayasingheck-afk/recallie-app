@@ -4,16 +4,24 @@
  * Implements the FSRS-inspired adaptive scheduler described in the project's
  * curriculum/pedagogy design docs: stability (S), difficulty (D), lapses,
  * and a rolling accuracy window drive the next review interval and a
- * child-friendly status ("on_track" | "needs_attention" | "mastered").
+ * child-friendly status ("still_building" | "on_track" | "needs_attention" | "mastered").
  *
  * Design goals (from project docs):
  * - Adaptive: intervals adjust per child and per skill based on performance + response time.
  * - Child-friendly: no "fail" language; statuses map to "Area to give more attention" in the UI.
  * - Interleaved by default: this module only owns the per-skill scheduling math;
  *   session assembly / interleaving lives in sessionBuilder.ts.
+ *
+ * Status semantics (revised — see "needs_attention threshold" note below):
+ * - "needs_attention" is reserved for genuine performance trouble: repeated lapses or a
+ *   low rolling accuracy. It is never triggered by low stability alone.
+ * - "still_building" covers a skill that hasn't consolidated yet (low stability) but
+ *   isn't showing trouble — the normal, encouraging state for a skill in its first
+ *   1-2 weeks. Previously these skills were mislabelled "needs_attention" purely
+ *   because stability starts low and grows slowly, even after several correct answers.
  */
 
-export type SkillStatus = "on_track" | "needs_attention" | "mastered";
+export type SkillStatus = "still_building" | "on_track" | "needs_attention" | "mastered";
 
 export type SkillState = {
   stabilityDays: number;
@@ -50,7 +58,7 @@ const MASTERED_MIN_STABILITY_DAYS = 30;
 const MASTERED_MIN_REVIEW_COUNT = 5;
 const MASTERED_MIN_RECENT_ACCURACY = 0.9;
 
-const NEEDS_ATTENTION_MAX_STABILITY_DAYS = 7;
+const STILL_BUILDING_MAX_STABILITY_DAYS = 7;
 const NEEDS_ATTENTION_MIN_LAPSES = 2;
 const NEEDS_ATTENTION_MAX_RECENT_ACCURACY = 0.7;
 
@@ -91,7 +99,7 @@ export function initializeSkillState(): SkillState {
     lapses: 0,
     reviewCount: 0,
     recentAccuracy3: null,
-    status: "on_track",
+    status: "still_building",
   };
 }
 
@@ -162,6 +170,11 @@ export function updateSkillAfterReview(
 
   // 7. Status classification (child/parent-facing language lives in the UI layer;
   //    this is the internal enum only).
+  //
+  //    Order matters: "needs_attention" is checked before "still_building" so that
+  //    genuine trouble (lapses / low accuracy) always wins over a skill simply being
+  //    new. Low stability alone — the normal state for a skill in its first 1-2
+  //    weeks — falls through to "still_building" instead of "needs_attention".
   let newStatus: SkillStatus = "on_track";
   if (
     newStability >= MASTERED_MIN_STABILITY_DAYS &&
@@ -171,11 +184,12 @@ export function updateSkillAfterReview(
   ) {
     newStatus = "mastered";
   } else if (
-    newStability <= NEEDS_ATTENTION_MAX_STABILITY_DAYS ||
     newLapses >= NEEDS_ATTENTION_MIN_LAPSES ||
     (newRecentAccuracy3 !== null && newRecentAccuracy3 < NEEDS_ATTENTION_MAX_RECENT_ACCURACY)
   ) {
     newStatus = "needs_attention";
+  } else if (newStability <= STILL_BUILDING_MAX_STABILITY_DAYS) {
+    newStatus = "still_building";
   }
 
   return {
@@ -196,6 +210,8 @@ export function statusToParentLabel(status: SkillStatus): string {
       return "Skill mastered";
     case "needs_attention":
       return "Area to give more attention";
+    case "still_building":
+      return "Still building confidence";
     case "on_track":
     default:
       return "On track";

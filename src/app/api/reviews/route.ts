@@ -3,7 +3,7 @@ import { and, eq } from "drizzle-orm";
 import { db } from "@/db/client";
 import { childSkillStates, items, reviewEvents, sessions } from "@/db/schema";
 import { ensureChildSkillState } from "@/lib/sessionBuilder";
-import { updateSkillAfterReview, statusToParentLabel } from "@/lib/spacedRepetition";
+import { updateSkillAfterReview, statusToParentLabel, type SkillStatus } from "@/lib/spacedRepetition";
 import { checkAnswer, checkMultiPartAnswer } from "@/lib/grading";
 import { pointsForAnswer } from "@/lib/gamification";
 import { verifyChildAccess } from "@/lib/currentParent";
@@ -115,7 +115,7 @@ export async function POST(req: NextRequest) {
       lapses: currentState.lapses,
       reviewCount: currentState.reviewCount,
       recentAccuracy3: currentState.recentAccuracy3,
-      status: currentState.status as "on_track" | "needs_attention" | "mastered",
+      status: currentState.status as SkillStatus,
     },
     { correct, attempts, hintUsed, responseTimeSec }
   );

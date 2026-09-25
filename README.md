@@ -606,18 +606,40 @@ feature end-to-end, both fixed in the same change:
 Both were caught by testing the real multi-subject, multi-load flow (not just a single
 happy-path run) and verified fixed with a scripted repro before moving on.
 
-## Known nuance to review
+## Skill status: "still_building" added (resolves earlier known nuance)
 
-The "needs_attention" status (shown to parents as "Area to give more attention") triggers
-whenever `stability <= 7 days` — which, per the documented thresholds, is true for *every*
-skill during its first ~1–2 weeks of practice, even after several correct answers in a row
-(confirmed by a manual trace: 6 straight correct/fast answers only got stability to ~5.6).
-So brand-new skills look like they "need attention" by default until they mature past a
-week of stability. This is a faithful implementation of the thresholds in the project's
-spaced-repetition design doc, not a bug introduced here — but it may not match the intended
-parent-facing experience (new skills being flagged as needing attention could read as
-discouraging). Worth deciding: raise the mastery/attention thresholds, add a distinct
-"still building" status for skills younger than N days, or accept it as-is.
+Previously, the "needs_attention" status (shown to parents as "Area to give more attention")
+triggered whenever `stability <= 7 days` — true for *every* skill during its first ~1–2 weeks
+of practice, even after several correct answers in a row (confirmed by a manual trace: 6
+straight correct/fast answers only got stability to ~5.6). So brand-new skills looked like
+they "needed attention" by default until they matured past a week of stability, which read
+as discouraging for something entirely normal.
+
+Fixed by splitting the two meanings apart. `SkillStatus` is now `"still_building" |
+"on_track" | "needs_attention" | "mastered"` (`src/lib/spacedRepetition.ts`):
+
+- `needs_attention` now fires only for genuine trouble — 2+ lapses, or rolling accuracy below
+  70%. Low stability alone no longer triggers it.
+- `still_building` (parent label: "Still building confidence") is the new status for a skill
+  that hasn't consolidated yet (`stability <= 7 days`) but isn't showing any trouble — the
+  normal state for a skill's first 1-2 weeks. A brand-new skill's initial state is now
+  `still_building` too (was `on_track`, which overclaimed; `on_track` is reserved for a skill
+  that has consolidated past a week with no problems).
+- Every consumer of skill status (`/api/dashboard`, `/api/reports/monthly`, the parent
+  dashboard and monthly report pages) now exposes and renders a fourth "🌱 Still building"
+  bucket alongside mastered / needs attention / on track. `sessionBuilder.ts`'s
+  review-prioritisation logic was already keyed only on `needs_attention` and due dates, so
+  `still_building` skills are correctly *not* force-prioritised — they just follow their
+  normal spaced schedule like any healthy skill.
+- Migration `drizzle/0005_dapper_tana_nile.sql` only updates the column's default value
+  (`still_building` instead of `on_track`); no data backfill needed since status is always
+  recomputed on next review, and existing rows are simply relabelled the next time each skill
+  is reviewed.
+
+Verified: a fresh skill answered correctly 3x in a row now stays `still_building` (previously
+flipped to `needs_attention`); a skill with 2 lapses still correctly shows `needs_attention`;
+dashboard/report buckets and counts sum correctly; parent dashboard renders the new section
+(screenshot-verified via Playwright).
 
 ## Explicit next steps (not yet built)
 

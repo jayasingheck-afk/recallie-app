@@ -1,0 +1,1 @@
+ALTER TABLE "ChildSkillState" ALTER COLUMN "status" SET DEFAULT 'still_building';

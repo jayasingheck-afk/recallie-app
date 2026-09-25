@@ -38,6 +38,7 @@ type DashboardData = {
   skillsMastered: SkillSummary[];
   areasToGiveMoreAttention: SkillSummary[];
   onTrack: SkillSummary[];
+  stillBuilding: SkillSummary[];
   points: number;
   currentStreakDays: number;
   badges: Badge[];
@@ -343,6 +344,28 @@ function ParentDashboardInner() {
               />
             ))}
           </div>
+        )}
+      </section>
+
+      <section className="mb-8">
+        <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-sky-700">
+          🌱 Still building
+          <span className="text-sm font-normal text-slate-400">({data.stillBuilding.length})</span>
+        </h2>
+        {data.stillBuilding.length === 0 ? (
+          <p className="text-sm text-slate-500">No newly-started skills right now.</p>
+        ) : (
+          <>
+            <p className="mb-2 text-xs text-slate-400">
+              New skills, practised recently and doing fine — just not reviewed enough times yet to call &quot;on
+              track&quot;.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {data.stillBuilding.map((s) => (
+                <SkillCard key={s.skillId} s={s} />
+              ))}
+            </div>
+          </>
         )}
       </section>
 

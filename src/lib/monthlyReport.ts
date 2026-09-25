@@ -51,6 +51,7 @@ export type MonthlyReport = {
     skillsMastered: SkillSummary[];
     areasToGiveMoreAttention: SkillSummary[];
     onTrack: SkillSummary[];
+    stillBuilding: SkillSummary[];
   };
 };
 
@@ -179,6 +180,7 @@ export async function computeMonthlyReport(
       skillsMastered: skillSummaries.filter((s) => s.status === "mastered"),
       areasToGiveMoreAttention: skillSummaries.filter((s) => s.status === "needs_attention"),
       onTrack: skillSummaries.filter((s) => s.status === "on_track"),
+      stillBuilding: skillSummaries.filter((s) => s.status === "still_building"),
     },
   };
 }
