@@ -161,6 +161,12 @@ export const reviewEvents = pgTable(
     // model answer, not an exact-match grader — see src/lib/grading.ts and
     // src/app/api/reviews/route.ts.
     selfAssessed: boolean("selfAssessed").notNull().default(false),
+    // true for an answer given during an optional post-session "bonus round"
+    // (see src/lib/sessionBuilder.ts's buildBonusRound and the project's
+    // bonus-round-feature-spec.md). Bonus answers still earn points/streak
+    // credit but never touch ChildSkillState / the spaced-repetition
+    // schedule — this flag is how /api/reviews knows to skip that update.
+    isBonus: boolean("isBonus").notNull().default(false),
     timestamp: timestamp("timestamp").notNull().defaultNow(),
   },
   (table) => [
@@ -224,6 +230,15 @@ export const sessions = pgTable(
     subject: text("subject").notNull(), // "maths" | "english"
     plannedItemIds: text("plannedItemIds").array().notNull().default([]),
     completedItemIds: text("completedItemIds").array().notNull().default([]),
+    // Optional post-session "bonus round" (see bonus-round-feature-spec.md):
+    // a second, smaller item set offered only after the core session above is
+    // "completed", drawn from the same skills so it never touches curriculum
+    // pacing. Mirrors plannedItemIds/completedItemIds so a mid-bonus-round
+    // reload resumes correctly. Empty bonusItemIds means "no bonus round
+    // taken today" — the one-per-subject-per-day cap /api/session/bonus
+    // enforces.
+    bonusItemIds: text("bonusItemIds").array().notNull().default([]),
+    bonusCompletedItemIds: text("bonusCompletedItemIds").array().notNull().default([]),
     timeSpentSec: integer("timeSpentSec").notNull().default(0),
     status: text("status").notNull().default("in_progress"), // "in_progress" | "completed"
     createdAt: timestamp("createdAt").notNull().defaultNow(),

@@ -52,7 +52,7 @@ export type SessionItem = {
   difficulty: string;
   hints: string[];
   tags: string[];
-  slotType: "review" | "new" | "mixed" | "focus";
+  slotType: "review" | "new" | "mixed" | "focus" | "bonus";
   // "multi_part" items only: the ordered sub-answer keys (e.g. ["largest",
   // "smallest"]) so the UI can render one labelled input per part. Never the
   // answer VALUES — those stay server-side until grading, same as every
@@ -79,7 +79,7 @@ export type BuildSessionParams = {
 export type BuildSessionResult = {
   plannedItemIds: string[];
   items: SessionItem[];
-  breakdown: { review: number; new: number; mixed: number; focus: number; target: number };
+  breakdown: { review: number; new: number; mixed: number; focus: number; bonus: number; target: number };
 };
 
 const NEAR_DUE_WINDOW_DAYS = 2;
@@ -87,7 +87,11 @@ const NEAR_DUE_WINDOW_DAYS = 2;
 async function pickItemsForSkills(
   skillIds: string[],
   perSkill: number,
-  excludeItemIds: Set<string>
+  excludeItemIds: Set<string>,
+  // Bonus Round support: when true, bias selection towards difficulty "hard"
+  // items first (still falling back to easier ones if a skill has too few
+  // hard items), instead of pure random — see buildBonusRound() below.
+  preferHard: boolean = false
 ): Promise<Record<string, ItemRow[]>> {
   const result: Record<string, ItemRow[]> = {};
   for (const skillId of skillIds) {
@@ -103,7 +107,11 @@ async function pickItemsForSkills(
           ne(items.reviewStatus, "flagged")
         )
       )
-      .orderBy(sql`RANDOM()`)
+      .orderBy(
+        preferHard
+          ? sql`(CASE WHEN ${items.difficulty} = 'hard' THEN 0 ELSE 1 END), RANDOM()`
+          : sql`RANDOM()`
+      )
       .limit(perSkill + excludeItemIds.size); // over-fetch a little in case of exclusions
     result[skillId] = rows.filter((r) => !excludeItemIds.has(r.id)).slice(0, perSkill);
     for (const r of result[skillId]) excludeItemIds.add(r.id);
@@ -289,13 +297,95 @@ export async function buildTodaySession(params: BuildSessionParams): Promise<Bui
 
   const ordered = interleave(buckets);
 
-  const counts = { review: 0, new: 0, mixed: 0, focus: 0 };
+  // bonus is never produced by this function (only buildBonusRound() emits
+  // it) but SessionItem.slotType includes it, so the tally needs the key
+  // for TS's sake even though it'll always stay 0 here.
+  const counts = { review: 0, new: 0, mixed: 0, focus: 0, bonus: 0 };
   for (const it of ordered) counts[it.slotType]++;
 
   return {
     plannedItemIds: ordered.map((i) => i.itemId),
     items: ordered,
     breakdown: { ...counts, target: targetN },
+  };
+}
+
+export type BuildBonusRoundResult = {
+  itemIds: string[];
+  items: SessionItem[];
+};
+
+// "~6-8 extra items" per the design spec (claude/bonus-round-feature-spec.md).
+const BONUS_ROUND_TARGET = 7;
+
+/**
+ * Builds an optional "bonus round": a handful of extra, slightly harder
+ * items on the same skills today's core session already covered, offered
+ * only after that core session is fully completed (enforced by the caller,
+ * src/app/api/session/bonus/route.ts — this function doesn't check status
+ * itself). Year-level-generic: it only ever works from the skill IDs it's
+ * given, the same way buildTodaySession() is parameterized by yearLevel, so
+ * it needs no changes to "repeat for other years" — it automatically works
+ * for any year level once that year's curriculum content exists.
+ *
+ * Deliberately NOT a spaced-repetition action: callers must never feed
+ * bonus answers into ensureChildSkillState/updateSkillAfterReview (see
+ * src/app/api/reviews/route.ts's isBonus handling) — this is purely a
+ * same-day "want more practice?" extra, never a way to get ahead of the
+ * curriculum's pacing or change a skill's real review schedule.
+ */
+export async function buildBonusRound(params: {
+  childId: string;
+  subject: "maths" | "english";
+  coreSessionSkillIds: string[];
+  excludeItemIds: string[];
+}): Promise<BuildBonusRoundResult> {
+  const { coreSessionSkillIds, excludeItemIds } = params;
+
+  const uniqueSkillIds = Array.from(new Set(coreSessionSkillIds));
+  if (uniqueSkillIds.length === 0) {
+    return { itemIds: [], items: [] };
+  }
+
+  const skillRows = await db.select().from(skills).where(inArray(skills.id, uniqueSkillIds));
+  const skillDescById = new Map(skillRows.map((s) => [s.id, s.canonicalDescription]));
+
+  const usedItemIds = new Set(excludeItemIds);
+  const perSkill = Math.max(1, Math.ceil(BONUS_ROUND_TARGET / uniqueSkillIds.length));
+
+  // preferHard=true: bonus items should feel like a genuine extra challenge,
+  // not more of the same — falls back to easier items automatically if a
+  // skill doesn't have enough "hard" ones in the bank yet.
+  const bySkill = await pickItemsForSkills(uniqueSkillIds, perSkill, usedItemIds, true);
+
+  const buckets = new Map<string, SessionItem[]>();
+  for (const [skillId, rows] of Object.entries(bySkill)) {
+    const list: SessionItem[] = rows.map((r) => {
+      const isOpenResponse = (r.tags ?? []).includes("open_response");
+      return {
+        itemId: r.id,
+        skillId,
+        skillDescription: skillDescById.get(skillId) ?? skillId,
+        questionText: r.questionText,
+        passage: r.passage ?? null,
+        questionType: r.questionType,
+        difficulty: r.difficulty,
+        hints: r.hints ?? [],
+        tags: r.tags ?? [],
+        slotType: "bonus",
+        answerFields: r.questionType === "multi_part" ? Object.keys((r.answerKey as object) ?? {}) : undefined,
+        stepByStepSolution: isOpenResponse ? r.stepByStepSolution ?? [] : undefined,
+        commonMisconceptions: isOpenResponse ? r.commonMisconceptions ?? [] : undefined,
+      };
+    });
+    if (list.length) buckets.set(skillId, list);
+  }
+
+  const ordered = interleave(buckets).slice(0, BONUS_ROUND_TARGET);
+
+  return {
+    itemIds: ordered.map((i) => i.itemId),
+    items: ordered,
   };
 }
 

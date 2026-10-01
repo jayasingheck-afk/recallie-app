@@ -17,7 +17,7 @@ type SessionItem = {
   difficulty: string;
   hints: string[];
   tags: string[];
-  slotType: "review" | "new" | "mixed";
+  slotType: "review" | "new" | "mixed" | "focus" | "bonus";
   answerFields?: string[]; // "multi_part" items only — one labelled input per key
   stepByStepSolution?: string[]; // "open_response" items only — the model answer, shown up front for self-marking
   commonMisconceptions?: string[];
@@ -59,6 +59,8 @@ const SLOT_LABEL: Record<SessionItem["slotType"], string> = {
   review: "Warm-up review",
   new: "New learning",
   mixed: "Mix it up",
+  focus: "Focus skill",
+  bonus: "⚡ Bonus challenge",
 };
 
 function ChildSessionInner() {
@@ -81,6 +83,13 @@ function ChildSessionInner() {
   const [gamification, setGamification] = useState<GamificationSummary | null>(null);
   const [newBadge, setNewBadge] = useState<Badge | null>(null);
   const [alreadyCompletedToday, setAlreadyCompletedToday] = useState(false);
+  // Bonus Round state (claude/bonus-round-feature-spec.md): isBonusRound
+  // flags that sessionItems currently holds the bonus set, not the core
+  // session, so postReview() tags answers accordingly and the "done" card
+  // below shows bonus-flavoured copy instead of "Mission complete!" again.
+  const [isBonusRound, setIsBonusRound] = useState(false);
+  const [bonusLoading, setBonusLoading] = useState(false);
+  const [bonusUnavailable, setBonusUnavailable] = useState<string | null>(null);
 
   function refreshGamification() {
     fetch(`/api/gamification?childId=${childId}`)
@@ -116,6 +125,9 @@ function ChildSessionInner() {
     setRevealed(false);
     setHintsShown(0);
     setAlreadyCompletedToday(false);
+    setIsBonusRound(false);
+    setBonusLoading(false);
+    setBonusUnavailable(null);
 
     fetch(`/api/session/today?childId=${childId}&subject=${subject}`)
       .then(async (res) => {
@@ -164,6 +176,7 @@ function ChildSessionInner() {
           hintUsed: hintsShown > 0,
           responseTimeSec,
           slotType: current.slotType,
+          isBonus: isBonusRound,
           ...extra,
         }),
       });
@@ -205,6 +218,43 @@ function ChildSessionInner() {
     setHintsShown(0);
     setFeedback(null);
     setStartedAt(Date.now());
+  }
+
+  // Offered only after the core session's "Mission complete!" card — see the
+  // isDone render block below. Swaps sessionItems over to the bonus set and
+  // flips isBonusRound so postReview() tags every answer from here on as
+  // isBonus: true (skipping the spaced-repetition update server-side).
+  function startBonusRound() {
+    setBonusLoading(true);
+    setBonusUnavailable(null);
+    fetch(`/api/session/bonus?childId=${childId}&subject=${subject}`)
+      .then(async (res) => {
+        if (!res.ok) throw new Error((await res.json()).error ?? "Could not start a bonus round");
+        return res.json();
+      })
+      .then((data) => {
+        if (data.alreadyTaken) {
+          setBonusUnavailable("You've already done a bonus round today — nice work! Come back tomorrow.");
+          return;
+        }
+        const bonusItems = data.items ?? [];
+        if (bonusItems.length === 0) {
+          setBonusUnavailable(data.error ?? "No bonus round is available right now.");
+          return;
+        }
+        setSessionItems(bonusItems);
+        setIndex(0);
+        setAnswer("");
+        setMultiPartAnswers({});
+        setRevealed(false);
+        setHintsShown(0);
+        setFeedback(null);
+        setStartedAt(Date.now());
+        setIsBonusRound(true);
+        setAlreadyCompletedToday(false); // swap the "already done" card out for the bonus question UI
+      })
+      .catch((err) => setBonusUnavailable(err.message))
+      .finally(() => setBonusLoading(false));
   }
 
   return (
@@ -293,6 +343,28 @@ function ChildSessionInner() {
             subjects above.
           </p>
         </div>
+      )}
+
+      {/* Lets a child who's already finished today (e.g. reloading the page
+          later) still claim a bonus round — same offer as right after
+          finishing, just reachable on a return visit too. */}
+      {!loading && !error && alreadyCompletedToday && !isBonusRound && (
+        bonusUnavailable ? (
+          <p className="mt-4 text-center text-sm text-slate-500">{bonusUnavailable}</p>
+        ) : (
+          <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center">
+            <p className="mb-3 text-amber-900">
+              ⚡ Want a challenge? Try a bonus round with some extra tricky questions.
+            </p>
+            <button
+              onClick={startBonusRound}
+              disabled={bonusLoading}
+              className="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white disabled:opacity-40"
+            >
+              {bonusLoading ? "Getting your bonus round ready…" : "Start bonus round"}
+            </button>
+          </div>
+        )
       )}
 
       {!loading && current && !isDone && (
@@ -454,12 +526,21 @@ function ChildSessionInner() {
 
       {isDone && (
         <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
-          <div className="mb-2 text-4xl">🌟</div>
-          <h2 className="mb-1 text-xl font-bold text-emerald-900">Mission complete!</h2>
-          <p className="text-emerald-800">
-            You earned {sessionPoints} points today and got{" "}
-            {answerStreak > 0 ? `a ${answerStreak}-answer streak` : "great practice in"}. Keep it up!
-          </p>
+          <div className="mb-2 text-4xl">{isBonusRound ? "🏆" : "🌟"}</div>
+          <h2 className="mb-1 text-xl font-bold text-emerald-900">
+            {isBonusRound ? "Bonus round complete!" : "Mission complete!"}
+          </h2>
+          {isBonusRound ? (
+            <p className="text-emerald-800">
+              You tackled some extra challenge questions and earned {sessionPoints} points today.
+              Awesome effort!
+            </p>
+          ) : (
+            <p className="text-emerald-800">
+              You earned {sessionPoints} points today and got{" "}
+              {answerStreak > 0 ? `a ${answerStreak}-answer streak` : "great practice in"}. Keep it up!
+            </p>
+          )}
           {gamification && (
             <p className="mt-2 text-sm text-emerald-700">
               🌟 {gamification.totalPoints} points overall · 📅 {gamification.currentStreakDays}{" "}
@@ -468,6 +549,28 @@ function ChildSessionInner() {
           )}
         </div>
       )}
+
+      {/* Bonus Round offer: only shown once, right after the core session's
+          own completion card — never after the bonus round's own completion
+          card (isBonusRound is already true by then). */}
+      {isDone &&
+        !isBonusRound &&
+        (bonusUnavailable ? (
+          <p className="mt-4 text-center text-sm text-slate-500">{bonusUnavailable}</p>
+        ) : (
+          <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center">
+            <p className="mb-3 text-amber-900">
+              ⚡ Want a challenge? Try a bonus round with some extra tricky questions.
+            </p>
+            <button
+              onClick={startBonusRound}
+              disabled={bonusLoading}
+              className="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white disabled:opacity-40"
+            >
+              {bonusLoading ? "Getting your bonus round ready…" : "Start bonus round"}
+            </button>
+          </div>
+        ))}
     </div>
   );
 }

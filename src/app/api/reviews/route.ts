@@ -16,12 +16,19 @@ type ReviewBody = {
   hintUsed?: boolean;
   responseTimeSec: number;
   sessionId?: string;
-  slotType?: "review" | "new" | "mixed";
+  slotType?: "review" | "new" | "mixed" | "focus" | "bonus";
   // Required instead of relying on submittedAnswer for items tagged
   // "open_response" (see grading.ts's doc comment): the child has already
   // revealed the model answer client-side and is reporting their own honest
   // self-assessment, since no exact-match grader can fairly mark free text.
   selfAssessedCorrect?: boolean;
+  // Bonus Round items only (claude/bonus-round-feature-spec.md). Grading and
+  // points still apply as normal, but when true this deliberately SKIPS the
+  // spaced-repetition update below (ensureChildSkillState/
+  // updateSkillAfterReview/childSkillStates) — a bonus answer must never
+  // change a skill's real review schedule or curriculum pacing, only ever
+  // mark progress on the day's bonusCompletedItemIds instead.
+  isBonus?: boolean;
 };
 
 function startOfDay(d: Date) {
@@ -55,6 +62,7 @@ export async function POST(req: NextRequest) {
   const { childId, itemId, submittedAnswer, responseTimeSec } = body;
   const attempts = body.attempts ?? 1;
   const hintUsed = body.hintUsed ?? false;
+  const isBonus = body.isBonus === true;
 
   if (!childId || !itemId || responseTimeSec === undefined) {
     return NextResponse.json(
@@ -105,38 +113,49 @@ export async function POST(req: NextRequest) {
     correct = checkAnswer(item.answerKey, submittedAnswer);
   }
 
-  // Ensure the child has a spaced-repetition state row for this skill (first exposure = lazy init).
-  const currentState = await ensureChildSkillState(childId, item.skillId);
-
-  const updated = updateSkillAfterReview(
-    {
-      stabilityDays: currentState.stabilityDays,
-      difficulty: currentState.difficulty,
-      lapses: currentState.lapses,
-      reviewCount: currentState.reviewCount,
-      recentAccuracy3: currentState.recentAccuracy3,
-      status: currentState.status as SkillStatus,
-    },
-    { correct, attempts, hintUsed, responseTimeSec }
-  );
-
   const now = new Date();
-  const nextReviewAt = new Date(now.getTime() + updated.nextReviewIntervalDays * 24 * 60 * 60 * 1000);
 
-  await db
-    .update(childSkillStates)
-    .set({
-      stabilityDays: updated.stabilityDays,
-      difficulty: updated.difficulty,
-      lapses: updated.lapses,
-      reviewCount: updated.reviewCount,
-      recentAccuracy3: updated.recentAccuracy3 ?? undefined,
-      status: updated.status,
-      lastReviewedAt: now,
-      nextReviewAt,
-      updatedAt: now,
-    })
-    .where(eq(childSkillStates.id, currentState.id));
+  // Bonus Round items skip the spaced-repetition update entirely (see the
+  // ReviewBody.isBonus doc comment above) — no ensureChildSkillState, no
+  // updateSkillAfterReview, no childSkillStates write. Everything else
+  // (grading, points, logging, completion tracking) still happens normally.
+  let updatedStatus: SkillStatus | null = null;
+  let nextReviewAt: Date | null = null;
+
+  if (!isBonus) {
+    // Ensure the child has a spaced-repetition state row for this skill (first exposure = lazy init).
+    const currentState = await ensureChildSkillState(childId, item.skillId);
+
+    const updated = updateSkillAfterReview(
+      {
+        stabilityDays: currentState.stabilityDays,
+        difficulty: currentState.difficulty,
+        lapses: currentState.lapses,
+        reviewCount: currentState.reviewCount,
+        recentAccuracy3: currentState.recentAccuracy3,
+        status: currentState.status as SkillStatus,
+      },
+      { correct, attempts, hintUsed, responseTimeSec }
+    );
+
+    nextReviewAt = new Date(now.getTime() + updated.nextReviewIntervalDays * 24 * 60 * 60 * 1000);
+    updatedStatus = updated.status;
+
+    await db
+      .update(childSkillStates)
+      .set({
+        stabilityDays: updated.stabilityDays,
+        difficulty: updated.difficulty,
+        lapses: updated.lapses,
+        reviewCount: updated.reviewCount,
+        recentAccuracy3: updated.recentAccuracy3 ?? undefined,
+        status: updated.status,
+        lastReviewedAt: now,
+        nextReviewAt,
+        updatedAt: now,
+      })
+      .where(eq(childSkillStates.id, currentState.id));
+  }
 
   await db.insert(reviewEvents).values({
     childId,
@@ -149,31 +168,49 @@ export async function POST(req: NextRequest) {
     isReview: body.slotType === "review",
     isMixed: body.slotType === "mixed",
     selfAssessed,
+    isBonus,
   });
 
   // Mark the item completed on today's session, if one exists. A child can
   // have both a Maths and an English session on the same day, so match by
   // which session actually planned this item — not just "today" — otherwise
   // a review from one subject could get attributed to the other's session.
+  // Bonus items are matched against bonusItemIds instead of plannedItemIds,
+  // and only ever update bonusCompletedItemIds — never sessions.status,
+  // which is already "completed" by the time a bonus round can start.
   const today = startOfDay(now);
   const todaysSessions = await db
     .select()
     .from(sessions)
     .where(and(eq(sessions.childId, childId), eq(sessions.date, today)));
 
-  const todaySession = todaysSessions.find((s) => s.plannedItemIds.includes(itemId));
+  const todaySession = isBonus
+    ? todaysSessions.find((s) => s.bonusItemIds.includes(itemId))
+    : todaysSessions.find((s) => s.plannedItemIds.includes(itemId));
 
-  if (todaySession && !todaySession.completedItemIds.includes(itemId)) {
-    const completedItemIds = [...todaySession.completedItemIds, itemId];
-    const allDone = todaySession.plannedItemIds.every((id) => completedItemIds.includes(id));
-    await db
-      .update(sessions)
-      .set({
-        completedItemIds,
-        status: allDone ? "completed" : "in_progress",
-        updatedAt: now,
-      })
-      .where(eq(sessions.id, todaySession.id));
+  if (todaySession) {
+    if (isBonus) {
+      if (!todaySession.bonusCompletedItemIds.includes(itemId)) {
+        await db
+          .update(sessions)
+          .set({
+            bonusCompletedItemIds: [...todaySession.bonusCompletedItemIds, itemId],
+            updatedAt: now,
+          })
+          .where(eq(sessions.id, todaySession.id));
+      }
+    } else if (!todaySession.completedItemIds.includes(itemId)) {
+      const completedItemIds = [...todaySession.completedItemIds, itemId];
+      const allDone = todaySession.plannedItemIds.every((id) => completedItemIds.includes(id));
+      await db
+        .update(sessions)
+        .set({
+          completedItemIds,
+          status: allDone ? "completed" : "in_progress",
+          updatedAt: now,
+        })
+        .where(eq(sessions.id, todaySession.id));
+    }
   }
 
   return NextResponse.json({
@@ -181,9 +218,11 @@ export async function POST(req: NextRequest) {
     partsCorrect,
     stepByStepSolution: item.stepByStepSolution,
     commonMisconceptions: item.commonMisconceptions,
-    skillStatus: updated.status,
-    skillStatusLabel: statusToParentLabel(updated.status),
-    nextReviewAt: nextReviewAt.toISOString(),
+    skillStatus: updatedStatus,
+    skillStatusLabel: isBonus
+      ? "Bonus round — just for fun, doesn't change your schedule"
+      : statusToParentLabel(updatedStatus as SkillStatus),
+    nextReviewAt: nextReviewAt ? nextReviewAt.toISOString() : null,
     pointsEarned: pointsForAnswer(correct, hintUsed),
   });
 }
