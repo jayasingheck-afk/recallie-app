@@ -263,6 +263,48 @@ function ParentReportsInner() {
         )}
       </section>
 
+      <section className="mb-8">
+        <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-sky-700">
+          🌱 Still building
+          <span className="text-sm font-normal text-slate-400">
+            ({data.snapshot.stillBuilding.length}, as of {data.snapshot.skillsAsOfLabel})
+          </span>
+        </h2>
+        {data.snapshot.stillBuilding.length === 0 ? (
+          <p className="text-sm text-slate-500">No newly-started skills right now.</p>
+        ) : (
+          <>
+            <p className="mb-2 text-xs text-slate-400">
+              New skills, practised recently and doing fine — just not reviewed enough times yet to call &quot;on
+              track&quot;.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {data.snapshot.stillBuilding.map((s) => (
+                <SkillCard key={s.skillId} s={s} />
+              ))}
+            </div>
+          </>
+        )}
+      </section>
+
+      <section className="mb-8">
+        <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-slate-700">
+          On track
+          <span className="text-sm font-normal text-slate-400">
+            ({data.snapshot.onTrack.length}, as of {data.snapshot.skillsAsOfLabel})
+          </span>
+        </h2>
+        {data.snapshot.onTrack.length === 0 ? (
+          <p className="text-sm text-slate-500">No skills in this category right now.</p>
+        ) : (
+          <div className="grid gap-2 sm:grid-cols-2">
+            {data.snapshot.onTrack.map((s) => (
+              <SkillCard key={s.skillId} s={s} />
+            ))}
+          </div>
+        )}
+      </section>
+
       <section className="mb-4">
         <h2 className="mb-3 text-lg font-semibold text-slate-700">
           Lifetime totals{" "}
