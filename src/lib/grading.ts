@@ -15,13 +15,117 @@
  * entirely in src/app/api/reviews/route.ts and src/app/child/page.tsx, not
  * here. `drag_drop`/`matching` item types have no content yet and remain
  * excluded from live sessions (see sessionBuilder.ts).
+ *
+ * Australian English spelling (per the project's Australian-curriculum
+ * requirement): every item bank's answerKey is already authored in AusE
+ * (e.g. "metres", "colour", "organise" — confirmed by audit, Oct 2026), but
+ * a child typing on a device/keyboard defaulted to American English autocorrect
+ * (or just taught American spelling elsewhere) could reasonably type "meters"
+ * or "color" and be marked wrong for a spelling difference that has nothing
+ * to do with whether they know the Maths/English content. US_TO_AU_SPELLING
+ * below maps the common American variant of a word to its Australian
+ * equivalent; normalize() rewrites every answer (both the key and the
+ * child's submission) through it before comparing, so either spelling is
+ * accepted but Australian English stays the one true canonical form.
  */
+const US_TO_AU_SPELLING: Record<string, string> = {
+  // -or / -our
+  color: "colour",
+  colors: "colours",
+  colored: "coloured",
+  coloring: "colouring",
+  favorite: "favourite",
+  favorites: "favourites",
+  behavior: "behaviour",
+  behaviors: "behaviours",
+  neighbor: "neighbour",
+  neighbors: "neighbours",
+  neighborhood: "neighbourhood",
+  neighborhoods: "neighbourhoods",
+  // -ize / -ise
+  organize: "organise",
+  organizes: "organises",
+  organized: "organised",
+  organizing: "organising",
+  organization: "organisation",
+  organizations: "organisations",
+  realize: "realise",
+  realizes: "realises",
+  realized: "realised",
+  realizing: "realising",
+  recognize: "recognise",
+  recognizes: "recognises",
+  recognized: "recognised",
+  recognizing: "recognising",
+  // -yze / -yse
+  analyze: "analyse",
+  analyzes: "analyses",
+  analyzed: "analysed",
+  analyzing: "analysing",
+  // -er / -re
+  center: "centre",
+  centers: "centres",
+  centered: "centred",
+  centering: "centring",
+  theater: "theatre",
+  theaters: "theatres",
+  meter: "metre",
+  meters: "metres",
+  centimeter: "centimetre",
+  centimeters: "centimetres",
+  kilometer: "kilometre",
+  kilometers: "kilometres",
+  millimeter: "millimetre",
+  millimeters: "millimetres",
+  liter: "litre",
+  liters: "litres",
+  milliliter: "millilitre",
+  milliliters: "millilitres",
+  kiloliter: "kilolitre",
+  kiloliters: "kilolitres",
+  // doubled consonant before -ed/-ing/-er
+  canceled: "cancelled",
+  canceling: "cancelling",
+  traveled: "travelled",
+  traveling: "travelling",
+  traveler: "traveller",
+  travelers: "travellers",
+  labeled: "labelled",
+  labeling: "labelling",
+  modeled: "modelled",
+  modeling: "modelling",
+  signaled: "signalled",
+  signaling: "signalling",
+  fueled: "fuelled",
+  fueling: "fuelling",
+  // miscellaneous
+  gray: "grey",
+  mold: "mould",
+  molds: "moulds",
+  molded: "moulded",
+  molding: "moulding",
+  plow: "plough",
+  plows: "ploughs",
+  plowed: "ploughed",
+  plowing: "ploughing",
+  tire: "tyre",
+  tires: "tyres",
+  curb: "kerb",
+  jewelry: "jewellery",
+  aluminum: "aluminium",
+  defense: "defence",
+  defenses: "defences",
+  offense: "offence",
+  offenses: "offences",
+};
+
 function normalize(value: unknown): string {
   return String(value)
     .trim()
     .toLowerCase()
     .replace(/\s+/g, " ")
-    .replace(/[.,;:!?]+$/g, "");
+    .replace(/[.,;:!?]+$/g, "")
+    .replace(/[a-z]+/g, (word) => US_TO_AU_SPELLING[word] ?? word);
 }
 
 export function checkAnswer(answerKey: unknown, submitted: unknown): boolean {
