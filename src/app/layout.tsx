@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AuthControls } from "@/components/AuthControls";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,32 +10,6 @@ export const metadata: Metadata = {
 };
 
 const clerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
-
-/**
- * Only rendered once Clerk is configured — shows Sign in / a user menu using
- * Clerk's own components. Left out of the tree entirely in demo mode so
- * nothing here depends on Clerk actually being set up. Separate from the
- * "Recallie" home link below so that link always renders regardless of
- * auth state — previously this whole header (home link included) only
- * rendered when Clerk was configured, so in demo mode there was no way to
- * get back to the homepage from anywhere in the app. See
- * claude/build-log-2026-08-17.md and the Oct 2026 architecture walkthrough.
- */
-async function AuthControls() {
-  const { SignedIn, SignedOut, SignInButton, UserButton } = await import("@clerk/nextjs");
-  return (
-    <>
-      <SignedOut>
-        <SignInButton mode="modal">
-          <button className="rounded-lg bg-sky-600 px-3 py-1.5 font-medium text-white">Sign in</button>
-        </SignInButton>
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-    </>
-  );
-}
 
 function Shell({ children }: { children: React.ReactNode }) {
   return (
